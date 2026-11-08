@@ -1,0 +1,33 @@
+dataset: WildWorld
+# Set local paths after obtaining authorized dataset access.
+roots: []
+# Optional explicit sample directories; otherwise discover rgb.mp4 below roots.
+sequences: []
+video_filename: rgb.mp4
+state_filename: state.csv
+max_sequences: 10
+max_csv_megabytes: 64
+clip:
+  start_seconds: 0.0
+  duration_seconds: 15.0
+  frame_stride: 1
+sync:
+  # Do not auto-detect a column and assume its clock/units.
+  timestamp_column: null
+  timestamp_seconds_per_unit: null
+  video_pts_to_state_offset_seconds: null
+  timestamp_clock_evidence: null
+  frame_index_column: null
+  frame_index_origin: 0
+  max_timestamp_error_seconds: 0.005
+  # For row/index-only data, independent frame/overlay review is mandatory.
+  frame_mapping_confirmed: false
+  frame_mapping_evidence: null
+  timestamp_gap_factor: 2.0
+validation:
+  max_missing_pose_fraction: 0.0
+  max_quaternion_norm_error: 0.01
+  # Source-based projection reviewed against RGB, not a numerical guess.
+  projection_review_confirmed: false
+  projection_review_evidence: null
+  max_skeleton_array_megabytes: 64

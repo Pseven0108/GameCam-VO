@@ -1,0 +1,22 @@
+dataset: WildWorld
+position_column: camera.pos
+rotation_column: camera.rot
+intrinsics_column: camera.K
+quaternion_order: xyzw
+transform_direction: camera_to_world
+position_semantics: camera_center_in_world
+input_camera_axes: OpenGL_right_up_back
+output_camera_axes: OpenCV_right_down_forward
+camera_handedness: right
+# World axes are preserved verbatim; their physical directions are undocumented.
+world_axes: dataset_native_unresolved_physical_axis_directions
+world_axes_evidence: null
+convention_source: https://github.com/AlayaLab/WildWorld
+projection_source: https://github.com/AlayaLab/WildWorld/blob/main/scripts/render_skeleton_video.py
+source_revision: 8e5d02dff47cf54a4287e9b6532a7759d5be63f2
+length_unit: dataset_unit
+meters_per_dataset_unit: null
+length_unit_evidence: null
+# Null blocks E1. Confirm zero distortion from dataset/calibration evidence first.
+distortion_coefficients: null
+distortion_evidence: null

@@ -1,0 +1,40 @@
+dataset: MVS-Synth
+adapter: mvs_synth
+root: data/mvs_synth/GTAV_540
+sequence: '0000'
+expected_frames: 100
+pose_provenance: ENGINE_GROUND_TRUTH
+time_axis: frame_index
+camera:
+  raw_transform_direction: world_to_camera
+  raw_rotation_determinant: -1
+  world_basis_transform: [[1, 0, 0], [0, 1, 0], [0, 0, -1]]
+  normalized_transform_direction: camera_to_world
+  normalized_camera_axes: OpenCV_right_down_forward
+  length_unit: native_game_unit
+  meters_per_unit: null
+  distortion_coefficients: [0, 0, 0, 0, 0]
+validation:
+  # Observed official matrices have ~1e-5 numeric non-orthogonality.
+  # Bound the polar roundoff correction after the fixed reflection, keep centers.
+  matrix_tolerance: 0.0001
+  maximum_nonpositive_or_nan_depth_fraction: 0.0
+  projection_pairs: 9
+  projection_grid_stride: 8
+  maximum_median_relative_depth_error: 0.10
+  minimum_depth_consistent_fraction: 0.25
+sources:
+  homepage: https://phuang17.github.io/DeepMVS/mvs-synth.html
+  repository: https://huggingface.co/datasets/phuang17/MVS-Synth
+  data_revision: 73e4b0abff2806a67c0f9bc038c3a1ac5df9ef0b
+  official_projection_code: https://github.com/phuang17/DeepMVS/blob/4276bf17f965d08c31faf814fc54c80883e3373f/python/generate_volume_train.py
+  license: research_and_educational_use_only
+  acquisition:
+    mirror: https://huggingface.co/datasets/fantasticoven/mvs-synth
+    mirror_revision: c886d86505054f18f79d0a1c838150d9e98935b2
+    authorization: explicit_user_approval_in_chat
+    independently_matched_official_files: 13
+    all_files_independently_compared_to_official_archive: false
+experiment_ids:
+  validation: E0_MVS
+  baseline: E1A_MVS

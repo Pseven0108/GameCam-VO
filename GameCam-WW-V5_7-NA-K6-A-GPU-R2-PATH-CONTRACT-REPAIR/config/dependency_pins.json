@@ -1,0 +1,275 @@
+{
+  "version": "K6-A-R2-PIN-v2",
+  "checks": {
+    "config": true,
+    "weights": true,
+    "paths": true,
+    "manifest": true,
+    "camera": true,
+    "input": true,
+    "offline": true,
+    "loader_hooks": true,
+    "revision": true
+  },
+  "config": {
+    "id": "k51_effective_config",
+    "path_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K5_1/runs/droidw/V56_01_middle_k5_1/effective_config.json",
+    "path_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K5_1\\runs\\droidw\\V56_01_middle_k5_1\\effective_config.json",
+    "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K5_1/runs/droidw/V56_01_middle_k5_1/effective_config.json",
+    "real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K5_1\\runs\\droidw\\V56_01_middle_k5_1\\effective_config.json",
+    "bytes": 4048,
+    "sha256": "a479e3d8e891f9cb323b9a337143409d460420854350ac8e023782b990ccd775",
+    "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K5_1",
+    "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K5_1",
+    "allowed_root_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K5_1",
+    "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K5_1"
+  },
+  "weights": [
+    {
+      "id": "droid.pth",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/weights/droid.pth",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\weights\\droid.pth",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/weights/droid.pth",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\weights\\droid.pth",
+      "bytes": 16061701,
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "purpose": "DROID-W tracking network",
+      "loader": "torch.load",
+      "url": null,
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    },
+    {
+      "id": "metric_depth_vit_large_800k.pth",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/torch_home/hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home\\hub\\checkpoints\\metric_depth_vit_large_800k.pth",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/torch_home/hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home\\hub\\checkpoints\\metric_depth_vit_large_800k.pth",
+      "bytes": 1647972663,
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "purpose": "Metric3D ViT-Large metric depth prior",
+      "loader": "torch.load",
+      "url": "https://huggingface.co/JUGGHM/Metric3D/resolve/main/metric_depth_vit_large_800k.pth",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    },
+    {
+      "id": "dinov2_reg_small_finetuned.pth",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/torch_home/hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home\\hub\\checkpoints\\dinov2_reg_small_finetuned.pth",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/torch_home/hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home\\hub\\checkpoints\\dinov2_reg_small_finetuned.pth",
+      "bytes": 88283296,
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "purpose": "FiT3D fine-tuned feature prior",
+      "loader": "torch.load",
+      "url": "https://huggingface.co/yuanwenyue/FiT3D/resolve/main/dinov2_reg_small_finetuned.pth",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    },
+    {
+      "id": "timm_base_dinov2_model.safetensors",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface\\hub\\models--timm--vit_small_patch14_reg4_dinov2.lvd142m\\snapshots\\c04b5193082a8d5b0c4856c7937384a48136c5de\\model.safetensors",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/blobs/dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface\\hub\\models--timm--vit_small_patch14_reg4_dinov2.lvd142m\\blobs\\dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "bytes": 88245200,
+      "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "purpose": "FiT3D timm.create_model(pretrained=True) base initialization, subsequently overridden by fine-tuned state dict",
+      "loader": "safetensors.torch.load_file",
+      "url": null,
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    }
+  ],
+  "files": {
+    "frozen_weight_manifest.csv": {
+      "path": "config/frozen_weight_manifest.csv",
+      "bytes": 4468,
+      "sha256": "d6d3d3443ac1e4bd862cb7ff167547ae0e253dab41ede21a33796b68e67e0ce3"
+    },
+    "inherited_external_dependency_manifest.csv": {
+      "path": "config/inherited_external_dependency_manifest.csv",
+      "bytes": 8492,
+      "sha256": "55d7b14fab381f7e44177aa0fa4410423905cbe32dfb04a131cb8c297e36084d"
+    },
+    "k4_input_frames.csv": {
+      "path": "config/k4_input_frames.csv",
+      "bytes": 133084,
+      "sha256": "3c177ba4fca8f468b26a19d68eff29ef382ec70709ef8283031926c5493b69a5"
+    },
+    "k4_input_contract.json": {
+      "path": "config/k4_input_contract.json",
+      "bytes": 969,
+      "sha256": "694cd72892046106d9a6c6599486544f3fd4a072b6caf7aa61cc7685bcade455"
+    },
+    "camera_intrinsics_contract.csv": {
+      "path": "config/camera_intrinsics_contract.csv",
+      "bytes": 1550,
+      "sha256": "3fd5e66e272b557261af09dc39c6e0595c0e2d74d67de368e23b671d651f88aa"
+    },
+    "cases.json": {
+      "path": "config/cases.json",
+      "bytes": 136120,
+      "sha256": "0a1a983742e63c19d8c6fd6a85ca1262e7852ccfb169d18bb29e748ee8b16e79"
+    },
+    "external_dependency_manifest.csv": {
+      "path": "config/external_dependency_manifest.csv",
+      "bytes": 7355,
+      "sha256": "2e7e8ddc9b826dbee71ff5770c70a2ac9152cc54aac2521b8adc8b24b8db0e91"
+    }
+  },
+  "k4_live_contract": {
+    "id": "k4_camera_contract",
+    "path_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/input_contract.json",
+    "path_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\input_contract.json",
+    "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/input_contract.json",
+    "real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\input_contract.json",
+    "bytes": 969,
+    "sha256": "694cd72892046106d9a6c6599486544f3fd4a072b6caf7aa61cc7685bcade455",
+    "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle",
+    "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle",
+    "allowed_root_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle",
+    "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle"
+  },
+  "hf": {
+    "repo_id": "timm/vit_small_patch14_reg4_dinov2.lvd142m",
+    "revision": "c04b5193082a8d5b0c4856c7937384a48136c5de",
+    "ref_path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/refs/main",
+    "ref_path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface\\hub\\models--timm--vit_small_patch14_reg4_dinov2.lvd142m\\refs\\main",
+    "ref_sha256": "4443b8c2c3d164447a5d95fca51169034cf1e938b8705ded0a0fb68b6f3c43cb",
+    "ref_bytes": 40,
+    "weight_id": "timm_base_dinov2_model.safetensors",
+    "filename": "model.safetensors",
+    "ref_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/refs/main",
+    "ref_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface\\hub\\models--timm--vit_small_patch14_reg4_dinov2.lvd142m\\refs\\main",
+    "ref_allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+    "ref_allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+    "ref_allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+    "ref_allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+  },
+  "environment": {
+    "TORCH_HOME": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/torch_home",
+    "HF_HOME": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/huggingface",
+    "GAMECAM_FIT3D_REPO": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+    "GAMECAM_METRIC3D_REPO": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "hub_models": {
+    "metric3d_vit_large": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+    "dinov2_reg_small_fine": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D"
+  },
+  "allowed_config_changes": [
+    "max_frames",
+    "data.output"
+  ],
+  "approved_config_sha256": "a479e3d8e891f9cb323b9a337143409d460420854350ac8e023782b990ccd775",
+  "prior_attempt_count": 1,
+  "path_directories": [
+    {
+      "id": "project_root",
+      "path_linux": "/mnt/d/aaa/GameCam-VO",
+      "path_windows": "D:\\aaa\\GameCam-VO",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO",
+      "real_windows": "D:\\aaa\\GameCam-VO",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO"
+    },
+    {
+      "id": "k4_rgb_input_directory",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb",
+      "path_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\rgb",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb",
+      "real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\rgb",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\rgb",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\GameCam-WW-V5_7-NA-K4\\inputs\\512x288\\V56_01\\middle\\rgb"
+    },
+    {
+      "id": "environment:TORCH_HOME",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/torch_home",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/torch_home",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\torch_home",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    },
+    {
+      "id": "environment:HF_HOME",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W/huggingface",
+      "path_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W/huggingface",
+      "real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W\\huggingface",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\data\\sota_assets\\DROID_W"
+    },
+    {
+      "id": "hub_model:dinov2_reg_small_fine",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+      "path_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\FiT3D",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+      "real_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\FiT3D",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\FiT3D",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\FiT3D"
+    },
+    {
+      "id": "hub_model:metric3d_vit_large",
+      "path_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+      "path_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\Metric3D",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+      "real_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\Metric3D",
+      "allowed_root_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+      "allowed_root_real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+      "allowed_root_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\Metric3D",
+      "allowed_root_real_windows": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\prior_sources\\Metric3D"
+    }
+  ],
+  "allowed_path_roots": [
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/GameCam-WW-V5_7-NA-K5_1",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K5_1"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/FiT3D"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/Metric3D",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/baselines/droid_w/prior_sources/Metric3D"
+    },
+    {
+      "alias_linux": "/mnt/d/aaa/GameCam-VO/data/sota_assets/DROID_W",
+      "real_linux": "/root/rivermind-data/gamecam/GameCam-VO/data/sota_assets/DROID_W"
+    }
+  ]
+}

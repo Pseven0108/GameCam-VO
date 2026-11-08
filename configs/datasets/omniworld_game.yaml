@@ -1,0 +1,28 @@
+dataset: OmniWorld-Game
+adapter: omniworld_game
+root: data/omniworld_game
+scene_id: c5e5ed9a4462
+split_index: 0
+maximum_frames: null
+pose_provenance: ESTIMATED_REFERENCE
+use_metric_scale: false
+metadata_csv: docs/sources/omniworld/omniworld_game_metadata.csv
+camera:
+  raw_quaternion_order: wxyz
+  raw_transform_direction: world_to_camera
+  normalized_quaternion_order: xyzw
+  normalized_transform_direction: camera_to_world
+  normalized_camera_axes: OpenCV_right_down_forward
+  length_unit: reference_unit
+  distortion_coefficients: [0, 0, 0, 0, 0]
+sources:
+  repository: https://huggingface.co/datasets/InternRobotics/OmniWorld
+  data_revision: 4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841
+  official_reader: https://huggingface.co/datasets/InternRobotics/OmniWorld/blob/4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841/README.md
+  license: CC-BY-NC-SA-4.0_and_original_game_content_terms
+experiment_ids:
+  validation: E0_OMNI
+  baseline: E1A_OMNI
+  orb_slam3: E1B_OMNI
+  monst3r: E3_OMNI
+  ablation: E5_OMNI

@@ -1,0 +1,29 @@
+experiment_id: E1-A
+baseline: orb_essential
+seed: 42
+opencv_threads: 4
+# Width is bounded; height follows aspect ratio. K is scaled per actual image size.
+resize_width: 960
+orb:
+  nfeatures: 3000
+  scale_factor: 1.2
+  nlevels: 8
+  fast_threshold: 20
+matching:
+  lowe_ratio: 0.75
+  minimum_matches: 30
+ransac:
+  threshold_pixels: 1.0
+  confidence: 0.999
+  max_iterations: 2000
+  recover_pose_distance_threshold: 50.0
+  minimum_inliers: 20
+  minimum_inlier_ratio: 0.25
+  minimum_median_parallax_degrees: 0.3
+output:
+  save_match_every: 30
+  max_match_images: 12
+evaluation:
+  timestamp_tolerance_seconds: 0.005
+  rpe_delta_samples: 1
+  alignment: [SE3, Sim3]

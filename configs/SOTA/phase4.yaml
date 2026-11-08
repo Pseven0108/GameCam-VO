@@ -1,0 +1,83 @@
+phase: 4
+date: '2026-10-31'
+execution_order: [DROID_W, BA_TRACK, PI3MOS]
+environment_policy: one_isolated_WSL_conda_environment_at_a_time
+original_environment: gamecam-vo
+original_environment_must_remain_unchanged: true
+training: false
+primary_input:
+  dataset: MVS-Synth
+  sequence: '0000'
+  frames: 100
+  pose_provenance: ENGINE_GROUND_TRUTH
+  inference_inputs: [RGB, camera_intrinsics]
+  engine_depth_in_inference: false
+  engine_pose_in_inference: false
+  dynamic_robustness_evidence: false
+secondary_input:
+  dataset: OmniWorld-Game
+  scene: c5e5ed9a4462
+  pose_provenance: ESTIMATED_REFERENCE
+  independent_absolute_accuracy_claim: false
+comparison:
+  pooled_cross_dataset_ATE: false
+  overall_rank_across_task_types: false
+  preserve_full_frame_denominator: true
+  record_keyframes_and_filled_poses_separately: true
+  official_minimum_VRAM: UNKNOWN
+checkpoints:
+  acquire_selected_method_only_after_build_probe: true
+  no_automatic_all_model_downloader: true
+  preserve_official_models_and_hyperparameters: true
+  hash_every_complete_download: true
+droid_w:
+  upstream_commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
+  author_stack: {python: '3.10', torch: '2.1.0', cuda: '11.8'}
+  compatibility_probe_stack: {python: '3.10', torch: '2.7.1', cuda: '12.8'}
+  compatibility_probe_status: OFFICIAL_DEMO_AND_MVS_100_EXTERNAL_EVALUATION_COMPLETED
+  compatibility_patch_commit: 43c1425b7ea02633f87d70ed0d5fdf420b89a59e
+  runtime_process_mode: single_process_tracking_after_reproduced_CUDA_IPC_failure
+  xformers_fa3: disabled_after_actual_kernel_failure
+  huggingface_hub: '0.25.2'
+  mvs_amp_weight_cache: disabled_after_four_module_bitwise_equivalence_check
+  mvs_execution_timeout_seconds: 7200
+  metric3d_commit: eb5b6fac0dc155e4e52f576e304fbf11655ff339
+  fit3d_commit: 18200c21f047b5add8b7e796d6aab97fba25e790
+  official_demo_config: configs/Dynamic/Bonn/bonn_balloon.yaml
+  run_demo_before_gamecam_adaptation: true
+ba_track:
+  upstream_commit: 456e094ee3ca7fbd9884ba18e68e7c0717d49a67
+  demo_scene: tennis
+  installation: NATIVE_AND_PRIOR_COMPONENT_INFERENCE_PASSED
+  compatibility_patch_commit: a66925e1f78b57ae81e2fa02760e37d7fafcb49d
+  official_demo_status: NATIVE_STAGES_COMPLETED_PRIMARY_SPARSE_POSES_CHECKED_DENSE_CAMERA_LIMIT
+  mvs_status: MVS100_EXTERNAL_EVALUATION_AND_FIGURE_QA_COMPLETED_WITH_DENSE_CAMERA_LIMIT
+  current_environment_state: WSL_UBUNTU_AND_CUDA_RECOVERED_ENVIRONMENTS_PRESERVED
+  memory_implementation_patch: TWO_24_CASE_LOCAL_BITWISE_PROOFS_AND_FULL_NATIVE_DEMO_EXECUTION
+  primary_camera_stage: official_sparse_SLAM_pose_evaluation_fixed_before_MVS_execution_and_GT_scoring
+  dense_camera_rigid_check: FAILED_NATIVE_MATRICES_RETAINED_WITHOUT_PROJECTION
+  dense_iterations: 300
+  dense_grid_size: 12
+pi3mos:
+  upstream_commit: 5e709d27324a935e364e01efc56f3128ac00bf24
+  core_release_present: true
+  core_weights_access_probe: HTTP_206_BINARY_PREFIX_VERIFIED
+  license_scope: NOT_UNIFORMLY_MIT
+  installation: NATIVE_CUDA_NUMERICAL_CHECKS_PASSED
+  compatibility_patch_commit: c56453704eeff0c0fef673fb4d9282c147889a23
+  core_weight_status: MANUAL_OFFICIAL_CORE_CHECKPOINT_VERIFIED
+  core_weight_sha256: 1a536b1bb6e9c6c16a77b7ed544649351d387e281a16f3d946e0786cdcf23ded
+  official_demo_status: NATIVE_458_FRAME_UMBRELLA_EXPORT_COORDINATES_AND_FIGURE_QA_COMPLETED
+  mvs_status: MVS100_EXTERNAL_EVALUATION_AND_FIGURE_QA_COMPLETED
+  primary_camera_stage: native_terminate_inverse_internal_T_cw_to_T_wc
+  native_model_config: config/default.yaml
+  optional_GUI: omitted_with_explicit_RNG_and_timing_deviation
+  output_observation: copy_native_values_to_CPU_and_return_original_objects_unchanged
+  full_model_bitwise_equivalence_claim: false
+  dynamic_probability_calibrated: false
+delivery:
+  status: BOUNDED_PHASE4_BASELINE_DELIVERY_COMPLETED_WITH_EXPLICIT_LIMITS
+  updated_date: '2026-11-01'
+  shared_MVS100_methods: [DROID_W, BA_TRACK, PI3MOS, ORB_SLAM3, ORB_ESSENTIAL]
+  scientific_direction_selected: null
+  paper_result_match: false

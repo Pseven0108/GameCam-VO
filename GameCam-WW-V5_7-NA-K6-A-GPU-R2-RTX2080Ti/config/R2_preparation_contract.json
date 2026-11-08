@@ -1,0 +1,50 @@
+{
+  "phase": "REMOTE_CPU_PREPARATION",
+  "model_execution_authorized": false,
+  "model_started": false,
+  "model_attempts": 0,
+  "target_gpu_reported_by_user": "RTX 2080 Ti",
+  "expected_cuda_arch": "7.5",
+  "remote_root": "/root/rivermind-data/gamecam",
+  "remote_python": "/opt/gamecam/envs/droidw-cu126/bin/python",
+  "scope": {
+    "method": "DROID-W",
+    "window": "V56_01/middle",
+    "first_frame": 7953,
+    "last_frame": 8072,
+    "max_frames": 120,
+    "stride": 1,
+    "buffer": 350,
+    "warmup": 12,
+    "mapping": false,
+    "free_hard_stop_MiB": 512
+  },
+  "environment_deviations": {
+    "local_torch": "2.7.1+cu128",
+    "remote_torch_planned": "2.7.1+cu126",
+    "local_python": "3.10.22",
+    "remote_python": "3.10.20",
+    "reason": "Match rental CUDA 12.6 toolkit, preserve PyTorch major/minor/patch and audited source bytes. New hardware/environment independently reported."
+  },
+  "exclusions": [
+    "GT in remote model payload",
+    "Pi3MOS",
+    "WildGS",
+    "second window",
+    "300-frame Pilot",
+    "216-condition matrix",
+    "automatic GPU retries",
+    "GPU threshold changes",
+    "network/weight/buffer/motion-filter/frontend/BA tuning"
+  ],
+  "storage_policy": {
+    "system_environment": "/opt/gamecam/envs/droidw-cu126",
+    "system_build": "/opt/gamecam/build-src",
+    "system_temp": "/opt/gamecam/tmp",
+    "system_wheels": "/opt/gamecam/wheels",
+    "data_project": "/root/rivermind-data/gamecam/GameCam-VO",
+    "data_logs": "/root/rivermind-data/gamecam/setup",
+    "source": "User explicitly requested system environment on system disk, experiment files on data disk",
+    "legacy_environment_path_is_symlink": true
+  }
+}

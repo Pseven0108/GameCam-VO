@@ -1,0 +1,10 @@
+name: gamecam-vo
+variables:
+  OPENCV_IO_ENABLE_OPENEXR: '1'
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

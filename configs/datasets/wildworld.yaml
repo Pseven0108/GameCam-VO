@@ -1,0 +1,14 @@
+dataset: WildWorld
+adapter: wildworld
+root: data/WildWorld/data_part1
+sequence: null
+legacy_dataset_config: configs/dataset.yaml
+legacy_camera_config: configs/camera.yaml
+access_status: pending_author_review
+pose_provenance: ENGINE_GROUND_TRUTH
+camera:
+  length_unit: dataset_unit
+  distortion_coefficients: null
+experiment_ids:
+  validation: E0_WILD
+  baseline: E1A_WILD

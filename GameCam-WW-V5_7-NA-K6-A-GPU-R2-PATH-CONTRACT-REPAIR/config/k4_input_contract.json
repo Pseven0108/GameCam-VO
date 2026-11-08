@@ -1,0 +1,65 @@
+{
+  "sequence": "V56_01",
+  "window": "middle",
+  "Kstar": [
+    [
+      937.832063,
+      0.0,
+      640.0
+    ],
+    [
+      0.0,
+      937.832063,
+      360.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "Kstar_reference_frame": 7953,
+  "K_input": [
+    [
+      375.1328252,
+      0.0,
+      255.7
+    ],
+    [
+      0.0,
+      375.1328252,
+      143.7
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "A": [
+    [
+      0.4,
+      0.0,
+      -0.3
+    ],
+    [
+      0.0,
+      0.4,
+      -0.3
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "resolution": [
+    512,
+    288
+  ],
+  "frames": 300,
+  "first_frame": 7953,
+  "last_frame": 8252,
+  "PNG_encoder": "cv2.imencode('.png') with no explicit parameters (OpenCV defaults; matches K3 byte encoding)",
+  "Pi3_future_adapter": "BGR uint8 cached PNG -> RGB float32 [0,1] before prior; do not alter tracker contract"
+}

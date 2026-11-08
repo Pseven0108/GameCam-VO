@@ -1,0 +1,14 @@
+﻿parameter,config_field,k4_frozen_value,cases_K4_value,cases_K_input_value,k51_config_value,scale,crop_subtract,derived_full_resolution_value,native_float32_value,native_float32_error,native_internal_BA_value,internal_grid,comparison,passed
+fx,cam.fx,375.1328252,375.1328252,375.1328252,375.1328252,1.0,0,375.1328252,375.1328125,-1.2700000013410317e-05,46.8916015625,64x36,exact geometric equality; float32 representation listed separately,True
+fy,cam.fy,375.1328252,375.1328252,375.1328252,375.1328252,1.0,0,375.1328252,375.1328125,-1.2700000013410317e-05,46.8916015625,64x36,exact geometric equality; float32 representation listed separately,True
+cx,cam.cx,255.7,255.7,255.7,255.7,1.0,0,255.7,255.6999969482422,-3.0517578011313162e-06,31.962499618530273,64x36,exact geometric equality; float32 representation listed separately,True
+cy,cam.cy,143.7,143.7,143.7,143.7,1.0,0,143.7,143.6999969482422,-3.0517578011313162e-06,17.962499618530273,64x36,exact geometric equality; float32 representation listed separately,True
+image_width,cam.image_width,512,,,512,,,512,,,,,exact,True
+image_height,cam.image_height,288,,,288,,,288,,,,,exact,True
+source_width,cam.source_width,512,,,512,,,512,,,,,exact,True
+source_height,cam.source_height,288,,,288,,,288,,,,,exact,True
+W_edge,cam.W_edge,0,,,0,,,0,,,,,exact,True
+H_edge,cam.H_edge,0,,,0,,,0,,,,,exact,True
+resize_sx,cam.resize_sx,1,,,1.0,,,1.0,,,,,exact,True
+resize_sy,cam.resize_sy,1,,,1.0,,,1.0,,,,,exact,True
+distortion_enabled,cam.distortion_enabled,False,,,False,,,False,,,,,exact,True

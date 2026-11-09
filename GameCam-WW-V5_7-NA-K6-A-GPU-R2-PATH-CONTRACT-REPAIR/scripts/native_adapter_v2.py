@@ -143,6 +143,7 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
    from torch.utils.tensorboard import SummaryWriter
    writer=SummaryWriter(log_dir=str(out/'tensorboard'));tracker=Tracker(slam,NoMapPipe(),writer)
   if diagnostic:
+   if len(diagnostic.loaded_weights)!=4:raise SafetyStop('DIAGNOSTIC_NOT_ALL_FOUR_WEIGHTS_LOADED')
    diagnostic.emit('MODEL_WEIGHTS_LOADED',loaded_weight_ids=sorted(diagnostic.loaded_weights))
    diagnostic.emit('MODEL_CUDA_READY',meaning='constructors returned; no frame forward or BA tested')
    diagnostic.checkpoint('TRACKER_CONSTRUCTION_DONE')

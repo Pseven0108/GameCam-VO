@@ -3,6 +3,7 @@ import hashlib,json,math,os,pathlib,re,time
 from launch_authorization import LaunchContext,SCOPE
 from runtime_dependency_pins import require,digest_file,RuntimePins
 from diagnostic_phases import DIAGNOSTIC_TYPE,STOP_PHASE
+from diagnostic_import_policy import IMPORT_POLICY
 SCHEMA='gamecam-bounded-diagnostic-candidate-v1'
 DIAGNOSTIC_SCOPE=dict(SCOPE,permission_type=DIAGNOSTIC_TYPE,stop_after_phase=STOP_PHASE,
     frame_submission=False,tracker_run=False,ba=False,pose_evaluation=False)
@@ -45,6 +46,7 @@ class DiagnosticContext(LaunchContext):
         c=super().validate_candidate()
         require(c.get('schema')==SCHEMA and c.get('entry_admission_status')=='DROIDW_ENTRY_PARTIAL_PASS','DIAGNOSTIC_CANDIDATE_SCHEMA_OR_HISTORY')
         require(c.get('diagnostic_scope')==DIAGNOSTIC_SCOPE,'DIAGNOSTIC_SCOPE_DRIFT')
+        require(c.get('python_import_policy')==IMPORT_POLICY and 'PYTHONPYCACHEPREFIX' not in c['pinned_environment'] and c['pinned_environment'].get('PYTHONDONTWRITEBYTECODE')=='1','DIAGNOSTIC_IMPORT_POLICY_DRIFT')
         require(c.get('GPU_execution_authorized') is False and c.get('current_attempt_limit')==0,'SEALED_CANDIDATE_MUST_BE_UNARMED')
         return c
     def validate_identity(self,c):
@@ -100,4 +102,8 @@ class DiagnosticContext(LaunchContext):
         return c
     def validate_terminal(self,out,terminal):
         result=json.loads((pathlib.Path(out)/'model/result.json').read_text())
-        verify_terminal_result(result,terminal,self._candidate['diagnostic_scope'])
+        if terminal.get('primary_failure') is not None:
+            require(result.get('status') != 'DIAGNOSTIC_STOP_COMPLETED' and result.get('error') == terminal['primary_failure'],'DIAGNOSTIC_FAILURE_TERMINAL_MISMATCH')
+            require(result.get('frames_submitted') == 0 and result.get('frames_completed') == 0 and result.get('tracker_run_called',False) is False and result.get('BA_executed',False) is False,'DIAGNOSTIC_EXCEEDED_NO_FRAME_SCOPE')
+            return False
+        return verify_terminal_result(result,terminal,self._candidate['diagnostic_scope'])

@@ -1,6 +1,7 @@
 """Preparation never arms this entry. A new external user permission is mandatory."""
 import argparse,json,os,sys
 from diagnostic_authorization import DiagnosticContext
+from diagnostic_import_policy import sanitized_worker_environment
 from runner_core import supervise_once
 
 def main(argv=None):
@@ -11,7 +12,7 @@ def main(argv=None):
         c=ctx.validate_candidate();out=c['planned_session_directory']
         worker=c['worker_command_prefix']+['--candidate',str(ctx.candidate_path),'--candidate-sha',a.candidate_sha,'--authorization',str(ctx.authorization_path),'--session-dir',out,'--session',a.session]
         monitor=c['monitor_command_prefix']+['--monitor',out,'--session',a.session]
-        env=dict(os.environ,**c['pinned_environment']);env['GAMECAM_SUPERVISOR_PID']=str(os.getpid());env['GAMECAM_RUN_SESSION_DIR']=out
+        env=sanitized_worker_environment(os.environ,c['pinned_environment']);env['GAMECAM_SUPERVISOR_PID']=str(os.getpid());env['GAMECAM_RUN_SESSION_DIR']=out
         r=supervise_once(out,a.session,worker,monitor,'droidw_diagnostic',env=env,expected_frames=0,launch_context=ctx)
         print(json.dumps(r),flush=True);return 0 if r['passed'] else 2
     except BaseException as e:

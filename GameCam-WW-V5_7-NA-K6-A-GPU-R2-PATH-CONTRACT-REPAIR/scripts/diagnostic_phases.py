@@ -11,7 +11,7 @@ class PhaseRecorder:
         self.path=pathlib.Path(output)/'startup_phase_events.jsonl'
         self.session_dir=pathlib.Path(session_dir); self.session=session
         self.stop_phase=stop_phase; self.torch=torch; self.start=time.monotonic()
-        self.events=[]; self.loaded_weights=set(); self.stopped=False
+        self.events=[]; self.loaded_weights=set(); self.stopped=False; self.error_reporting_failures=[]
     def resource(self):
         t=self.torch; cuda=None; nvml=None
         if t is not None and t.cuda.is_initialized():
@@ -39,7 +39,10 @@ class PhaseRecorder:
         start=time.monotonic(); self.emit(phase,'start')
         try: yield
         except BaseException as exc:
-            self.emit(phase,'error',(time.monotonic()-start)*1000,error=str(exc) or type(exc).__name__); raise
+            try:self.emit(phase,'error',(time.monotonic()-start)*1000,error=str(exc) or type(exc).__name__)
+            except BaseException as telemetry_error:
+                self.error_reporting_failures.append(dict(phase=phase,primary_failure=str(exc),secondary_reporting_failure=str(telemetry_error)))
+            raise
         else: self.emit(phase,'end',(time.monotonic()-start)*1000)
     def dependency_event(self,event):
         if event.get('event')=='weight_load_completed': self.loaded_weights.add(event['dependency_id'])

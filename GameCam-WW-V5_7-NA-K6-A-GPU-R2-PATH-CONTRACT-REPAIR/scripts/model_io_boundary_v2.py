@@ -4,6 +4,7 @@ The worker boundary deliberately separates model output, worker telemetry, and
 supervisor-controlled session files.  A native extension or an already-open
 file descriptor is outside this Python audit-hook boundary.
 """
+import errno
 import os
 import pathlib
 import re
@@ -24,6 +25,7 @@ class ModelIOBoundary:
         worker_read_files=(),
         worker_atomic_files=(),
         worker_root=None,
+        import_scratch_root=None,
     ):
         self.reads = {pathlib.Path(p).resolve() for p in list(read_files) + list(source_files)}
         self.protected = [pathlib.Path(p).resolve() for p in protected_roots]
@@ -36,6 +38,10 @@ class ModelIOBoundary:
             parents = [str(p.parent) for p in self.worker_files | self.worker_read_files]
             worker_root = pathlib.Path(os.path.commonpath(parents)) if parents else None
         self.worker_root = pathlib.Path(worker_root).resolve() if worker_root is not None else None
+        self.import_scratch_root = pathlib.Path(import_scratch_root).absolute() if import_scratch_root else None
+        if self.import_scratch_root is not None:
+            if not any(self.import_scratch_root == r / 'import_tmp' for r in self.outputs) or self.import_scratch_root.resolve() != self.import_scratch_root:
+                raise RuntimeError('MODEL_IMPORT_SCRATCH_IDENTITY')
         self.ipc = ipc_policy
         self.events = []
         if any(str(p) in ('/', '/dev/shm', '/dev/shm/gamecam-ipc', '/tmp') for p in self.outputs):
@@ -156,11 +162,38 @@ class ModelIOBoundary:
             raise RuntimeError('MODEL_UNAPPROVED_EXTERNAL_DATA_READ:' + str(p))
         return True
 
+    def _in_import_scratch(self, path):
+        p = pathlib.Path(os.path.abspath(path))
+        return self.import_scratch_root is not None and p.is_relative_to(self.import_scratch_root) and p.resolve(strict=False) == p
+
+    def _check_import_scratch_dirfd_delete(self, event, args, dirfd):
+        if event not in {'os.remove', 'os.rmdir'} or not isinstance(args[0], (str, bytes, os.PathLike)):
+            return False
+        name = os.fsdecode(args[0])
+        if name in {'', '.', '..'} or pathlib.Path(name).name != name:
+            return False
+        try:
+            base = pathlib.Path(os.readlink('/proc/self/fd/' + str(dirfd)))
+            if not self._in_import_scratch(base):
+                return False
+            opened = os.fstat(dirfd); current = base.stat()
+            if not stat.S_ISDIR(opened.st_mode) or opened.st_uid != os.getuid() or (opened.st_dev, opened.st_ino) != (current.st_dev, current.st_ino):
+                return False
+            target = base / name
+            if not self._in_import_scratch(target):
+                return False
+            self.check_path(target, True, event)
+            return True
+        except OSError:
+            return False
+
     def audit(self, event, args):
         try:
             dirfd_indices = {'os.mkdir': (2,), 'os.remove': (1,), 'os.rmdir': (1,), 'os.chmod': (2,), 'os.chown': (3,), 'os.rename': (2, 3)}
             for index in dirfd_indices.get(event, ()):
                 if len(args) > index and args[index] not in (None, -1):
+                    if self._check_import_scratch_dirfd_delete(event, args, args[index]):
+                        return
                     raise RuntimeError('MODEL_DIR_FD_OPERATION_FORBIDDEN')
             if event == 'open' and args and isinstance(args[0], (str, bytes, os.PathLike)):
                 mode = args[1] if len(args) > 1 else None
@@ -192,6 +225,8 @@ class ModelIOBoundary:
                     self.check_path(source, True, 'rename_source')
                     self.check_path(destination, True, 'rename_destination')
             elif event == 'os.link':
+                if len(args) >= 2 and all(isinstance(p, (str, bytes, os.PathLike)) and self._in_import_scratch(p) for p in args[:2]):
+                    raise PermissionError(errno.EPERM, 'MODEL_HARD_LINK_FORBIDDEN_IN_IMPORT_SCRATCH')
                 raise RuntimeError('MODEL_HARD_LINK_FORBIDDEN')
             elif event == 'os.symlink':
                 raise RuntimeError('MODEL_SYMLINK_FORBIDDEN')

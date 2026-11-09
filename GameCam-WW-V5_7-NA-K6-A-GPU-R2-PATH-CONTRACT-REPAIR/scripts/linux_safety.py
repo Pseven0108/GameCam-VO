@@ -10,11 +10,46 @@ SUPERVISOR_PERIOD=.2
 EXPECTED_UUID='GPU-cc31dd0a-10a0-a9ab-52fb-61a57d4b3d71'
 class SafetyStop(RuntimeError):pass
 
+def _secure_append(path, text):
+    path=pathlib.Path(path)
+    fd=os.open(str(path), os.O_WRONLY|os.O_CREAT|os.O_APPEND, 0o600)
+    try:
+        os.fchmod(fd, 0o600)
+        with os.fdopen(fd, 'a', encoding='utf-8') as f:
+            f.write(text)
+    except BaseException:
+        try: os.close(fd)
+        except OSError: pass
+        raise
+
+def _secure_atomic_text(path, text):
+    path=pathlib.Path(path)
+    temp=path.with_name(path.name+'.'+str(os.getpid())+'.tmp')
+    fd=None
+    try:
+        fd=os.open(str(temp), os.O_WRONLY|os.O_CREAT|os.O_EXCL, 0o600)
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
+            fd=None
+            f.write(text)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temp, path)
+    finally:
+        if fd is not None:
+            try: os.close(fd)
+            except OSError: pass
+        if temp.exists():
+            try: temp.unlink()
+            except OSError: pass
+
 def atomic_json(path,data):
-    path=pathlib.Path(path);temp=path.with_name(path.name+'.'+str(os.getpid())+'.tmp')
-    temp.write_text(json.dumps(data,allow_nan=False)+'\n');os.replace(temp,path)
+    _secure_atomic_text(path, json.dumps(data, allow_nan=False)+'\n')
+
 def append_json(path,data):
-    with pathlib.Path(path).open('a') as f:f.write(json.dumps(data,allow_nan=False)+'\n')
+    _secure_append(path, json.dumps(data, allow_nan=False)+'\n')
+
+def secure_text(path, text):
+    _secure_atomic_text(path, text)
 def read_json(path):
     try:return json.loads(pathlib.Path(path).read_text())
     except (OSError,ValueError) as e:raise SafetyStop('MONITOR_DATA_UNREADABLE:'+str(e)) from e

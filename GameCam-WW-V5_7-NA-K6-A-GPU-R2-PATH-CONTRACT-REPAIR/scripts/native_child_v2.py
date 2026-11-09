@@ -29,8 +29,33 @@ def main(argv=None):
     policy.install_arena()
     # Native dataset construction globs the input directory; actual reads are limited to these 120 files.
     from model_io_boundary_v2 import ModelIOBoundary
-    boundary=ModelIOBoundary(reads,[str(root/r['path']) for r in c['source_records']]+[r['path'] for r in c.get('external_source_records',[])],[root,c['external_production_root']],[out,a.session_dir],[c['runtime_environment_prefix']],ipc_policy=policy);boundary.install()
-    out.mkdir(parents=True,exist_ok=False)
+    session_dir=pathlib.Path(a.session_dir).resolve()
+    worker_files=[
+        session_dir/'cuda_samples.jsonl',
+        session_dir/'cuda.latest.json',
+        session_dir/'frame_samples.jsonl',
+        session_dir/'ipc_worker_events.jsonl',
+        session_dir/'worker_terminal.json',
+    ]
+    worker_read_files=[
+        session_dir/'work.permit.json',
+        session_dir/'nvml.latest.json',
+        session_dir/'supervisor_heartbeat.jsonl',
+    ]
+    boundary=ModelIOBoundary(
+        reads,
+        [str(root/r['path']) for r in c['source_records']]+[r['path'] for r in c.get('external_source_records',[])],
+        [root,c['external_production_root']],
+        [out],
+        [c['runtime_environment_prefix']],
+        ipc_policy=policy,
+        worker_files=worker_files,
+        worker_read_files=worker_read_files,
+        worker_atomic_files=[session_dir/'cuda.latest.json', session_dir/'worker_terminal.json'],
+        worker_root=session_dir,
+    )
+    boundary.install()
+    out.mkdir(parents=True,exist_ok=False,mode=0o700)
     scratch=pathlib.Path(a.session_dir)/'tmp'
     require(os.environ.get('TMPDIR')==str(scratch),'TEMP_DIRECTORY_NOT_PINNED','BLOCKED_BY_AUTHORIZATION_GUARD')
     require(scratch.is_dir() and scratch.resolve()==scratch,'IPC_FALLBACK_NOT_PREPARED','BLOCKED_BY_AUTHORIZATION_GUARD')

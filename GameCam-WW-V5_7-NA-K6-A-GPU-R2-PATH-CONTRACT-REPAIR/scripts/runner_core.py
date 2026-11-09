@@ -43,7 +43,7 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
     if kind=='droidw':
         if launch_context is None:raise SafetyStop('DROIDW_LAUNCH_CONTEXT_REQUIRED')
         launch_context.validate(out,session,worker_command,monitor_command,env or os.environ,consume=False)
-    out=pathlib.Path(out);out.mkdir(parents=True,exist_ok=False)
+    out=pathlib.Path(out);out.mkdir(parents=True,exist_ok=False,mode=0o700);os.chmod(out,0o700)
     reader=SampleReader(session);growth=GrowthGuard();worker=None;monitor=None;reason=None;frame_offset=0;frame_buffer='';first_nvml=None;first_cuda=None;permit=False;startup_complete=False;events=[];handles=[];start=time.monotonic();stop_record=None
     terminal=None;terminal_seen=None;primary_failure=None;cleanup_reason=None;ipc_owner=None;ipc_cleanup=None
     def event(state,**kw):
@@ -77,7 +77,10 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
         event('WORKER_TERMINAL_CLEANUP',cleanup_deadline_seconds=TERMINAL_CLEANUP_SECONDS)
         return True
     try:
-        handles=[(out/n).open('x') for n in ['monitor.stdout.txt','monitor.stderr.txt','worker.stdout.txt','worker.stderr.txt']]
+        def open_log(name):
+            fd=os.open(str(out/name),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+            return os.fdopen(fd,'w',encoding='utf-8')
+        handles=[open_log(n) for n in ['monitor.stdout.txt','monitor.stderr.txt','worker.stdout.txt','worker.stderr.txt']]
         event('MONITOR_STARTING',command=monitor_command)
         monitor=subprocess.Popen(monitor_command,stdout=handles[0],stderr=handles[1],env=env,start_new_session=True)
         while True:
@@ -133,7 +136,8 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
     finally:
         if worker is not None and worker.poll() is None:stop_record=stop_owned(worker,reason or 'FINALLY_CLEANUP',out,'worker',kind)
         if monitor is not None and monitor.poll() is None:
-            (out/'monitor.stop').write_text('Stop requested by owning supervisor\n')
+            from linux_safety import secure_text
+            secure_text(out/'monitor.stop','Stop requested by owning supervisor\n')
             try:monitor.wait(timeout=2)
             except subprocess.TimeoutExpired:stop_owned(monitor,'MONITOR_CLEANUP_TIMEOUT',out,'monitor',kind)
         if ipc_owner is not None:

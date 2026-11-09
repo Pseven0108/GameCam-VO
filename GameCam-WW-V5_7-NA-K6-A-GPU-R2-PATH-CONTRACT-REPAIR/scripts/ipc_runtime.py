@@ -8,7 +8,15 @@ class EventLog(list):
     def __init__(self,path):super().__init__();self.path=pathlib.Path(path)
     def append(self,event):
         super().append(event)
-        with self.path.open('a') as f:f.write(json.dumps(event)+'\n')
+        fd=os.open(str(self.path), os.O_WRONLY|os.O_CREAT|os.O_APPEND, 0o600)
+        try:
+            os.fchmod(fd,0o600)
+            with os.fdopen(fd,'a',encoding='utf-8') as f:
+                f.write(json.dumps(event)+'\n')
+        except BaseException:
+            try: os.close(fd)
+            except OSError: pass
+            raise
 
 
 def emit(events,name,**data):

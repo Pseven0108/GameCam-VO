@@ -54,6 +54,9 @@ class LaunchContext:
         validate_authorization(c,self.candidate_sha,a,environment or os.environ)
         out=pathlib.Path(out).resolve()
         require(str(out)==c['planned_session_directory'] and session==a.get('session'),'OUTPUT_OR_SESSION_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')
+        if 'planned_ipc_root' in c:
+            from ipc_runtime import expected_root
+            require(session==c['planned_session_id'] and str(expected_root(session))==c['planned_ipc_root'],'IPC_CANDIDATE_SESSION_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')
         require(worker_command==c['worker_command_prefix']+['--candidate',str(self.candidate_path),'--candidate-sha',self.candidate_sha,'--authorization',str(self.authorization_path),'--session-dir',str(out),'--session',session],'WORKER_COMMAND_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')
         require(monitor_command==c['monitor_command_prefix']+['--monitor',str(out),'--session',session],'MONITOR_COMMAND_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')
         ledger=pathlib.Path(c['planned_authorization_ledger'])

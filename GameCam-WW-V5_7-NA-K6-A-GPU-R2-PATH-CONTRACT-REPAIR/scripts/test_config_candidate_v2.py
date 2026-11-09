@@ -96,6 +96,7 @@ def test_native_adapter_starts_guard_before_tracker_imports(tmp_path,monkeypatch
     class FakeGuard:
         phase='fixture_guard'
         def __init__(self,*args):events.append('guard_started')
+        def snapshot(self):return {'fixture':True}
         def finish(self):events.append('guard_finished');return {'fixture':True}
     monkeypatch.setitem(sys.modules,'native_linux_guard_v2',types.SimpleNamespace(Guard=FakeGuard,SafetyStop=Stop))
     original_import=builtins.__import__

@@ -1,0 +1,45 @@
+{
+  "schema": "gamecam-session-arena-contract-v1",
+  "python_version": [
+    3,
+    10,
+    20
+  ],
+  "stdlib_files": {
+    "multiprocessing.heap": {
+      "path": "/opt/conda/lib/python3.10/multiprocessing/heap.py",
+      "sha256": "f6bb79bb99b9ae484935f0d68822e9603a1622dd0b6c4966c79db232a93ba614"
+    },
+    "multiprocessing.sharedctypes": {
+      "path": "/opt/conda/lib/python3.10/multiprocessing/sharedctypes.py",
+      "sha256": "77ef522912474652490b7df523112858e51721e63dcf109b8567a35ce9b31b0d"
+    },
+    "multiprocessing.util": {
+      "path": "/opt/conda/lib/python3.10/multiprocessing/util.py",
+      "sha256": "027d6642308f741f94d44fc79c23e4d1a1c275159823720ccb05b0a8e705450a"
+    },
+    "tempfile": {
+      "path": "/opt/conda/lib/python3.10/tempfile.py",
+      "sha256": "676356b31756112053515fc1d550a99faf0f4bbaff6ccd4cc8a56310474f5c3a"
+    }
+  },
+  "ipc_base": "/dev/shm/gamecam-ipc",
+  "root_template": "/dev/shm/gamecam-ipc/<bound-session>",
+  "directory_mode": "0700",
+  "file_mode": "0600",
+  "filename": "pym-<current-pid>-<8 lowercase/digit/underscore random chars>",
+  "fallback": "<session_dir>/tmp",
+  "stdlib_installation_modified": false,
+  "process_local_only": true,
+  "active_cuda_stale_seconds": 3,
+  "terminal_cleanup_seconds": 5,
+  "SIGTERM_grace_seconds": 5,
+  "startup_barrier_seconds": 15,
+  "condition_timeout_seconds": 3600,
+  "memory_floor_MiB": 512,
+  "growth_window_frames": 30,
+  "growth_delta_MiB": 512,
+  "default_model_attempt_limit": 0,
+  "default_model_execution_authorized": false,
+  "limitation": "Controls Python-audited Arena files; native C POSIX semaphore operations, arbitrary native code and already-open file descriptors are not an OS sandbox."
+}

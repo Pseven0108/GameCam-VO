@@ -39,6 +39,8 @@ class Guard:
         x=self.check('frame_completed',True);x['frame_ordinal']=self.frame;x['sample_seq']=self.growth.next_ordinal+1
         append_json(self.session_dir/'frame_samples.jsonl',x)
         self.growth.append(self.frame,x['allocated_MiB']);self.hb.progress=self.growth.next_ordinal
+    def snapshot(self):
+        return {'min_CUDA_free_MiB':None if self.min_cuda==float('inf') else self.min_cuda,'min_NVML_free_MiB':None if self.min_nvml==float('inf') else self.min_nvml,'peak_NVML_used_MiB':self.peak_nvml,'peak_RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,'monitor_failure':self.hb.failure,'completed_frame_memory_samples':self.growth.next_ordinal,'Windows_DXGI_used':False}
     def finish(self):
         self.hb.finish()
-        return {'min_CUDA_free_MiB':None if self.min_cuda==float('inf') else self.min_cuda,'min_NVML_free_MiB':None if self.min_nvml==float('inf') else self.min_nvml,'peak_NVML_used_MiB':self.peak_nvml,'peak_RSS_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,'monitor_failure':self.hb.failure,'completed_frame_memory_samples':self.growth.next_ordinal,'Windows_DXGI_used':False}
+        return self.snapshot()

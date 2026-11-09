@@ -6,7 +6,7 @@ from runtime_dependency_pins import PinError
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def log(message): print(time.strftime('%H:%M:%S'),message,flush=True)
 
-def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins):
+def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=None):
  """Original native experiment body; only lexical scope and entry/terminal handling change."""
  P=O.parent
  import resource
@@ -195,7 +195,7 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins):
   log(r['status']+' '+str(e));traceback.print_exc()
  finally:
   if guard:
-   r['resources']=guard.finish();r['stopped_phase']=guard.phase
+   r['resources']=guard.snapshot();r['stopped_phase']=guard.phase
    r['torch_peak_allocated_MiB']=torch.cuda.max_memory_allocated()/1048576;r['torch_peak_reserved_MiB']=torch.cuda.max_memory_reserved()/1048576
    stats=torch.cuda.memory_stats();r['allocator_OOM_count']=int(stats.get('num_ooms',0));r['allocator_retry_count']=int(stats.get('num_alloc_retries',0))
   if last_snapshot:r['final_native_snapshot']=last_snapshot
@@ -205,4 +205,8 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins):
   r['output_bytes_before_final_result']=sum(p.stat().st_size for p in out.rglob('*') if p.is_file())
   if writer:writer.close()
   save();log('RESULT '+r['status']+' completed='+str(r['frames_completed'])+' submitted='+str(r['frames_submitted']))
+  try:
+   if terminal_callback is not None:terminal_callback()
+  finally:
+   if guard:guard.finish()
  return 0 if r['status']=='RUN_COMPLETED' else 2

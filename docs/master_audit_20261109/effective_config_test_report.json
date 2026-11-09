@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "effective_config_called": true,
+  "actual_fields": {
+    "max_frames": 120,
+    "stride": 1,
+    "buffer": 350,
+    "warmup": 12,
+    "motion_filter": 3.0,
+    "mapping": false
+  },
+  "only_changes": [
+    "max_frames:60->120",
+    "data.output:isolated planned output"
+  ],
+  "original_config_sha256": "a479e3d8e891f9cb323b9a337143409d460420854350ac8e023782b990ccd775",
+  "original_config_unchanged": true,
+  "generated_config_path": "/root/rivermind-data/gamecam/master-audit-20261109/data-validation/effective_config_120.json",
+  "generated_config_sha256": "001646a18970b422709ae870b62ad580264cd3792bfbed65159c7467a225577e",
+  "planned_output_created": false,
+  "checkpoint_deserialized": false,
+  "additional_adversarial_suite": {
+    "combined_cases": 19,
+    "unsafe_outputs_rejected": [
+      "relative",
+      "existing",
+      "inside source",
+      "inside input",
+      "inside production",
+      "broken symlink"
+    ],
+    "original_config_hash_drift_rejected": true
+  }
+}

@@ -211,6 +211,12 @@ class RuntimePins:
             self._checked_input_frames.append(dict(ordinal=i, published_frame=int(r['published_frame_index']), **checked))
 
     def effective_config(self, output):
+        output_path = Path(output)
+        require(output_path.is_absolute() and not output_path.exists() and not output_path.is_symlink(), 'OUTPUT_NOT_FRESH_ABSOLUTE_PATH', 'BLOCKED_BY_CONFIG_PIN')
+        resolved_output = output_path.resolve(strict=False)
+        protected_roots = [self.root, native(self.spec['k4_live_contract']).parent] + [Path(item['real_linux']) for item in self.spec.get('allowed_path_roots', []) if item['real_linux'].endswith('/GameCam-VO')]
+        for protected in protected_roots:
+            require(not resolved_output.is_relative_to(protected.resolve()), 'OUTPUT_INSIDE_PROTECTED_SOURCE_OR_INPUT', 'BLOCKED_BY_CONFIG_PIN')
         original = self.read_original_config()
         cfg = json.loads(json.dumps(original))
         cfg['max_frames'] = 120
@@ -295,6 +301,7 @@ class LoaderGate(importlib.abc.MetaPathFinder):
         self.pins, self.bindings, self.originals = pins, {}, {}
         self.active = False
         self.socket_originals = {}
+        self.failed = False
     def find_spec(self, fullname, path=None, target=None):
         if fullname not in self.watched:
             return None
@@ -303,6 +310,8 @@ class LoaderGate(importlib.abc.MetaPathFinder):
         spec.loader = _AfterExec(spec.loader, self)
         return spec
     def install(self):
+        require(not self.active and not self.failed and self not in sys.meta_path, 'HOOK_GATE_ALREADY_INSTALLED', 'BLOCKED_BY_LOADER_COVERAGE')
+        require(not any(isinstance(item, LoaderGate) and item.active for item in sys.meta_path), 'ANOTHER_LOADER_GATE_ACTIVE', 'BLOCKED_BY_LOADER_COVERAGE')
         self.active = True
         sys.meta_path.insert(0,self)
         self.socket_originals = {'connect':socket.socket.connect,'create_connection':socket.create_connection}
@@ -315,23 +324,32 @@ class LoaderGate(importlib.abc.MetaPathFinder):
         socket.socket.connect = connect
         socket.create_connection = self.deny
     def deny(self, *args, **kwargs):
+        self.failed = True
         self.pins.event('network_or_cache_fallback_rejected', requested=str(args[:2]))
         raise PinError('DOWNLOAD_OR_CACHE_FALLBACK_FORBIDDEN', 'BLOCKED_BY_LOADER_COVERAGE')
     def bind(self, module, attr, kind):
-        if attr not in module.__dict__:
+        # Resolve lazy public APIs, including huggingface_hub's package facade.
+        old = getattr(module, attr, None)
+        if old is None:
             return
-        old = module.__dict__[attr]
+        key = (module.__name__, attr)
+        if key in self.bindings:
+            require(old is self.bindings[key], 'LOADER_HOOK_REPLACED:' + module.__name__ + '.' + attr, 'BLOCKED_BY_LOADER_COVERAGE')
+            return
         if getattr(old, '_runtime_pin_owner', None) is self:
             wrapped = old
         else:
-            @functools.wraps(old)
             def wrapped(*args, **kwargs):
-                self.assert_integrity()
-                if kind in ('torch.load','safetensors.torch.load_file'):
-                    return self.pins.boundary(kind,old,*args,**kwargs)
-                if kind == 'deny':
-                    return self.deny(*args,**kwargs)
-                return self.cached_call(kind,old,args,kwargs)
+                try:
+                    self.assert_integrity()
+                    if kind in ('torch.load','safetensors.torch.load_file'):
+                        return self.pins.boundary(kind,old,*args,**kwargs)
+                    if kind == 'deny':
+                        return self.deny(*args,**kwargs)
+                    return self.cached_call(kind,old,args,kwargs)
+                except BaseException:
+                    self.failed = True
+                    raise
             wrapped._runtime_pin_owner = self
         key = (module.__name__,attr)
         self.originals[key] = old
@@ -354,11 +372,16 @@ class LoaderGate(importlib.abc.MetaPathFinder):
             self.bind(module,'snapshot_download','deny')
         self.pins.event('loader_module_hooked',module=name,attributes=[attr for mod,attr in self.bindings if mod==name])
     def assert_integrity(self):
-        require(self.active and self in sys.meta_path, 'IMPORT_GUARD_DISABLED', 'BLOCKED_BY_LOADER_COVERAGE')
-        require(socket.socket.connect is self.connect_wrapper and getattr(socket.create_connection,'__self__',None) is self, 'NETWORK_GUARD_DISABLED', 'BLOCKED_BY_LOADER_COVERAGE')
-        for (name, attr), wrapper in self.bindings.items():
-            module = sys.modules.get(name)
-            require(module is not None and module.__dict__.get(attr) is wrapper, 'LOADER_CHECKER_DISABLED:' + name + '.' + attr, 'BLOCKED_BY_LOADER_COVERAGE')
+        try:
+            require(not self.failed, 'LOADER_GATE_PREVIOUSLY_FAILED', 'BLOCKED_BY_LOADER_COVERAGE')
+            require(self.active and self in sys.meta_path, 'IMPORT_GUARD_DISABLED', 'BLOCKED_BY_LOADER_COVERAGE')
+            require(socket.socket.connect is self.connect_wrapper and getattr(socket.create_connection,'__self__',None) is self, 'NETWORK_GUARD_DISABLED', 'BLOCKED_BY_LOADER_COVERAGE')
+            for (name, attr), wrapper in self.bindings.items():
+                module = sys.modules.get(name)
+                require(module is not None and module.__dict__.get(attr) is wrapper, 'LOADER_CHECKER_DISABLED:' + name + '.' + attr, 'BLOCKED_BY_LOADER_COVERAGE')
+        except BaseException:
+            self.failed = True
+            raise
     def cached_call(self, kind, old, args, kwargs):
         p = self.pins
         p.assert_manifest();p.check_environment();p.check_revision()

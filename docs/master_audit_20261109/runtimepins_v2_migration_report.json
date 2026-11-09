@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "approved_entrypoint": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/launcher_v2.py",
+  "worker_entrypoint": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_child_v2.py",
+  "staging_only": true,
+  "production_launcher_files_modified": false,
+  "new_entrypoint_scope": "Approved Staging launcher. Legacy/raw upstream entrypoints remain reference code; there is no host-wide security sandbox.",
+  "source_changes": [
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/cpu_pipeline_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "47dfb3fa8372e7fe55d5e1d50331b591d5ac099fb1b0cc7c008786e87f1931a5",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/launch_authorization.py",
+      "baseline_sha256": null,
+      "final_sha256": "3bf00e1ba38b3230775aef4403a5b88731571cd461f53c80a1b6e703e7341a75",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/launcher_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "374f595fe6cdb28e8724d857042d9579733651afc050a3d89be66e9231e0bbd5",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/model_io_boundary_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "071844ecba004a06174e1140a20bff779b295bb0ef4e60a72d289d379233074b",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_adapter_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "514bc257b1e5017895277e03397b921220c4b1851e617d24d16b6f40937cd4dc",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_child_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "eefaa156c9a3553b67ec0acc5b60501d69a4d0c04eedd64891affa774a0b6004",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_dataset_cpu_smoke.py",
+      "baseline_sha256": null,
+      "final_sha256": "070b015fb6db774520ff7a3e79cf6c12cd38569391e3ab6185c8fb31e281e4b8",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_import_cpu_smoke.py",
+      "baseline_sha256": null,
+      "final_sha256": "cd963b2dcb56e0d0a8d48676e4236f32970ee43f41d46c6d98876cf96012b1f0",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/native_linux_guard_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "a38cacd67b87d64e53ada09b768ea493d103116a4915dd24c566ce48e9e98280",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/real_api_loader_smoke.py",
+      "baseline_sha256": null,
+      "final_sha256": "568be14ccd87e04c5f25b59c933ff485ded50fad8082b6919ab05fca0854baa4",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/runner_core.py",
+      "baseline_sha256": "e5c28124f75138a2b1c8c410ce0dd12aca23e0aa3e108e824fbd039d608963ac",
+      "final_sha256": "0b9fc7b96c27f4976091b3bc0ec9a1e33068f95c2a74a1c4f1ccbdeacd9b6fbb",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/runtime_dependency_pins.py",
+      "baseline_sha256": "7fcfcbf94cb9d3d2c29ccf226975248ba59b9b9979dddb10b119c838587bba41",
+      "final_sha256": "c4426e6260e4194899870c7c467915f334e85fe66b27b3d90998c415a1850603",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/test_config_candidate_v2.py",
+      "baseline_sha256": null,
+      "final_sha256": "13846e30ba3361bf9acbb74561f42aa370a3d0bc81f872a73498fdf976cfb295",
+      "change": "ADDED"
+    },
+    {
+      "path": "GameCam-WW-V5_7-NA-K6-A-GPU-R2-PATH-CONTRACT-REPAIR/scripts/test_v2_cpu.py",
+      "baseline_sha256": null,
+      "final_sha256": "17ac97ddf6d56bb10c6dfbf472ba3b2e15061fc0f32ca64836b5ac9271697e1e",
+      "change": "ADDED"
+    }
+  ],
+  "unchanged_baseline_core_files": 3719,
+  "frozen_pin_spec_unchanged": true,
+  "guard_order": [
+    "authorization required before candidate IO or subprocess",
+    "candidate commit + source/config identity",
+    "authorization scope/lifetime/nonce/attempt policy",
+    "NVML startup barrier",
+    "recheck and exclusive one-shot claim",
+    "worker spawn",
+    "independent child authorization and ledger validation",
+    "RuntimePins + Python IO boundary + LoaderGate",
+    "native CUDA/NVML Guard before heavy imports",
+    "unchanged Tracker.run in a future authorized task only"
+  ],
+  "late_fixes": [
+    {
+      "problem": "PyTorch _state source was falsely classified as dataset State",
+      "fix": "Allow code suffixes inside the pinned environment while continuing to reject environment State CSV and protected project data.",
+      "validation": "Two regressions and actual native import closure."
+    },
+    {
+      "problem": "Framework temporary files attempted /tmp writes outside owned output",
+      "fix": "TMPDIR must equal session/tmp; future child creates it after independent authorization checks.",
+      "validation": "Actual framework imports with temporary files under dedicated CPU-audit output."
+    },
+    {
+      "problem": "Static checks plus cold native imports exceeded unchanged 15-second startup barrier",
+      "fix": "Start the existing native Guard before heavy Tracker/prior imports, preserving the 15-second barrier and all memory thresholds.",
+      "validation": "Executable mocked adapter-order regression plus measured CPU import timing. CUDA initialization timing remains unmeasured."
+    }
+  ],
+  "interpreter_split": {
+    "CPU_tests": "Python 3.11",
+    "native_DROID_W": "Python 3.10"
+  },
+  "validation_mode": "CPU_ONLY",
+  "formal_GPU_attempts_this_task": 0,
+  "new_GPU_authorization": "NONE",
+  "attempt_02_created": false,
+  "GPU_armed": false,
+  "real_model_constructed": false,
+  "native_Tracker_run_called": false,
+  "real_checkpoint_deserialized": false,
+  "GT_values_read": false,
+  "automatic_retry": false
+}

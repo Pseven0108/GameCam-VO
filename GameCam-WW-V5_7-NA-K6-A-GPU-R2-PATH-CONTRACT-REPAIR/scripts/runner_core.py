@@ -36,10 +36,13 @@ def stop_owned(process,reason,out,label,kind):
     r={'reason':reason,'pid':process.pid,'signals':sent,'exit_code':process.poll(),'fully_exited':process.poll() is not None,'signal_to_exit_seconds':time.monotonic()-start,'SIGTERM_grace_seconds':5,'execution_kind':kind}
     atomic_json(pathlib.Path(out)/(label+'_stop.json'),r);return r
 
-def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expected_frames=None):
-    """No retries. Caller alone decides whether a real model has authorization."""
-    out=pathlib.Path(out);out.mkdir(parents=True,exist_ok=False)
+def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expected_frames=None,launch_context=None):
+    """No retries. DROID-W authorization is verified here before any process or output."""
     if kind not in {'cpu_dummy','droidw'}:raise ValueError('Disallowed execution kind')
+    if kind=='droidw':
+        if launch_context is None:raise SafetyStop('DROIDW_LAUNCH_CONTEXT_REQUIRED')
+        launch_context.validate(out,session,worker_command,monitor_command,env or os.environ,consume=False)
+    out=pathlib.Path(out);out.mkdir(parents=True,exist_ok=False)
     reader=SampleReader(session);growth=GrowthGuard();worker=None;monitor=None;reason=None;frame_offset=0;frame_buffer='';first_nvml=None;first_cuda=None;permit=False;startup_complete=False;events=[];handles=[];start=time.monotonic();stop_record=None
     def event(state,**kw):
         row={'monotonic_time':time.monotonic(),'unix_time':time.time(),'session':session,'state':state,'execution_kind':kind,**kw};events.append(row);append_json(out/'supervisor_heartbeat.jsonl',row)
@@ -78,6 +81,9 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
                 if n['sample_seq']>first_nvml['sample_seq'] and n['monotonic_time']-first_nvml['monotonic_time']>=NVML_PERIOD:
                     atomic_json(out/'nvml_startup_barrier.json',{'first':first_nvml,'second':n,'minimum_interval_seconds':NVML_PERIOD,'passed':True});break
             event('WAITING_FOR_NVML_BARRIER');time.sleep(.05)
+        if kind=='droidw':
+            launch_context.validate(out,session,worker_command,monitor_command,env or os.environ,consume=True)
+            event('PRESPAWN_AUTHORIZATION_CLAIMED',candidate_bound=True)
         worker_start=time.monotonic();event('WORKER_STARTING',command=worker_command)
         worker=subprocess.Popen(worker_command,stdout=handles[2],stderr=handles[3],env=env,start_new_session=True)
         while worker.poll() is None:
@@ -109,5 +115,5 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
             try:monitor.wait(timeout=2)
             except subprocess.TimeoutExpired:stop_owned(monitor,'MONITOR_CLEANUP_TIMEOUT',out,'monitor',kind)
         for f in handles:f.close()
-    result={'session':session,'execution_kind':kind,'model_attempts':0 if kind=='cpu_dummy' else 1,'model_execution_authorized':kind=='droidw','worker_started':worker is not None,'worker_pid':worker.pid if worker is not None else None,'worker_exit_code':worker.poll() if worker is not None else None,'worker_fully_exited':worker is None or worker.poll() is not None,'monitor_pid':monitor.pid if monitor is not None else None,'monitor_exit_code':monitor.poll() if monitor is not None else None,'monitor_fully_exited':monitor is None or monitor.poll() is not None,'reason':reason,'startup_barrier_passed':startup_complete,'work_permit_written':permit,'completed_frame_samples':growth.next_ordinal,'duration_seconds':time.monotonic()-start,'worker_stop':stop_record,'automatic_retries':0,'passed':reason is None and worker is not None and worker.poll()==0 and monitor is not None and monitor.poll()==0}
+    result={'session':session,'execution_kind':kind,'model_attempts':1 if kind=='droidw' and launch_context is not None and launch_context.claimed else 0,'model_execution_authorized':kind=='droidw','worker_started':worker is not None,'worker_pid':worker.pid if worker is not None else None,'worker_exit_code':worker.poll() if worker is not None else None,'worker_fully_exited':worker is None or worker.poll() is not None,'monitor_pid':monitor.pid if monitor is not None else None,'monitor_exit_code':monitor.poll() if monitor is not None else None,'monitor_fully_exited':monitor is None or monitor.poll() is not None,'reason':reason,'startup_barrier_passed':startup_complete,'work_permit_written':permit,'completed_frame_samples':growth.next_ordinal,'duration_seconds':time.monotonic()-start,'worker_stop':stop_record,'automatic_retries':0,'passed':reason is None and worker is not None and worker.poll()==0 and monitor is not None and monitor.poll()==0}
     atomic_json(out/'supervisor_result.json',result);return result

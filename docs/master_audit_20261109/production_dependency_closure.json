@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "active_paths": 140,
+  "active_path_failures": [],
+  "runtime_environment": {
+    "executable": "/opt/gamecam/envs/droidw-cu126/bin/python",
+    "prefix": "/opt/gamecam/envs/droidw-cu126",
+    "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+    "versions": {
+      "torch": "2.7.1+cu126",
+      "torchvision": "0.22.1+cu126",
+      "numpy": "1.26.3",
+      "opencv-python": "4.8.1.78",
+      "safetensors": "0.8.0",
+      "timm": "0.9.10",
+      "huggingface-hub": "0.25.2",
+      "xformers": "0.0.31.post1",
+      "mmcv": "NOT_INSTALLED",
+      "mmcv-lite": "2.2.0",
+      "mmengine": "0.10.7",
+      "scipy": "1.15.3",
+      "psutil": "NOT_INSTALLED"
+    },
+    "torch_imported": false,
+    "cuda_queried": false
+  },
+  "extension_records": [
+    {
+      "path": "/opt/gamecam/envs/droidw-cu126/lib/python3.10/site-packages/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "bytes": 760096,
+      "sha256": "8b8feb62157eea1e2ef59158e40860af73fb0ec864d71f1b61fe63869f118903"
+    },
+    {
+      "path": "/opt/gamecam/envs/droidw-cu126/lib/python3.10/site-packages/lietorch_backends.cpython-310-x86_64-linux-gnu.so",
+      "bytes": 2471520,
+      "sha256": "0d798cc12cd4431bbf35595dd062b0df0a0156801ed7ad68f729026c0c4bb382"
+    },
+    {
+      "path": "/opt/gamecam/envs/droidw-cu126/lib/python3.10/site-packages/lietorch_extras.cpython-310-x86_64-linux-gnu.so",
+      "bytes": 563800,
+      "sha256": "0c20601eaee8e12eaea355505a34b0b4ba1150030fe4e7c439b11768a35284ed"
+    },
+    {
+      "path": "/opt/gamecam/envs/droidw-cu126/lib/python3.10/site-packages/torch_scatter/_scatter_cuda.so",
+      "bytes": 3987464,
+      "sha256": "e7adf6a17d0e936792461d7ac589bc38852004ee1f64b6956b33b22e5152212d"
+    },
+    {
+      "path": "/opt/gamecam/envs/droidw-cu126/lib/python3.10/site-packages/xformers/_C.so",
+      "bytes": 46033552,
+      "sha256": "cde4ba8718ee8b9626410769d14ce20536f9f89c6177fe61e84b1a8d601b88f3"
+    }
+  ],
+  "optional_extension_absence": [
+    {
+      "pattern": "mmcv/_ext*.so",
+      "present": false,
+      "active_runtime_required": false,
+      "evidence": "Audited Metric3D/native inference source imports mmcv.utils and mmengine config utilities; no mmcv.ops call occurs in the selected ViT-Large inference branch. This is not a required CUDA extension for this route."
+    }
+  ],
+  "no_cuda_or_nvml_calls": true,
+  "production_sources_modified": false
+}

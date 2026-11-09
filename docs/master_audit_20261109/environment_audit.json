@@ -1,0 +1,111 @@
+{
+  "captured_at": "2026-11-09T06:26:28.6705916+08:00",
+  "local": {
+    "host": "XCKJ-20251027TY",
+    "user": "Administrator",
+    "home": "C:\\Users\\Administrator",
+    "cwd": "D:\\aaa",
+    "captured_at": "2026-11-09T06:26:28.5661532+08:00",
+    "os": "Microsoft Windows NT 10.0.26200.0",
+    "git_version": "git version 2.54.0.windows.1",
+    "python_version": "3.13.13",
+    "python_executable": "C:\\ProgramData\\miniconda3\\python.exe",
+    "python_modules": {
+      "pytest": false,
+      "cv2": false,
+      "torch": true,
+      "yaml": false,
+      "PIL": false,
+      "safetensors": false,
+      "numpy": false
+    },
+    "project_path": "D:\\aaa\\GameCam-VO",
+    "git_branch": "repro/2026-11-01-phase5",
+    "git_head": "388fedf14ab1a071ab9c6955174ff092589300f3",
+    "git_tracked_modified": 6,
+    "git_untracked_paths": 133,
+    "worktree_clean": false,
+    "drive": "D:",
+    "filesystem": "NTFS",
+    "volume_size_bytes": 677746774016,
+    "volume_free_bytes": 161597964288,
+    "gpu_touched": false,
+    "cuda_initialized": false,
+    "nvml_called": false
+  },
+  "remote": {
+    "host": "jupyter-u313cp7kyztcpsz8",
+    "user": "root",
+    "home": "/root",
+    "cwd": "/root",
+    "timestamp": "2026-11-09T06:19:15.742141+08:00",
+    "os_release": {
+      "ID": "ubuntu",
+      "VERSION_ID": "\"22.04\"",
+      "PRETTY_NAME": "\"Ubuntu 22.04.5 LTS\""
+    },
+    "python_version": "3.10.20",
+    "python_executable": "/usr/local/bin/python",
+    "git_version": "git version 2.34.1",
+    "project_root": "/root/rivermind-data/gamecam/GameCam-VO",
+    "project_root_mode": "0o755",
+    "project_git_metadata_present": false,
+    "project_entries": 19,
+    "data_disk_total_bytes": 52521566208,
+    "data_disk_used_bytes": 2177794048,
+    "data_disk_free_bytes": 50326994944,
+    "conda_path": "/usr/local/bin/conda",
+    "conda_envs": [
+      "/opt/conda"
+    ],
+    "module_specs": {
+      "pytest": false,
+      "cv2": false,
+      "torch": false,
+      "yaml": true,
+      "PIL": false,
+      "safetensors": false,
+      "numpy": false
+    },
+    "project_symlinks": [
+      {
+        "path": "data/sota_assets/DROID_W/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors",
+        "target": "../../blobs/dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d"
+      }
+    ],
+    "ssh_deploy_key_mode": "0o600",
+    "gpu_touched": false,
+    "cuda_initialized": false,
+    "nvml_called": false
+  },
+  "gpu_cuda_nvml_accessed": false,
+  "production_modified": false,
+  "CPU_validation_environment": {
+    "path": "/opt/gamecam-cpu-master-20261109",
+    "python": "3.11",
+    "separate_from_production_base": true
+  },
+  "DROID_W_runtime_environment": {
+    "executable": "/opt/gamecam/envs/droidw-cu126/bin/python",
+    "prefix": "/opt/gamecam/envs/droidw-cu126",
+    "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+    "versions": {
+      "torch": "2.7.1+cu126",
+      "torchvision": "0.22.1+cu126",
+      "numpy": "1.26.3",
+      "opencv-python": "4.8.1.78",
+      "safetensors": "0.8.0",
+      "timm": "0.9.10",
+      "huggingface-hub": "0.25.2",
+      "xformers": "0.0.31.post1",
+      "mmcv": "NOT_INSTALLED",
+      "mmcv-lite": "2.2.0",
+      "mmengine": "0.10.7",
+      "scipy": "1.15.3",
+      "psutil": "NOT_INSTALLED"
+    },
+    "torch_imported": false,
+    "cuda_queried": false
+  },
+  "interpretation": "Base Python lacks torch; DROID-W has a separate Python 3.10 venv. Root-project and native-baseline interpreter requirements remain separate."
+}

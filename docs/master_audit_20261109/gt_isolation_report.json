@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "real_reads": "120 frozen RGB PNG files plus pinned configurations/manifests and checkpoint raw hashes only",
+  "model_packet_fields": [
+    "ordinal",
+    "rgb_shape",
+    "K",
+    "pose=None",
+    "depth=None"
+  ],
+  "analysis_data_rejections": [
+    {
+      "name": "state.csv",
+      "rejected": true,
+      "reason": "MODEL_UNAPPROVED_PROJECT_READ:/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb/state.csv"
+    },
+    {
+      "name": "skeleton.npz",
+      "rejected": true,
+      "reason": "MODEL_UNAPPROVED_PROJECT_READ:/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb/skeleton.npz"
+    },
+    {
+      "name": "camera_pose.csv",
+      "rejected": true,
+      "reason": "MODEL_UNAPPROVED_PROJECT_READ:/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb/camera_pose.csv"
+    },
+    {
+      "name": "NPC.csv",
+      "rejected": true,
+      "reason": "MODEL_UNAPPROVED_PROJECT_READ:/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb/NPC.csv"
+    },
+    {
+      "name": "Monster.csv",
+      "rejected": true,
+      "reason": "MODEL_UNAPPROVED_PROJECT_READ:/root/rivermind-data/gamecam/GameCam-VO/GameCam-WW-V5_7-NA-K4/inputs/512x288/V56_01/middle/rgb/Monster.csv"
+    }
+  ],
+  "GT_values_read": false,
+  "GT_pose_evaluation_executed": false,
+  "boundary_limit": "Python allowlist and audited fixed native call graph; not a native-code OS sandbox."
+}

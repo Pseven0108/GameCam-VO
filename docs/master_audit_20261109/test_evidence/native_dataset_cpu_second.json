@@ -1,0 +1,1936 @@
+{
+  "status": "PASS",
+  "real_dataset_class": "src.utils.datasets.RGB_NoPose",
+  "native_tracking_called": false,
+  "fake_tracker_frames": 120,
+  "torch_version": "2.7.1+cu126",
+  "tensor_device": "cpu",
+  "native_depth_contract": "zero placeholder tensor synthesized by BaseDataset when depth_paths=None; native Tracker ignores sample fields 3 and 4",
+  "cuda_initialized": false,
+  "checkpoint_load_events": [],
+  "GT_values_read": false,
+  "pose_values_generated": 0,
+  "seconds": 1.982124428031966,
+  "frames": [
+    {
+      "ordinal": 0,
+      "published_frame": 7953,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "c54ba95742c742dbf5e5515a31728454bc1957c652e045a9efa40740a237b03f",
+      "passed": true
+    },
+    {
+      "ordinal": 1,
+      "published_frame": 7954,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "e5a2d14f88ecf3515565c066f7f128a2bb5b6f0ff542bcba3b3aff660b4ed1cf",
+      "passed": true
+    },
+    {
+      "ordinal": 2,
+      "published_frame": 7955,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "2d090ec592482db125a164487d74b7e8472535b81981943065098c5486934468",
+      "passed": true
+    },
+    {
+      "ordinal": 3,
+      "published_frame": 7956,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "30f9cd55222875101c4cbdb4758ec1773ffc2bc39fc055df45b523604ca41ced",
+      "passed": true
+    },
+    {
+      "ordinal": 4,
+      "published_frame": 7957,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "1e12515969a9709eb009b0d01890b28400c79ab5d490c7133219ffcf36e573c6",
+      "passed": true
+    },
+    {
+      "ordinal": 5,
+      "published_frame": 7958,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "d3951a4d9247a94cb907cd9417955108c5c197e5a12714870eaabb9073cff890",
+      "passed": true
+    },
+    {
+      "ordinal": 6,
+      "published_frame": 7959,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "cc6be70a822eddd782462d5dcd5fa480001727ed1447aebb1b6c9384e02a8021",
+      "passed": true
+    },
+    {
+      "ordinal": 7,
+      "published_frame": 7960,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a9445c9085d0156a56a50c1bb9e953feaa33ce3d25dececcf17f163974d7b9bb",
+      "passed": true
+    },
+    {
+      "ordinal": 8,
+      "published_frame": 7961,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "1a3d048fbb7fbaff755005945af36f7831f9f80650069c236c2648922926065e",
+      "passed": true
+    },
+    {
+      "ordinal": 9,
+      "published_frame": 7962,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "26cf9ab52a6092ea5368800d766b052be02258a7ecd7654401b8cebab975868e",
+      "passed": true
+    },
+    {
+      "ordinal": 10,
+      "published_frame": 7963,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "d40784e873cb91de8081e3b269e3e1ccea71c7a1414e2a2b4132d9f8f5c72a0b",
+      "passed": true
+    },
+    {
+      "ordinal": 11,
+      "published_frame": 7964,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "4e5fffe176a96f8101673de307b284d506be7bf2a458faf4b3a5caec06c55178",
+      "passed": true
+    },
+    {
+      "ordinal": 12,
+      "published_frame": 7965,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "0810a96badaa6626df5311a6730cf01d793f15a2c79eedcb468c1d1367e35f01",
+      "passed": true
+    },
+    {
+      "ordinal": 13,
+      "published_frame": 7966,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "ea45480b301e2fd70dac8d781e93bf584eb1834543ab6c8e1c8525e51b66351a",
+      "passed": true
+    },
+    {
+      "ordinal": 14,
+      "published_frame": 7967,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8613f20c71673b1b6c9c26a0442e64463b1dbe648bba1d901bf421415e1278db",
+      "passed": true
+    },
+    {
+      "ordinal": 15,
+      "published_frame": 7968,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "add0d0bbbdb17bfc1cbe105ec248c5930822cb5d4b3c883b1676aca95c6acd89",
+      "passed": true
+    },
+    {
+      "ordinal": 16,
+      "published_frame": 7969,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3800c7b24139b737ccb25f52c3dde218ae006b5b2adac51b7038c589b8acf733",
+      "passed": true
+    },
+    {
+      "ordinal": 17,
+      "published_frame": 7970,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "921d87da9b67f9390769a3797891b1594f38d5c921ae720966bd57537a577d45",
+      "passed": true
+    },
+    {
+      "ordinal": 18,
+      "published_frame": 7971,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "7eb64ac2c43cb0efce22494071d21efa9913fbffda3086f961227dc460966024",
+      "passed": true
+    },
+    {
+      "ordinal": 19,
+      "published_frame": 7972,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "20b2c89d3f04fe2db7ef38871d2a282c8436a1e7298b54ec45f45d15f92f81a0",
+      "passed": true
+    },
+    {
+      "ordinal": 20,
+      "published_frame": 7973,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "7d8ae878545c9e8c1bab3a25df38143bcb249fa7a9ad1cebe2016faf1bf6d6a3",
+      "passed": true
+    },
+    {
+      "ordinal": 21,
+      "published_frame": 7974,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3bfe7addd643f55b26130954d1bb2e784ec9000952acd8005f99b8e9932890c3",
+      "passed": true
+    },
+    {
+      "ordinal": 22,
+      "published_frame": 7975,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "61535154a8cdcc342846e7fd5bca8c6f919cf5896233bcedac6e1ad4dad0b490",
+      "passed": true
+    },
+    {
+      "ordinal": 23,
+      "published_frame": 7976,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "be511fcbf6fd8aa5f40255b025eb0edb4e16bd2daf8971139ae1ad60ab66d4bc",
+      "passed": true
+    },
+    {
+      "ordinal": 24,
+      "published_frame": 7977,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "86098fc6124de1b2605fea455501ef930fb4c8d032d4e29e3e38cbe93507a4d2",
+      "passed": true
+    },
+    {
+      "ordinal": 25,
+      "published_frame": 7978,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3c7fc480ff584e0bcc4ca87be361504c0830cc9d33370b349d518a6f7a71d61c",
+      "passed": true
+    },
+    {
+      "ordinal": 26,
+      "published_frame": 7979,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "04bbaa0201d0a40940130ffd796ce83f27e482f3557f9ca0aac37cfcad748b43",
+      "passed": true
+    },
+    {
+      "ordinal": 27,
+      "published_frame": 7980,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "638f6125cfc4b2ba719b509ddc1898ddde4fea2dc205cc0e2ca8010afeb52478",
+      "passed": true
+    },
+    {
+      "ordinal": 28,
+      "published_frame": 7981,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "b5553418082a0c0ec0415b2af1b43f660ccca4bc7a2f42bcdd7cbaa78e5282f6",
+      "passed": true
+    },
+    {
+      "ordinal": 29,
+      "published_frame": 7982,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "2c09efd4d65ca8c3a166704b393edc3561295201854734c7c2b3863aeb40b403",
+      "passed": true
+    },
+    {
+      "ordinal": 30,
+      "published_frame": 7983,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "892b47628887ed88926ab92bca03900a65eccd35dfd2e121dd5b5c3141c828c3",
+      "passed": true
+    },
+    {
+      "ordinal": 31,
+      "published_frame": 7984,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "0374783a042976f7536551020a9aed4691abddc257e1bfb7543622e21d3b9cc0",
+      "passed": true
+    },
+    {
+      "ordinal": 32,
+      "published_frame": 7985,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "f1327b97323bc214c51ea2faf077a55f1b474e9c14b977e9a3f092fc589221d6",
+      "passed": true
+    },
+    {
+      "ordinal": 33,
+      "published_frame": 7986,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "e98e9d137c8962d968e393fb64634cebb7b1304a4550ffdf3d73c268c5d1ac8b",
+      "passed": true
+    },
+    {
+      "ordinal": 34,
+      "published_frame": 7987,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a10adea80a66e18903c15518451e838d8913b4aa507bf6ea5202515cfbb5283e",
+      "passed": true
+    },
+    {
+      "ordinal": 35,
+      "published_frame": 7988,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "62b4c3cc54abc3b41927a1795b7456481ace7804b9d511a95de2f75a42feae6a",
+      "passed": true
+    },
+    {
+      "ordinal": 36,
+      "published_frame": 7989,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "4f5f2f28c9b5a4c44e73ccef71c424b91de51b2fd94ffcbc1abb79df0db25693",
+      "passed": true
+    },
+    {
+      "ordinal": 37,
+      "published_frame": 7990,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "722e0d613750710042379766683174e05a7d45fc222e68b10b050b94c6d66211",
+      "passed": true
+    },
+    {
+      "ordinal": 38,
+      "published_frame": 7991,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "9f5eb96ce6e3ecec023a1af86e78bde09a945cda22a9bc5f0263d227c3657961",
+      "passed": true
+    },
+    {
+      "ordinal": 39,
+      "published_frame": 7992,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "78a3b691cf588e688f5faa9342ea7beee03fafdd92762f59f7f321b00bffb935",
+      "passed": true
+    },
+    {
+      "ordinal": 40,
+      "published_frame": 7993,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "f78e4b78a6dbd4887185c3286f944abbb1ec41624b6ff3702b80490bf00148ad",
+      "passed": true
+    },
+    {
+      "ordinal": 41,
+      "published_frame": 7994,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "52da6c7e91a755f7eac95a3361a8d3572051395004fcd4bb6fd6a96c33c45b8b",
+      "passed": true
+    },
+    {
+      "ordinal": 42,
+      "published_frame": 7995,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "d022f9111a0999d9b281b3309bc1e0e423896af82ed21e8d8a150820ec0deccf",
+      "passed": true
+    },
+    {
+      "ordinal": 43,
+      "published_frame": 7996,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "b7def7bc73fbb53bbf81deea9e3ec647d32765316cb4ed5c8016460c6a05cfb5",
+      "passed": true
+    },
+    {
+      "ordinal": 44,
+      "published_frame": 7997,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3b6c039fb3d5cd23de3185a6f762966e24eb678c828a88dbcd6a6dd6926643a7",
+      "passed": true
+    },
+    {
+      "ordinal": 45,
+      "published_frame": 7998,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "fad1197dcf11364441f47945fe5133d0604349b44c2be2b1b0862418a78c1376",
+      "passed": true
+    },
+    {
+      "ordinal": 46,
+      "published_frame": 7999,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "10a3e75c45e95a7d218d2e20f4dcb40845e3bc92c132c1d53111aabdc1177f9d",
+      "passed": true
+    },
+    {
+      "ordinal": 47,
+      "published_frame": 8000,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3bd378d84f843d4d92678563da66e98bce69cadd0f5265bee26c38c1fcab5d50",
+      "passed": true
+    },
+    {
+      "ordinal": 48,
+      "published_frame": 8001,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "c2102630af192dbe9356e9924d175a035146a918911c0d474cd3f1b99eecf195",
+      "passed": true
+    },
+    {
+      "ordinal": 49,
+      "published_frame": 8002,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "202b0592c97dc8276b3a2832dbbb70c268e30fc61786ac5164cf5fec1837f6db",
+      "passed": true
+    },
+    {
+      "ordinal": 50,
+      "published_frame": 8003,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "4aaf9192d2709744b233bd53d0db5dcaa3b80d9c119cfc374dccea2d1173858b",
+      "passed": true
+    },
+    {
+      "ordinal": 51,
+      "published_frame": 8004,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "daef9dbc45d34505ed16e8037f99fd343f1bc096f1c3d629a8bfed8494334b8d",
+      "passed": true
+    },
+    {
+      "ordinal": 52,
+      "published_frame": 8005,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3d89774ff5cd1ef47685bde62125ea28bac93c5157ffc169dbaff948808cd9c3",
+      "passed": true
+    },
+    {
+      "ordinal": 53,
+      "published_frame": 8006,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "2c2fb5ffcfdd50590da7b801ee51117e585b455636c3d4412920a003c3508866",
+      "passed": true
+    },
+    {
+      "ordinal": 54,
+      "published_frame": 8007,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "15a036e6dc3be05dc147f9ed81956074d0e3668f4a3ed47cdcd08f0f1ed19268",
+      "passed": true
+    },
+    {
+      "ordinal": 55,
+      "published_frame": 8008,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "190700cb6f9bee6cd79bdfbe9e505d38bdbb412245219361af88853fff2fcb5d",
+      "passed": true
+    },
+    {
+      "ordinal": 56,
+      "published_frame": 8009,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8295ec74ed607364cadb4155c60f62b7b348ff0db711f4c469e96d8ae34c58c2",
+      "passed": true
+    },
+    {
+      "ordinal": 57,
+      "published_frame": 8010,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "254eda367180666a08d2b3fb4c48723ad997849265485ce7064d6dd00ac9ce95",
+      "passed": true
+    },
+    {
+      "ordinal": 58,
+      "published_frame": 8011,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "cf69cec8a087343d8f15b1d21692d01fe892e281269d98bd06643eaf61b7a146",
+      "passed": true
+    },
+    {
+      "ordinal": 59,
+      "published_frame": 8012,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "c7de7eed945297c0893ef26e48f22ad8806036f4505a153c0faf48f1270f7504",
+      "passed": true
+    },
+    {
+      "ordinal": 60,
+      "published_frame": 8013,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "b6ebb1974cc40c3d3ed27368407577b7e7bfaf502bf52559a89368b075b74a3f",
+      "passed": true
+    },
+    {
+      "ordinal": 61,
+      "published_frame": 8014,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "b124e7bdc264baf5f1d36181eb7da76e0f51397b1849897125faf01e6a393f99",
+      "passed": true
+    },
+    {
+      "ordinal": 62,
+      "published_frame": 8015,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "694a2b9145a069c16180662367d81c3781a666e740d16128c89d03e96a15db70",
+      "passed": true
+    },
+    {
+      "ordinal": 63,
+      "published_frame": 8016,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "f8dbabc4f687620a45fbee5450ae588ab521fd64086eac13bb4862a0b3b13001",
+      "passed": true
+    },
+    {
+      "ordinal": 64,
+      "published_frame": 8017,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "1c585ddc57b88340c4606d75ddcf437465dc8c3046466be68511d7ddaa5a7e50",
+      "passed": true
+    },
+    {
+      "ordinal": 65,
+      "published_frame": 8018,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "acb5494fb74bd801d7d257d5ddc9324aea7d3d474b3a579739b572e85f81a892",
+      "passed": true
+    },
+    {
+      "ordinal": 66,
+      "published_frame": 8019,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8ffa6ef644891f640e46ec465f5aa872e2562d0bc7a0adbb01d31c07b85b04d8",
+      "passed": true
+    },
+    {
+      "ordinal": 67,
+      "published_frame": 8020,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "949ae8a2c22e5b164b6c5db14e5c443c6193a3a378d86cafa6ac182f88c4c679",
+      "passed": true
+    },
+    {
+      "ordinal": 68,
+      "published_frame": 8021,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "7be40bfdd636c02c91066aba1443f1c4df4edfce5cc3a54df737af660596d9cc",
+      "passed": true
+    },
+    {
+      "ordinal": 69,
+      "published_frame": 8022,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "613577fdc79782227607976c85f2490d96568719aab21dc814e8189a07ecb138",
+      "passed": true
+    },
+    {
+      "ordinal": 70,
+      "published_frame": 8023,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a46663efe69939d876941711a8572824fe435f154f9c54a8f0b494632cfb489a",
+      "passed": true
+    },
+    {
+      "ordinal": 71,
+      "published_frame": 8024,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a7b8177fb6c711d6f658751d4347c9db8fd5fde319e055ce327a0377364f8664",
+      "passed": true
+    },
+    {
+      "ordinal": 72,
+      "published_frame": 8025,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "6c3fda0267bcc7e57697197a1f052013c6f8982b2dd1b888912cc6d9f7fa14eb",
+      "passed": true
+    },
+    {
+      "ordinal": 73,
+      "published_frame": 8026,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "9b63f0cc870c5f76270eb1cc07f541b071ca83a3247720532a2537a503795d43",
+      "passed": true
+    },
+    {
+      "ordinal": 74,
+      "published_frame": 8027,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "4235de7996733ce5d83b2c98caa9b4d8a581a0a0aca79f71ada230bf09a6b933",
+      "passed": true
+    },
+    {
+      "ordinal": 75,
+      "published_frame": 8028,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "cd2e8a151223753d3ded380f5863e23e8ed27776db3d4aeec1cd5f6c3004f84e",
+      "passed": true
+    },
+    {
+      "ordinal": 76,
+      "published_frame": 8029,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "6225a50ed1a433d3c6197f7c724bf46b0205b23e78d5ea5f8b5efaf45b5d0909",
+      "passed": true
+    },
+    {
+      "ordinal": 77,
+      "published_frame": 8030,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "6ca99f808d61a30b261a2249eb2265b7f3f252752e699792a8d850f6ed510804",
+      "passed": true
+    },
+    {
+      "ordinal": 78,
+      "published_frame": 8031,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "3545fcde334776fa60b7a1a4610db41bc7bec8694be877db9db378903163e36f",
+      "passed": true
+    },
+    {
+      "ordinal": 79,
+      "published_frame": 8032,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "04d72a58e3a1b2147f514c64b429b9b906736e7fc9abe069350f29a5c89ff210",
+      "passed": true
+    },
+    {
+      "ordinal": 80,
+      "published_frame": 8033,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "0f1ad25c41b815e55bc15e734e08204c850860c2eb3025b924b4f3ebe3222d70",
+      "passed": true
+    },
+    {
+      "ordinal": 81,
+      "published_frame": 8034,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "5d3b741d3b5a09482c1940bd7529319f1c9b9a8e2d46b38bdb3d9dac6b90c1b5",
+      "passed": true
+    },
+    {
+      "ordinal": 82,
+      "published_frame": 8035,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "39c419e8fbe55cc1299ef7139d1fbba6d2c5941fe15d5f9e2e5795b70fcf1b6f",
+      "passed": true
+    },
+    {
+      "ordinal": 83,
+      "published_frame": 8036,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a7ee9cba8d1733b5c5ba74b7b21d51a84e0c30f3fe8a977f82ec7c478478cdb5",
+      "passed": true
+    },
+    {
+      "ordinal": 84,
+      "published_frame": 8037,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "fc0fa4d948697000083aec26afc557782d43935381b43948207548b262776c94",
+      "passed": true
+    },
+    {
+      "ordinal": 85,
+      "published_frame": 8038,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8b799e4edd2450f2fa461055542fc192331b7b1198a5883f78cd55c18238d6af",
+      "passed": true
+    },
+    {
+      "ordinal": 86,
+      "published_frame": 8039,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "109e9105ea565be95cc82d52b921e8e6db53a23f4ea023cc6a1b080682e9874a",
+      "passed": true
+    },
+    {
+      "ordinal": 87,
+      "published_frame": 8040,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "d652b3510d3d10ef1ee0789d17dfe302a45507bc796486d35f2bd4deda25d582",
+      "passed": true
+    },
+    {
+      "ordinal": 88,
+      "published_frame": 8041,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "909a9486cff904877de9b359bd9262a8729569936d58671b5549d3c1262857e9",
+      "passed": true
+    },
+    {
+      "ordinal": 89,
+      "published_frame": 8042,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "2f911b6718bf5e973351132882204201d8177665ba948db6f9f760d1155cfd37",
+      "passed": true
+    },
+    {
+      "ordinal": 90,
+      "published_frame": 8043,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "4cf9fe592006ea916dba3ec988f92bbb85064e8dbfeab34df7735af69e165ec0",
+      "passed": true
+    },
+    {
+      "ordinal": 91,
+      "published_frame": 8044,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "632c6d6eef4cd41d3938b27fff7042cc4c53e1d1170a2af055614cc053c203c8",
+      "passed": true
+    },
+    {
+      "ordinal": 92,
+      "published_frame": 8045,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "652bfe6131b1e11f3dd3b75a9f2449fd7a15892beb0d04f54b6ebbf641596b36",
+      "passed": true
+    },
+    {
+      "ordinal": 93,
+      "published_frame": 8046,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "993bdbc13fee168aab6cf42d1452595d08c3573c8b70a4b72af2d3a585f1e1f8",
+      "passed": true
+    },
+    {
+      "ordinal": 94,
+      "published_frame": 8047,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "d59c5640cd3e945c1406db14ef03362c32c470616e1d06c0d9757347a5cc6692",
+      "passed": true
+    },
+    {
+      "ordinal": 95,
+      "published_frame": 8048,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "f7659b06bd4dea165a563180d32bae6688b7217338750ec22dc870ba581be7fa",
+      "passed": true
+    },
+    {
+      "ordinal": 96,
+      "published_frame": 8049,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "97bdd9067459743bba127730f37d7c23f82765d331942a0b48263990e31db71e",
+      "passed": true
+    },
+    {
+      "ordinal": 97,
+      "published_frame": 8050,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "403ff530919a82ffa21d3c3c2c3acb909a38768d5c7dc3ddb7068ea2aea4344b",
+      "passed": true
+    },
+    {
+      "ordinal": 98,
+      "published_frame": 8051,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "5164eebfc4ac35a95b97fb77129cd5b2674315aad8979bb386199a3a393f1188",
+      "passed": true
+    },
+    {
+      "ordinal": 99,
+      "published_frame": 8052,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8395482552669b3612c65dff6f6cd2038cf6b3b8560bca5659fc67d309eaf34b",
+      "passed": true
+    },
+    {
+      "ordinal": 100,
+      "published_frame": 8053,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "e9554e0870b5ebc26de01f73f9e52afe712a67ab9d3148622b94bebfc7a7a786",
+      "passed": true
+    },
+    {
+      "ordinal": 101,
+      "published_frame": 8054,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "cbece572648773323241db8d165868fa956616b9e0e695fb451d9fd65ea15ba0",
+      "passed": true
+    },
+    {
+      "ordinal": 102,
+      "published_frame": 8055,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "109aa024a6386767c6210c06f2e7bc2735ecc8324919b2c936407e9afb7fbc5d",
+      "passed": true
+    },
+    {
+      "ordinal": 103,
+      "published_frame": 8056,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "17fb10298c45a2b6af12d524a27f9207cfa6fa100d1e40fe47f0d678d412fad6",
+      "passed": true
+    },
+    {
+      "ordinal": 104,
+      "published_frame": 8057,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "8b1f6dbf2038334cb7c5d0c9108a92709ad50924864cf020cabdf9c4cfda014c",
+      "passed": true
+    },
+    {
+      "ordinal": 105,
+      "published_frame": 8058,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "7835291ecdbcc733ba958a57be8a38e74547d81c5eed744b4e27f13b711082cd",
+      "passed": true
+    },
+    {
+      "ordinal": 106,
+      "published_frame": 8059,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "eaaf38ef47cc85a91da8a9725551834126d00ac6c0561a20110c215b0f5ee521",
+      "passed": true
+    },
+    {
+      "ordinal": 107,
+      "published_frame": 8060,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "11c74c1cc81c53c3eebfc499269304a81a63a2f7581c372293226acaae46ecfe",
+      "passed": true
+    },
+    {
+      "ordinal": 108,
+      "published_frame": 8061,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "6bc647e2cff893a1f1fd7f6ada49676a99e803288ba7758c4ecb0fbe59b56161",
+      "passed": true
+    },
+    {
+      "ordinal": 109,
+      "published_frame": 8062,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a6ddfb527a9bac5c6e29abaa7b11c11668cd2301651a0b8c4b470aa4924fa0da",
+      "passed": true
+    },
+    {
+      "ordinal": 110,
+      "published_frame": 8063,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "07905f4376e873e71304d75eb69a48a4cd774f75e65aade28a0e10e0c0fed1ff",
+      "passed": true
+    },
+    {
+      "ordinal": 111,
+      "published_frame": 8064,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "403a9925b55734b8f26897f474cfad5e0b74d65b29bf4129207a0a1fabe91db7",
+      "passed": true
+    },
+    {
+      "ordinal": 112,
+      "published_frame": 8065,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "ed7db5f8daa8d1ee90d407abf4394ac6f3f607bc58b88ca5167aac7b10c5c796",
+      "passed": true
+    },
+    {
+      "ordinal": 113,
+      "published_frame": 8066,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "087cc686c19113793999e78cf80403a5eda509e461cedd9728badcf55604adae",
+      "passed": true
+    },
+    {
+      "ordinal": 114,
+      "published_frame": 8067,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "32047347f883d36b9ae58ac0752e314aeed4fa0711085dd639e497b6d672a987",
+      "passed": true
+    },
+    {
+      "ordinal": 115,
+      "published_frame": 8068,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "e4df77f577c012407df53f56b799f1945fdc3e024a77a11161e2453b3cd964e9",
+      "passed": true
+    },
+    {
+      "ordinal": 116,
+      "published_frame": 8069,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "2fa5d2eac010fde4aca02bd1704c45bc83c34fad4cfa2e01320ce1c04a54aafb",
+      "passed": true
+    },
+    {
+      "ordinal": 117,
+      "published_frame": 8070,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "9cbec8275daa9b98da9cb60c20b329dea34fd7d32e27b79d0fef15c1fc08111b",
+      "passed": true
+    },
+    {
+      "ordinal": 118,
+      "published_frame": 8071,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "43b56b3620de1fd319e113e60a9fe52f6bd58fff6e743770c60882ff5823f382",
+      "passed": true
+    },
+    {
+      "ordinal": 119,
+      "published_frame": 8072,
+      "tensor_device": "cpu",
+      "rgb_shape": [
+        1,
+        3,
+        288,
+        512
+      ],
+      "pose_is_none": true,
+      "depth_is_zero_placeholder": true,
+      "GT_depth_supplied": false,
+      "decoded_bgr_sha256": "a66d19ea3798ed3c8b3e653990029127ed4640ef9bb21b818eb5fbee212d78e9",
+      "passed": true
+    }
+  ]
+}

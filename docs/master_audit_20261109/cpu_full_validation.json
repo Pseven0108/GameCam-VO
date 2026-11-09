@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "unit_tests_total": 86,
+  "unit_tests_passed": 86,
+  "suite_breakdown": [
+    {
+      "name": "LoaderGate",
+      "passed": 26,
+      "total": 26
+    },
+    {
+      "name": "Authorization",
+      "passed": 17,
+      "total": 17
+    },
+    {
+      "name": "ModelIOBoundary",
+      "passed": 8,
+      "total": 8
+    },
+    {
+      "name": "DROID-W supervisor mocked branch",
+      "passed": 16,
+      "total": 16
+    },
+    {
+      "name": "Config/candidate/environment/startup-order",
+      "passed": 19,
+      "total": 19
+    },
+    {
+      "name": "Path contract",
+      "passed": 12,
+      "total": 12
+    },
+    {
+      "name": "Independent CPU process supervisor integration",
+      "passed": 13,
+      "total": 13
+    },
+    {
+      "name": "Memory growth guard",
+      "passed": 11,
+      "total": 11
+    },
+    {
+      "name": "Historical CPU gate, old candidate",
+      "passed": 18,
+      "total": 18
+    }
+  ],
+  "real_loader_API_checks": 5,
+  "RGB_decode_and_hash_frames": 120,
+  "real_RGB_NoPose_CPU_frames": 120,
+  "native_depth_contract": "zero placeholder tensor synthesized by BaseDataset when depth_paths=None; native Tracker ignores sample fields 3 and 4",
+  "native_import_closure": {
+    "status": "PASS",
+    "scope": "Real native class imports and one CPU RGB sample under V2 ModelIOBoundary; no class/model construction or native Tracker.run",
+    "classes_imported": [
+      "Guard",
+      "DepthVideo",
+      "DroidNet",
+      "Tracker",
+      "RGB_NoPose"
+    ],
+    "source_allowlist_files": 4222,
+    "denied_io_events": [],
+    "dataset_frames": 120,
+    "sample_device": "cpu",
+    "sample_shape": [
+      1,
+      3,
+      288,
+      512
+    ],
+    "cuda_initialized": false,
+    "model_constructed": false,
+    "checkpoint_load_events": [],
+    "GT_values_read": false,
+    "pycache_prefix": "/root/rivermind-data/gamecam/master-audit-20261109/cpu-import-closure-output/pycache",
+    "native_tracker_called": false,
+    "pre_guard_CPU_setup_seconds": 7.88441176014021,
+    "whole_CPU_import_scope_seconds": 21.476394722936675,
+    "availability_checks_mocked": 8,
+    "cuda_initialization_entrypoints_forbidden": true
+  },
+  "historical_gate_note": "18/18 rechecks historical candidate 39b48f..., not the new final candidate. New candidate is sealed after final Git commit.",
+  "preserved_failure_runs": [
+    {
+      "file": "v2_units_first.xml",
+      "cause": "Fake clock issued new sequence with identical time; test fixture clock fixed, monitor requirement retained."
+    },
+    {
+      "file": "real_api_loader_first.json",
+      "cause": "Safetensors mock missing get_tensors; test mock completed."
+    },
+    {
+      "file": "native_dataset_cpu_first.log",
+      "cause": "Native zero depth placeholder was incorrectly expected to be None; native code audited and assertion corrected."
+    },
+    {
+      "file": "native_import_closure_first.log",
+      "cause": "PyTorch _state source misclassification; bounded environment-code allowance with regressions."
+    },
+    {
+      "file": "native_import_closure_second.log",
+      "cause": "/tmp write rejected; framework temporary files moved under owned output."
+    }
+  ],
+  "proof_limits": [
+    "No real model tracking, initialization, BA, pose generation, ATE or RPE.",
+    "Real libraries/extensions were imported without CUDA kernels. Final import smoke mocks availability and forbids CUDA init entrypoints.",
+    "Historical GPU JSON is 2026-11-08 evidence, not a current query."
+  ],
+  "validation_mode": "CPU_ONLY",
+  "formal_GPU_attempts_this_task": 0,
+  "new_GPU_authorization": "NONE",
+  "attempt_02_created": false,
+  "GPU_armed": false,
+  "real_model_constructed": false,
+  "native_Tracker_run_called": false,
+  "real_checkpoint_deserialized": false,
+  "GT_values_read": false,
+  "automatic_retry": false
+}

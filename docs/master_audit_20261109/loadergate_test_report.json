@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "unit_cases": 26,
+  "unit_cases_passed": 26,
+  "real_installed_API_smoke": {
+    "status": "PASS",
+    "real_checkpoint_deserialized": false,
+    "GT_values_read": false,
+    "tests": [
+      {
+        "api": "torch.load",
+        "passed": true,
+        "real_api_called": true,
+        "deserializer": "mocked"
+      },
+      {
+        "api": "torch.serialization.load",
+        "passed": true,
+        "real_api_called": true,
+        "deserializer": "mocked"
+      },
+      {
+        "api": "torch.hub.load_state_dict_from_url",
+        "passed": true,
+        "cache_hit": true,
+        "deserializer": "mocked"
+      },
+      {
+        "api": "safetensors.torch.load_file",
+        "passed": true,
+        "real_api_called": true,
+        "safe_open": "mocked"
+      },
+      {
+        "api": "huggingface_hub.snapshot_download",
+        "passed": true,
+        "network_called": false,
+        "rejected_before_original": true
+      }
+    ],
+    "torch_version": "2.7.1+cu126",
+    "cuda_initialized": false,
+    "gate_bindings": [
+      [
+        "torch.serialization",
+        "load"
+      ],
+      [
+        "torch.hub",
+        "load_state_dict_from_url"
+      ],
+      [
+        "torch.hub",
+        "load"
+      ],
+      [
+        "torch.hub",
+        "download_url_to_file"
+      ],
+      [
+        "torch",
+        "load"
+      ],
+      [
+        "safetensors.torch",
+        "load_file"
+      ],
+      [
+        "huggingface_hub.file_download",
+        "hf_hub_download"
+      ],
+      [
+        "huggingface_hub",
+        "hf_hub_download"
+      ],
+      [
+        "huggingface_hub._snapshot_download",
+        "snapshot_download"
+      ],
+      [
+        "huggingface_hub",
+        "snapshot_download"
+      ]
+    ],
+    "loader_events": 17,
+    "actual_api_passes": 5
+  },
+  "checkpoint_note": "Fake weight bytes and mocked low-level deserializers. Real checkpoints are hashed, never deserialized.",
+  "coverage": [
+    "registered/unregistered weights",
+    "hash drift",
+    "symlinks and retargeting",
+    "network/cache fallback",
+    "lazy HF exports",
+    "duplicate install/repeated patch",
+    "prebound aliases/replaced hooks",
+    "deserializer failure latch"
+  ],
+  "limits": [
+    "Python hooks and fixed audited call graph; not an OS/native-code sandbox."
+  ],
+  "validation_mode": "CPU_ONLY",
+  "formal_GPU_attempts_this_task": 0,
+  "new_GPU_authorization": "NONE",
+  "attempt_02_created": false,
+  "GPU_armed": false,
+  "real_model_constructed": false,
+  "native_Tracker_run_called": false,
+  "real_checkpoint_deserialized": false,
+  "GT_values_read": false,
+  "automatic_retry": false
+}

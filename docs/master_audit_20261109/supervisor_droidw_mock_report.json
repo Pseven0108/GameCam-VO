@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "actual_droidw_branch_mock_cases": 16,
+  "authorization_cases": 17,
+  "independent_CPU_process_cases": 13,
+  "all_owned_processes_exited": true,
+  "worker_spawn_order_checked": true,
+  "missing_auth_rejected_before_monitor_and_output": true,
+  "mock_semantics": "In-memory fake authorization and mocked Popen. model_attempts=1 in /tmp pytest fixtures describes a simulated claim, not an actual GPU attempt.",
+  "validation_mode": "CPU_ONLY",
+  "formal_GPU_attempts_this_task": 0,
+  "new_GPU_authorization": "NONE",
+  "attempt_02_created": false,
+  "GPU_armed": false,
+  "real_model_constructed": false,
+  "native_Tracker_run_called": false,
+  "real_checkpoint_deserialized": false,
+  "GT_values_read": false,
+  "automatic_retry": false
+}

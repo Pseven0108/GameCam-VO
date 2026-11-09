@@ -1,0 +1,11 @@
+{
+  "static_raw_hash_seconds": 5.805744944140315,
+  "real_CPU_import_and_sample_seconds": 21.090415977872908,
+  "combined_pre_guard_CPU_proxy_seconds": 26.896160922013223,
+  "existing_startup_barrier_seconds": 15,
+  "includes_candidate_validation": false,
+  "does_not_measure_CUDA_initialization": true,
+  "CPU_import_returncode": 0,
+  "gpu_initialized": false,
+  "scope": "CPU timing proxy; excludes candidate source revalidation and CUDA init, includes an extra dataset sample; must not be used as a GPU success claim."
+}

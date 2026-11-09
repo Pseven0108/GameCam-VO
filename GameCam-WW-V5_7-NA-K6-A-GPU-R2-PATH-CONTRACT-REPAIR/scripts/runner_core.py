@@ -36,7 +36,7 @@ def stop_owned(process,reason,out,label,kind):
     r={'reason':reason,'pid':process.pid,'signals':sent,'exit_code':process.poll(),'fully_exited':process.poll() is not None,'signal_to_exit_seconds':time.monotonic()-start,'SIGTERM_grace_seconds':5,'execution_kind':kind}
     atomic_json(pathlib.Path(out)/(label+'_stop.json'),r);return r
 
-def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expected_frames=None,launch_context=None,ipc_for_cpu_tests=False):
+def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expected_frames=None,launch_context=None,ipc_for_cpu_tests=False,startup_for_cpu_tests=False):
     """One launch; active CUDA freshness stays 3s; terminal cleanup has its own 5s bound."""
     from worker_terminal import read_terminal,TERMINAL_CLEANUP_SECONDS
     if kind not in {'cpu_dummy','droidw','droidw_diagnostic'}:raise ValueError('Disallowed execution kind')
@@ -45,7 +45,7 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
         launch_context.validate(out,session,worker_command,monitor_command,env or os.environ,consume=False)
     out=pathlib.Path(out);out.mkdir(parents=True,exist_ok=False,mode=0o700);os.chmod(out,0o700)
     reader=SampleReader(session);growth=GrowthGuard();worker=None;monitor=None;reason=None;frame_offset=0;frame_buffer='';first_nvml=None;first_cuda=None;permit=False;startup_complete=False;events=[];handles=[];start=time.monotonic();stop_record=None
-    terminal=None;terminal_seen=None;primary_failure=None;cleanup_reason=None;ipc_owner=None;ipc_cleanup=None
+    terminal=None;terminal_seen=None;primary_failure=None;cleanup_reason=None;ipc_owner=None;ipc_cleanup=None;startup_gate=None;last_startup_phase=None
     def event(state,**kw):
         row={'monotonic_time':time.monotonic(),'unix_time':time.time(),'session':session,'state':state,'execution_kind':kind,**kw};events.append(row);append_json(out/'supervisor_heartbeat.jsonl',row)
     def check_monitor():
@@ -92,6 +92,7 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
                 if n['sample_seq']>first_nvml['sample_seq'] and n['monotonic_time']-first_nvml['monotonic_time']>=NVML_PERIOD:
                     atomic_json(out/'nvml_startup_barrier.json',{'first':first_nvml,'second':n,'minimum_interval_seconds':NVML_PERIOD,'passed':True});break
             event('WAITING_FOR_NVML_BARRIER');time.sleep(.05)
+        event('NVML_MONITOR_READY')
         if kind in {'droidw','droidw_diagnostic'}:launch_context.validate(out,session,worker_command,monitor_command,env or os.environ,consume=True);event('PRESPAWN_AUTHORIZATION_CLAIMED',candidate_bound=True)
         manifest=getattr(launch_context,'_candidate',None) if launch_context is not None else None
         if (manifest and 'planned_ipc_root' in manifest) or (kind=='cpu_dummy' and ipc_for_cpu_tests):
@@ -101,6 +102,10 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
             event('IPC_ROOT_READY_BEFORE_WORKER',root=ipc_owner['root'])
         worker_start=time.monotonic();event('WORKER_STARTING',command=worker_command)
         worker=subprocess.Popen(worker_command,stdout=handles[2],stderr=handles[3],env=env,start_new_session=True)
+        from startup_protocol import StartupGate,PROTOCOL
+        if (manifest and manifest.get('startup_protocol')==PROTOCOL) or (kind=='cpu_dummy' and startup_for_cpu_tests):
+            startup_gate=StartupGate(worker_start,worker.pid,session)
+        event('WORKER_SPAWNED',worker_pid=worker.pid,startup_protocol=PROTOCOL if startup_gate else 'legacy-single-cuda-deadline')
         while worker.poll() is None:
             terminal_now=observe_terminal()
             check_monitor()
@@ -110,15 +115,24 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
                 if time.monotonic()-terminal_seen>=TERMINAL_CLEANUP_SECONDS:raise SafetyStop('WORKER_SHUTDOWN_TIMEOUT')
                 event('WORKER_TERMINAL_CLEANUP',worker_pid=worker.pid,elapsed_seconds=time.monotonic()-terminal_seen)
                 time.sleep(SUPERVISOR_PERIOD);continue
-            if not permit and time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
+            if not permit:
+                if startup_gate:
+                    status=out/'worker_startup.latest.json'
+                    if status.exists():
+                        startup_gate.observe(read_json(status))
+                        if startup_gate.last['phase']!=last_startup_phase:
+                            last_startup_phase=startup_gate.last['phase'];event(last_startup_phase,cuda_started_monotonic=startup_gate.cuda_start)
+                    startup_gate.check_deadline()
+                elif not startup_gate and time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
             p=out/'cuda.latest.json'
             if p.exists():
                 c=reader.check(read_json(p),'cuda')
                 if c.get('worker_pid')!=worker.pid:raise SafetyStop('CUDA_WORKER_PID_MISMATCH')
+                if startup_gate and not permit:startup_gate.check_cuda(c)
                 if first_cuda is None:first_cuda=c
                 if not permit and c['sample_seq']>first_cuda['sample_seq']:
                     atomic_json(out/'work.permit.json',{'session':session,'execution_kind':kind,'model_execution_authorized':kind in {'droidw','droidw_diagnostic'},'diagnostic_only':kind=='droidw_diagnostic','cpu_dummy_only':kind=='cpu_dummy','monotonic_time':time.monotonic()});permit=True;startup_complete=True;event('STARTUP_BARRIER_PASSED');event('WORKER_RUNNING')
-            elif time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
+            elif not startup_gate and time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
             consume_frames();event('RUNNING' if permit else 'WAITING_FOR_CUDA_BARRIER',worker_pid=worker.pid,frame_samples=growth.next_ordinal);time.sleep(SUPERVISOR_PERIOD)
         rc=worker.wait(timeout=5);observe_terminal();consume_frames()
         if kind=='droidw_diagnostic' and terminal is not None:
@@ -149,5 +163,5 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
             except BaseException as exc:
                 ipc_cleanup={'passed':False,'error':str(exc),'events':list(ipc_owner['events'])};cleanup_reason='IPC_CLEANUP_FAILED:'+str(exc);reason=reason or cleanup_reason;event('IPC_CLEANUP_FAILED',reason=cleanup_reason)
         for f in handles:f.close()
-    result={'session':session,'execution_kind':kind,'diagnostic_attempts':1 if kind=='droidw_diagnostic' and launch_context is not None and launch_context.claimed else 0,'model_attempts':1 if kind=='droidw' and launch_context is not None and launch_context.claimed else 0,'model_execution_authorized':kind in {'droidw','droidw_diagnostic'},'diagnostic_execution_authorized':kind=='droidw_diagnostic','formal_120_frame_execution_authorized':kind=='droidw','worker_started':worker is not None,'worker_pid':worker.pid if worker is not None else None,'worker_exit_code':worker.poll() if worker is not None else None,'worker_fully_exited':worker is None or worker.poll() is not None,'monitor_pid':monitor.pid if monitor is not None else None,'monitor_exit_code':monitor.poll() if monitor is not None else None,'monitor_fully_exited':monitor is None or monitor.poll() is not None,'reason':reason,'primary_failure':primary_failure,'supervisor_cleanup_reason':cleanup_reason,'terminal_result':terminal,'terminal_cleanup_limit_seconds':TERMINAL_CLEANUP_SECONDS,'ipc_cleanup':ipc_cleanup,'startup_barrier_passed':startup_complete,'work_permit_written':permit,'completed_frame_samples':growth.next_ordinal,'duration_seconds':time.monotonic()-start,'worker_stop':stop_record,'automatic_retries':0,'passed':reason is None and worker is not None and worker.poll()==0 and monitor is not None and monitor.poll()==0 and (ipc_cleanup is None or ipc_cleanup['passed'])}
+    result={'session':session,'execution_kind':kind,'diagnostic_attempts':1 if kind=='droidw_diagnostic' and launch_context is not None and launch_context.claimed else 0,'model_attempts':1 if kind=='droidw' and launch_context is not None and launch_context.claimed else 0,'model_execution_authorized':kind in {'droidw','droidw_diagnostic'},'diagnostic_execution_authorized':kind=='droidw_diagnostic','formal_120_frame_execution_authorized':kind=='droidw','worker_started':worker is not None,'worker_pid':worker.pid if worker is not None else None,'worker_exit_code':worker.poll() if worker is not None else None,'worker_fully_exited':worker is None or worker.poll() is not None,'monitor_pid':monitor.pid if monitor is not None else None,'monitor_exit_code':monitor.poll() if monitor is not None else None,'monitor_fully_exited':monitor is None or monitor.poll() is not None,'reason':reason,'primary_failure':primary_failure,'supervisor_cleanup_reason':cleanup_reason,'terminal_result':terminal,'terminal_cleanup_limit_seconds':TERMINAL_CLEANUP_SECONDS,'ipc_cleanup':ipc_cleanup,'startup_barrier_passed':startup_complete,'startup_protocol':PROTOCOL if startup_gate else 'legacy-single-cuda-deadline','worker_preparation_limit_seconds':15,'cuda_readiness_limit_seconds':15,'startup_last_phase':last_startup_phase,'work_permit_written':permit,'completed_frame_samples':growth.next_ordinal,'duration_seconds':time.monotonic()-start,'worker_stop':stop_record,'automatic_retries':0,'passed':reason is None and worker is not None and worker.poll()==0 and monitor is not None and monitor.poll()==0 and (ipc_cleanup is None or ipc_cleanup['passed'])}
     atomic_json(out/'supervisor_result.json',result);return result

@@ -47,6 +47,9 @@ class DiagnosticContext(LaunchContext):
         require(c.get('schema')==SCHEMA and c.get('entry_admission_status')=='DROIDW_ENTRY_PARTIAL_PASS','DIAGNOSTIC_CANDIDATE_SCHEMA_OR_HISTORY')
         require(c.get('diagnostic_scope')==DIAGNOSTIC_SCOPE,'DIAGNOSTIC_SCOPE_DRIFT')
         require(c.get('python_import_policy')==IMPORT_POLICY and 'PYTHONPYCACHEPREFIX' not in c['pinned_environment'] and c['pinned_environment'].get('PYTHONDONTWRITEBYTECODE')=='1','DIAGNOSTIC_IMPORT_POLICY_DRIFT')
+        if 'startup_protocol' in c:
+            from startup_protocol import PROTOCOL
+            require(c['startup_protocol']==PROTOCOL and c.get('startup_preparation_limit_seconds')==15 and c.get('startup_cuda_limit_seconds')==15,'DIAGNOSTIC_STARTUP_PROTOCOL_DRIFT')
         require(c.get('GPU_execution_authorized') is False and c.get('current_attempt_limit')==0,'SEALED_CANDIDATE_MUST_BE_UNARMED')
         return c
     def validate_identity(self,c):

@@ -12,6 +12,8 @@ class Guard:
     def __init__(self,session_dir,out,torch,monitor_session_id,execution_kind='droidw',diagnostic=None):
         self.session_dir=pathlib.Path(session_dir);self.out=pathlib.Path(out);self.torch=torch;self.session=monitor_session_id
         self.phase='pre_model';self.frame=None;self.failure=None;self.latest=None;self.growth=GrowthGuard();self.min_cuda=self.min_nvml=float('inf');self.peak_nvml=0
+        self.startup=getattr(diagnostic,'startup',None)
+        if self.startup:self.startup.set_phase('CUDA_INITIALIZING')
         if diagnostic:diagnostic.emit('CUDA_CONTEXT','start')
         torch.cuda.init()
         if diagnostic:diagnostic.emit('CUDA_CONTEXT','end')
@@ -22,15 +24,20 @@ class Guard:
         if d.cuDeviceGet(ctypes.byref(device),0)!=0:raise SafetyStop('CUDA_DEVICE_QUERY_FAILED')
         fn=getattr(d,'cuDeviceGetUuid_v2',None) or d.cuDeviceGetUuid
         if fn(ctypes.byref(u),device)!=0 or 'GPU-'+str(uuid.UUID(bytes=bytes(u.bytes)))!=EXPECTED_UUID:raise SafetyStop('CUDA_DRIVER_UUID_MISMATCH')
+        if self.startup:self.startup.set_phase('CUDA_CONTEXT_READY')
         self.hb=ModelHeartbeat(torch,self.session_dir,self.session);self.hb.thread.start();start=time.monotonic()
         if diagnostic:diagnostic.emit('CUDA_HEARTBEAT_STARTED')
         while not (self.session_dir/'work.permit.json').exists():
             self.check('waiting_for_parent_barrier')
+            if self.startup and (self.session_dir/'cuda.latest.json').exists():
+                sample=read_json(self.session_dir/'cuda.latest.json');validate_sample(sample,'cuda',self.session)
+                self.startup.set_phase('CUDA_MONITOR_READY')
             if time.monotonic()-start>15:raise SafetyStop('MODEL_STARTUP_PERMIT_TIMEOUT')
             time.sleep(.02)
         permit=read_json(self.session_dir/'work.permit.json')
-        if permit.get('session')!=self.session or permit.get('execution_kind')!=execution_kind or permit.get('model_execution_authorized') is not True:raise SafetyStop('MODEL_STARTUP_PERMIT_INVALID')
-        if execution_kind=='droidw_diagnostic' and permit.get('diagnostic_only') is not True:raise SafetyStop('DIAGNOSTIC_PERMIT_KIND_INVALID')
+        from startup_protocol import validate_permit
+        validate_permit(permit,self.session,execution_kind)
+        if self.startup:self.startup.set_phase('WORKER_READY');self.startup.finish()
         if diagnostic:diagnostic.emit('STARTUP_PERMIT_RECEIVED')
     def check(self,label='',record=False):
         if self.hb.failure:self.failure=self.hb.failure;raise SafetyStop(self.failure)

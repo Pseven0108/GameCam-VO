@@ -1,0 +1,11 @@
+# Startup barrier readiness
+
+The previous candidate starts independent NVML supervision before spawning the Worker. The old 15 s Worker-to-CUDA deadline included source/config/asset checks, Torch import and CUDA context creation. Native Tracker imports happen after Guard obtains the CUDA permit, so the 13.977 s CPU closure is not the time consumed by that deadline.
+
+This change explicitly separates a bounded 15 s Worker preparation phase from a bounded 15 s CUDA readiness phase. The Worker reports non-CUDA startup state every 0.2 s. The Supervisor validates session, PID, sequence, phase order, immutable CUDA start time and 3 s freshness. Status does not authorize work and cannot extend either deadline. A CUDA phase started after the preparation deadline is rejected. The CUDA permit still requires two advancing genuine CUDA samples from the same Worker, after Context Ready. NVML remains independent and active throughout preparation; CUDA freshness remains 3 s from the first sample. The maximal pre-permit wait is 30 s across two explicitly bounded phases. This is a disclosed semantic change, not evidence of real-model loading performance.
+
+The phased protocol is opt-in and bound by the sealed candidate. Legacy candidates and CPU fixtures retain their previous one-deadline behavior. The safety floor remains 512 MiB, global timeout 3600 s, terminal cleanup 5 s, SIGTERM grace 5 s, retries zero. The Child may write only two extra exact status paths and the atomic status temporary file; Session reads are not broadened.
+
+Tests use actual production Child preparation, runtime hash checks, IO boundary and actual Guard, but replace the native adapter entry with imports and small CUDA tensors. They use an in-memory test context, no reusable authorization or model Attempt. The native algorithm, checkpoints, frame inputs and GT are never modified. No checkpoint is deserialized, Tracker/DepthVideo are never constructed, and no frames or BA are executed.
+
+See the external stage evidence bundle for ten CPU timings, ten final production CPU closures, ten actual CUDA synthetic closures, CPU delayed/fault fixtures, real CUDA API validation error and stopped-heartbeat tests, source line audit and GitHub clone identity verification.

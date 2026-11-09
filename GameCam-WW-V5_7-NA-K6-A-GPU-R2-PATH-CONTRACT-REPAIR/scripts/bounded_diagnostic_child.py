@@ -14,11 +14,13 @@ def main(argv=None):
     out=pathlib.Path(c['planned_model_output'])
     result={'version':'K6-A-R2-BOUNDED-DIAGNOSTIC','method':'droidw','case_id':'V56_01_middle','status':'RUNNING','started_unix':time.time(),'frames_submitted':0,'frames_completed':0,'frames':[],'initialization':None,'native_snapshots':[],'mapping_events':[],'checkpoint_loads':[],'error':None,'gt_input':False,'trajectory_filler_executed':False,'final_BA_executed':False,'final_refinement_executed':False,'dependency_pin_events':[]}
     require(not out.exists(),'MODEL_OUTPUT_ALREADY_EXISTS','BLOCKED_BY_AUTHORIZATION_GUARD')
-    boundary=policy=diagnostic=None;failure_phase='WORKER_PREPARATION'
+    boundary=policy=diagnostic=startup=None;failure_phase='WORKER_PREPARATION'
     try:
         root=pathlib.Path(c['source_root']);phase=root/c['runtime_phase_relative'];out=pathlib.Path(c['planned_model_output'])
         os.environ.update(c['pinned_environment']);os.environ['GAMECAM_RUN_SESSION_DIR']=a.session_dir
         validate_worker_import_policy(c)
+        from startup_protocol import StartupReporter
+        startup=StartupReporter(a.session_dir,a.session).start()
         class PreparedPins(RuntimePins):
             def effective_config(self,output):
                 self.read_original_config();r=c['effective_config_record'];require(digest_file(r['path'])==r['sha256'],'EFFECTIVE_CONFIG_SHA_DRIFT','BLOCKED_BY_CONFIG_PIN')
@@ -43,6 +45,8 @@ def main(argv=None):
             session_dir/'frame_samples.jsonl',
             session_dir/'ipc_worker_events.jsonl',
             session_dir/'worker_terminal.json',
+            session_dir/'worker_startup_samples.jsonl',
+            session_dir/'worker_startup.latest.json',
         ]
         worker_read_files=[
             session_dir/'work.permit.json',
@@ -59,7 +63,7 @@ def main(argv=None):
             ipc_policy=policy,
             worker_files=worker_files,
             worker_read_files=worker_read_files,
-            worker_atomic_files=[session_dir/'cuda.latest.json', session_dir/'worker_terminal.json'],
+            worker_atomic_files=[session_dir/'cuda.latest.json', session_dir/'worker_terminal.json', session_dir/'worker_startup.latest.json'],
             worker_root=session_dir,
             import_scratch_root=out/'import_tmp',
         )
@@ -74,6 +78,7 @@ def main(argv=None):
         def save():atomic_json(out/'result.json',result)
         from diagnostic_phases import PhaseRecorder
         diagnostic=PhaseRecorder(out,a.session_dir,a.session)
+        diagnostic.startup=startup
         diagnostic.emit('PROCESS_STARTED',edge='point')
         def dependency_event(event):
             result['dependency_pin_events'].append(event);diagnostic.dependency_event(event)
@@ -102,8 +107,11 @@ def main(argv=None):
             print(json.dumps({'status':'EARLY_TERMINAL_PUBLICATION_FAILED','primary_failure':str(exc),'secondary_publication_failure':str(publication_error)}),file=sys.stderr,flush=True)
         try:traceback.print_exc()
         except BaseException:print(type(exc).__name__+': '+str(exc),file=sys.stderr,flush=True)
+        if startup:startup.finish()
         return 2
 
-    return _native_runtime(root/'planned-v2-runtime-root',args,case,out,result,save,torch,cv2,np,pins,terminal_callback=terminal_callback,diagnostic=diagnostic)
+    try:return _native_runtime(root/'planned-v2-runtime-root',args,case,out,result,save,torch,cv2,np,pins,terminal_callback=terminal_callback,diagnostic=diagnostic)
+    finally:
+        if startup:startup.finish()
 
 if __name__=='__main__':raise SystemExit(main())

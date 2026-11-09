@@ -32,7 +32,7 @@ def validate_prior_factory_policy(c):
             require(target.is_relative_to(root/prefix),'PRIOR_CONFIG_EDGE_ESCAPE')
             target_rel=str(target.relative_to(root/prefix));require(target_rel in lookup,'PRIOR_CONFIG_EDGE_UNKNOWN')
             discovered.append(dict(declaring_relative_path=rel,requested_relative_path=request,target_relative_path=target_rel,sha256=lookup[target_rel]['sha256'],path_repaired=repair))
-    require(sorted(discovered,key=str)==sorted(p['metric3d_config_edges'],key=str),'PRIOR_CONFIG_EDGE_DRIFT')
+    require(sorted(discovered,key=lambda e:(e['declaring_relative_path'],e['requested_relative_path']))==sorted(p['metric3d_config_edges'],key=lambda e:(e['declaring_relative_path'],e['requested_relative_path'])),'PRIOR_CONFIG_EDGE_DRIFT')
     seen=set();pending=[entry]
     while pending:
         v=pending.pop()

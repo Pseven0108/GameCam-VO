@@ -88,3 +88,11 @@ def test_native_safe_open_denied_before_original(monkeypatch):
 def test_cpu_guard_requires_empty_visibility(monkeypatch):
     monkeypatch.setenv('CUDA_VISIBLE_DEVICES','0')
     with pytest.raises(RuntimeError,match='DEVICE_MASK_REQUIRED'):CPUFactoryGuard()
+
+def test_policy_canonical_json_preserves_edge_identity(tmp_path):
+    c=policy_candidate(tmp_path);p=c['prior_factory_policy'];prefix='baselines/droid_w/prior_sources/Metric3D/';entry=tmp_path/c['source_records'][0]['path'];entry.write_text("_base_=['../_base_/datasets/_data_base_.py','../_base_/default_runtime.py']\n")
+    sha=hashlib.sha256(entry.read_bytes()).hexdigest();c['source_records'][0]['sha256']=sha;p['metric3d_config_sources'][0]['sha256']=sha
+    rel='mono/configs/_base_/default_runtime.py';f=tmp_path/prefix/rel;f.write_text('VALUE=8\n');sha=hashlib.sha256(f.read_bytes()).hexdigest();c['source_records'].append(dict(path=prefix+rel,sha256=sha));p['metric3d_config_sources'].append(dict(relative_path=rel,sha256=sha));p['metric3d_config_edges'].append(dict(declaring_relative_path=p['metric3d_entry_config'],requested_relative_path='../_base_/default_runtime.py',target_relative_path=rel,sha256=sha,path_repaired=False))
+    p=json.loads(json.dumps(p,sort_keys=True));c['prior_factory_policy']=p;f=tmp_path/'policy.json';f.write_text(json.dumps(p,sort_keys=True));sha=hashlib.sha256(f.read_bytes()).hexdigest();c['prior_factory_policy_record']['sha256']=sha
+    next(r for r in c['source_records'] if r['path']=='policy.json')['sha256']=sha
+    assert validate_prior_factory_policy(c)['edges']==2

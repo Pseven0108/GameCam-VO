@@ -50,6 +50,8 @@ class DiagnosticContext(LaunchContext):
         if 'startup_protocol' in c:
             from startup_protocol import PROTOCOL
             require(c['startup_protocol']==PROTOCOL and c.get('startup_preparation_limit_seconds')==15 and c.get('startup_cuda_limit_seconds')==15,'DIAGNOSTIC_STARTUP_PROTOCOL_DRIFT')
+        from dynamic_source_policy import validate_dynamic_source_policy
+        validate_dynamic_source_policy(c)
         require(c.get('GPU_execution_authorized') is False and c.get('current_attempt_limit')==0,'SEALED_CANDIDATE_MUST_BE_UNARMED')
         return c
     def validate_identity(self,c):

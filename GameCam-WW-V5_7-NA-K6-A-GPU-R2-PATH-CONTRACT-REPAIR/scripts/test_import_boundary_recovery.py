@@ -17,7 +17,7 @@ def test_invalid_cache_policy_rejected(pinned):
 
 def test_verified_source_ignores_poisoned_pyc_and_rejects_source_change(tmp_path):
  source=tmp_path/'cpu_sealed_module.py';source.write_text('VALUE=42\n');cache=tmp_path/'__pycache__';cache.mkdir();(cache/'cpu_sealed_module.cpython-310.pyc').write_bytes(b'UNTRUSTED')
- finder=VerifiedSourceFinder(tmp_path,[{'path':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()}]);spec=finder.find_spec('cpu_sealed_module',[str(tmp_path)]);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);assert module.VALUE==42 and len(finder.events)==1
+ finder=VerifiedSourceFinder(tmp_path,[{'path':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()}]);spec=finder.find_spec('cpu_sealed_module',[str(tmp_path)]);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);assert module.VALUE==42 and sum(e['event']=='source_bytes_verified' for e in finder.events)==1
  source.write_text('VALUE=999\n')
  with pytest.raises(RuntimeError,match='IMPORT_SOURCE_SHA_DRIFT'):spec.loader.exec_module(module)
 

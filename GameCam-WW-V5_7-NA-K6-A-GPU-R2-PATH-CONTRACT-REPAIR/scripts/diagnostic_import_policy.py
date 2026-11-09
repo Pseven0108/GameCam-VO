@@ -42,44 +42,5 @@ def validate_worker_import_policy(candidate):
     if not sys.dont_write_bytecode or os.environ.get('PYTHONDONTWRITEBYTECODE') != '1':
         raise RuntimeError('BYTECODE_WRITES_MUST_BE_DISABLED')
 
-class _VerifiedSourceLoader(importlib.machinery.SourceFileLoader):
-    def __init__(self, fullname, filename, expected_sha256, events):
-        super().__init__(fullname, filename)
-        self.expected_sha256 = expected_sha256
-        self.events = events
-    def get_code(self, fullname):
-        # Protected source is already pinned. Do not probe an unpinned project pyc.
-        data = self.get_data(self.path)
-        actual = hashlib.sha256(data).hexdigest()
-        if actual != self.expected_sha256:
-            raise RuntimeError('IMPORT_SOURCE_SHA_DRIFT:' + self.path)
-        self.events.append({'module': fullname, 'path': self.path,
-                            'sha256': actual, 'strategy': 'VERIFIED_SOURCE_ONLY'})
-        return self.source_to_code(data, self.path)
-
-class VerifiedSourceFinder(importlib.abc.MetaPathFinder):
-    def __init__(self, source_root, source_records, external_records=()):
-        root = pathlib.Path(source_root)
-        self.identities = {str((root / r['path']).resolve()): r['sha256']
-                           for r in source_records if r['path'].endswith('.py')}
-        self.identities.update({str(pathlib.Path(r['path']).resolve()): r['sha256']
-                                for r in external_records if r['path'].endswith('.py')})
-        self.events = []
-    def find_spec(self, fullname, path=None, target=None):
-        spec = importlib.machinery.PathFinder.find_spec(fullname, path, target)
-        if spec is None or not isinstance(spec.loader, importlib.machinery.SourceFileLoader):
-            return None
-        lexical = pathlib.Path(spec.origin).absolute()
-        resolved = lexical.resolve()
-        expected = self.identities.get(str(resolved))
-        if expected is None:
-            return None
-        if lexical != resolved or lexical.is_symlink():
-            raise RuntimeError('IMPORT_SOURCE_SYMLINK_FORBIDDEN:' + str(lexical))
-        spec.loader = _VerifiedSourceLoader(fullname, str(lexical), expected, self.events)
-        return spec
-    def install(self):
-        if any(isinstance(x, VerifiedSourceFinder) for x in sys.meta_path):
-            raise RuntimeError('VERIFIED_SOURCE_FINDER_ALREADY_INSTALLED')
-        sys.meta_path.insert(0, self)
-        return self
+# Both normal imports and Torch Hub direct specs use the same pinned byte loader.
+from verified_dynamic_source import VerifiedSourceFinder, VerifiedDynamicSourceLoader

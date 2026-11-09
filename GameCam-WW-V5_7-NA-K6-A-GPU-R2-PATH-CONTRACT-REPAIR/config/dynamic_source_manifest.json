@@ -1,0 +1,306 @@
+{
+  "allow_project_bytecode": false,
+  "schema": "gamecam-dynamic-source-manifest-v1",
+  "selected_model_entrypoints": {
+    "FiT3D": "dinov2_reg_small_fine",
+    "Metric3D": "metric3d_vit_large"
+  },
+  "sources": [
+    {
+      "bytes": 10480,
+      "path": "baselines/droid_w/prior_sources/FiT3D/app.py",
+      "sha256": "8be7bd7be0863c8c4d03bc23631f63f270fbb796f506bc27e194650cc30ce48a"
+    },
+    {
+      "bytes": 8208,
+      "path": "baselines/droid_w/prior_sources/FiT3D/engine.py",
+      "sha256": "26f22663b7c40e3caffbe4ea63fc86717cba035310788a685f220822bd3ac0d1"
+    },
+    {
+      "bytes": 8474,
+      "path": "baselines/droid_w/prior_sources/FiT3D/finetune.py",
+      "sha256": "fb471cbac776c0be74cee3d711eb32f91797c634b8ecc760173b9db1fde440a9"
+    },
+    {
+      "bytes": 1898,
+      "path": "baselines/droid_w/prior_sources/FiT3D/gen_commands.py",
+      "sha256": "5d8515695d1d01c0af73e12074b5c9bd01d736b13e0acb062fa2973dba9a4fea"
+    },
+    {
+      "bytes": 2063,
+      "path": "baselines/droid_w/prior_sources/FiT3D/hubconf.py",
+      "sha256": "407a7e5491ab04340bd944e39881921df495d8c539ee1f3bd1e48bd570f013f3"
+    },
+    {
+      "bytes": 6227,
+      "path": "baselines/droid_w/prior_sources/FiT3D/linear_evaluate_depth.py",
+      "sha256": "eaefd6f81f57c2fa69a54dfb8b9968779a5fa0a74fd885589e81aaca032de269"
+    },
+    {
+      "bytes": 4154,
+      "path": "baselines/droid_w/prior_sources/FiT3D/linear_evaluate_fit3d.py",
+      "sha256": "1ccb0030788aff1bdac2314ec167c9f0e85fd6841cca5b52e31e145edd3c39e2"
+    },
+    {
+      "bytes": 9512,
+      "path": "baselines/droid_w/prior_sources/FiT3D/linear_evaluate_segmentation.py",
+      "sha256": "d439c52974c8d7cbee4d5ed1c436802d059aeef1719c47e5804c8a9788338424"
+    },
+    {
+      "bytes": 10530,
+      "path": "baselines/droid_w/prior_sources/FiT3D/train_feat_gaussian.py",
+      "sha256": "7d717198e78dd55504e6def85a90809c94dfe6679e51fdfbea3bd53ccef81f6e"
+    },
+    {
+      "bytes": 3214,
+      "path": "baselines/droid_w/prior_sources/FiT3D/write_feat_gaussian.py",
+      "sha256": "364b6889045452e807b968b41d12876a45b37c9d1328aaa887678b8ac8c15c77"
+    },
+    {
+      "bytes": 8758,
+      "path": "baselines/droid_w/prior_sources/Metric3D/hubconf.py",
+      "sha256": "07b4cc47966fc6db84e1950625561f6a3f17c7bbb3bbd4d54f91178422920216"
+    },
+    {
+      "bytes": 546,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/convlarge.0.3_150.py",
+      "sha256": "26fe1c61848e0cfd5ab7dbed912f20eb415f92ec5c1a2fc15767e66eebf270c9"
+    },
+    {
+      "bytes": 545,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/convtiny.0.3_150.py",
+      "sha256": "8972a0af5d3acc7518c089685bede3bbaf1fd380fca075dc3368ff07fadaf671"
+    },
+    {
+      "bytes": 546,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/test_kitti_convlarge.0.3_150.py",
+      "sha256": "d4712550395bd0c5fe63daab30e512a72594a717f1b2035957f984f82b8694f9"
+    },
+    {
+      "bytes": 546,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/test_nyu_convlarge.0.3_150.py",
+      "sha256": "0e9ccfc267211c88efd5c40d9761e448b86a40add62019f8d40576e9d4fefd4d"
+    },
+    {
+      "bytes": 738,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/vit.raft5.giant2.py",
+      "sha256": "6ccd2ab78567597147bc8128b89480f34455457e83d335787b313a81a2293e6d"
+    },
+    {
+      "bytes": 737,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "sha256": "3b17503f7a3c2833d00b19f9f067b8c5ae70ba717add0becab621a728acef043"
+    },
+    {
+      "bytes": 737,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/HourglassDecoder/vit.raft5.small.py",
+      "sha256": "49a1f0c5d5edf3e2ae11ae8da119eb5c1b4f7ef8104c55c25dc912b5ddc2fc5f"
+    },
+    {
+      "bytes": 2,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/__init__.py",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "bytes": 359,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/_data_base_.py",
+      "sha256": "a3a5d87001eef23f2ba7afe66962746ad39b7bc2bf5724b1fa001e164223bb23"
+    },
+    {
+      "bytes": 149,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/default_runtime.py",
+      "sha256": "5669b9bbd196b553bbc84d9bb0a57d55924a4676d342d16e198bd844699e158a"
+    },
+    {
+      "bytes": 587,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/convnext_large.py",
+      "sha256": "c7e2d32e291c3f7a5a51b89a31cd063e6ad45ddd5c1cd8da5e97f64914ba4eed"
+    },
+    {
+      "bytes": 518,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/convnext_tiny.py",
+      "sha256": "809490d4ca732ca59caf7a6bab3a478b18aba4bb22fb22debe41251085ea700d"
+    },
+    {
+      "bytes": 184,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/dino_vit_giant2_reg.py",
+      "sha256": "02acde92da241d6cb8b65d21238e5f1d99d012d59105331469cc26109882bd4f"
+    },
+    {
+      "bytes": 179,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/dino_vit_large.py",
+      "sha256": "756685615b65b651bf6b66392b126cf3fbc0549c566e9f37eb56af3cfbae14bb"
+    },
+    {
+      "bytes": 183,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/dino_vit_large_reg.py",
+      "sha256": "cd63731fbfe5d3291ed51eba0cd992a7a4a221249aa05c26e9baba434a590ee7"
+    },
+    {
+      "bytes": 179,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/backbones/dino_vit_small_reg.py",
+      "sha256": "7261689e7cd1d51273dbf6f1f24329d8b48d6f5034f83c027652b658fe274fee"
+    },
+    {
+      "bytes": 292,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/convnext_large.hourglassdecoder.py",
+      "sha256": "a724a1e3f8601d0a2f5ce793ff9d9240b2c5857d8aa54d9d7309823e0bb3d481"
+    },
+    {
+      "bytes": 287,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/convnext_tiny.hourglassdecoder.py",
+      "sha256": "0addc07710d522015756940c2ae677a1b5b0712334196a85e906262015287e85"
+    },
+    {
+      "bytes": 687,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/dino_vit_giant2_reg.dpt_raft.py",
+      "sha256": "8929064894b48c227d5338711e816b327a65c0c230c3bd49258bc82ece30f791"
+    },
+    {
+      "bytes": 699,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/dino_vit_large.dpt_raft.py",
+      "sha256": "87d9c24d7fac1b8d4b25ae2855299ec04145328a47fc101151285eb126a5e2d4"
+    },
+    {
+      "bytes": 686,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "sha256": "2953400927e3cba3303f5449889bf02eb55dec5f8fc9a54fc1a019967006b835"
+    },
+    {
+      "bytes": 667,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/configs/_base_/models/encoder_decoder/dino_vit_small_reg.dpt_raft.py",
+      "sha256": "86852da0ab779da5e059569d497627b75335963a91e0201171b2886b2e27229a"
+    },
+    {
+      "bytes": 135,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/__init__.py",
+      "sha256": "b9d89b2592c188897a3504f98788861d3577e136e7a0185b23e681a3bb2e4e4b"
+    },
+    {
+      "bytes": 13007,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/backbones/ConvNeXt.py",
+      "sha256": "70fa4f39357c9b973e4c41198bd8349ad44d646750132fe904875e38b25571b8"
+    },
+    {
+      "bytes": 56498,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/backbones/ViT_DINO.py",
+      "sha256": "8839844717b3f9be824b3bad53deedc5fe247ef90ef80ad2b9c01563a8bcf15c"
+    },
+    {
+      "bytes": 48364,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/backbones/ViT_DINO_reg.py",
+      "sha256": "90c5e57ea64a41a55cdc031283313c5c99e7b19d3fb1fbdf21a9b82e40210213"
+    },
+    {
+      "bytes": 457,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/backbones/__init__.py",
+      "sha256": "e11296e32fb3ee5f25001201abce9f14026eac65da93972ec997a5686920389c"
+    },
+    {
+      "bytes": 10788,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/decode_heads/HourGlassDecoder.py",
+      "sha256": "7769fb44e2394bb41c484b810bc2c99bf8c99a3c5a9f2cdebe1591b7dc9b2579"
+    },
+    {
+      "bytes": 45460,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "sha256": "56ba6e553bc9a85d04ca34a58ae7dfddbf062c2c51d38db5466926dc7329b08a"
+    },
+    {
+      "bytes": 164,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/decode_heads/__init__.py",
+      "sha256": "091a249ff7868a870d28969b6b5b7a677b041dcaef629cb73f909f2581148d41"
+    },
+    {
+      "bytes": 638,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/model_pipelines/__base_model__.py",
+      "sha256": "920d31b60fe8b6ce6e618146d47ededed597e0724e90ff1774fd7cb02c2d5958"
+    },
+    {
+      "bytes": 145,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/model_pipelines/__init__.py",
+      "sha256": "633fd64c9a7cece7579af9f607b7989a22d2dc43c3b4883d85c57f3b4efa550c"
+    },
+    {
+      "bytes": 619,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/model_pipelines/dense_pipeline.py",
+      "sha256": "7a8bc40414e8394fd4eab5aebfede5ec924c8574044f55df6e64597f2394e7b4"
+    },
+    {
+      "bytes": 1187,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/model/monodepth_model.py",
+      "sha256": "9c5ebf8984dd31ed8cc390c36b77e3bf0b6b51d864aec223561a659a947ff127"
+    },
+    {
+      "bytes": 6163,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/tools/test_scale_cano.py",
+      "sha256": "093ca08ae2602ade51ff0759603fc5050d42bf9babc80b66a9366a91341d5518"
+    },
+    {
+      "bytes": 2,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/__init__.py",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "bytes": 17500,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/avg_meter.py",
+      "sha256": "90a01171aa85b7f3180b092a137adaeb81b5e24052ff23e0e745e791e0e6814e"
+    },
+    {
+      "bytes": 11445,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/comm.py",
+      "sha256": "339431a917534212d375118a9411b0d84d7e3abf080956e00b6124f9cbe34a74"
+    },
+    {
+      "bytes": 1225,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/custom_data.py",
+      "sha256": "25bc8f02d1063f36e2328d7d1dc0bec241111769f84f7e1a0524d4bb144e3a88"
+    },
+    {
+      "bytes": 15269,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/do_test.py",
+      "sha256": "1067e82bb6d00a5c6a5f850daefafd836cccc562dcf7ee27618bc06b66ed28fe"
+    },
+    {
+      "bytes": 3895,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/logger.py",
+      "sha256": "e009f8c0a5002d20ec9e285a59feb1b09887896f3511aba70af3fb52439143ca"
+    },
+    {
+      "bytes": 1360,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/mldb.py",
+      "sha256": "15ef9f54c4344da1db5d65ba2d19462b02ec7d66fab1110cd0a2d2ab396fd18d"
+    },
+    {
+      "bytes": 1008,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/pcd_filter.py",
+      "sha256": "02c6c57f745e91aa3916e675a523ae5b1c811fec3ace2074cbdeffaf1f63b644"
+    },
+    {
+      "bytes": 2726,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/running.py",
+      "sha256": "796dbc7723b1f1e4060f9e6a07f882332287d81da1c29d8a8cdc29114d14ca6f"
+    },
+    {
+      "bytes": 17884,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/transform.py",
+      "sha256": "e0f6c0c12f03c2cd1ff2e87b3dbc27cc32e8baa32ad180da458e91e4059b9fb0"
+    },
+    {
+      "bytes": 3008,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/unproj_pcd.py",
+      "sha256": "7fa7e5ef0d6766f6b67e4850fcafab2d145a5f5df111630d740f97ba90ba0400"
+    },
+    {
+      "bytes": 4966,
+      "path": "baselines/droid_w/prior_sources/Metric3D/mono/utils/visualization.py",
+      "sha256": "99942970e8b2138bbc1e5d588db1e16b630a6ecd55b7e047793827f99d705abb"
+    }
+  ],
+  "strategy": "VERIFIED_SOURCE_ONLY",
+  "unused_branches": [
+    "facebookresearch/dinov2",
+    "dinov3",
+    "other Metric3D model sizes"
+  ]
+}

@@ -68,7 +68,7 @@ def main(argv=None):
             import_scratch_root=out/'import_tmp',
         )
         boundary.install()
-        source_imports=VerifiedSourceFinder(root,c['source_records'],c.get('external_source_records',[])).install()
+        source_imports=VerifiedSourceFinder(root,c['source_records'],c.get('external_source_records',[]),candidate_sha256=a.candidate_sha).install()
         out.mkdir(parents=True,exist_ok=False,mode=0o700)
         scratch=pathlib.Path(a.session_dir)/'tmp'
         require(os.environ.get('TMPDIR')==str(scratch),'IPC_TEMP_DIRECTORY_NOT_PINNED','BLOCKED_BY_AUTHORIZATION_GUARD')
@@ -88,6 +88,9 @@ def main(argv=None):
         with diagnostic.span('TORCH_IMPORT'):
             import torch,cv2,numpy as np
         diagnostic.torch=torch
+        failure_phase='DYNAMIC_SOURCE_HUB_BINDING'
+        source_imports.event_sink=lambda event: __import__('linux_safety').append_json(out/'dynamic_source_import_events.jsonl',event)
+        source_imports.bind_torch_hub(torch.hub,c['dynamic_source_policy']['hub_entrypoints'])
         pins.assert_hooks(require_torch=True)
         failure_phase='NATIVE_ADAPTER_IMPORT'
         from native_adapter_v2 import _native_runtime

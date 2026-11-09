@@ -20,7 +20,31 @@ def validate_authorization(candidate, candidate_sha, authorization, environment,
     require(authorization.get('gpu_environment_verified') is True and type(authorization.get('visible_device_count')) is int and authorization.get('visible_device_count')==1,'GPU_ENVIRONMENT_NOT_VERIFIED','BLOCKED_BY_AUTHORIZATION_GUARD')
     require(environment.get('CUDA_VISIBLE_DEVICES') in ('0',None),'GPU_INVISIBLE_OR_INVALID_DEVICE_SELECTION','BLOCKED_BY_AUTHORIZATION_GUARD')
     require(candidate.get('maximum_authorizable_attempts')==1 and candidate.get('automatic_retry') is False,'CANDIDATE_ATTEMPT_POLICY','BLOCKED_BY_AUTHORIZATION_GUARD')
+    if candidate.get('schema') == 'gamecam-droidw-entry-candidate-v1':
+        require(candidate.get('entry_admission_status') == 'DROIDW_ENTRY_READY_WAITING_FOR_USER_AUTHORIZATION', 'DROIDW_ENTRY_NOT_ADMITTED', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+        require(authorization.get('gpu_uuid') == candidate['expected_gpu_uuid'], 'AUTHORIZATION_GPU_UUID_MISMATCH', 'BLOCKED_BY_AUTHORIZATION_GUARD')
     return True
+
+
+def validate_entry_identity(candidate):
+    """CPU hashes and NVML identity before any monitor/worker spawn; never deserialize."""
+    if candidate.get('schema') != 'gamecam-droidw-entry-candidate-v1':
+        return None
+    from runtime_dependency_pins import RuntimePins
+    from linux_safety import Nvml, EXPECTED_UUID
+    phase = pathlib.Path(candidate['source_root']) / candidate['runtime_phase_relative']
+    pins = RuntimePins(phase)
+    audit = pins.static_check()
+    require(candidate['expected_gpu_uuid'] == EXPECTED_UUID, 'CANDIDATE_GPU_UUID_MISMATCH', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+    nvml = Nvml()
+    try:
+        gpu = nvml.sample()
+    finally:
+        nvml.close()
+    require(gpu['gpu_uuid'] == candidate['expected_gpu_uuid'], 'LIVE_GPU_UUID_MISMATCH', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+    require(audit['input_frames_verified'] and len(audit['weights']) == 4, 'ENTRY_ASSET_IDENTITY_NOT_VERIFIED', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+    return {'GPU_UUID': gpu['gpu_uuid'], 'weights_verified': 4, 'input_frames_verified': 120, 'torch_imported': False}
+
 
 class LaunchContext:
     def __init__(self,candidate_path,candidate_sha,authorization_path):
@@ -45,6 +69,7 @@ class LaunchContext:
             p=pathlib.Path(record['path']);require(p.is_file() and digest_file(p)==record['sha256'],'EXTERNAL_SOURCE_SHA_DRIFT:'+str(p),'BLOCKED_BY_AUTHORIZATION_GUARD')
         for record in c['configuration_records']:
             p=pathlib.Path(record['path']);require(p.is_file() and digest_file(p)==record['sha256'],'CONFIGURATION_IDENTITY_DRIFT','BLOCKED_BY_AUTHORIZATION_GUARD')
+        self.entry_identity_audit=validate_entry_identity(c)
         self._candidate=c;return c
 
     def validate(self,out,session,worker_command,monitor_command,environment,consume=False):
@@ -61,11 +86,23 @@ class LaunchContext:
         require(monitor_command==c['monitor_command_prefix']+['--monitor',str(out),'--session',session],'MONITOR_COMMAND_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')
         ledger=pathlib.Path(c['planned_authorization_ledger'])
         require(not ledger.exists() and not ledger.is_symlink(),'AUTHORIZATION_ALREADY_CONSUMED','BLOCKED_BY_AUTHORIZATION_GUARD')
+        nonce_ledger=None
+        if c.get('schema')=='gamecam-droidw-entry-candidate-v1':
+            require(session==c['planned_session_id'], 'ENTRY_SESSION_MISMATCH', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+            nonce_root=pathlib.Path(c['nonce_registry_root'])
+            require(nonce_root.is_absolute() and not nonce_root.is_symlink(), 'NONCE_REGISTRY_PATH_INVALID', 'BLOCKED_BY_AUTHORIZATION_GUARD')
+            nonce_ledger=nonce_root/(hashlib.sha256(a['nonce'].encode('utf-8')).hexdigest()+'.json')
+            require(not nonce_ledger.exists() and not nonce_ledger.is_symlink(), 'AUTHORIZATION_NONCE_ALREADY_CONSUMED', 'BLOCKED_BY_AUTHORIZATION_GUARD')
         if consume:
             require(out.is_dir() and not self.claimed,'ATTEMPT_STATE_INVALID','BLOCKED_BY_AUTHORIZATION_GUARD')
             # This exclusive claim is reachable only after a separately supplied fresh user authorization.
-            ledger.parent.mkdir(parents=True,exist_ok=True)
-            with ledger.open('x',encoding='utf-8') as f:json.dump({'candidate_sha256':self.candidate_sha,'nonce':a['nonce'],'session':session,'claimed_unix':time.time(),'attempts':1},f)
+            ledger.parent.mkdir(parents=True,exist_ok=True,mode=0o700)
+            if nonce_ledger is not None:
+                nonce_ledger.parent.mkdir(parents=True,exist_ok=True,mode=0o700)
+                fd=os.open(str(nonce_ledger),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+                with os.fdopen(fd,'w',encoding='utf-8') as f:json.dump({'candidate_sha256':self.candidate_sha,'session':session,'claimed_unix':time.time()},f)
+            fd=os.open(str(ledger),os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+            with os.fdopen(fd,'w',encoding='utf-8') as f:json.dump({'candidate_sha256':self.candidate_sha,'nonce':a['nonce'],'session':session,'claimed_unix':time.time(),'attempts':1},f)
             self.claimed=True
         return True
 

@@ -1,0 +1,9 @@
+# 根因与修复
+
+上一轮真实运行在DepthVideo第一个Value分配时尝试创建pym-* Arena，被普通模型写边界拒绝；随后停止的心跳产生次级Supervisor错误。旧IPC恢复解决Arena路径和终止交接，但仍把整个session_dir当作可写输出，控制文件暴露过宽。
+
+本轮取消session输出白名单，仅保留model/；追加日志和原子JSON分别精确授权。fallback任意文件、其他Session/PID、控制文件覆盖/删除、链接和rename/dir_fd逃逸均通过实际文件操作拒绝。原子文件0600、session/model0700。固定安全阈值与原生模型算法不变。
+
+额外发现资产校验只在Worker内部进行，故移到创建任何子进程前；新schema候选还绑定授权GPU UUID和一次性Nonce哈希账本。所有新授权测试只在内存构造。
+
+本轮测试开发中的错误已保留：最初测试收尾错误使用CompletedProcess.pid；一个IPC脚本换行转义错误；一次input CLI参数名错误；一次lietorch_extras合成输入维度错误。完整回归还暴露了旧CPU故障注入器先发布合法Terminal、再修改为非法值的竞态；现将故障在首次原子发布前注入，保留原有拒绝断言和阈值。均修复后重跑，未形成真实模型Attempt，也未改Baseline参数。

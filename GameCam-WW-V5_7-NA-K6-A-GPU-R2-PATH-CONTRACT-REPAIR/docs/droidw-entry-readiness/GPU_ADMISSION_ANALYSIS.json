@@ -1,0 +1,20 @@
+{
+  "status": "PARTIAL_PASS",
+  "GPU_UUID": "GPU-cc31dd0a-10a0-a9ab-52fb-61a57d4b3d71",
+  "total_MiB": 22528,
+  "expected_model": "NVIDIA GeForce RTX 2080 Ti",
+  "observed_initial_free_MiB": 22002,
+  "depthvideo_fixed_GPU_MiB": 2231.0144805908203,
+  "depthvideo_fixed_CPU_MiB": 959.765625,
+  "sum_checkpoint_file_bytes": 1840562860,
+  "full_initialization_peak_measured": false,
+  "memory_budget_proven_sufficient": false,
+  "BA_workspace_upper_bound_proven": false,
+  "prior_inference_workspace_upper_bound_proven": false,
+  "reason": "History stopped after CPU checkpoint load and before DepthVideo/complete Tracker; total22GiB plus a2.18GiB fixed-buffer lower bound cannot establish transient peak of priors, uncertainty, factor graph and BA. No observed memory failure on thisGPU.",
+  "startup_timing_status": "FULL_MODEL_STARTUP_TIMING_UNVERIFIED",
+  "real_model_gpu_admission": false,
+  "engineering_candidate_may_be_sealed_unarmed": true,
+  "automatic_parameter_reduction": false,
+  "safety_floor_MiB": 512
+}

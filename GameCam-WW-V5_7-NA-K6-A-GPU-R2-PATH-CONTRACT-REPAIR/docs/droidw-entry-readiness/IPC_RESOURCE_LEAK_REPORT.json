@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "case_count": 88,
+  "repeated_rounds_per_start_method_and_mode": 20,
+  "fork_spawn": true,
+  "normal_abnormal_terminated": true,
+  "parent_fd_growth": 0,
+  "per_worker_max_fd_growth": 0,
+  "per_worker_max_mmap_growth": 0,
+  "all_owned_roots_removed": true,
+  "new_shm_entries_after_exit": [],
+  "DepthVideo_native_torch_shared_memory_reclaimed_after_process_exit": true,
+  "boundaries": "Native semaphores and torch shm_open/unlink are C-level IPC, outside Python audit; native tensor fd/mappings measured and no residual after exit. Not OS isolation."
+}

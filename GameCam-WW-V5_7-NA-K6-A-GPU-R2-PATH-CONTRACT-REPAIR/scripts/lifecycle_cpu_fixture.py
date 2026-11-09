@@ -2,6 +2,17 @@
 import argparse,json,os,pathlib,signal,subprocess,sys,time
 from linux_safety import atomic_json,append_json,EXPECTED_UUID
 from worker_terminal import publish_terminal
+import worker_terminal
+# Inject the invalid payload before its first atomic publication. Publishing a
+# valid payload first races the real supervisor's single terminal handoff.
+_original_terminal_write=worker_terminal.atomic_json
+def _fault_terminal_write(path,payload):
+    value=dict(payload)
+    if pathlib.Path(path).name=='worker_terminal.json':
+        if fault=='terminal_wrong_session':value['session']='WRONG_CPU_SESSION'
+        if fault=='terminal_tamper':value['result_sha256']='0'*64
+    return _original_terminal_write(path,value)
+worker_terminal.atomic_json=_fault_terminal_write
 p=argparse.ArgumentParser();p.add_argument('--role',required=True);p.add_argument('--out',required=True);p.add_argument('--session',required=True);p.add_argument('--fault',default='normal');p.add_argument('--expected-parent',type=int);a=p.parse_args();out=pathlib.Path(a.out);fault=a.fault
 assert os.environ.get('CUDA_VISIBLE_DEVICES')=='' and 'torch' not in sys.modules
 if a.role=='parent_escape':
@@ -45,8 +56,6 @@ while True:
         error=None if fault in ['normal','terminal_delay','ipc_residual','terminal_wrong_session','terminal_tamper'] else 'SYNTHETIC_PRIMARY_ERROR'
         result={'status':'RUN_COMPLETED' if error is None else 'SYNTHETIC_TERMINAL_ERROR','error':error,'frames_submitted':0,'frames_completed':0,'model_attempts':0,'torch_imported':False}
         atomic_json(out/'fake_result.json',result);t=publish_terminal(out,a.session,out/'fake_result.json','cpu_dummy');terminal=True;terminal_time=time.monotonic()
-        if fault=='terminal_wrong_session':t['session']='WRONG_CPU_SESSION';atomic_json(out/'worker_terminal.json',t)
-        if fault=='terminal_tamper':result['tampered']=True;atomic_json(out/'fake_result.json',result)
         if fault in ['ipc_residual','ipc_cleanup_failure']:
             from ipc_runtime import expected_root
             root=expected_root(a.session)

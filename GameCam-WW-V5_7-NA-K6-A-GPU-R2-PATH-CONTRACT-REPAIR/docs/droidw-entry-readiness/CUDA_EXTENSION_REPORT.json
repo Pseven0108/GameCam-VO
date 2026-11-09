@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic numerical forward operators only; no model, no checkpoint, no BA kernel",
+  "GPU_UUID": "GPU-cc31dd0a-10a0-a9ab-52fb-61a57d4b3d71",
+  "tests": [
+    {
+      "name": "torch_scatter.scatter_sum",
+      "status": "PASS",
+      "seconds": 0.12962295510806143
+    },
+    {
+      "name": "lietorch_backends.SE3_exp_log",
+      "status": "PASS",
+      "seconds": 0.01019036490470171
+    },
+    {
+      "name": "lietorch_extras.corr_index_forward",
+      "status": "PASS",
+      "seconds": 0.01850778399966657
+    },
+    {
+      "name": "droid_backends.frame_distance_NO_BA",
+      "status": "PASS",
+      "seconds": 0.004327402217313647
+    },
+    {
+      "name": "xformers.attention_FP16_FP32",
+      "status": "PASS",
+      "seconds": 2.0485302440356463
+    }
+  ],
+  "unvalidated": "BA, complete networks, all backward paths and full initialization peak remain untested. Xformers FA3 disabled in this smoke as documented local setup; no baseline parameter changes."
+}

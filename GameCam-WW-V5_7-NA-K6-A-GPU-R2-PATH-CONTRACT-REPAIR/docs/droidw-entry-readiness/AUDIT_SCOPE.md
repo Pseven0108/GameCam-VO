@@ -1,0 +1,1 @@
+This is pre-seal evidence for the independent engineering candidate. Final candidate SHA, commit, fresh-clone and end-of-task receipts are exported outside the source checkout to avoid a self-referential manifest. No real model authorization or Attempt02 exists.

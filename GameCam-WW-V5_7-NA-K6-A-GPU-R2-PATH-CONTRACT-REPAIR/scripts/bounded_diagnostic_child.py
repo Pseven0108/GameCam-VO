@@ -90,7 +90,11 @@ def main(argv=None):
         diagnostic.torch=torch
         failure_phase='DYNAMIC_SOURCE_HUB_BINDING'
         source_imports.event_sink=lambda event: __import__('linux_safety').append_json(out/'dynamic_source_import_events.jsonl',event)
-        source_imports.bind_torch_hub(torch.hub,c['dynamic_source_policy']['hub_entrypoints'])
+        if 'prior_factory_policy' in c:
+            from verified_config_dependency import VerifiedConfigDependency
+            config_dependencies=VerifiedConfigDependency(source_imports,c['prior_factory_policy'],event_sink=lambda event: __import__('linux_safety').append_json(out/'config_dependency_events.jsonl',event))
+            source_imports.bind_torch_hub(torch.hub,c['dynamic_source_policy']['hub_entrypoints'],after_source_import=config_dependencies.on_hub_import)
+        else:source_imports.bind_torch_hub(torch.hub,c['dynamic_source_policy']['hub_entrypoints'])
         pins.assert_hooks(require_torch=True)
         failure_phase='NATIVE_ADAPTER_IMPORT'
         from native_adapter_v2 import _native_runtime

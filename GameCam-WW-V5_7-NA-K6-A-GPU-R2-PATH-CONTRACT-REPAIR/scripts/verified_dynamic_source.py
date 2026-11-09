@@ -147,7 +147,7 @@ class VerifiedSourceFinder(importlib.abc.MetaPathFinder):
                 parent,_,child=name.rpartition('.')
                 if parent in sys.modules:setattr(sys.modules[parent],child,module)
             return module
-    def bind_torch_hub(self,hub,entrypoints):
+    def bind_torch_hub(self,hub,entrypoints,after_source_import=None):
         if self.hub_binding is not None:raise SourceIdentityError('TORCH_HUB_ALREADY_BOUND')
         approved={}
         for entry in entrypoints:
@@ -172,7 +172,10 @@ class VerifiedSourceFinder(importlib.abc.MetaPathFinder):
                 parent=str(pathlib.Path(real).parent)
                 with _bootstrap._ModuleLockManager(name):
                     sys.path.insert(0,parent)
-                    try:return self.load_dynamic(name,real,temporary=True)
+                    try:
+                        module=self.load_dynamic(name,real,temporary=True)
+                        if after_source_import:after_source_import(module,real)
+                        return module
                     finally:sys.path.remove(parent)
             except BaseException as exc:
                 self.event('hub_import_rejected',name,str(path),decision='DENY',reason=str(exc));raise

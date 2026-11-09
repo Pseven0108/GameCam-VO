@@ -1,0 +1,90 @@
+{
+  "CUDA_allowed": false,
+  "fit3d_native": {
+    "function": "dinov2_reg_small_fine",
+    "reason": "signature has no pretrained flag; load_model hardcodes timm pretrained=True and unconditional checkpoint override",
+    "safe_no_pretrained_path": false
+  },
+  "forward_allowed": false,
+  "metric3d_config_edges": [
+    {
+      "declaring_relative_path": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "path_repaired": false,
+      "requested_relative_path": "../_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "sha256": "2953400927e3cba3303f5449889bf02eb55dec5f8fc9a54fc1a019967006b835",
+      "target_relative_path": "mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py"
+    },
+    {
+      "declaring_relative_path": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "path_repaired": true,
+      "requested_relative_path": "../_base_/datasets/_data_base_.py",
+      "sha256": "a3a5d87001eef23f2ba7afe66962746ad39b7bc2bf5724b1fa001e164223bb23",
+      "target_relative_path": "mono/configs/_base_/_data_base_.py"
+    },
+    {
+      "declaring_relative_path": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "path_repaired": false,
+      "requested_relative_path": "../_base_/default_runtime.py",
+      "sha256": "5669b9bbd196b553bbc84d9bb0a57d55924a4676d342d16e198bd844699e158a",
+      "target_relative_path": "mono/configs/_base_/default_runtime.py"
+    },
+    {
+      "declaring_relative_path": "mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "path_repaired": false,
+      "requested_relative_path": "../backbones/dino_vit_large_reg.py",
+      "sha256": "cd63731fbfe5d3291ed51eba0cd992a7a4a221249aa05c26e9baba434a590ee7",
+      "target_relative_path": "mono/configs/_base_/models/backbones/dino_vit_large_reg.py"
+    }
+  ],
+  "metric3d_config_sources": [
+    {
+      "AST_side_effect_audited": true,
+      "bytes": 737,
+      "relative_path": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "sha256": "3b17503f7a3c2833d00b19f9f067b8c5ae70ba717add0becab621a728acef043"
+    },
+    {
+      "AST_side_effect_audited": true,
+      "bytes": 149,
+      "relative_path": "mono/configs/_base_/default_runtime.py",
+      "sha256": "5669b9bbd196b553bbc84d9bb0a57d55924a4676d342d16e198bd844699e158a"
+    },
+    {
+      "AST_side_effect_audited": true,
+      "bytes": 359,
+      "relative_path": "mono/configs/_base_/_data_base_.py",
+      "sha256": "a3a5d87001eef23f2ba7afe66962746ad39b7bc2bf5724b1fa001e164223bb23"
+    },
+    {
+      "AST_side_effect_audited": true,
+      "bytes": 686,
+      "relative_path": "mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "sha256": "2953400927e3cba3303f5449889bf02eb55dec5f8fc9a54fc1a019967006b835"
+    },
+    {
+      "AST_side_effect_audited": true,
+      "bytes": 183,
+      "relative_path": "mono/configs/_base_/models/backbones/dino_vit_large_reg.py",
+      "sha256": "cd63731fbfe5d3291ed51eba0cd992a7a4a221249aa05c26e9baba434a590ee7"
+    }
+  ],
+  "metric3d_entry_config": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+  "metric3d_factory": {
+    "function": "metric3d_vit_large",
+    "kwargs": {
+      "pretrain": false
+    }
+  },
+  "policy_scope": "CPU validation policy and exact lazy config dependency repair; no architecture/weight/default/pretrained semantics changes",
+  "schema": "gamecam-prior-factory-cpu-policy-v1",
+  "timm_factory": {
+    "kwargs": {
+      "dynamic_img_pad": false,
+      "dynamic_img_size": true,
+      "num_classes": 0,
+      "pretrained": false
+    },
+    "model_name": "vit_small_patch14_reg4_dinov2.lvd142m"
+  },
+  "weight_loading_allowed": false
+}

@@ -1,0 +1,13 @@
+# Prior model factory CPU preflight
+
+This stage constructs real random-initialized CPU Metric3D and timm DINOv2 architectures. It never deserializes checkpoints, runs a forward, initializes CUDA or constructs the DROID Tracker. Native FiT3D remains unverified because its public entry hardcodes pretrained=True and a second checkpoint load. Its original semantics remain unchanged.
+
+The only production behavior repair is a lazy, SHA-bound resolver for the exact frozen Metric3D configuration inheritance closure. It maps the missing literal ../_base_/datasets/_data_base_.py to the already-frozen mono/configs/_base_/_data_base_.py. Original configuration bytes, model sources, weights, architecture and algorithm remain unchanged. Real mmengine.Config.fromfile executes; all five configurations are verified before and after. This is a path/hash check around mmengine evaluation, not a same-buffer execution guarantee for configuration files. Ordinary imports retain the verified same-buffer source loader. Unknown edges, changed bytes and symlink/traversal escapes are rejected.
+
+The optional policy is bound to candidate source records and validated by DiagnosticContext. Old candidates without the policy keep their previous behavior. The CPU fixtures use actual production child main, ModelIOBoundary, RuntimePins, startup state machine and supervisor cleanup. Authorization is replaced in memory for testing; monitor samples are explicitly synthetic. No GPU permission or nonce file is generated. These tests do not validate real CUDA readiness or real GPU memory safety.
+
+The test-only guard rejects checkpoint, network, CUDA, forward and real DROID constructors. safe_open, a native extension entry, is explicitly wrapped before factory imports. CPython disables a profiler when it raises, so the expected FiT3D rejection is followed by explicit profiler re-arming before the actual pretrained=False timm construction. Optional fontconfig subprocesses are refused before execution with FileNotFoundError, allowing Matplotlib's original fallback. Arbitrary child processes remain fatal.
+
+CPU reproducibility: pinned Python 3.10.20; -B; PYTHONDONTWRITEBYTECODE=1; unset PYTHONPYCACHEPREFIX; empty CUDA_VISIBLE_DEVICES. The selected model CPU construction uses four Torch threads only in the test runtime. No baseline numerical configuration is changed.
+
+Final stage status is PARTIAL_PASS. A native FiT3D pretrained wrapper and all real checkpoint loading remain outside this CPU authorization. A new explicit authorization and a separately reviewed candidate are required for any future GPU Tracker construction.

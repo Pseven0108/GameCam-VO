@@ -1,0 +1,210 @@
+{
+  "status": "PRIOR_MODEL_FACTORY_CPU_PREFLIGHT_PARTIAL_PASS",
+  "time_utc": "2026-11-09T16:35:12.094394+00:00",
+  "CPU_model_closures": 3,
+  "Metric3D_parameters": 411941915,
+  "DINOv2_small_parameters": 22057344,
+  "FiT3D_native": "UNVERIFIED_NO_SAFE_PRETRAINED_PATH",
+  "tests_passed": 172,
+  "safety_api_cases": [
+    {
+      "api": "cuda",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CUDA_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_cuda_guard-final.json"
+    },
+    {
+      "api": "cuda_tensor",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CUDA_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_cuda_tensor_guard-final.json"
+    },
+    {
+      "api": "huggingface_hub.hf_hub_download",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_OR_HUB_CALL_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_huggingface_hub_hf_hub_download_guard-final.json"
+    },
+    {
+      "api": "huggingface_hub.snapshot_download",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "DOWNLOAD_OR_CACHE_FALLBACK_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_huggingface_hub_snapshot_download_guard-final.json"
+    },
+    {
+      "api": "mmcv.runner.load_checkpoint",
+      "status": "NOT_AVAILABLE",
+      "reason": "No module named 'mmcv.runner'",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_mmcv_runner_load_checkpoint_guard-final.json"
+    },
+    {
+      "api": "mmengine.runner.load_checkpoint",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_OR_DOWNLOAD_API_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_mmengine_runner_load_checkpoint_guard-final.json"
+    },
+    {
+      "api": "model_forward",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_MODEL_FORWARD_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_model_forward_guard-final.json"
+    },
+    {
+      "api": "raw_checkpoint",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_IMPORT_FORBIDDEN_ASSET_READ:/not-read/cpu-guard-sentinel.pth",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_raw_checkpoint_guard-final.json"
+    },
+    {
+      "api": "requests",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "MODEL_NETWORK_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_requests_guard-final.json"
+    },
+    {
+      "api": "safetensors.safe_open",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_API_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_safetensors_safe_open_guard-final.json"
+    },
+    {
+      "api": "safetensors.torch.load_file",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_LOAD_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_safetensors_torch_load_file_guard-final.json"
+    },
+    {
+      "api": "socket",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "DOWNLOAD_OR_CACHE_FALLBACK_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_socket_guard-final.json"
+    },
+    {
+      "api": "torch.hub.load",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_OR_HUB_CALL_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_torch_hub_load_guard-final.json"
+    },
+    {
+      "api": "torch.hub.load_state_dict_from_url",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_OR_HUB_CALL_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_torch_hub_load_state_dict_from_url_guard-final.json"
+    },
+    {
+      "api": "torch.load",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_LOAD_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_torch_load_guard-final.json"
+    },
+    {
+      "api": "torch.serialization.load",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "CPU_PREFLIGHT_CHECKPOINT_LOAD_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_torch_serialization_load_guard-final.json"
+    },
+    {
+      "api": "urllib",
+      "status": "EXPECTED_REJECTION_VERIFIED",
+      "reason": "DOWNLOAD_OR_CACHE_FALLBACK_FORBIDDEN",
+      "worker_fully_exited": true,
+      "monitor_fully_exited": true,
+      "IPC_cleanup": true,
+      "cuda_context_initialized": false,
+      "result_file": "RESULT_deny_urllib_guard-final.json"
+    }
+  ],
+  "faults": [
+    {
+      "fault": "illegal-read",
+      "reason": "MODEL_SESSION_READ_OUTSIDE_ALLOWLIST:/root/rivermind-data/gamecam/prior-model-factory-cpu-preflight-20261109T160007Z/cpu-factory-illegal-read-fault-final/supervisor.private",
+      "result_file": "RESULT_illegal-read_fault-final.json",
+      "cleanup": true,
+      "structured_terminal": true
+    },
+    {
+      "fault": "early-import",
+      "reason": "CPU_DYNAMIC_PRIOR_EARLY_IMPORT_FAILURE",
+      "result_file": "RESULT_early-import_fault-final.json",
+      "cleanup": true,
+      "structured_terminal": true
+    },
+    {
+      "fault": "timeout",
+      "reason": "NVML_MONITOR_STALE_OVER_3_SECONDS",
+      "result_file": "RESULT_timeout_fault-final.json",
+      "cleanup": true,
+      "structured_terminal": false
+    }
+  ],
+  "cuda_context_initialized": false,
+  "real_checkpoints_loaded": 0,
+  "real_forward_executed": false,
+  "new_GPU_attempts": 0,
+  "new_GPU_authorizations": 0,
+  "original_prior_source_modified": false
+}

@@ -122,16 +122,24 @@ def supervise_once(out,session,worker_command,monitor_command,kind,env=None,expe
                         startup_gate.observe(read_json(status))
                         if startup_gate.last['phase']!=last_startup_phase:
                             last_startup_phase=startup_gate.last['phase'];event(last_startup_phase,cuda_started_monotonic=startup_gate.cuda_start)
-                    startup_gate.check_deadline()
-                elif not startup_gate and time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
+                elif time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
             p=out/'cuda.latest.json'
             if p.exists():
                 c=reader.check(read_json(p),'cuda')
                 if c.get('worker_pid')!=worker.pid:raise SafetyStop('CUDA_WORKER_PID_MISMATCH')
-                if startup_gate and not permit:startup_gate.check_cuda(c)
+                if startup_gate and not permit:
+                    # CUDA telemetry and status are separate atomic files. The worker
+                    # publishes CONTEXT_READY before telemetry; re-read status after
+                    # the sample so an older IMPORTING snapshot cannot reject it.
+                    startup_gate.observe(read_json(out/'worker_startup.latest.json'))
+                    if startup_gate.last['phase']!=last_startup_phase:
+                        last_startup_phase=startup_gate.last['phase'];event(last_startup_phase,cuda_started_monotonic=startup_gate.cuda_start)
+                    startup_gate.check_deadline();startup_gate.check_cuda(c)
                 if first_cuda is None:first_cuda=c
                 if not permit and c['sample_seq']>first_cuda['sample_seq']:
                     atomic_json(out/'work.permit.json',{'session':session,'execution_kind':kind,'model_execution_authorized':kind in {'droidw','droidw_diagnostic'},'diagnostic_only':kind=='droidw_diagnostic','cpu_dummy_only':kind=='cpu_dummy','monotonic_time':time.monotonic()});permit=True;startup_complete=True;event('STARTUP_BARRIER_PASSED');event('WORKER_RUNNING')
+            elif startup_gate and not permit:
+                startup_gate.check_deadline()
             elif not startup_gate and time.monotonic()-worker_start>MAX_STARTUP_SECONDS:raise SafetyStop('CUDA_STARTUP_BARRIER_TIMEOUT')
             consume_frames();event('RUNNING' if permit else 'WAITING_FOR_CUDA_BARRIER',worker_pid=worker.pid,frame_samples=growth.next_ordinal);time.sleep(SUPERVISOR_PERIOD)
         rc=worker.wait(timeout=5);observe_terminal();consume_frames()

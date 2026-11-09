@@ -8,11 +8,13 @@ def install(d,sid,fallback):
  p=IPCPolicy('/dev/shm/gamecam-ipc/'+sid,str(d/'tmp'),sid,d);p.install_arena(force_fallback=fallback)
  b=ModelIOBoundary([],list(pathlib.Path(__file__).parent.glob('*.py')),[],[d/'model'],[sys.prefix],ipc_policy=p,worker_files=[d/'ipc_worker_events.jsonl'],worker_root=d);b.install();return p,b
 
-def participant(value,array,raw,rawarray,lock,rlock,q,conn,d,sid,fallback,mode):
+def participant(value,array,raw,rawarray,lock,rlock,q,conn,go,d,sid,fallback,mode):
  if __import__('multiprocessing').get_start_method()=='spawn': install(pathlib.Path(d),sid,fallback)
- with lock: value.value+=1;array[1]+=2
- with rlock:
-  with rlock: raw.value+=3;rawarray[0]+=4
+ conn.send({'stage':'ready','pid':os.getpid()});assert go.wait(10)
+ for _ in range(100):
+  with lock: value.value+=1;array[1]+=2
+  with rlock:
+   with rlock: raw.value+=3;rawarray[0]+=4
  q.put({'pid':os.getpid(),'ok':True});q.close();q.join_thread();conn.send(os.getpid());conn.close()
  if mode=='abnormal':os._exit(7)
  if mode=='terminate':
@@ -21,17 +23,22 @@ def participant(value,array,raw,rawarray,lock,rlock,q,conn,d,sid,fallback,mode):
 def worker(a):
  import multiprocessing as mp
  d=pathlib.Path(a.directory);p,b=install(d,a.session,a.fallback);ctx=mp.get_context(a.method)
- fd0=len(list(pathlib.Path('/proc/self/fd').iterdir()));v=ctx.Value('i',0);arr=ctx.Array('i',[0,0]);rv=ctx.RawValue('i',0);ra=ctx.RawArray('i',[0,0]);lock=ctx.Lock();rlock=ctx.RLock();q=ctx.Queue();children=[]
+ fd0=len(list(pathlib.Path('/proc/self/fd').iterdir()));v=ctx.Value('i',0);arr=ctx.Array('i',[0,0]);rv=ctx.RawValue('i',0);ra=ctx.RawArray('i',[0,0]);lock=ctx.Lock();rlock=ctx.RLock();q=ctx.Queue();go=ctx.Event();children=[];pending=[]
  for _ in range(2 if a.mode=='normal' else 1):
-  recv,send=ctx.Pipe(False);child=ctx.Process(target=participant,args=(v,arr,rv,ra,lock,rlock,q,send,str(d),a.session,a.fallback,a.mode));child.start();send.close();assert recv.poll(10);pid=recv.recv();recv.close();assert q.get(timeout=10)['ok'];
+  recv,send=ctx.Pipe(False);child=ctx.Process(target=participant,args=(v,arr,rv,ra,lock,rlock,q,send,go,str(d),a.session,a.fallback,a.mode));child.start();send.close();pending.append((child,recv))
+ for child,recv in pending:
+  assert recv.poll(10);assert recv.recv()['stage']=='ready';assert child.is_alive()
+ go.set()
+ for child,recv in pending:
+  assert recv.poll(10);pid=recv.recv();recv.close();assert q.get(timeout=10)['ok']
   if a.mode=='terminate':child.terminate()
   child.join(10);assert not child.is_alive();assert child.exitcode=={'normal':0,'abnormal':7,'terminate':-15}[a.mode];children.append({'pid':pid,'exitcode':child.exitcode});child.close()
- n=len(children);assert [v.value,arr[1],rv.value,ra[0]]==[n,2*n,3*n,4*n]
+ n=len(children);assert [v.value,arr[1],rv.value,ra[0]]==[100*n,200*n,300*n,400*n]
  q.close();q.join_thread();counts=[];maps=[]
  for _ in range(20):
   z=ctx.Value('i',1);z.value+=1;assert z.value==2;del z;gc.collect();counts.append(len(list(pathlib.Path('/proc/self/fd').iterdir())));maps.append(sum('pym-' in x for x in pathlib.Path('/proc/self/maps').read_text().splitlines()))
  assert max(counts)-min(counts)<=2;assert max(maps)-min(maps)<=1
- report={'passed':True,'pid':os.getpid(),'method':a.method,'fallback':a.fallback,'mode':a.mode,'checks':['Value','Array','RawValue','RawArray','Lock','RLock','Process','Pipe','Queue','parent_child_roundtrip','two_contending_children' if n==2 else a.mode],'children':children,'fd_before':fd0,'fd_cycles':counts,'arena_map_cycles':maps,'ipc_events':list(p.events),'active_children':len(mp.active_children()),'arena_files_live':[str(x) for x in pathlib.Path(p.root).iterdir() if x.name!='.gamecam-session.json'],'fallback_files_live':[str(x) for x in p.fallback.iterdir()],'python':sys.version,'boundary_installed':True,'native_sem_lock_note':'Native POSIX semaphores are not mediated by Python file audit events; per-process cleanup separately checked.'}
+ report={'passed':True,'pid':os.getpid(),'method':a.method,'fallback':a.fallback,'mode':a.mode,'checks':['Value','Array','RawValue','RawArray','Lock','RLock','Process','Pipe','Queue','parent_child_roundtrip','two_live_children_released_by_shared_event_and100_locked_updates' if n==2 else a.mode],'children':children,'fd_before':fd0,'fd_cycles':counts,'arena_map_cycles':maps,'ipc_events':list(p.events),'active_children':len(mp.active_children()),'arena_files_live':[str(x) for x in pathlib.Path(p.root).iterdir() if x.name!='.gamecam-session.json'],'fallback_files_live':[str(x) for x in p.fallback.iterdir()],'python':sys.version,'boundary_installed':True,'native_sem_lock_note':'Native POSIX semaphores are not mediated by Python file audit events; per-process cleanup separately checked.'}
  assert report['active_children']==0
  atomic_json(d/'model/report.json',report)
 

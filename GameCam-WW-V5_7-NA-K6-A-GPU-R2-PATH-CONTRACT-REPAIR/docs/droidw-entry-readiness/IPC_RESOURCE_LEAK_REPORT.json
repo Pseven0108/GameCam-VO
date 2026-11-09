@@ -3,6 +3,8 @@
   "case_count": 88,
   "repeated_rounds_per_start_method_and_mode": 20,
   "fork_spawn": true,
+  "simultaneously_live_children_per_normal_case": 2,
+  "locked_updates_per_child": 100,
   "normal_abnormal_terminated": true,
   "parent_fd_growth": 0,
   "per_worker_max_fd_growth": 0,

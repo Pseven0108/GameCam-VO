@@ -7,7 +7,7 @@ FUTURE_TOLERANCE=1.0
 NVML_PERIOD=.25
 CUDA_PERIOD=.2
 SUPERVISOR_PERIOD=.2
-EXPECTED_UUID='GPU-f74ae3f4-b00f-dce5-e20b-40d5f90ddfcf'
+EXPECTED_UUID='GPU-cc31dd0a-10a0-a9ab-52fb-61a57d4b3d71'
 class SafetyStop(RuntimeError):pass
 
 def atomic_json(path,data):

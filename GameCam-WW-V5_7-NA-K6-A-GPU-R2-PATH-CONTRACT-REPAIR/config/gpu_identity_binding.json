@@ -1,0 +1,30 @@
+{
+  "schema": "GameCam-GPU-identity-derived-candidate-v1",
+  "derived_from_git_commit": "8e17c2325dddaa2a14dcf8ea389167b8114fc2b1",
+  "derived_from_candidate_sha256": "822f2edc125631cd1913acb80994d0476ffa333dbfed472e310c327cf9d32339",
+  "old_gpu_uuid": "GPU-f74ae3f4-b00f-dce5-e20b-40d5f90ddfcf",
+  "expected_gpu_uuid": "GPU-cc31dd0a-10a0-a9ab-52fb-61a57d4b3d71",
+  "name": "NVIDIA GeForce RTX 2080 Ti",
+  "total_memory_MiB": 22528,
+  "compute_capability": [
+    7,
+    5
+  ],
+  "identity_classification": "SAME_MODEL_CAPABILITY_CAPACITY_DIFFERENT_UUID",
+  "provider_reallocation_reason": "UNVERIFIED_NO_PROVIDER_PLACEMENT_HISTORY",
+  "GPU_execution_authorized": false,
+  "current_attempt_limit": 0,
+  "new_GPU_authorization": "NONE",
+  "strict_NVML_and_CUDA_UUID_checks_retained": true,
+  "legacy_remote_launch_audit": "Historical inactive reference, preserved unchanged; not used by candidate worker or monitor",
+  "safety": {
+    "cuda_free_floor_MiB": 512,
+    "nvml_free_floor_MiB": 512,
+    "monitor_max_age_seconds": 3,
+    "growth_frame_window": 30,
+    "growth_delta_MiB": 512,
+    "startup_barrier_seconds": 15,
+    "condition_timeout_seconds": 3600,
+    "automatic_retry": false
+  }
+}

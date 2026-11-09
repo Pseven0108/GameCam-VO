@@ -1,0 +1,110 @@
+{
+  "status": "IMPLEMENTED_AND_MOCK_TESTED",
+  "future_real_model_observation_status": "NOT_EXECUTED",
+  "supported": [
+    {
+      "phase": "PROCESS_STARTED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "TORCH_IMPORT",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "CUDA_CONTEXT",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "CUDA_HEARTBEAT_STARTED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "STARTUP_PERMIT_RECEIVED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "PRE_MODEL_LOAD",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "MODEL_NETWORK_CONSTRUCTION",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DROID_WEIGHT_LOAD",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DROID_WEIGHTS_LOADED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "MODEL_CUDA_TRANSFER",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DROID_CUDA_READY",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DEPTHVIDEO_ALLOCATION_STARTED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DEPTHVIDEO_ALLOCATION_DONE",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "TRACKER_CONSTRUCTION_STARTED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "DEPENDENCY_LOADER",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "MODEL_WEIGHTS_LOADED",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "MODEL_CUDA_READY",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "TRACKER_CONSTRUCTION_DONE",
+      "real_model_status": "NOT_REACHED"
+    },
+    {
+      "phase": "CONTROLLED_DIAGNOSTIC_STOP",
+      "real_model_status": "NOT_REACHED"
+    }
+  ],
+  "outside_scope": [
+    {
+      "phase": "PRE_FRAME_SUBMISSION",
+      "status": "NOT_AUTHORIZED_NOT_REACHED"
+    },
+    {
+      "phase": "PRE_INITIALIZATION",
+      "status": "NOT_AUTHORIZED_NOT_REACHED"
+    },
+    {
+      "phase": "INITIALIZATION_STARTED",
+      "status": "NOT_AUTHORIZED_NOT_REACHED"
+    },
+    {
+      "phase": "INITIALIZATION_COMPLETED",
+      "status": "NOT_AUTHORIZED_NOT_REACHED"
+    },
+    {
+      "phase": "VALID_POSES",
+      "status": "NOT_AUTHORIZED_NOT_REACHED"
+    }
+  ],
+  "stop_after_phase": "TRACKER_CONSTRUCTION_DONE",
+  "notes": [
+    "主网络DROID_CUDA_READY与全体先验MODEL_CUDA_READY分开。",
+    "部分阶段start/end成对；检查点使用point；异常写error。",
+    "CPU Mock/Synthetic事件不能视为实际模型到达。"
+  ]
+}

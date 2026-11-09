@@ -6,7 +6,7 @@ from runtime_dependency_pins import PinError
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def log(message): print(time.strftime('%H:%M:%S'),message,flush=True)
 
-def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=None):
+def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=None,diagnostic=None):
  """Original native experiment body; only lexical scope and entry/terminal handling change."""
  P=O.parent
  import resource
@@ -93,7 +93,7 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
   setattr(obj,name,call)
  try:
   # Start the existing guarded heartbeat before heavy Tracker/prior module imports.
-  guard=Guard(Path(os.environ['GAMECAM_RUN_SESSION_DIR']),out,torch,args.monitor_session_id)
+  guard=Guard(Path(os.environ['GAMECAM_RUN_SESSION_DIR']),out,torch,args.monitor_session_id,execution_kind='droidw_diagnostic',diagnostic=diagnostic) if diagnostic else Guard(Path(os.environ['GAMECAM_RUN_SESSION_DIR']),out,torch,args.monitor_session_id)
   repo=P/'baselines'/('wildgs_slam' if args.method=='wildgs' else 'droid_w')/'upstream'
   os.chdir(repo);sys.path.insert(0,str(repo))
   from src.depth_video import DepthVideo
@@ -113,10 +113,16 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
   guard.check('before_model',True)
   stream0=get_dataset(cfg,device='cuda:0');assert len(stream0)==120 and stream0.poses is None and stream0.depth_paths is None
   stream=Stream(stream0)
-  net=DroidNet();weights=Path(cfg['tracking']['pretrained']);state=torch.load(str(weights),map_location='cpu',weights_only=True)
+  if diagnostic:diagnostic.emit('PRE_MODEL_LOAD');diagnostic.emit('MODEL_NETWORK_CONSTRUCTION','start')
+  net=DroidNet()
+  if diagnostic:diagnostic.emit('MODEL_NETWORK_CONSTRUCTION','end');diagnostic.emit('DROID_WEIGHT_LOAD','start')
+  weights=Path(cfg['tracking']['pretrained']);state=torch.load(str(weights),map_location='cpu',weights_only=True)
   state={k.replace('module.',''):v for k,v in state.items()}
   for k in ['update.weight.2.weight','update.weight.2.bias','update.delta.2.weight','update.delta.2.bias']:state[k]=state[k][:2]
-  net.load_state_dict(state,strict=True);del state;net=net.cuda().eval()
+  net.load_state_dict(state,strict=True);del state
+  if diagnostic:diagnostic.emit('DROID_WEIGHT_LOAD','end');diagnostic.emit('DROID_WEIGHTS_LOADED');diagnostic.emit('MODEL_CUDA_TRANSFER','start')
+  net=net.cuda().eval()
+  if diagnostic:diagnostic.emit('MODEL_CUDA_TRANSFER','end');diagnostic.emit('DROID_CUDA_READY')
   uncer=None
   if args.method=='wildgs':
    guard.phase='mapping_resources'
@@ -124,15 +130,23 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
    from src.utils.dyn_uncertainty.uncertainty_model import generate_uncertainty_mlp
    uncer=generate_uncertainty_mlp(cfg['mapping']['uncertainty_params']['feature_dim'])
   guard.phase='native_buffer_allocation'
+  if diagnostic:diagnostic.emit('DEPTHVIDEO_ALLOCATION_STARTED')
   video=DepthVideo(cfg,printer,uncer_network=uncer) if args.method=='wildgs' else DepthVideo(cfg,printer)
   assert video.poses.shape[0]==350
+  if diagnostic:diagnostic.emit('DEPTHVIDEO_ALLOCATION_DONE')
   slam=SimpleNamespace(cfg=cfg,device='cuda:0',verbose=cfg['verbose'],save_dir=str(out/case['case_id']),printer=printer,droid_net=net,video=video,uncer_network=uncer)
   (Path(slam.save_dir)/'mono_priors/depths').mkdir(parents=True);(Path(slam.save_dir)/'mono_priors/features').mkdir(parents=True)
   q1,q2=queue.Queue(),queue.Queue();trackpipe=Pipe(q2,q1);mappipe=Pipe(q1,q2)
+  if diagnostic:diagnostic.emit('TRACKER_CONSTRUCTION_STARTED')
   if args.method=='wildgs':tracker=Tracker(slam,trackpipe)
   else:
    from torch.utils.tensorboard import SummaryWriter
    writer=SummaryWriter(log_dir=str(out/'tensorboard'));tracker=Tracker(slam,NoMapPipe(),writer)
+  if diagnostic:
+   diagnostic.emit('MODEL_WEIGHTS_LOADED',loaded_weight_ids=sorted(diagnostic.loaded_weights))
+   diagnostic.emit('MODEL_CUDA_READY',meaning='constructors returned; no frame forward or BA tested')
+   diagnostic.checkpoint('TRACKER_CONSTRUCTION_DONE')
+   raise RuntimeError('DIAGNOSTIC_MUST_STOP_BEFORE_FRAME_SUBMISSION')
   tracker.frontend=FrontProxy(tracker.frontend)
   old_track=tracker.motion_filter.track
   def observed_motion(*a,**kw):
@@ -181,8 +195,14 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
    if worker_error:raise worker_error[0]
   guard.phase='bounded_end';guard.check('bounded_end',True);snapshot('bounded_final');r['status']='RUN_COMPLETED'
   assert r['frames_completed']==120
+ except __import__('diagnostic_phases').ControlledDiagnosticStop as e:
+  r['status']='DIAGNOSTIC_STOP_COMPLETED';r['error']=None;r['diagnostic_stop_phase']=str(e)
+  r['diagnostic_loaded_weights']=sorted(diagnostic.loaded_weights);r['tracker_run_called']=False;r['BA_executed']=False
  except BaseException as e:
   r['error']=str(e);r['traceback']=traceback.format_exc()
+  if diagnostic:
+   try:diagnostic.emit('DIAGNOSTIC_FAILURE','error',error=str(e))
+   except BaseException as telemetry_error:r['diagnostic_event_failure']=str(telemetry_error)
   if isinstance(e,PinError):r['status']=e.code
   elif isinstance(e,SafetyStop):
    r['status']='BLOCKED_BY_GPU_MEMORY' if any(k in str(e) for k in ['FREE_BELOW','SUSTAINED_MONOTONIC','AVAILABLE_RAM_BELOW','WINDOWS_SHARED_GROWTH','DXGI_BUDGET_DROP','WINDOWS_SHELL_UNRESPONSIVE']) else 'BLOCKED_BY_MONITOR_TRANSPORT'
@@ -209,4 +229,4 @@ def _native_runtime(O,args,case,out,r,save,torch,cv2,np,pins,terminal_callback=N
    if terminal_callback is not None:terminal_callback()
   finally:
    if guard:guard.finish()
- return 0 if r['status']=='RUN_COMPLETED' else 2
+ return 0 if r['status'] in ('RUN_COMPLETED','DIAGNOSTIC_STOP_COMPLETED') else 2

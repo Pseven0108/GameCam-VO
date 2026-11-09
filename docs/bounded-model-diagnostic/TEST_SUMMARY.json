@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "new_targeted_tests": 47,
+  "real_diagnostic_fake_worker_conditions": 8,
+  "write_boundary_regression": 43,
+  "IPC_and_terminal_regression": 50,
+  "GPU_synthetic_runtime_conditions": 1,
+  "historical_152_and_88_not_rerun": true,
+  "failures_preserved": [
+    "targeted_cpu_01.log:pytest missing from default module path",
+    "TARGETED_DIAGNOSTIC_CPU_02.stdout.txt:controlled stop was initially caught as generic failure; repaired",
+    "IPC_TERMINAL_REGRESSION_01.stdout.txt:formal Guard fixture keyword compatibility; repaired"
+  ],
+  "real_model_loaded": false,
+  "real_tracker_constructed": false,
+  "Tracker_run_calls": 0,
+  "real_BA_calls": 0,
+  "real_frame_submissions": 0,
+  "real_attempts": 0,
+  "automatic_retry": false
+}

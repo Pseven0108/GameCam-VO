@@ -19,13 +19,14 @@ def read_terminal(out,session,pid,kind):
     try:
         t=json.loads(p.read_text());rpath=pathlib.PurePosixPath(t['result_relative_path'])
         if t.get('schema')!=TERMINAL_SCHEMA or t.get('session')!=session or t.get('worker_pid')!=pid or t.get('execution_kind')!=kind or t.get('model_work_finished') is not True:raise ValueError('identity')
-        expected='model/result.json' if kind=='droidw' else 'fake_result.json'
+        expected='model/result.json' if kind in {'droidw','droidw_diagnostic'} else 'fake_result.json'
         if str(rpath)!=expected or rpath.is_absolute() or '..' in rpath.parts:raise ValueError('path')
         result_path=pathlib.Path(out)/str(rpath)
         if result_path.is_symlink() or result_path.resolve()!=result_path.absolute():raise ValueError('symlink')
         raw=result_path.read_bytes();r=json.loads(raw)
         if hashlib.sha256(raw).hexdigest()!=t['result_sha256'] or r.get('status') in (None,'RUNNING') or r['status']!=t['status'] or r.get('error')!=t.get('primary_failure'):raise ValueError('result binding')
-        if not isinstance(t.get('status'),str) or (t['status']=='RUN_COMPLETED')!=(t.get('primary_failure') is None):raise ValueError('terminal status')
+        success_status='DIAGNOSTIC_STOP_COMPLETED' if kind=='droidw_diagnostic' else 'RUN_COMPLETED'
+        if not isinstance(t.get('status'),str) or (t['status']==success_status)!=(t.get('primary_failure') is None):raise ValueError('terminal status')
         if t.get('primary_failure') is not None and (not isinstance(t['primary_failure'],str) or not t['primary_failure']):raise ValueError('terminal error')
         for key in ['frames_submitted','frames_completed']:
             if type(t.get(key)) is not int or type(r.get(key,0)) is not int or t[key]<0 or t[key]>120 or t[key]!=r.get(key,0):raise ValueError('frames')

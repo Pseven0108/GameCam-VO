@@ -1,0 +1,11 @@
+# 独立一次性诊断授权
+
+permission_type=BOUNDED_MODEL_DIAGNOSTIC；必须绑定精确Candidate SHA、GPU UUID、model/weight identity、Session、完整DIAGNOSTIC_SCOPE、截止时间、>=32字符Nonce与外部用户授权证据文件SHA。必须attempt_limit=1，automatic_retry=false，consumed=false，formal_120_frame_execution_authorized=false。
+
+旧DROIDW_ENTRY_PARTIAL_PASS字段不变；新diagnostic_admission_status只表示诊断工程准备，不使正式120帧准入通过。sealed candidate本身始终GPU_execution_authorized=false、current_attempt_limit=0。只有未来用户明确授权后才可以在仓库外建立一个新的诊断许可。
+
+父进程在Monitor/Worker创建之前验证许可；Monitor启动并通过屏障后，再次验证身份和权重/输入，使用O_EXCL消费全局Nonce及Session账本，然后才建立IPC并创建Worker。失败后不回滚Nonce，防止自动重试。
+
+子进程在Torch导入前复核候选、授权证据、父PID、已消费账本，排他创建child claim；同一次诊断禁止第二个Worker。正式许可不能通过诊断验证，诊断许可也不能通过正式入口。
+
+本轮只在内存生成明确MOCK_ONLY fixture，未创建真实授权文件或正式Attempt。真实用户证据的语义由操作者在下一阶段确认；哈希是完整性绑定，不是对用户身份的密码学证明。同UID0/Python boundary亦不是对恶意native代码的沙箱。

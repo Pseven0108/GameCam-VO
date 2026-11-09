@@ -9,10 +9,13 @@ class ModelHeartbeat(CudaHeartbeat):
         if not p.exists() or time.time()-p.stat().st_mtime>3:raise SafetyStop('SUPERVISOR_HEARTBEAT_STALE')
         r=super().sample();r['gpu_uuid']=EXPECTED_UUID;r['completed_frames']=self.progress;r.pop('completed_synthetic_tests',None);return r
 class Guard:
-    def __init__(self,session_dir,out,torch,monitor_session_id):
+    def __init__(self,session_dir,out,torch,monitor_session_id,execution_kind='droidw',diagnostic=None):
         self.session_dir=pathlib.Path(session_dir);self.out=pathlib.Path(out);self.torch=torch;self.session=monitor_session_id
         self.phase='pre_model';self.frame=None;self.failure=None;self.latest=None;self.growth=GrowthGuard();self.min_cuda=self.min_nvml=float('inf');self.peak_nvml=0
-        torch.cuda.init();p=torch.cuda.get_device_properties(0)
+        if diagnostic:diagnostic.emit('CUDA_CONTEXT','start')
+        torch.cuda.init()
+        if diagnostic:diagnostic.emit('CUDA_CONTEXT','end')
+        p=torch.cuda.get_device_properties(0)
         if torch.cuda.device_count()!=1 or (p.major,p.minor)!=(7,5) or '2080 Ti' not in p.name:raise SafetyStop('CUDA_DEVICE_CONTRACT_MISMATCH')
         class CUuuid(ctypes.Structure):_fields_=[('bytes',ctypes.c_ubyte*16)]
         d=ctypes.CDLL('libcuda.so.1');device=ctypes.c_int();u=CUuuid()
@@ -20,12 +23,15 @@ class Guard:
         fn=getattr(d,'cuDeviceGetUuid_v2',None) or d.cuDeviceGetUuid
         if fn(ctypes.byref(u),device)!=0 or 'GPU-'+str(uuid.UUID(bytes=bytes(u.bytes)))!=EXPECTED_UUID:raise SafetyStop('CUDA_DRIVER_UUID_MISMATCH')
         self.hb=ModelHeartbeat(torch,self.session_dir,self.session);self.hb.thread.start();start=time.monotonic()
+        if diagnostic:diagnostic.emit('CUDA_HEARTBEAT_STARTED')
         while not (self.session_dir/'work.permit.json').exists():
             self.check('waiting_for_parent_barrier')
             if time.monotonic()-start>15:raise SafetyStop('MODEL_STARTUP_PERMIT_TIMEOUT')
             time.sleep(.02)
         permit=read_json(self.session_dir/'work.permit.json')
-        if permit.get('session')!=self.session or permit.get('execution_kind')!='droidw' or permit.get('model_execution_authorized') is not True:raise SafetyStop('MODEL_STARTUP_PERMIT_INVALID')
+        if permit.get('session')!=self.session or permit.get('execution_kind')!=execution_kind or permit.get('model_execution_authorized') is not True:raise SafetyStop('MODEL_STARTUP_PERMIT_INVALID')
+        if execution_kind=='droidw_diagnostic' and permit.get('diagnostic_only') is not True:raise SafetyStop('DIAGNOSTIC_PERMIT_KIND_INVALID')
+        if diagnostic:diagnostic.emit('STARTUP_PERMIT_RECEIVED')
     def check(self,label='',record=False):
         if self.hb.failure:self.failure=self.hb.failure;raise SafetyStop(self.failure)
         self.hb.phase=self.phase;self.hb.seq=max(1,self.hb.seq)

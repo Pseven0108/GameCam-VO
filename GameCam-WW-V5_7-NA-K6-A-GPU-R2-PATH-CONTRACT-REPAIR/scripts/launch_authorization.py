@@ -6,6 +6,7 @@ SCOPE={'method':'droidw','case':'V56_01_middle','max_frames':120,'stride':1,'buf
 
 def validate_authorization(candidate, candidate_sha, authorization, environment, now=None):
     """Pure checks; test authorizations are in-memory fixtures, never GPU permit files."""
+    require(candidate.get('schema')!='gamecam-bounded-diagnostic-candidate-v1' and (authorization or {}).get('permission_type')!='BOUNDED_MODEL_DIAGNOSTIC','DIAGNOSTIC_PERMISSION_NOT_FORMAL','BLOCKED_BY_AUTHORIZATION_GUARD')
     now=time.time() if now is None else now
     require(authorization is not None,'NO_FRESH_GPU_AUTHORIZATION','BLOCKED_BY_AUTHORIZATION_GUARD')
     require(authorization.get('candidate_sha256')==candidate_sha,'CANDIDATE_SHA_MISMATCH','BLOCKED_BY_AUTHORIZATION_GUARD')

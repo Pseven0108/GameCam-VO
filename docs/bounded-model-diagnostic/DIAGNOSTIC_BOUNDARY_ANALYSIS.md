@@ -1,0 +1,13 @@
+# 诊断边界
+
+本候选只授权未来申请“完整Tracker构造返回后立即停止”的许可类型，真实执行仍需用户新授权。固定配置不变，调用原生构造器，未替换权重、网络或张量分配。
+
+1. PRE_MODEL_LOAD、DROID_WEIGHTS_LOADED、DROID_CUDA_READY可观察。
+2. DepthVideo构造调用前后可观察，内部原生CPU/GPU分配不中断、不假定可细分后继续。
+3. Tracker构造调用前后可观察，四份真实权重loader完成由RuntimePins回调记录。MODEL_WEIGHTS_LOADED仅在全部四份完成后记录。
+4. TRACKER_CONSTRUCTION_DONE触发专用BaseException，进入同一adapter的finally，封存状态、关闭SummaryWriter、发布诊断Terminal，然后停止CUDA心跳。Worker退出后Supervisor关闭Monitor并清理其独占IPC目录。
+5. 受控终止与安全故障终止分开；正常状态为DIAGNOSTIC_STOP_COMPLETED，不是RUN_COMPLETED，不是INITIALIZATION_COMPLETED。
+
+本版本没有开放任意阶段切断或继续运行API。构造器内部不能通过任意截断线程判定成功。若监控故障，Supervisor仍可向拥有的进程组SIGTERM，5秒后必要时SIGKILL；中断的构造器仅记未完成。
+
+精确native adapter函数已用Fake网络、Fake四份loader事件、FakeTracker和FakeCUDA执行到停止点，断言没有Stream.__getitem__、Tracker.run或BA调用；这是控制流测试，不是模型初始化结果。Python审计与同UID进程不是OS沙箱。

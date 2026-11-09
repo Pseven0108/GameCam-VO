@@ -1,0 +1,9 @@
+# 插桩实现
+
+新增diagnostic_phases.py：每条STARTUP_PHASE_EVENT记录monotonic/unix时间、PID、Session、phase、start/end/point/error、elapsed_ms、since_process_ms、异常、RSS。CUDA context未初始化时明确标记CONTEXT_NOT_INITIALIZED；已初始化时记录allocated/reserved/peak/free。NVML数据来自独立Monitor的最新样本，保留其原始时间戳，不冒充与CUDA同时采样。cgroup状态在NVML记录中。
+
+未增加CUDA synchronize到真实模型路径；synthetic测试为验证计算完成显式同步。phase日志仅写model/startup_phase_events.jsonl，继承0700/0600目录文件约束，不扩大Session写白名单。
+
+native_adapter_v2.py仅增加可选诊断回调和Tracker返回后的受控退出；普通正式入口不传该参数。native_linux_guard_v2.py支持精确诊断permit类型，默认正式参数保持。runner_core.py增加诊断kind，复用同一监控、超时、进程组停止、Terminal与IPC清理。worker_terminal.py识别独立正常诊断状态并验证结果绑定。
+
+全部CPU与真实进程测试是本轮实际执行；已有152/88历史数字仅作为继承证据。无真实模型checkpoint反序列化或真实Tracker构造。

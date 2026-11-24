@@ -26,3 +26,7 @@
 | task004c-b-format-runner-20261124 | [报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md) | 372 | 0（大二进制范围外） |
 
 公开SHA针对脱敏后的字节；原始→公开映射见相应publication/SANITIZATION_MAP.json。大二进制保留在原研究存储。
+
+## 2026-11-24 服务器磁盘清理补充
+
+[完整清理评审材料](reviews/server-disk-cleanup-20261124-r2/FINAL_REVIEW.md) · [完整ZIP](review_packages/GAMECAM_SERVER_DISK_CLEANUP_20261124_R2_REVIEW.zip)。实际释放5.581 GiB，可用19.229 GiB；3,308项重点哈希一致。仅维护，未启动RGB019/Short80/正式四组，既有实验状态不变。

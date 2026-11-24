@@ -16,3 +16,7 @@
 - 下一步仅提出目录生命周期最小修复。新源码与旧C0的source pin兼容性必须显式审查，不能改写旧manifest。
 
 [最终报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md) · [预算账本](reviews/task004c-b-format-runner-20261124/state/STAGE_LEDGER.json)。
+
+### 存储维护补充（2026-11-24）
+
+数据盘13.648→19.229 GiB，释放5.581 GiB；C0、失败Arena、源码、配置、权重和图像保持。清理完整包见review_packages/GAMECAM_SERVER_DISK_CLEANUP_20261124_R2_REVIEW.zip；证据目录reviews/server-disk-cleanup-20261124-r2。本次未推进模型运行。

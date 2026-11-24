@@ -1,0 +1,61 @@
+OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+debug1: Connecting to RENTAL_SSH_HOST [REDACTED_PROXY_IP] port REDACTED_SSH_PORT.
+debug1: fd 3 clearing O_NONBLOCK
+debug1: Connection established.
+debug1: identity file C:\\Users\\Administrator\\.ssh\\REDACTED_SSH_KEY_NAME type 3
+debug1: identity file C:\\Users\\Administrator\\.ssh\\REDACTED_SSH_KEY_NAME-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_for_Windows_9.5
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.9p1 Ubuntu-3ubuntu0.15
+debug1: compat_banner: match: OpenSSH_8.9p1 Ubuntu-3ubuntu0.15 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to RENTAL_SSH_HOST:REDACTED_SSH_PORT as 'root'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 REDACTED_HOST_OR_KEY_FINGERPRINT
+debug1: using hostkeyalias: [RENTAL_SSH_HOST]:30723
+debug1: Host '[RENTAL_SSH_HOST]:30723' is known and matches the ED25519 host key.
+debug1: Found key in D:\\aaa\\GameCam-VO\\experiments\\VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408\\evidence\\sc01-30723.known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: ssh_get_authentication_socket: No such file or directory
+debug1: Will attempt key: C:\\Users\\Administrator\\.ssh\\REDACTED_SSH_KEY_NAME ED25519 REDACTED_HOST_OR_KEY_FINGERPRINT explicit
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.com>
+debug1: kex_ext_info_check_ver: publickey-hostbound@openssh.com=<0>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: Offering public key: C:\\Users\\Administrator\\.ssh\\REDACTED_SSH_KEY_NAME ED25519 REDACTED_HOST_OR_KEY_FINGERPRINT explicit
+debug1: Server accepts key: C:\\Users\\Administrator\\.ssh\\REDACTED_SSH_KEY_NAME ED25519 REDACTED_HOST_OR_KEY_FINGERPRINT explicit
+Authenticated to RENTAL_SSH_HOST ([REDACTED_PROXY_IP]:REDACTED_SSH_PORT) using "publickey".
+debug1: channel 0: new session [client-session] (inactive timeout: 0)
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: network
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: Remote: /root/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Remote: /root/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+[SSH command payload omitted; original retained locally]
+debug1: pledge: fork
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<cache-backup>", line 5, in <module>
+  File "/usr/lib/python3.10/tarfile.py", line 1882, in open
+    t = cls(name, filemode, stream, **kwargs)
+TypeError: TarFile.__init__() got an unexpected keyword argument 'compresslevel'
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: client_input_channel_req: channel 0 rtype eow@openssh.com reply 0
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 2460, received 3224 bytes, in 0.2 seconds
+Bytes per second: sent 10695.7, received 14017.4
+debug1: Exit status 1

@@ -1,0 +1,32 @@
+{
+  "scope": "LOSSLESS_COMPRESSION_OF_COMPLETED_CONSUMED_CURRENT_R3_LOGS",
+  "local_canonical_raw_copies_verified": true,
+  "historical_assets_touched": false,
+  "model_runs_launched": 0,
+  "records": [
+    {
+      "original_relative_path": "B1/schedule.jsonl",
+      "original_bytes": 705298650,
+      "original_sha256": "8c41f582336984650eabf9c1d9d1be89aa1a5775ea230ab62936ff8e4e948dbd",
+      "compressed_bytes": 44382284,
+      "compressed_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    },
+    {
+      "original_relative_path": "B1/observer.jsonl",
+      "original_bytes": 59988717,
+      "original_sha256": "5564d561d6700f2efc90abe445503af4ad96fe9978c26c79135379f37f4c8756",
+      "compressed_bytes": 7886645,
+      "compressed_sha256": "bfc32a557b956c314833101b035986f9f3c7e914df54b1ce0aa9862e9dd6c88c",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    }
+  ],
+  "before_free_bytes": 11516448768,
+  "unix": 1795543045.3989432,
+  "after_free_bytes": 12199362560,
+  "lossless_bytes_saved": 682913792
+}

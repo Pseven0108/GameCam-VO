@@ -1,0 +1,157 @@
+{
+  "mode": "B2",
+  "pid_alive": true,
+  "receipts": {
+    "RESTORE_RECEIPT.json": {
+      "all_tensor_and_object_nodes_match": true,
+      "next_input_match": true,
+      "object_nodes": 18143,
+      "new_process_pid": 12732,
+      "source_pid": 5490,
+      "rng_restored_last": true,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+    },
+    "STAGE_RESUME_INPUT.json": {
+      "stage": "formal487",
+      "next_input": {
+        "input_index": 18,
+        "rgb_id": 19,
+        "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+        "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429",
+        "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+        "intrinsic": [
+          386.01129150390625,
+          386.01129150390625,
+          319.5,
+          179.5
+        ]
+      },
+      "cursor_next_input_index": 18,
+      "restored_last_rgb": 18,
+      "graph_topology_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+      "rebind": {
+        "rebased_fields": [
+          "cfg.data.output",
+          "tracker.output",
+          "video.output",
+          "motion_filter.save_dir",
+          "online_ba.output",
+          "frontend.loop_closing.output",
+          "stream.out"
+        ],
+        "algorithm_config_changed": false
+      }
+    }
+  },
+  "trace_bytes": 1090539,
+  "last_events": [
+    {
+      "call": 827,
+      "kind": "ba.continuous.after",
+      "phase": "frontend_local_predecision",
+      "rgb": 466,
+      "tensor_sha256": {
+        "disps": "230e0581a89ca49f76bc6d63a41f6291ddeb59dc2754ab357a06fa771bd92f19",
+        "eta": "fa6b3a474269dc22574f94bff2f0d38ae7da64594f504e7be72eb347fb1257d8",
+        "poses": "379f3e24e64e150c245bf7b5df29c8bc476fc80f00e36e569561ab63c8ceb5d4",
+        "target": "eac5f899e7de7ea3a4bcc254feb442978fd6439a4bc6f4c07192b931c8d26eb3",
+        "uncertainties": "ada8d5adf166db54a60ff061ea8b6de88d187b0ba8536ca5998e77a148d1d82f",
+        "weight": "099d26de94ab7ec9eec632c1523e83871b94bb7a59dadb5c777a45a537e93f09"
+      },
+      "time_ns": 1795543153755345050
+    },
+    {
+      "call": 828,
+      "kind": "ba.continuous.before",
+      "phase": "frontend_local_predecision",
+      "rgb": 466,
+      "tensor_sha256": {
+        "disps": "230e0581a89ca49f76bc6d63a41f6291ddeb59dc2754ab357a06fa771bd92f19",
+        "eta": "d99c25ea51bb5d3e02e84e2a72bb9360b7c11957a90648499e6ac52ec0203de3",
+        "poses": "379f3e24e64e150c245bf7b5df29c8bc476fc80f00e36e569561ab63c8ceb5d4",
+        "target": "950aaf7c94245f707cecd137194cb8530c8a445be28007b271b98c012ac6cc05",
+        "uncertainties": "ada8d5adf166db54a60ff061ea8b6de88d187b0ba8536ca5998e77a148d1d82f",
+        "weight": "29f9119704d2cc70a8dc090d58a55040920305048033528dd67e1fda4b65fda0"
+      },
+      "time_ns": 1795543154203722793
+    },
+    {
+      "call": 828,
+      "kind": "ba.continuous.after",
+      "phase": "frontend_local_predecision",
+      "rgb": 466,
+      "tensor_sha256": {
+        "disps": "c793d14817873865e3d82a00afe22049e779bad68c519236c4cff1db0ab945e5",
+        "eta": "d99c25ea51bb5d3e02e84e2a72bb9360b7c11957a90648499e6ac52ec0203de3",
+        "poses": "b0dbe66281f0493a8f775aedb26b5fc122fed3c2b2fb21083c3430455732d5b0",
+        "target": "950aaf7c94245f707cecd137194cb8530c8a445be28007b271b98c012ac6cc05",
+        "uncertainties": "a91592dd4e8f968eb0760270b45cd923521cffac6048ed5fc4fc10836f8e1bb1",
+        "weight": "29f9119704d2cc70a8dc090d58a55040920305048033528dd67e1fda4b65fda0"
+      },
+      "time_ns": 1795543154251718258
+    },
+    {
+      "call": 829,
+      "kind": "ba.continuous.before",
+      "phase": "frontend_local_predecision",
+      "rgb": 466,
+      "tensor_sha256": {
+        "disps": "c793d14817873865e3d82a00afe22049e779bad68c519236c4cff1db0ab945e5",
+        "eta": "37131efd9d43845109f9f36a345ee57ffc8a92e54e87e712649b72c4924a4aa4",
+        "poses": "b0dbe66281f0493a8f775aedb26b5fc122fed3c2b2fb21083c3430455732d5b0",
+        "target": "d758511b6841baf8cccf94a1641a6813aeac194868b444bd21a4d20dc9d13428",
+        "uncertainties": "a91592dd4e8f968eb0760270b45cd923521cffac6048ed5fc4fc10836f8e1bb1",
+        "weight": "0eeaeb3fa4df3cba5a918ee07aec88b7142af5ab64bc16ba19e4d78c9bae2dfa"
+      },
+      "time_ns": 1795543154709016912
+    },
+    {
+      "call": 829,
+      "kind": "ba.continuous.after",
+      "phase": "frontend_local_predecision",
+      "rgb": 466,
+      "tensor_sha256": {
+        "disps": "84803490a8bd79538d85c34450112949468a93ede44618e5e3c53df8dba8c0e0",
+        "eta": "37131efd9d43845109f9f36a345ee57ffc8a92e54e87e712649b72c4924a4aa4",
+        "poses": "b3c1a34038fe31ac5a6043a6b267898e363b9cee2dd729e6fb7d13e0628d2954",
+        "target": "d758511b6841baf8cccf94a1641a6813aeac194868b444bd21a4d20dc9d13428",
+        "uncertainties": "470647454f73157dfbcd1f3c79aeec502bb81c8eddab9aaf47a7622dbc317aac",
+        "weight": "0eeaeb3fa4df3cba5a918ee07aec88b7142af5ab64bc16ba19e4d78c9bae2dfa"
+      },
+      "time_ns": 1795543154758376624
+    },
+    {
+      "distance": 2.3378782272338867,
+      "drop": true,
+      "kind": "keyframe.natural",
+      "rgb": 466,
+      "scheduled_drop": true,
+      "threshold": 3.0,
+      "time_ns": 1795543155057281866
+    },
+    {
+      "admitted": false,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 467,
+      "scheduled_admitted": false,
+      "score": null,
+      "time_ns": 1795543155861950902
+    },
+    {
+      "admitted": true,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 468,
+      "scheduled_admitted": true,
+      "score": null,
+      "time_ns": 1795543156186859077
+    }
+  ],
+  "wrapper_stdout_tail": "",
+  "wrapper_stderr_tail": "",
+  "process_stdout_tail": "",
+  "process_stderr_tail": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).\n  warnings.warn(\n",
+  "rerun_bytes": 928934139,
+  "free_bytes": 12053508096
+}

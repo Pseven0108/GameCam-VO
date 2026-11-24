@@ -1,0 +1,212 @@
+{
+  "mode": "B2",
+  "pid_alive": false,
+  "receipts": {
+    "PROCESS_RECEIPT.json": {
+      "mode": "B2",
+      "spec": {
+        "mode": "B2",
+        "stage": "formal487",
+        "max_rgb": 487,
+        "D": 0,
+        "W": 1,
+        "U": 1,
+        "INIT_D": 0,
+        "schedule": "S1",
+        "replay": true,
+        "formal": true
+      },
+      "exit_code": 0,
+      "success_receipt_exists": true,
+      "run_consumed": true,
+      "retry_allowed": false,
+      "runtime_seconds": 1018.3617835044861,
+      "stdout_sha256": "9ef0c8e887928f392c6b1e8e914a4224d772145bc58f1a4ea248c5995d399d07",
+      "stderr_sha256": "58880fcfbc2c8a92142b958e4a41cccb392bc6fac2e86c99b9529b89dfe7553d"
+    },
+    "SUCCESS.json": {
+      "mode": "B2",
+      "stage": "formal487",
+      "last_rgb": 487,
+      "filler_frames": 487,
+      "pose_rows": 487,
+      "events": 8395,
+      "ba_calls": 1254,
+      "formal_experiment": true,
+      "full_trajectory_file": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/attempts/B2/native/traj/est_poses_full.txt",
+      "full_trajectory_sha256": "1ee79bfd0fa701cedf73b78caabf69565526e69ef198b1681b8c426bae0f16c3",
+      "pid": 12732,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+      "candidate_source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0"
+    },
+    "RESTORE_RECEIPT.json": {
+      "all_tensor_and_object_nodes_match": true,
+      "next_input_match": true,
+      "object_nodes": 18143,
+      "new_process_pid": 12732,
+      "source_pid": 5490,
+      "rng_restored_last": true,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+    },
+    "STAGE_RESUME_INPUT.json": {
+      "stage": "formal487",
+      "next_input": {
+        "input_index": 18,
+        "rgb_id": 19,
+        "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+        "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429",
+        "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+        "intrinsic": [
+          386.01129150390625,
+          386.01129150390625,
+          319.5,
+          179.5
+        ]
+      },
+      "cursor_next_input_index": 18,
+      "restored_last_rgb": 18,
+      "graph_topology_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+      "rebind": {
+        "rebased_fields": [
+          "cfg.data.output",
+          "tracker.output",
+          "video.output",
+          "motion_filter.save_dir",
+          "online_ba.output",
+          "frontend.loop_closing.output",
+          "stream.out"
+        ],
+        "algorithm_config_changed": false
+      }
+    }
+  },
+  "trace_bytes": 1612790,
+  "last_events": [
+    {
+      "call": 1251,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "c0ea55f48037c1a6ecb0b4adc0404f6dadcbdeb06aa34bc386d5f4a98fdc8073",
+        "poses": "64f053630fe69a75a170a7f5ecc6c32af15b91f4aeab2151a8f4e9252ce9888d",
+        "target": "ea2593924cefea29f49673673f80c8609e5f039b4406197116c5db56f0076672",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "cb22958271e48069cdab7713f61f8177114edb3ed74f241fe847b167ccbdd5ef"
+      },
+      "time_ns": 1795543462235124821
+    },
+    {
+      "call": 1251,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "c0ea55f48037c1a6ecb0b4adc0404f6dadcbdeb06aa34bc386d5f4a98fdc8073",
+        "poses": "428d8bd0a100a1a6a8a268f27607829b733e3bea9e5a459e83a70d3061923265",
+        "target": "ea2593924cefea29f49673673f80c8609e5f039b4406197116c5db56f0076672",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "cb22958271e48069cdab7713f61f8177114edb3ed74f241fe847b167ccbdd5ef"
+      },
+      "time_ns": 1795543462264349023
+    },
+    {
+      "call": 1252,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "cdb46cd6c915f522340bad8c62f483dcba87f2756239f4ff15430410c03ad51a",
+        "poses": "428d8bd0a100a1a6a8a268f27607829b733e3bea9e5a459e83a70d3061923265",
+        "target": "f388e916ae0b6492ffe8e316867838eb5ed1c1f30009a9ee014c39678f5b0e90",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "4154a3f92a7d79b2ebc16ff3eabc72ab635437f3011f48f4cd8e107a7aa88758"
+      },
+      "time_ns": 1795543462690042764
+    },
+    {
+      "call": 1252,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "cdb46cd6c915f522340bad8c62f483dcba87f2756239f4ff15430410c03ad51a",
+        "poses": "5a39a1bfef312cf242fe47896687d57698f378edca162442675894c1e8be7937",
+        "target": "f388e916ae0b6492ffe8e316867838eb5ed1c1f30009a9ee014c39678f5b0e90",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "4154a3f92a7d79b2ebc16ff3eabc72ab635437f3011f48f4cd8e107a7aa88758"
+      },
+      "time_ns": 1795543462716236706
+    },
+    {
+      "call": 1253,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "7b8af71eab7386f9b1b9a04005b835b0d716ebe77944712c4cfdf270051c82a3",
+        "poses": "5a39a1bfef312cf242fe47896687d57698f378edca162442675894c1e8be7937",
+        "target": "9b0089668f8e711357290932e74ec6e0d3c023d4b0a28b4e35c8402bb091d972",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "0a27e3cd6b659cd456cd11ce9ca51a84d65a78a35e755e4c529f6f505dacbb00"
+      },
+      "time_ns": 1795543463132841515
+    },
+    {
+      "call": 1253,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "7b8af71eab7386f9b1b9a04005b835b0d716ebe77944712c4cfdf270051c82a3",
+        "poses": "2fedbba6f2dd22bfb8413e4216dc338aa4e3fd5e8df2c8d80d3eb3b410d933fe",
+        "target": "9b0089668f8e711357290932e74ec6e0d3c023d4b0a28b4e35c8402bb091d972",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "0a27e3cd6b659cd456cd11ce9ca51a84d65a78a35e755e4c529f6f505dacbb00"
+      },
+      "time_ns": 1795543463165150957
+    },
+    {
+      "call": 1254,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "d0ce0b5db6e2c5465ebc033cadc7fa9d59c7243cd7beb40fcf8222f812896fc9",
+        "poses": "2fedbba6f2dd22bfb8413e4216dc338aa4e3fd5e8df2c8d80d3eb3b410d933fe",
+        "target": "3ccd9402481cf39d4739a478ea2fd8ec17eb9e230466b3723c5debed495dd56b",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "83556ff8bb0734e43b18802f91eea12f4a8209a8a31489830605ccba966dd991"
+      },
+      "time_ns": 1795543463593995786
+    },
+    {
+      "call": 1254,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "e2e49e227951bc8c7632e152012614cc4d8534f594c6095cf1b54beaf87ceeb0",
+        "eta": "d0ce0b5db6e2c5465ebc033cadc7fa9d59c7243cd7beb40fcf8222f812896fc9",
+        "poses": "4ab857b220bc7dbdac001ca7e779fe37a2b038c23392999f5765d4ddbcdad7bb",
+        "target": "3ccd9402481cf39d4739a478ea2fd8ec17eb9e230466b3723c5debed495dd56b",
+        "uncertainties": "307041652382a50682c4bc781f5033b1a493f79b35289a70db34bf4428b2f132",
+        "weight": "83556ff8bb0734e43b18802f91eea12f4a8209a8a31489830605ccba966dd991"
+      },
+      "time_ns": 1795543463620445386
+    }
+  ],
+  "wrapper_stdout_tail": "{\"mode\": \"B2\", \"spec\": {\"mode\": \"B2\", \"stage\": \"formal487\", \"max_rgb\": 487, \"D\": 0, \"W\": 1, \"U\": 1, \"INIT_D\": 0, \"schedule\": \"S1\", \"replay\": true, \"formal\": true}, \"exit_code\": 0, \"success_receipt_exists\": true, \"run_consumed\": true, \"retry_allowed\": false, \"runtime_seconds\": 1018.3617835044861, \"stdout_sha256\": \"9ef0c8e887928f392c6b1e8e914a4224d772145bc58f1a4ea248c5995d399d07\", \"stderr_sha256\": \"58880fcfbc2c8a92142b958e4a41cccb392bc6fac2e86c99b9529b89dfe7553d\"}\n",
+  "wrapper_stderr_tail": "",
+  "process_stdout_tail": "Final Global BA Triggered!\nFinal Global BA Done!\nSaved final depth video: /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/attempts/B2/native/video.npz\nFilling full trajectory ...\nMetrics Evaluation Done!\n[Rerun] Web server on http://127.0.0.1:9876\n[Rerun] Recording to /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/attempts/B2/rerun_stream.rrd\nFinal clean, exiting...\n[Timer] Summary (auto) \u2013 per decorated function:\n  - Tracking: count=487, total=388.433520s, avg=0.797605s, min=0.007014s, max=3.718816s, fps=1.25\n  - Full Trajectory Filling: count=1, total=211.829648s, avg=211.829648s, min=211.829648s, max=211.829648s, fps=0.00\n  - Metric Depth Estimation: count=12, total=2.067091s, avg=0.172258s, min=0.149637s, max=0.378017s, fps=5.81\n  - DINO Feature Extraction: count=12, total=0.521885s, avg=0.043490s, min=0.041253s, max=0.048834s, fps=22.99\n[Timer] Overall: count=487, total=602.852144s, avg=1.237889s, fps=0.81\n",
+  "process_stderr_tail": "0:27<04:25,  1.60it/s]\n 14%|\u2588\u258d        | 69/487 [00:27<03:04,  2.27it/s]\n 15%|\u2588\u258c        | 74/487 [00:27<02:08,  3.20it/s]\n 16%|\u2588\u258c        | 79/487 [00:27<01:31,  4.46it/s]\n 17%|\u2588\u258b        | 83/487 [00:34<03:56,  1.71it/s]\n 18%|\u2588\u258a        | 88/487 [00:34<02:42,  2.45it/s]\n 19%|\u2588\u2589        | 93/487 [00:34<01:53,  3.48it/s]\n 20%|\u2588\u2589        | 97/487 [00:41<04:10,  1.56it/s]\n 21%|\u2588\u2588        | 102/487 [00:41<02:51,  2.25it/s]\n 22%|\u2588\u2588\u258f       | 107/487 [00:41<01:58,  3.20it/s]\n 23%|\u2588\u2588\u258e       | 112/487 [00:47<03:52,  1.61it/s]\n 24%|\u2588\u2588\u258d       | 117/487 [00:47<02:41,  2.28it/s]\n 25%|\u2588\u2588\u258c       | 123/487 [00:48<01:46,  3.40it/s]\n 26%|\u2588\u2588\u258b       | 128/487 [00:54<03:31,  1.69it/s]\n 27%|\u2588\u2588\u258b       | 133/487 [00:54<02:29,  2.36it/s]\n 29%|\u2588\u2588\u258a       | 139/487 [00:54<01:40,  3.47it/s]\n 30%|\u2588\u2588\u2589       | 144/487 [01:01<03:19,  1.72it/s]\n 31%|\u2588\u2588\u2588       | 149/487 [01:01<02:21,  2.38it/s]\n 32%|\u2588\u2588\u2588\u258f      | 154/487 [01:01<01:40,  3.30it/s]\n 33%|\u2588\u2588\u2588\u258e      | 159/487 [01:01<01:12,  4.55it/s]\n 34%|\u2588\u2588\u2588\u258e      | 164/487 [01:08<02:54,  1.85it/s]\n 35%|\u2588\u2588\u2588\u258d      | 169/487 [01:08<02:02,  2.59it/s]\n 36%|\u2588\u2588\u2588\u258c      | 175/487 [01:08<01:21,  3.81it/s]\n 37%|\u2588\u2588\u2588\u258b      | 179/487 [01:14<03:03,  1.68it/s]\n 38%|\u2588\u2588\u2588\u258a      | 184/487 [01:15<02:07,  2.37it/s]\n 39%|\u2588\u2588\u2588\u2589      | 189/487 [01:15<01:29,  3.32it/s]\n 40%|\u2588\u2588\u2588\u2589      | 193/487 [01:21<03:09,  1.55it/s]\n 41%|\u2588\u2588\u2588\u2588      | 198/487 [01:21<02:09,  2.23it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 203/487 [01:21<01:29,  3.17it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 208/487 [01:28<02:54,  1.60it/s]\n 44%|\u2588\u2588\u2588\u2588\u258e     | 213/487 [01:28<02:00,  2.27it/s]\n 45%|\u2588\u2588\u2588\u2588\u258d     | 218/487 [01:28<01:24,  3.19it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 223/487 [01:28<00:59,  4.45it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 227/487 [01:35<02:33,  1.70it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 232/487 [01:35<01:44,  2.43it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 237/487 [01:35<01:12,  3.45it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 241/487 [01:42<02:38,  1.55it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 246/487 [01:42<01:47,  2.24it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 251/487 [01:42<01:14,  3.19it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 256/487 [01:49<02:23,  1.61it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258e    | 261/487 [01:49<01:39,  2.28it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 266/487 [01:49<01:08,  3.21it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 271/487 [01:49<00:48,  4.48it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 276/487 [01:55<01:56,  1.81it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 281/487 [01:56<01:20,  2.55it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u258a    | 286/487 [01:56<00:56,  3.57it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 290/487 [02:02<02:04,  1.58it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 296/487 [02:02<01:19,  2.41it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 301/487 [02:02<00:55,  3.36it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 305/487 [02:09<01:55,  1.57it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 310/487 [02:09<01:18,  2.25it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 315/487 [02:09<00:53,  3.19it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 320/487 [02:16<01:43,  1.61it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 325/487 [02:16<01:11,  2.27it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 330/487 [02:16<00:49,  3.19it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 335/487 [02:16<00:34,  4.45it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 340/487 [02:23<01:21,  1.81it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 345/487 [02:23<00:55,  2.55it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 350/487 [02:23<00:38,  3.55it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 354/487 [02:29<01:23,  1.59it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 359/487 [02:30<00:56,  2.28it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 364/487 [02:30<00:38,  3.23it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 368/487 [02:36<01:18,  1.52it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 374/487 [02:36<00:48,  2.33it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 379/487 [02:37<00:33,  3.25it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 384/487 [02:43<01:02,  1.65it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 389/487 [02:43<00:42,  2.31it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 394/487 [02:43<00:28,  3.24it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 399/487 [02:43<00:19,  4.49it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 403/487 [02:50<00:49,  1.71it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 409/487 [02:50<00:29,  2.60it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 414/487 [02:50<00:20,  3.62it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 418/487 [02:57<00:43,  1.60it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 423/487 [02:57<00:27,  2.29it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 428/487 [02:57<00:18,  3.24it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 432/487 [03:04<00:36,  1.51it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 437/487 [03:04<00:22,  2.18it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 442/487 [03:04<00:14,  3.11it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 447/487 [03:04<00:09,  4.36it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 451/487 [03:11<00:21,  1.67it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 456/487 [03:11<00:12,  2.40it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 461/487 [03:11<00:07,  3.41it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 465/487 [03:17<00:14,  1.54it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 470/487 [03:17<00:07,  2.23it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 476/487 [03:18<00:03,  3.36it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 480/487 [03:24<00:04,  1.57it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 485/487 [03:24<00:00,  2.24it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 487/487 [03:24<00:00,  2.38it/s]\n[W CudaIPCTypes.cpp:15] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]\n",
+  "rerun_bytes": 1051706949,
+  "free_bytes": 11364143104
+}

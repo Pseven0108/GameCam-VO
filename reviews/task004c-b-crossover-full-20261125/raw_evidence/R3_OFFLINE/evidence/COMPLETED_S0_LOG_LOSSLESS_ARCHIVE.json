@@ -1,0 +1,32 @@
+{
+  "scope": "LOSSLESS_COMPRESSION_OF_COMPLETED_CONSUMED_CURRENT_R3_LOGS",
+  "local_canonical_raw_copies_verified": true,
+  "historical_assets_touched": false,
+  "model_runs_launched": 0,
+  "records": [
+    {
+      "original_relative_path": "B4/observer.jsonl",
+      "original_bytes": 45943677,
+      "original_sha256": "34f83037fb9f447e5ed190b64e3b1ccc5af67848ecae9b80399fa719261e77e3",
+      "compressed_bytes": 3966447,
+      "compressed_sha256": "c2108d102678371dbbece2ed9e43e786bd3dd482a0c3dbe97abf1eb70ace4532",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    },
+    {
+      "original_relative_path": "B4/rerun_stream.rrd",
+      "original_bytes": 3208329480,
+      "original_sha256": "ef86d97dce1935a1fa2315a4a49eed560224db8a9f921c7738bc5b093d77532b",
+      "compressed_bytes": 2762904109,
+      "compressed_sha256": "cd93645eb0bbc79e512d3d34c4fcb3d7d925b30a735f76f1ee7a99bff833595b",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    }
+  ],
+  "before_free_bytes": 11993956352,
+  "unix": 1795545049.3411596,
+  "after_free_bytes": 12481384448,
+  "lossless_bytes_saved": 487428096
+}

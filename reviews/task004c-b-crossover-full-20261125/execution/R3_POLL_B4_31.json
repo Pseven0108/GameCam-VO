@@ -1,0 +1,175 @@
+{
+  "mode": "B4",
+  "pid_alive": true,
+  "receipts": {
+    "RESTORE_RECEIPT.json": {
+      "all_tensor_and_object_nodes_match": true,
+      "next_input_match": true,
+      "object_nodes": 18143,
+      "new_process_pid": 14484,
+      "source_pid": 5490,
+      "rng_restored_last": true,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+    },
+    "STAGE_RESUME_INPUT.json": {
+      "stage": "formal487",
+      "next_input": {
+        "input_index": 18,
+        "rgb_id": 19,
+        "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+        "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429",
+        "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+        "intrinsic": [
+          386.01129150390625,
+          386.01129150390625,
+          319.5,
+          179.5
+        ]
+      },
+      "cursor_next_input_index": 18,
+      "restored_last_rgb": 18,
+      "graph_topology_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+      "rebind": {
+        "rebased_fields": [
+          "cfg.data.output",
+          "tracker.output",
+          "video.output",
+          "motion_filter.save_dir",
+          "online_ba.output",
+          "frontend.loop_closing.output",
+          "stream.out"
+        ],
+        "algorithm_config_changed": false
+      }
+    }
+  },
+  "trace_bytes": 1438822,
+  "last_events": [
+    {
+      "call": 1109,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "c32196f0524ade7d70e2cca0e1ce1f870d826a18d81bc6c31b84edd9177d7638",
+        "poses": "fea4d3cb24a7bf6dd4ac392e1c871515a612d25c65ad20c6f1916cae419a5d41",
+        "target": "2f440e2d95c05ed092b9b8f50d322a4358e1f8d8d0bb8bf16d8fd5f13a63bcdf",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "3d1e27ae6143e827988f21eceb56b66ae162b39c1e32ca058b530a6dbbd4e8b3"
+      },
+      "time_ns": 1795544679912092362
+    },
+    {
+      "call": 1109,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "c32196f0524ade7d70e2cca0e1ce1f870d826a18d81bc6c31b84edd9177d7638",
+        "poses": "6b99f2ecc10ea018fa290f1bf1a49c6512e99c61d1dd2701424171e394087e2a",
+        "target": "2f440e2d95c05ed092b9b8f50d322a4358e1f8d8d0bb8bf16d8fd5f13a63bcdf",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "3d1e27ae6143e827988f21eceb56b66ae162b39c1e32ca058b530a6dbbd4e8b3"
+      },
+      "time_ns": 1795544679939633942
+    },
+    {
+      "call": 1110,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "6ff615a5e4f53488946cb7ec1789b33380ff89057157c8342338e05283476dd0",
+        "poses": "6b99f2ecc10ea018fa290f1bf1a49c6512e99c61d1dd2701424171e394087e2a",
+        "target": "08efdeb2c9cbbc1cd0d44ea0c7a34acd97f6d37fedbeb6cc90621b3018eb3918",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "e59b5a88919e0cfff318dd0917448ec924783731205ad6086e1ee0324787743a"
+      },
+      "time_ns": 1795544680359914687
+    },
+    {
+      "call": 1110,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "6ff615a5e4f53488946cb7ec1789b33380ff89057157c8342338e05283476dd0",
+        "poses": "7de57f2f425dd8f57e7050d1f2979023cc7fc84194f73ecf323c42ec10e9f250",
+        "target": "08efdeb2c9cbbc1cd0d44ea0c7a34acd97f6d37fedbeb6cc90621b3018eb3918",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "e59b5a88919e0cfff318dd0917448ec924783731205ad6086e1ee0324787743a"
+      },
+      "time_ns": 1795544680386368786
+    },
+    {
+      "call": 1111,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "7dbd5843a945a106bb4f141e38cf0162e27a9a12f6bafe6badc22c2f6ee8698b",
+        "poses": "7de57f2f425dd8f57e7050d1f2979023cc7fc84194f73ecf323c42ec10e9f250",
+        "target": "69ba2141809851c186997255c4eb7d9dcab06cc9559735444acfc11810181b21",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "acb24b091938cf28a491bd4ba3fcaa2f9b4093111ac3e3ce0cc02f15a71fca06"
+      },
+      "time_ns": 1795544680837302232
+    },
+    {
+      "call": 1111,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "7dbd5843a945a106bb4f141e38cf0162e27a9a12f6bafe6badc22c2f6ee8698b",
+        "poses": "47e8b2e4a5b9d0be5478c0bcdb9c6f216642fa98495b570df19557a63af2bd0c",
+        "target": "69ba2141809851c186997255c4eb7d9dcab06cc9559735444acfc11810181b21",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "acb24b091938cf28a491bd4ba3fcaa2f9b4093111ac3e3ce0cc02f15a71fca06"
+      },
+      "time_ns": 1795544680864668743
+    },
+    {
+      "call": 1112,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "03482546f1b42594bb9dcde6ac03ad772909c2fd14e7a756b33ed3d3afda600e",
+        "poses": "47e8b2e4a5b9d0be5478c0bcdb9c6f216642fa98495b570df19557a63af2bd0c",
+        "target": "f0d19dd4ee6abd79d28811e5e42d3d3a597a78c4f9cfd38fe83128563b1dea82",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "5cfcc537725bdf6918e3582b92ec5e959070f5dab859c71dfa5c251072986236"
+      },
+      "time_ns": 1795544681291338198
+    },
+    {
+      "call": 1112,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "ce713636a7382dda66ba79452e047ed1427748c6165a48c46cc6432816766321",
+        "eta": "03482546f1b42594bb9dcde6ac03ad772909c2fd14e7a756b33ed3d3afda600e",
+        "poses": "fde6b5437d667fcbc98980033ee704955323b9d82f149f9ed0c0b9539f2345f7",
+        "target": "f0d19dd4ee6abd79d28811e5e42d3d3a597a78c4f9cfd38fe83128563b1dea82",
+        "uncertainties": "e83ccef923fdf2840bda3242825b84eac2417622c02042e94777161f36c65695",
+        "weight": "5cfcc537725bdf6918e3582b92ec5e959070f5dab859c71dfa5c251072986236"
+      },
+      "time_ns": 1795544681316689227
+    }
+  ],
+  "wrapper_stdout_tail": "",
+  "wrapper_stderr_tail": "",
+  "process_stdout_tail": "Final Global BA Triggered!\nFinal Global BA Done!\nSaved final depth video: /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/attempts/B4/native/video.npz\nFilling full trajectory ...\n",
+  "process_stderr_tail": "ntialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).\n  warnings.warn(\n\n  0%|          | 0/487 [00:00<?, ?it/s]\n  1%|          | 5/487 [00:00<00:09, 49.56it/s]\n  2%|\u258f         | 10/487 [00:00<00:09, 49.16it/s]\n  3%|\u258e         | 16/487 [00:06<04:19,  1.81it/s]\n  4%|\u258d         | 21/487 [00:06<02:44,  2.83it/s]\n  5%|\u258c         | 25/487 [00:06<01:58,  3.91it/s]\n  6%|\u258c         | 30/487 [00:07<01:19,  5.72it/s]\n  7%|\u258b         | 34/487 [00:13<04:24,  1.71it/s]\n  8%|\u258a         | 39/487 [00:13<02:56,  2.53it/s]\n  9%|\u2589         | 44/487 [00:13<02:01,  3.65it/s]\n 10%|\u2589         | 48/487 [00:20<04:40,  1.57it/s]\n 11%|\u2588         | 54/487 [00:20<02:58,  2.43it/s]\n 12%|\u2588\u258f        | 59/487 [00:20<02:05,  3.42it/s]\n 13%|\u2588\u258e        | 64/487 [00:26<04:10,  1.69it/s]\n 14%|\u2588\u258d        | 69/487 [00:26<02:55,  2.39it/s]\n 15%|\u2588\u258c        | 74/487 [00:26<02:03,  3.35it/s]\n 16%|\u2588\u258c        | 79/487 [00:27<01:27,  4.65it/s]\n 17%|\u2588\u258b        | 84/487 [00:33<03:37,  1.85it/s]\n 18%|\u2588\u258a        | 89/487 [00:33<02:33,  2.60it/s]\n 19%|\u2588\u2589        | 94/487 [00:33<01:48,  3.63it/s]\n 20%|\u2588\u2588        | 98/487 [00:40<04:00,  1.62it/s]\n 21%|\u2588\u2588\u258f       | 104/487 [00:40<02:35,  2.46it/s]\n 23%|\u2588\u2588\u258e       | 110/487 [00:40<01:44,  3.62it/s]\n 23%|\u2588\u2588\u258e       | 114/487 [00:46<03:41,  1.68it/s]\n 24%|\u2588\u2588\u258d       | 119/487 [00:46<02:34,  2.38it/s]\n 25%|\u2588\u2588\u258c       | 124/487 [00:47<01:48,  3.33it/s]\n 26%|\u2588\u2588\u258b       | 128/487 [00:53<03:46,  1.59it/s]\n 27%|\u2588\u2588\u258b       | 133/487 [00:53<02:35,  2.28it/s]\n 28%|\u2588\u2588\u258a       | 138/487 [00:53<01:47,  3.23it/s]\n 29%|\u2588\u2588\u2589       | 143/487 [00:53<01:15,  4.53it/s]\n 30%|\u2588\u2588\u2588       | 148/487 [01:00<03:03,  1.84it/s]\n 31%|\u2588\u2588\u2588\u258f      | 153/487 [01:00<02:08,  2.60it/s]\n 32%|\u2588\u2588\u2588\u258f      | 158/487 [01:00<01:30,  3.64it/s]\n 33%|\u2588\u2588\u2588\u258e      | 162/487 [01:06<03:21,  1.62it/s]\n 34%|\u2588\u2588\u2588\u258d      | 167/487 [01:06<02:17,  2.32it/s]\n 35%|\u2588\u2588\u2588\u258c      | 172/487 [01:06<01:35,  3.29it/s]\n 36%|\u2588\u2588\u2588\u258c      | 176/487 [01:13<03:18,  1.57it/s]\n 37%|\u2588\u2588\u2588\u258b      | 181/487 [01:13<02:15,  2.27it/s]\n 38%|\u2588\u2588\u2588\u258a      | 187/487 [01:13<01:27,  3.42it/s]\n 39%|\u2588\u2588\u2588\u2589      | 192/487 [01:19<02:53,  1.70it/s]\n 40%|\u2588\u2588\u2588\u2588      | 197/487 [01:20<02:01,  2.39it/s]\n 41%|\u2588\u2588\u2588\u2588\u258f     | 202/487 [01:20<01:25,  3.34it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 207/487 [01:20<01:00,  4.62it/s]\n 44%|\u2588\u2588\u2588\u2588\u258e     | 212/487 [01:26<02:27,  1.87it/s]\n 45%|\u2588\u2588\u2588\u2588\u258d     | 217/487 [01:26<01:42,  2.62it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 222/487 [01:26<01:12,  3.66it/s]\n 46%|\u2588\u2588\u2588\u2588\u258b     | 226/487 [01:33<02:40,  1.63it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 231/487 [01:33<01:49,  2.34it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 236/487 [01:33<01:15,  3.31it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 240/487 [01:39<02:37,  1.56it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 246/487 [01:40<01:40,  2.40it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 251/487 [01:40<01:10,  3.35it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 256/487 [01:46<02:16,  1.69it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258e    | 261/487 [01:46<01:35,  2.38it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 266/487 [01:46<01:06,  3.33it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 271/487 [01:46<00:46,  4.61it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 276/487 [01:53<01:53,  1.86it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 281/487 [01:53<01:18,  2.62it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u258a    | 286/487 [01:53<00:54,  3.66it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 290/487 [01:59<02:00,  1.63it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 295/487 [01:59<01:22,  2.34it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 300/487 [02:00<00:56,  3.31it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 304/487 [02:06<01:56,  1.57it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 309/487 [02:06<01:18,  2.26it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 314/487 [02:06<00:53,  3.22it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 319/487 [02:06<00:37,  4.52it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 324/487 [02:13<01:28,  1.85it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 329/487 [02:13<01:00,  2.61it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 335/487 [02:13<00:39,  3.87it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 339/487 [02:19<01:26,  1.70it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 344/487 [02:19<00:59,  2.42it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 349/487 [02:19<00:40,  3.39it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 353/487 [02:26<01:24,  1.58it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 358/487 [02:26<00:56,  2.28it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 364/487 [02:26<00:35,  3.43it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 368/487 [02:32<01:14,  1.61it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 373/487 [02:33<00:49,  2.29it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 378/487 [02:33<00:33,  3.23it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 383/487 [02:33<00:23,  4.50it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 387/487 [02:39<00:57,  1.73it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 392/487 [02:39<00:38,  2.49it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 397/487 [02:39<00:25,  3.53it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 401/487 [02:46<00:53,  1.60it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 406/487 [02:46<00:34,  2.32it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 411/487 [02:46<00:23,  3.30it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 416/487 [02:52<00:43,  1.65it/s]",
+  "rerun_bytes": 3208329472,
+  "free_bytes": 12033400832
+}

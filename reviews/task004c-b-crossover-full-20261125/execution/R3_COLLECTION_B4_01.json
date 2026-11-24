@@ -1,0 +1,120 @@
+{
+  "receipt": {
+    "mode": "B4",
+    "local_archive_path": "C:\\Users\\Administrator\\Documents\\GameCam-VO-Task004CB-20261125\\stage_archives\\R3_B4_collection01.tar.gz",
+    "local_canonical_root": "C:\\Users\\Administrator\\Documents\\GameCam-VO-Task004CB-20261125\\raw_evidence\\R3_OFFLINE",
+    "exit_code": 0,
+    "trust": {
+      "server_host_key_matches_pin": true,
+      "publickey_authentication": true
+    },
+    "start_unix": 1795544747.7918077,
+    "end_unix": 1795544982.7348135,
+    "archive_bytes": 2980152286,
+    "archive_sha256": "e444b36b8ac8d03be14c2ce21d7efb7c444a2ec961eadec74b2c5ee3fef9e085",
+    "files_verified": 24,
+    "all_file_hashes_match": true
+  },
+  "inventory": {
+    "mode": "B4",
+    "files": {
+      "attempts/B4/FINAL_BA_KEYFRAMES.npz": {
+        "bytes": 3268,
+        "sha256": "f651b39bd02d26218a16347f1618d494b20f23f51ec50542825c96371e4958ab"
+      },
+      "attempts/B4/FRONTEND_KEYFRAMES.npz": {
+        "bytes": 3268,
+        "sha256": "fd4309b9dd7b8cafcdd5f257aa30749f99b023784d89bec50c1546c2b81eba73"
+      },
+      "attempts/B4/IO_OVERLAY_LOADED_14484.json": {
+        "bytes": 463,
+        "sha256": "74738fbf60ad317ad4fedba2663959a15bd6b40df66747146a133587e6d157d2"
+      },
+      "attempts/B4/IO_OVERLAY_LOADED_14991.json": {
+        "bytes": 463,
+        "sha256": "f27c608ed24d3f4ab32d67992f4eb4957e35ca68eea23aec4469504e22a03b51"
+      },
+      "attempts/B4/LAUNCH_INTENT.json": {
+        "bytes": 423,
+        "sha256": "94b3051155755dbf29cb5b7bcaf8672e91a67868a0cc9733d1a58b66a7cec603"
+      },
+      "attempts/B4/PROCESS_RECEIPT.json": {
+        "bytes": 530,
+        "sha256": "4fd85aabb1346ad753429e021e60fb8e74c48553d39b4c5f2665ed8fd4d833d8"
+      },
+      "attempts/B4/RESTORE_RECEIPT.json": {
+        "bytes": 262,
+        "sha256": "e26ca76ae09ad408b4dc7edb0a751ab8ac4f4345e9fe78920e7815d2f5e26589"
+      },
+      "attempts/B4/RUNTIME_IO_R3_14484.json": {
+        "bytes": 566,
+        "sha256": "e2e873336ec4f89df0120910202d31e761d59dd3f22151a93db4607e01aad808"
+      },
+      "attempts/B4/STAGE_RESUME_INPUT.json": {
+        "bytes": 910,
+        "sha256": "a3e6508966018dbdbdb38cad4b84728e47019554d82d981c44cc9250b4e76c1e"
+      },
+      "attempts/B4/SUCCESS.json": {
+        "bytes": 582,
+        "sha256": "a88bca724979748992035a7fa319205d8e9150f3fa287aa5018c4918d72a2baa"
+      },
+      "attempts/B4/native/.gamecam_io_owner.json": {
+        "bytes": 360,
+        "sha256": "c8c8c69188b3e46b8abad848960d85d0a39f19f89a4f333be1dd2d75c9d322ae"
+      },
+      "attempts/B4/native/events.out.tfevents.1795543768.<REDACTED_INSTANCE>.14484.0": {
+        "bytes": 88,
+        "sha256": "bbbcd4b023dc2e49e7ee96bb5594031a8f6f7915fb8513b0c23ba205c9a65d2a"
+      },
+      "attempts/B4/native/timer_summary.csv": {
+        "bytes": 272,
+        "sha256": "361cdd011b73c748b74adc1c80699fc943c5b0d07dc3faf80dbbdce54075c9d8"
+      },
+      "attempts/B4/native/traj/est_poses_full.txt": {
+        "bytes": 34811,
+        "sha256": "d33d30442c12a0732b533d05ffef469fd864f674f5c69d589a936fc164c4c685"
+      },
+      "attempts/B4/native/video.npz": {
+        "bytes": 176920282,
+        "sha256": "728938f3568992710ef0d6dab65569c235d3d704bc1f19ec98e54df9f0312ef8"
+      },
+      "attempts/B4/native_trace.jsonl": {
+        "bytes": 1511842,
+        "sha256": "88826683ada3a4901048b96a8d48bea7d20a3c93f7c4f0a00e31e7a85068066f"
+      },
+      "attempts/B4/observer.jsonl": {
+        "bytes": 45943677,
+        "sha256": "34f83037fb9f447e5ed190b64e3b1ccc5af67848ecae9b80399fa719261e77e3"
+      },
+      "attempts/B4/process.stderr.txt": {
+        "bytes": 7921,
+        "sha256": "b5535202d391dd7353467499f268c5d0a435945525cd2442dc51ae90514819f4"
+      },
+      "attempts/B4/process.stdout.txt": {
+        "bytes": 972,
+        "sha256": "b36787574ee84e95dec60bbafcfe9e9e0f1fb0a4cff605c524d9dbaddfc59c62"
+      },
+      "attempts/B4/rerun_stream.rrd": {
+        "bytes": 3208329480,
+        "sha256": "ef86d97dce1935a1fa2315a4a49eed560224db8a9f921c7738bc5b093d77532b"
+      },
+      "attempts/B4/schedule.jsonl": {
+        "bytes": 661099671,
+        "sha256": "a7470bd20fd585be901a39b40dd1c6911b473a64f6e4b2117395b462d5d69386"
+      },
+      "artifacts/STAGE_B4/STARTED.json": {
+        "bytes": 191,
+        "sha256": "af86ff7a6d50651c55361192629ac6aa02452cfbfee862f8c093958a256f649b"
+      },
+      "artifacts/STAGE_B4/stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/STAGE_B4/stdout.txt": {
+        "bytes": 467,
+        "sha256": "ed7bd0a01d08330a1bd272d223711fa2e3b14342dc45df856b51dc3049d36a61"
+      }
+    },
+    "total_bytes": 4093860769
+  }
+}

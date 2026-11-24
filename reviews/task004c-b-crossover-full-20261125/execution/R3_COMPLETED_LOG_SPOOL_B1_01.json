@@ -1,0 +1,49 @@
+{
+  "scope": "COMPLETED_CURRENT_TASK_LOGS_ONLY",
+  "temporary_system_volume_spool": true,
+  "local_raw_and_archive_verified": true,
+  "historical_files_touched": false,
+  "before_data_free": 10707775488,
+  "before_system_free": 9912750080,
+  "files": [
+    {
+      "logical_path": "attempts/B1/rerun_stream.rrd",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B1/rerun_stream.rrd",
+      "bytes": 33437913,
+      "sha256": "284debf4256e6de5dac646ab445f20048c40b2eefe40a2dff47aa64f7d69e526",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    },
+    {
+      "logical_path": "attempts/B1/native/video.npz",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B1/native/video.npz",
+      "bytes": 261904323,
+      "sha256": "164820fbed31b8db7a0895f806d3004d57e294ae327e7b56cd64101ccedec247",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    },
+    {
+      "logical_path": "attempts/B1/schedule.jsonl.gz",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B1/schedule.jsonl.gz",
+      "bytes": 44382284,
+      "sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    },
+    {
+      "logical_path": "attempts/B1/observer.jsonl.gz",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B1/observer.jsonl.gz",
+      "bytes": 7886645,
+      "sha256": "bfc32a557b956c314833101b035986f9f3c7e914df54b1ce0aa9862e9dd6c88c",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    }
+  ],
+  "unix": 1795544385.5122619,
+  "after_data_free": 11023966208,
+  "after_system_free": 9565126656
+}

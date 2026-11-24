@@ -1,0 +1,14 @@
+{
+  "step": "CONTROL_AUDIT",
+  "script": "analysis/audit_completed_stages_r3.py",
+  "script_sha256": "5d9ecbc681afb8e069055d747aea7baa3e81196615c71d0bd534f6fcb53c9e57",
+  "start_unix": 1795546377.7233474,
+  "end_unix": 1795546552.0858002,
+  "exit_code": 0,
+  "stdout_path": "evidence/R3_FINAL_CPU_CONTROL_AUDIT.stdout.txt",
+  "stdout_sha256": "f7734467cf415f4df53855fdcd9f41da37caded131e2371156719b5eaf5699f0",
+  "stderr_path": "evidence/R3_FINAL_CPU_CONTROL_AUDIT.stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "CUDA_VISIBLE_DEVICES": "",
+  "model_runs_started": 0
+}

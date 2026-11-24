@@ -1,0 +1,102 @@
+{
+  "schema": "CONCATENATE_GZIP_CHUNKS_V1",
+  "original_source": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl",
+  "original_bytes": 503024448,
+  "original_sha256": "f1e85c02f330bb2db2559289c12f8041a18b8e98b690318d0615006ab6af125e",
+  "public_log_bytes": 503024448,
+  "public_log_sha256": "f1e85c02f330bb2db2559289c12f8041a18b8e98b690318d0615006ab6af125e",
+  "sanitized": false,
+  "chunks": [
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part001.gz",
+      "uncompressed_bytes": 33580905,
+      "bytes": 718605,
+      "sha256": "46a9abd7edf4af8dece4e0c1d114eb3749f850ccaf13490afbb8f8d36b730b37"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part002.gz",
+      "uncompressed_bytes": 33574079,
+      "bytes": 2205164,
+      "sha256": "3c5efc1de64169165bb44e16c25722ae5a08c32f5d8e726c02f714801fbcac23"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part003.gz",
+      "uncompressed_bytes": 33598712,
+      "bytes": 2290142,
+      "sha256": "c57937a3de00166d042e571b257a49ccb720eab5cd330a70a7dde1d105a7c1e6"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part004.gz",
+      "uncompressed_bytes": 33588422,
+      "bytes": 2257437,
+      "sha256": "4cd907da79486b3053d60d9e51304c59ee4541a82c2d0bfd05be618faebd7647"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part005.gz",
+      "uncompressed_bytes": 33634624,
+      "bytes": 2216495,
+      "sha256": "7622bd7e11426ca18f26427d173f56c06d0f0547330034a36577f1a700cd2a47"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part006.gz",
+      "uncompressed_bytes": 33597823,
+      "bytes": 2169018,
+      "sha256": "61821a4bbd7ed94130d03693aa689e95ba58610056498492aa3d1dac330c209a"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part007.gz",
+      "uncompressed_bytes": 33617061,
+      "bytes": 2150899,
+      "sha256": "94d261169b2cbe5fe0931e0c6a4a9f4b97306861e76245cbd1517c2edb3c1efb"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part008.gz",
+      "uncompressed_bytes": 33588363,
+      "bytes": 2128406,
+      "sha256": "ed3a209befa8d65cba1a1b8fed295dc39c6882fb7834bad09947fde6390795c9"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part009.gz",
+      "uncompressed_bytes": 33561382,
+      "bytes": 2121542,
+      "sha256": "7a338a26780f0db424e9f56f5592709e3b3cbe24b575cc8978bd53e5376d9c51"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part010.gz",
+      "uncompressed_bytes": 33629224,
+      "bytes": 2117246,
+      "sha256": "0bc72f28b84b7797c86c73d82598c513d088d59dbedd8b25411880d849366764"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part011.gz",
+      "uncompressed_bytes": 33622646,
+      "bytes": 2113964,
+      "sha256": "636d11ef65142185bcfeee847d2ab35bd1bc80b706e1b9b80d62174060b4d7dc"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part012.gz",
+      "uncompressed_bytes": 33646611,
+      "bytes": 2096977,
+      "sha256": "faa67b681a22bdb363e7e2d9a256295f245fa06305541702f75c8ed6e23a1edd"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part013.gz",
+      "uncompressed_bytes": 33588299,
+      "bytes": 2092560,
+      "sha256": "54b95eed3bbb6720ac9413368686a675ddae64af809cd4528c8306c55bbd6a68"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part014.gz",
+      "uncompressed_bytes": 33651136,
+      "bytes": 2080454,
+      "sha256": "c4ea7224468afb037d0a475ef1e1f7cddc18d2771973efc219116d60834ca47f"
+    },
+    {
+      "path": "raw_evidence/R2_READY/attempts/B1/schedule.jsonl.part015.gz",
+      "uncompressed_bytes": 32545161,
+      "bytes": 2041112,
+      "sha256": "f5ae0d45db1321f96300209df386a8f85cfa5b58fd8fb4d04a72d7f38a15a8a0"
+    }
+  ],
+  "reconstruction": "Concatenate gzip.decompress bytes in listed order. Public hash covers concatenated sanitized bytes; original hash authenticates retained canonical raw evidence."
+}

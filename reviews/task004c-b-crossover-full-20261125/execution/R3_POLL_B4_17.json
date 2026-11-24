@@ -1,0 +1,139 @@
+{
+  "mode": "B4",
+  "pid_alive": true,
+  "receipts": {
+    "RESTORE_RECEIPT.json": {
+      "all_tensor_and_object_nodes_match": true,
+      "next_input_match": true,
+      "object_nodes": 18143,
+      "new_process_pid": 14484,
+      "source_pid": 5490,
+      "rng_restored_last": true,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+    },
+    "STAGE_RESUME_INPUT.json": {
+      "stage": "formal487",
+      "next_input": {
+        "input_index": 18,
+        "rgb_id": 19,
+        "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+        "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429",
+        "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+        "intrinsic": [
+          386.01129150390625,
+          386.01129150390625,
+          319.5,
+          179.5
+        ]
+      },
+      "cursor_next_input_index": 18,
+      "restored_last_rgb": 18,
+      "graph_topology_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+      "rebind": {
+        "rebased_fields": [
+          "cfg.data.output",
+          "tracker.output",
+          "video.output",
+          "motion_filter.save_dir",
+          "online_ba.output",
+          "frontend.loop_closing.output",
+          "stream.out"
+        ],
+        "algorithm_config_changed": false
+      }
+    }
+  },
+  "trace_bytes": 719187,
+  "last_events": [
+    {
+      "distance": 1.2181645631790161,
+      "drop": true,
+      "kind": "keyframe.natural",
+      "rgb": 323,
+      "scheduled_drop": true,
+      "threshold": 3.0,
+      "time_ns": 1795544249029759887
+    },
+    {
+      "admitted": false,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 324,
+      "scheduled_admitted": false,
+      "score": null,
+      "time_ns": 1795544249500600025
+    },
+    {
+      "admitted": false,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 325,
+      "scheduled_admitted": false,
+      "score": null,
+      "time_ns": 1795544249704918084
+    },
+    {
+      "admitted": false,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 326,
+      "scheduled_admitted": false,
+      "score": null,
+      "time_ns": 1795544249907489151
+    },
+    {
+      "admitted": false,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 327,
+      "scheduled_admitted": false,
+      "score": null,
+      "time_ns": 1795544250108320543
+    },
+    {
+      "admitted": true,
+      "force": false,
+      "kind": "motion.natural",
+      "rgb": 328,
+      "scheduled_admitted": true,
+      "score": null,
+      "time_ns": 1795544250304984923
+    },
+    {
+      "call": 552,
+      "kind": "ba.continuous.before",
+      "phase": "frontend_local_predecision",
+      "rgb": 328,
+      "tensor_sha256": {
+        "disps": "3f221d2d8f17528aac4d10afc0a5dc3537731daee0064df5424fe8691ef7e92d",
+        "eta": "350121affc397304474df94f6cc096bc222b10f4667a1572d5369d62b3fb1242",
+        "poses": "ca325c465afb40ec157e45e199394b6b8c30ecad4bab3fba1fd76d9c4fa40b70",
+        "target": "37cd376ef58aee39003a8bc283cddda55bff3e5284c9240ea4ce5fd2cab5e3dc",
+        "uncertainties": "35338d4cf088747f6ed4ac4dcb450982839a19b6edf43d0d0141fb0deca68a68",
+        "weight": "64637fc1cd1667199de165c34d5f063fef74d0d439f9d1c61cccae8506343b52"
+      },
+      "time_ns": 1795544251076627943
+    },
+    {
+      "call": 552,
+      "kind": "ba.continuous.after",
+      "phase": "frontend_local_predecision",
+      "rgb": 328,
+      "tensor_sha256": {
+        "disps": "abea518f124675123bebd0462d91a7334a1856cd238043f8be82238559807ea3",
+        "eta": "350121affc397304474df94f6cc096bc222b10f4667a1572d5369d62b3fb1242",
+        "poses": "76d3948dde83fb2fd3c5a5fb84d2b21e78f5bc902ea0527e4a177ebf3f0e7ce0",
+        "target": "37cd376ef58aee39003a8bc283cddda55bff3e5284c9240ea4ce5fd2cab5e3dc",
+        "uncertainties": "8c11ff6dfd45343c5b9b85d2ee37bc19d8d57cd1e232d81591aa292f8a3e50e8",
+        "weight": "64637fc1cd1667199de165c34d5f063fef74d0d439f9d1c61cccae8506343b52"
+      },
+      "time_ns": 1795544251146357372
+    }
+  ],
+  "wrapper_stdout_tail": "",
+  "wrapper_stderr_tail": "",
+  "process_stdout_tail": "",
+  "process_stderr_tail": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).\n  warnings.warn(\n",
+  "rerun_bytes": 1550527152,
+  "free_bytes": 11619553280
+}

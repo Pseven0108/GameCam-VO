@@ -1,0 +1,101 @@
+{
+  "unix": 1795543634.420325,
+  "disk_free_GiB": 10.583671569824219,
+  "shm_free_GiB": 18.289939880371094,
+  "arms": {
+    "B1": {
+      "process_receipt": {
+        "mode": "B1",
+        "spec": {
+          "mode": "B1",
+          "stage": "formal487",
+          "max_rgb": 487,
+          "D": 1,
+          "W": 1,
+          "U": 1,
+          "INIT_D": 0,
+          "schedule": "S1",
+          "replay": false,
+          "formal": true
+        },
+        "exit_code": 0,
+        "success_receipt_exists": true,
+        "run_consumed": true,
+        "retry_allowed": false,
+        "runtime_seconds": 994.8439855575562,
+        "stdout_sha256": "270bd04f12275184d68f272b0f2a50021bd8a0ad4988abbc57ef86e77918c538",
+        "stderr_sha256": "f7a703372c4ae055e7b3d1b56274d74fb701e361454c46e802da301af55d8804"
+      },
+      "files": {
+        "process.stderr.txt": 8041,
+        "PROCESS_RECEIPT.json": 530,
+        "schedule.jsonl.gz": 44382284,
+        "RESTORE_RECEIPT.json": 262,
+        "native_trace.jsonl": 1612817,
+        "IO_OVERLAY_LOADED_11032.json": 463,
+        "SUCCESS.json": 582,
+        "IO_OVERLAY_LOADED_11433.json": 463,
+        "STAGE_RESUME_INPUT.json": 910,
+        "RUNTIME_IO_R3_11032.json": 566,
+        "process.stdout.txt": 972,
+        "LAUNCH_INTENT.json": 422,
+        "FINAL_BA_KEYFRAMES.npz": 4580,
+        "observer.jsonl.gz": 7886645,
+        "rerun_stream.rrd": 33437913,
+        "FRONTEND_KEYFRAMES.npz": 4580,
+        "native/events.out.tfevents.1795541128.<REDACTED_INSTANCE>.11032.0": 88,
+        "native/video.npz": 261904323,
+        "native/timer_summary.csv": 272,
+        "native/.gamecam_io_owner.json": 360,
+        "native/traj/est_poses_full.txt": 35586
+      }
+    },
+    "B2": {
+      "process_receipt": {
+        "mode": "B2",
+        "spec": {
+          "mode": "B2",
+          "stage": "formal487",
+          "max_rgb": 487,
+          "D": 0,
+          "W": 1,
+          "U": 1,
+          "INIT_D": 0,
+          "schedule": "S1",
+          "replay": true,
+          "formal": true
+        },
+        "exit_code": 0,
+        "success_receipt_exists": true,
+        "run_consumed": true,
+        "retry_allowed": false,
+        "runtime_seconds": 1018.3617835044861,
+        "stdout_sha256": "9ef0c8e887928f392c6b1e8e914a4224d772145bc58f1a4ea248c5995d399d07",
+        "stderr_sha256": "58880fcfbc2c8a92142b958e4a41cccb392bc6fac2e86c99b9529b89dfe7553d"
+      },
+      "files": {
+        "IO_OVERLAY_LOADED_12732.json": 463,
+        "process.stderr.txt": 7919,
+        "PROCESS_RECEIPT.json": 530,
+        "schedule.jsonl": 705298650,
+        "IO_OVERLAY_LOADED_13226.json": 463,
+        "RESTORE_RECEIPT.json": 262,
+        "native_trace.jsonl": 1612790,
+        "SUCCESS.json": 582,
+        "STAGE_RESUME_INPUT.json": 910,
+        "process.stdout.txt": 972,
+        "LAUNCH_INTENT.json": 422,
+        "observer.jsonl": 59549223,
+        "FINAL_BA_KEYFRAMES.npz": 4580,
+        "rerun_stream.rrd": 1051706949,
+        "FRONTEND_KEYFRAMES.npz": 4580,
+        "RUNTIME_IO_R3_12732.json": 566,
+        "native/events.out.tfevents.1795542458.<REDACTED_INSTANCE>.12732.0": 88,
+        "native/video.npz": 261445460,
+        "native/timer_summary.csv": 272,
+        "native/.gamecam_io_owner.json": 360,
+        "native/traj/est_poses_full.txt": 34795
+      }
+    }
+  }
+}

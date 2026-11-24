@@ -1,0 +1,118 @@
+{
+  "receipt": {
+    "mode": "B2",
+    "exit_code": 0,
+    "trust": {
+      "server_host_key_matches_pin": true,
+      "publickey_authentication": true
+    },
+    "start_unix": 1795543497.3129842,
+    "end_unix": 1795543627.978672,
+    "archive_bytes": 1135233532,
+    "archive_sha256": "927d29c660313341427445d9d7a9bc1d5e99976ac54220425607081d42823020",
+    "files_verified": 24,
+    "all_file_hashes_match": true
+  },
+  "inventory": {
+    "mode": "B2",
+    "files": {
+      "attempts/B2/FINAL_BA_KEYFRAMES.npz": {
+        "bytes": 4580,
+        "sha256": "ea89d0c15c53b0071a8fa34c676aa861516a1f905a8ed49b8b6766b0b01166af"
+      },
+      "attempts/B2/FRONTEND_KEYFRAMES.npz": {
+        "bytes": 4580,
+        "sha256": "44d383ca9ae0d879c95b297a8fb066ceaa450c55ebb3305f05a71ccc344cd543"
+      },
+      "attempts/B2/IO_OVERLAY_LOADED_12732.json": {
+        "bytes": 463,
+        "sha256": "e9e7724f22de78c0e02c6e6cc1e99f7ccfadb0a2c3f1de8939107f9b56bbf8c9"
+      },
+      "attempts/B2/IO_OVERLAY_LOADED_13226.json": {
+        "bytes": 463,
+        "sha256": "4e01837e5c5a58afbf4018f39fbb5912bc0297fea8f61c8e5cc6dd685ffd5319"
+      },
+      "attempts/B2/LAUNCH_INTENT.json": {
+        "bytes": 422,
+        "sha256": "fbaea94c32795a7607cfa7262deaebdc2854b6972faa44471379f1c93b476fe1"
+      },
+      "attempts/B2/PROCESS_RECEIPT.json": {
+        "bytes": 530,
+        "sha256": "a6861287f2bc2a50da9c36739fa28b582520aeef15a554d4d41bc1783ce24a83"
+      },
+      "attempts/B2/RESTORE_RECEIPT.json": {
+        "bytes": 262,
+        "sha256": "bbae4a4b54b883b04c6a8b5f80f375c1f9a9ee574aae992e08e573e9754a7cb0"
+      },
+      "attempts/B2/RUNTIME_IO_R3_12732.json": {
+        "bytes": 566,
+        "sha256": "e47e75305912566616ae09964522ca606faa753bbfe757cdbd799fd6b54852f3"
+      },
+      "attempts/B2/STAGE_RESUME_INPUT.json": {
+        "bytes": 910,
+        "sha256": "a3e6508966018dbdbdb38cad4b84728e47019554d82d981c44cc9250b4e76c1e"
+      },
+      "attempts/B2/SUCCESS.json": {
+        "bytes": 582,
+        "sha256": "32d34da103d06a5fc0d1d785934da0e338bd33b3c7c78ae0bd5a4e76dd5b160a"
+      },
+      "attempts/B2/native/.gamecam_io_owner.json": {
+        "bytes": 360,
+        "sha256": "55edd8eb9b7ccd0135570cb0c71082f40485a600ed19a108eae53c4fc31a9378"
+      },
+      "attempts/B2/native/events.out.tfevents.1795542458.<REDACTED_INSTANCE>.12732.0": {
+        "bytes": 88,
+        "sha256": "b663bc80609ef91ee5179068f030efdffababa1b8459d84b983b25a6689f7468"
+      },
+      "attempts/B2/native/timer_summary.csv": {
+        "bytes": 272,
+        "sha256": "5a6a6ecb358b0c80a6635cdd2ae40fac9aba29ac6e2295aacf6d8bf872d6893e"
+      },
+      "attempts/B2/native/traj/est_poses_full.txt": {
+        "bytes": 34795,
+        "sha256": "1ee79bfd0fa701cedf73b78caabf69565526e69ef198b1681b8c426bae0f16c3"
+      },
+      "attempts/B2/native/video.npz": {
+        "bytes": 261445460,
+        "sha256": "ec0ed3244214f28553b73ed749ad0114260052c8b1ec64ddf2c0f72cdeec4f82"
+      },
+      "attempts/B2/native_trace.jsonl": {
+        "bytes": 1612790,
+        "sha256": "c9d8ec86899544a99bb466a27c9d237d55bab1a08abb61fc424ed17e5bd9fcbe"
+      },
+      "attempts/B2/observer.jsonl": {
+        "bytes": 59549223,
+        "sha256": "afe872de8950fac2f76370d8f6ef26f1053b4790acdef300fa50ab042c6b200e"
+      },
+      "attempts/B2/process.stderr.txt": {
+        "bytes": 7919,
+        "sha256": "58880fcfbc2c8a92142b958e4a41cccb392bc6fac2e86c99b9529b89dfe7553d"
+      },
+      "attempts/B2/process.stdout.txt": {
+        "bytes": 972,
+        "sha256": "9ef0c8e887928f392c6b1e8e914a4224d772145bc58f1a4ea248c5995d399d07"
+      },
+      "attempts/B2/rerun_stream.rrd": {
+        "bytes": 1051706949,
+        "sha256": "369fcef64f23eefefef9c7f9c15afc86911c3ed3f163a6bb00af3a73f4e3a76c"
+      },
+      "attempts/B2/schedule.jsonl": {
+        "bytes": 705298650,
+        "sha256": "2568f6ffd5e50734cc85f7c030a2f4a7b53815a2b88b23caff8473e3fe80a516"
+      },
+      "artifacts/STAGE_B2/STARTED.json": {
+        "bytes": 191,
+        "sha256": "4ab77e9bb0c621a08458e2de7257244f816deb67b82ca971609d346f8daa15cf"
+      },
+      "artifacts/STAGE_B2/stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/STAGE_B2/stdout.txt": {
+        "bytes": 467,
+        "sha256": "9a0d590e9e83f854ba3fb5ec7665a14b526b67401df2da265865f6b93b553a2f"
+      }
+    },
+    "total_bytes": 2079671494
+  }
+}

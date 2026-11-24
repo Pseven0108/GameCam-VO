@@ -1,0 +1,46 @@
+[
+  {
+    "arm": "B1",
+    "retained_keyframes": 127,
+    "translation_max_abs_norm_raw": 1.9441545879010382e-05,
+    "rotation_max_deg": 9.349503640779317e-05,
+    "translation_check_bound_raw": 0.00048665201757103205,
+    "rotation_check_bound_deg": 0.001,
+    "bit_exact": false,
+    "source": "src/utils/eval_traj.py full_traj_fill overwrites filled poses at retained KF timestamps before six-decimal TUM export",
+    "status": "CONSISTENT_WITH_FLOAT32_AND_TEXT_EXPORT"
+  },
+  {
+    "arm": "B2",
+    "retained_keyframes": 127,
+    "translation_max_abs_norm_raw": 1.7780682868835965e-06,
+    "rotation_max_deg": 8.69424998650335e-05,
+    "translation_check_bound_raw": 3.4889082598965615e-05,
+    "rotation_check_bound_deg": 0.001,
+    "bit_exact": false,
+    "source": "src/utils/eval_traj.py full_traj_fill overwrites filled poses at retained KF timestamps before six-decimal TUM export",
+    "status": "CONSISTENT_WITH_FLOAT32_AND_TEXT_EXPORT"
+  },
+  {
+    "arm": "B4",
+    "retained_keyframes": 86,
+    "translation_max_abs_norm_raw": 7.764319760733633e-07,
+    "rotation_max_deg": 8.931631307206363e-05,
+    "translation_check_bound_raw": 5.81469703320181e-06,
+    "rotation_check_bound_deg": 0.001,
+    "bit_exact": false,
+    "source": "src/utils/eval_traj.py full_traj_fill overwrites filled poses at retained KF timestamps before six-decimal TUM export",
+    "status": "CONSISTENT_WITH_FLOAT32_AND_TEXT_EXPORT"
+  },
+  {
+    "arm": "B3",
+    "retained_keyframes": 86,
+    "translation_max_abs_norm_raw": 1.9391298655153418e-05,
+    "rotation_max_deg": 9.955161803358721e-05,
+    "translation_check_bound_raw": 0.0002770742867141962,
+    "rotation_check_bound_deg": 0.001,
+    "bit_exact": false,
+    "source": "src/utils/eval_traj.py full_traj_fill overwrites filled poses at retained KF timestamps before six-decimal TUM export",
+    "status": "CONSISTENT_WITH_FLOAT32_AND_TEXT_EXPORT"
+  }
+]

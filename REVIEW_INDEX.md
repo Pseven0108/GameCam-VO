@@ -1,3 +1,9 @@
+# 最新完整评审入口
+
+[task004c-b-crossover-full-20261125](reviews/task004c-b-crossover-full-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task004c-b-crossover-full-20261125/TASK004C_B_CROSSOVER_FULL_REVIEW_20261125.zip) · [展开目录](reviews/task004c-b-crossover-full-20261125)。
+
+---
+
 # 评审索引
 
 最新：[GPU C0 R2报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md)。真实初始化完成，完整C0因函数闭包检查失败。

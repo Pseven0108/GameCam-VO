@@ -1,0 +1,56 @@
+{
+  "passed": 12,
+  "failed": 0,
+  "seed": 917,
+  "CUDA_VISIBLE_DEVICES": "",
+  "tests": [
+    {
+      "name": "known_Sim3_rotation_translation_scale3",
+      "status": "PASS"
+    },
+    {
+      "name": "SE3_has_no_scale",
+      "status": "PASS"
+    },
+    {
+      "name": "XYZW_90deg_Z_rotation",
+      "status": "PASS"
+    },
+    {
+      "name": "W2C_inversion_translation_rotated",
+      "status": "PASS"
+    },
+    {
+      "name": "identity_endpoint_zero_RPE",
+      "status": "PASS"
+    },
+    {
+      "name": "missing_endpoint_not_interpolated",
+      "status": "PASS"
+    },
+    {
+      "name": "identity_relative_motion",
+      "status": "PASS"
+    },
+    {
+      "name": "reflection_not_allowed",
+      "status": "PASS"
+    },
+    {
+      "name": "rotation_angle_90deg",
+      "status": "PASS"
+    },
+    {
+      "name": "stage_global_alignment_recovers_gauge_scale",
+      "status": "PASS"
+    },
+    {
+      "name": "stage_global_alignment_preserves_endpoint_length_ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "stage_global_alignment_preserves_shape_RMSE",
+      "status": "PASS"
+    }
+  ]
+}

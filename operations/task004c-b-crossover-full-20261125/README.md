@@ -1,0 +1,1 @@
+Supplementary closeout receipts created after the immutable review ZIP seal. C0 binary stays local; its streaming TAR and all storage member SHA checks are recorded here. Shutdown has not yet been executed.

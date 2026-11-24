@@ -1,0 +1,35 @@
+{
+  "workspace": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE",
+  "linked_immutable_files": 4597,
+  "all_payload_hashes_match": true,
+  "GPU_runs": 0,
+  "free_disk_bytes": 14009679872,
+  "shm": {
+    "total": 25769803776,
+    "used": 1638158336,
+    "free": 24131645440
+  },
+  "manifest": {
+    "schema": "GAMECAM_RUNTIME_IO_RECOVERY_V3",
+    "base_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "base_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+    "base_driver_sha256": "ce2a5043bd22816b17411d13633a8f60fa4274884c975410b003679b4e1d1d65",
+    "files": {
+      "overlay/gamecam_io_overlay.py": "b100f95ebe4904402449998840ab74953318a18ba1d05a22222ec3098b469b21",
+      "overlay/io_import_overlay.py": "36718946ac7c8293cbb8f4da71a1be1a40cfe8c8b30d915db282c8a7ad388a44",
+      "overlay/runtime_io.py": "1d1cb7ef137869404df438f62ff6dee7163f3dac90f937c99baa609d483dfd99",
+      "overlay/sitecustomize.py": "ddaeaf90db94f22d1f6d762eae0ab59d225b85bb79e0a4d1599401f36ff3c9c4",
+      "sitecustomize.py": "ddaeaf90db94f22d1f6d762eae0ab59d225b85bb79e0a4d1599401f36ff3c9c4",
+      "tests/test_io_lifecycle.py": "0c63cdd46d243e37c69dfa07b4cc6a85f9b2f1af5259ea3d0fbaddabc79a148b"
+    },
+    "scope": "OUTPUT_LIFECYCLE_LOCAL_HUB_LOSSLESS_VIDEO_TMPFS_FILE_MMAP",
+    "load_order": [
+      "verify_original_git_HEAD_tree_and_clean_worktree",
+      "verify_overlay_SHA256",
+      "original_runner_original_source_and_policy_gates",
+      "in_memory_driver_IO_calls_only",
+      "original_C0_class_and_state_identity_checks"
+    ],
+    "original_C0_unchanged": true
+  }
+}

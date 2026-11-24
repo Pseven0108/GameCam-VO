@@ -1,0 +1,118 @@
+{
+  "receipt": {
+    "mode": "B1",
+    "exit_code": 0,
+    "trust": {
+      "server_host_key_matches_pin": true,
+      "publickey_authentication": true
+    },
+    "start_unix": 1795542382.0292928,
+    "end_unix": 1795542439.1094363,
+    "archive_bytes": 322339951,
+    "archive_sha256": "b2ce1c0e4452e2209823d22efe3c23eedd070c52c91979f608199f0f4245987c",
+    "files_verified": 24,
+    "all_file_hashes_match": true
+  },
+  "inventory": {
+    "mode": "B1",
+    "files": {
+      "attempts/B1/FINAL_BA_KEYFRAMES.npz": {
+        "bytes": 4580,
+        "sha256": "a3a7064cd30a25746559420a21219dbc0295f937421969a26a5a1ab3a3a7ae44"
+      },
+      "attempts/B1/FRONTEND_KEYFRAMES.npz": {
+        "bytes": 4580,
+        "sha256": "f6db7466a94c0c0ffba27b24598d144e1167cca85efc5bbd9ccace6abb15b2fd"
+      },
+      "attempts/B1/IO_OVERLAY_LOADED_11032.json": {
+        "bytes": 463,
+        "sha256": "89dbf3ec9f7e4eb1f3a4f5149b892a4780097896d4a1d7ba471a07a925624c5b"
+      },
+      "attempts/B1/IO_OVERLAY_LOADED_11433.json": {
+        "bytes": 463,
+        "sha256": "99e47781a2758628d62d93bbcdd8191b6c7920413248effe193df38de161ac7b"
+      },
+      "attempts/B1/LAUNCH_INTENT.json": {
+        "bytes": 422,
+        "sha256": "90505415cdf335b57bb5778dd785aa54dddc2d0697ff9ec3af4c0bdc222a08b1"
+      },
+      "attempts/B1/PROCESS_RECEIPT.json": {
+        "bytes": 530,
+        "sha256": "8a0ac7cb85cbb79baf202d3734471629d312625bcaf2a264bb2ada6764c074b9"
+      },
+      "attempts/B1/RESTORE_RECEIPT.json": {
+        "bytes": 262,
+        "sha256": "32c06bb14736355212789593652fb776ca161a792555108c155ff88733883cad"
+      },
+      "attempts/B1/RUNTIME_IO_R3_11032.json": {
+        "bytes": 566,
+        "sha256": "1648212bc0bd6c986f60525f000cda27c86c2879123d6a7e509feaaad2d68c33"
+      },
+      "attempts/B1/STAGE_RESUME_INPUT.json": {
+        "bytes": 910,
+        "sha256": "a3e6508966018dbdbdb38cad4b84728e47019554d82d981c44cc9250b4e76c1e"
+      },
+      "attempts/B1/SUCCESS.json": {
+        "bytes": 582,
+        "sha256": "99a01bd0342c834774ba45689870fa6b8a471c4161249446e1129058856c597c"
+      },
+      "attempts/B1/native/.gamecam_io_owner.json": {
+        "bytes": 360,
+        "sha256": "27c7afe2c8ef961484286cd702a9b24ab689f830c48a3c943a98769a35d28f09"
+      },
+      "attempts/B1/native/events.out.tfevents.1795541128.<REDACTED_INSTANCE>.11032.0": {
+        "bytes": 88,
+        "sha256": "ec361269a8b71cf0884904cec613007c3051b6510dfe7df26dc96062400dc3b7"
+      },
+      "attempts/B1/native/timer_summary.csv": {
+        "bytes": 272,
+        "sha256": "ea33896345088a59090be9b108692685b777aea69f9ab609b2d10de58946c4fb"
+      },
+      "attempts/B1/native/traj/est_poses_full.txt": {
+        "bytes": 35586,
+        "sha256": "4220aaa995a6e5f9836d8c6dfd5ea7a045d0c457766401a17fe687f2bb0c4b9b"
+      },
+      "attempts/B1/native/video.npz": {
+        "bytes": 261904323,
+        "sha256": "164820fbed31b8db7a0895f806d3004d57e294ae327e7b56cd64101ccedec247"
+      },
+      "attempts/B1/native_trace.jsonl": {
+        "bytes": 1612817,
+        "sha256": "49fe4bf5c5b5f9a498bbf745add478dc4dcb59101dab36c13f7d6e14064b8741"
+      },
+      "attempts/B1/observer.jsonl": {
+        "bytes": 59988717,
+        "sha256": "5564d561d6700f2efc90abe445503af4ad96fe9978c26c79135379f37f4c8756"
+      },
+      "attempts/B1/process.stderr.txt": {
+        "bytes": 8041,
+        "sha256": "f7a703372c4ae055e7b3d1b56274d74fb701e361454c46e802da301af55d8804"
+      },
+      "attempts/B1/process.stdout.txt": {
+        "bytes": 972,
+        "sha256": "270bd04f12275184d68f272b0f2a50021bd8a0ad4988abbc57ef86e77918c538"
+      },
+      "attempts/B1/rerun_stream.rrd": {
+        "bytes": 33437913,
+        "sha256": "284debf4256e6de5dac646ab445f20048c40b2eefe40a2dff47aa64f7d69e526"
+      },
+      "attempts/B1/schedule.jsonl": {
+        "bytes": 705298650,
+        "sha256": "8c41f582336984650eabf9c1d9d1be89aa1a5775ea230ab62936ff8e4e948dbd"
+      },
+      "artifacts/STAGE_B1/STARTED.json": {
+        "bytes": 191,
+        "sha256": "5fcd4b86840330cf9b120ea8426cccba740227eb52d14f9c554547a8988ddf71"
+      },
+      "artifacts/STAGE_B1/stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/STAGE_B1/stdout.txt": {
+        "bytes": 467,
+        "sha256": "8b648f5f356c180044c4013e03651e70bfd41a7ab3eec5eb183c0375ca5c53aa"
+      }
+    },
+    "total_bytes": 1062301755
+  }
+}

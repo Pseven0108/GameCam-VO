@@ -1,14 +1,11 @@
-# 当前状态 · 2026-11-24
+# 当前状态 · Task004C-B 四组受控交叉实验
 
-- VIPER / DROID-W / stride=1；stride=4分支不作为当前主线。
-- 当前运行源码：02f8c8308274489ff7eff83fa9b87b98db74122e；只修NativeViperRGB。
-- 当前任务：TASK004C-B-GPU-C0-R2。
-- 状态：BLOCKED_AT_C0_CLOSURE_UNREGISTERED_LORA_DROPOUT_FUNCTION，等待人工评审。
+**COMPLETE：B1、B2、B4、B3 均完成487帧、原生Final BA和完整Filler，退出码均为0。**
 
-已通过：21个真实Loader用例、18帧CPU连续校验、最终152项完整回归、487张RGB SHA及原始保护资产核验。
+- Common C0、INIT_D=0、val_007、seed43、stride=1。
+- S1和S0各包含D=1/D=0；离散调度固定，连续优化分别演化。
+- 早期失败现场保留，冻结优化公式、权重、R2 YAML及CUDA扩展未变。
+- 单序列单种子描述性机制实验，不等同于原始E0全流程或跨场景验证。
+- 原生Rerun记录保留，浏览器渲染未核实。用户已授权在归档发布核验后执行 shutdown；本提交封存时尚未执行，实际回执另行补充。
 
-实际GPU：1次生命周期、18帧完成、16+8次graph.update、24次native BA，进入frame-end保存边界；56.164秒后exit1，无自动重试。C0未生成，47族/网络Buffer/RNG未持久化，完整大小未知。
-
-首个保存阻断是Metric3D lora_dropout未注册函数。未改序列化器或模型，后续是否还存在未知字段尚未验证。没有restore、S0/S1、跨D或B1-B4；无轨迹性能提升结论。
-
-原BaseDataset、BA、CUDA扩展、原R2、权重、RGB和历史结果保持不变。两块本轮Arena保留取证；GPU进程已退出，服务器保持在线。GitHub发布不授予下一阶段实验授权。
+[最终报告](reviews/task004c-b-crossover-full-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task004c-b-crossover-full-20261125/TASK004C_B_CROSSOVER_FULL_REVIEW_20261125.zip) · [展开证据](reviews/task004c-b-crossover-full-20261125) · [评价表](reviews/task004c-b-crossover-full-20261125/evaluation/CROSSOVER_SUMMARY.csv)。

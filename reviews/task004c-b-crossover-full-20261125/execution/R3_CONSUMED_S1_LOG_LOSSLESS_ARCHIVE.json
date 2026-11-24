@@ -1,0 +1,42 @@
+{
+  "scope": "LOSSLESS_COMPRESSION_OF_COMPLETED_CONSUMED_CURRENT_R3_LOGS",
+  "local_canonical_raw_copies_verified": true,
+  "historical_assets_touched": false,
+  "model_runs_launched": 0,
+  "records": [
+    {
+      "original_relative_path": "B2/schedule.jsonl",
+      "original_bytes": 705298650,
+      "original_sha256": "2568f6ffd5e50734cc85f7c030a2f4a7b53815a2b88b23caff8473e3fe80a516",
+      "compressed_bytes": 44382220,
+      "compressed_sha256": "5ee39dbc7936d7444a5bb2274178c842d4ad1713286bab734ba4d86528072e58",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    },
+    {
+      "original_relative_path": "B2/observer.jsonl",
+      "original_bytes": 59549223,
+      "original_sha256": "afe872de8950fac2f76370d8f6ef26f1053b4790acdef300fa50ab042c6b200e",
+      "compressed_bytes": 7841159,
+      "compressed_sha256": "410253fd685080550e889b6d04827373306a42369c6ce08ef13d28e5ff035627",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    },
+    {
+      "original_relative_path": "B2/rerun_stream.rrd",
+      "original_bytes": 1051706949,
+      "original_sha256": "369fcef64f23eefefef9c7f9c15afc86911c3ed3f163a6bb00af3a73f4e3a76c",
+      "compressed_bytes": 826688060,
+      "compressed_sha256": "b892663d14df077c3644814e8813940807b3ae8802620e7ecad3ec0f7b70393a",
+      "decompression_sha_match": true,
+      "active_refs": [],
+      "canonical_raw_copy_retained_locally": true
+    }
+  ],
+  "before_free_bytes": 11364122624,
+  "unix": 1795543659.8880568,
+  "after_free_bytes": 12301766656,
+  "lossless_bytes_saved": 937644032
+}

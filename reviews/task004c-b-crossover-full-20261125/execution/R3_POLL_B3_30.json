@@ -1,0 +1,175 @@
+{
+  "mode": "B3",
+  "pid_alive": true,
+  "receipts": {
+    "RESTORE_RECEIPT.json": {
+      "all_tensor_and_object_nodes_match": true,
+      "next_input_match": true,
+      "object_nodes": 18143,
+      "new_process_pid": 16575,
+      "source_pid": 5490,
+      "rng_restored_last": true,
+      "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+    },
+    "STAGE_RESUME_INPUT.json": {
+      "stage": "formal487",
+      "next_input": {
+        "input_index": 18,
+        "rgb_id": 19,
+        "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+        "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429",
+        "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+        "intrinsic": [
+          386.01129150390625,
+          386.01129150390625,
+          319.5,
+          179.5
+        ]
+      },
+      "cursor_next_input_index": 18,
+      "restored_last_rgb": 18,
+      "graph_topology_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+      "rebind": {
+        "rebased_fields": [
+          "cfg.data.output",
+          "tracker.output",
+          "video.output",
+          "motion_filter.save_dir",
+          "online_ba.output",
+          "frontend.loop_closing.output",
+          "stream.out"
+        ],
+        "algorithm_config_changed": false
+      }
+    }
+  },
+  "trace_bytes": 1360946,
+  "last_events": [
+    {
+      "call": 1045,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "9cf525a867dac1ed5e4e914c16ef15948392c437497ea680f206f673ac13c528",
+        "poses": "6592a5e926602a0d6c4bdc9530a5a62b41cb3f405844deb2b7aacb4f260b9570",
+        "target": "05bcd2811f30e387350a72850ede9692ca19ed9c34bb6ab06d51298cb9db8339",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "5ff2c1ce54ec493ae4fbae8c50740a5df80913e1cdcd4b4afea5f0f4d856dac1"
+      },
+      "time_ns": 1795546186256450524
+    },
+    {
+      "call": 1045,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "9cf525a867dac1ed5e4e914c16ef15948392c437497ea680f206f673ac13c528",
+        "poses": "7b9f69e822e26304019b8afad218747010182b7a19dd9ae9baa31eadbc2fa822",
+        "target": "05bcd2811f30e387350a72850ede9692ca19ed9c34bb6ab06d51298cb9db8339",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "5ff2c1ce54ec493ae4fbae8c50740a5df80913e1cdcd4b4afea5f0f4d856dac1"
+      },
+      "time_ns": 1795546186282379588
+    },
+    {
+      "call": 1046,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "fe55b91f348ac7ff99d4b283ad4938db5de6af59070ca341d938e66f012b757f",
+        "poses": "7b9f69e822e26304019b8afad218747010182b7a19dd9ae9baa31eadbc2fa822",
+        "target": "8cd78749c0cac17b354c3f5ffa3b3ac46150471609b02027bbdc9ea7bdf01320",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "7b4c33047c431bf44a9a0dae7471a8ed9befd011ba318903a97062ae8a1cee0b"
+      },
+      "time_ns": 1795546186705017122
+    },
+    {
+      "call": 1046,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "fe55b91f348ac7ff99d4b283ad4938db5de6af59070ca341d938e66f012b757f",
+        "poses": "6b30deea5986582ca77ef293b65504936a73e668a7554dae70de1f02ee7cafe3",
+        "target": "8cd78749c0cac17b354c3f5ffa3b3ac46150471609b02027bbdc9ea7bdf01320",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "7b4c33047c431bf44a9a0dae7471a8ed9befd011ba318903a97062ae8a1cee0b"
+      },
+      "time_ns": 1795546186731153453
+    },
+    {
+      "call": 1047,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "492362734e43f2fc29f1c6cec4d3bb2b01e5cc07807ec6eeee00220a8963f1b0",
+        "poses": "6b30deea5986582ca77ef293b65504936a73e668a7554dae70de1f02ee7cafe3",
+        "target": "c57c78a31d54143a5cc7610a8146fb054508888881ac60258b3f159ece068685",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "695099dd6c3728f7a532951ba9a6ed2b705f23f33ba30ad49f66eea67758a139"
+      },
+      "time_ns": 1795546187146199932
+    },
+    {
+      "call": 1047,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "492362734e43f2fc29f1c6cec4d3bb2b01e5cc07807ec6eeee00220a8963f1b0",
+        "poses": "11973f082ed13f9d1d4baa94d0328cae476084d26e8900b8b1dfe604e9f51e2e",
+        "target": "c57c78a31d54143a5cc7610a8146fb054508888881ac60258b3f159ece068685",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "695099dd6c3728f7a532951ba9a6ed2b705f23f33ba30ad49f66eea67758a139"
+      },
+      "time_ns": 1795546187175248025
+    },
+    {
+      "call": 1048,
+      "kind": "ba.continuous.before",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "d805bf27cdfcc238db5a8ebd61acebbddf63b84181a95828b56438714b350f7b",
+        "poses": "11973f082ed13f9d1d4baa94d0328cae476084d26e8900b8b1dfe604e9f51e2e",
+        "target": "2482d81a9d8616d30a6fcce7d85f606e21394d2139879538b7ec2ccd5ad85727",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "929799a5c3ea46d90586c3bc45c0a9ad7f7b78960e50aa010b1f888dd7ba3355"
+      },
+      "time_ns": 1795546187595357634
+    },
+    {
+      "call": 1048,
+      "kind": "ba.continuous.after",
+      "phase": "filler_pose_only",
+      "rgb": 487,
+      "tensor_sha256": {
+        "disps": "7a76efb953ace78472e1d1ae3e78f29f0d47be0f70e68c4e14896cc49abcf3f6",
+        "eta": "d805bf27cdfcc238db5a8ebd61acebbddf63b84181a95828b56438714b350f7b",
+        "poses": "6a4b1fcf7df5e9533b8dd4e309cce5de82f0b57213a2c264e524d97d6916e6fa",
+        "target": "2482d81a9d8616d30a6fcce7d85f606e21394d2139879538b7ec2ccd5ad85727",
+        "uncertainties": "6e934092a1bba806c31c3630102498c54bb4a6d13cc832eedce822b2793ef815",
+        "weight": "929799a5c3ea46d90586c3bc45c0a9ad7f7b78960e50aa010b1f888dd7ba3355"
+      },
+      "time_ns": 1795546187621073990
+    }
+  ],
+  "wrapper_stdout_tail": "",
+  "wrapper_stderr_tail": "",
+  "process_stdout_tail": "Final Global BA Triggered!\nFinal Global BA Done!\nSaved final depth video: /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/attempts/B3/native/video.npz\nFilling full trajectory ...\n",
+  "process_stderr_tail": "ullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).\n  warnings.warn(\n\n  0%|          | 0/487 [00:00<?, ?it/s]\n  1%|          | 5/487 [00:00<00:10, 44.99it/s]\n  2%|\u258f         | 10/487 [00:00<00:10, 45.72it/s]\n  3%|\u258e         | 15/487 [00:00<00:10, 46.44it/s]\n  4%|\u258d         | 20/487 [00:06<04:00,  1.94it/s]\n  5%|\u258c         | 25/487 [00:06<02:35,  2.97it/s]\n  6%|\u258c         | 30/487 [00:06<01:44,  4.36it/s]\n  7%|\u258b         | 34/487 [00:13<04:34,  1.65it/s]\n  8%|\u258a         | 39/487 [00:13<03:04,  2.42it/s]\n  9%|\u2589         | 44/487 [00:13<02:06,  3.49it/s]\n 10%|\u2589         | 48/487 [00:19<04:39,  1.57it/s]\n 11%|\u2588         | 53/487 [00:19<03:09,  2.29it/s]\n 12%|\u2588\u258f        | 58/487 [00:19<02:10,  3.28it/s]\n 13%|\u2588\u258e        | 63/487 [00:20<01:31,  4.62it/s]\n 14%|\u2588\u258d        | 67/487 [00:26<03:59,  1.76it/s]\n 15%|\u2588\u258d        | 73/487 [00:26<02:33,  2.69it/s]\n 16%|\u2588\u258c        | 79/487 [00:26<01:42,  3.97it/s]\n 17%|\u2588\u258b        | 83/487 [00:32<03:52,  1.74it/s]\n 18%|\u2588\u258a        | 89/487 [00:32<02:33,  2.60it/s]\n 20%|\u2588\u2589        | 95/487 [00:33<01:43,  3.78it/s]\n 20%|\u2588\u2588        | 99/487 [00:39<03:44,  1.73it/s]\n 21%|\u2588\u2588\u258f       | 104/487 [00:39<02:37,  2.43it/s]\n 23%|\u2588\u2588\u258e       | 110/487 [00:39<01:45,  3.59it/s]\n 23%|\u2588\u2588\u258e       | 114/487 [00:45<03:43,  1.67it/s]\n 25%|\u2588\u2588\u258d       | 120/487 [00:46<02:26,  2.50it/s]\n 26%|\u2588\u2588\u258c       | 125/487 [00:46<01:44,  3.45it/s]\n 26%|\u2588\u2588\u258b       | 129/487 [00:52<03:38,  1.64it/s]\n 28%|\u2588\u2588\u258a       | 135/487 [00:52<02:22,  2.47it/s]\n 29%|\u2588\u2588\u2589       | 141/487 [00:52<01:35,  3.62it/s]\n 30%|\u2588\u2588\u2589       | 145/487 [00:59<03:21,  1.69it/s]\n 31%|\u2588\u2588\u2588       | 150/487 [00:59<02:21,  2.38it/s]\n 32%|\u2588\u2588\u2588\u258f      | 155/487 [00:59<01:39,  3.33it/s]\n 33%|\u2588\u2588\u2588\u258e      | 160/487 [01:05<03:12,  1.70it/s]\n 34%|\u2588\u2588\u2588\u258d      | 165/487 [01:05<02:14,  2.39it/s]\n 35%|\u2588\u2588\u2588\u258d      | 170/487 [01:05<01:34,  3.34it/s]\n 36%|\u2588\u2588\u2588\u258c      | 175/487 [01:05<01:07,  4.64it/s]\n 37%|\u2588\u2588\u2588\u258b      | 180/487 [01:12<02:43,  1.88it/s]\n 38%|\u2588\u2588\u2588\u258a      | 186/487 [01:12<01:47,  2.80it/s]\n 39%|\u2588\u2588\u2588\u2589      | 191/487 [01:12<01:17,  3.84it/s]\n 40%|\u2588\u2588\u2588\u2588      | 195/487 [01:18<02:52,  1.69it/s]\n 41%|\u2588\u2588\u2588\u2588\u258f     | 201/487 [01:18<01:52,  2.54it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 207/487 [01:19<01:15,  3.71it/s]\n 44%|\u2588\u2588\u2588\u2588\u258e     | 212/487 [01:25<02:31,  1.81it/s]\n 45%|\u2588\u2588\u2588\u2588\u258d     | 217/487 [01:25<01:47,  2.51it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 222/487 [01:25<01:16,  3.46it/s]\n 46%|\u2588\u2588\u2588\u2588\u258b     | 226/487 [01:31<02:39,  1.64it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 231/487 [01:32<01:49,  2.33it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 236/487 [01:32<01:16,  3.28it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 240/487 [01:38<02:37,  1.57it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 245/487 [01:38<01:46,  2.26it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 251/487 [01:38<01:09,  3.41it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 256/487 [01:45<02:14,  1.72it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 262/487 [01:45<01:28,  2.54it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 267/487 [01:45<01:03,  3.49it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 272/487 [01:51<02:04,  1.73it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 277/487 [01:51<01:27,  2.41it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 282/487 [01:52<01:01,  3.34it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 287/487 [01:52<00:43,  4.62it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 292/487 [01:58<01:44,  1.87it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 298/487 [01:58<01:08,  2.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 303/487 [01:58<00:48,  3.78it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 307/487 [02:05<01:46,  1.70it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 312/487 [02:05<01:12,  2.41it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 318/487 [02:05<00:47,  3.58it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 322/487 [02:11<01:38,  1.67it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 327/487 [02:11<01:07,  2.37it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 332/487 [02:11<00:46,  3.33it/s]",
+  "rerun_bytes": 42432700,
+  "free_bytes": 14573961216
+}

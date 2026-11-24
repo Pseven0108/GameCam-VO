@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R1/operational/stage_entry.py", line 75, in <module>
+    sys.exit(main())
+  File "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R1/source_candidate/runner/run_native_stage.py", line 40, in main
+    else:restore_and_continue(ROOT,out,a.mode,lock)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R1/source_candidate/native_control/native_driver.py", line 122, in restore_and_continue
+    if receipt['source_pid']==receipt['new_process_pid']:raise ControlError('Restore did not enter a fresh process')
+  File "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R1/source_candidate/native_control/snapshot.py", line 252, in read_manifest
+    if p.is_symlink():raise ControlError('Linked checkpoint root')
+control_common.ControlError: Linked checkpoint root

@@ -1,0 +1,62 @@
+[
+  {
+    "arm": "B1",
+    "keyframes": 127,
+    "KF_full_max_abs_matrix_difference": 1.903988098206355e-05,
+    "KF_full_max_translation_delta": 1.9441545879010382e-05,
+    "KF_full_max_rotation_delta_deg": 9.349503640779317e-05,
+    "preliminary_ate_sim3": 17.469482156810198,
+    "global_fit_scale": 4.177531874708648,
+    "endpoint": {
+      "arm": "B1",
+      "stage": "FINAL_EXPORT",
+      "rgb_start": 312,
+      "rgb_end": 328,
+      "camera_start": 311,
+      "camera_end": 327,
+      "no_interpolation": true,
+      "status": "VALID",
+      "estimate_raw_length": 4.016056160441605,
+      "gt_length_game_units": 26.61453089266415,
+      "raw_numeric_length_ratio": 0.15089712370427552,
+      "inherited_sref": 19.1341794347,
+      "inherited_sref_displacement_ratio_pct": 288.72926411377307,
+      "global_sim3_fit_scale": 4.177531874708648,
+      "global_sim3_displacement_ratio_pct": 63.03775440764648,
+      "translation_rpe_inherited_sref_game_units": 50.23239410415544,
+      "translation_rpe_global_sim3_game_units": 9.840656245941778,
+      "direction_error_deg": 2.3758148801987367,
+      "rotation_rpe_deg": 0.03750126755017116
+    }
+  },
+  {
+    "arm": "B2",
+    "keyframes": 127,
+    "KF_full_max_abs_matrix_difference": 1.6729331955289695e-06,
+    "KF_full_max_translation_delta": 1.7780682868835965e-06,
+    "KF_full_max_rotation_delta_deg": 8.69424998650335e-05,
+    "preliminary_ate_sim3": 8.680145357169707,
+    "global_fit_scale": 62.58621184885007,
+    "endpoint": {
+      "arm": "B2",
+      "stage": "FINAL_EXPORT",
+      "rgb_start": 312,
+      "rgb_end": 328,
+      "camera_start": 311,
+      "camera_end": 327,
+      "no_interpolation": true,
+      "status": "VALID",
+      "estimate_raw_length": 0.41074635010064275,
+      "gt_length_game_units": 26.61453089266415,
+      "raw_numeric_length_ratio": 0.01543316137177748,
+      "inherited_sref": 19.1341794347,
+      "inherited_sref_displacement_ratio_pct": 29.530087893227105,
+      "global_sim3_fit_scale": 62.58621184885007,
+      "global_sim3_displacement_ratio_pct": 96.5903107111555,
+      "translation_rpe_inherited_sref_game_units": 18.755787791622705,
+      "translation_rpe_global_sim3_game_units": 0.9440070994103835,
+      "direction_error_deg": 1.3342585128752853,
+      "rotation_rpe_deg": 0.047660319483513645
+    }
+  }
+]

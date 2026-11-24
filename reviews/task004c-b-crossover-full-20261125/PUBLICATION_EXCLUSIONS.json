@@ -1,0 +1,648 @@
+[
+  {
+    "source": "raw_evidence/R2_READY/attempts/B1/native/events.out.tfevents.1795538391.jupyter-i79kcwfcpprebhvm.9007.0",
+    "sha256": "b0dcb4177929cff2904f5f7907da6b3ba727879615461f3828de34eec7a7a820",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/B1/native/video.npz",
+    "sha256": "8515936be98e0498d90c2a218d53a8157beaa9e90f73c292291a463385646fa9",
+    "bytes": 486878046,
+    "reason": "Native depth video contains input RGB: array inventory only, binary remains local",
+    "arrays": [
+      {
+        "name": "timestamps",
+        "shape": [
+          105
+        ],
+        "dtype": "float32",
+        "bytes": 420,
+        "raw_array_sha256": "e318419177cd1c85dc9bc7a3a382c44ec39f751fc11d43b4bcf0a22e4647ba9b"
+      },
+      {
+        "name": "images",
+        "shape": [
+          105,
+          3,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 290304000,
+        "raw_array_sha256": "e6595f25e94eb01375d7f66a95190050bb2f9d0aacc1868084bf91c0666595c8"
+      },
+      {
+        "name": "poses",
+        "shape": [
+          105,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 6720,
+        "raw_array_sha256": "86d9014de66325addf4c9e213b6df89c4afbcf3467847714b7b9fccf8063b41b"
+      },
+      {
+        "name": "tum_poses",
+        "shape": [
+          105,
+          7
+        ],
+        "dtype": "float32",
+        "bytes": 2940,
+        "raw_array_sha256": "79b10874d12cb9272a60b3ba83e0801d552281c49382a88b1b8563e8f16c5674"
+      },
+      {
+        "name": "mono_disps",
+        "shape": [
+          105,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 96768000,
+        "raw_array_sha256": "3a7df68f9bf5f5bd4b6f8cbb260eb35030ecff1eaf6d5a959a24d13a583ea6df"
+      },
+      {
+        "name": "droid_disps_up",
+        "shape": [
+          105,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 96768000,
+        "raw_array_sha256": "ef1f229fecad702f0c10f1c5b101ff51f23003d19f646d76a9a677d21200aade"
+      },
+      {
+        "name": "droid_disps",
+        "shape": [
+          105,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1512000,
+        "raw_array_sha256": "ebf6c29c9bcb74fa07142b999dd3006e7da2a5fb301e3ebca85400e17c4c4cc5"
+      },
+      {
+        "name": "intrinsics",
+        "shape": [
+          105,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 1680,
+        "raw_array_sha256": "a255b294082f51c52b8d470e90fc234953499e824e01ddcd955cbf7280d28f64"
+      },
+      {
+        "name": "uncertainties",
+        "shape": [
+          105,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1512000,
+        "raw_array_sha256": "5d321d42182f1fe7edc92065462be626c0b2a419653af04c7069dd13c51d4b51"
+      }
+    ]
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/B1/rerun_stream.rrd",
+    "sha256": "4bec6d57ed8e0e0f31eeb3d2c4cacc9a58e9bc65f9952482ba58ba5a9a574963",
+    "bytes": 41969341,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/record_S0/native/events.out.tfevents.1795537691.jupyter-i79kcwfcpprebhvm.7915.0",
+    "sha256": "a0abe970272326a1d9cc5ac32be28131323d0728ee4f00a157e1db9b0ee3454f",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/record_S0/rerun_stream.rrd",
+    "sha256": "3d45c13a9a65eac42285701be0eb4e90858916190ef9534cf28e00f3673b9fad",
+    "bytes": 134776479,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/record_S1/native/events.out.tfevents.1795536987.jupyter-i79kcwfcpprebhvm.7004.0",
+    "sha256": "6319c0f260573fd1869c77efce1ef02fa7118c2a40ee3ea0c440a542934709ad",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/record_S1/rerun_stream.rrd",
+    "sha256": "ba9f7689207da4bae379d177b1c89d3892b1e63593c6c61e97ba055a6bd4a848",
+    "bytes": 2051617,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/replay_D0_S1/native/events.out.tfevents.1795537364.jupyter-i79kcwfcpprebhvm.7394.0",
+    "sha256": "322ad471abf96f7281a08f281713d4608d7f907b87029b4c63a2ad7918a1a3dd",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/replay_D0_S1/rerun_stream.rrd",
+    "sha256": "b6e58f0b00a658179d887843003940d06ddb0f68181b52ba0526c24560d4e5c8",
+    "bytes": 24605102,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/replay_D1_S0/native/events.out.tfevents.1795538046.jupyter-i79kcwfcpprebhvm.8468.0",
+    "sha256": "351cb1d2b8865317ad669bb2d355f25ca4115a671630d6cec26457cad3a8007e",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/replay_D1_S0/rerun_stream.rrd",
+    "sha256": "5923ccfb31955b70d1f1a97bb1496de5027843d3b116f3d9e28c04df553d8b21",
+    "bytes": 2695258,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/restore_check/native/events.out.tfevents.1795536586.jupyter-i79kcwfcpprebhvm.6719.0",
+    "sha256": "d9d7afd335a151f8819154fc22b65c47a92c2950531f94ceb58dbe9696d570c3",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R2_READY/attempts/restore_check/rerun_stream.rrd",
+    "sha256": "b2e9340125c3bca8bedca82a5c76ff8a4f1c1564fa29f7a70705b0c007fdecba",
+    "bytes": 2254,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B1/native/events.out.tfevents.1795541128.jupyter-i79kcwfcpprebhvm.11032.0",
+    "sha256": "ec361269a8b71cf0884904cec613007c3051b6510dfe7df26dc96062400dc3b7",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B1/native/video.npz",
+    "sha256": "164820fbed31b8db7a0895f806d3004d57e294ae327e7b56cd64101ccedec247",
+    "bytes": 261904323,
+    "reason": "Native depth video contains input RGB: array inventory only, binary remains local",
+    "arrays": [
+      {
+        "name": "timestamps",
+        "shape": [
+          127
+        ],
+        "dtype": "float32",
+        "bytes": 508,
+        "raw_array_sha256": "5dd8e707e115de7b7a7d67387d2dd8d8dab95f93748583b7c9121eb290cbbdb6"
+      },
+      {
+        "name": "images",
+        "shape": [
+          127,
+          3,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 351129600,
+        "raw_array_sha256": "710ae5b2cd995b8d5d0f73406f41e73aa6e43538543a23740d0e6d65c2109330"
+      },
+      {
+        "name": "poses",
+        "shape": [
+          127,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 8128,
+        "raw_array_sha256": "c9b525335e8697b9113576fd887a7a0bfb55dfaf1f6dc753c839e77897844204"
+      },
+      {
+        "name": "tum_poses",
+        "shape": [
+          127,
+          7
+        ],
+        "dtype": "float32",
+        "bytes": 3556,
+        "raw_array_sha256": "cb39802974b032f92b09045a2e16758f6e6ecd10d2b5220bac7fd1f11f19ee12"
+      },
+      {
+        "name": "mono_disps",
+        "shape": [
+          127,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 117043200,
+        "raw_array_sha256": "87e4b3bd710721ac4739362304341c1e9bf0b456c53960bc58fd648862619535"
+      },
+      {
+        "name": "droid_disps_up",
+        "shape": [
+          127,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 117043200,
+        "raw_array_sha256": "626f29d004dc07784f96da29426ba625040910b63b380d175ae079038f8ce1ff"
+      },
+      {
+        "name": "droid_disps",
+        "shape": [
+          127,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1828800,
+        "raw_array_sha256": "d199f0903e43b9a0b0e7429a3a81044ccc13e21614b5f6557bd39c41c2867ac1"
+      },
+      {
+        "name": "intrinsics",
+        "shape": [
+          127,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 2032,
+        "raw_array_sha256": "0d20fa9f6082c5bdf54759e8e695517733330b2c55c39e9d21a6ecf49aa2e29c"
+      },
+      {
+        "name": "uncertainties",
+        "shape": [
+          127,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1828800,
+        "raw_array_sha256": "65d4d7c8df72161d047d336fe0b38637ca114f61b41d8eef692f245cf4cd430b"
+      }
+    ]
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B1/rerun_stream.rrd",
+    "sha256": "284debf4256e6de5dac646ab445f20048c40b2eefe40a2dff47aa64f7d69e526",
+    "bytes": 33437913,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B2/native/events.out.tfevents.1795542458.jupyter-i79kcwfcpprebhvm.12732.0",
+    "sha256": "b663bc80609ef91ee5179068f030efdffababa1b8459d84b983b25a6689f7468",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B2/native/video.npz",
+    "sha256": "ec0ed3244214f28553b73ed749ad0114260052c8b1ec64ddf2c0f72cdeec4f82",
+    "bytes": 261445460,
+    "reason": "Native depth video contains input RGB: array inventory only, binary remains local",
+    "arrays": [
+      {
+        "name": "timestamps",
+        "shape": [
+          127
+        ],
+        "dtype": "float32",
+        "bytes": 508,
+        "raw_array_sha256": "5dd8e707e115de7b7a7d67387d2dd8d8dab95f93748583b7c9121eb290cbbdb6"
+      },
+      {
+        "name": "images",
+        "shape": [
+          127,
+          3,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 351129600,
+        "raw_array_sha256": "710ae5b2cd995b8d5d0f73406f41e73aa6e43538543a23740d0e6d65c2109330"
+      },
+      {
+        "name": "poses",
+        "shape": [
+          127,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 8128,
+        "raw_array_sha256": "e6d40254b826450c49ecb447e3945385ebe7855f386f84592ee1cee130f2e279"
+      },
+      {
+        "name": "tum_poses",
+        "shape": [
+          127,
+          7
+        ],
+        "dtype": "float32",
+        "bytes": 3556,
+        "raw_array_sha256": "3ad372b1e6aab1441255f87512ebc30d9318d97daf4572fe02ec5429b8629d12"
+      },
+      {
+        "name": "mono_disps",
+        "shape": [
+          127,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 117043200,
+        "raw_array_sha256": "87e4b3bd710721ac4739362304341c1e9bf0b456c53960bc58fd648862619535"
+      },
+      {
+        "name": "droid_disps_up",
+        "shape": [
+          127,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 117043200,
+        "raw_array_sha256": "d3e32335fe8b04194d9da6e55d945ef5c7b68b644c332d15280de2d6fe6e715d"
+      },
+      {
+        "name": "droid_disps",
+        "shape": [
+          127,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1828800,
+        "raw_array_sha256": "d993542b6f71cc36c867d9eea93ee9388bcaba3e0fbc3d3fe7cc415b97ccfff5"
+      },
+      {
+        "name": "intrinsics",
+        "shape": [
+          127,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 2032,
+        "raw_array_sha256": "0d20fa9f6082c5bdf54759e8e695517733330b2c55c39e9d21a6ecf49aa2e29c"
+      },
+      {
+        "name": "uncertainties",
+        "shape": [
+          127,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1828800,
+        "raw_array_sha256": "da47769ce20c92a9f5d9b81b5727a12cb2b3dd7fc512b6eeb18f5d970c663084"
+      }
+    ]
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B2/rerun_stream.rrd",
+    "sha256": "369fcef64f23eefefef9c7f9c15afc86911c3ed3f163a6bb00af3a73f4e3a76c",
+    "bytes": 1051706949,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/run/attempts/restore_check/native/events.out.tfevents.1795535952.jupyter-i79kcwfcpprebhvm.6407.0",
+    "sha256": "4bdff7b1c1edd424364a4f8012fa2a8778b87308283c31c612f88437a1f3abf8",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B4/native/events.out.tfevents.1795543768.jupyter-i79kcwfcpprebhvm.14484.0",
+    "sha256": "bbbcd4b023dc2e49e7ee96bb5594031a8f6f7915fb8513b0c23ba205c9a65d2a",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B4/native/video.npz",
+    "sha256": "728938f3568992710ef0d6dab65569c235d3d704bc1f19ec98e54df9f0312ef8",
+    "bytes": 176920282,
+    "reason": "Native depth video contains input RGB: array inventory only, binary remains local",
+    "arrays": [
+      {
+        "name": "timestamps",
+        "shape": [
+          86
+        ],
+        "dtype": "float32",
+        "bytes": 344,
+        "raw_array_sha256": "3bab408ce75049dca9793b6a3874c8940ce9f48c79ce37be22206eefb5b0f1d8"
+      },
+      {
+        "name": "images",
+        "shape": [
+          86,
+          3,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 237772800,
+        "raw_array_sha256": "9bb00c5bdb6c2ff00d87c6f9c4e1b5690e6e9fe201a282ce7b18ec09ec65d1d1"
+      },
+      {
+        "name": "poses",
+        "shape": [
+          86,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 5504,
+        "raw_array_sha256": "1e785e29dd642f9dd801ab3ccffcb7ec35921e7710573174fd6613e080e2f214"
+      },
+      {
+        "name": "tum_poses",
+        "shape": [
+          86,
+          7
+        ],
+        "dtype": "float32",
+        "bytes": 2408,
+        "raw_array_sha256": "0801292b3f0d0d4833848ff5636ed60532d425c96997466f6aa84eb9010be07a"
+      },
+      {
+        "name": "mono_disps",
+        "shape": [
+          86,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 79257600,
+        "raw_array_sha256": "d9424a378cc94c6a588a6d4054a19b3f9693958879b5b3118a71235a970c8ced"
+      },
+      {
+        "name": "droid_disps_up",
+        "shape": [
+          86,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 79257600,
+        "raw_array_sha256": "1e6e5e0e489cdd20d799109369c5f0e097e4546a9014a4685eeb65f231694dda"
+      },
+      {
+        "name": "droid_disps",
+        "shape": [
+          86,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1238400,
+        "raw_array_sha256": "d0c841b8d48c98b86653a9e71190d67def0d94006a87786fd57b0dec7cb724e4"
+      },
+      {
+        "name": "intrinsics",
+        "shape": [
+          86,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 1376,
+        "raw_array_sha256": "5676aaf5e9e7646c89e32cfc79018cbfc3fac70013e4f36af7b83494d3a9aa1a"
+      },
+      {
+        "name": "uncertainties",
+        "shape": [
+          86,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1238400,
+        "raw_array_sha256": "0f779aa2332ac985cb2dc03f35b45d83dac0235a9617b363f55243186d4464a6"
+      }
+    ]
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B4/rerun_stream.rrd",
+    "sha256": "ef86d97dce1935a1fa2315a4a49eed560224db8a9f921c7738bc5b093d77532b",
+    "bytes": 3208329480,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B3/native/events.out.tfevents.1795545304.jupyter-i79kcwfcpprebhvm.16575.0",
+    "sha256": "9410a8d38ef6bee38580c73cd944e2e650283eb32bf60cf9e3d24c3a3e8fc956",
+    "bytes": 88,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B3/native/video.npz",
+    "sha256": "bc6b15707a00aec4334be04c5c4992d8f44a0c482575da5185989c7392a4dbc2",
+    "bytes": 177096793,
+    "reason": "Native depth video contains input RGB: array inventory only, binary remains local",
+    "arrays": [
+      {
+        "name": "timestamps",
+        "shape": [
+          86
+        ],
+        "dtype": "float32",
+        "bytes": 344,
+        "raw_array_sha256": "3bab408ce75049dca9793b6a3874c8940ce9f48c79ce37be22206eefb5b0f1d8"
+      },
+      {
+        "name": "images",
+        "shape": [
+          86,
+          3,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 237772800,
+        "raw_array_sha256": "9bb00c5bdb6c2ff00d87c6f9c4e1b5690e6e9fe201a282ce7b18ec09ec65d1d1"
+      },
+      {
+        "name": "poses",
+        "shape": [
+          86,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 5504,
+        "raw_array_sha256": "593b58fd16b3c65010b9bb6bb60f666aa0d1d6dc45e593263dead5ea9b852c91"
+      },
+      {
+        "name": "tum_poses",
+        "shape": [
+          86,
+          7
+        ],
+        "dtype": "float32",
+        "bytes": 2408,
+        "raw_array_sha256": "2c7de1377abe9cef70159280170a1ae53e231e6c2ee62afd6927da98fff7ba97"
+      },
+      {
+        "name": "mono_disps",
+        "shape": [
+          86,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 79257600,
+        "raw_array_sha256": "d9424a378cc94c6a588a6d4054a19b3f9693958879b5b3118a71235a970c8ced"
+      },
+      {
+        "name": "droid_disps_up",
+        "shape": [
+          86,
+          360,
+          640
+        ],
+        "dtype": "float32",
+        "bytes": 79257600,
+        "raw_array_sha256": "5793de52a29f49330d79188b274ca0105bf1ec7e8b8b59ce471f40de958f2b6d"
+      },
+      {
+        "name": "droid_disps",
+        "shape": [
+          86,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1238400,
+        "raw_array_sha256": "e067668f169b31bf8e87bdd6eb3c5715f7d3de38fe382d2d15215df10ba18eee"
+      },
+      {
+        "name": "intrinsics",
+        "shape": [
+          86,
+          4
+        ],
+        "dtype": "float32",
+        "bytes": 1376,
+        "raw_array_sha256": "5676aaf5e9e7646c89e32cfc79018cbfc3fac70013e4f36af7b83494d3a9aa1a"
+      },
+      {
+        "name": "uncertainties",
+        "shape": [
+          86,
+          45,
+          80
+        ],
+        "dtype": "float32",
+        "bytes": 1238400,
+        "raw_array_sha256": "eca50fa3eb9fedc9edb699f832f008061787412852ae20cbb53cb1beb215e9c9"
+      }
+    ]
+  },
+  {
+    "source": "raw_evidence/R3_OFFLINE/attempts/B3/rerun_stream.rrd",
+    "sha256": "748e5478fd0d474a5b2c22790cc1d2dacbdc86f402b354c0c2a4aae79bc60c98",
+    "bytes": 42432708,
+    "reason": "Large native recording, Tensor storage or RGB asset: retained locally with SHA/size"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "scope": "COMPLETED_CURRENT_TASK_LOGS_ONLY",
+  "temporary_system_volume_spool": true,
+  "local_raw_and_archive_verified": true,
+  "historical_files_touched": false,
+  "before_data_free": 11085111296,
+  "before_system_free": 11000905728,
+  "files": [
+    {
+      "logical_path": "attempts/B2/rerun_stream.rrd.gz",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B2/rerun_stream.rrd.gz",
+      "bytes": 826688060,
+      "sha256": "b892663d14df077c3644814e8813940807b3ae8802620e7ecad3ec0f7b70393a",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    },
+    {
+      "logical_path": "attempts/B2/native/video.npz",
+      "spool_path": "/root/gamecam-task004cb-r3-completed-spool/B2/native/video.npz",
+      "bytes": 261445460,
+      "sha256": "ec0ed3244214f28553b73ed749ad0114260052c8b1ec64ddf2c0f72cdeec4f82",
+      "logical_path_readback_matches": true,
+      "active_refs": [],
+      "rollback": "Copy verified spool bytes back to data-volume path atomically only when enough capacity is available"
+    }
+  ],
+  "unix": 1795544175.4429953,
+  "after_data_free": 12121120768,
+  "after_system_free": 9912762368
+}

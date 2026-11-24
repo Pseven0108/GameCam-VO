@@ -1,0 +1,37 @@
+--- frozen/native_control/native_driver.py
++++ in_memory/native_control/native_driver.py
+@@ -19,6 +19,8 @@
+ from src.tracker import Tracker
+ from src.utils.Printer import Printer
+ from run import setup_seed
++from gamecam_io_overlay import prepare_summary_writer,validate_rebound_output
++from runtime_io import install_lossless_video_io
+ 
+ 
+ def cached_priors():
+@@ -104,6 +106,7 @@
+     import src.utils.sys_timer as timers
+     import sys
+     torch.set_num_threads(2);cv2.setNumThreads(1)
++    cached_priors();install_lossless_video_io()
+     # Resolve frozen prior classes without rerunning either prior model.
+     for repo in ('yvanyin_metric3d_main','ywyue_FiT3D_main'):
+         path=pathlib.Path(os.environ['TORCH_HOME'])/repo
+@@ -112,7 +115,7 @@
+     torch.cuda.set_device(0)
+     torch.empty(0,device='cuda:0')  # Explicit context start inside admitted GPU mode.
+     ctx=mp.get_context('spawn');counter=ctx.Value('i',0);barrier=WriterBarrier(ctx)
+-    printer=RestoreIOPrinter(ctx);event_writer=SummaryWriter(str(out/'native'))
++    printer=RestoreIOPrinter(ctx);event_writer=prepare_summary_writer(out,SummaryWriter)
+     parent_pipe,pipe=ctx.Pipe()
+     observer_file=(out/'observer.jsonl').open('x',encoding='ascii',buffering=1)
+     services={'tracker_pipe':pipe,'event_writer':event_writer,'printer':printer,'video_counter':counter,
+@@ -143,7 +146,7 @@
+     tracker,stream=bundle['tracker'],bundle['stream'];controller.tracker=tracker;controller.video=tracker.video
+     stream.set_stage(stage)
+     rebind_receipt=rebind_output(bundle,out)
+-    pathlib.Path(tracker.output).mkdir(parents=True,exist_ok=False)
++    validate_rebound_output(bundle,out)
+     bundle['filler'].cfg=tracker.cfg
+     bundle['observer'].path=out/'observer.jsonl'
+     task003_observer._recorder=bundle['observer']

@@ -1,0 +1,14 @@
+{
+  "step": "OFFLINE_EVALUATION",
+  "script": "analysis/offline_crossover_r3.py",
+  "script_sha256": "7c4817f906ca3a06edd7aaf807929d311632c901e4f8789d9d75144538495957",
+  "start_unix": 1795546552.088521,
+  "end_unix": 1795546608.2264924,
+  "exit_code": 1,
+  "stdout_path": "evidence/R3_FINAL_CPU_OFFLINE_EVALUATION.stdout.txt",
+  "stdout_sha256": "84626637a311bcadf4ae0f99d02b7ed85cea0bd842c677375c84fcb5f456bb0a",
+  "stderr_path": "evidence/R3_FINAL_CPU_OFFLINE_EVALUATION.stderr.txt",
+  "stderr_sha256": "6befebed8deb96a162e0208a95802a8a9de6da35a92aa06d953b0403d7b22eaa",
+  "CUDA_VISIBLE_DEVICES": "",
+  "model_runs_started": 0
+}

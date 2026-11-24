@@ -1,0 +1,9 @@
+{
+  "test": "full_buffer_tmpfs_stress",
+  "exit_code": 0,
+  "runtime_seconds": 11.545087575912476,
+  "stdout_tail": "{\"scope\": \"CPU_SYNTHETIC_NATIVE_SIZED_SHARED_BUFFERS_NOT_REAL_TRACKER_RERUN_OR_C0\", \"total_tensor_bytes\": 2246400000, \"parent_pid\": 10715, \"child_pids\": [10783, 10784], \"child_exit_codes\": [0, 0], \"shm_delta_bytes\": 2246463488, \"duration_seconds\": 9.228636503219604, \"cuda_initialized\": false, \"PASS\": true}\n",
+  "stderr_tail": "",
+  "script_sha256": "c034c3d76cfda00026f77d861776d047b6e13dd562a3ea21482575f6329cc37d",
+  "cuda_visible_devices": ""
+}

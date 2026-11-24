@@ -1,0 +1,18 @@
+{
+  "schema": "CONCATENATE_GZIP_CHUNKS_V1",
+  "original_source": "raw_evidence/R2_READY/attempts/record_S1/schedule.jsonl",
+  "original_bytes": 14429134,
+  "original_sha256": "41faeb317a5f8d0618634d69542356f8cc0b8fa96e65ea71498f93ccd6fbcff1",
+  "public_log_bytes": 14429134,
+  "public_log_sha256": "41faeb317a5f8d0618634d69542356f8cc0b8fa96e65ea71498f93ccd6fbcff1",
+  "sanitized": false,
+  "chunks": [
+    {
+      "path": "raw_evidence/R2_READY/attempts/record_S1/schedule.jsonl.part001.gz",
+      "uncompressed_bytes": 14429134,
+      "bytes": 326703,
+      "sha256": "bca2fb8c35a2c158aea3d7fcef9bba241a58b24b60eb9727090ce138b04b899d"
+    }
+  ],
+  "reconstruction": "Concatenate gzip.decompress bytes in listed order. Public hash covers concatenated sanitized bytes; original hash authenticates retained canonical raw evidence."
+}

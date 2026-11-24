@@ -1,0 +1,9 @@
+{
+  "test": "test_r3_recovery",
+  "exit_code": 0,
+  "runtime_seconds": 27.89589810371399,
+  "stdout_tail": "{\"total\": 10, \"passed\": 10, \"failures\": [], \"cuda_initialized\": false, \"model_constructed\": false, \"original_source_changed\": false, \"PASS\": true}\n",
+  "stderr_tail": "test_arena_paths_owned_distinct_formal_modes (__main__.RecoveryTests) ... ok\ntest_ast_only_restore_entry_changes (__main__.RecoveryTests) ... ok\ntest_cached_priors_precedes_restore_and_cuda (__main__.RecoveryTests) ... ok\ntest_data_floor_failure (__main__.RecoveryTests) ... ok\ntest_frozen_cached_hub_routing_and_unknown_rejection (__main__.RecoveryTests) ... ok\ntest_only_relocated_reservation_replaced (__main__.RecoveryTests) ... ok\ntest_original_identity_and_gpu_failures_preserved (__main__.RecoveryTests) ... ok\ntest_real_failed_video_lossless_round_trip (__main__.RecoveryTests) ... ok\ntest_storage_boundary_pass (__main__.RecoveryTests) ... ok\ntest_tmpfs_floor_failure (__main__.RecoveryTests) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 27.666s\n\nOK\n",
+  "script_sha256": "c7a062094786c9ff56fbe4bf7efb0dab1558c7605ac2293c1f54123476f7ebdb",
+  "cuda_visible_devices": ""
+}

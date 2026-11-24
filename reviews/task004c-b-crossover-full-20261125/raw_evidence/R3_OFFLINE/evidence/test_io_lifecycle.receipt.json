@@ -1,0 +1,9 @@
+{
+  "test": "test_io_lifecycle",
+  "exit_code": 0,
+  "runtime_seconds": 2.5039405822753906,
+  "stdout_tail": "{\"total\": 18, \"passed\": 18, \"failures\": [], \"errors\": [], \"real_SummaryWriter\": true, \"scene\": \"native\", \"real_rebind_output\": true, \"cuda_initialized\": false, \"model_initialized\": false, \"CPU_fixtures_are_IO_fields_only\": true}\n",
+  "stderr_tail": "test_captured_model_class_sources_remain_immutable (__main__.LifecycleTests) ... ok\ntest_changed_owner_receipt_refused (__main__.LifecycleTests) ... ok\ntest_directory_creation_has_single_owner (__main__.LifecycleTests) ... ok\ntest_escaped_output_refused (__main__.LifecycleTests) ... ok\ntest_exact_driver_diff_is_io_only (__main__.LifecycleTests) ... ok\ntest_existing_unowned_native_refused (__main__.LifecycleTests) ... ok\ntest_failed_attempt_is_refused (__main__.LifecycleTests) ... ok\ntest_fresh_attempt_is_exclusive (__main__.LifecycleTests) ... ok\ntest_legacy_collision_reproduced_without_gpu (__main__.LifecycleTests) ... ok\ntest_native_created_before_real_writer (__main__.LifecycleTests) ... ok\ntest_native_symlink_refused (__main__.LifecycleTests) ... ok\ntest_nested_symlink_refused (__main__.LifecycleTests) ... ok\ntest_owned_service_subdirectory_allowed (__main__.LifecycleTests) ... ok\ntest_real_event_file_readback (__main__.LifecycleTests) ... ok\ntest_real_rebind_and_no_repeated_mkdir (__main__.LifecycleTests) ... ok\ntest_rebind_keeps_existing_directory_inode (__main__.LifecycleTests) ... ok\ntest_wrong_run_id_refused (__main__.LifecycleTests) ... ok\ntest_wrong_uid_refused (__main__.LifecycleTests) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.249s\n\nOK\n",
+  "script_sha256": "0c63cdd46d243e37c69dfa07b4cc6a85f9b2f1af5259ea3d0fbaddabc79a148b",
+  "cuda_visible_devices": ""
+}

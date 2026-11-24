@@ -1,0 +1,646 @@
+# **GameCam-VO 最新实验审查**
+
+这次有一个非常重要的突破：
+
+**我们终于拿到了真实 GPU C0，并且成功在新的 GPU Python 进程中恢复了它。**
+
+这意味着之前持续困扰我们的 Metric3D、ConfigDict、Format 三类序列化问题，已经全部跨过了本轮验收门槛。
+
+但 RGB019 续跑时出现了一个新的运行目录冲突，导致实验停止。
+
+**TASK004C-B-FORMAT-RUNNER**
+
+PARTIAL
+
+# **真实 C0 已成功**
+
+# **217/217**
+
+CPU 发布验收
+
+# **854/854**
+
+C0 文件完整性
+
+# **18,143**
+
+恢复对象节点
+
+# **0**
+
+RGB019 已处理帧数
+
+| 阶段             | 结果      |
+| -------------- | ------- |
+| Format 修复      | 22/22   |
+| ConfigDict     | 14/14   |
+| 历史回归           | 152/152 |
+| 真实模型 CPU 跨进程恢复 | 通过      |
+| 真实 GPU C0      | 成功      |
+| 新 GPU 进程恢复     | 成功      |
+| RGB019         | 目录冲突，失败 |
+| Short80        | 0/4     |
+| B1～B4          | 0/4     |
+
+以上来自你指定的固定 Commit `02e86bc08119a7fd35d13c50704d8f8255fa84d9`，不是根据 Codex 的口头总结推断。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+## **一、这次最重要的三个成果**
+
+### **1. 真实 C0 终于生成了**
+
+通过
+
+本次 C0 的关键数据：
+
+| 项目                | 实测                   |
+| ----------------- | -------------------- |
+| RGB 输入            | 001～018              |
+| 初始化 BA 调用         | 24次                  |
+| 下一输入帧             | RGB019               |
+| 下一帧 counter       | 12                   |
+| 唯一 Tensor Storage | 852                  |
+| 对象图节点             | 18,143               |
+| 未压缩 Storage       | 10,027,350,972 bytes |
+| 完整归档              | 2,517,456,938 bytes  |
+| C0 文件核验           | 854/854              |
+
+C0 状态 SHA256：
+
+`18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92`
+
+这是真正由 DROID-W GPU 运行生成的 C0，不是 CPU 模拟数据，也不是人为构造的测试快照。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+### **2. 新 GPU 进程恢复成功**
+
+通过
+
+这一项比 C0 文件生成本身更重要。
+
+因为我们真正需要证明的是：
+
+保存时的 Python 进程可以退出，新的 Python 进程仍然能够恢复原来的运行状态。
+
+本次报告确认：
+
+- 18,143个对象节点恢复。
+- Tensor 和 alias 关系一致。
+- 对象图重新编码一致。
+- 下一输入帧身份匹配。
+- RNG 最后恢复成功。
+
+这说明我们已经跨过了此前最难的工程门槛。
+
+### **3. 三类序列化问题全部解决**
+
+| 问题                       | 当前结果 |
+| ------------------------ | ---- |
+| Metric3D identity lambda | 已解决  |
+| MMCV ConfigDict          | 已解决  |
+| timm Format 枚举           | 已解决  |
+
+而且没有通过把特殊对象简单转换成普通字符串或字典来绕过。
+
+这对后续四组交叉实验非常重要。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+## **二、RGB019 为什么失败？**
+
+运行器 I/O 问题，不是算法问题
+
+这次问题非常明确，发生在 `native_driver.py` 的输出目录管理。
+
+程序执行顺序：
+
+1. 创建 `SummaryWriter(out/'native')`。
+2. TensorBoard 的 `SummaryWriter` 自动创建 `native` 文件夹。
+3. C0 恢复成功。
+4. 执行 `rebind_output()`。
+5. 程序再次对同一个目录执行 `mkdir(exist_ok=False)`。
+6. Python 抛出 `FileExistsError`。
+
+也就是：
+
+**第一次创建**
+
+`SummaryWriter`
+
+成功创建 native/
+
+**第二次创建**
+
+`tracker.output.mkdir(exist_ok=False)`
+
+目录已存在，程序退出
+
+最关键的是：这次错误发生在 `tracker.run(stream)` 之前。
+
+所以：
+
+- C0 恢复成功。
+- RGB019 没有进入 Tracker。
+- `native_trace.jsonl` 是0字节。
+- 没有执行 Short80。
+- 没有执行正式四组实验。
+
+这不是 GPU 算力不足，也不是 DROID-W 优化失败。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub+1
+
+
+
+## **三、我认为这次不需要重新采集 C0**
+
+这是本轮我最重要的技术判断。
+
+当前 C0 已经固定了源码身份：
+
+`5d357c1d3079de134dd8b41a20a00632da37f0b0`
+
+我们遇到的问题只在实验输出目录管理，并不涉及：
+
+- Metric3D。
+- DroidNet。
+- Tracker 的优化状态。
+- Tensor Storage。
+- BA 数学公式。
+- 模型权重。
+- 深度估计。
+- CUDA 扩展。
+
+因此，我建议使用 **纯 I/O 兼容 Overlay（运行器兼容补丁）**。
+
+简单理解：
+
+保留已经生成的 C0，不修改原来的实验算法，只修复恢复之后的文件夹创建逻辑。
+
+但是必须做到：
+
+1. 原始 C0 的源码 Commit 不变。
+2. Overlay 单独记录 SHA256。
+3. 只允许修改输出目录生命周期。
+4. 所有被捕获的模型类、Storage Adapter、优化代码保持原样。
+5. 新 Python 进程仍然先验证原始源码身份，再加载 Overlay。
+6. 不能通过关闭 source pin 检查来绕过问题。
+
+这比重新消耗一次 GPU C0 采集更合理。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub
+
+
+
+## **四、还有一个需要注意的资源问题**
+
+**当前资源状态**
+
+# **13.65 GiB**
+
+数据盘可用空间
+
+安全保留线
+
+**10 GiB**
+
+可使用的剩余空间
+
+**约3.65 GiB**
+
+- RTX 3090：在线。
+- GPU compute apps：空。
+- C0：保留。
+- 失败 Arena：保留。
+- 没有服务器重启。
+
+这里我有一个提醒：
+
+现在只有约3.65 GiB 的安全空间余量。后面是四组完整实验，不能在没有计算实际输出预算的情况下直接启动。
+
+我不建议删除 C0、失败 Arena 或历史实验结果来腾空间。
+
+应该先计算每组实验的新增 Storage、轨迹、日志和 Rerun 输出，必要时只清理经过确认的临时文件。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+## **五、下一步直接交给 Codex**
+
+我建议任务名称：
+
+**TASK004C-B-RGB019-IO-COMPAT-RESUME**
+
+这次不再修复模型序列化器，不再重新开发 Harness。
+
+只解决 RGB019 输出目录冲突，并利用现有 C0 继续实验。
+
+# TASK004C-B-RGB019-IO-COMPAT-RESUME
+
+优先级：最高\
+执行模式：AUTONOMOUS\
+目标：复用已经成功保存并恢复的真实GPU C0，修复输出目录冲突，成功处理RGB019，随后自动进入Short80和正式B1～B4实验。
+
+## 1. 固定实验身份
+
+GitHub评审Commit：
+
+02e86bc08119a7fd35d13c50704d8f8255fa84d9
+
+原始实验候选Commit：
+
+5d357c1d3079de134dd8b41a20a00632da37f0b0
+
+原始tree：
+
+c018a65009aaf4f7457e2da5225a5f322a168b77
+
+C0 state SHA：
+
+18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92
+
+C0下一输入：
+
+RGB019
+
+counter=12
+
+C0必须保持不可变。
+
+## 2. 任务A：输出目录修复
+
+定位：
+
+native_control/native_driver.py
+
+已知问题：
+
+line 115：\
+SummaryWriter(out/'native')自动创建目录。
+
+line 146：\
+恢复和rebind_output后再次执行mkdir(exist_ok=False)，产生FileExistsError。
+
+修复原则：
+
+- 一个目录只能有一个创建责任方。
+- attempt根目录继续使用排他创建。
+- native子目录必须明确创建者。
+- 创建后检查真实路径。
+- 检查不能是符号链接。
+- 检查必须位于当前attempt根目录内。
+- 检查目录归属和运行ID。
+- SummaryWriter使用经过验证的目录。
+- rebind_output不得再次盲目创建同一个目录。
+- 不得复用旧失败attempt。
+- 不得通过全局捕获FileExistsError解决。
+
+禁止：
+
+- 修改Tracker优化状态。
+- 修改BA。
+- 修改Metric3D。
+- 修改CUDA。
+- 修改模型权重。
+- 修改R2配置。
+- 修改C0内容。
+
+## 3. 任务B：纯I/O兼容Overlay
+
+保留原始C0源码pin。
+
+建立独立兼容Overlay：
+
+TASK004C_B_IO_COMPAT_OVERLAY
+
+必须独立记录：
+
+- 原始base commit。
+- 原始tree SHA。
+- Overlay文件列表。
+- Overlay diff。
+- Overlay SHA256。
+- 运行时加载顺序。
+
+Overlay只允许包含输出目录创建和验证逻辑。
+
+不得修改：
+
+- 所有被捕获的模型类。
+- Tensor Storage Adapter。
+- ConfigDict Adapter。
+- Format Adapter。
+- Metric3D identity Adapter。
+- DroidNet。
+- FactorGraph。
+- DepthVideo。
+- BA实现。
+- CUDA扩展。
+- 优化参数。
+
+必须逐文件对比原始source pin。
+
+如果发现超出I/O范围的修改，立即停止。
+
+不得伪造新的原始source commit。
+
+## 4. 任务C：真实CPU文件系统回归
+
+使用真实TensorBoard SummaryWriter。
+
+使用R2配置：
+
+scene=native
+
+使用真实：
+
+- SummaryWriter。
+- rebind_output。
+- 文件系统。
+- native目录。
+- attempt目录。
+
+覆盖：
+
+1. 全新attempt创建成功。
+2. native目录创建成功。
+3. SummaryWriter创建成功。
+4. C0恢复后rebind_output成功。
+5. 不重复创建native目录。
+6. 既有合法服务子目录处理正确。
+7. 旧失败attempt拒绝。
+8. 符号链接拒绝。
+9. 路径逃逸拒绝。
+10. 错误目录归属拒绝。
+
+禁止使用之前的空Sink替代SummaryWriter。
+
+禁止使用scene=synthetic代替scene=native。
+
+输出：
+
+TASK004C_B_NATIVE_WRITER_LIFECYCLE.md
+
+TASK004C_B_IO_OVERLAY_AUDIT.md
+
+TASK004C_B_IO_OVERLAY_SHA256.txt
+
+## 5. 任务D：复用现有C0恢复
+
+CPU测试通过后，自动继续。
+
+不得重新采集C0。
+
+先验证：
+
+- C0 state SHA。
+- 原始source pin。
+- Overlay SHA。
+- 47个状态族。
+- 852个Storage。
+- Tensor alias。
+- 18,143对象节点。
+- RNG。
+- 下一输入RGB019。
+- counter=12。
+
+从新的Python GPU进程恢复。
+
+使用独立的新attempt目录。
+
+不覆盖上次失败attempt。
+
+## 6. 任务E：真实处理RGB019
+
+使用真实3090。
+
+恢复完成后实际读取RGB019。
+
+必须确认：
+
+1. RGB019进入真实DataLoader。
+2. RGB019进入Tracker。
+3. 出现真实frame event。
+4. native_trace.jsonl不再是0字节。
+5. SummaryWriter正常写入。
+6. Rerun recording正常追加。
+7. graph状态正常。
+8. BA调用正常。
+9. 下一帧索引正确。
+10. 不发生目录冲突。
+
+不能只依据进程退出码判断成功。
+
+不能只依据恢复Receipt判断RGB019成功。
+
+必须有真实frame event和输入身份。
+
+## 7. 任务F：Short80交叉实验
+
+RGB019成功后，自动继续原计划：
+
+A. D=1自然调度生成S1。
+
+B. D=0重放S1。
+
+C. D=0自然调度生成S0。
+
+D. D=1重放S0。
+
+处理至RGB080。
+
+W/U保持原设计。
+
+记录完整：
+
+- MotionFilter。
+- Keyframe事件。
+- FactorGraph事件。
+- BA调用。
+- D/W/U实际值。
+- graph topology hash。
+
+不得冻结连续优化状态。
+
+不得静默跳过Replay事件。
+
+四组短程验证全部通过后进入正式实验。
+
+## 8. 任务G：正式B1/B2/B3/B4
+
+按照原始实验矩阵执行：
+
+B1：D=1，S1。
+
+B2：D=0，S1。
+
+B3：D=1，S0。
+
+B4：D=0，S0。
+
+每组从相同不可变C0独立恢复。
+
+处理完整487帧。
+
+执行原生Final BA及TrajectoryFiller。
+
+分别保存Frontend、Final BA、Filler轨迹。
+
+完成Raw Translation、SE3 ATE、Sim3 ATE、RPE、Rotation RMSE、Segment Scale Ratio等统一评价。
+
+GT只能用于离线评价。
+
+不得修改算法数学公式。
+
+## 9. 数据盘预算
+
+当前历史可用空间13.647614 GiB。
+
+保留10 GiB安全余量。
+
+可用预算约3.65 GiB。
+
+GPU启动前重新测量真实空间。
+
+逐组估算：
+
+- Arena。
+- 轨迹。
+- Rerun。
+- 日志。
+- Final BA。
+- Filler。
+- 指标和报告。
+
+优先复用可验证的临时工作Arena。
+
+每组结束后确认无活动映射再回收本组临时数据。
+
+C0、失败Arena、原始日志、历史实验不得删除。
+
+如果正式四组预算超过空间上限：\
+先提交空间预算报告，停止新增GPU实验。\
+不得自动删除历史证据或降低buffer。
+
+## 10. 自动执行与停止
+
+本任务沿用此前用户的长程自动执行授权。
+
+不需要逐阶段批准。
+
+不得重新运行DROID-SLAM。
+
+不得重新部署服务器。
+
+不得重启3090。
+
+不得修改防火墙。
+
+如果Overlay无法证明纯I/O兼容：\
+停止，不得绕过source pin。
+
+如果CPU真实SummaryWriter测试失败：\
+停止，不启动GPU。
+
+如果RGB019真实frame event未出现：\
+停止，不进入Short80。
+
+如果Replay事件不一致：\
+停止，不进入正式四组。
+
+如果磁盘空间不满足：\
+停止并保留现场。
+
+## 11. GitHub交付
+
+仓库：
+
+[https://github.com/Pseven0108/GameCam-VO](https://github.com/Pseven0108/GameCam-VO)
+
+新建独立分支。
+
+提交：
+
+- I/O修复diff。
+- Overlay SHA。
+- CPU测试。
+- RGB019真实运行Receipt。
+- Short80结果。
+- B1/B2/B3/B4结果。
+- 资源监控。
+- 最终研究报告。
+
+更新PROJECT_STATUS.md和REVIEW_INDEX.md。
+
+不得上传模型权重、RGB/GT、原始Arena、凭据。
+
+## 最终目标
+
+复用现有C0。
+
+修复目录冲突。
+
+成功处理RGB019。
+
+完成Short80。
+
+完成正式四组交叉实验。
+
+生成可公开审查的完整实验结果。
+
+END
+
+## **六、这次实验对我们的研究意味着什么？**
+
+我想特别强调一下进展。
+
+之前我们一直在解决：
+
+- 能不能正确保存 DROID-W 的运行状态？
+- 能不能把状态恢复到另一个 Python 进程？
+- Metric3D、FiT3D、DroidNet 的内部对象能不能完整恢复？
+
+现在这三个问题已经有了真实 GPU 证据。
+
+下一步终于可以回到真正的科研问题：
+
+**DROID-W 的深度分支 D 是否会直接或间接影响局部平移尺度？**
+
+我们最终需要得到：
+
+| 实验       | 核心问题              |
+| -------- | ----------------- |
+| B1 vs B2 | 固定 S1，D 是否影响平移恢复？ |
+| B3 vs B4 | 固定 S0，D 是否影响平移恢复？ |
+| B1 vs B3 | D 开启时，调度是否影响结果？   |
+| B2 vs B4 | D 关闭时，调度是否影响结果？   |
+
+这才是我们真正需要写进论文的实验。
+
+**我的最终评审意见：本轮工程成果值得肯定，C0 和跨进程 GPU 恢复均已通过。当前只剩一个明确、局部、可修复的文件系统问题。建议复用现有 C0，采用纯 I/O Overlay 修复，不重新跑初始化，也不再重复建设序列化系统。**
+
+下一次我最希望看到的不是又一份 CPU PASS 报告，而是：
+
+下一个关键里程碑
+
+**RGB019 真正进入 DROID-W Tracker，并成功产生第一条续跑 Frame Event。**

@@ -1,0 +1,48 @@
+{
+  "result": {
+    "unix": 1795546488.8037207,
+    "candidate_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "candidate_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+    "candidate_clean": true,
+    "original_source_clean": true,
+    "candidate_files": 3745,
+    "candidate_all_match": true,
+    "original_source_files": 3745,
+    "original_source_all_match": true,
+    "protected_assets": 6,
+    "protected_all_match": true,
+    "runtime_assets": 8,
+    "runtime_all_match": true,
+    "C0_storage_files": 852,
+    "C0_original_and_copy_all_match": true,
+    "C0_state_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+    "free_disk_bytes": 14492872704,
+    "shm": {
+      "total": 25769803776,
+      "used": 3884888064,
+      "free": 21884915712
+    },
+    "instance_rebooted": false,
+    "instance_shutdown": false,
+    "new_C0_captures": 0,
+    "baseline_math_changed": false
+  },
+  "protected_checks": {
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so": true,
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": true,
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": true,
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": true,
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": true
+  },
+  "runtime_checks": {
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/depth_video.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/factor_graph.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/frontend.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/tracker.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/slam.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/motion_filter.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/backend.py": true,
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/trajectory_filler.py": true
+  }
+}

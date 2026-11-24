@@ -1,0 +1,16 @@
+{
+  "scope": "ARTIFACT_SERIALIZATION_AND_LOCAL_ASSET_ROUTING_ONLY",
+  "hub_sources": {
+    "yvanyin_metric3d_main": {
+      "hubconf_sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119"
+    },
+    "ywyue_FiT3D_main": {
+      "hubconf_sha256": "7dc9a4458d03fe6671d677cab46da06ec64e9319318b7644f0bda0063d015433"
+    }
+  },
+  "numpy_video_writer": "numpy.savez_compressed",
+  "other_npz_writer": "original numpy.savez",
+  "arena": "/dev/shm/gamecam_task004cb_io_r3/8b562b5f32a3_B1",
+  "optimizer_math_changed": false,
+  "weights_changed": false
+}

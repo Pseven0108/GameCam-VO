@@ -1,0 +1,103 @@
+{
+  "scope": "Current R3 four-arm monitor; 5 second target sampling interval",
+  "records": 999,
+  "first_sample_unix": 1795541321.950376,
+  "last_sample_unix": 1795546376.340988,
+  "max_observed_sampling_gap_s": 5.236381769180298,
+  "timeline_sha256": "84606f03cdd198c004cb1e569482d3e5c1ff9fbdfb490edbb4edb33d87ad8a0f",
+  "disk_floor_bytes": 10737418240,
+  "data_disk_floor_held_continuously": false,
+  "bad_samples": 53,
+  "disk_breach_episodes": [
+    {
+      "first_sample_unix": 1795544385.292021,
+      "last_sample_unix": 1795544385.292021,
+      "next_recovered_sample_unix": 1795544390.3361113,
+      "observed_bad_samples": 1,
+      "minimum_free_bytes": 10708004864,
+      "sampled_duration_upper_approx_s": 5.044090270996094
+    },
+    {
+      "first_sample_unix": 1795544446.053342,
+      "last_sample_unix": 1795544567.7552187,
+      "next_recovered_sample_unix": 1795544572.7993495,
+      "observed_bad_samples": 25,
+      "minimum_free_bytes": 10040369152,
+      "sampled_duration_upper_approx_s": 126.74600744247437
+    },
+    {
+      "first_sample_unix": 1795545145.4318082,
+      "last_sample_unix": 1795545277.1000276,
+      "next_recovered_sample_unix": 1795545282.159335,
+      "observed_bad_samples": 27,
+      "minimum_free_bytes": 9273053184,
+      "sampled_duration_upper_approx_s": 136.7275266647339
+    }
+  ],
+  "minimum_data_free_bytes": 9273053184,
+  "duration_is_sampled_approximation": true,
+  "stages": {
+    "B1": {
+      "samples": 157,
+      "first_sample_unix": 1795541321.950376,
+      "last_sample_unix": 1795542112.160679,
+      "gpu_peak_used_MiB_sampled": 16706.0,
+      "GPU_memory_includes_Rerun_and_process_overhead": true,
+      "minimum_data_free_bytes": 12732329984,
+      "max_shm_used_bytes": 6131150848,
+      "max_cgroup_current_bytes_sampled": 43332210688
+    },
+    "B2": {
+      "samples": 201,
+      "first_sample_unix": 1795542451.5988545,
+      "last_sample_unix": 1795543464.7472804,
+      "gpu_peak_used_MiB_sampled": 15792.0,
+      "GPU_memory_includes_Rerun_and_process_overhead": true,
+      "minimum_data_free_bytes": 11364155392,
+      "max_shm_used_bytes": 6131232768,
+      "max_cgroup_current_bytes_sampled": 46191968256
+    },
+    "B4": {
+      "samples": 189,
+      "first_sample_unix": 1795543763.194749,
+      "last_sample_unix": 1795544714.5833693,
+      "gpu_peak_used_MiB_sampled": 18320.0,
+      "GPU_memory_includes_Rerun_and_process_overhead": true,
+      "minimum_data_free_bytes": 10040369152,
+      "max_shm_used_bytes": 6131314688,
+      "max_cgroup_current_bytes_sampled": 45581639680
+    },
+    "B3": {
+      "samples": 190,
+      "first_sample_unix": 1795545302.381718,
+      "last_sample_unix": 1795546259.7885394,
+      "gpu_peak_used_MiB_sampled": 17518.0,
+      "GPU_memory_includes_Rerun_and_process_overhead": true,
+      "minimum_data_free_bytes": 14492909568,
+      "max_shm_used_bytes": 6131396608,
+      "max_cgroup_current_bytes_sampled": 47158329344
+    }
+  },
+  "owned_monitors_stopped": [
+    {
+      "workspace": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE",
+      "monitor_pid": 11326,
+      "monitor_cmdline": "/usr/bin/python3 -B -u /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/resource_monitor.py ",
+      "stop_marker": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/evidence/RESOURCE_MONITOR_STOP",
+      "exited": true
+    },
+    {
+      "workspace": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R2_READY",
+      "monitor_pid": 7206,
+      "monitor_cmdline": "/usr/bin/python3 -B -u /root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R2_READY/resource_monitor.py ",
+      "stop_marker": "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R2_READY/evidence/RESOURCE_MONITOR_STOP",
+      "exited": true
+    }
+  ],
+  "server_shutdown": false,
+  "server_rebooted": false,
+  "final_data_free_bytes": 14492876800,
+  "final_system_free_bytes": 6409236480,
+  "final_shm_free_bytes": 21884915712,
+  "model_processes_started_by_this_tool": 0
+}

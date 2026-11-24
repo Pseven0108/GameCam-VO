@@ -1,0 +1,24 @@
+{
+  "schema": "CONCATENATE_GZIP_CHUNKS_V1",
+  "original_source": "raw_evidence/R3_OFFLINE/attempts/B2/observer.jsonl",
+  "original_bytes": 59549223,
+  "original_sha256": "afe872de8950fac2f76370d8f6ef26f1053b4790acdef300fa50ab042c6b200e",
+  "public_log_bytes": 59549223,
+  "public_log_sha256": "afe872de8950fac2f76370d8f6ef26f1053b4790acdef300fa50ab042c6b200e",
+  "sanitized": false,
+  "chunks": [
+    {
+      "path": "raw_evidence/R3_OFFLINE/attempts/B2/observer.jsonl.part001.gz",
+      "uncompressed_bytes": 33577687,
+      "bytes": 2968749,
+      "sha256": "df44f7db8ca728b7b8d7c0916ab42b7b55c3c83c00ed1baca68e083777cf9b17"
+    },
+    {
+      "path": "raw_evidence/R3_OFFLINE/attempts/B2/observer.jsonl.part002.gz",
+      "uncompressed_bytes": 25971536,
+      "bytes": 4873192,
+      "sha256": "6b3f76942f467fcefba56294e8ded8bce61dbe45c57456985d77fc6ee9d2709e"
+    }
+  ],
+  "reconstruction": "Concatenate gzip.decompress bytes in listed order. Public hash covers concatenated sanitized bytes; original hash authenticates retained canonical raw evidence."
+}

@@ -1,0 +1,125 @@
+{
+  "hostname": "jupyter-i79kcwfcpprebhvm",
+  "endpoint": "sc01-ssh.gpuhome.cc:30448",
+  "origin": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1",
+  "reviewed_commit": {
+    "exit_code": 0,
+    "stdout": "668a88c74c7f7a88a572679d2bd8e86c0a05514b\n",
+    "stderr": ""
+  },
+  "tracked_status": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "GPU": {
+    "exit_code": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, 24576, 24125, 580.119.02, GPU-eb5a8cce-b187-8495-cdd5-3a8fea79e0f5\n",
+    "stderr": ""
+  },
+  "compute_apps": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "disk": {
+    "total": 105089261568,
+    "used": 78454575104,
+    "free": 26617909248
+  },
+  "shm": {
+    "total": 25769803776,
+    "used": 0,
+    "free": 25769803776
+  },
+  "cgroup": {
+    "memory.max": "107374182400",
+    "memory.current": "2210738176"
+  },
+  "static_minimum_free_bytes": 21005696908,
+  "complete_C0_size_known": false,
+  "protected_pins": {
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml": {
+      "exists": true,
+      "expected": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "actual": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so": {
+      "exists": true,
+      "expected": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "actual": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e"
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": {
+      "exists": true,
+      "expected": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "actual": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526"
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": {
+      "exists": true,
+      "expected": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "actual": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4"
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": {
+      "exists": true,
+      "expected": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "actual": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972"
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": {
+      "exists": true,
+      "expected": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "actual": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/depth_video.py": {
+      "exists": true,
+      "expected": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
+      "actual": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/factor_graph.py": {
+      "exists": true,
+      "expected": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
+      "actual": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/frontend.py": {
+      "exists": true,
+      "expected": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
+      "actual": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/tracker.py": {
+      "exists": true,
+      "expected": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+      "actual": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/slam.py": {
+      "exists": true,
+      "expected": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
+      "actual": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/motion_filter.py": {
+      "exists": true,
+      "expected": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+      "actual": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/backend.py": {
+      "exists": true,
+      "expected": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "actual": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d"
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/trajectory_filler.py": {
+      "exists": true,
+      "expected": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3",
+      "actual": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3"
+    }
+  },
+  "input_manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+  "runtime": {
+    "exit_code": 0,
+    "stdout": "{\"torch\": \"2.1.0+cu118\", \"rerun-sdk\": \"0.22.1\", \"numpy\": \"1.26.4\"}\n",
+    "stderr": ""
+  },
+  "issues": [],
+  "preflight_passed": true,
+  "model_initialized": false,
+  "cuda_initialized": false,
+  "GPU_UUID_must_match_historical": false,
+  "approved_mode": "capture_only_stop_after_C0"
+}

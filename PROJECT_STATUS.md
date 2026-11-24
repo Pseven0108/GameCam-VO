@@ -6,7 +6,7 @@
 - 主Baseline：DROID-W。原版DROID-SLAM只作为既有对照，不在本次发布中重跑。
 - stride=1；stride=4分支已放弃作为当前主线。
 - 当前候选：668a88c74c7f7a88a572679d2bd8e86c0a05514b。
-- 当前阶段：TASK004C-B-NATIVE-RELEASE-FIXES，STOPPED_FOR_USER_REVIEW。
+- 当前阶段：TASK004C-B-GPU-C0，BLOCKED_AT_FIRST_RGB_INPUT_CONTRACT，STOPPED_FOR_USER_REVIEW。
 
 ## 本轮已验证
 
@@ -23,3 +23,9 @@
 - 不能把合成通过解释为真实SLAM性能提升。
 
 GitHub发布是文档和源码同步，不包含任何新的实验运行授权。所有历史执行记录见各阶段原报告。
+
+## 最新GPU C0结果
+
+已执行1次真实GPU启动，运行58.316秒后exit1。父类RGB_NoPose的无深度占位Tensor与NativeViperRGB的None检查冲突，RGB001未进入跟踪；0次BA、无真实C0。CPU真实loader复现唯一失败条件depth_is_None。
+
+候选源码、R2、权重和CUDA扩展均未改变。只回收本次两个全零临时Arena，历史删除0。未自动重试，未执行restore/跨D/B1-B4。完整C0大小仍未知。修复建议未应用。

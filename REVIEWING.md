@@ -10,7 +10,7 @@
 
 请通过已连接的GitHub读取私有仓库Pseven0108/GameCam-VO的默认分支。
 
-先读README.md、PROJECT_STATUS.md和REVIEW_INDEX.md，再评审reviews/task004c-b-release-fixes/FINAL_REVIEW.md与同目录五份TASK004C_B报告。
+先读README.md、PROJECT_STATUS.md和REVIEW_INDEX.md，先评审reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md与同目录FIRST_FRAME_INPUT_CONTRACT_DIAGNOSIS.md、GPU_C0_CAPTURE_REPORT.md，再追溯前一阶段CPU修复报告。
 
 请重点核对：
 
@@ -25,3 +25,7 @@
 ## 内容身份
 
 GitHub快照提交与原运行源码提交不同。规范身份见source/SOURCE_PROVENANCE.json；原源码文件逐SHA对应source/SOURCE_FILE_MANIFEST.json。最新评审包的原始SHA清单保持不变。历史出版省略见publication/manifests，不把省略附件说成已审查。
+
+## 本次新增审查重点
+
+请核对父类RGB_NoPose/BaseDataset的全零深度占位与子类None检查是否冲突；本轮1次GPU启动失败、0帧跟踪、0次BA、无C0的证据是否完整。不要把空Rerun录制当成几何显示成功，也不要把未生成的C0大小写成0 bytes。

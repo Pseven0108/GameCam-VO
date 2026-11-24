@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<C0-task>", line 10, in <module>
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/native_control/admission.py", line 65, in preflight
+    storage=cpu_storage_admission(root,backend=cpu_storage_backend,validation=storage_validation);issues.extend(storage['issues'])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/native_control/admission.py", line 37, in cpu_storage_admission
+    and doc.get('torch_distribution_version')==importlib.metadata.version('torch')):
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 996, in version
+    return distribution(distribution_name).version
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 969, in distribution
+    return Distribution.from_name(distribution_name)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 548, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for torch

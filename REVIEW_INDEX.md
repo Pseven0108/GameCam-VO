@@ -1,10 +1,10 @@
 # 评审材料索引
 
-当前阶段：**Task004C-B发布修复**。先读[最新最终评审](reviews/task004c-b-release-fixes/FINAL_REVIEW.md)。
+最新阶段：**GPU C0采集首次尝试，首帧合同失败，无C0**。先读[最终报告](reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md)。
 
-历史结果与当前候选的执行边界不同；不要把旧GPU结果算成当前CPU修复的运行结果。
+历史CPU通过与本次GPU失败分别保留。当前未自动重跑，也未进入restore/跨D/正式四臂。
 
-| 阶段 | 阅读入口 | 展开文件 | 保留在本地的非文本附件 |
+| 阶段 | 阅读入口 | 展开文件 | 省略非文本附件 |
 |---|---|---:|---:|
 | task001 | [报告](reviews/task001/FINAL_REVIEW.md) | 22 | 0 |
 | task002a | [报告](reviews/task002a/README_PLEASE_READ.md) | 32 | 2 |
@@ -21,7 +21,6 @@
 | task004c-b-protocol | [报告](reviews/task004c-b-protocol/TASK004C_B_PROTOCOL_FINAL_REVIEW.md) | 64 | 0 |
 | task004c-b-integration | [报告](reviews/task004c-b-integration/TASK004C_B_FINAL_BA_FILLER_HOOK_REPORT.md) | 170 | 20 |
 | task004c-b-release-fixes | [报告](reviews/task004c-b-release-fixes/FINAL_REVIEW.md) | 238 | 0 |
+| task004c-b-gpu-c0-20261124 | [报告](reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md) | 58 | 0 |
 
-每份原ZIP的SHA、逐文件SHA、包含/省略范围见[publication/manifests](publication/manifests/)。历史清单可能引用本地附件，出版清单明确记录省略，不宣称这些阶段ZIP已完整上传。
-
-最新完整ZIP：[TASK004C_B_NATIVE_RELEASE_FIXES_REVIEW.zip](review_packages/TASK004C_B_NATIVE_RELEASE_FIXES_REVIEW.zip)。ChatGPT应优先阅读展开目录，避免依赖ZIP解析。
+原ZIP身份、逐文件SHA和省略范围见[publication/manifests](publication/manifests/)。最新GPU包和前一CPU修复包均完整上传，其余阶段按各自出版清单判定范围。

@@ -1,0 +1,22 @@
+{
+  "pid": 773,
+  "pgid": 773,
+  "started_unix": 1795513886.0149055,
+  "args": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "-u",
+    "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/operational/capture_entry.py",
+    "--mode",
+    "capture",
+    "--max-rgb",
+    "80",
+    "--cpu-report",
+    "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/evidence/CPU_RELEASE_REPORT.json",
+    "--execute",
+    "--model-child"
+  ],
+  "native_lifecycles_started": 1,
+  "automatic_retry": false,
+  "entry_sha256": "cd609e8766c19dd35d556b0c8526d4f5d1a983efa8d9299b2880ecd769bb6c2e"
+}

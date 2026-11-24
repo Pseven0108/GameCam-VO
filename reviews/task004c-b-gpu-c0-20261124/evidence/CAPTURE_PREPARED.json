@@ -1,0 +1,40 @@
+{
+  "root": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1",
+  "source_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "admitted": true,
+  "issues": [],
+  "disk": {
+    "total": 105089261568,
+    "used": 78670635008,
+    "free": 26401849344
+  },
+  "shm": {
+    "total": 25769803776,
+    "used": 0,
+    "free": 25769803776
+  },
+  "models_started": 0,
+  "entry_sha256": "cd609e8766c19dd35d556b0c8526d4f5d1a983efa8d9299b2880ecd769bb6c2e",
+  "source_files_pinned": 77,
+  "CPU_report_sha256": "2015fb395581a92c2f3f83504c65aad6369fefe9e0d7d1180db80818ae39a396",
+  "GPU": {
+    "args": [
+      "nvidia-smi",
+      "--query-gpu=name,memory.total,memory.free,driver_version",
+      "--format=csv,noheader,nounits"
+    ],
+    "exit_code": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, 24576, 24125, 580.119.02\n",
+    "stderr": ""
+  },
+  "compute_apps": {
+    "args": [
+      "nvidia-smi",
+      "--query-compute-apps=pid,process_name,used_memory",
+      "--format=csv,noheader,nounits"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

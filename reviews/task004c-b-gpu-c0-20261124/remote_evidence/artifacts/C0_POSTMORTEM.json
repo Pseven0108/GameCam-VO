@@ -1,0 +1,125 @@
+{
+  "status": "BLOCKED_AT_FIRST_RGB_INPUT_CONTRACT",
+  "native_lifecycles_started": 1,
+  "GPU_process_exit_code": 1,
+  "runtime_seconds": 58.315940856933594,
+  "tracking_frames_admitted": 0,
+  "native_BA_calls": 0,
+  "C0_created": false,
+  "complete_C0_bytes": null,
+  "initialization_complete": false,
+  "restore_executed": false,
+  "cross_D_executed": false,
+  "formal_B_runs_executed": false,
+  "automatic_retry": false,
+  "CPU_DIAGNOSIS": {
+    "scope": "CPU_ONLY_FIRST_FRAME_NO_MODEL_NO_RETRY",
+    "index": 0,
+    "RGB_id": 1,
+    "timestamp": 0,
+    "checks": {
+      "timestamp_matches_index": true,
+      "pose_is_None": true,
+      "depth_is_None": false,
+      "shape_is_1_3_360_640": true
+    },
+    "failed_predicates": [
+      "depth_is_None"
+    ],
+    "color": {
+      "shape": [
+        1,
+        3,
+        360,
+        640
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu"
+    },
+    "depth": {
+      "shape": [
+        360,
+        640
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "all_zero": true,
+      "nonzero_count": 0,
+      "sha256": "0b150fd32588b1daca5569992ebe559c0102c837306b1af4c44d35128ec58366"
+    },
+    "pose": null,
+    "source_depth_paths": null,
+    "source_pose_paths": null,
+    "strict_native_getitem": {
+      "raised": true,
+      "type": "ControlError",
+      "message": "R2 RGB-only input contract mismatch"
+    },
+    "native_seen_after_failure": 0,
+    "cuda_initialized": false,
+    "checkpoint_deserialized": false,
+    "diagnosis": "BaseDataset creates a zero depth placeholder when depth_paths=None; NativeViperRGB requires depth=None and rejects the valid RGB-only upstream return",
+    "source_sha256": {
+      "native_control/dataset.py": "dcb87c7294a71ddaa772545ba3b38ce9402dfd47031357a57a3ef315972a8d12",
+      "src/utils/datasets.py": "aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287"
+    }
+  },
+  "trace_kind_counts": {
+    "graph.create": 1
+  },
+  "sampled_GPU_peak_used_MiB": 7439,
+  "sampled_shm_peak_bytes": 212992,
+  "source_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "tracked_source_unchanged": true,
+  "source_status": "",
+  "backing_files": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/attempts/capture/shared_cpu/5644388.bin",
+      "st_dev": 64848,
+      "inode": 5644388,
+      "bytes": 1382400000,
+      "mode": 384,
+      "allocated_bytes": 1382404096,
+      "sha256": "563ebb324ffec857ac9973c772e74d0a96ae374d64290053e3f44a0bbe167db9"
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/attempts/capture/shared_cpu/5644389.bin",
+      "st_dev": 64848,
+      "inode": 5644389,
+      "bytes": 864000000,
+      "mode": 384,
+      "allocated_bytes": 864006144,
+      "sha256": "600ea2f152502d7038f625a233913f93c9562d84b8225cc4dea48e3984049701"
+    }
+  ],
+  "live_backing_maps": [],
+  "proc_maps_permission_errors": [],
+  "remaining_own_process_group": [],
+  "GPU_compute_apps_after": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "rerun_recordings": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1/attempts/capture/native/rerun_stream.rrd",
+      "bytes": 2255,
+      "sha256": "7cd669f9ebe0d87763b299f29766ada3503e5edae58d757b81e6a26023320c39"
+    }
+  ],
+  "Rerun_browser_verified": false,
+  "Rerun_empty_scene_not_geometry_validation": true,
+  "data_disk_after": {
+    "total": 105089261568,
+    "used": 80917131264,
+    "free": 24155353088
+  },
+  "shm_after": {
+    "total": 25769803776,
+    "used": 81920,
+    "free": 25769721856
+  },
+  "historical_files_deleted": 0,
+  "temporary_arena_deleted": false,
+  "models_retried": false
+}

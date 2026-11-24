@@ -1,0 +1,568 @@
+diff --git a/native_control/admission.py b/native_control/admission.py
+index f5dca62..381d3dc 100644
+--- a/native_control/admission.py
++++ b/native_control/admission.py
+@@ -77,3 +77,25 @@ def validate_mode(mode,max_rgb):
+     if mode not in MODES or type(max_rgb) is not int or max_rgb!=80:
+         raise ValueError('Only named, single bounded native validation modes ending at RGB080 are authorized')
+     return True
++
++
++def continuation_preflight(root,release):
++    """Same frozen identity/GPU gate, with restoration rather than C0 reservation."""
++    root=pathlib.Path(root);issues=[]
++    pins={**release['protected_pins'],**release['runtime_pins']}
++    checked={p:{'actual':sha(p) if pathlib.Path(p).is_file() else None,'expected':v} for p,v in pins.items()}
++    if any(v['actual']!=v['expected'] for v in checked.values()):issues.append('IDENTITY_CHANGED')
++    gpu=command(['nvidia-smi','--query-gpu=name,memory.total,memory.free','--format=csv,noheader,nounits'])
++    apps=command(['nvidia-smi','--query-compute-apps=pid,process_name,used_memory','--format=csv,noheader,nounits'])
++    rows=gpu.get('stdout','').strip().splitlines()
++    if gpu['exit_code']!=0 or len(rows)!=1 or 'RTX 3090' not in rows[0]:issues.append('REQUIRED_SINGLE_RTX3090_NOT_CONFIRMED')
++    elif float(rows[0].split(',')[2])<23000:issues.append('GPU_FREE_MEMORY_BELOW_FROZEN_ADMISSION')
++    if apps['exit_code']!=0 or apps['stdout'].strip():issues.append('GPU_COMPUTE_OCCUPIED_OR_UNKNOWN')
++    disk=dict(zip(('total','used','free'),shutil.disk_usage(root)))
++    reservation=2246400000+1024**3
++    if disk['free']<10*GIB+reservation:issues.append('DATA_DISK_BELOW_RESTORE_ARENA_LOGS_AND_FLOOR')
++    shm=dict(zip(('total','used','free'),shutil.disk_usage('/dev/shm')))
++    if shm['free']<64*1024**2:issues.append('SHM_BELOW_RESIDUAL_IPC_ENVELOPE')
++    return {'admitted':not issues,'issues':issues,'gpu':gpu,'compute_apps':apps,'protected_pins':checked,
++            'data_disk':disk,'shared_memory':shm,'restore_reservation_bytes':reservation,
++            'models_imported':False,'cuda_context_initialized':False}
+diff --git a/native_control/binding.py b/native_control/binding.py
+index 4e2782f..915d210 100644
+--- a/native_control/binding.py
++++ b/native_control/binding.py
+@@ -54,9 +54,14 @@ def capture_c0(path,tracker,stream,values,controller,filler,barrier,identity_loc
+         services=services_for(tracker,stream,barrier,bundle['observer'])
+         inventory=state_inventory(bundle,services=services)
+         # One C0 plus journal/observer headroom. No archive or second C0 is created.
+-        require_space(Path(path).parent,inventory['storage_bytes']+512*1024**2,10*1024**3)
++        # Compression is counted exactly in RAM below; do not substitute logical
++        # storage bytes for the on-disk archive. Every save still checks its
++        # exact remaining allocated bytes plus the unchanged 10 GiB floor.
++        require_space(Path(path).parent,512*1024**2,10*1024**3)
+         provenance={'artifact_kind':'NATIVE_C0','writer_barrier_and_closure_passed':True,
+                     'baseline_commit':identity_lock['baseline_commit'],'identity_lock_sha256':digest(identity_lock),
++                    'candidate_source_commit':os.environ['GAMECAM_NATIVE_SOURCE_COMMIT'],
++                    'candidate_source_tree':os.environ['GAMECAM_NATIVE_SOURCE_TREE'],
+                     'initialization_D':0,'W':1,'U':1,'source_pid':os.getpid(),'actual_boundary_rgb':controller.rgb,
+                     'next_input':bundle['next_input'],'inventory':inventory}
+         prepared=prepare_state(bundle,provenance=provenance,services=services,destination_parent=Path(path).parent)
+diff --git a/native_control/dataset.py b/native_control/dataset.py
+index 23cbb41..b9bea56 100644
+--- a/native_control/dataset.py
++++ b/native_control/dataset.py
+@@ -6,11 +6,12 @@ import numpy as np
+ import torch
+ from src.utils.datasets import RGB_NoPose
+ from control_common import ControlError,file_sha
++from native_control.stages import stage_limit
+ 
+ INPUT_SHA='5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537'
+ 
+ class NativeViperRGB(RGB_NoPose):
+-    def __init__(self,cfg,manifest,out):
++    def __init__(self,cfg,manifest,out,stage='short80'):
+         super().__init__(cfg)
+         manifest=Path(manifest)
+         if file_sha(manifest)!=INPUT_SHA:raise ControlError('Frozen val_007 input manifest changed')
+@@ -18,10 +19,26 @@ class NativeViperRGB(RGB_NoPose):
+         self.doc=json.loads(manifest.read_text());self.frames=self.doc['frames'];self.ids=[f['rgb_id'] for f in self.frames]
+         if self.ids!=list(range(1,488)) or self.doc['branch']!='FIXED_K_NATIVE_RESIZE':raise ControlError('Unexpected R2 input branch')
+         self.color_paths=[str(manifest.parent/f['file']) for f in self.frames];self.n_img=len(self.ids)
+-        self.out=Path(out);self.seen=0
++        self.out=Path(out);self.seen=0;self.stage=stage;stage_limit(stage)
++        self.filler_active=False;self.filler_seen=0;self.filler_finished=False
++
++    def set_stage(self,stage):
++        stage_limit(stage)
++        if self.filler_active or self.filler_finished or self.seen!=18:
++            raise ControlError('Stage transition requires the unchanged C0 cursor')
++        self.stage=stage
++
++    def task004_begin_filler(self):
++        if self.stage!='formal487' or self.seen!=487 or self.filler_active or self.filler_finished:
++            raise ControlError('Filler reread is only authorized after complete formal tracking')
++        self.filler_active=True;self.filler_seen=0
+     def __getitem__(self,index):
+-        if type(index) is not int or not 0<=index<80:raise ControlError('RGB beyond 080 is not authorized')
+-        if index!=self.seen:raise ControlError('Native stream cursor mismatch')
++        if self.filler_active and type(index) is int and index==self.n_img and self.filler_seen==self.n_img:
++            self.filler_active=False;self.filler_finished=True
++            raise IndexError(index)
++        if type(index) is not int or not 0<=index<stage_limit(self.stage):raise ControlError('RGB outside authorized stage')
++        cursor=self.filler_seen if self.filler_active else self.seen
++        if index!=cursor:raise ControlError('Native stream cursor mismatch')
+         # Reject label sources before the parent loader can read them.
+         if self.depth_paths is not None or self.poses is not None:
+             raise ControlError('RGB-only stream contains an unexpected label source')
+@@ -40,5 +57,6 @@ class NativeViperRGB(RGB_NoPose):
+                 or depth.device.type!='cpu' or tuple(depth.shape)!=tuple(color.shape[-2:])
+                 or depth.layout!=torch.strided or bool(torch.count_nonzero(depth))):
+             raise ControlError('Invalid RGB-only zero-depth placeholder')
+-        self.seen+=1
++        if self.filler_active:self.filler_seen+=1
++        else:self.seen+=1
+         return item
+diff --git a/native_control/install.py b/native_control/install.py
+index 9073c3c..b1176ce 100644
+--- a/native_control/install.py
++++ b/native_control/install.py
+@@ -119,7 +119,7 @@ def _ints(x):return [int(v) for v in (x.detach().cpu().tolist() if hasattr(x,'de
+ def install_depth_video(cls):
+     def append(c,v,b,f):
+         item=b.arguments['item'];rgb=int(item[0])+1;slot=int(v.counter.value)
+-        if slot!=len(c.nodes) or not 1<=rgb<=80:raise ControlError('Native insertion buffer/RGB mismatch')
++        if slot!=len(c.nodes) or not 1<=rgb<=getattr(c,'max_rgb',80):raise ControlError('Native insertion buffer/RGB mismatch')
+         c.begin('keyframe.insert',{'rgb_id':rgb,'slot':slot,'token':'kf:%03d'%rgb},select=False)
+         result=_call(f,b);c.nodes.append('kf:%03d'%rgb)
+         c.end('keyframe.insert',{'counter_after':int(v.counter.value)});return result
+diff --git a/native_control/native_driver.py b/native_control/native_driver.py
+index cadb44b..5662c39 100644
+--- a/native_control/native_driver.py
++++ b/native_control/native_driver.py
+@@ -14,6 +14,7 @@ from native_control.binding import capture_c0,restore_c0,rebind_output
+ from native_control.snapshot import read_manifest
+ from native_control.dataset import NativeViperRGB
+ from control_common import ControlError,file_sha,digest
++from native_control.stages import mode_spec
+ from src.slam import SLAM
+ from src.tracker import Tracker
+ from src.utils.Printer import Printer
+@@ -59,7 +60,7 @@ class BoundedCaptureSLAM(SLAM):
+     def tracking(self,pipe):
+         cached_priors();torch.set_num_threads(2);cv2.setNumThreads(1)
+         out=pathlib.Path(os.environ['GAMECAM_NATIVE_ATTEMPT']);lock=json.loads(pathlib.Path(os.environ['GAMECAM_NATIVE_LOCK']).read_text())
+-        controller=NativeControl(0,out);set_active(controller)
++        controller=NativeControl(0,out,stage='capture');set_active(controller)
+         event_writer=SummaryWriter(self.save_dir);self.tracker=Tracker(self,pipe,event_writer)
+         barrier=self.video._native_writer_barrier
+         def save(tracker,stream,values,ctrl):
+@@ -85,7 +86,7 @@ def capture(root,out,manifest,config,lock):
+     if file_sha(config)!=lock['r2_yaml_sha256']:raise ControlError('R2 YAML mismatch')
+     cfg=copy.deepcopy(cfg);cfg['data'].update(output=str(out),input_folder=str(pathlib.Path(manifest).parent))
+     if cfg['tracking']['buffer']!=500 or cfg['stride']!=1 or cfg['setup_seed']!=43:raise ControlError('Frozen R2 settings mismatch')
+-    setup_seed(43);stream=NativeViperRGB(cfg,manifest,out)
++    setup_seed(43);stream=NativeViperRGB(cfg,manifest,out,stage='capture')
+     import numpy as np
+     np.testing.assert_array_equal(stream.get_intrinsic().numpy(),[386.01129150390625,386.01129150390625,319.5,179.5])
+     os.environ['GAMECAM_NATIVE_CONTROL_BOUNDED']='1'
+@@ -120,37 +121,95 @@ def restore_and_continue(root,out,mode,lock):
+     m=read_manifest(root/'C0',captured['state_sha256']);bundle,m,receipt=restore_c0(root/'C0',services=services,expected_sha=captured['state_sha256'],allow_cuda=True)
+     if receipt['source_pid']==receipt['new_process_pid']:raise ControlError('Restore did not enter a fresh process')
+     (out/'RESTORE_RECEIPT.json').write_text(json.dumps(receipt,indent=2))
+-    if mode=='restore_check':
+-        (out/'SUCCESS.json').write_text(json.dumps({'mode':mode,'hashes_match':True,'pid':os.getpid()}));printer.terminate();event_writer.close();observer_file.close();return
+-    D=1 if mode in ('record_S1','replay_D1_S0') else 0
+-    schedule='S1' if mode in ('record_S1','replay_D0_S1') else 'S0'
+-    replay=mode.startswith('replay_')
+-    source=root/'attempts'/('record_'+schedule)/'schedule.jsonl' if replay else None
+-    header={'c0_sha256':m['state_sha256'],'init_D':0,'W':1,'U':1,'max_rgb':80,'schedule':schedule,
+-            'producer_D':1 if schedule=='S1' else 0,'consumer_D':D}
+-    journal=NativeJournal(out/'schedule.jsonl',header,mode='replay' if replay else 'record',source=source)
+-    controller=NativeControl(D,out,journal=journal,restore_values=bundle['cursor']);controller.restore_discrete(bundle['control']);set_active(controller)
++    spec=mode_spec(mode)
++    expected_source=os.environ['GAMECAM_NATIVE_SOURCE_COMMIT']
++    if m['provenance'].get('candidate_source_commit')!=expected_source:
++        raise ControlError('C0 was not sealed from this exact final runner source')
++    if bundle['cursor']['next_input_index']!=18 or bundle['stream'].seen!=18:
++        raise ControlError('Restored C0 cursor does not identify the actual RGB019 input')
++    if bundle['control']['rgb']!=18 or not bundle['control']['initialized']:
++        raise ControlError('Restored C0 initialization/stage mismatch')
++    replay=spec['replay'];schedule=spec['schedule'];D=spec['D'];stage=spec['stage']
++    journal=None
++    if schedule:
++        source_mode=('B1' if schedule=='S1' else 'B4') if spec['formal'] else 'record_'+schedule
++        source=root/'attempts'/source_mode/'schedule.jsonl' if replay else None
++        header={'c0_sha256':m['state_sha256'],'init_D':0,'W':1,'U':1,'max_rgb':spec['max_rgb'],
++                'stage':stage,'schedule':schedule,'producer_D':1 if schedule=='S1' else 0,'consumer_D':D,
++                'candidate_source_commit':expected_source,'input_manifest_sha256':lock['input_manifest_sha256']}
++        journal=NativeJournal(out/'schedule.jsonl',header,mode='replay' if replay else 'record',source=source)
++    controller=NativeControl(D,out,journal=journal,restore_values=bundle['cursor'],stage=stage)
++    controller.restore_discrete(bundle['control']);set_active(controller)
+     tracker,stream=bundle['tracker'],bundle['stream'];controller.tracker=tracker;controller.video=tracker.video
+-    rebind_output(bundle,out);bundle['observer'].path=out/'observer.jsonl'
++    stream.set_stage(stage)
++    rebind_receipt=rebind_output(bundle,out)
++    pathlib.Path(tracker.output).mkdir(parents=True,exist_ok=False)
++    bundle['filler'].cfg=tracker.cfg
++    bundle['observer'].path=out/'observer.jsonl'
+     task003_observer._recorder=bundle['observer']
+     timers.timer=bundle['timer']
+-    # Rebind modules that imported the Timer singleton by value.
+-    import sys
+     for module in list(sys.modules.values()):
+         if module is not None and getattr(module,'__name__','').startswith('src.') and getattr(module,'timer',None).__class__ is bundle['timer'].__class__:
+             module.timer=bundle['timer']
+-    exit_event=ctx.Event();viewer=ctx.Process(target=native_recording_viewer,args=(tracker.video,),kwargs={'record_path':str(out/'rerun_stream.rrd'),'exit_event':exit_event,'writer_barrier':barrier})
++    (out/'STAGE_RESUME_INPUT.json').write_text(json.dumps({'stage':stage,'next_input':bundle['next_input'],
++        'cursor_next_input_index':bundle['cursor']['next_input_index'],'restored_last_rgb':controller.rgb,
++        'graph_topology_sha256':digest(controller.context()),'rebind':rebind_receipt},indent=2))
++    exit_event=ctx.Event()
++    viewer=ctx.Process(target=native_recording_viewer,args=(tracker.video,),kwargs={
++        'record_path':str(out/'rerun_stream.rrd'),'exit_event':exit_event,'writer_barrier':barrier})
+     viewer.start();printer.pbar_ready()
++    succeeded=False
+     try:
+-        tracker.run(stream)
+-        raise ControlError('Native bounded tracker returned without a prefix stop')
+-    except PrefixComplete:
+-        if controller.rgb!=80 or stream.seen!=80 or controller.failed:raise
+-        (out/'SUCCESS.json').write_text(json.dumps({'mode':mode,'last_rgb':80,'events':journal.index,'ba_calls':controller.ba_calls,'pid':os.getpid(),'formal_experiment':False},indent=2))
++        if spec['formal']:
++            tracker.run(stream)
++            if controller.rgb!=487 or stream.seen!=487 or controller.failed:
++                raise ControlError('Formal tracker did not consume all 487 ordered RGB inputs')
++            # Preserve native final BA and Filler; the shell contributes no optimizer state.
++            import numpy as np
++            shell=object.__new__(SLAM)
++            shell.cfg=tracker.cfg;shell.droid_net=tracker.net;shell.video=tracker.video
++            shell.stream=stream;shell.traj_filler=bundle['filler'];shell.printer=printer
++            shell.save_dir=tracker.output;shell.device=tracker.device;shell.final_clean=False
++            shell.logger=None
++            n=int(tracker.video.counter.value)
++            np.savez(out/'FRONTEND_KEYFRAMES.npz',timestamps=tracker.video.timestamp[:n].detach().cpu().numpy(),
++                poses=tracker.video.poses[:n].detach().cpu().numpy())
++            original_backend=shell.backend
++            def observed_backend():
++                result=original_backend()
++                count=int(tracker.video.counter.value)
++                np.savez(out/'FINAL_BA_KEYFRAMES.npz',timestamps=tracker.video.timestamp[:count].detach().cpu().numpy(),
++                    poses=tracker.video.poses[:count].detach().cpu().numpy())
++                return result
++            shell.backend=observed_backend
++            shell.terminate()
++            if not shell.final_clean or stream.filler_seen!=487 or not stream.filler_finished:
++                raise ControlError('Native final BA/Filler did not finish all 487 inputs')
++            final_file=pathlib.Path(shell.save_dir)/'traj/est_poses_full.txt'
++            lines=[x for x in final_file.read_text().splitlines() if x.strip()]
++            if len(lines)!=487:raise ControlError('Final exported trajectory does not have 487 rows')
++            if not (out/'FINAL_BA_KEYFRAMES.npz').is_file():raise ControlError('Final BA stage output missing')
++            journal.seal()
++            success={'mode':mode,'stage':stage,'last_rgb':487,'filler_frames':487,'pose_rows':len(lines),
++                     'events':journal.index,'ba_calls':controller.ba_calls,'formal_experiment':True,
++                     'full_trajectory_file':str(final_file),'full_trajectory_sha256':file_sha(final_file)}
++        else:
++            try:
++                tracker.run(stream)
++                raise ControlError('Bounded stage returned without a stage stop')
++            except PrefixComplete:
++                if controller.rgb!=spec['max_rgb'] or stream.seen!=spec['max_rgb'] or controller.failed:raise
++            success={'mode':mode,'stage':stage,'last_rgb':controller.rgb,'next_input_index':stream.seen,
++                     'events':journal.index if journal else None,'ba_calls':controller.ba_calls,'formal_experiment':False,
++                     'actual_RGB019_consumed':stream.seen>=19,'next_unread_rgb':stream.seen+1}
++        success.update(pid=os.getpid(),c0_sha256=m['state_sha256'],candidate_source_commit=expected_source)
++        succeeded=True
+     finally:
+-        exit_event.set();barrier.request.clear();viewer.join(timeout=15)
++        exit_event.set();barrier.request.clear();viewer.join(timeout=30)
+         if viewer.is_alive():
+-            # Only this attempt's own viewer can be stopped; never touch other services.
+             viewer.terminate();viewer.join(timeout=5)
+         printer.terminate();event_writer.flush();event_writer.close();observer_file.close();controller.trace.close()
+-        if viewer.exitcode!=0:raise ControlError('Native Rerun recording failed during prefix validation')
++        if journal and not journal.file.closed:journal.abort()
++        if viewer.exitcode!=0:raise ControlError('Native Rerun recording failed during the admitted stage')
++    if succeeded:
++        (out/'SUCCESS.json').write_text(json.dumps(success,indent=2))
+diff --git a/native_control/runtime.py b/native_control/runtime.py
+index 4d3aba4..40714e9 100644
+--- a/native_control/runtime.py
++++ b/native_control/runtime.py
+@@ -7,6 +7,7 @@ from pathlib import Path
+ import time
+ 
+ from control_common import ControlError, canonical, digest
++from native_control.stages import stage_limit, schedule_scope, schedule_termination
+ 
+ SCHEMA='GAMECAM_NATIVE_DISCRETE_SCHEDULE_V2'
+ _active=None
+@@ -52,8 +53,9 @@ class NativeJournal:
+         self.path=Path(path);self.file=self.path.open('xb');self.mode=mode;self.failed=False;self.index=0
+         self.header=copy.deepcopy(header);self.previous=digest(header);self.source=None
+         self.open_frame=None;self.last_frame=18;self.open_operations=[]
+-        if header.get('init_D')!=0 or header.get('W')!=1 or header.get('U')!=1 or header.get('max_rgb')!=80:
+-            self.file.close();raise ControlError('Native schedule outside bounded scope')
++        try:self.stage=schedule_scope(header);self.max_rgb=stage_limit(self.stage)
++        except BaseException:
++            self.file.close();raise
+         if mode=='replay':
+             self.source=read_schedule(source)
+             for k in ('c0_sha256','init_D','W','U','max_rgb','schedule'):
+@@ -67,7 +69,7 @@ class NativeJournal:
+     def point(self,kind,rgb,context,payload,*,select=False):
+         if self.failed:raise ControlError('Native schedule latched STOP')
+         try:
+-            if type(rgb) is not int or not 0<=rgb<=80:raise ControlError('Native schedule RGB outside 000..080')
++            if type(rgb) is not int or not 0<=rgb<=self.max_rgb:raise ControlError('Native schedule RGB outside admitted stage')
+             if self.mode=='replay':
+                 if self.index>=len(self.source['events']):raise ControlError('Replay stream exhausted')
+                 e=self.source['events'][self.index]
+@@ -97,9 +99,12 @@ class NativeJournal:
+             if not self.open_operations or self.open_operations.pop()!=kind[:-4]:
+                 raise ControlError('Unpaired native nested operation')
+ 
+-    def seal(self,termination='PREFIX_RGB080'):
++    def seal(self,termination=None):
++        expected=schedule_termination(self.stage)
++        if termination is None:termination=expected
++        if termination!=expected:raise ControlError('Wrong native schedule termination')
+         if self.failed:raise ControlError('Failed native schedule cannot seal')
+-        if self.open_frame is not None or self.open_operations or self.last_frame!=80:
++        if self.open_frame is not None or self.open_operations or self.last_frame!=self.max_rgb:
+             raise ControlError('Native prefix cannot seal before complete RGB019..080')
+         if self.mode=='replay' and self.index!=len(self.source['events']):raise ControlError('Replay has unconsumed events')
+         self._write({'type':'footer','event_count':self.index,'last_sha256':self.previous,'termination':termination})
+@@ -113,12 +118,12 @@ class NativeJournal:
+ def read_schedule(path):
+     rows=[json.loads(x) for x in Path(path).read_text().splitlines()]
+     if len(rows)<2 or rows[0].get('schema')!=SCHEMA or rows[-1].get('type')!='footer':raise ControlError('Unsealed native schedule')
+-    h=rows[0]['header'];prev=digest(h)
++    h=rows[0]['header'];stage=schedule_scope(h);limit=stage_limit(stage);prev=digest(h)
+     if rows[0]['sha256']!=prev:raise ControlError('Native header SHA mismatch')
+     frame=None;last_frame=18;operations=[]
+     for i,e in enumerate(rows[1:-1]):
+         if e.get('type')!='event' or e['index']!=i or e['previous_sha256']!=prev or e['sha256']!=digest({k:v for k,v in e.items() if k!='sha256'}):raise ControlError('Native event hash/order mismatch')
+-        if not 0<=e['rgb']<=80:raise ControlError('Schedule exceeds authorized prefix')
++        if type(e['rgb']) is not int or not 0<=e['rgb']<=limit:raise ControlError('Schedule exceeds authorized stage')
+         kind,rgb,p=e['kind'],e['rgb'],e['payload']
+         if kind=='frame.begin':
+             if frame is not None or operations or rgb!=last_frame+1 or p.get('index')!=rgb-1:raise ControlError('Invalid saved frame order')
+@@ -130,17 +135,18 @@ def read_schedule(path):
+         elif kind.endswith('.end'):
+             if not operations or operations.pop()!=kind[:-4]:raise ControlError('Invalid saved nested event order')
+         prev=e['sha256']
+-    if rows[-1]!=dict(type='footer',event_count=len(rows)-2,last_sha256=prev,termination='PREFIX_RGB080'):
++    if rows[-1]!=dict(type='footer',event_count=len(rows)-2,last_sha256=prev,termination=schedule_termination(stage)):
+         raise ControlError('Native prefix termination mismatch')
+-    if h.get('init_D')!=0 or h.get('max_rgb')!=80 or h.get('W')!=1 or h.get('U')!=1:raise ControlError('Invalid native header scope')
+-    if frame is not None or operations or last_frame!=80:raise ControlError('Incomplete saved native prefix')
++    if frame is not None or operations or last_frame!=limit:raise ControlError('Incomplete saved native prefix')
+     return {'header':h,'events':rows[1:-1],'footer':rows[-1]}
+ 
+ 
+ class NativeControl(NullControl):
+     enabled=True
+-    def __init__(self,D,output,*,journal=None,capture_callback=None,restore_values=None):
++    def __init__(self,D,output,*,journal=None,capture_callback=None,restore_values=None,stage='short80'):
+         if type(D) is not int or D not in (0,1):raise ControlError('Invalid native D')
++        self.stage=stage;self.max_rgb=stage_limit(stage)
++        if journal is not None and (journal.stage!=stage or journal.max_rgb!=self.max_rgb):raise ControlError('Controller/journal stage mismatch')
+         self.D=D;self.output=Path(output);self.journal=journal;self.capture_callback=capture_callback
+         self.restore_values=restore_values;self.graphs={};self.graph_ids={};self.edge_state={};self.next_graph=0;self.next_edge=0
+         self.nodes=[];self.rgb=0;self.phase='startup';self.init_counts={};self.initialized=False
+@@ -215,7 +221,7 @@ class NativeControl(NullControl):
+ 
+     def frame_begin(self,index,timestamp):
+         rgb=int(timestamp)+1
+-        if rgb!=index+1 or not 1<=rgb<=80:raise ControlError('Bounded native input order/RGB mismatch')
++        if rgb!=index+1 or not 1<=rgb<=self.max_rgb:raise ControlError('Bounded native input order/RGB mismatch')
+         self.rgb=rgb
+         self.point('frame.begin',{'index':index,'rgb_id':rgb})
+ 
+@@ -231,10 +237,10 @@ class NativeControl(NullControl):
+             callback=self.capture_callback;self.capture_callback=None
+             callback(tracker,stream,values,self)
+             raise PrefixComplete('C0_CAPTURED_AFTER_TRUE_INITIALIZATION')
+-        if self.rgb==80:
++        if self.rgb==self.max_rgb and self.stage!='formal487':
+             if self.journal:self.journal.seal()
+-            self.diagnostic('PREFIX_COMPLETE',last_rgb=80,formal_experiment=False)
+-            raise PrefixComplete('AUTHORIZED_RGB080_REACHED')
++            self.diagnostic('PREFIX_COMPLETE',last_rgb=self.rgb,stage=self.stage,formal_experiment=False)
++            raise PrefixComplete('AUTHORIZED_STAGE_BOUNDARY_REACHED')
+ 
+     def motion_decision(self,proposed,force,threshold,score=None):
+         p=self.point('motion.decision',{'admitted':bool(proposed),'force':bool(force),'threshold':float(threshold),
+diff --git a/native_control/stage_authorization.py b/native_control/stage_authorization.py
+new file mode 100644
+index 0000000..2376613
+--- /dev/null
++++ b/native_control/stage_authorization.py
+@@ -0,0 +1,25 @@
++"""Additional narrow Task004C stage grant; the original factorial gate is retained."""
++import hashlib,json,os
++from pathlib import Path
++from control_common import ControlError
++from native_control.stages import mode_spec
++
++AUTH_SHA='f4282963f20982c1ae0a17606d3494cd99f940c148b611755adafc6f110b4714'
++
++def validate_runtime(active):
++    root=Path(os.environ['GAMECAM_NATIVE_WORKSPACE']).resolve()
++    if root!=Path(__file__).resolve().parents[2]:raise ControlError('Stage workspace mismatch')
++    auth=root/'authorization/TASK_REQUEST.txt'
++    if hashlib.sha256(auth.read_bytes()).hexdigest()!=AUTH_SHA:raise ControlError('Stage authorization identity mismatch')
++    token=json.loads((root/'evidence/CPU_STAGE_RELEASE.json').read_text())
++    mode=os.environ['GAMECAM_NATIVE_APPROVED_MODE'];spec=mode_spec(mode)
++    out=root/'attempts'/mode
++    intent=json.loads((out/'LAUNCH_INTENT.json').read_text())
++    if (intent['spec']!=spec or intent['source_commit']!=token['candidate_commit']
++        or os.environ.get('GAMECAM_NATIVE_INTERNAL_CHILD')!=intent['child_token']
++        or os.environ.get('GAMECAM_NATIVE_SOURCE_COMMIT')!=token['candidate_commit']
++        or Path(os.environ['GAMECAM_NATIVE_ATTEMPT'])!=out
++        or active.arm!='E0' or active.campaign!='FACTORIAL' or active.local_dwu!=(1,1,1)
++        or active.final_phases!=2):
++        raise ControlError('Stage runtime is outside its frozen grant')
++    return active
+diff --git a/native_control/stages.py b/native_control/stages.py
+new file mode 100644
+index 0000000..bf3ff27
+--- /dev/null
++++ b/native_control/stages.py
+@@ -0,0 +1,36 @@
++"""Named stage grants. A larger frame bound requires a different explicit mode."""
++from control_common import ControlError
++
++LIMITS={'capture':80,'restore19':19,'short80':80,'formal487':487}
++MODES={'capture':('capture',0,None,False),'restore_check':('restore19',0,None,False),
++       'record_S1':('short80',1,'S1',False),'replay_D0_S1':('short80',0,'S1',True),
++       'record_S0':('short80',0,'S0',False),'replay_D1_S0':('short80',1,'S0',True),
++       'B1':('formal487',1,'S1',False),'B2':('formal487',0,'S1',True),
++       'B4':('formal487',0,'S0',False),'B3':('formal487',1,'S0',True)}
++ORDER=('capture','restore_check','record_S1','replay_D0_S1','record_S0','replay_D1_S0','B1','B2','B4','B3')
++
++def stage_limit(stage):
++    if type(stage) is not str or stage not in LIMITS:raise ControlError('Unknown authorized native stage')
++    return LIMITS[stage]
++
++def mode_spec(mode,max_rgb=None):
++    if mode not in MODES:raise ControlError('Unknown authorized native mode')
++    stage,D,schedule,replay=MODES[mode]
++    limit=stage_limit(stage)
++    if max_rgb is not None and (type(max_rgb) is not int or max_rgb!=limit):
++        raise ControlError('Mode/frame authorization mismatch')
++    return {'mode':mode,'stage':stage,'max_rgb':limit,'D':D,'W':1,'U':1,'INIT_D':0,
++            'schedule':schedule,'replay':replay,'formal':stage=='formal487'}
++
++def schedule_scope(header):
++    stage=header.get('stage','short80')
++    if stage not in ('short80','formal487') or header.get('max_rgb')!=stage_limit(stage):
++        raise ControlError('Schedule stage/frame scope mismatch')
++    if any(type(header.get(k)) is not int or header[k]!=v for k,v in [('init_D',0),('W',1),('U',1)]):
++        raise ControlError('Schedule D/W/U scope mismatch')
++    return stage
++
++def schedule_termination(stage):
++    if stage=='short80':return 'PREFIX_RGB080'
++    if stage=='formal487':return 'FORMAL_RGB487_NATIVE_COMPLETE'
++    raise ControlError('Stage cannot own a schedule')
+diff --git a/runner/run_native_stage.py b/runner/run_native_stage.py
+new file mode 100644
+index 0000000..23db495
+--- /dev/null
++++ b/runner/run_native_stage.py
+@@ -0,0 +1,86 @@
++"""Stage-qualified CLI. No framework import until sealed admission succeeds."""
++import argparse,hashlib,json,os,pathlib,subprocess,sys,time
++ROOT=pathlib.Path(os.environ.get('GAMECAM_NATIVE_WORKSPACE',pathlib.Path(__file__).absolute().parents[1]));sys.path.insert(0,str(ROOT))
++from native_control.admission import preflight,sha
++from native_control.stages import ORDER,MODES,mode_spec
++from control_common import ControlError
++
++
++def main(argv=None):
++    p=argparse.ArgumentParser()
++    p.add_argument('--mode',choices=MODES,required=True)
++    p.add_argument('--max-rgb',type=int)
++    p.add_argument('--cpu-report',type=pathlib.Path,required=True)
++    p.add_argument('--execute',action='store_true');p.add_argument('--model-child',action='store_true')
++    a=p.parse_args(argv);spec=mode_spec(a.mode,a.max_rgb)
++    if not a.execute:
++        print(json.dumps({**spec,'plan_only':True,'models_imported':False,'automatic_retries':0}));return 0
++    token=json.loads((ROOT/'evidence/CPU_STAGE_RELEASE.json').read_text())
++    if sha(a.cpu_report)!=token['cpu_report_sha256']:raise SystemExit('CPU_REPORT_RELEASE_SHA_MISMATCH')
++    for name,expected in token['candidate_pins'].items():
++        if sha(ROOT/name)!=expected:raise SystemExit('CANDIDATE_CODE_SHA_CHANGED: '+name)
++    candidate=ROOT/'source_candidate'
++    def git(*args):return subprocess.check_output(['git','-C',str(candidate),*args],text=True).strip()
++    if git('rev-parse','HEAD')!=token['candidate_commit'] or git('status','--porcelain','--untracked-files=all'):
++        raise SystemExit('FINAL_RUNNER_COMMIT_OR_WORKTREE_MISMATCH')
++    if a.model_child:
++        intent=ROOT/'attempts'/a.mode/'LAUNCH_INTENT.json'
++        receipt=json.loads(intent.read_text())
++        if (receipt['spec']!=spec or receipt['source_commit']!=token['candidate_commit'] or
++            os.environ.get('GAMECAM_NATIVE_INTERNAL_CHILD')!=receipt['child_token']):
++            raise SystemExit('STAGE_CHILD_NOT_ADMITTED')
++        sys.path.insert(0,str(candidate))
++        # Inherited policy guard remains active; the stage grant is additional.
++        from task004_controls import require_approved_runtime
++        require_approved_runtime()
++        from native_control.native_driver import capture,restore_and_continue
++        lock=json.loads((ROOT/'configs/identity_lock.json').read_text());out=intent.parent
++        if a.mode=='capture':
++            capture(ROOT,out,token['input_manifest'],token['r2_config'],lock)
++        else:restore_and_continue(ROOT,out,a.mode,lock)
++        return 0
++    index=ORDER.index(a.mode)
++    for previous in ORDER[:index]:
++        q=ROOT/'attempts'/previous
++        if not (q/'SUCCESS.json').is_file() or not (q/'PROCESS_RECEIPT.json').is_file():
++            raise SystemExit('PREVIOUS_STAGE_NOT_COMPLETE: '+previous)
++        r=json.loads((q/'PROCESS_RECEIPT.json').read_text())
++        if r['exit_code']!=0:raise SystemExit('PREVIOUS_STAGE_FAILED: '+previous)
++    if a.mode!='capture':
++        from native_control.admission import continuation_preflight
++        admission=continuation_preflight(ROOT,token)
++    else:
++        lock=json.loads((ROOT/'configs/identity_lock.json').read_text())
++        admission=preflight(ROOT,lock,cpu_report=a.cpu_report,cpu_storage_backend='owned_file_mmap',storage_validation=ROOT/'evidence/FILE_BACKED_CPU_VALIDATION.json')
++    with (ROOT/'artifacts'/('GPU_ADMISSION_'+a.mode+'.json')).open('x') as f:json.dump(admission,f,indent=2)
++    if not admission['admitted']:
++        print(json.dumps({'status':'BLOCKED_BEFORE_MODEL_IMPORT','issues':admission['issues'],'mode':a.mode,'runs_started':0}));return 2
++    out=ROOT/'attempts'/a.mode;out.mkdir(parents=True,exist_ok=False)
++    child_token=hashlib.sha256(os.urandom(32)).hexdigest()
++    intent={'mode':a.mode,'spec':spec,'source_commit':token['candidate_commit'],'child_token':child_token,
++            'created':time.time(),'automatic_retry':False}
++    with (out/'LAUNCH_INTENT.json').open('x') as f:json.dump(intent,f,indent=2)
++    data=token['asset_root']
++    env=dict(os.environ,PYTHONPATH=str(ROOT)+':'+str(candidate)+':'+str(ROOT/'operational'),PYTHONHASHSEED='43',
++        PYTHONDONTWRITEBYTECODE='1',OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',
++        CUDA_VISIBLE_DEVICES='0',GAMECAM_NATIVE_WORKSPACE=str(ROOT),GAMECAM_FILE_BACKED_CPU_ROOT=str(out/'shared_cpu'),
++        TORCH_HOME=data+'/torch_hub',HF_HOME=data+'/huggingface',HF_HUB_OFFLINE='1',HF_HUB_DISABLE_TELEMETRY='1',
++        MPLBACKEND='Agg',RERUN_NO_ANALYTICS='1',GAMECAM_NATIVE_CONTROL_BOUNDED='1',
++        GAMECAM_NATIVE_INTERNAL_CHILD=child_token,GAMECAM_NATIVE_ATTEMPT=str(out),
++        GAMECAM_NATIVE_SOURCE_COMMIT=token['candidate_commit'],GAMECAM_NATIVE_SOURCE_TREE=git('rev-parse','HEAD^{tree}'),
++        GAMECAM_NATIVE_LOCK=str(ROOT/'configs/identity_lock.json'),GAMECAM_TASK003_OBSERVER_JSONL=str(out/'observer.jsonl'),
++        GAMECAM_NATIVE_APPROVED_MODE=a.mode,
++        GAMECAM_TASK004_POLICY=token['policy_path'],GAMECAM_TASK004_POLICY_SHA256=token['policy_sha256'])
++    cmd=[sys.executable,'-B',str(ROOT/'operational/stage_entry.py'),'--mode',a.mode,'--max-rgb',str(spec['max_rgb']),
++         '--cpu-report',str(a.cpu_report),'--execute','--model-child']
++    start=time.time()
++    with (out/'process.stdout.txt').open('xb') as stdout,(out/'process.stderr.txt').open('xb') as stderr:
++        q=subprocess.run(cmd,env=env,cwd=candidate,stdout=stdout,stderr=stderr,timeout=2400)
++    receipt={'mode':a.mode,'spec':spec,'exit_code':q.returncode,'success_receipt_exists':(out/'SUCCESS.json').is_file(),
++             'run_consumed':True,'retry_allowed':False,'runtime_seconds':time.time()-start,
++             'stdout_sha256':sha(out/'process.stdout.txt'),'stderr_sha256':sha(out/'process.stderr.txt')}
++    (out/'PROCESS_RECEIPT.json').write_text(json.dumps(receipt,indent=2))
++    print(json.dumps(receipt))
++    return 0 if q.returncode==0 and receipt['success_receipt_exists'] else 1
++
++if __name__=='__main__':raise SystemExit(main())
+diff --git a/src/tracker.py b/src/tracker.py
+index cb4a44c..793d72e 100644
+--- a/src/tracker.py
++++ b/src/tracker.py
+@@ -62,7 +62,7 @@ class Tracker:
+         prev_kf_idx, curr_kf_idx, prev_ba_idx, intrinsic = (native_resume[k] for k in ("prev_kf_idx", "curr_kf_idx", "prev_ba_idx", "intrinsic"))
+         task003().start_tracking(self.video)
+         # for (timestamp, image, _, _) in tqdm(stream):
+-        for i in range(native_resume["next_input_index"], min(len(stream), 80) if task004c().enabled else len(stream)):        # iterate through the stream
++        for i in range(native_resume["next_input_index"], min(len(stream), task004c().max_rgb) if task004c().enabled else len(stream)):        # iterate through the stream
+             timestamp, image, _, _ = stream[i]
+             task004c().frame_begin(i, timestamp)
+             with torch.no_grad():
+diff --git a/task004_controls.py b/task004_controls.py
+index c994e9a..6ccb3f0 100644
+--- a/task004_controls.py
++++ b/task004_controls.py
+@@ -69,6 +69,9 @@ def local_flags(phase, observer_stage, video, motion_only, update_u, use_u):
+ 
+ 
+ def require_approved_runtime():
++    if os.environ.get('GAMECAM_NATIVE_CONTROL_BOUNDED')=='1':
++        from native_control.stage_authorization import validate_runtime
++        return validate_runtime(policy())
+     path=Path(os.environ['GAMECAM_TASK004_AUTHORIZATION'])
+     raw=path.read_bytes()
+     if sha256(raw).hexdigest()!="ce286e8a61947d6ee295341da39d46b227d0160709eaeaa0d6d391b3dc34217c":

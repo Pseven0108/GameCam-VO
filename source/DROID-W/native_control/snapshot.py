@@ -10,6 +10,7 @@ import hashlib
 import importlib
 import inspect
 import functools
+from enum import Enum
 import json
 import math
 import os
@@ -23,7 +24,7 @@ import torch
 
 from control_common import ControlError, canonical, digest, file_sha, require_space
 from checkpoint.checkpoint_adapter import value_sha
-from native_control import configdict_adapter
+from native_control import configdict_adapter, timm_format_adapter
 
 FORMAT = 'GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS'
 HOOKS = ('_backward_hooks', '_backward_pre_hooks', '_forward_hooks', '_forward_pre_hooks',
@@ -93,7 +94,15 @@ class ObjectEncoder:
             return {'$function':module+':'+name}
         if id(x) in self.memo: return {'$ref':self.memo[id(x)]}
         nid='o%07d'%len(self.nodes);self.memo[id(x)]=nid;self.nodes[nid]={}
-        if isinstance(x, torch.Tensor):
+        if isinstance(x, Enum):
+            if type(x).__module__ + ':' + type(x).__qualname__ != timm_format_adapter.CLASS_KEY:
+                raise ControlError('Unregistered Enum type: ' + repr(type(x)))
+            pin = class_pin(type(x))
+            self.classes[pin['key']] = pin
+            node = timm_format_adapter.encode_member(x)
+        elif isinstance(x, str):
+            raise ControlError('Unregistered str subclass: ' + repr(type(x)))
+        elif isinstance(x, torch.Tensor):
             if x.layout!=torch.strided or x.is_quantized or x.is_conj() or x.is_neg():
                 raise ControlError('Unsupported native tensor layout')
             if x.is_leaf and x.grad is not None:raise ControlError('Nonempty tensor gradient requires an explicit training-state adapter')
@@ -271,6 +280,12 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
             if node.get('class') != configdict_adapter.CLASS_KEY:
                 raise ControlError('ConfigDict snapshot class mismatch')
             configdict_adapter.validate_class(classes[node['class']], node.get('pin'))
+        elif node['kind'] == timm_format_adapter.TAG:
+            if node.get('class') != timm_format_adapter.CLASS_KEY or node['class'] not in classes:
+                raise ControlError('Format snapshot class mismatch')
+            timm_format_adapter.restore_member(classes[node['class']], node)
+        elif node['kind'] == 'object' and issubclass(classes[node['class']], (Enum, str)):
+            raise ControlError('Explicit enum/string-subclass adapter required: ' + node['class'])
         elif node['kind'] == 'object' and issubclass(classes[node['class']], dict):
             raise ControlError('Mapping entries absent from legacy object node: ' + node['class'])
     # Validate every file before deserializing tensor-only payloads.
@@ -325,6 +340,8 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
         elif kind in ('dict','ordered_dict'):
             value={} if kind=='dict' else OrderedDict();objects[nid]=value
             for k,v in n['items']:value[decode(k)]=decode(v)
+        elif kind == timm_format_adapter.TAG:
+            value = timm_format_adapter.restore_member(classes[n['class']], n)
         elif kind == configdict_adapter.TAG:
             value = configdict_adapter.allocate(classes[n['class']], n)
             pending_configdicts.append((value, n))

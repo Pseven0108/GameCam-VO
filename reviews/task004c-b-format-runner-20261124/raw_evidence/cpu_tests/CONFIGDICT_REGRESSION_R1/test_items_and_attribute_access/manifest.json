@@ -1,0 +1,75 @@
+{
+  "classes": {
+    "mmcv.utils.config:ConfigDict": {
+      "key": "mmcv.utils.config:ConfigDict",
+      "source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+    }
+  },
+  "endianness": "little",
+  "files": {},
+  "nodes": {
+    "o0000000": {
+      "attrs": {
+        "$ref": "o0000001"
+      },
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": [
+        [
+          "alpha",
+          3
+        ],
+        [
+          "missing",
+          null
+        ]
+      ],
+      "kind": "mmcv_configdict_mapping_v1",
+      "pin": {
+        "addict": "2.4.0",
+        "addict_source_sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+        "class": "mmcv.utils.config:ConfigDict",
+        "mmcv-full": "1.7.2",
+        "mmcv_source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+      }
+    },
+    "o0000001": {
+      "items": [
+        [
+          "__parent",
+          null
+        ],
+        [
+          "__key",
+          null
+        ],
+        [
+          "__frozen",
+          false
+        ],
+        [
+          "fixture_cache",
+          {
+            "$ref": "o0000002"
+          }
+        ]
+      ],
+      "kind": "dict"
+    },
+    "o0000002": {
+      "items": [
+        "retained"
+      ],
+      "kind": "list"
+    }
+  },
+  "provenance": {
+    "artifact_kind": "CPU_NATIVE_INTERFACE_FIXTURE",
+    "test": "test_items_and_attribute_access"
+  },
+  "root": {
+    "$ref": "o0000000"
+  },
+  "schema": "GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS",
+  "state_sha256": "3c27225d4451f7f3cad34f84452f0e562414e352e7053a6ad4152c52db8d5ba2",
+  "storages": {}
+}

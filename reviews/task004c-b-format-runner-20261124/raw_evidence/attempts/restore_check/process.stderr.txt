@@ -1,0 +1,14 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/operational/stage_entry.py", line 75, in <module>
+    sys.exit(main())
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/runner/run_native_stage.py", line 40, in main
+    else:restore_and_continue(ROOT,out,a.mode,lock)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/native_control/native_driver.py", line 146, in restore_and_continue
+    pathlib.Path(tracker.output).mkdir(parents=True,exist_ok=False)
+  File "/opt/conda/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/attempts/restore_check/native'

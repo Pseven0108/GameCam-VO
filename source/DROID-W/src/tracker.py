@@ -62,7 +62,7 @@ class Tracker:
         prev_kf_idx, curr_kf_idx, prev_ba_idx, intrinsic = (native_resume[k] for k in ("prev_kf_idx", "curr_kf_idx", "prev_ba_idx", "intrinsic"))
         task003().start_tracking(self.video)
         # for (timestamp, image, _, _) in tqdm(stream):
-        for i in range(native_resume["next_input_index"], min(len(stream), 80) if task004c().enabled else len(stream)):        # iterate through the stream
+        for i in range(native_resume["next_input_index"], min(len(stream), task004c().max_rgb) if task004c().enabled else len(stream)):        # iterate through the stream
             timestamp, image, _, _ = stream[i]
             task004c().frame_begin(i, timestamp)
             with torch.no_grad():

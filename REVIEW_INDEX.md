@@ -1,6 +1,6 @@
 # 评审索引
 
-最新：[ConfigDict专项修复](reviews/task004c-b-configdict-closure-20261124/FINAL_REVIEW.md)。ConfigDict通过；完整模型被独立timm Format枚举阻断；新GPU运行0次。
+最新：[Format、真实C0及RGB019停止报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md)。C0和真实状态恢复通过；RGB019输出目录冲突；无Short80/正式四组新结果。
 
 | 阶段 | 阅读入口 | 文件数 | 省略附件 |
 |---|---|---:|---:|
@@ -23,5 +23,6 @@
 | task004c-b-gpu-c0-r2-20261124 | [报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md) | 89 | 0 |
 | task004c-b-autonomous-20261124 | [报告](reviews/task004c-b-autonomous-20261124/TASK004C_B_AUTONOMOUS_FINAL_REVIEW.md) | 223 | 0 |
 | task004c-b-configdict-closure-20261124 | [报告](reviews/task004c-b-configdict-closure-20261124/FINAL_REVIEW.md) | 132 | 0 |
+| task004c-b-format-runner-20261124 | [报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md) | 372 | 0（大二进制范围外） |
 
-本阶段SHA针对脱敏后的公开字节，原始→公开映射在对应publication/SANITIZATION_MAP.json。原始数据与大二进制保留于私有研究存储。
+公开SHA针对脱敏后的字节；原始→公开映射见相应publication/SANITIZATION_MAP.json。大二进制保留在原研究存储。

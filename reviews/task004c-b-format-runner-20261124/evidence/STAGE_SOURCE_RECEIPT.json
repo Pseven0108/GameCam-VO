@@ -1,0 +1,25 @@
+{
+  "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "source_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+  "worktree_clean": true,
+  "changed_files": [
+    "native_control/stages.py",
+    "native_control/runtime.py",
+    "native_control/dataset.py",
+    "native_control/native_driver.py",
+    "native_control/binding.py",
+    "native_control/install.py",
+    "native_control/admission.py",
+    "native_control/stage_authorization.py",
+    "task004_controls.py",
+    "src/tracker.py",
+    "runner/run_native_stage.py"
+  ],
+  "protected_adapter_sha256": {
+    "native_control/configdict_adapter.py": "7a4535739d385300a8eef522a6c3ccae98a26b85f0b126ba0d032505886f388f",
+    "native_control/metric3d_identity.py": "b723b0eecb68449d9f9126c3453ec940c473d17a377d1ff4629dc32be036a3b4",
+    "native_control/timm_format_adapter.py": "f9196d85fbf0351abe92b0bd7b6d7d6a128694c9062b9da610080a994dad5e05",
+    "native_control/snapshot.py": "74af3a0aaacfbed7d02c0854c90e16f1750b22adf238c6a441f2460453f76321"
+  },
+  "GPU_executions": 0
+}

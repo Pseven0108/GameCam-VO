@@ -7,6 +7,7 @@ from pathlib import Path
 import time
 
 from control_common import ControlError, canonical, digest
+from native_control.stages import stage_limit, schedule_scope, schedule_termination
 
 SCHEMA='GAMECAM_NATIVE_DISCRETE_SCHEDULE_V2'
 _active=None
@@ -52,8 +53,9 @@ class NativeJournal:
         self.path=Path(path);self.file=self.path.open('xb');self.mode=mode;self.failed=False;self.index=0
         self.header=copy.deepcopy(header);self.previous=digest(header);self.source=None
         self.open_frame=None;self.last_frame=18;self.open_operations=[]
-        if header.get('init_D')!=0 or header.get('W')!=1 or header.get('U')!=1 or header.get('max_rgb')!=80:
-            self.file.close();raise ControlError('Native schedule outside bounded scope')
+        try:self.stage=schedule_scope(header);self.max_rgb=stage_limit(self.stage)
+        except BaseException:
+            self.file.close();raise
         if mode=='replay':
             self.source=read_schedule(source)
             for k in ('c0_sha256','init_D','W','U','max_rgb','schedule'):
@@ -67,7 +69,7 @@ class NativeJournal:
     def point(self,kind,rgb,context,payload,*,select=False):
         if self.failed:raise ControlError('Native schedule latched STOP')
         try:
-            if type(rgb) is not int or not 0<=rgb<=80:raise ControlError('Native schedule RGB outside 000..080')
+            if type(rgb) is not int or not 0<=rgb<=self.max_rgb:raise ControlError('Native schedule RGB outside admitted stage')
             if self.mode=='replay':
                 if self.index>=len(self.source['events']):raise ControlError('Replay stream exhausted')
                 e=self.source['events'][self.index]
@@ -97,9 +99,12 @@ class NativeJournal:
             if not self.open_operations or self.open_operations.pop()!=kind[:-4]:
                 raise ControlError('Unpaired native nested operation')
 
-    def seal(self,termination='PREFIX_RGB080'):
+    def seal(self,termination=None):
+        expected=schedule_termination(self.stage)
+        if termination is None:termination=expected
+        if termination!=expected:raise ControlError('Wrong native schedule termination')
         if self.failed:raise ControlError('Failed native schedule cannot seal')
-        if self.open_frame is not None or self.open_operations or self.last_frame!=80:
+        if self.open_frame is not None or self.open_operations or self.last_frame!=self.max_rgb:
             raise ControlError('Native prefix cannot seal before complete RGB019..080')
         if self.mode=='replay' and self.index!=len(self.source['events']):raise ControlError('Replay has unconsumed events')
         self._write({'type':'footer','event_count':self.index,'last_sha256':self.previous,'termination':termination})
@@ -113,12 +118,12 @@ class NativeJournal:
 def read_schedule(path):
     rows=[json.loads(x) for x in Path(path).read_text().splitlines()]
     if len(rows)<2 or rows[0].get('schema')!=SCHEMA or rows[-1].get('type')!='footer':raise ControlError('Unsealed native schedule')
-    h=rows[0]['header'];prev=digest(h)
+    h=rows[0]['header'];stage=schedule_scope(h);limit=stage_limit(stage);prev=digest(h)
     if rows[0]['sha256']!=prev:raise ControlError('Native header SHA mismatch')
     frame=None;last_frame=18;operations=[]
     for i,e in enumerate(rows[1:-1]):
         if e.get('type')!='event' or e['index']!=i or e['previous_sha256']!=prev or e['sha256']!=digest({k:v for k,v in e.items() if k!='sha256'}):raise ControlError('Native event hash/order mismatch')
-        if not 0<=e['rgb']<=80:raise ControlError('Schedule exceeds authorized prefix')
+        if type(e['rgb']) is not int or not 0<=e['rgb']<=limit:raise ControlError('Schedule exceeds authorized stage')
         kind,rgb,p=e['kind'],e['rgb'],e['payload']
         if kind=='frame.begin':
             if frame is not None or operations or rgb!=last_frame+1 or p.get('index')!=rgb-1:raise ControlError('Invalid saved frame order')
@@ -130,17 +135,18 @@ def read_schedule(path):
         elif kind.endswith('.end'):
             if not operations or operations.pop()!=kind[:-4]:raise ControlError('Invalid saved nested event order')
         prev=e['sha256']
-    if rows[-1]!=dict(type='footer',event_count=len(rows)-2,last_sha256=prev,termination='PREFIX_RGB080'):
+    if rows[-1]!=dict(type='footer',event_count=len(rows)-2,last_sha256=prev,termination=schedule_termination(stage)):
         raise ControlError('Native prefix termination mismatch')
-    if h.get('init_D')!=0 or h.get('max_rgb')!=80 or h.get('W')!=1 or h.get('U')!=1:raise ControlError('Invalid native header scope')
-    if frame is not None or operations or last_frame!=80:raise ControlError('Incomplete saved native prefix')
+    if frame is not None or operations or last_frame!=limit:raise ControlError('Incomplete saved native prefix')
     return {'header':h,'events':rows[1:-1],'footer':rows[-1]}
 
 
 class NativeControl(NullControl):
     enabled=True
-    def __init__(self,D,output,*,journal=None,capture_callback=None,restore_values=None):
+    def __init__(self,D,output,*,journal=None,capture_callback=None,restore_values=None,stage='short80'):
         if type(D) is not int or D not in (0,1):raise ControlError('Invalid native D')
+        self.stage=stage;self.max_rgb=stage_limit(stage)
+        if journal is not None and (journal.stage!=stage or journal.max_rgb!=self.max_rgb):raise ControlError('Controller/journal stage mismatch')
         self.D=D;self.output=Path(output);self.journal=journal;self.capture_callback=capture_callback
         self.restore_values=restore_values;self.graphs={};self.graph_ids={};self.edge_state={};self.next_graph=0;self.next_edge=0
         self.nodes=[];self.rgb=0;self.phase='startup';self.init_counts={};self.initialized=False
@@ -215,7 +221,7 @@ class NativeControl(NullControl):
 
     def frame_begin(self,index,timestamp):
         rgb=int(timestamp)+1
-        if rgb!=index+1 or not 1<=rgb<=80:raise ControlError('Bounded native input order/RGB mismatch')
+        if rgb!=index+1 or not 1<=rgb<=self.max_rgb:raise ControlError('Bounded native input order/RGB mismatch')
         self.rgb=rgb
         self.point('frame.begin',{'index':index,'rgb_id':rgb})
 
@@ -231,10 +237,10 @@ class NativeControl(NullControl):
             callback=self.capture_callback;self.capture_callback=None
             callback(tracker,stream,values,self)
             raise PrefixComplete('C0_CAPTURED_AFTER_TRUE_INITIALIZATION')
-        if self.rgb==80:
+        if self.rgb==self.max_rgb and self.stage!='formal487':
             if self.journal:self.journal.seal()
-            self.diagnostic('PREFIX_COMPLETE',last_rgb=80,formal_experiment=False)
-            raise PrefixComplete('AUTHORIZED_RGB080_REACHED')
+            self.diagnostic('PREFIX_COMPLETE',last_rgb=self.rgb,stage=self.stage,formal_experiment=False)
+            raise PrefixComplete('AUTHORIZED_STAGE_BOUNDARY_REACHED')
 
     def motion_decision(self,proposed,force,threshold,score=None):
         p=self.point('motion.decision',{'admitted':bool(proposed),'force':bool(force),'threshold':float(threshold),

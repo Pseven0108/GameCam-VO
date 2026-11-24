@@ -1,0 +1,38 @@
+{
+  "mode": "restore_check",
+  "data_free_bytes": 14655201280,
+  "gpu": "NVIDIA GeForce RTX 3090, 24125, 0, 0\n",
+  "attempts": {
+    "capture": [
+      "C0_RECEIPT.json",
+      "LAUNCH_INTENT.json",
+      "PROCESS_RECEIPT.json",
+      "SUCCESS.json",
+      "native",
+      "native_trace.jsonl",
+      "observer.jsonl",
+      "process.stderr.txt",
+      "process.stdout.txt",
+      "shared_cpu"
+    ],
+    "restore_check": [
+      "LAUNCH_INTENT.json",
+      "PROCESS_RECEIPT.json",
+      "RESTORE_RECEIPT.json",
+      "native",
+      "native_trace.jsonl",
+      "observer.jsonl",
+      "process.stderr.txt",
+      "process.stdout.txt",
+      "shared_cpu"
+    ]
+  },
+  "LAUNCH_INTENT.json": "{\n  \"mode\": \"restore_check\",\n  \"spec\": {\n    \"mode\": \"restore_check\",\n    \"stage\": \"restore19\",\n    \"max_rgb\": 19,\n    \"D\": 0,\n    \"W\": 1,\n    \"U\": 1,\n    \"INIT_D\": 0,\n    \"schedule\": null,\n    \"replay\": false,\n    \"formal\": false\n  },\n  \"source_commit\": \"5d357c1d3079de134dd8b41a20a00632da37f0b0\",\n  \"child_token\": \"REDACTED_EPHEMERAL_STAGE_NONCE\",\n  \"created\": 1795531591.638241,\n  \"automatic_retry\": false\n}",
+  "PROCESS_RECEIPT.json": "{\n  \"mode\": \"restore_check\",\n  \"spec\": {\n    \"mode\": \"restore_check\",\n    \"stage\": \"restore19\",\n    \"max_rgb\": 19,\n    \"D\": 0,\n    \"W\": 1,\n    \"U\": 1,\n    \"INIT_D\": 0,\n    \"schedule\": null,\n    \"replay\": false,\n    \"formal\": false\n  },\n  \"exit_code\": 1,\n  \"success_receipt_exists\": false,\n  \"run_consumed\": true,\n  \"retry_allowed\": false,\n  \"runtime_seconds\": 285.1932671070099,\n  \"stdout_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"stderr_sha256\": \"1a22453b5c6801ef448767fbd25637946ad71d207d3aea520155ffa0fc1be2a6\"\n}",
+  "RESTORE_RECEIPT.json": "{\n  \"all_tensor_and_object_nodes_match\": true,\n  \"next_input_match\": true,\n  \"object_nodes\": 18143,\n  \"new_process_pid\": 5676,\n  \"source_pid\": 5490,\n  \"rng_restored_last\": true,\n  \"c0_sha256\": \"18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92\"\n}",
+  "process.stdout.txt": "",
+  "process.stderr.txt": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\nTraceback (most recent call last):\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/operational/stage_entry.py\", line 75, in <module>\n    sys.exit(main())\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/runner/run_native_stage.py\", line 40, in main\n    else:restore_and_continue(ROOT,out,a.mode,lock)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/native_control/native_driver.py\", line 146, in restore_and_continue\n    pathlib.Path(tracker.output).mkdir(parents=True,exist_ok=False)\n  File \"/opt/conda/lib/python3.10/pathlib.py\", line 1175, in mkdir\n    self._accessor.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/attempts/restore_check/native'\n",
+  "wrapper_stderr.txt": "",
+  "wrapper_stdout.txt": "{\"mode\": \"restore_check\", \"spec\": {\"mode\": \"restore_check\", \"stage\": \"restore19\", \"max_rgb\": 19, \"D\": 0, \"W\": 1, \"U\": 1, \"INIT_D\": 0, \"schedule\": null, \"replay\": false, \"formal\": false}, \"exit_code\": 1, \"success_receipt_exists\": false, \"run_consumed\": true, \"retry_allowed\": false, \"runtime_seconds\": 285.1932671070099, \"stdout_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stderr_sha256\": \"1a22453b5c6801ef448767fbd25637946ad71d207d3aea520155ffa0fc1be2a6\"}\n",
+  "wrapper_RECEIPT.json": "{\n  \"mode\": \"restore_check\",\n  \"wrapper_exit_code\": 1,\n  \"runtime_seconds\": 287.4059784412384,\n  \"gpu_run_claimed\": true,\n  \"successful\": false,\n  \"stdout_tail\": \"{\\\"mode\\\": \\\"restore_check\\\", \\\"spec\\\": {\\\"mode\\\": \\\"restore_check\\\", \\\"stage\\\": \\\"restore19\\\", \\\"max_rgb\\\": 19, \\\"D\\\": 0, \\\"W\\\": 1, \\\"U\\\": 1, \\\"INIT_D\\\": 0, \\\"schedule\\\": null, \\\"replay\\\": false, \\\"formal\\\": false}, \\\"exit_code\\\": 1, \\\"success_receipt_exists\\\": false, \\\"run_consumed\\\": true, \\\"retry_allowed\\\": false, \\\"runtime_seconds\\\": 285.1932671070099, \\\"stdout_sha256\\\": \\\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\\\", \\\"stderr_sha256\\\": \\\"1a22453b5c6801ef448767fbd25637946ad71d207d3aea520155ffa0fc1be2a6\\\"}\\n\",\n  \"stderr_tail\": \"\"\n}"
+}

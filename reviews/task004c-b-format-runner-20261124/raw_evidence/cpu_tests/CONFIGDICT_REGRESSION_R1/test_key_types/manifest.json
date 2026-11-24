@@ -1,0 +1,94 @@
+{
+  "classes": {
+    "mmcv.utils.config:ConfigDict": {
+      "key": "mmcv.utils.config:ConfigDict",
+      "source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+    }
+  },
+  "endianness": "little",
+  "files": {},
+  "nodes": {
+    "o0000000": {
+      "attrs": {
+        "$ref": "o0000002"
+      },
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": [
+        [
+          "3",
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3.5,
+          2
+        ],
+        [
+          {
+            "$ref": "o0000001"
+          },
+          3
+        ],
+        [
+          {
+            "$bytes": "Zml2ZQ=="
+          },
+          4
+        ],
+        [
+          false,
+          5
+        ],
+        [
+          null,
+          6
+        ]
+      ],
+      "kind": "mmcv_configdict_mapping_v1",
+      "pin": {
+        "addict": "2.4.0",
+        "addict_source_sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+        "class": "mmcv.utils.config:ConfigDict",
+        "mmcv-full": "1.7.2",
+        "mmcv_source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+      }
+    },
+    "o0000001": {
+      "items": [
+        "four",
+        1
+      ],
+      "kind": "tuple"
+    },
+    "o0000002": {
+      "items": [
+        [
+          "__parent",
+          null
+        ],
+        [
+          "__key",
+          null
+        ],
+        [
+          "__frozen",
+          false
+        ]
+      ],
+      "kind": "dict"
+    }
+  },
+  "provenance": {
+    "artifact_kind": "CPU_NATIVE_INTERFACE_FIXTURE",
+    "test": "test_key_types"
+  },
+  "root": {
+    "$ref": "o0000000"
+  },
+  "schema": "GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS",
+  "state_sha256": "1cf08b9004de78aab13559aa22ef7f60f4019ce8f3c4fb5da85715eff9abebbd",
+  "storages": {}
+}

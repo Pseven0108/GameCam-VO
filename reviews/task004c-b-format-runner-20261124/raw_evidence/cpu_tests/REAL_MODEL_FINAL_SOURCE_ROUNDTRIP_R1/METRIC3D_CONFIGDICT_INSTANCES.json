@@ -1,0 +1,99 @@
+[
+  {
+    "id": "o0010342",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 8,
+    "ordered_keys": [
+      "model",
+      "data_basic",
+      "load_from",
+      "cudnn_benchmark",
+      "test_metrics",
+      "max_value",
+      "batchsize_per_gpu",
+      "thread_per_gpu"
+    ],
+    "mapping_sha256": "0ec09e21ae7d4006fa03a1bd94489dca544f7e69cfc5a0e97a11fa3f7feb9d3c",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "66baa96164b943f855e179eda496b53ab7f135535f1daec02c8d0c62a57d5f43"
+  },
+  {
+    "id": "o0010343",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 3,
+    "ordered_keys": [
+      "backbone",
+      "type",
+      "decode_head"
+    ],
+    "mapping_sha256": "3178f768a467dff6b4af4bfc20353fb6fadf26c6f9cfd6503f70a4079af26404",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "0bce2aab0ad06d8705b493aef8142edd6bee0459fa76a5887035b33d1843fbe2"
+  },
+  {
+    "id": "o0010344",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 4,
+    "ordered_keys": [
+      "type",
+      "prefix",
+      "out_channels",
+      "drop_path_rate"
+    ],
+    "mapping_sha256": "ac0df6e209b3752257d943fce372c87d3b06672626537c2abbefff63545f1702",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "89406d7537209dcc622d07cfe429cc01b57387b9c254d8c8926f1b57720fc5f2"
+  },
+  {
+    "id": "o0010347",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 14,
+    "ordered_keys": [
+      "type",
+      "in_channels",
+      "use_cls_token",
+      "feature_channels",
+      "decoder_channels",
+      "up_scale",
+      "hidden_channels",
+      "n_gru_layers",
+      "n_downsample",
+      "iters",
+      "slow_fast_gru",
+      "num_register_tokens",
+      "prefix",
+      "detach"
+    ],
+    "mapping_sha256": "3939c7ae3a922bae36f54f178e9f8d93f7fdd32da3587159a80454448cdc5612",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "cc47d6e3eb53bf1a4e61278235874b2b6b7b469a1ad25895f9d187c6ddd1749f"
+  },
+  {
+    "id": "o0010351",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 6,
+    "ordered_keys": [
+      "canonical_space",
+      "depth_range",
+      "depth_normalize",
+      "crop_size",
+      "clip_depth_range",
+      "vit_size"
+    ],
+    "mapping_sha256": "47a5d9a2022486494228c6fe3d4c3a85b1a0a93f9af71f26e6bbdd18dd6ec683",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "24bbe9a9a156f64cbb2f64287d47f193aeb0b1ac3ad9ad83cca4838c995c201c"
+  },
+  {
+    "id": "o0010352",
+    "class": "mmcv.utils.config:ConfigDict",
+    "items": 2,
+    "ordered_keys": [
+      "img_size",
+      "focal_length"
+    ],
+    "mapping_sha256": "742c2f364afa6d4d4ae77a3ba30abbdfa213766464eb40ba1faf71ed95ec38e2",
+    "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+    "reference_sha256": "a90d231b853d638b29197f7cdf906c1abb6b57d57b442a1f3e579fb76169c86e"
+  }
+]

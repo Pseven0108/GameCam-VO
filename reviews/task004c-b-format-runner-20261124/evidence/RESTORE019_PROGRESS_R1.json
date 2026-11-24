@@ -1,0 +1,32 @@
+{
+  "mode": "restore_check",
+  "data_free_bytes": 15519227904,
+  "gpu": "NVIDIA GeForce RTX 3090, 22380, 1745, 0\n",
+  "attempts": {
+    "capture": [
+      "C0_RECEIPT.json",
+      "LAUNCH_INTENT.json",
+      "PROCESS_RECEIPT.json",
+      "SUCCESS.json",
+      "native",
+      "native_trace.jsonl",
+      "observer.jsonl",
+      "process.stderr.txt",
+      "process.stdout.txt",
+      "shared_cpu"
+    ],
+    "restore_check": [
+      "LAUNCH_INTENT.json",
+      "native",
+      "observer.jsonl",
+      "process.stderr.txt",
+      "process.stdout.txt",
+      "shared_cpu"
+    ]
+  },
+  "LAUNCH_INTENT.json": "{\n  \"mode\": \"restore_check\",\n  \"spec\": {\n    \"mode\": \"restore_check\",\n    \"stage\": \"restore19\",\n    \"max_rgb\": 19,\n    \"D\": 0,\n    \"W\": 1,\n    \"U\": 1,\n    \"INIT_D\": 0,\n    \"schedule\": null,\n    \"replay\": false,\n    \"formal\": false\n  },\n  \"source_commit\": \"5d357c1d3079de134dd8b41a20a00632da37f0b0\",\n  \"child_token\": \"REDACTED_EPHEMERAL_STAGE_NONCE\",\n  \"created\": 1795531591.638241,\n  \"automatic_retry\": false\n}",
+  "process.stdout.txt": "",
+  "process.stderr.txt": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n",
+  "wrapper_stderr.txt": "",
+  "wrapper_stdout.txt": ""
+}

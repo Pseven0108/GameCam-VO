@@ -14,6 +14,7 @@ from native_control.binding import capture_c0,restore_c0,rebind_output
 from native_control.snapshot import read_manifest
 from native_control.dataset import NativeViperRGB
 from control_common import ControlError,file_sha,digest
+from native_control.stages import mode_spec
 from src.slam import SLAM
 from src.tracker import Tracker
 from src.utils.Printer import Printer
@@ -59,7 +60,7 @@ class BoundedCaptureSLAM(SLAM):
     def tracking(self,pipe):
         cached_priors();torch.set_num_threads(2);cv2.setNumThreads(1)
         out=pathlib.Path(os.environ['GAMECAM_NATIVE_ATTEMPT']);lock=json.loads(pathlib.Path(os.environ['GAMECAM_NATIVE_LOCK']).read_text())
-        controller=NativeControl(0,out);set_active(controller)
+        controller=NativeControl(0,out,stage='capture');set_active(controller)
         event_writer=SummaryWriter(self.save_dir);self.tracker=Tracker(self,pipe,event_writer)
         barrier=self.video._native_writer_barrier
         def save(tracker,stream,values,ctrl):
@@ -85,7 +86,7 @@ def capture(root,out,manifest,config,lock):
     if file_sha(config)!=lock['r2_yaml_sha256']:raise ControlError('R2 YAML mismatch')
     cfg=copy.deepcopy(cfg);cfg['data'].update(output=str(out),input_folder=str(pathlib.Path(manifest).parent))
     if cfg['tracking']['buffer']!=500 or cfg['stride']!=1 or cfg['setup_seed']!=43:raise ControlError('Frozen R2 settings mismatch')
-    setup_seed(43);stream=NativeViperRGB(cfg,manifest,out)
+    setup_seed(43);stream=NativeViperRGB(cfg,manifest,out,stage='capture')
     import numpy as np
     np.testing.assert_array_equal(stream.get_intrinsic().numpy(),[386.01129150390625,386.01129150390625,319.5,179.5])
     os.environ['GAMECAM_NATIVE_CONTROL_BOUNDED']='1'
@@ -120,37 +121,95 @@ def restore_and_continue(root,out,mode,lock):
     m=read_manifest(root/'C0',captured['state_sha256']);bundle,m,receipt=restore_c0(root/'C0',services=services,expected_sha=captured['state_sha256'],allow_cuda=True)
     if receipt['source_pid']==receipt['new_process_pid']:raise ControlError('Restore did not enter a fresh process')
     (out/'RESTORE_RECEIPT.json').write_text(json.dumps(receipt,indent=2))
-    if mode=='restore_check':
-        (out/'SUCCESS.json').write_text(json.dumps({'mode':mode,'hashes_match':True,'pid':os.getpid()}));printer.terminate();event_writer.close();observer_file.close();return
-    D=1 if mode in ('record_S1','replay_D1_S0') else 0
-    schedule='S1' if mode in ('record_S1','replay_D0_S1') else 'S0'
-    replay=mode.startswith('replay_')
-    source=root/'attempts'/('record_'+schedule)/'schedule.jsonl' if replay else None
-    header={'c0_sha256':m['state_sha256'],'init_D':0,'W':1,'U':1,'max_rgb':80,'schedule':schedule,
-            'producer_D':1 if schedule=='S1' else 0,'consumer_D':D}
-    journal=NativeJournal(out/'schedule.jsonl',header,mode='replay' if replay else 'record',source=source)
-    controller=NativeControl(D,out,journal=journal,restore_values=bundle['cursor']);controller.restore_discrete(bundle['control']);set_active(controller)
+    spec=mode_spec(mode)
+    expected_source=os.environ['GAMECAM_NATIVE_SOURCE_COMMIT']
+    if m['provenance'].get('candidate_source_commit')!=expected_source:
+        raise ControlError('C0 was not sealed from this exact final runner source')
+    if bundle['cursor']['next_input_index']!=18 or bundle['stream'].seen!=18:
+        raise ControlError('Restored C0 cursor does not identify the actual RGB019 input')
+    if bundle['control']['rgb']!=18 or not bundle['control']['initialized']:
+        raise ControlError('Restored C0 initialization/stage mismatch')
+    replay=spec['replay'];schedule=spec['schedule'];D=spec['D'];stage=spec['stage']
+    journal=None
+    if schedule:
+        source_mode=('B1' if schedule=='S1' else 'B4') if spec['formal'] else 'record_'+schedule
+        source=root/'attempts'/source_mode/'schedule.jsonl' if replay else None
+        header={'c0_sha256':m['state_sha256'],'init_D':0,'W':1,'U':1,'max_rgb':spec['max_rgb'],
+                'stage':stage,'schedule':schedule,'producer_D':1 if schedule=='S1' else 0,'consumer_D':D,
+                'candidate_source_commit':expected_source,'input_manifest_sha256':lock['input_manifest_sha256']}
+        journal=NativeJournal(out/'schedule.jsonl',header,mode='replay' if replay else 'record',source=source)
+    controller=NativeControl(D,out,journal=journal,restore_values=bundle['cursor'],stage=stage)
+    controller.restore_discrete(bundle['control']);set_active(controller)
     tracker,stream=bundle['tracker'],bundle['stream'];controller.tracker=tracker;controller.video=tracker.video
-    rebind_output(bundle,out);bundle['observer'].path=out/'observer.jsonl'
+    stream.set_stage(stage)
+    rebind_receipt=rebind_output(bundle,out)
+    pathlib.Path(tracker.output).mkdir(parents=True,exist_ok=False)
+    bundle['filler'].cfg=tracker.cfg
+    bundle['observer'].path=out/'observer.jsonl'
     task003_observer._recorder=bundle['observer']
     timers.timer=bundle['timer']
-    # Rebind modules that imported the Timer singleton by value.
-    import sys
     for module in list(sys.modules.values()):
         if module is not None and getattr(module,'__name__','').startswith('src.') and getattr(module,'timer',None).__class__ is bundle['timer'].__class__:
             module.timer=bundle['timer']
-    exit_event=ctx.Event();viewer=ctx.Process(target=native_recording_viewer,args=(tracker.video,),kwargs={'record_path':str(out/'rerun_stream.rrd'),'exit_event':exit_event,'writer_barrier':barrier})
+    (out/'STAGE_RESUME_INPUT.json').write_text(json.dumps({'stage':stage,'next_input':bundle['next_input'],
+        'cursor_next_input_index':bundle['cursor']['next_input_index'],'restored_last_rgb':controller.rgb,
+        'graph_topology_sha256':digest(controller.context()),'rebind':rebind_receipt},indent=2))
+    exit_event=ctx.Event()
+    viewer=ctx.Process(target=native_recording_viewer,args=(tracker.video,),kwargs={
+        'record_path':str(out/'rerun_stream.rrd'),'exit_event':exit_event,'writer_barrier':barrier})
     viewer.start();printer.pbar_ready()
+    succeeded=False
     try:
-        tracker.run(stream)
-        raise ControlError('Native bounded tracker returned without a prefix stop')
-    except PrefixComplete:
-        if controller.rgb!=80 or stream.seen!=80 or controller.failed:raise
-        (out/'SUCCESS.json').write_text(json.dumps({'mode':mode,'last_rgb':80,'events':journal.index,'ba_calls':controller.ba_calls,'pid':os.getpid(),'formal_experiment':False},indent=2))
+        if spec['formal']:
+            tracker.run(stream)
+            if controller.rgb!=487 or stream.seen!=487 or controller.failed:
+                raise ControlError('Formal tracker did not consume all 487 ordered RGB inputs')
+            # Preserve native final BA and Filler; the shell contributes no optimizer state.
+            import numpy as np
+            shell=object.__new__(SLAM)
+            shell.cfg=tracker.cfg;shell.droid_net=tracker.net;shell.video=tracker.video
+            shell.stream=stream;shell.traj_filler=bundle['filler'];shell.printer=printer
+            shell.save_dir=tracker.output;shell.device=tracker.device;shell.final_clean=False
+            shell.logger=None
+            n=int(tracker.video.counter.value)
+            np.savez(out/'FRONTEND_KEYFRAMES.npz',timestamps=tracker.video.timestamp[:n].detach().cpu().numpy(),
+                poses=tracker.video.poses[:n].detach().cpu().numpy())
+            original_backend=shell.backend
+            def observed_backend():
+                result=original_backend()
+                count=int(tracker.video.counter.value)
+                np.savez(out/'FINAL_BA_KEYFRAMES.npz',timestamps=tracker.video.timestamp[:count].detach().cpu().numpy(),
+                    poses=tracker.video.poses[:count].detach().cpu().numpy())
+                return result
+            shell.backend=observed_backend
+            shell.terminate()
+            if not shell.final_clean or stream.filler_seen!=487 or not stream.filler_finished:
+                raise ControlError('Native final BA/Filler did not finish all 487 inputs')
+            final_file=pathlib.Path(shell.save_dir)/'traj/est_poses_full.txt'
+            lines=[x for x in final_file.read_text().splitlines() if x.strip()]
+            if len(lines)!=487:raise ControlError('Final exported trajectory does not have 487 rows')
+            if not (out/'FINAL_BA_KEYFRAMES.npz').is_file():raise ControlError('Final BA stage output missing')
+            journal.seal()
+            success={'mode':mode,'stage':stage,'last_rgb':487,'filler_frames':487,'pose_rows':len(lines),
+                     'events':journal.index,'ba_calls':controller.ba_calls,'formal_experiment':True,
+                     'full_trajectory_file':str(final_file),'full_trajectory_sha256':file_sha(final_file)}
+        else:
+            try:
+                tracker.run(stream)
+                raise ControlError('Bounded stage returned without a stage stop')
+            except PrefixComplete:
+                if controller.rgb!=spec['max_rgb'] or stream.seen!=spec['max_rgb'] or controller.failed:raise
+            success={'mode':mode,'stage':stage,'last_rgb':controller.rgb,'next_input_index':stream.seen,
+                     'events':journal.index if journal else None,'ba_calls':controller.ba_calls,'formal_experiment':False,
+                     'actual_RGB019_consumed':stream.seen>=19,'next_unread_rgb':stream.seen+1}
+        success.update(pid=os.getpid(),c0_sha256=m['state_sha256'],candidate_source_commit=expected_source)
+        succeeded=True
     finally:
-        exit_event.set();barrier.request.clear();viewer.join(timeout=15)
+        exit_event.set();barrier.request.clear();viewer.join(timeout=30)
         if viewer.is_alive():
-            # Only this attempt's own viewer can be stopped; never touch other services.
             viewer.terminate();viewer.join(timeout=5)
         printer.terminate();event_writer.flush();event_writer.close();observer_file.close();controller.trace.close()
-        if viewer.exitcode!=0:raise ControlError('Native Rerun recording failed during prefix validation')
+        if journal and not journal.file.closed:journal.abort()
+        if viewer.exitcode!=0:raise ControlError('Native Rerun recording failed during the admitted stage')
+    if succeeded:
+        (out/'SUCCESS.json').write_text(json.dumps(success,indent=2))

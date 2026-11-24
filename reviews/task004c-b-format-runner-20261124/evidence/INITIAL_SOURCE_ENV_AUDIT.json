@@ -1,0 +1,53 @@
+{
+  "actual_source_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+  "actual_tree": "4dcec1e2c80f6bcc3e42046229d0dd54f9464ff8",
+  "worktree_clean": true,
+  "requested_stale_start_commit": "a324b57760fdaf4929385f2271991d773533799d",
+  "preserve_already_accepted_ConfigDict_fix": true,
+  "gpu_query_exit": 0,
+  "gpu": "NVIDIA GeForce RTX 3090, 24576, 24125",
+  "data_disk": {
+    "total": 105089261568,
+    "used": 83179982848,
+    "free": 21892501504
+  },
+  "shm": {
+    "total": 25769803776,
+    "used": 1637584896,
+    "free": 24132218880
+  },
+  "timm_version": "0.9.10",
+  "format_class": "timm.layers.format:Format",
+  "format_MRO": [
+    "timm.layers.format:Format",
+    "builtins:str",
+    "enum:Enum",
+    "builtins:object"
+  ],
+  "format_members": {
+    "NCHW": {
+      "name": "NCHW",
+      "value": "NCHW",
+      "exact_type": true
+    },
+    "NHWC": {
+      "name": "NHWC",
+      "value": "NHWC",
+      "exact_type": true
+    },
+    "NCL": {
+      "name": "NCL",
+      "value": "NCL",
+      "exact_type": true
+    },
+    "NLC": {
+      "name": "NLC",
+      "value": "NLC",
+      "exact_type": true
+    }
+  },
+  "new_owner": "<function Enum.__new__ at 0x7fa768216680>",
+  "init_owner": "<slot wrapper '__init__' of 'object' objects>",
+  "Format_source_sha256": "8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae",
+  "format_source": "from enum import Enum\nfrom typing import Union\n\nimport torch\n\n\nclass Format(str, Enum):\n    NCHW = 'NCHW'\n    NHWC = 'NHWC'\n    NCL = 'NCL'\n    NLC = 'NLC'\n\n\nFormatT = Union[str, Format]\n\n\ndef get_spatial_dim(fmt: FormatT):\n    fmt = Format(fmt)\n    if fmt is Format.NLC:\n        dim = (1,)\n    elif fmt is Format.NCL:\n        dim = (2,)\n    elif fmt is Format.NHWC:\n        dim = (1, 2)\n    else:\n        dim = (2, 3)\n    return dim\n\n\ndef get_channel_dim(fmt: FormatT):\n    fmt = Format(fmt)\n    if fmt is Format.NHWC:\n        dim = 3\n    elif fmt is Format.NLC:\n        dim = 2\n    else:\n        dim = 1\n    return dim\n\n\ndef nchw_to(x: torch.Tensor, fmt: Format):\n    if fmt == Format.NHWC:\n        x = x.permute(0, 2, 3, 1)\n    elif fmt == Format.NLC:\n        x = x.flatten(2).transpose(1, 2)\n    elif fmt == Format.NCL:\n        x = x.flatten(2)\n    return x\n\n\ndef nhwc_to(x: torch.Tensor, fmt: Format):\n    if fmt == Format.NCHW:\n        x = x.permute(0, 3, 1, 2)\n    elif fmt == Format.NLC:\n        x = x.flatten(1, 2)\n    elif fmt == Format.NCL:\n        x = x.flatten(1, 2).transpose(1, 2)\n    return x\n"
+}

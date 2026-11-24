@@ -77,3 +77,25 @@ def validate_mode(mode,max_rgb):
     if mode not in MODES or type(max_rgb) is not int or max_rgb!=80:
         raise ValueError('Only named, single bounded native validation modes ending at RGB080 are authorized')
     return True
+
+
+def continuation_preflight(root,release):
+    """Same frozen identity/GPU gate, with restoration rather than C0 reservation."""
+    root=pathlib.Path(root);issues=[]
+    pins={**release['protected_pins'],**release['runtime_pins']}
+    checked={p:{'actual':sha(p) if pathlib.Path(p).is_file() else None,'expected':v} for p,v in pins.items()}
+    if any(v['actual']!=v['expected'] for v in checked.values()):issues.append('IDENTITY_CHANGED')
+    gpu=command(['nvidia-smi','--query-gpu=name,memory.total,memory.free','--format=csv,noheader,nounits'])
+    apps=command(['nvidia-smi','--query-compute-apps=pid,process_name,used_memory','--format=csv,noheader,nounits'])
+    rows=gpu.get('stdout','').strip().splitlines()
+    if gpu['exit_code']!=0 or len(rows)!=1 or 'RTX 3090' not in rows[0]:issues.append('REQUIRED_SINGLE_RTX3090_NOT_CONFIRMED')
+    elif float(rows[0].split(',')[2])<23000:issues.append('GPU_FREE_MEMORY_BELOW_FROZEN_ADMISSION')
+    if apps['exit_code']!=0 or apps['stdout'].strip():issues.append('GPU_COMPUTE_OCCUPIED_OR_UNKNOWN')
+    disk=dict(zip(('total','used','free'),shutil.disk_usage(root)))
+    reservation=2246400000+1024**3
+    if disk['free']<10*GIB+reservation:issues.append('DATA_DISK_BELOW_RESTORE_ARENA_LOGS_AND_FLOOR')
+    shm=dict(zip(('total','used','free'),shutil.disk_usage('/dev/shm')))
+    if shm['free']<64*1024**2:issues.append('SHM_BELOW_RESIDUAL_IPC_ENVELOPE')
+    return {'admitted':not issues,'issues':issues,'gpu':gpu,'compute_apps':apps,'protected_pins':checked,
+            'data_disk':disk,'shared_memory':shm,'restore_reservation_bytes':reservation,
+            'models_imported':False,'cuda_context_initialized':False}

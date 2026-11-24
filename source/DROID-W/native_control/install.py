@@ -119,7 +119,7 @@ def _ints(x):return [int(v) for v in (x.detach().cpu().tolist() if hasattr(x,'de
 def install_depth_video(cls):
     def append(c,v,b,f):
         item=b.arguments['item'];rgb=int(item[0])+1;slot=int(v.counter.value)
-        if slot!=len(c.nodes) or not 1<=rgb<=80:raise ControlError('Native insertion buffer/RGB mismatch')
+        if slot!=len(c.nodes) or not 1<=rgb<=getattr(c,'max_rgb',80):raise ControlError('Native insertion buffer/RGB mismatch')
         c.begin('keyframe.insert',{'rgb_id':rgb,'slot':slot,'token':'kf:%03d'%rgb},select=False)
         result=_call(f,b);c.nodes.append('kf:%03d'%rgb)
         c.end('keyframe.insert',{'counter_after':int(v.counter.value)});return result

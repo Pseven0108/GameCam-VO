@@ -1,0 +1,71 @@
+{
+  "time_unix": 1795532216.3594773,
+  "native_Rerun": [
+    {
+      "mode": "capture",
+      "rrd_files": [
+        {
+          "file": "native/rerun_stream.rrd",
+          "bytes": 3495924,
+          "sha256": "04b87c29dcebcc7a7215469fade2e5817badbc1cf6c7adaad1076b0b0bb8f5bb"
+        }
+      ],
+      "browser_render_verified": false,
+      "all_stage_succeeded": true
+    },
+    {
+      "mode": "restore_check",
+      "rrd_files": [],
+      "browser_render_verified": false,
+      "all_stage_succeeded": false
+    }
+  ],
+  "new_Arena_file_count": 5,
+  "new_Arena_bytes": 4492800016,
+  "Arena_retained_no_cleanup": [
+    {
+      "path": "attempts/capture/shared_cpu/5903005.bin",
+      "bytes": 1382400000,
+      "mode": "0o600",
+      "inode": 5903005,
+      "retained": true
+    },
+    {
+      "path": "attempts/capture/shared_cpu/5903006.bin",
+      "bytes": 864000000,
+      "mode": "0o600",
+      "inode": 5903006,
+      "retained": true
+    },
+    {
+      "path": "attempts/restore_check/shared_cpu/5903886.bin",
+      "bytes": 1382400000,
+      "mode": "0o600",
+      "inode": 5903886,
+      "retained": true
+    },
+    {
+      "path": "attempts/restore_check/shared_cpu/5903887.bin",
+      "bytes": 864000000,
+      "mode": "0o600",
+      "inode": 5903887,
+      "retained": true
+    },
+    {
+      "path": "attempts/restore_check/shared_cpu/5903888.bin",
+      "bytes": 16,
+      "mode": "0o600",
+      "inode": 5903888,
+      "retained": true
+    }
+  ],
+  "C0_metadata_unchanged": true,
+  "C0_state_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+  "data_disk_free_bytes": 14654013440,
+  "GPU_compute_apps": "",
+  "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "source_worktree_clean": true,
+  "instance_running": true,
+  "instance_shutdown": false,
+  "no_automatic_retry": true
+}

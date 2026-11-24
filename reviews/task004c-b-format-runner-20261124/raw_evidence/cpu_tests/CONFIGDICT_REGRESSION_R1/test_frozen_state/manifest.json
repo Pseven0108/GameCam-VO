@@ -1,0 +1,98 @@
+{
+  "classes": {
+    "mmcv.utils.config:ConfigDict": {
+      "key": "mmcv.utils.config:ConfigDict",
+      "source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+    }
+  },
+  "endianness": "little",
+  "files": {},
+  "nodes": {
+    "o0000000": {
+      "attrs": {
+        "$ref": "o0000003"
+      },
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": [
+        [
+          "nested",
+          {
+            "$ref": "o0000001"
+          }
+        ]
+      ],
+      "kind": "mmcv_configdict_mapping_v1",
+      "pin": {
+        "addict": "2.4.0",
+        "addict_source_sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+        "class": "mmcv.utils.config:ConfigDict",
+        "mmcv-full": "1.7.2",
+        "mmcv_source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+      }
+    },
+    "o0000001": {
+      "attrs": {
+        "$ref": "o0000002"
+      },
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": [
+        [
+          "beta",
+          12
+        ]
+      ],
+      "kind": "mmcv_configdict_mapping_v1",
+      "pin": {
+        "addict": "2.4.0",
+        "addict_source_sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+        "class": "mmcv.utils.config:ConfigDict",
+        "mmcv-full": "1.7.2",
+        "mmcv_source_sha256": "02cb37945ed38c4cfcf606ae535369ca45abefb9ebffbee1a2b721c74d89d384"
+      }
+    },
+    "o0000002": {
+      "items": [
+        [
+          "__parent",
+          null
+        ],
+        [
+          "__key",
+          null
+        ],
+        [
+          "__frozen",
+          true
+        ]
+      ],
+      "kind": "dict"
+    },
+    "o0000003": {
+      "items": [
+        [
+          "__parent",
+          null
+        ],
+        [
+          "__key",
+          null
+        ],
+        [
+          "__frozen",
+          true
+        ]
+      ],
+      "kind": "dict"
+    }
+  },
+  "provenance": {
+    "artifact_kind": "CPU_NATIVE_INTERFACE_FIXTURE",
+    "test": "test_frozen_state"
+  },
+  "root": {
+    "$ref": "o0000000"
+  },
+  "schema": "GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS",
+  "state_sha256": "97e6fdd10c9c463898f1cafddb288de261391cf6accbf27980b201876f89cbd2",
+  "storages": {}
+}

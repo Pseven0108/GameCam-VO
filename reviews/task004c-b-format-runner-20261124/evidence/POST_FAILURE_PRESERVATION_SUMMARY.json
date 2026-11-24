@@ -1,0 +1,87 @@
+{
+  "status": "STOPPED_AT_RGB019_OUTPUT_DIRECTORY_COLLISION",
+  "time_unix": 1795532043.9593453,
+  "actual_native_C0_capture": "PASS",
+  "C0_restore_object_tensor_graph": "PASS",
+  "actual_RGB019_processed": false,
+  "RGB019_event_count": 0,
+  "Short80_attempts": 0,
+  "Formal487_attempts": 0,
+  "new_C0_captures": 1,
+  "fresh_GPU_restore_attempts": 1,
+  "automatic_retries": 0,
+  "stage_not_modified_after_release": true,
+  "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "source_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+  "worktree_clean": true,
+  "data_disk": {
+    "total": 105089261568,
+    "used": 90417307648,
+    "free": 14655176704
+  },
+  "shared_memory": {
+    "total": 25769803776,
+    "used": 1637666816,
+    "free": 24132136960
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 24576, 24125\n",
+  "GPU_compute_apps": "",
+  "restore_receipt": {
+    "all_tensor_and_object_nodes_match": true,
+    "next_input_match": true,
+    "object_nodes": 18143,
+    "new_process_pid": 5676,
+    "source_pid": 5490,
+    "rng_restored_last": true,
+    "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+  },
+  "native_stage_process": {
+    "mode": "restore_check",
+    "spec": {
+      "mode": "restore_check",
+      "stage": "restore19",
+      "max_rgb": 19,
+      "D": 0,
+      "W": 1,
+      "U": 1,
+      "INIT_D": 0,
+      "schedule": null,
+      "replay": false,
+      "formal": false
+    },
+    "exit_code": 1,
+    "success_receipt_exists": false,
+    "run_consumed": true,
+    "retry_allowed": false,
+    "runtime_seconds": 285.1932671070099,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "1a22453b5c6801ef448767fbd25637946ad71d207d3aea520155ffa0fc1be2a6"
+  },
+  "CPU_failure_reproduction": {
+    "exit_code": 0,
+    "runtime_seconds": 2.5690035820007324,
+    "stdout_sha256": "16e85072b557cc9e27432ea6f3e3b4d2913477d15c857dc4e77078a358fdc54f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "script_sha256": "b58b3f2ea891b1301f64b01a19205864b62fced2d5a26229777f0dfa183a118a"
+  },
+  "directory": {
+    "exists": true,
+    "files": [
+      "events.out.tfevents.1795531598.REDACTED_INSTANCE_HOST.5676.0"
+    ]
+  },
+  "failure_Arena_retained": true,
+  "historical_evidence_deleted": false,
+  "new_algorithmic_evidence": false,
+  "instance_shutdown": false,
+  "instance_rebooted": false,
+  "protected_files_verified": 3759,
+  "CPU_failure_reproduction_result": {
+    "status": "EXPECTED_FAILURE_REPRODUCED",
+    "native_stage_succeeded": false,
+    "observed": "FileExistsError",
+    "SummaryWriter_created_directory": true,
+    "model_loaded": false,
+    "CUDA_initialized": false
+  }
+}

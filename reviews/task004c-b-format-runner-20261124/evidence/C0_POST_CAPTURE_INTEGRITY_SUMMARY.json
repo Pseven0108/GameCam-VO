@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "time_unix": 1795531575.3077002,
+  "snapshot_kind": "NATIVE_C0",
+  "state_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+  "manifest_sha256": "f55ed3744c2d0d7af0db7d99c019c558fd36e2ef2f99186abec7ce8821758d47",
+  "storage_files_verified": 852,
+  "snapshot_files": 854,
+  "actual_bytes": 2517456938,
+  "uncompressed_storage_bytes": 10027350972,
+  "object_nodes": 18143,
+  "required_families": 47,
+  "next_input": {
+    "input_index": 18,
+    "intrinsic": [
+      386.01129150390625,
+      386.01129150390625,
+      319.5,
+      179.5
+    ],
+    "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+    "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/00019.jpg",
+    "rgb_id": 19,
+    "sha256": "aa4f895f821cc005bc8d1e0b8d9027eba1d211d8f92a8412d67306f8d4ea8429"
+  },
+  "boundary": {
+    "INIT_D": 0,
+    "RGB_processed": 18,
+    "native_BA_calls": 24,
+    "next_RGB": 19,
+    "next_index": 18,
+    "source_pid": 5490
+  },
+  "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "source_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+  "data_disk_free_bytes": 16901804032,
+  "process_receipt": {
+    "mode": "capture",
+    "spec": {
+      "mode": "capture",
+      "stage": "capture",
+      "max_rgb": 80,
+      "D": 0,
+      "W": 1,
+      "U": 1,
+      "INIT_D": 0,
+      "schedule": null,
+      "replay": false,
+      "formal": false
+    },
+    "exit_code": 0,
+    "success_receipt_exists": true,
+    "run_consumed": true,
+    "retry_allowed": false,
+    "runtime_seconds": 436.3114309310913,
+    "stdout_sha256": "ffc8be63b10ee0838eee1efcb38c6bfdd7577fbeeb6313035da62f28ec94eb3f",
+    "stderr_sha256": "3cf4b5c47547c77eeb901649ffb73381cf94aa008c5bf4f2893999e31839df94"
+  },
+  "GPU_compute_apps": ""
+}

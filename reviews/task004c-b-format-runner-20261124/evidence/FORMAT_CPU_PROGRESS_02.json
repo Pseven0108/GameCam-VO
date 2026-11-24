@@ -1,0 +1,40 @@
+{
+  "FORMAT_UNIT_R1": {
+    "files": [
+      "fresh_process.stdout.txt",
+      "process.stderr.txt",
+      "PROCESS_RECEIPT.json",
+      "PROCESS_STARTED.json",
+      "test_format.py",
+      "FORMAT_UNIT_TEST_REPORT.json",
+      "process.stdout.txt",
+      "fresh_process.receipt.json",
+      "fresh_process.stderr.txt"
+    ],
+    "PROCESS_RECEIPT.json": "{\n  \"case\": \"FORMAT_UNIT_R1\",\n  \"exit_code\": 0,\n  \"runtime_seconds\": 8.0300133228302,\n  \"script_sha256\": \"1553ab8d93e105817c6b2e4fbe9433de47397b7a542aa18387ed2146879eafa5\",\n  \"stdout_sha256\": \"a11f0ef18f0e4871873da320c12d5c60a36c76552f10e2581f2c0bb7de3b81d5\",\n  \"stderr_sha256\": \"dd3f933e0a009b6bfb3efa02685abc68fc7d8833cf46c38652ecd2f717c54d8d\"\n}",
+    "FORMAT_UNIT_TEST_REPORT.json": "{\n  \"tests\": 22,\n  \"failures\": 0,\n  \"errors\": 0,\n  \"skipped\": 0,\n  \"passed\": true,\n  \"cuda_initialized\": false,\n  \"kind\": \"REAL_INSTALLED_ENUM_CPU_TEST\"\n}",
+    "process.stdout.txt": "{\"tests\": 22, \"failures\": 0, \"errors\": 0, \"skipped\": 0, \"passed\": true, \"cuda_initialized\": false, \"kind\": \"REAL_INSTALLED_ENUM_CPU_TEST\"}\n",
+    "process.stderr.txt": "test_configdict_interoperation (__main__.FormatTests) ... No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\nok\ntest_dictionary_key_type (__main__.FormatTests) ... ok\ntest_extra_field (__main__.FormatTests) ... ok\ntest_fresh_process (__main__.FormatTests) ... ok\ntest_missing_field (__main__.FormatTests) ... ok\ntest_name_value_mismatch (__main__.FormatTests) ... ok\ntest_nchw_identity (__main__.FormatTests) ... ok\ntest_ncl_identity (__main__.FormatTests) ... ok\ntest_nhwc_identity (__main__.FormatTests) ... ok\ntest_nlc_identity (__main__.FormatTests) ... ok\ntest_package_version_pin (__main__.FormatTests) ... ok\ntest_plain_string_not_enum (__main__.FormatTests) ... ok\ntest_shared_references (__main__.FormatTests) ... ok\ntest_source_pin (__main__.FormatTests) ... ok\ntest_spatial_channel_behavior (__main__.FormatTests) ... ok\ntest_string_name_required (__main__.FormatTests) ... ok\ntest_string_value_required (__main__.FormatTests) ... ok\ntest_unknown_enum_rejected (__main__.FormatTests) ... ok\ntest_unknown_name (__main__.FormatTests) ... ok\ntest_unknown_string_subclass_rejected (__main__.FormatTests) ... ok\ntest_wrong_class (__main__.FormatTests) ... ok\ntest_wrong_tag (__main__.FormatTests) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 4.364s\n\nOK\n"
+  },
+  "REAL_MODEL_FORMAT_ROUNDTRIP_R1": {
+    "files": [
+      "CONFIGDICT_SOURCE_GRAPH.json",
+      "process.stderr.txt",
+      "restore_child.stdout.txt",
+      "PROCESS_STARTED.json",
+      "SNAPSHOT_REUSE.json",
+      "restore_child.stderr.txt",
+      "fixture_restored_sink.jsonl",
+      "METRIC3D_CONFIGDICT_INSTANCES.json",
+      "EXPECTED_FORWARD.json",
+      "fixture_source_sink.jsonl",
+      "process.stdout.txt",
+      "corrected_cpu_snapshot",
+      "SOURCE_47_FAMILIES.json",
+      "model_roundtrip.py"
+    ],
+    "process.stdout.txt": "BUILD_REAL_WEIGHTED_MODELS\nCHECK_HISTORICAL_FORWARD_SHA\nBUILD_CPU_TRACKER_CLOSURE\nINFO: 0 images got!\nSEAL_WITH_REUSED_HISTORICAL_TENSOR_FILES\nRESTORE_IN_FRESH_PID\n",
+    "process.stderr.txt": "xFormers not available\nxFormers not available\nNo CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\nxFormers not available\nxFormers not available\nxFormers not available\nxFormers not available\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling\n  warnings.warn(\n",
+    "restore_child.stderr.txt": "No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\nxFormers not available\nxFormers not available\nxFormers not available\nxFormers not available\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling\n  warnings.warn(\nxFormers not available\nxFormers not available\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n"
+  }
+}

@@ -54,9 +54,14 @@ def capture_c0(path,tracker,stream,values,controller,filler,barrier,identity_loc
         services=services_for(tracker,stream,barrier,bundle['observer'])
         inventory=state_inventory(bundle,services=services)
         # One C0 plus journal/observer headroom. No archive or second C0 is created.
-        require_space(Path(path).parent,inventory['storage_bytes']+512*1024**2,10*1024**3)
+        # Compression is counted exactly in RAM below; do not substitute logical
+        # storage bytes for the on-disk archive. Every save still checks its
+        # exact remaining allocated bytes plus the unchanged 10 GiB floor.
+        require_space(Path(path).parent,512*1024**2,10*1024**3)
         provenance={'artifact_kind':'NATIVE_C0','writer_barrier_and_closure_passed':True,
                     'baseline_commit':identity_lock['baseline_commit'],'identity_lock_sha256':digest(identity_lock),
+                    'candidate_source_commit':os.environ['GAMECAM_NATIVE_SOURCE_COMMIT'],
+                    'candidate_source_tree':os.environ['GAMECAM_NATIVE_SOURCE_TREE'],
                     'initialization_D':0,'W':1,'U':1,'source_pid':os.getpid(),'actual_boundary_rgb':controller.rgb,
                     'next_input':bundle['next_input'],'inventory':inventory}
         prepared=prepare_state(bundle,provenance=provenance,services=services,destination_parent=Path(path).parent)

@@ -1,0 +1,42 @@
+{
+  "native_C0": {
+    "pid": 5490,
+    "state_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+    "actual_boundary_rgb": 18,
+    "next_input_index": 18,
+    "storage_file_bytes": 2514178958,
+    "counter": 12
+  },
+  "fresh_state_restore": {
+    "all_tensor_and_object_nodes_match": true,
+    "next_input_match": true,
+    "object_nodes": 18143,
+    "new_process_pid": 5676,
+    "source_pid": 5490,
+    "rng_restored_last": true,
+    "c0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92"
+  },
+  "stage_process": {
+    "mode": "restore_check",
+    "spec": {
+      "mode": "restore_check",
+      "stage": "restore19",
+      "max_rgb": 19,
+      "D": 0,
+      "W": 1,
+      "U": 1,
+      "INIT_D": 0,
+      "schedule": null,
+      "replay": false,
+      "formal": false
+    },
+    "exit_code": 1,
+    "success_receipt_exists": false,
+    "run_consumed": true,
+    "retry_allowed": false,
+    "runtime_seconds": 285.1932671070099,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "1a22453b5c6801ef448767fbd25637946ad71d207d3aea520155ffa0fc1be2a6"
+  },
+  "actual_RGB019_consumed": false
+}

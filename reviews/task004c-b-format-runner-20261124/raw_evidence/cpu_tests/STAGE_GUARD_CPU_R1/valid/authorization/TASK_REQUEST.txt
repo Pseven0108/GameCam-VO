@@ -1,0 +1,507 @@
+我已经成功读取你发来的固定 Commit：
+
+`af42a183608199235676d878af681768459701b8`
+
+这次有一个好消息：ConfigDict 的问题已经真正修复，但完整模型恢复又暴露出了一个新的问题。
+
+**TASK004C-B-CONFIGDICT-CLOSURE**
+
+部分通过
+
+# **ConfigDict 已修复**
+
+| 检查项目               | 结果            |
+| ------------------ | ------------- |
+| ConfigDict 专项测试    | 14/14通过       |
+| 历史回归               | 152/152通过     |
+| 真实模型 ConfigDict 子图 | 6个对象，24个节点，通过 |
+| 历史固定输入输出 SHA       | 一致            |
+| 完整模型跨进程恢复          | 失败            |
+| 新 GPU C0           | 0/2           |
+| B1～B4              | 0/4           |
+
+来源：本次固定 Commit 的 FINAL_REVIEW\.md。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub+1
+
+
+
+## **一、这次修复确实取得了进展**
+
+上次 ConfigDict 的问题是：恢复后字典里面的真实配置内容丢失。
+
+这次 Codex 修复了：
+
+- Mapping 键值保存。
+- 嵌套 ConfigDict。
+- 内部属性。
+- 对象引用关系。
+- 共享引用和对象分配。
+
+而且真实模型中找到了6个 ConfigDict 对象，24个关联对象节点，完成了映射、属性和引用图核验。
+
+这不是只用一个人工构造的小字典做测试，证据比上一次更充分。
+
+另外，Metric3D 原有的 identity Adapter 没有被修改，800个历史快照文件也全部通过保护性哈希检查。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub
+
+
+
+## **二、完整模型为什么还是恢复失败？**
+
+这次出现了一个与 ConfigDict 完全独立的新问题。
+
+新阻断：timm Format
+
+**出错对象：**`timm.layers.format:Format`
+
+- timm 版本：0.9.10
+- 对象：`Format.NHWC`
+- 所在模型：FiT3D
+- 所在位置：`patch_embed.output_fmt`
+- 恢复耗时：271.928 秒后失败
+
+错误信息：
+
+```
+TypeError:
+object.__new__(Format) is not safe,
+use str.__new__()
+```
+
+来源：真实模型跨进程恢复报告。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub
+
+
+
+### **用小白方式解释**
+
+你可以把 `Format.NHWC` 理解成一个特殊的格式标签。
+
+它告诉 FiT3D：
+
+- N：批次维度
+- H：高度
+- W：宽度
+- C：通道
+
+它虽然看起来像字符串，但实际上是一个特殊的枚举对象。
+
+普通字符串 `"NHWC"` 和 `Format.NHWC` 不是完全相同的东西。
+
+更重要的是，timm 内部会使用：
+
+```
+format is Format.NHWC
+```
+
+判断对象身份。
+
+因此，不能简单把它转换成字符串保存，再恢复成普通字符串。
+
+正确做法是：保存枚举类型身份和成员名称，恢复时重新取得原始枚举成员，并验证：
+
+```
+restored is Format.NHWC
+```
+
+这样才能保持原来的行为。
+
+这次失败不是 ConfigDict 修复引入的，而是历史快照中一直存在、此前被 ConfigDict 问题遮挡的另一个对象类型。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub
+
+
+
+## **三、还有一个比 Format 更值得注意的问题**
+
+我进一步检查了报告中的实验边界，发现不能在修复 Format 后就立刻启动 GPU。
+
+目前还缺少三个实验工程能力：
+
+| 缺失能力             | 需要解决的问题                      |
+| ---------------- | ---------------------------- |
+| RGB019阶段续跑       | 从 C0 恢复后，能否按照正确阶段处理下一帧       |
+| Short80调度        | 能否生成和重放 S0/S1                |
+| Formal487 Runner | 能否完成487帧原生运行、Final BA和Filler |
+
+当前的 bounded runner 还不能被认定为完整正式实验运行器。
+
+报告明确要求先验证这三项，再封存 source-pinned C0。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub+1
+
+
+
+这意味着我们应该趁现在没有启动 GPU，把后续运行能力补齐。
+
+## **四、我的最终审查结论**
+
+## **本轮验收**
+
+ConfigDict修复
+
+通过
+
+Metric3D identity Adapter
+
+保持通过
+
+timm Format恢复
+
+未通过
+
+完整模型跨进程恢复
+
+未通过
+
+GPU C0
+
+尚未启动
+
+正式四组实验
+
+尚未启动
+
+**3090 状态：** 仍在线，本轮没有初始化 CUDA，也没有发生 GPU 实验失败。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub+1
+
+没有新的轨迹数据，也没有新的尺度恢复结论。不能把这次工程修复写成算法改进成果。
+
+## **五、下一步：直接交给 Codex 的任务书**
+
+我建议把下一阶段命名为：
+
+**TASK004C-B-TIMM-FORMAT-CLOSURE-AND-RUNNER-READY**
+
+这次不只修一个对象，而是把正式 GPU 实验启动前的全部工程门槛一次性检查清楚。
+
+# TASK004C-B-TIMM-FORMAT-CLOSURE-AND-RUNNER-READY
+
+优先级：HIGH\
+执行模式：AUTONOMOUS\
+用户要求：继续自动推进，不在正常阶段之间等待批准。
+
+## 一、当前基线
+
+固定评审Commit：
+
+af42a183608199235676d878af681768459701b8
+
+ConfigDict修复候选：
+
+aa0cca3ed0d6e5d381422d8219234b8c0c6ad065
+
+起始候选：
+
+a324b57760fdaf4929385f2271991d773533799d
+
+已通过：
+
+- ConfigDict 14/14。
+- 历史回归152/152。
+- 真实ConfigDict子图6对象、24节点。
+- Metric3D identity Adapter保持不变。
+- 800个历史快照文件保护性Hash核验。
+
+当前阻断：\
+timm.layers.format:Format
+
+安装版本：\
+timm 0.9.10
+
+源码SHA：\
+8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae
+
+实际成员：\
+Format.NHWC
+
+实际位置：\
+FiT3D.patch_embed.output_fmt
+
+## 二、任务A：精确Format Adapter
+
+先审计当前安装版本的：
+
+- Format类源码。
+- MRO。
+- **members**。
+- Enum成员名称和值。
+- **new__和__init**。
+- timm内部身份判断位置。
+
+建立专用Adapter：
+
+timm_format_enum_v1
+
+严格限定：
+
+- module=timm.layers.format
+- class=Format
+- package version=0.9.10
+- source SHA固定。
+- member必须存在于原始枚举类。
+
+保存：
+
+- 精确类身份。
+- member name。
+- member value。
+- 版本和源码SHA。
+
+恢复：\
+通过精确的已注册枚举成员查找恢复，不使用object.**new**。
+
+必须满足：
+
+restored is Format.NHWC
+
+不得将枚举降格为字符串。
+
+不得通用放行所有str子类。
+
+不得通用放行所有Enum。
+
+未知枚举仍然失败关闭。
+
+不修改timm源码。
+
+## 三、任务B：真实模型完整CPU恢复
+
+使用现有800文件快照和既有Tensor Storage复用机制。
+
+不重新复制不必要的模型权重。
+
+使用全新Python进程。
+
+必须完成：
+
+- ConfigDict完整恢复。
+- Format成员身份恢复。
+- Metric3D完整恢复。
+- FiT3D完整恢复。
+- DroidNet完整恢复。
+- 71个identity callable恢复。
+- 全部Storage核验。
+- Tensor alias核验。
+- RNG核验。
+- 网络Buffer核验。
+- 47个状态族核验。
+
+必须重新执行恢复后的：
+
+- Metric3D固定输入。
+- FiT3D中间特征。
+- DroidNet fnet/cnet。
+- LoRALinear输出和输入梯度。
+
+不允许放宽历史SHA和数值比较标准。
+
+注意CPU测试采用上游无xformers Attention路径及CPU常量适配，只能证明CPU恢复行为，不能宣称GPU kernel等价。
+
+## 四、任务C：Stage-qualified RGB019 Runner
+
+检查当前Runner是否支持：
+
+- C0 source commit pin。
+- C0 manifest SHA。
+- 初始化状态阶段标识。
+- 当前frame index。
+- 下一输入frame ID。
+- RGB019实际输入。
+- 恢复前后Tracker状态。
+- 恢复前后Graph状态。
+- 下一帧事件顺序。
+
+建立可验证的阶段化续跑测试。
+
+必须证明：\
+从合法C0恢复后，能够在新进程处理RGB019。
+
+不得用修改frame index或伪造日志代替真实执行。
+
+## 五、任务D：Short80 Schedule Runner
+
+完善S0/S1调度生成和重放接口。
+
+必须测试：
+
+- S1生成。
+- S1跨D重放。
+- S0生成。
+- S0跨D重放。
+
+运行至RGB080。
+
+固定D/W/U语义。
+
+记录：
+
+- MotionFilter事件。
+- Keyframe事件。
+- FactorGraph边事件。
+- BA调用。
+- source/target稳定RGB ID。
+- graph topology hash。
+
+不冻结连续优化状态。
+
+不允许静默跳过无法重放的事件。
+
+必须保留失败原因和原始事件日志。
+
+## 六、任务E：Formal487 Runner
+
+必须在GPU正式运行前完成Runner能力验证。
+
+确认完整支持：
+
+- 487帧输入。
+- 四组独立进程。
+- C0恢复。
+- S0/S1重放。
+- B1/B2/B3/B4配置。
+- Native Final BA。
+- TrajectoryFiller。
+- Frontend轨迹保存。
+- Final BA轨迹保存。
+- Filler输出保存。
+- 统一指标计算。
+- SHA256与运行收据。
+
+必须区分：
+
+- 仅有代码接口。
+- CPU dry-run。
+- 真实GPU执行。
+
+不能把前两者写成正式487帧运行通过。
+
+先完成静态审计和CPU模拟，不提前启动GPU。
+
+## 七、最终CPU准入
+
+以下条件全部通过：
+
+1. Format身份恢复。
+2. 完整模型新进程恢复。
+3. 47状态族闭包。
+4. Storage/alias完整性。
+5. 固定输入恢复后输出一致。
+6. 152项历史回归。
+7. RGB019阶段续跑。
+8. Short80调度生成与重放。
+9. Formal487 Runner能力审计。
+10. Final BA/Filler接口及结果保存路径验证。
+11. 数据盘至少保留10 GiB。
+12. 原始权重、R2配置、CUDA扩展SHA一致。
+
+全部通过后，生成：
+
+TASK004C_B_FORMAT_CLOSURE_REPORT.md\
+TASK004C_B_FULL_MODEL_RESTORE.md\
+TASK004C_B_RGB019_STAGE_RUNNER.md\
+TASK004C_B_SHORT80_SCHEDULE_REPORT.md\
+TASK004C_B_FORMAL487_RUNNER_AUDIT.md\
+TASK004C_B_CPU_FINAL_GATE.json
+
+## 八、自动进入GPU
+
+CPU最终准入全部通过后：
+
+自动启动一次新的GPU C0采集。
+
+不需要用户再次批准。
+
+沿用此前的：
+
+- RTX3090。
+- 原始R2。
+- 640×360。
+- buffer=500。
+- seed=43。
+- INIT_D=0。
+- 原始权重。
+- 原始CUDA扩展。
+- 原始VIPER数据。
+
+先完成C0，再新进程恢复，处理RGB019。
+
+然后自动执行Short80和B1/B2/B3/B4完整实验。
+
+遵循原Task004C-B-AUTONOMOUS-CONTINUATION的全部四组实验协议。
+
+不得重新运行DROID-SLAM。
+
+不得修改BA数学公式。
+
+不得修改Metric3D前向计算。
+
+## 九、资源和停止条件
+
+3090保持在线。
+
+不重启服务器。
+
+GPU只允许串行实验。
+
+数据盘保留至少10 GiB。
+
+不得删除历史失败证据。
+
+未知对象必须失败关闭。
+
+最多进行一次Format Adapter专项修复尝试。
+
+如果失败，提交完整错误证据并停止，不得通过转换成普通字符串或跳过字段绕过。
+
+任何状态完整性问题都不得进入GPU。
+
+## 十、最终目标
+
+完成Format恢复。
+
+完成真实模型跨进程恢复。
+
+完成RGB019续跑验证。
+
+完成S0/S1 Short80。
+
+完成Formal487 Runner验收。
+
+然后自动进入C0和B1/B2/B3/B4正式GPU实验。
+
+END
+
+## **六、我对研究进度的判断**
+
+现在其实已经逐步接近真正的实验阶段了。
+
+我们已经连续解决了：
+
+1. 首帧 RGB 输入合同不兼容。
+2. Metric3D 71个 identity 函数的序列化问题。
+3. ConfigDict 的 mapping 丢失问题。
+
+现在剩下的是 `Format` 枚举对象，以及正式实验运行器的完整阶段控制能力。
+
+但我不想让 Codex 为了尽快启动 GPU，又产生一份只能保存、不能恢复的 C0。
+
+**这次一定要先确保 C0 可恢复、S0/S1 可重放、487帧正式运行器可用，再消耗3090实验次数。**
+
+你把这份任务书交给 Codex 后继续执行即可。下一次评审我会直接看公开仓库的新 Commit 和真实测试证据。

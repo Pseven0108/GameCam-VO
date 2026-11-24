@@ -1,0 +1,7 @@
+# 源码身份与可比性
+
+接受起点aa0cca3ed0d6e5d381422d8219234b8c0c6ad065；Format提交0184690a51877223de32c78ada65002afa91103d；最终提交5d357c1d3079de134dd8b41a20a00632da37f0b0；treec018a65009aaf4f7457e2da5225a5f322a168b77。Format diff仅两个文件；stage runner diff另附。
+
+原始研究DROID-W来源c3414af6047d06bafc1a6645d09f23247f3b2cdc；当前隔离候选仓库历史为审计/控制代码的独立提交链，该Git对象在此仓库不可解析，不能据此宣称已完成git diff c341..HEAD。对应失败stderr保留在source_diff/FROZEN_BASELINE_UNAVAILABLE.txt。原始生产关键文件、R2/权重/CUDA扩展身份由冻结lock核验；本轮新改动相对于已接受aa0cca3均有精确diff和SHA。
+
+阶段runner的变动是实验控制接入和结果保存；它不是未经改变的上游生产副本，也不是Improved DROID-W算法。候选没有改BA公式、Metric3D生产forward、模型权重、R2文件或CUDA扩展。新RGB输入仅001～018；没有可用于轨迹精度对比的新487帧成绩。

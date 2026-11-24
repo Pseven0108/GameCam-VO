@@ -1,0 +1,977 @@
+[
+  {
+    "family": "video.timestamp",
+    "views": [
+      {
+        "shape": [
+          500
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "2da42fb1d7bd8524e83d5a1e332bad697c8769ba430770a19bec630eb8ffcaa8"
+      }
+    ]
+  },
+  {
+    "family": "video.images",
+    "views": [
+      {
+        "shape": [
+          500,
+          3,
+          360,
+          640
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          691200,
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "563ebb324ffec857ac9973c772e74d0a96ae374d64290053e3f44a0bbe167db9"
+      }
+    ]
+  },
+  {
+    "family": "video.dirty",
+    "views": [
+      {
+        "shape": [
+          500
+        ],
+        "dtype": "torch.bool",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e6304a473c65ecd0ccffbd2f5925a8f51c44b11f59b66cfcc055e4bb911b8fa0"
+      }
+    ]
+  },
+  {
+    "family": "video.npc_dirty",
+    "views": [
+      {
+        "shape": [
+          500
+        ],
+        "dtype": "torch.bool",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e6304a473c65ecd0ccffbd2f5925a8f51c44b11f59b66cfcc055e4bb911b8fa0"
+      }
+    ]
+  },
+  {
+    "family": "video.poses",
+    "views": [
+      {
+        "shape": [
+          500,
+          7
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          7,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "1a6a9938b5b779306e078e82e81634e4c05592b1b08c35c159df056971581e01"
+      }
+    ]
+  },
+  {
+    "family": "video.disps",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "ffbe85a9d70fd94dd1d9fe5d84f3a743681c2e9797e67c2769dc34f6d567f5d9"
+      }
+    ]
+  },
+  {
+    "family": "video.zeros",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c"
+      }
+    ]
+  },
+  {
+    "family": "video.disps_up",
+    "views": [
+      {
+        "shape": [
+          500,
+          360,
+          640
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "bca99ac9769d0d463deebe00f4ad8e4ba68ca15f635e5b13d8e805fb8cc7c9c1"
+      }
+    ]
+  },
+  {
+    "family": "video.intrinsics",
+    "views": [
+      {
+        "shape": [
+          500,
+          4
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          4,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "668946bab9868b28489bb906205ee1026045c8bcd3ca62a1bdf733c65491351b"
+      }
+    ]
+  },
+  {
+    "family": "video.mono_disps",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c"
+      }
+    ]
+  },
+  {
+    "family": "video.mono_disps_up",
+    "views": [
+      {
+        "shape": [
+          500,
+          360,
+          640
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "bca99ac9769d0d463deebe00f4ad8e4ba68ca15f635e5b13d8e805fb8cc7c9c1"
+      }
+    ]
+  },
+  {
+    "family": "video.depth_scale",
+    "views": [
+      {
+        "shape": [
+          500
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "2da42fb1d7bd8524e83d5a1e332bad697c8769ba430770a19bec630eb8ffcaa8"
+      }
+    ]
+  },
+  {
+    "family": "video.depth_shift",
+    "views": [
+      {
+        "shape": [
+          500
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "2da42fb1d7bd8524e83d5a1e332bad697c8769ba430770a19bec630eb8ffcaa8"
+      }
+    ]
+  },
+  {
+    "family": "video.valid_depth_mask",
+    "views": [
+      {
+        "shape": [
+          500,
+          360,
+          640
+        ],
+        "dtype": "torch.bool",
+        "stride": [
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "1d2879ec93ebb87ceb4f76618545004ac7b7ce172df5311443406e3b7870c9b6"
+      }
+    ]
+  },
+  {
+    "family": "video.valid_depth_mask_small",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.bool",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8616842fbd094c418873c2abf670879949d147739bdba63a99992dfbfbd2ba0c"
+      }
+    ]
+  },
+  {
+    "family": "video.fmaps",
+    "views": [
+      {
+        "shape": [
+          500,
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float16",
+        "stride": [
+          460800,
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "bca99ac9769d0d463deebe00f4ad8e4ba68ca15f635e5b13d8e805fb8cc7c9c1"
+      }
+    ]
+  },
+  {
+    "family": "video.nets",
+    "views": [
+      {
+        "shape": [
+          500,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float16",
+        "stride": [
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "bca99ac9769d0d463deebe00f4ad8e4ba68ca15f635e5b13d8e805fb8cc7c9c1"
+      }
+    ]
+  },
+  {
+    "family": "video.inps",
+    "views": [
+      {
+        "shape": [
+          500,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float16",
+        "stride": [
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "bca99ac9769d0d463deebe00f4ad8e4ba68ca15f635e5b13d8e805fb8cc7c9c1"
+      }
+    ]
+  },
+  {
+    "family": "video.dino_feats",
+    "views": [
+      {
+        "shape": [
+          500,
+          25,
+          45,
+          384
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          432000,
+          17280,
+          384,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "600ea2f152502d7038f625a233913f93c9562d84b8225cc4dea48e3984049701"
+      }
+    ]
+  },
+  {
+    "family": "video.dino_feats_resize",
+    "views": [
+      {
+        "shape": [
+          500,
+          384,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1382400,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "fc45aacebf4b26207e5787a807de946845c48e5de27beea1813ccc14c6500286"
+      }
+    ]
+  },
+  {
+    "family": "video.uncertainties",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "ffbe85a9d70fd94dd1d9fe5d84f3a743681c2e9797e67c2769dc34f6d567f5d9"
+      }
+    ]
+  },
+  {
+    "family": "video.affine_weights",
+    "views": [
+      {
+        "shape": [
+          385
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "dbba06d57d12ff7019075ce63a69bb4090fa9e35c0a05c426b31fa527c4533d1"
+      }
+    ]
+  },
+  {
+    "family": "video.temp_y_cdot",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c"
+      }
+    ]
+  },
+  {
+    "family": "motion_filter.net",
+    "views": [
+      {
+        "shape": [
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8df6d450b5a7cb358b9e8373af9fd9304e5912389c644f6c4bc66068380e88a3"
+      }
+    ]
+  },
+  {
+    "family": "motion_filter.inp",
+    "views": [
+      {
+        "shape": [
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8df6d450b5a7cb358b9e8373af9fd9304e5912389c644f6c4bc66068380e88a3"
+      }
+    ]
+  },
+  {
+    "family": "motion_filter.fmap",
+    "views": [
+      {
+        "shape": [
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8df6d450b5a7cb358b9e8373af9fd9304e5912389c644f6c4bc66068380e88a3"
+      }
+    ]
+  },
+  {
+    "family": "motion_filter.MEAN",
+    "views": [
+      {
+        "shape": [
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1,
+          1,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "d32aed199a5cd169c15313d055578913bc0b45eeffb1222dc36d113312762357"
+      }
+    ]
+  },
+  {
+    "family": "motion_filter.STDV",
+    "views": [
+      {
+        "shape": [
+          3,
+          1,
+          1
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1,
+          1,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "6c289cec73b3e488e198b9c8e236edbbd1c22e7fce3e189dcb12b1ed87903a21"
+      }
+    ]
+  },
+  {
+    "family": "frontend.last_pose",
+    "views": [
+      {
+        "shape": [
+          7
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "5b9b333da9aef69a1da1e68744424578726c887215c97076e3529c2a6bc0b019"
+      }
+    ]
+  },
+  {
+    "family": "frontend.last_disp",
+    "views": [
+      {
+        "shape": [
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "040e136f56e30007f20d1563cc5017728334bce9c7ef82bbe9e4ad187b39ddb1"
+      }
+    ]
+  },
+  {
+    "family": "frontend.last_time",
+    "views": [
+      {
+        "shape": [],
+        "dtype": "torch.float32",
+        "stride": [],
+        "offset": 0,
+        "logical_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.coords0",
+    "views": [
+      {
+        "shape": [
+          45,
+          80,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          160,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "83cb2292bd6df1918518685974e19401659c2204cd9cbfe683cc76bd9cefe994"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.ii",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.jj",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.age",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.net",
+    "views": [
+      {
+        "shape": [
+          1,
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          460800,
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8df6d450b5a7cb358b9e8373af9fd9304e5912389c644f6c4bc66068380e88a3"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.inp",
+    "views": [
+      {
+        "shape": [
+          1,
+          1,
+          128,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          460800,
+          460800,
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8df6d450b5a7cb358b9e8373af9fd9304e5912389c644f6c4bc66068380e88a3"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.damping",
+    "views": [
+      {
+        "shape": [
+          500,
+          45,
+          80
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          3600,
+          80,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "01ea3627d6b81808363b64c476caafb01530c662a60ed2e69f246d67e71c98ea"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.target",
+    "views": [
+      {
+        "shape": [
+          1,
+          0,
+          45,
+          80,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          7200,
+          7200,
+          160,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.weight",
+    "views": [
+      {
+        "shape": [
+          1,
+          0,
+          45,
+          80,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          7200,
+          7200,
+          160,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.ii_inac",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.jj_inac",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.ii_bad",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.jj_bad",
+    "views": [
+      {
+        "shape": [
+          0
+        ],
+        "dtype": "torch.int64",
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.target_inac",
+    "views": [
+      {
+        "shape": [
+          1,
+          0,
+          45,
+          80,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          7200,
+          7200,
+          160,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.weight_inac",
+    "views": [
+      {
+        "shape": [
+          1,
+          0,
+          45,
+          80,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          7200,
+          7200,
+          160,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "family": "frontend.graph.corr.corr_pyramid[*]",
+    "views": [
+      {
+        "shape": [
+          1,
+          16,
+          16,
+          16,
+          16
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          65536,
+          4096,
+          256,
+          16,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90"
+      },
+      {
+        "shape": [
+          1,
+          16,
+          16,
+          8,
+          8
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          16384,
+          1024,
+          64,
+          8,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+      },
+      {
+        "shape": [
+          1,
+          16,
+          16,
+          4,
+          4
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          4096,
+          256,
+          16,
+          4,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+      },
+      {
+        "shape": [
+          1,
+          16,
+          16,
+          2,
+          2
+        ],
+        "dtype": "torch.float32",
+        "stride": [
+          1024,
+          64,
+          4,
+          2,
+          1
+        ],
+        "offset": 0,
+        "logical_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+      }
+    ]
+  }
+]

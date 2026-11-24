@@ -1,0 +1,120 @@
+diff --git a/native_control/snapshot.py b/native_control/snapshot.py
+index ba9415e..dfffadc 100644
+--- a/native_control/snapshot.py
++++ b/native_control/snapshot.py
+@@ -10,6 +10,7 @@ import hashlib
+ import importlib
+ import inspect
+ import functools
++from enum import Enum
+ import json
+ import math
+ import os
+@@ -23,7 +24,7 @@ import torch
+ 
+ from control_common import ControlError, canonical, digest, file_sha, require_space
+ from checkpoint.checkpoint_adapter import value_sha
+-from native_control import configdict_adapter
++from native_control import configdict_adapter, timm_format_adapter
+ 
+ FORMAT = 'GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS'
+ HOOKS = ('_backward_hooks', '_backward_pre_hooks', '_forward_hooks', '_forward_pre_hooks',
+@@ -93,7 +94,15 @@ class ObjectEncoder:
+             return {'$function':module+':'+name}
+         if id(x) in self.memo: return {'$ref':self.memo[id(x)]}
+         nid='o%07d'%len(self.nodes);self.memo[id(x)]=nid;self.nodes[nid]={}
+-        if isinstance(x, torch.Tensor):
++        if isinstance(x, Enum):
++            if type(x).__module__ + ':' + type(x).__qualname__ != timm_format_adapter.CLASS_KEY:
++                raise ControlError('Unregistered Enum type: ' + repr(type(x)))
++            pin = class_pin(type(x))
++            self.classes[pin['key']] = pin
++            node = timm_format_adapter.encode_member(x)
++        elif isinstance(x, str):
++            raise ControlError('Unregistered str subclass: ' + repr(type(x)))
++        elif isinstance(x, torch.Tensor):
+             if x.layout!=torch.strided or x.is_quantized or x.is_conj() or x.is_neg():
+                 raise ControlError('Unsupported native tensor layout')
+             if x.is_leaf and x.grad is not None:raise ControlError('Nonempty tensor gradient requires an explicit training-state adapter')
+@@ -271,6 +280,12 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
+             if node.get('class') != configdict_adapter.CLASS_KEY:
+                 raise ControlError('ConfigDict snapshot class mismatch')
+             configdict_adapter.validate_class(classes[node['class']], node.get('pin'))
++        elif node['kind'] == timm_format_adapter.TAG:
++            if node.get('class') != timm_format_adapter.CLASS_KEY or node['class'] not in classes:
++                raise ControlError('Format snapshot class mismatch')
++            timm_format_adapter.restore_member(classes[node['class']], node)
++        elif node['kind'] == 'object' and issubclass(classes[node['class']], (Enum, str)):
++            raise ControlError('Explicit enum/string-subclass adapter required: ' + node['class'])
+         elif node['kind'] == 'object' and issubclass(classes[node['class']], dict):
+             raise ControlError('Mapping entries absent from legacy object node: ' + node['class'])
+     # Validate every file before deserializing tensor-only payloads.
+@@ -325,6 +340,8 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
+         elif kind in ('dict','ordered_dict'):
+             value={} if kind=='dict' else OrderedDict();objects[nid]=value
+             for k,v in n['items']:value[decode(k)]=decode(v)
++        elif kind == timm_format_adapter.TAG:
++            value = timm_format_adapter.restore_member(classes[n['class']], n)
+         elif kind == configdict_adapter.TAG:
+             value = configdict_adapter.allocate(classes[n['class']], n)
+             pending_configdicts.append((value, n))
+diff --git a/native_control/timm_format_adapter.py b/native_control/timm_format_adapter.py
+new file mode 100644
+index 0000000..229046f
+--- /dev/null
++++ b/native_control/timm_format_adapter.py
+@@ -0,0 +1,54 @@
++"""Exact installed timm Format singleton adapter; no generic Enum admission."""
++from enum import Enum
++from importlib import import_module
++from importlib.metadata import version
++import inspect
++
++from control_common import ControlError, file_sha
++
++TAG = 'timm_format_enum_v1'
++CLASS_KEY = 'timm.layers.format:Format'
++MEMBERS = {'NCHW': 'NCHW', 'NHWC': 'NHWC', 'NCL': 'NCL', 'NLC': 'NLC'}
++PIN = {
++    'class': CLASS_KEY,
++    'timm': '0.9.10',
++    'source_sha256': '8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae',
++}
++
++
++def validate_class(cls, pin=PIN):
++    if pin != PIN or cls.__module__ + ':' + cls.__qualname__ != CLASS_KEY:
++        raise ControlError('Unsupported Format class or snapshot pin')
++    installed = import_module('timm.layers.format').Format
++    if cls is not installed or cls.__mro__ != (installed, str, Enum, object):
++        raise ControlError('Format runtime class identity changed')
++    if version('timm') != PIN['timm'] or file_sha(inspect.getsourcefile(cls)) != PIN['source_sha256']:
++        raise ControlError('Format installed source/version changed')
++    if set(cls.__members__) != set(MEMBERS):
++        raise ControlError('Format member registry changed')
++    for name, value in MEMBERS.items():
++        member = cls.__members__[name]
++        if type(member) is not cls or member.name != name or type(member.value) is not str or member.value != value:
++            raise ControlError('Format member identity/value changed')
++
++
++def encode_member(value):
++    cls = type(value)
++    validate_class(cls)
++    if value.name not in MEMBERS or cls.__members__[value.name] is not value:
++        raise ControlError('Unregistered Format member')
++    return {'kind': TAG, 'class': CLASS_KEY, 'pin': dict(PIN),
++            'member_name': value.name, 'member_value': value.value}
++
++
++def restore_member(cls, node):
++    if set(node) != {'kind', 'class', 'pin', 'member_name', 'member_value'} or node.get('kind') != TAG or node.get('class') != CLASS_KEY:
++        raise ControlError('Incomplete or mismatched Format snapshot')
++    validate_class(cls, node.get('pin'))
++    name, value = node['member_name'], node['member_value']
++    if type(name) is not str or type(value) is not str or name not in MEMBERS or MEMBERS[name] != value:
++        raise ControlError('Unknown or mismatched Format member')
++    member = cls.__members__[name]
++    if type(member) is not cls or member.value != value or member.name != name:
++        raise ControlError('Format member lookup changed')
++    return member

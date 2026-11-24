@@ -1,17 +1,18 @@
 # 当前状态 · 2026-11-24
 
-- 当前阶段：TASK004C-B-CONFIGDICT-CLOSURE。
-- 状态：CONFIGDICT_REPAIRED_FULL_MODEL_CPU_RESTORE_BLOCKED_BY_TIMM_FORMAT。
-- 运行候选：aa0cca3ed0d6e5d381422d8219234b8c0c6ad065；前一候选：a324b57760fdaf4929385f2271991d773533799d。
-- ConfigDict定向额度：1/2使用，1轮未使用；不代表新的通用枚举适配授权。
-- ConfigDict专项14/14、历史回归152/152、实际ConfigDict子图6对象/24节点精确比较通过。
-- 完整真实模型恢复FAIL，退出码1；timm Format为独立FiT3D字段，历史对象图已经存在。
-- 恢复后的forward/gradient、完整对象图及47状态族验收NOT_REACHED。
-- 本轮新GPU C0 0/2、短程0/4、正式四组0/4。CPU总门槛尚未通过，未自动进入GPU。
-- 原历史CPU快照800文件与新CPU fixture851文件复核通过，均不是原生C0。
-- 原始权重、R2 YAML、CUDA扩展、Metric3D Adapter保持一致；未改变BA数学。
-- 已加载真实CPU权重、运行源侧固定输入forward/gradient。未初始化CUDA或运行真实RGB/SLAM；没有关闭、重启或释放3090。
-- 后续最小修复：精确类型/版本/源码SHA锁定的Format枚举Adapter，恢复既有单例身份；本轮未实施。
-- 全模型验收后仍需完成restore19/short80/formal487阶段接入和测试，不能把已有bounded runner当作正式完整runner。
+- 当前阶段：TASK004C-B-TIMM-FORMAT-CLOSURE-AND-RUNNER-READY。
+- 状态：STOPPED_RGB019_OUTPUT_DIRECTORY_COLLISION。
+- 候选源码：5d357c1d3079de134dd8b41a20a00632da37f0b0；tree：c018a65009aaf4f7457e2da5225a5f322a168b77。
+- Format专项22/22，ConfigDict14/14，历史最终源码回归152/152，stage20、driver3、guard6：217/217。
+- 完整CPU带权模型往返通过；47状态族、849 Storage、18,062节点、71 callable、固定输出和梯度SHA精确一致。CPU fixture不是原生C0。
+- 真实C0采集PASS：RGB001～018、24次初始化BA、RGB018 frame-end、下一输入RGB019；854文件，2,517,456,938bytes。
+- C0 state SHA：18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92。
+- 新GPU进程真实状态恢复PASS：18,143节点及Tensor/alias/对象图一致；RNG最后恢复。
+- RGB019阶段FAIL：SummaryWriter已创建native目录，后续mkdir(exist_ok=False)抛FileExistsError；0个新frame event，未启动续跑Viewer。
+- 原生SummaryWriter CPU诊断复现同一故障；没有应用新修复或自动重试。
+- Format专项1/1；C0 1/2；新GPU恢复检查1次；Short80 0/4；Formal487 0/4。
+- 原始R2、权重、CUDA扩展和发布源共3759项保护一致，未修改BA数学/Metric3D生产前向；旧数据、C0、失败Arena保留。
+- 结束时数据盘约13.65GiB free；GPU compute apps为空；3090在线，不关机/重启/释放。
+- 下一步仅提出目录生命周期最小修复。新源码与旧C0的source pin兼容性必须显式审查，不能改写旧manifest。
 
-[最终报告](reviews/task004c-b-configdict-closure-20261124/FINAL_REVIEW.md) · [预算账本](reviews/task004c-b-configdict-closure-20261124/state/STAGE_LEDGER.json)。
+[最终报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md) · [预算账本](reviews/task004c-b-format-runner-20261124/state/STAGE_LEDGER.json)。

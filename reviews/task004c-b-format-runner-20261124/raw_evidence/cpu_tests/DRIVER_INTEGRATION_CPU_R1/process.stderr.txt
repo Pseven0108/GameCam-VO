@@ -1,0 +1,41 @@
+test_driver_processes_actual_mock_input19 (__main__.DriverTests) ... ERROR
+test_driver_reaches_native_final_ba_and_filler (__main__.DriverTests) ... ERROR
+test_driver_records_all_short80_frames (__main__.DriverTests) ... ERROR
+
+======================================================================
+ERROR: test_driver_processes_actual_mock_input19 (__main__.DriverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 93, in test_driver_processes_actual_mock_input19
+    r,s,out=self.invoke('restore_check')
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 86, in invoke
+    try:namespace['restore_and_continue'](root,out,mode,{'input_manifest_sha256':'I'})
+  File "<ACTUAL_DRIVER_AST>", line 104, in restore_and_continue
+ImportError: cannot import name 'utils' from 'src' (/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/source_candidate/src/__init__.py)
+
+======================================================================
+ERROR: test_driver_reaches_native_final_ba_and_filler (__main__.DriverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 99, in test_driver_reaches_native_final_ba_and_filler
+    r,s,out=self.invoke('B1')
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 86, in invoke
+    try:namespace['restore_and_continue'](root,out,mode,{'input_manifest_sha256':'I'})
+  File "<ACTUAL_DRIVER_AST>", line 104, in restore_and_continue
+ImportError: cannot import name 'utils' from 'src' (/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/source_candidate/src/__init__.py)
+
+======================================================================
+ERROR: test_driver_records_all_short80_frames (__main__.DriverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 96, in test_driver_records_all_short80_frames
+    r,s,out=self.invoke('record_S1')
+  File "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/cpu_tests/DRIVER_INTEGRATION_CPU_R1/test_driver_integration.py", line 86, in invoke
+    try:namespace['restore_and_continue'](root,out,mode,{'input_manifest_sha256':'I'})
+  File "<ACTUAL_DRIVER_AST>", line 104, in restore_and_continue
+ImportError: cannot import name 'utils' from 'src' (/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1/source_candidate/src/__init__.py)
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+FAILED (errors=3)

@@ -1,0 +1,82 @@
+{
+  "rng_unchanged": true,
+  "metric_depth": {
+    "shape": [
+      1,
+      1,
+      112,
+      112
+    ],
+    "dtype": "torch.float32",
+    "sha256": "e80e31ffe8667f9e6d0ece2b3025c281227a56b5e155b643045ad02ed5b1180a"
+  },
+  "metric_confidence": {
+    "shape": [
+      1,
+      1,
+      112,
+      112
+    ],
+    "dtype": "torch.float32",
+    "sha256": "d1dc715bc281af543f6e8bd7dacf2aa5106b21b461d60dc74b2f018ccab6612d"
+  },
+  "metric_normal": {
+    "shape": [
+      1,
+      4,
+      112,
+      112
+    ],
+    "dtype": "torch.float32",
+    "sha256": "8687e157afbd05c17ea077a365972c4efb4582e668601ecdddd9e5297abb7400"
+  },
+  "fit_features": {
+    "shape": [
+      1,
+      384,
+      8,
+      8
+    ],
+    "dtype": "torch.float32",
+    "sha256": "877f126d4a5a261b79d711dfab21b92dcea03ff771ddb14d2e215024e1d821c9"
+  },
+  "droid_feature": {
+    "shape": [
+      1,
+      1,
+      128,
+      14,
+      14
+    ],
+    "dtype": "torch.float32",
+    "sha256": "7014a485106998be26353d9427c839dd64fe8cd5bc09492cb7c43f4b638aeb53"
+  },
+  "droid_context": {
+    "shape": [
+      1,
+      1,
+      256,
+      14,
+      14
+    ],
+    "dtype": "torch.float32",
+    "sha256": "fce41a71c36d0023c8c542941991e5c3f0cd360b9b15b36cfbd5333a7764ea27"
+  },
+  "weighted_lora_output": {
+    "shape": [
+      2,
+      1024
+    ],
+    "dtype": "torch.float32",
+    "sha256": "7e425e98ed5511fbfed0f89bd6cc2905a66d378018672cd110b14afc0c1d065d"
+  },
+  "weighted_lora_input_gradient": {
+    "shape": [
+      2,
+      1024
+    ],
+    "dtype": "torch.float32",
+    "sha256": "aa56402a1023172a07dd308d1eaf263cdc578fb3c99b5b2272908a033800b88e"
+  },
+  "identity_callables_tested": 71
+}

@@ -1,0 +1,30 @@
+test_configdict_interoperation (__main__.FormatTests) ... No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+ok
+test_dictionary_key_type (__main__.FormatTests) ... ok
+test_extra_field (__main__.FormatTests) ... ok
+test_fresh_process (__main__.FormatTests) ... ok
+test_missing_field (__main__.FormatTests) ... ok
+test_name_value_mismatch (__main__.FormatTests) ... ok
+test_nchw_identity (__main__.FormatTests) ... ok
+test_ncl_identity (__main__.FormatTests) ... ok
+test_nhwc_identity (__main__.FormatTests) ... ok
+test_nlc_identity (__main__.FormatTests) ... ok
+test_package_version_pin (__main__.FormatTests) ... ok
+test_plain_string_not_enum (__main__.FormatTests) ... ok
+test_shared_references (__main__.FormatTests) ... ok
+test_source_pin (__main__.FormatTests) ... ok
+test_spatial_channel_behavior (__main__.FormatTests) ... ok
+test_string_name_required (__main__.FormatTests) ... ok
+test_string_value_required (__main__.FormatTests) ... ok
+test_unknown_enum_rejected (__main__.FormatTests) ... ok
+test_unknown_name (__main__.FormatTests) ... ok
+test_unknown_string_subclass_rejected (__main__.FormatTests) ... ok
+test_wrong_class (__main__.FormatTests) ... ok
+test_wrong_tag (__main__.FormatTests) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 4.364s
+
+OK

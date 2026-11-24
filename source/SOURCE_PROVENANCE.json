@@ -1,6 +1,6 @@
 {
-  "canonical_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
-  "canonical_tree": "4dcec1e2c80f6bcc3e42046229d0dd54f9464ff8",
+  "canonical_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "canonical_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
   "scope": "Historical tracked-source export with byte-verified incremental changes; runtime candidate commit is distinct from publication commit",
   "canonical_source_endpoint": "REDACTED_SSH_ENDPOINT",
   "export": {
@@ -27,17 +27,30 @@
     "dataset_after_sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9",
     "source": "new instance verified working tree; previous full export retained as base provenance"
   },
-  "previous_source_commit": "a324b57760fdaf4929385f2271991d773533799d",
+  "previous_source_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
   "latest_incremental_update": {
-    "from": "a324b57760fdaf4929385f2271991d773533799d",
-    "to": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+    "from": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+    "to": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "Format_commit": "0184690a51877223de32c78ada65002afa91103d",
     "changed_files": [
-      "native_control/configdict_adapter.py",
-      "native_control/snapshot.py"
+      "native_control/admission.py",
+      "native_control/binding.py",
+      "native_control/dataset.py",
+      "native_control/install.py",
+      "native_control/native_driver.py",
+      "native_control/runtime.py",
+      "native_control/snapshot.py",
+      "native_control/stage_authorization.py",
+      "native_control/stages.py",
+      "native_control/timm_format_adapter.py",
+      "runner/run_native_stage.py",
+      "src/tracker.py",
+      "task004_controls.py"
     ],
-    "Metric3D_identity_adapter_unchanged": true,
-    "status": "CONFIGDICT_PASS_FULL_MODEL_TIMM_FORMAT_BLOCKED",
-    "BA_math_or_model_forward_changes": false
+    "source_files_SHA_verified": 3575,
+    "binary_media_exclusions_preserved": 168,
+    "status": "C0_CAPTURE_AND_STATE_RESTORE_PASS_RGB019_DIRECTORY_BLOCKED",
+    "BA_math_or_production_model_forward_changes": false
   },
   "incremental_update_history": [
     {
@@ -49,6 +62,17 @@
       ],
       "status": "CPU_RESTORE_BLOCKED_NO_NEW_GPU",
       "actual_BA_math_or_model_forward_changes": false
+    },
+    {
+      "from": "a324b57760fdaf4929385f2271991d773533799d",
+      "to": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+      "changed_files": [
+        "native_control/configdict_adapter.py",
+        "native_control/snapshot.py"
+      ],
+      "Metric3D_identity_adapter_unchanged": true,
+      "status": "CONFIGDICT_PASS_FULL_MODEL_TIMM_FORMAT_BLOCKED",
+      "BA_math_or_model_forward_changes": false
     }
   ]
 }

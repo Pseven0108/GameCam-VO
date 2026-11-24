@@ -1,0 +1,49 @@
+{
+  "task": "TASK004C-B-TIMM-FORMAT-CLOSURE-AND-RUNNER-READY",
+  "status": "STOPPED_RGB019_OUTPUT_DIRECTORY_COLLISION",
+  "updated_Asia_Shanghai": "2026-11-24T23:00:48.099368+08:00",
+  "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "source_tree": "c018a65009aaf4f7457e2da5225a5f322a168b77",
+  "Format_repair": {
+    "authorized": 1,
+    "consumed": 1,
+    "status": "PASS"
+  },
+  "CPU_release_tests": {
+    "passed": 217,
+    "total": 217,
+    "scope": "CPU_CONTRACTS_AND_REGRESSION"
+  },
+  "CPU_real_models_new_process_restore": "PASS",
+  "GPU_C0": {
+    "authorized": 2,
+    "consumed": 1,
+    "successful": 1
+  },
+  "GPU_fresh_restore_check": {
+    "consumed": 1,
+    "full_state_restored": true,
+    "RGB019_processed": false,
+    "exit_code": 1
+  },
+  "short80": {
+    "authorized": 4,
+    "consumed": 0,
+    "successful": 0
+  },
+  "formal487": {
+    "authorized": 4,
+    "consumed": 0,
+    "successful": 0
+  },
+  "new_GPU_stage_launches": 2,
+  "automatic_retries": 0,
+  "next_stage_allowed": false,
+  "C0_state_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+  "stopped_reason": "FileExistsError from SummaryWriter precreating the same native output directory",
+  "source_changed_after_C0": false,
+  "instance_shutdown": false,
+  "instance_rebooted": false,
+  "failure_Arena_retained": true,
+  "no_new_trajectory_or_causal_effect_results": true
+}

@@ -69,6 +69,9 @@ def local_flags(phase, observer_stage, video, motion_only, update_u, use_u):
 
 
 def require_approved_runtime():
+    if os.environ.get('GAMECAM_NATIVE_CONTROL_BOUNDED')=='1':
+        from native_control.stage_authorization import validate_runtime
+        return validate_runtime(policy())
     path=Path(os.environ['GAMECAM_TASK004_AUTHORIZATION'])
     raw=path.read_bytes()
     if sha256(raw).hexdigest()!="ce286e8a61947d6ee295341da39d46b227d0160709eaeaa0d6d391b3dc34217c":

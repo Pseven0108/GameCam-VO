@@ -2,20 +2,19 @@
 
 VIPER / DROID-W / stride=1。研究深度先验、不确定性、优化与关键帧调度。
 
-## 最新评审：ConfigDict专项修复
+## 最新评审：Format 闭合、真实 C0 与 RGB019 运行器
 
-- [最终报告](reviews/task004c-b-configdict-closure-20261124/FINAL_REVIEW.md)
-- [请先读](reviews/task004c-b-configdict-closure-20261124/README_请先读.md)
-- [完整模型新进程恢复](reviews/task004c-b-configdict-closure-20261124/TASK004C_B_REAL_MODEL_ROUNDTRIP.md)
-- [CPU最终准入](reviews/task004c-b-configdict-closure-20261124/evidence/TASK004C_B_CPU_FINAL_GATE.json)
-- [完整源码diff](reviews/task004c-b-configdict-closure-20261124/CONFIGDICT_FULL_SOURCE_DIFF.patch)
-- [下一步最小枚举适配方案](reviews/task004c-b-configdict-closure-20261124/NEXT_MINIMAL_ENUM_ADAPTER_PROPOSAL.md)
+- [最终报告](reviews/task004c-b-format-runner-20261124/FINAL_REVIEW.md)
+- [请先读](reviews/task004c-b-format-runner-20261124/README_请先读.md)
+- [真实GPU C0](reviews/task004c-b-format-runner-20261124/TASK004C_B_GPU_C0_FINAL_REPORT.md)
+- [跨进程恢复及停止原因](reviews/task004c-b-format-runner-20261124/TASK004C_B_RESTORE_FINAL_REPORT.md)
+- [最小后续方案，未实施](reviews/task004c-b-format-runner-20261124/NEXT_MINIMAL_RUNNER_FIX_PROPOSAL.md)
 - [状态与预算](PROJECT_STATUS.md) · [历史评审索引](REVIEW_INDEX.md) · [源码身份](source/SOURCE_PROVENANCE.json)
 
-**ConfigDict：14/14专项通过、152/152历史回归通过、6个实际ConfigDict / 24节点子图精确比较通过。完整真实模型跨进程恢复仍失败，阻断为独立的timm.layers.format:Format。**
+**Format及完整CPU模型恢复通过，217/217发布前CPU测试通过。真实GPU C0保存成功（854文件），新GPU进程完整状态恢复通过（18,143节点）；进入RGB019前因native输出目录冲突退出。**
 
-恢复后的forward、gradient与完整Storage/47状态族对比尚未到达。ConfigDict专项额度使用1/2；没有挪用剩余额度修改独立枚举。新GPU C0 0/2、短程0/4、正式四组0/4；3090保持在线。
+本轮GPU：C0采集1次成功，恢复检查1次在续跑前失败。RGB019未处理，Short80 0/4，B1～B4 0/4；没有新487帧轨迹或算法改善结论。遵守失败即停，无自动重试，3090保持在线。
 
-运行候选：`aa0cca3ed0d6e5d381422d8219234b8c0c6ad065`。本分支：`codex/task004c-b-configdict-closure-20261124`。发布提交与运行候选提交分别记录；没有更改默认分支或仓库可见性。
+运行候选：`5d357c1d3079de134dd8b41a20a00632da37f0b0`。本分支：`codex/task004c-b-format-runner-20261124`。公开发布commit与运行源码commit独立记录；默认分支和仓库可见性保持。
 
-报告、日志、源码和SHA清单使用脱敏公开副本。历史评审保留；模型权重、RGB、GT、Tensor payload和Arena保存在私有研究存储。本轮没有新增轨迹精度、尺度改善或因果效应结果。
+报告和原始执行日志为脱敏公开副本，内部SHA对公开字节计算；原始→公开映射另附。权重、RGB、GT、C0 Tensor载荷、Arena、Rerun二进制保留在原研究存储。旧阶段评审全部保留。

@@ -1,0 +1,787 @@
+可以。这次我建议直接把任务升级为 **GameCam-VO 自动连续执行任务**，不再采用每完成一个阶段就暂停、等你批准的方式。
+
+我刚刚重新检查了公开仓库的最新状态：
+
+- 当前运行源码：`02f8c8308274489ff7eff83fa9b87b98db74122e`
+- 当前阻断：Metric3D 的 `LoRALinear.lora_dropout` 未注册函数。
+- 真实初始化：RGB001～018 已完成。
+- 原生 BA：24次调用成功返回。
+- GPU 显存峰值：13,865 MiB。
+- 数据盘剩余：22.2907 GiB。
+- 完整 C0：尚未生成。
+
+  [image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+  GitHub+1
+
+
+
+**这次的授权范围扩大为：修复 → CPU闭包验证 → GPU重新采集C0 → 跨进程恢复 → S0/S1 → 跨D重放 → 正式B1～B4四组实验。**
+
+不再要求你逐阶段批准。
+
+但我会保留必要的硬性停止条件：不能为了赶进度跳过状态完整性、磁盘安全检查或者实验可重复性验证。
+
+## **直接交给 Codex：长程自动执行任务书**
+
+本次明确授权：无需中途批准
+
+# GAMECAM-VO TASK004C-B-AUTONOMOUS-CONTINUATION
+
+# 长程自动实验：Checkpoint修复 → GPU → C0 → 四组交叉实验
+
+优先级：HIGH\
+执行模式：AUTONOMOUS\
+用户要求：不要在阶段之间等待用户批准，不要反复询问是否继续。满足每阶段准入条件后，自动进入下一阶段。
+
+## 0. 本次用户授权
+
+用户明确授权本任务连续执行以下工作：
+
+1. 修复C0序列化阻断。
+2. CPU完整状态闭包和跨进程恢复验证。
+3. 重新启动RTX 3090，采集真实C0。
+4. 验证真实跨Python进程恢复。
+5. 生成S0/S1关键帧调度。
+6. 完成RGB019～RGB080跨D重放验证。
+7. 前述验证通过后，自动启动正式B1/B2/B3/B4四组实验。
+8. 完成val_007完整487帧评价、Final BA和Filler。
+9. 生成最终实验评审报告，并发布到公开GitHub仓库。
+
+**以上步骤不需要用户逐项批准。**
+
+本授权覆盖此前要求C0完成后等待用户再次批准的流程限制。
+
+不得因为阶段完成而主动暂停等待用户回复。
+
+如果遇到真正无法安全解决的技术阻断，应停止并保留现场，提交阻断报告，不得绕过安全条件。
+
+## 1. 固定研究边界
+
+研究对象：\
+VIPER Validation / Night / val_007。
+
+输入：
+
+- 640×360 RGB。
+- stride=1。
+- buffer=500。
+- 完整487帧。
+- 原始R2配置。
+- seed=43。
+- 原始DROID-W模型权重。
+- 原始CUDA扩展。
+
+运行源码起点：
+
+02f8c8308274489ff7eff83fa9b87b98db74122e
+
+父版本：
+
+668a88c74c7f7a88a572679d2bd8e86c0a05514b
+
+Metric3D安装源码SHA：
+
+24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951
+
+本任务只允许修改：
+
+- 独立候选源码中的Checkpoint序列化器。
+- 状态恢复Adapter。
+- Recorder。
+- Schedule Replay控制接口。
+- 必要的实验运行脚本。
+- 实验日志和评估代码。
+
+禁止：
+
+- 修改原始DROID-W BA数学公式。
+- 修改CUDA优化实现。
+- 修改Metric3D网络前向计算。
+- 修改dropout率。
+- 修改模型权重。
+- 修改原始R2配置。
+- 降低buffer=500。
+- 修改VIPER原始RGB。
+- 使用GT参与算法运行。
+- 重新运行原生DROID-SLAM。
+- 训练新的神经网络。
+- 将实验范围扩大到其他数据集或92个窗口。
+
+## 2. PHASE A：修复Metric3D Checkpoint闭包
+
+当前唯一已确认的首个阻断：
+
+Metric3D LoRALinear.lora_dropout。
+
+安装版本的LoRALayer在dropout=0时使用：
+
+lambda x: x
+
+作为identity函数。
+
+Checkpoint ObjectEncoder不允许未注册的lambda，因此拒绝保存。
+
+### 2.1 严格识别
+
+检查运行时真实函数对象：
+
+- 所属模块。
+- 所属LoRALayer/LoRALinear。
+- 属性名lora_dropout。
+- Metric3D源码SHA。
+- dropout实际配置。
+- **closure**。
+- co_freevars。
+- co_argcount。
+- **defaults**。
+- **kwdefaults**。
+- bytecode。
+- 函数实际输入输出。
+
+必须证明：
+
+1. 函数没有闭包。
+2. 只有一个位置参数。
+3. 没有外部状态。
+4. 输入原样返回。
+5. 不修改输入Tensor。
+6. 不消费RNG。
+7. 不改变梯度行为。
+
+不能仅凭lambda名称判断其为identity。
+
+### 2.2 专用序列化Adapter
+
+为该确切函数建立有版本的类型标记：
+
+metric3d_lora_identity_callable_v1
+
+必须绑定：
+
+- 安装源码SHA。
+- 所属类。
+- 属性名。
+- 函数行为签名。
+- 版本号。
+
+恢复时通过受控的顶层identity callable重建。
+
+必须通过对象memo机制保留原始函数引用关系。
+
+不能直接删除lora_dropout字段。
+
+不能允许所有lambda。
+
+其他未知函数仍然必须失败关闭。
+
+### 2.3 完整对象闭包审计
+
+不能只解决第一个异常就停止检查。
+
+检查：
+
+- Metric3D完整模型对象。
+- DROID-W Tracker。
+- DroidNet。
+- MotionFilter。
+- FactorGraph。
+- DepthVideo。
+- Context和缓存。
+- Observer。
+- Recorder。
+- 所有47个状态族。
+
+枚举全部函数对象、闭包、模块引用和其他不支持对象。
+
+对于额外对象：\
+只有证明为无状态、确定性、源码身份固定且CPU等价测试通过，才允许建立独立适配器。
+
+不允许通用放行。
+
+### 2.4 CPU验收
+
+必须使用真实安装版本和真实模型权重，在CPU上执行：
+
+- 原模型与恢复模型前向一致性。
+- 固定输入输出比较。
+- 梯度比较。
+- RNG前后状态比较。
+- Tensor alias检查。
+- dtype/shape/stride/storage offset检查。
+- 未知lambda拒绝测试。
+- 有闭包函数拒绝测试。
+- 不支持对象拒绝测试。
+- 新Python进程恢复测试。
+
+原模型和恢复模型的输出应在明确数值容差内一致；identity dropout本身应保持严格identity语义。
+
+完成后执行全部152项历史回归。
+
+输出：
+
+TASK004C_B_CLOSURE_FIX_REPORT.md\
+TASK004C_B_OBJECT_GRAPH_AUDIT.json\
+TASK004C_B_CHECKPOINT_CPU_ROUNDTRIP.md\
+TASK004C_B_CPU_REGRESSION.md
+
+全部通过后自动进入下一阶段。
+
+## 3. PHASE B：C0完整存储预算
+
+当前最新报告的历史数据盘可用空间：
+
+22.2907 GiB。
+
+这是历史采样值，不代表当前实时状态。
+
+重新检查：
+
+- 数据盘。
+- 容器RAM。
+- /dev/shm。
+- Arena。
+- 活动进程。
+- 文件映射。
+- GPU状态。
+
+此前两块失败现场Arena合计约2,246,400,000逻辑bytes。
+
+保留其原始证据，不得删除。
+
+必须计算：
+
+1. 47个状态族唯一Tensor Storage总字节数。
+2. 网络Buffer。
+3. RNG状态。
+4. Python运行状态。
+5. Video Arena。
+6. Checkpoint元数据。
+7. 恢复所需工作空间。
+8. 后续单个实验Arena。
+
+要求：
+
+- 始终保留至少10 GiB数据盘安全余量。
+- C0使用不可变快照。
+- 每个实验使用独立可写工作Arena。
+- 全部实验串行运行。
+- 同一时间只允许一个GPU实验进程。
+- 每组完成后，只清理本任务创建且已确认无活动映射的临时工作Arena。
+- C0和原始失败现场永久保留。
+
+严禁通过降低buffer、删除历史实验或改变Tensor精度解决空间问题。
+
+如果真实C0无法满足空间准入，停止并报告。
+
+## 4. PHASE C：重新采集真实GPU C0
+
+CPU阶段全部通过后，自动启动一次新的RTX 3090实验。
+
+不需要用户再次批准。
+
+### 固定条件
+
+- RTX 3090。
+- wild Python环境。
+- 原始R2配置。
+- buffer=500。
+- 640×360。
+- stride=1。
+- seed=43。
+- INIT_D=0。
+- W/U保持初始化协议要求。
+- 原始模型权重。
+- 原始CUDA扩展。
+- File-backed Arena。
+
+不重启服务器。
+
+不重新部署环境。
+
+不使用系统Python。
+
+### C0保存边界
+
+必须完成：
+
+- RGB001～RGB018。
+- 第一阶段16次graph.update。
+- 第二阶段8次graph.update。
+- 24次原生BA调用。
+- RGB018完成frame-end。
+- RGB019尚未读取。
+
+然后保存完整C0。
+
+不得单纯依据RGB018或init_done判断成功。
+
+### 必须记录实际控制参数
+
+每一次BA调用记录：
+
+- D实际开关。
+- W实际开关。
+- U实际开关。
+- use_depth。
+- 实际输入深度Tensor来源。
+- enable_udba。
+- enable_update_uncer。
+- BA窗口。
+- iteration count。
+- 输入输出状态Hash。
+
+特别注意：
+
+不能将enable_udba直接等同于D。
+
+必须根据当前源码明确映射。
+
+### C0验收
+
+- 47个状态族完整。
+- 网络Buffer完整。
+- RNG完整。
+- Tracker状态完整。
+- 循环局部变量完整。
+- Tensor alias完整。
+- Arena引用完整。
+- 逻辑值Hash完整。
+- C0文件完整。
+- SHA256完整。
+
+complete=true必须由完整性检查程序生成。
+
+不允许人工修改状态标记。
+
+保存成功后自动进入下一阶段。
+
+## 5. PHASE D：真实跨进程恢复
+
+使用新的Python进程。
+
+不得使用原进程变量复制冒充恢复。
+
+从C0恢复：
+
+- Tracker。
+- DroidNet。
+- Metric3D。
+- FactorGraph。
+- DepthVideo。
+- 所有缓存。
+- RNG。
+- 网络Buffer。
+- Arena映射。
+
+检查：
+
+1. 47个状态族完整。
+2. Tensor逻辑Hash。
+3. dtype/shape/stride/offset。
+4. alias关系。
+5. RNG。
+6. 网络Buffer。
+7. graph ii/jj。
+8. keyframe IDs。
+9. buffer slot映射。
+10. 下一输入index=18。
+11. 下一帧RGB019。
+
+随后实际处理RGB019，验证恢复后能够继续运行。
+
+必须生成独立的Restore Receipt。
+
+如果不一致，不允许进入Schedule实验。
+
+可以在CPU上修复恢复逻辑，并从同一份不可变C0重新恢复；不得为了通过检查修改原始状态值。
+
+输出：
+
+TASK004C_B_RESTORE_FINAL_REPORT.md\
+TASK004C_B_RESTORE_RECEIPTS.json
+
+## 6. PHASE E：S0/S1短程GPU交叉重放
+
+使用同一份C0。
+
+所有运行独立进程、串行执行。
+
+运行到RGB080。
+
+生成四个短程验证：
+
+A. D=1自然调度，生成S1。
+
+B. D=0重放S1。
+
+C. D=0自然调度，生成S0。
+
+D. D=1重放S0。
+
+固定：
+
+- W=1。
+- U=1。
+- 原始R2参数。
+- 相同输入帧。
+- 相同C0。
+- 相同随机种子。
+- 相同图结构初始状态。
+
+### Schedule记录
+
+必须记录：
+
+- Motion Filter accept/reject。
+- Keyframe insertion。
+- Keyframe removal。
+- eviction reason。
+- FactorGraph edge insertion/removal。
+- source/target ID。
+- BA调用顺序。
+- BA窗口。
+- iteration count。
+- graph topology hash。
+
+必须使用稳定RGB ID，不得依赖可能变化的buffer slot。
+
+Replay只固定离散事件。
+
+不得冻结：
+
+- poses。
+- disparities。
+- residuals。
+- hidden states。
+- U更新。
+- 连续优化结果。
+
+如果某个离散事件在另一D条件下不能执行：
+
+立即停止，不得静默跳过，不得篡改连续状态。
+
+四组短程交叉验证通过后，自动进入正式四组实验。
+
+## 7. PHASE F：正式B1/B2/B3/B4四组实验
+
+用户已授权自动执行，不需要中途批准。
+
+每组均从同一份不可变C0恢复。
+
+完整处理val_007剩余帧RGB019～RGB487。
+
+四组配置：
+
+| 组别 | D | Schedule | 说明       |
+| -- | - | -------- | -------- |
+| B1 | 1 | S1       | D开启，自然调度 |
+| B2 | 0 | S1       | D关闭，重放S1 |
+| B3 | 1 | S0       | D开启，重放S0 |
+| B4 | 0 | S0       | D关闭，自然调度 |
+
+W/U固定为1。
+
+执行顺序：
+
+1. B1：自然生成完整S1。
+2. B2：从C0恢复，使用D=0重放S1。
+3. B4：从C0恢复，生成完整S0。
+4. B3：从C0恢复，使用D=1重放S0。
+
+每组必须：
+
+- 独立Python进程。
+- 独立Restore Receipt。
+- 相同输入manifest。
+- 相同初始化C0。
+- 相同R2配置。
+- 相同模型权重。
+- 相同CUDA扩展。
+- 完整Recorder。
+- 完整资源监控。
+
+Final BA和Filler按原始R2配置执行。
+
+所有组均分别保存：
+
+1. Online Frontend轨迹。
+2. Final BA轨迹。
+3. Filler输出。
+4. 完整日志。
+5. Schedule事件。
+6. 资源监控。
+7. SHA256清单。
+
+不得只保存最终轨迹而丢失Frontend阶段结果。
+
+不得把一个实验的Final BA结果用于另一个实验。
+
+如果任意一组发生算法失败、CUDA异常或状态损坏：
+
+停止后续正式组，保留完整失败现场。
+
+只有能够证明为启动前的瞬时基础设施故障、没有消耗输入帧且没有改变状态时，才允许从原始C0进行一次重启。
+
+禁止为获得更好指标而重复运行或挑选结果。
+
+## 8. PHASE G：统一评价
+
+四组实验完成后统一评价。
+
+### 位姿与轨迹指标
+
+- Raw Translation。
+- SE(3) ATE。
+- Sim(3) ATE。
+- RPE Δ1。
+- RPE Δ5。
+- RPE Δ10。
+- RPE Δ30。
+- Rotation RMSE。
+- Translation Recovery Ratio。
+- Segment Scale Ratio。
+
+### 优化指标
+
+- Reprojection RMS。
+- Geometry SSE。
+- Depth Prior SSE。
+- D分支实际调用次数。
+- BA迭代次数。
+- Keyframe数量。
+- Tracking Failure Rate。
+- Final BA轨迹变化。
+- Filler轨迹变化。
+
+### 重点局部区间
+
+必须评价：
+
+- RGB309→RGB325。
+- RGB301→RGB353。
+
+使用统一的全序列Sim(3)尺度对齐进行局部比例分析。
+
+禁止对每个区间单独进行Sim(3)拟合。
+
+同时报告完全不做尺度对齐的Raw Translation。
+
+GT只能用于离线评价，不得参与算法控制。
+
+### 四组因果比较
+
+计算：
+
+D在S1条件下的影响：\
+B1 - B2。
+
+D在S0条件下的影响：\
+B3 - B4。
+
+S1与S0在D=1条件下的影响：\
+B1 - B3。
+
+S1与S0在D=0条件下的影响：\
+B2 - B4。
+
+进一步分析D与Schedule之间的交互效应。
+
+不得只报告ATE，必须结合局部平移比例、深度残差和几何误差分析。
+
+## 9. 资源管理与GPU保护
+
+RTX 3090保持在线。
+
+严禁：
+
+- 关闭实例。
+- 重启服务器。
+- 重新部署环境。
+- 杀死非本任务进程。
+- 使用pkill python等全局清理。
+- 修改防火墙和网络配置。
+
+GPU运行串行。
+
+每组结束后：
+
+- 确认子进程退出。
+- 确认没有活动映射。
+- 保存实验产物。
+- 回收仅属于本次运行的临时Arena。
+- 保留C0、原始失败现场、日志、权重和历史实验。
+
+任何时刻数据盘必须保留10 GiB以上安全余量。
+
+如果不能满足，不得自动删除旧数据或降低实验配置。
+
+## 10. 自动停止条件
+
+以下情况必须停止相关阶段：
+
+1. 原始源码、权重、CUDA扩展SHA不一致。
+2. C0状态闭包不完整。
+3. 不明函数或对象未经审计。
+4. Restore Hash不一致。
+5. Tensor alias损坏。
+6. 下一帧RGB019无法正确恢复。
+7. Schedule Replay事件无法执行。
+8. D/W/U实际参数不符合实验设计。
+9. CUDA OOM。
+10. GPU进程异常。
+11. 数据盘不足10 GiB。
+12. 需要修改BA数学公式才能继续。
+13. 需要读取GT才能让算法运行。
+14. 任何历史实验数据可能被覆盖。
+
+不得为了满足用户的进度要求绕过这些条件。
+
+CPU闭包修复最多进行两轮有证据的修正。
+
+GPU C0最多进行两次完整采集尝试，每次必须经过CPU闭包验证。
+
+不得无限重试。
+
+技术阻断时自动停止并提交报告，不等待用户批准，也不擅自更改实验边界。
+
+## 11. 长程任务状态持久化
+
+建立：
+
+TASK004C_B_AUTONOMOUS_RUN_STATE.json
+
+TASK004C_B_AUTONOMOUS_EXECUTION_LOG.md
+
+每个阶段记录：
+
+- phase。
+- status。
+- source commit。
+- source SHA。
+- configuration SHA。
+- input manifest SHA。
+- start/end time。
+- GPU lifecycle count。
+- outputs。
+- artifacts SHA256。
+- stop reason。
+- next action。
+
+状态必须支持Codex任务中断后恢复。
+
+恢复时先读取状态文件，不得重复执行已经完成的GPU阶段。
+
+使用唯一运行ID。
+
+防止同一阶段被重复启动。
+
+## 12. GitHub持续交付
+
+仓库：
+
+[https://github.com/Pseven0108/GameCam-VO](https://github.com/Pseven0108/GameCam-VO)
+
+使用独立研究分支：
+
+codex/task004c-b-autonomous-20261124
+
+禁止强制覆盖历史分支。
+
+每个阶段结束后发布：
+
+- 源码补丁。
+- 测试报告。
+- GPU日志。
+- Restore Receipt。
+- Schedule CSV。
+- 实验指标CSV。
+- SHA256清单。
+- 阶段评审。
+
+不得上传：
+
+- 模型权重。
+- VIPER原始数据。
+- SSH密码。
+- API Token。
+- 其他凭据。
+- 未脱敏的私有连接信息。
+
+更新：\
+README.md\
+PROJECT_STATUS.md\
+REVIEW_INDEX.md
+
+保证公开GitHub可以直接查看完整评审材料。
+
+## 13. 最终交付
+
+TASK004C_B_CLOSURE_FIX_REPORT.md
+
+TASK004C_B_CHECKPOINT_CPU_ROUNDTRIP.md
+
+TASK004C_B_GPU_C0_FINAL_REPORT.md
+
+TASK004C_B_C0_MANIFEST.json
+
+TASK004C_B_RESTORE_FINAL_REPORT.md
+
+TASK004C_B_RESTORE_RECEIPTS.json
+
+TASK004C_B_S0_S1_SCHEDULES/
+
+TASK004C_B_CROSS_D_REPLAY_REPORT.md
+
+TASK004C_B_FORMAL_B1_B2_B3_B4_REPORT.md
+
+TASK004C_B_METRICS.csv
+
+TASK004C_B_TRAJECTORY_COMPARISON.csv
+
+TASK004C_B_FINAL_BA_COMPARISON.csv
+
+TASK004C_B_RESOURCE_TIMELINE.csv
+
+TASK004C_B_AUTONOMOUS_FINAL_REVIEW\.md
+
+TASK004C_B_AUTONOMOUS_RUN_STATE.json
+
+所有运行日志、源码差异和SHA256清单必须保留。
+
+## 14. 最终任务终点
+
+成功终点：
+
+1. C0完整保存。
+2. 新Python进程成功恢复。
+3. S0/S1生成。
+4. 跨D重放成功。
+5. B1/B2/B3/B4四组完整运行。
+6. Final BA和Filler完成。
+7. 统一评价完成。
+8. 结果发布至公开GitHub。
+
+如果所有条件通过，提交最终评审后停止。
+
+不要自动扩大到其他92个窗口，不要自动开发新算法，不要自动运行其他数据集。
+
+用户不需要在各阶段之间批准。
+
+END OF AUTONOMOUS TASK
+
+## **六、这次我特别强调三件事**
+
+1. **不再浪费3090。** CPU能解决的问题全部提前解决，只有真正需要GPU时才启动。
+2. **不再反复做工程重构。** 只修Checkpoint、恢复和实验调度必需的接口，不碰BA数学公式。
+3. **直接走向四组实验。** 一旦C0和跨D验证通过，自动启动完整B1～B4，不再停下来问你。
+
+当前公开仓库已经记录了真实初始化成功、C0闭包失败的证据。
+
+[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
+
+GitHub+1
+
+
+
+**你把这份完整任务书交给 Codex 后，让它持续执行。** 我不能从当前聊天直接启动你的远程3090进程，但后续评审我会直接读取 `Pseven0108/GameCam-VO` 的公开提交，不再让你上传 ZIP。

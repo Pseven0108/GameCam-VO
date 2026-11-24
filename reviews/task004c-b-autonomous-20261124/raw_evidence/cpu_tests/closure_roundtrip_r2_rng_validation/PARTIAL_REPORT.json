@@ -1,0 +1,30 @@
+{
+  "model_nodes": 17447,
+  "model_storage_bytes": 1752008320,
+  "registered_identity_nodes": 71,
+  "negative_tests": {
+    "unknown_lambda": {
+      "PASS": true,
+      "reason": "Unregistered closure/function"
+    },
+    "captured_closure": {
+      "PASS": true,
+      "reason": "Unregistered closure/function"
+    },
+    "opaque_runtime_handle": {
+      "PASS": true,
+      "reason": "Unsupported live runtime field type: <class 'object'>"
+    }
+  },
+  "model_forward_cpu_fixture": {
+    "constant_buffer": "depth_expectation_anchor",
+    "source_formula": "exp(linspace(log(min_val),log(max_val),256))",
+    "device": "cpu",
+    "attention_backend": "unmodified upstream Attention.forward via original ImportError no-xformers branch",
+    "reason": "CPU xformers has no 64-d head implementation; installed get_bins hard-codes CUDA; no network method/weight or GPU path modified"
+  },
+  "CPU_snapshot_path": "/dev/shm/gamecam_task004cb_cpu_real_model_roundtrip_3204",
+  "CPU_snapshot_bytes": 1633177144,
+  "CPU_snapshot_sha256": "1aa48a77cea13322ef250e3281b2d91278e3dbf2737ae501d6ac8c3f7a236ea0",
+  "restore_exit_code": 1
+}

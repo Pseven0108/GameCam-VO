@@ -1,0 +1,18 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_model_audit.py", line 12, in <module>
+    from native_control.native_driver import cached_priors
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/native_driver.py", line 17, in <module>
+    from src.slam import SLAM
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/source_candidate/src/slam.py", line 23, in <module>
+    from src.gui import gui_utils, slam_gui
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/source_candidate/src/gui/slam_gui.py", line 29, in <module>
+    from src.gui.gl_render import util, util_gau
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/source_candidate/src/gui/gl_render/__init__.py", line 1, in <module>
+    from . import render_ogl, util, util_gau
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/source_candidate/src/gui/gl_render/render_ogl.py", line 31, in <module>
+    raise ImportError
+ImportError

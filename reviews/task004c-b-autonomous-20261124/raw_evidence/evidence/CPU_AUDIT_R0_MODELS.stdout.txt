@@ -1,0 +1,7 @@
+INITIALIZING Metric3D
+MODEL_READY Metric3D
+INITIALIZING FiT3D
+MODEL_READY FiT3D
+INITIALIZING DroidNet
+MODEL_READY DroidNet
+AUDIT_COMPLETE {"model_summary": {"Metric3D": {"class": "mono.model.monodepth_model:DepthModel", "parameters": 411941915, "buffers": 0, "initialization_seconds": 9.013403177261353, "closure": {"status": "BLOCKED", "reason": "mono.model.monodepth_model:DepthModel._modules: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function"}}, "FiT3D": {"class": "src.utils.mono_priors.img_feature_extractors:Fit3DModels", "parameters": 22057344, "buffers": 0, "initialization_seconds": 0.5039005279541016, "closure": {"status": "PASS", "nodes": 4454, "unique_storage_bytes": 88229376}}, "DroidNet": {"class": "src.modules.droid_net.droid_net:DroidNet", "parameters": 4002565, "buffers": 0, "initialization_seconds": 0.0772545337677002, "closure": {"status": "PASS", "nodes": 2632, "unique_storage_bytes": 16010260}}}, "functions": 71, "unsupported": 0, "CUDA": false}

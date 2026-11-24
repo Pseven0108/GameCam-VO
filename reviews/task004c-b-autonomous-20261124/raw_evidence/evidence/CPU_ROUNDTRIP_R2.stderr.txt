@@ -1,0 +1,85 @@
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+Triton is not available, some optimizations will not be enabled.
+This is just a warning: triton is not available
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 175, in <module>
+    else:parent()
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 104, in parent
+    print('FORWARD_REAL_WEIGHTED_MODELS',flush=True);expected,values=evaluate(models)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 45, in evaluate
+    pred,conf,extra=models['Metric3D'].inference({'input':x})
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/monodepth_model.py", line 12, in inference
+    pred_depth, confidence, output_dict = self.forward(data)       
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/model_pipelines/__base_model__.py", line 13, in forward
+    output = self.depth_model(**data)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/model_pipelines/dense_pipeline.py", line 14, in forward
+    features = self.encoder(input)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 1091, in forward
+    ret = self.forward_features(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 1017, in forward_features
+    x = blk(x)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 749, in forward
+    x = b(x)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 584, in forward
+    x = x + attn_residual_func(x, attn_bias)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 559, in attn_residual_func
+    return self.ls1(self.attn(self.norm1(x), attn_bias))
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/backbones/ViT_DINO_reg.py", line 475, in forward
+    x = memory_efficient_attention(q, k, v)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/xformers/ops/fmha/__init__.py", line 223, in memory_efficient_attention
+    return _memory_efficient_attention(
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/xformers/ops/fmha/__init__.py", line 321, in _memory_efficient_attention
+    return _memory_efficient_attention_forward(
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/xformers/ops/fmha/__init__.py", line 337, in _memory_efficient_attention_forward
+    op = _dispatch_fw(inp, False)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/xformers/ops/fmha/dispatch.py", line 120, in _dispatch_fw
+    return _run_priority_list(
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/xformers/ops/fmha/dispatch.py", line 63, in _run_priority_list
+    raise NotImplementedError(msg)
+NotImplementedError: No operator found for `memory_efficient_attention_forward` with inputs:
+     query       : shape=(1, 69, 16, 64) (torch.float32)
+     key         : shape=(1, 69, 16, 64) (torch.float32)
+     value       : shape=(1, 69, 16, 64) (torch.float32)
+     attn_bias   : <class 'NoneType'>
+     p           : 0.0
+`decoderF` is not supported because:
+    device=cpu (supported: {'cuda'})
+    attn_bias type is <class 'NoneType'>
+`flshattF@v2.3.2` is not supported because:
+    device=cpu (supported: {'cuda'})
+    dtype=torch.float32 (supported: {torch.float16, torch.bfloat16})
+`tritonflashattF` is not supported because:
+    device=cpu (supported: {'cuda'})
+    dtype=torch.float32 (supported: {torch.float16, torch.bfloat16})
+    operator wasn't built - see `python -m xformers.info` for more info
+    triton is not available
+`cutlassF` is not supported because:
+    device=cpu (supported: {'cuda'})
+`smallkF` is not supported because:
+    max(query.shape[-1] != value.shape[-1]) > 32
+    device=cpu (supported: {'cuda'})
+    unsupported embed per head: 64

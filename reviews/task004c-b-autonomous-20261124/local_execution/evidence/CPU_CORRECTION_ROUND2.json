@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "before": {
+    "native_control/metric3d_identity.py": "7fe7fc61d218a4b74b2213c0f689f97dcbe720904560db85206507ce017e5d3b",
+    "native_control/snapshot.py": "14d611600f01cadcb30a00961e91a2bdbd9853c40b8d456fc353cde328e7ab2a"
+  },
+  "after": {
+    "native_control/metric3d_identity.py": "b723b0eecb68449d9f9126c3453ec940c473d17a377d1ff4629dc32be036a3b4",
+    "native_control/snapshot.py": "246c75e401a68f6c3e0ca326f029258329b5c1a17f30a79ad5a2f5a55d8e6275"
+  },
+  "changes": [
+    "Register all three actually audited LoRA owner classes, 71 callables",
+    "Lossless streaming gzip on complete tensor-storage archives; no precision reduction or tail omission"
+  ],
+  "diagnostic_only_errors_known_identity_functions": 126,
+  "CPU_correction_budget_remaining": 0
+}

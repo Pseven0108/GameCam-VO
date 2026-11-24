@@ -4,6 +4,7 @@ CPU fixtures verify the format. A native C0 additionally requires the audited
 Tracker frame barrier, a source lock, and a successful native closure audit.
 """
 import base64
+import gzip
 from collections import OrderedDict
 import hashlib
 import importlib
@@ -23,7 +24,7 @@ import torch
 from control_common import ControlError, canonical, digest, file_sha, require_space
 from checkpoint.checkpoint_adapter import value_sha
 
-FORMAT = 'GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V2'
+FORMAT = 'GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS'
 HOOKS = ('_backward_hooks', '_backward_pre_hooks', '_forward_hooks', '_forward_pre_hooks',
          '_state_dict_hooks', '_state_dict_pre_hooks', '_load_state_dict_pre_hooks',
          '_load_state_dict_post_hooks')
@@ -54,8 +55,17 @@ class ObjectEncoder:
         self.services={id(v):k for k,v in (services or {}).items() if v is not None}
         self.allowed_prefixes=allowed_prefixes
         self.nodes={}; self.memo={}; self.storages={}; self.storage_memo={}; self.classes={}
+        self.registered_callables=None
 
     def encode(self, x):
+        from native_control.metric3d_identity import collect, TAG
+        if self.registered_callables is None:
+            self.registered_callables=collect(x,self.services)
+        if id(x) in self.registered_callables:
+            if id(x) in self.memo:return {'$ref':self.memo[id(x)]}
+            nid='o%07d'%len(self.nodes);self.memo[id(x)]=nid
+            self.nodes[nid]={'kind':TAG,'pin':self.registered_callables[id(x)]}
+            return {'$ref':nid}
         if x is None or type(x) in (str, int, bool): return x
         if type(x) is float:
             return x if math.isfinite(x) else {'$float':repr(x)}
@@ -153,11 +163,13 @@ def prepare_state(bundle, *, provenance, services=None, floor_bytes=10*1024**3, 
     tree=encoder.encode(bundle);files={};storage_meta={}
     for sid,record in encoder.storages.items():
         raw=record['raw'].detach().cpu().clone()
-        count=CountingHashWriter();torch.save(raw,count)
+        count=CountingHashWriter()
+        with gzip.GzipFile(filename='',mode='wb',compresslevel=1,fileobj=count,mtime=0) as compressed:
+            torch.save(raw,compressed)
         name=sid+'.pt'
         files[name]={'sha256':count.hash.hexdigest(),'bytes':count.bytes}
         storage_meta[sid]={'file':name,'byte_size':raw.numel(),'raw_sha256':byte_sha(raw),
-                           'device':record['device'],'cpu_shared':record['shared']}
+                           'device':record['device'],'cpu_shared':record['shared'],'encoding':'TORCH_ZIP_GZIP_V1'}
         del raw
     manifest={'schema':FORMAT,'provenance':copy.deepcopy(provenance),'endianness':sys.byteorder,
               'root':tree,'nodes':encoder.nodes,'classes':encoder.classes,'storages':storage_meta,'files':files}
@@ -193,7 +205,9 @@ def save_prepared_state(prepared,path):
             file=stage/meta['file']
             with file.open('xb') as f:
                 os.posix_fallocate(f.fileno(),0,expected['bytes'])
-                torch.save(raw,f);f.flush();os.fsync(f.fileno())
+                with gzip.GzipFile(filename='',mode='wb',compresslevel=1,fileobj=f,mtime=0) as compressed:
+                    torch.save(raw,compressed)
+                f.flush();os.fsync(f.fileno())
             if file.stat().st_size!=expected['bytes'] or file_sha(file)!=expected['sha256']:
                 raise ControlError('Actual tensor archive does not match exact size/SHA plan')
             remaining.pop(0);del raw
@@ -248,7 +262,9 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
     # Validate every file before deserializing tensor-only payloads.
     storages={}
     for sid,s in m['storages'].items():
-        raw=torch.load(str(root/s['file']),map_location='cpu',weights_only=True,mmap=True)
+        if s.get('encoding')!='TORCH_ZIP_GZIP_V1':raise ControlError('Unknown storage encoding')
+        with gzip.GzipFile(filename=str(root/s['file']),mode='rb') as compressed:
+            raw=torch.load(compressed,map_location='cpu',weights_only=True)
         if not isinstance(raw,torch.Tensor) or raw.dtype!=torch.uint8 or raw.ndim!=1 or not raw.is_contiguous() or raw.numel()!=s['byte_size'] or byte_sha(raw)!=s['raw_sha256']:
             raise ControlError('Invalid tensor-only storage payload')
         # Each original storage is moved once. Per-view .to() would break aliasing.
@@ -306,6 +322,9 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
         elif kind=='partial':
             value=functools.partial(decode(n['function']),*decode(n['args']),**decode(n['keywords']));value.__dict__.update(decode(n['attrs']))
         elif kind=='ndarray':value=decode(n['data']).numpy().astype(n['dtype'],copy=True).reshape(n['shape'])
+        elif kind=='metric3d_lora_identity_callable_v1':
+            from native_control.metric3d_identity import restore
+            value=restore(n['pin'])
         elif kind=='object':
             cls=classes[n['class']]
             # No model constructors, checkpoint loaders, or RNG draws during restore.

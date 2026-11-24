@@ -1,0 +1,2669 @@
+{
+  "artifact_kind": "CPU_REAL_MODEL_CLOSURE_AUDIT",
+  "models": {
+    "Metric3D": {
+      "class": "mono.model.monodepth_model:DepthModel",
+      "parameters": 411941915,
+      "buffers": 0,
+      "initialization_seconds": 9.013403177261353,
+      "closure": {
+        "status": "BLOCKED",
+        "reason": "mono.model.monodepth_model:DepthModel._modules: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function"
+      }
+    },
+    "FiT3D": {
+      "class": "src.utils.mono_priors.img_feature_extractors:Fit3DModels",
+      "parameters": 22057344,
+      "buffers": 0,
+      "initialization_seconds": 0.5039005279541016,
+      "closure": {
+        "status": "PASS",
+        "nodes": 4454,
+        "unique_storage_bytes": 88229376
+      }
+    },
+    "DroidNet": {
+      "class": "src.modules.droid_net.droid_net:DroidNet",
+      "parameters": 4002565,
+      "buffers": 0,
+      "initialization_seconds": 0.0772545337677002,
+      "closure": {
+        "status": "PASS",
+        "nodes": 2632,
+        "unique_storage_bytes": 16010260
+      }
+    }
+  },
+  "functions": [
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_3']._modules['readoper']._modules['project_patch'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_3']._modules['readoper']._modules['project_learn'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_2']._modules['readoper']._modules['project_patch'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_2']._modules['readoper']._modules['project_learn'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_1']._modules['readoper']._modules['project_patch'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_1']._modules['readoper']._modules['project_learn'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_1']._modules['sample'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:ConvTranspose2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_0']._modules['readoper']._modules['project_patch'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_0']._modules['readoper']._modules['project_learn'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['token2feature']._modules['read_0']._modules['sample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_3']._modules['way_trunk']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_3']._modules['way_trunk']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_3']._modules['out_conv'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_2']._modules['way_trunk']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_2']._modules['way_trunk']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_2']._modules['way_branch']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_2']._modules['way_branch']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_2']._modules['out_conv'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_1']._modules['way_trunk']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_1']._modules['way_trunk']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_1']._modules['way_branch']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_1']._modules['way_branch']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['decoder_mono']._modules['upconv_1']._modules['out_conv'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['depth_regressor']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['depth_regressor']._modules['2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['normal_predictor']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['normal_predictor']._modules['2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['normal_predictor']._modules['4'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['normal_predictor']._modules['6'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['0']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['0']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['0']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['0']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['1']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['1']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['1']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs04']._modules['1']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['0']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['0']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['0']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['0']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['1']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['1']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['1']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs08']._modules['1']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['0']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['0']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['0']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['0']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['1']._modules['0']._modules['conv1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['1']._modules['0']._modules['conv2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['1']._modules['0']._modules['downsample']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_feature_encoder']._modules['outputs16']._modules['1']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_zqr_convs']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_zqr_convs']._modules['1'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['context_zqr_convs']._modules['2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru08']._modules['convz'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru08']._modules['convr'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru08']._modules['convq'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru16']._modules['convz'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru16']._modules['convr'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru16']._modules['convq'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru32']._modules['convz'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru32']._modules['convr'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['gru32']._modules['convq'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['flow_head']._modules['conv1d'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['flow_head']._modules['conv2d'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['flow_head']._modules['conv1n'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['flow_head']._modules['conv2n'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['mask']._modules['0'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    },
+    {
+      "path": "weighted_models['Metric3D']._modules['depth_model']._modules['decoder']._modules['update_block']._modules['mask']._modules['2'].lora_dropout",
+      "owner": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Conv2dLoRA",
+      "attribute": "lora_dropout",
+      "module": "mono.model.decode_heads.RAFTDepthNormalDPTDecoder5",
+      "qualname": "LoRALayer.__init__.<locals>.<lambda>",
+      "closure": null,
+      "freevars": [],
+      "argcount": 1,
+      "posonlyargcount": 0,
+      "kwonlyargcount": 0,
+      "defaults": "None",
+      "kwdefaults": "None",
+      "code_sha256": "8268a0999f621ea90e82f512d702565764559033232c0da218c4f77f1e34d7f3",
+      "bytecode_hex": "7c005300",
+      "instructions": [
+        [
+          "LOAD_FAST",
+          "x"
+        ],
+        [
+          "RETURN_VALUE",
+          "None"
+        ]
+      ],
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "identity_behavior": {
+        "same_object": true,
+        "input_unmodified": true,
+        "rng_unchanged": true,
+        "gradient_equal": true,
+        "owner_r": 0,
+        "owner_lora_alpha": 1,
+        "model_training": false
+      }
+    }
+  ],
+  "unsupported": [],
+  "cuda_initialized": false,
+  "visited_objects": 16663
+}

@@ -1,6 +1,6 @@
 {
-  "canonical_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
-  "canonical_tree": "92c742195461fb19d5d66d67c0daff1fa1b4714e",
+  "canonical_commit": "a324b57760fdaf4929385f2271991d773533799d",
+  "canonical_tree": "19b22b429226383c3ef996e40c4a5483a5339acf",
   "scope": "Base tracked-source export plus one byte-verified input-adapter change; original source commit distinct from GitHub publication commit",
   "canonical_source_endpoint": "sc01-ssh.gpuhome.cc:30448",
   "export": {
@@ -26,5 +26,16 @@
     "dataset_before_sha256": "dcb87c7294a71ddaa772545ba3b38ce9402dfd47031357a57a3ef315972a8d12",
     "dataset_after_sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9",
     "source": "new instance verified working tree; previous full export retained as base provenance"
+  },
+  "previous_source_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+  "latest_incremental_update": {
+    "from": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+    "to": "a324b57760fdaf4929385f2271991d773533799d",
+    "changed_files": [
+      "native_control/metric3d_identity.py",
+      "native_control/snapshot.py"
+    ],
+    "status": "CPU_RESTORE_BLOCKED_NO_NEW_GPU",
+    "actual_BA_math_or_model_forward_changes": false
   }
 }

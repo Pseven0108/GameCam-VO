@@ -202,5 +202,17 @@
     "full_original_package_uploaded": true,
     "entrypoint": "reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md",
     "status": "BLOCKED_AT_C0_CLOSURE_UNREGISTERED_LORA_DROPOUT_FUNCTION"
+  },
+  {
+    "stage": "task004c-b-autonomous-20261124",
+    "entrypoint": "reviews/task004c-b-autonomous-20261124/TASK004C_B_AUTONOMOUS_FINAL_REVIEW.md",
+    "source_package": "TASK004C_B_AUTONOMOUS_REVIEW.zip",
+    "source_package_bytes": 635429,
+    "source_package_sha256": "92b707c5a47bc293b07b14980b8050bb9f398b8a55d319664fc1a1576dfea1e4",
+    "included_count": 223,
+    "excluded_count": 0,
+    "sanitized": true,
+    "runtime_source_commit": "a324b57760fdaf4929385f2271991d773533799d",
+    "status": "BLOCKED_CPU_CONFIGDICT_RESTORE_AFTER_TWO_CORRECTION_ROUNDS"
   }
 ]

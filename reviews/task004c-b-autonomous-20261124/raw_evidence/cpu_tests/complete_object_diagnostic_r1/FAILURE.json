@@ -1,0 +1,5 @@
+{
+  "error": "Given input size: (1x1x1). Calculated output size: (1x0x0). Output size is too small",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/complete_object_diagnostic.py\", line 159, in <module>\n    else:parent()\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/complete_object_diagnostic.py\", line 135, in parent\n    g.corr=CorrBlock(torch.zeros(1,1,128,8,8),torch.zeros(1,1,128,8,8))\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/source_candidate/src/modules/droid_net/corr.py\", line 55, in __init__\n    corr = F.avg_pool2d(corr, kernel_size=2, stride=2)\nRuntimeError: Given input size: (1x1x1). Calculated output size: (1x0x0). Output size is too small\n",
+  "CUDA_initialized": false
+}

@@ -1,0 +1,63 @@
+xFormers not available
+xFormers not available
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+xFormers not available
+xFormers not available
+xFormers not available
+xFormers not available
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 193, in <module>
+    else:parent()
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 136, in parent
+    (OUT/'PARTIAL_REPORT.json').write_text(json.dumps(report,indent=2));raise ControlError('Fresh CPU restore failed: '+(OUT/'restore_child.stderr.txt').read_text()[-5000:])
+control_common.ControlError: Fresh CPU restore failed: No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+xFormers not available
+xFormers not available
+xFormers not available
+xFormers not available
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 331, in decode
+    try:value=object.__new__(cls)
+TypeError: object.__new__(ConfigDict) is not safe, use ConfigDict.__new__()
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 192, in <module>
+    if len(sys.argv)>1:worker(sys.argv[2])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/operational/cpu_closure_roundtrip.py", line 89, in worker
+    bundle,m=load_state(path)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 338, in load_state
+    result=decode(m['root'])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 312, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 312, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 334, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 312, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 334, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 312, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 334, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 312, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 334, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 334, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1/native_control/snapshot.py", line 332, in decode
+    except TypeError as e:raise ControlError('Class needs an explicit construction-free adapter: '+n['class']) from e
+control_common.ControlError: Class needs an explicit construction-free adapter: mmcv.utils.config:ConfigDict
+

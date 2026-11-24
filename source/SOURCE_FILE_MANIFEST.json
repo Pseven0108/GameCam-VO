@@ -1,6 +1,6 @@
 {
-  "source_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
-  "source_tree": "92c742195461fb19d5d66d67c0daff1fa1b4714e",
+  "source_commit": "a324b57760fdaf4929385f2271991d773533799d",
+  "source_tree": "19b22b429226383c3ef996e40c4a5483a5339acf",
   "files": [
     {
       "path": ".gitignore",
@@ -864,13 +864,9 @@
     },
     {
       "path": "native_control/snapshot.py",
-      "kind": "file",
-      "mode": "100644",
-      "git_blob": "95d2816228ade1b0331a55671bad11b688a68811",
-      "bytes": 20516,
-      "sha256": "2dd0a9ffa5c32b4497b9ee8f63bbf0ce08d57e0370d977a0742f05ff95554a44",
-      "excluded_reason": null,
-      "included": true
+      "bytes": 22000,
+      "sha256": "246c75e401a68f6c3e0ca326f029258329b5c1a17f30a79ad5a2f5a55d8e6275",
+      "git_blob": "3402766e8c6b2311555e9fd63da8b97d7d34f3f4"
     },
     {
       "path": "native_control/storage_budget.py",
@@ -37371,6 +37367,12 @@
       "sha256": "8b77845eb74106e7a4130af8585b340a4a035425327b97559af250e1de6ae7ee",
       "excluded_reason": null,
       "included": true
+    },
+    {
+      "path": "native_control/metric3d_identity.py",
+      "bytes": 4513,
+      "sha256": "b723b0eecb68449d9f9126c3453ec940c473d17a377d1ff4629dc32be036a3b4",
+      "git_blob": "176079071521033afbfa57ff007be5ce53f5e82f"
     }
   ],
   "base_export_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b"

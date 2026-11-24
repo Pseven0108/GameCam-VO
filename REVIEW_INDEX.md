@@ -1,6 +1,6 @@
 # 评审索引
 
-最新：[GPU C0 R2报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md)。真实初始化完成，完整C0因函数闭包检查失败。
+最新：[Task004C-B连续执行](reviews/task004c-b-autonomous-20261124/TASK004C_B_AUTONOMOUS_FINAL_REVIEW.md)，CPU ConfigDict恢复阻断；新GPU运行0次。
 
 | 阶段 | 阅读入口 | 文件数 | 省略附件 |
 |---|---|---:|---:|
@@ -21,5 +21,6 @@
 | task004c-b-release-fixes | [报告](reviews/task004c-b-release-fixes/FINAL_REVIEW.md) | 238 | 0 |
 | task004c-b-gpu-c0-20261124 | [报告](reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md) | 58 | 0 |
 | task004c-b-gpu-c0-r2-20261124 | [报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md) | 89 | 0 |
+| task004c-b-autonomous-20261124 | [报告](reviews/task004c-b-autonomous-20261124/TASK004C_B_AUTONOMOUS_FINAL_REVIEW.md) | 223 | 0 |
 
-最新包完整上传，原SHA清单保持不变。历史包省略内容以publication/manifests为准。
+本阶段报告/源码/日志采用脱敏公开副本，原始→公开SHA见对应publication/SANITIZATION_MAP.json。大二进制仍在私有研究存储。

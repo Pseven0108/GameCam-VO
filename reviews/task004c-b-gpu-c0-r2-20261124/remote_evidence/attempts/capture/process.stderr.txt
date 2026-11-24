@@ -1,0 +1,146 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+  0%|          | 0/487 [00:00<?, ?it/s]/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+[34m[TRACKER] [0m:   0%|          | 0/487 [00:01<?, ?it/s][34m[TRACKER] [0m:   0%|          | 1/487 [00:01<08:11,  1.01s/it][34m[TRACKER] [0m:   0%|          | 1/487 [00:01<08:43,  1.08s/it][34m[TRACKER] [0m:   0%|          | 2/487 [00:01<04:21,  1.86it/s][34m[TRACKER] [0m:   0%|          | 2/487 [00:01<04:29,  1.80it/s][34m[TRACKER] [0m:   1%|          | 3/487 [00:01<02:58,  2.70it/s][34m[TRACKER] [0m:   1%|          | 3/487 [00:01<03:36,  2.23it/s][34m[TRACKER] [0m:   1%|          | 4/487 [00:01<02:42,  2.97it/s][34m[TRACKER] [0m:   1%|          | 4/487 [00:01<02:46,  2.90it/s][34m[TRACKER] [0m:   1%|          | 5/487 [00:01<02:13,  3.62it/s][34m[TRACKER] [0m:   1%|          | 5/487 [00:01<02:35,  3.09it/s][34m[TRACKER] [0m:   1%|          | 6/487 [00:01<02:09,  3.71it/s][34m[TRACKER] [0m:   1%|          | 6/487 [00:01<02:11,  3.65it/s][34m[TRACKER] [0m:   1%|▏         | 7/487 [00:01<01:52,  4.26it/s][34m[TRACKER] [0m:   1%|▏         | 7/487 [00:01<02:11,  3.65it/s][34m[TRACKER] [0m:   2%|▏         | 8/487 [00:01<01:54,  4.18it/s][34m[TRACKER] [0m:   2%|▏         | 8/487 [00:01<01:56,  4.12it/s][34m[TRACKER] [0m:   2%|▏         | 9/487 [00:01<01:43,  4.63it/s][34m[TRACKER] [0m:   2%|▏         | 9/487 [00:02<01:56,  4.11it/s][34m[TRACKER] [0m:   2%|▏         | 10/487 [00:02<01:44,  4.57it/s][34m[TRACKER] [0m:   2%|▏         | 10/487 [00:02<01:55,  4.14it/s][34m[TRACKER] [0m:   2%|▏         | 11/487 [00:02<01:44,  4.55it/s][34m[TRACKER] [0m:   2%|▏         | 11/487 [00:02<01:54,  4.16it/s][34m[TRACKER] [0m:   2%|▏         | 12/487 [00:02<01:44,  4.53it/s][34m[TRACKER] [0m:   2%|▏         | 12/487 [00:02<01:54,  4.13it/s][34m[TRACKER] [0m:   3%|▎         | 13/487 [00:02<01:45,  4.48it/s][34m[TRACKER] [0m:   3%|▎         | 13/487 [00:03<01:54,  4.15it/s][34m[TRACKER] [0m:   3%|▎         | 14/487 [00:03<01:45,  4.47it/s][34m[TRACKER] [0m:   3%|▎         | 14/487 [00:03<01:53,  4.16it/s][34m[TRACKER] [0m:   3%|▎         | 15/487 [00:03<01:45,  4.46it/s][34m[TRACKER] [0m:   3%|▎         | 15/487 [00:03<01:53,  4.18it/s][34m[TRACKER] [0m:   3%|▎         | 16/487 [00:03<01:45,  4.45it/s][34m[TRACKER] [0m:   3%|▎         | 16/487 [00:03<01:46,  4.42it/s][34m[TRACKER] [0m:   3%|▎         | 17/487 [00:03<01:40,  4.70it/s][34m[TRACKER] [0m:   3%|▎         | 17/487 [00:05<02:43,  2.87it/s][34m[TRACKER] [0m:   4%|▎         | 18/487 [00:05<02:34,  3.04it/s]Process Process-2:
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 81, in encode
+    raise ControlError('Unregistered closure/function')
+control_common.ControlError: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: mono.model.monodepth_model:DepthModel._modules: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 127, in encode
+    try:attrs.append([k,self.encode(v)])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: src.motion_filter:MotionFilter.metric_depth_estimator: mono.model.monodepth_model:DepthModel._modules: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/native_driver.py", line 74, in tracking
+    try:self.tracker.run(self.stream)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/src/tracker.py", line 150, in run
+    task004c().frame_end(self, stream, dict(next_input_index=i+1, prev_kf_idx=prev_kf_idx, curr_kf_idx=curr_kf_idx, prev_ba_idx=prev_ba_idx, intrinsic=intrinsic))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/runtime.py", line 232, in frame_end
+    callback(tracker,stream,values,self)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/native_driver.py", line 66, in save
+    manifest=capture_c0(out.parent.parent/'C0',tracker,stream,values,ctrl,self.traj_filler,barrier,lock)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/binding.py", line 55, in capture_c0
+    inventory=state_inventory(bundle,services=services)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 325, in state_inventory
+    enc=ObjectEncoder(services=services,**({'allowed_prefixes':allowed_prefixes} if allowed_prefixes else {}));enc.encode(bundle)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in encode
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 110, in <listcomp>
+    node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_candidate/native_control/snapshot.py", line 128, in encode
+    except ControlError as e:raise ControlError(pin['key']+'.'+k+': '+str(e)) from e
+control_common.ControlError: src.tracker:Tracker.motion_filter: src.motion_filter:MotionFilter.metric_depth_estimator: mono.model.monodepth_model:DepthModel._modules: mono.model.model_pipelines.dense_pipeline:DensePredModel._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:RAFTDepthNormalDPT5._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:EncoderFeature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Token2Feature._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:Readout._modules: mono.model.decode_heads.RAFTDepthNormalDPTDecoder5:LoRALinear.lora_dropout: Unregistered closure/function
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/operational/capture_entry.py", line 12, in <module>
+    raise SystemExit(main())
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/runner/run_native_smoke.py", line 31, in main
+    capture(ROOT,out,'/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json',
+  File "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/native_control/native_driver.py", line 98, in capture
+    if not (out/'SUCCESS.json').is_file():raise ControlError('Capture child failed; no automatic retry')
+control_common.ControlError: Capture child failed; no automatic retry
+/opt/conda/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

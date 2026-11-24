@@ -1,0 +1,549 @@
+{
+  "stage": "task004c-b-gpu-c0-r2-20261124",
+  "source_package": "TASK004C_B_GPU_C0_R2_REVIEW.zip",
+  "source_package_bytes": 248109,
+  "source_package_sha256": "5fc5863e2d25cc6c00e4f84a21a4786bb0adc2da8bc3727948390fa2a46690be",
+  "original_CRC": "PASS",
+  "included_count": 89,
+  "excluded_count": 0,
+  "full_original_package_uploaded": true,
+  "entrypoint": "reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md",
+  "status": "BLOCKED_AT_C0_CLOSURE_UNREGISTERED_LORA_DROPOUT_FUNCTION",
+  "included": [
+    {
+      "archive_member": "C0_CLOSURE_BLOCKER.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/C0_CLOSURE_BLOCKER.md",
+      "bytes": 1328,
+      "sha256": "08e1d01296793671d695919cf2ae55b388279a6589a4ee0d02304e16c98e70d0"
+    },
+    {
+      "archive_member": "evidence/APPROVED_47_FAMILY_PROTOCOL.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/APPROVED_47_FAMILY_PROTOCOL.json",
+      "bytes": 40249,
+      "sha256": "247ca1a18262eb81f7df0bf6d1fcaeaa2125c4967db9cddf5899f46121404268"
+    },
+    {
+      "archive_member": "evidence/C0_R2_REALTIME_ADMISSION_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/C0_R2_REALTIME_ADMISSION_TRANSPORT.json",
+      "bytes": 398,
+      "sha256": "425e2ef6861f8235e1ce8562b56912dabc46b9e10489575782fca958266a0424"
+    },
+    {
+      "archive_member": "evidence/C0_R2_SINGLE_GPU_EXECUTION_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/C0_R2_SINGLE_GPU_EXECUTION_TRANSPORT.json",
+      "bytes": 400,
+      "sha256": "7fe85246194b0db9da484ef14cfbc9631f307d2a52aca34f8822b8a194e29a12"
+    },
+    {
+      "archive_member": "evidence/CAPTURE_EXECUTION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/CAPTURE_EXECUTION.json",
+      "bytes": 593,
+      "sha256": "25de2db1997830d5e799891563cee68c965dcdd28cf09f2ae6de008ec8294170"
+    },
+    {
+      "archive_member": "evidence/CLOSURE_BASE_CLASS_EVIDENCE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/CLOSURE_BASE_CLASS_EVIDENCE.json",
+      "bytes": 4736,
+      "sha256": "3ec9f8d3ba9c69af3c4742d08e6d0588fff988dfbf23b30c1cc0fd8b7d209390"
+    },
+    {
+      "archive_member": "evidence/CLOSURE_BASE_CLASS_SOURCE_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/CLOSURE_BASE_CLASS_SOURCE_TRANSPORT.json",
+      "bytes": 399,
+      "sha256": "12d3712a595f7c0618a45c48de969299abd34397056a0adf5d789a29713d999b"
+    },
+    {
+      "archive_member": "evidence/COLLECT_C0_R2_CLOSURE_FAILURE_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/COLLECT_C0_R2_CLOSURE_FAILURE_TRANSPORT.json",
+      "bytes": 403,
+      "sha256": "424d9404c86de433c819909d08ee6c38cd8926d06d9e634d6fca9b514eb7b10a"
+    },
+    {
+      "archive_member": "evidence/CPU_PHASE_DECISION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/CPU_PHASE_DECISION.json",
+      "bytes": 2431,
+      "sha256": "483548efbfb24c7024f55066a08dbcdd801f9922fcd9ed34e64c8d62dcfc0f42"
+    },
+    {
+      "archive_member": "evidence/CPU_PHASE_FINAL_DECISION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/CPU_PHASE_FINAL_DECISION.json",
+      "bytes": 802,
+      "sha256": "25c32aa4a732afb9224e0befc86472198b682236c8a96818ba7919797aad3be7"
+    },
+    {
+      "archive_member": "evidence/FINISH_SOURCE_COMMIT_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/FINISH_SOURCE_COMMIT_TRANSPORT.json",
+      "bytes": 394,
+      "sha256": "61059bcf181a6f6a8422624c6905a529c9aec83f3630c6b0c136a4bef3149ce0"
+    },
+    {
+      "archive_member": "evidence/GPU_ADMISSION_LOCAL.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/GPU_ADMISSION_LOCAL.json",
+      "bytes": 1126,
+      "sha256": "13fb538d8d329d8468c70bf2b8d0641c6893d9b99b2e58e3e72ff2baabd0ad8f"
+    },
+    {
+      "archive_member": "evidence/GPU_C0_R2_POSTMORTEM.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/GPU_C0_R2_POSTMORTEM.json",
+      "bytes": 9613,
+      "sha256": "c4cf8187e2c9df6c2b0bc6ff3b4b5fa60040ac205f1d4f123dbc2753b60802a9"
+    },
+    {
+      "archive_member": "evidence/REAL_LOADER_AND_152_CPU_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/REAL_LOADER_AND_152_CPU_TRANSPORT.json",
+      "bytes": 397,
+      "sha256": "9b05be2a7d3f243ae6e64e9324adbdcb2a163191001e665a96f675b19d3b2024"
+    },
+    {
+      "archive_member": "evidence/RECOVER_BASELINE_AND_RERUN_152_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/RECOVER_BASELINE_AND_RERUN_152_TRANSPORT.json",
+      "bytes": 404,
+      "sha256": "179cc6fc935d168e538abbd892000b4f1f5254dc64b26b38fecede88da6463e5"
+    },
+    {
+      "archive_member": "evidence/SETUP_DATASET_FIX_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/SETUP_DATASET_FIX_TRANSPORT.json",
+      "bytes": 391,
+      "sha256": "42cf6aeb30379c241639d0cfe36413eca1da186df525dd4a912ef50931f2f789"
+    },
+    {
+      "archive_member": "evidence/SOURCE_PROVENANCE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/SOURCE_PROVENANCE.json",
+      "bytes": 747,
+      "sha256": "9d1ff43f4ac74c75064283ef6e494a8291669456d81350a20ea8ab11d0dc27cb"
+    },
+    {
+      "archive_member": "evidence/STATUS_R2_01_TRANSPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/evidence/STATUS_R2_01_TRANSPORT.json",
+      "bytes": 386,
+      "sha256": "be4c12b369bce68967c3bf7081ad9f9979ee11256d2f2d5835b62b9093626bb9"
+    },
+    {
+      "archive_member": "EXECUTION_LOG.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/EXECUTION_LOG.md",
+      "bytes": 1457,
+      "sha256": "566de3518de3e42131b19a4a93e965d89f12b64b4f8109f80dc8aaa8bdbbc869"
+    },
+    {
+      "archive_member": "FILE_SHA256_MANIFEST.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/FILE_SHA256_MANIFEST.json",
+      "bytes": 16085,
+      "sha256": "c05c335882030e2f7ba9d270020a2f1f88ccf7970f664db66a0e9431fe08d535"
+    },
+    {
+      "archive_member": "FINAL_REVIEW.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md",
+      "bytes": 1986,
+      "sha256": "5139ab1975ec43463352288a0d41eba061f22c40edac1d2b5278ecb8df40dddc"
+    },
+    {
+      "archive_member": "NEXT_PHASE_RECOMMENDATION.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/NEXT_PHASE_RECOMMENDATION.md",
+      "bytes": 1035,
+      "sha256": "8a1f9a9a21aefffc2d42e4ca4a05fbbfbf607f70c13b20b02cc7644f1513b1a5"
+    },
+    {
+      "archive_member": "README_请先读.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/README_请先读.md",
+      "bytes": 661,
+      "sha256": "6810e0299e01fa04bbb032750ca4426f991fb9ccafea366ffe10e2804a4ecea4"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/CLOSURE_BLOCKER_EVIDENCE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/CLOSURE_BLOCKER_EVIDENCE.json",
+      "bytes": 641,
+      "sha256": "39b04feba30b6b09b3d03c7cb816cb73811b1183952a467929ee4b3243eea655"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/FINAL_GPU_ADMISSION_capture.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/FINAL_GPU_ADMISSION_capture.json",
+      "bytes": 5926,
+      "sha256": "3c0ff25f58cb89fc7aa4dfd45f4bbca25943c6dbc6545d85f08dccc1d43106d2"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/GPU_ADMISSION_capture.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/GPU_ADMISSION_capture.json",
+      "bytes": 6141,
+      "sha256": "c420cdd6e37ed5fcf112885f5b6a5f642c41cdada4e598b35dfef639b2ea754f"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/GPU_C0_R2_POSTMORTEM.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/GPU_C0_R2_POSTMORTEM.json",
+      "bytes": 9393,
+      "sha256": "97afee881334ce150726416c882815fdbcf7ae877ab515da3b827f489712e61d"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/ORIGINAL_152_PROCESS_RESULT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/ORIGINAL_152_PROCESS_RESULT.json",
+      "bytes": 1613,
+      "sha256": "8f4f76a84e4804f326069a8a8e4fe292fd43aae3f016c1ca58d549ed2a991d4c"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/ORIGINAL_152_READY_PROCESS_RESULT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/ORIGINAL_152_READY_PROCESS_RESULT.json",
+      "bytes": 431,
+      "sha256": "a58c1ba3cdfe4ace0a5e85f3bc224c4aeb9301dfc0d3278a6bac7c8773c98730"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/REAL_LOADER_CPU/CPU_TEST_REPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/REAL_LOADER_CPU/CPU_TEST_REPORT.json",
+      "bytes": 14934,
+      "sha256": "1e90c4d78233b7e1ad40d1ef82e07a914566c08758b81094d4ad02968b0ed094"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/REAL_LOADER_CPU/RGB001_018_MANIFEST.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/REAL_LOADER_CPU/RGB001_018_MANIFEST.json",
+      "bytes": 8812,
+      "sha256": "39048ea79afc28e88a50f94a9cde7968a1e2dd5f394a6ccecb0c3d151c413e53"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/REAL_LOADER_CPU/unittest.stderr.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/REAL_LOADER_CPU/unittest.stderr.txt",
+      "bytes": 1557,
+      "sha256": "bddc4e7dc5868b3e11659ed85d4e0f6592a969517b89594f9b8b65e85393ae9d"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/REAL_LOADER_PROCESS_RESULT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/REAL_LOADER_PROCESS_RESULT.json",
+      "bytes": 706,
+      "sha256": "33f8a9d0252d6d3f5de5b149de0427ece6d0786bc04dd04726b1d829ed3f0e94"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/RELEASE_CPU_c0_r2/CPU_TEST_REPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/RELEASE_CPU_c0_r2/CPU_TEST_REPORT.json",
+      "bytes": 97822,
+      "sha256": "9aba898a20b6e2031b3d43087f63f375a52200ab94434f7a6c1307ca64a2b42c"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/RELEASE_CPU_c0_r2/unittest.stderr.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/RELEASE_CPU_c0_r2/unittest.stderr.txt",
+      "bytes": 14803,
+      "sha256": "0a41bd18b9b5c1928e996355efb5bb98bb2d5bc5d922ca4693227c2f30421c45"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/RELEASE_CPU_c0_r2_ready/CPU_TEST_REPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/RELEASE_CPU_c0_r2_ready/CPU_TEST_REPORT.json",
+      "bytes": 96697,
+      "sha256": "91a5a66db307aef706435996fb9d98b2a0d5350d47b2fbf4063cadcfdaae9cfe"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/RELEASE_CPU_c0_r2_ready/unittest.stderr.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/RELEASE_CPU_c0_r2_ready/unittest.stderr.txt",
+      "bytes": 13450,
+      "sha256": "e40accd9d0bf845bd92cf6fab8428ccb374849b1d5da97d0401279a9ce1969e0"
+    },
+    {
+      "archive_member": "remote_evidence/artifacts/TASK004C_B_C0_STATE_MANIFEST.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/artifacts/TASK004C_B_C0_STATE_MANIFEST.json",
+      "bytes": 38052,
+      "sha256": "f9026d1dd8671368c5b09facd3612e9e65ca08bf8bbb7371d082e7812ff7fa1a"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/native_trace.jsonl",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/native_trace.jsonl",
+      "bytes": 96006,
+      "sha256": "796247b1b51f0807309c5519ceb97ceb14646005e5aa934a4c15735b77cc15ef"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/observer.jsonl",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/observer.jsonl",
+      "bytes": 349366,
+      "sha256": "f38020d514ff7f866248aa7ee798074ca59ea1b7978c20d92624974ff48ab803"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/process.stderr.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/process.stderr.txt",
+      "bytes": 19145,
+      "sha256": "e6abb19bcbed86f7d394626f57d1584d89feb48208c50a8c4010512db6ba61c3"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/process.stdout.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/process.stdout.txt",
+      "bytes": 362,
+      "sha256": "310761fff622b192d334994660ce316a5c2c73c79592dc8656f9bf28f5195778"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/PROCESS_RECEIPT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/PROCESS_RECEIPT.json",
+      "bytes": 435,
+      "sha256": "f2f62d1694d30b547802d12f7eaddf46886895b0f86f5ff78f533e0cbe5be028"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/PROCESS_STARTED.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/PROCESS_STARTED.json",
+      "bytes": 644,
+      "sha256": "48ec28bd044931ab63266b378417c411bd0f229f77ef1e1c8df26484322e77a0"
+    },
+    {
+      "archive_member": "remote_evidence/attempts/capture/resource_samples.jsonl",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/attempts/capture/resource_samples.jsonl",
+      "bytes": 5162,
+      "sha256": "9d4f321f5ad8003ea94986391446169a848284dd6083c1898ee511d173f38e8c"
+    },
+    {
+      "archive_member": "remote_evidence/cpu_tests/real_loader_tests.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/cpu_tests/real_loader_tests.py",
+      "bytes": 8273,
+      "sha256": "a275daaf8d818ba7b3c108adbffd3715108abae7b1d6c2c1b4c5bbde6b8a48d2"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/ALL_487_RGB_INPUT_VERIFIED.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/ALL_487_RGB_INPUT_VERIFIED.json",
+      "bytes": 125680,
+      "sha256": "422013c9f5d971991b70dca53d55eb82d72d86c425549b3dfa9ca098d44c979b"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/APPROVED_47_FAMILY_PROTOCOL.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/APPROVED_47_FAMILY_PROTOCOL.json",
+      "bytes": 40249,
+      "sha256": "247ca1a18262eb81f7df0bf6d1fcaeaa2125c4967db9cddf5899f46121404268"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/BASELINE_FIXTURE_RECOVERY.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/BASELINE_FIXTURE_RECOVERY.json",
+      "bytes": 436,
+      "sha256": "e5ae3ab5c9a942449e035d141e21d767c27785b1e2f2407514b721881eb26906"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/COMMIT_AUTHOR_DIAGNOSIS.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/COMMIT_AUTHOR_DIAGNOSIS.json",
+      "bytes": 418,
+      "sha256": "474c50e68cfe9d00330feac4b1d945f4771c91fbef11013320670aaf5f505b94"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/CPU_NATIVE_RELEASE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/CPU_NATIVE_RELEASE.json",
+      "bytes": 9464,
+      "sha256": "37beb7d4570b137b2429fa54442afafaf1a642e0ced4358d92b8a04be9c7954f"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/CPU_PHASE_DECISION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/CPU_PHASE_DECISION.json",
+      "bytes": 2439,
+      "sha256": "92896058d04839a2e2577b86a7d30348d37c5cb9f1525afc13437cd0e02e73ec"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/CPU_PHASE_FINAL_DECISION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/CPU_PHASE_FINAL_DECISION.json",
+      "bytes": 784,
+      "sha256": "6c514c896d559617b3bc12ce316b67e58c21c0bdb988e6f14a1a24cf81be95fd"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/CPU_RELEASE_REPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/CPU_RELEASE_REPORT.json",
+      "bytes": 96697,
+      "sha256": "91a5a66db307aef706435996fb9d98b2a0d5350d47b2fbf4063cadcfdaae9cfe"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/FILE_BACKED_CPU_VALIDATION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/FILE_BACKED_CPU_VALIDATION.json",
+      "bytes": 623,
+      "sha256": "27f26f7cf38f57570849650dec2df6f5d28b30b32314f1617c9e51f72f42fde5"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/Metric3D_LoRALinear_source.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/Metric3D_LoRALinear_source.txt",
+      "bytes": 3049,
+      "sha256": "bd826c86c2da0210dd8f9623f2e6eaa54da7488319835c6099ef8c9fdedf9d66"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/NativeViperRGB.after.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/NativeViperRGB.after.py",
+      "bytes": 2676,
+      "sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/NativeViperRGB.before.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/NativeViperRGB.before.py",
+      "bytes": 1738,
+      "sha256": "dcb87c7294a71ddaa772545ba3b38ce9402dfd47031357a57a3ef315972a8d12"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/OLD_ARENA_INACTIVE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/OLD_ARENA_INACTIVE.json",
+      "bytes": 77,
+      "sha256": "fbc7cf9a430653b6581c96cee7af93f4f2d246f91206b1cd3b9c26077f361f12"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/PRIOR_152_CPU_TEST_REPORT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/PRIOR_152_CPU_TEST_REPORT.json",
+      "bytes": 96687,
+      "sha256": "2015fb395581a92c2f3f83504c65aad6369fefe9e0d7d1180db80818ae39a396"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/RGB_CONTRACT_FIX.patch",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/RGB_CONTRACT_FIX.patch",
+      "bytes": 2026,
+      "sha256": "27668d454a71955680633392b3eaf0ba111e2eda65ed0018ebc6e98af56afc7d"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/source/native_control/binding.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/source/native_control/binding.py",
+      "bytes": 7132,
+      "sha256": "13e2083f571ce944e9c109ba4aeecc111f2a9fd70d69f9d253a4157a4ba5233e"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/source/native_control/dataset.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/source/native_control/dataset.py",
+      "bytes": 2676,
+      "sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/source/native_control/snapshot.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/source/native_control/snapshot.py",
+      "bytes": 20516,
+      "sha256": "2dd0a9ffa5c32b4497b9ee8f63bbf0ce08d57e0370d977a0742f05ff95554a44"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/source/src/tracker.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/source/src/tracker.py",
+      "bytes": 9169,
+      "sha256": "47477474aa97e12277fcdc887837585b1616726969013ebd8f640b27db260c76"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/SOURCE_COMMIT_RECEIPT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/SOURCE_COMMIT_RECEIPT.json",
+      "bytes": 220,
+      "sha256": "585dc44eb1e8662ab2412d854d548cd4c83a013807646df6801fc61053ccafb0"
+    },
+    {
+      "archive_member": "remote_evidence/evidence/SOURCE_PROVENANCE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/evidence/SOURCE_PROVENANCE.json",
+      "bytes": 733,
+      "sha256": "42194152c5e310df6a568a02ef81ba5f13f5d861c17149e9108fa9c4bd3acb72"
+    },
+    {
+      "archive_member": "remote_evidence/operational/capture_entry.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/operational/capture_entry.py",
+      "bytes": 542,
+      "sha256": "cd609e8766c19dd35d556b0c8526d4f5d1a983efa8d9299b2880ecd769bb6c2e"
+    },
+    {
+      "archive_member": "remote_evidence/RUN_AUTHORIZATION.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/remote_evidence/RUN_AUTHORIZATION.json",
+      "bytes": 846,
+      "sha256": "8d531c563d36d45fe1da7a40e82386dfd1e1b19a3a58a5847069c130a4343b01"
+    },
+    {
+      "archive_member": "SECURITY_AUDIT.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/SECURITY_AUDIT.json",
+      "bytes": 1245,
+      "sha256": "77364cb8fb6bbd307da93b003a280a00c8084e2a0188e27c78e266eed074625c"
+    },
+    {
+      "archive_member": "TASK004C_B_C0_STATE_MANIFEST.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_C0_STATE_MANIFEST.json",
+      "bytes": 38052,
+      "sha256": "f9026d1dd8671368c5b09facd3612e9e65ca08bf8bbb7371d082e7812ff7fa1a"
+    },
+    {
+      "archive_member": "TASK004C_B_GPU_C0_R2_REPORT.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_GPU_C0_R2_REPORT.md",
+      "bytes": 2814,
+      "sha256": "6213054d83c2908ff9073fdffcf2e8347a2de7e3b8d076ee9f09d26b15f56437"
+    },
+    {
+      "archive_member": "TASK004C_B_REAL_LOADER_CPU_TEST.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_REAL_LOADER_CPU_TEST.md",
+      "bytes": 1980,
+      "sha256": "0d338cd8cc011c27c035d552898db3a4efb3e74b313d9ffd9683a7e43ddb7152"
+    },
+    {
+      "archive_member": "TASK004C_B_RESOURCE_TIMELINE.csv",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_RESOURCE_TIMELINE.csv",
+      "bytes": 1810,
+      "sha256": "b732c285b8ea99e60b237901f6155a2ba6d8e05845f8ac8e20026500fd4f7784"
+    },
+    {
+      "archive_member": "TASK004C_B_RGB_CONTRACT_FIX_REPORT.md",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_RGB_CONTRACT_FIX_REPORT.md",
+      "bytes": 1678,
+      "sha256": "7b263942693eec11864f9d8334cdab725ba5700ad9d7280678c80a2da9325b54"
+    },
+    {
+      "archive_member": "TASK004C_B_SHA256_MANIFEST.txt",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_SHA256_MANIFEST.txt",
+      "bytes": 9707,
+      "sha256": "de322902c4672cf714b49803c593592d780e9b33c701cf3fbd3269d5416adf41"
+    },
+    {
+      "archive_member": "TASK004C_B_SOURCE_PROVENANCE.json",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/TASK004C_B_SOURCE_PROVENANCE.json",
+      "bytes": 5570,
+      "sha256": "eecfffc42927204e5aa3ebae95596cd80c9731ba657dd41236695787aa26d1e5"
+    },
+    {
+      "archive_member": "tools/admit_capture.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/admit_capture.py",
+      "bytes": 6114,
+      "sha256": "4ab09632d49542ed06a6c28b1310e58c9d6447508ed8cc8a32a0c0d2b5c2a3c9"
+    },
+    {
+      "archive_member": "tools/build_review.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/build_review.py",
+      "bytes": 19195,
+      "sha256": "37dc98bdbc788434c4e56f46e32d85c398c8a457e843fdf4d102338ed4698563"
+    },
+    {
+      "archive_member": "tools/closure_base_source.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/closure_base_source.py",
+      "bytes": 1649,
+      "sha256": "10add10bbe4edd50e68f7f2756a5ef9f1c05f66b16d07b4ca5a107d793b8e8af"
+    },
+    {
+      "archive_member": "tools/collect_r2.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/collect_r2.py",
+      "bytes": 9116,
+      "sha256": "e6775a9e452f5d796b0a9c6e5ba0db7302cedf76bb82620610896e67d0026bf6"
+    },
+    {
+      "archive_member": "tools/execute_capture.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/execute_capture.py",
+      "bytes": 5460,
+      "sha256": "2484bf73d5f56a518ac44ddd1d97b2c4b1fed6e9f872f2541ed861cfc00167b2"
+    },
+    {
+      "archive_member": "tools/finish_source_commit.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/finish_source_commit.py",
+      "bytes": 2439,
+      "sha256": "8e46c287e4613122ff8d7a93d86b21c78121e81796e1c77c442a43e66a57d86c"
+    },
+    {
+      "archive_member": "tools/real_loader_tests.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/real_loader_tests.py",
+      "bytes": 8273,
+      "sha256": "a275daaf8d818ba7b3c108adbffd3715108abae7b1d6c2c1b4c5bbde6b8a48d2"
+    },
+    {
+      "archive_member": "tools/remote_cpu.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/remote_cpu.py",
+      "bytes": 1836,
+      "sha256": "b2af25e31c564ab8456e7a41b68c26f6ec886d12095a092393eadf47de240c6a"
+    },
+    {
+      "archive_member": "tools/restore_baseline_fixture.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/restore_baseline_fixture.py",
+      "bytes": 3615,
+      "sha256": "7a7bb380b049f6707c1a034db68fc2ebd8c1aa480cd8f1bf1b2d827e707b6cda"
+    },
+    {
+      "archive_member": "tools/run_cpu_phase.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/run_cpu_phase.py",
+      "bytes": 2784,
+      "sha256": "ba847699f63af64444474ce04844856f7dbbcd418752728022ecd81bac3d7a9c"
+    },
+    {
+      "archive_member": "tools/setup_and_fix.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/setup_and_fix.py",
+      "bytes": 5941,
+      "sha256": "6dfb80a53b51c934ab39d023246d10d5610a4f9c746747988295f10adac1709c"
+    },
+    {
+      "archive_member": "tools/status.py",
+      "repository_path": "reviews/task004c-b-gpu-c0-r2-20261124/tools/status.py",
+      "bytes": 787,
+      "sha256": "5c777eef13cac4dcc939664e360ec2e1b287a62a192e770ea3c65a4b56cf4622"
+    }
+  ],
+  "excluded": []
+}

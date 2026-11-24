@@ -1,7 +1,7 @@
 {
-  "canonical_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
-  "canonical_tree": "68f690859ee2e8d6c62ac4f85c787d7eb6ffe78f",
-  "scope": "Tracked source mirror, byte-identical per included file; compiled binaries/cache/upstream assets omitted",
+  "canonical_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+  "canonical_tree": "92c742195461fb19d5d66d67c0daff1fa1b4714e",
+  "scope": "Base tracked-source export plus one byte-verified input-adapter change; original source commit distinct from GitHub publication commit",
   "canonical_source_endpoint": "sc01-ssh.gpuhome.cc:30448",
   "export": {
     "source_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
@@ -15,5 +15,16 @@
     "all_exported_SHA_matched": true,
     "remote_mutations": 0,
     "models_or_GPU_used": false
+  },
+  "base_source_export_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "incremental_update": {
+    "from": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+    "to": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+    "changed_runtime_files": [
+      "native_control/dataset.py"
+    ],
+    "dataset_before_sha256": "dcb87c7294a71ddaa772545ba3b38ce9402dfd47031357a57a3ef315972a8d12",
+    "dataset_after_sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9",
+    "source": "new instance verified working tree; previous full export retained as base provenance"
   }
 }

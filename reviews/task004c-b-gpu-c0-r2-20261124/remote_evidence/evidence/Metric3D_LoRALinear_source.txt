@@ -1,0 +1,63 @@
+27: class LoRALinear(nn.Linear, LoRALayer):
+28:     # LoRA implemented in a dense layer
+29:     def __init__(
+30:         self, 
+31:         in_features: int, 
+32:         out_features: int, 
+33:         r: int = 0, 
+34:         lora_alpha: int = 1, 
+35:         lora_dropout: float = 0.,
+36:         fan_in_fan_out: bool = False, # Set this to True if the layer to replace stores weight like (fan_in, fan_out)
+37:         merge_weights: bool = True,
+38:         **kwargs
+39:     ):
+40:         nn.Linear.__init__(self, in_features, out_features, **kwargs)
+41:         LoRALayer.__init__(self, r=r, lora_alpha=lora_alpha, lora_dropout=lora_dropout,
+42:                            merge_weights=merge_weights)
+43: 
+44:         self.fan_in_fan_out = fan_in_fan_out
+45:         # Actual trainable parameters
+46:         if r > 0:
+47:             self.lora_A = nn.Parameter(self.weight.new_zeros((r, in_features)))
+48:             self.lora_B = nn.Parameter(self.weight.new_zeros((out_features, r)))
+49:             self.scaling = self.lora_alpha / self.r
+50:             # Freezing the pre-trained weight matrix
+51:             self.weight.requires_grad = False
+52:         self.reset_parameters()
+53:         if fan_in_fan_out:
+54:             self.weight.data = self.weight.data.transpose(0, 1)
+55: 
+56:     def reset_parameters(self):
+57:         #nn.Linear.reset_parameters(self)
+58:         if hasattr(self, 'lora_A'):
+59:             # initialize B the same way as the default for nn.Linear and A to zero
+60:             # this is different than what is described in the paper but should not affect performance
+61:             nn.init.kaiming_uniform_(self.lora_A, a=math.sqrt(5))
+62:             nn.init.zeros_(self.lora_B)
+63: 
+64:     # def train(self, mode: bool = True):
+65:     #     def T(w):
+66:     #         return w.transpose(0, 1) if self.fan_in_fan_out else w
+67:     #     nn.Linear.train(self, mode)
+68:     #     if mode:
+69:     #         if self.merge_weights and self.merged:
+70:     #             # Make sure that the weights are not merged
+71:     #             if self.r > 0:
+72:     #                 self.weight.data -= T(self.lora_B @ self.lora_A) * self.scaling
+73:     #             self.merged = False
+74:     #     else:
+75:     #         if self.merge_weights and not self.merged:
+76:     #             # Merge the weights and mark it
+77:     #             if self.r > 0:
+78:     #                 self.weight.data += T(self.lora_B @ self.lora_A) * self.scaling
+79:     #             self.merged = True     
+80: 
+81:     def forward(self, x: torch.Tensor):
+82:         def T(w):
+83:             return w.transpose(0, 1) if self.fan_in_fan_out else w
+84:         if self.r > 0 and not self.merged:
+85:             result = F.linear(x, T(self.weight), bias=self.bias)            
+86:             result += (self.lora_dropout(x) @ self.lora_A.transpose(0, 1) @ self.lora_B.transpose(0, 1)) * self.scaling
+87:             return result
+88:         else:
+89:             return F.linear(x, T(self.weight), bias=self.bias)

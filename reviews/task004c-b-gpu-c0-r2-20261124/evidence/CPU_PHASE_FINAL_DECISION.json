@@ -1,0 +1,19 @@
+{
+  "CPU_passed": true,
+  "real_RGB001_018_checked": 18,
+  "new_loader_tests_passed": 21,
+  "historical_152_passed": 152,
+  "CUDA_initialized": false,
+  "initial_151_of_152_error_preserved": true,
+  "fixture_recovery": {
+    "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_before/src/depth_video.py",
+    "source_git_commit": "0931141cf88247dc8fb0c7628c1d91b6531fea90",
+    "sha256": "cb668fab8f2d78c73e0e34efad6c561b9acdbe57df0463b79bd1407e1bfb1f48",
+    "matches_original_review_preimage": true,
+    "runtime_source_changed": false,
+    "test_assertions_changed": false,
+    "reason": "Missing test fixture in newly isolated workspace"
+  },
+  "GPU_started": false,
+  "final_regression_report": "artifacts/RELEASE_CPU_c0_r2_ready/CPU_TEST_REPORT.json"
+}

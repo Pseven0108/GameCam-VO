@@ -1,0 +1,15 @@
+{
+  "root": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1",
+  "source_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+  "parent_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "parent_of_parent": "0931141cf88247dc8fb0c7628c1d91b6531fea90",
+  "changed_runtime_files": [
+    "native_control/dataset.py"
+  ],
+  "before_sha256": "dcb87c7294a71ddaa772545ba3b38ce9402dfd47031357a57a3ef315972a8d12",
+  "after_sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9",
+  "old_candidate_modified": false,
+  "GPU_runs": 0,
+  "None_depth_policy": "REJECT under the explicitly required Tensor-only zero-placeholder contract",
+  "author_metadata_recovered_without_code_or_environment_change": true
+}

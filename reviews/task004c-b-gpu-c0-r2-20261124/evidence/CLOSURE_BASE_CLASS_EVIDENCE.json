@@ -1,0 +1,30 @@
+{
+  "scope": "STATIC_READ_ONLY_NO_MODEL_INIT",
+  "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+  "sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+  "classes": [
+    {
+      "name": "LoRALayer",
+      "line": 8,
+      "end_line": 25,
+      "lambdas": [
+        {
+          "line": 22,
+          "AST": "Lambda(args=arguments(posonlyargs=[], args=[arg(arg='x')], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Name(id='x', ctx=Load()))",
+          "is_single_argument_identity": true
+        }
+      ],
+      "source_excerpt": "8: class LoRALayer():\n9:     def __init__(\n10:         self, \n11:         r: int, \n12:         lora_alpha: int, \n13:         lora_dropout: float,\n14:         merge_weights: bool,\n15:     ):\n16:         self.r = r\n17:         self.lora_alpha = lora_alpha\n18:         # Optional dropout\n19:         if lora_dropout > 0.:\n20:             self.lora_dropout = nn.Dropout(p=lora_dropout)\n21:         else:\n22:             self.lora_dropout = lambda x: x\n23:         # Mark the weight as unmerged\n24:         self.merged = False\n25:         self.merge_weights = merge_weights"
+    },
+    {
+      "name": "LoRALinear",
+      "line": 27,
+      "end_line": 89,
+      "lambdas": [],
+      "source_excerpt": "27: class LoRALinear(nn.Linear, LoRALayer):\n28:     # LoRA implemented in a dense layer\n29:     def __init__(\n30:         self, \n31:         in_features: int, \n32:         out_features: int, \n33:         r: int = 0, \n34:         lora_alpha: int = 1, \n35:         lora_dropout: float = 0.,\n36:         fan_in_fan_out: bool = False, # Set this to True if the layer to replace stores weight like (fan_in, fan_out)\n37:         merge_weights: bool = True,\n38:         **kwargs\n39:     ):\n40:         nn.Linear.__init__(self, in_features, out_features, **kwargs)\n41:         LoRALayer.__init__(self, r=r, lora_alpha=lora_alpha, lora_dropout=lora_dropout,\n42:                            merge_weights=merge_weights)\n43: \n44:         self.fan_in_fan_out = fan_in_fan_out\n45:         # Actual trainable parameters\n46:         if r > 0:\n47:             self.lora_A = nn.Parameter(self.weight.new_zeros((r, in_features)))\n48:             self.lora_B = nn.Parameter(self.weight.new_zeros((out_features, r)))\n49:             self.scaling = self.lora_alpha / self.r\n50:             # Freezing the pre-trained weight matrix\n51:             self.weight.requires_grad = False\n52:         self.reset_parameters()\n53:         if fan_in_fan_out:\n54:             self.weight.data = self.weight.data.transpose(0, 1)\n55: \n56:     def reset_parameters(self):\n57:         #nn.Linear.reset_parameters(self)\n58:         if hasattr(self, 'lora_A'):\n59:             # initialize B the same way as the default for nn.Linear and A to zero\n60:             # this is different than what is described in the paper but should not affect performance\n61:             nn.init.kaiming_uniform_(self.lora_A, a=math.sqrt(5))\n62:             nn.init.zeros_(self.lora_B)\n63: \n64:     # def train(self, mode: bool = True):\n65:     #     def T(w):\n66:     #         return w.transpose(0, 1) if self.fan_in_fan_out else w\n67:     #     nn.Linear.train(self, mode)\n68:     #     if mode:\n69:     #         if self.merge_weights and self.merged:\n70:     #             # Make sure that the weights are not merged\n71:     #             if self.r > 0:\n72:     #                 self.weight.data -= T(self.lora_B @ self.lora_A) * self.scaling\n73:     #             self.merged = False\n74:     #     else:\n75:     #         if self.merge_weights and not self.merged:\n76:     #             # Merge the weights and mark it\n77:     #             if self.r > 0:\n78:     #                 self.weight.data += T(self.lora_B @ self.lora_A) * self.scaling\n79:     #             self.merged = True     \n80: \n81:     def forward(self, x: torch.Tensor):\n82:         def T(w):\n83:             return w.transpose(0, 1) if self.fan_in_fan_out else w\n84:         if self.r > 0 and not self.merged:\n85:             result = F.linear(x, T(self.weight), bias=self.bias)            \n86:             result += (self.lora_dropout(x) @ self.lora_A.transpose(0, 1) @ self.lora_B.transpose(0, 1)) * self.scaling\n87:             return result\n88:         else:\n89:             return F.linear(x, T(self.weight), bias=self.bias)"
+    }
+  ],
+  "GPU_runs_added": 0,
+  "runtime_callable_object_not_available_after_exit": true,
+  "identity_assignment_explanation": "Source-based inference, not a recovered runtime closure"
+}

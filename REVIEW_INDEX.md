@@ -1,10 +1,8 @@
-# 评审材料索引
+# 评审索引
 
-最新阶段：**GPU C0采集首次尝试，首帧合同失败，无C0**。先读[最终报告](reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md)。
+最新：[GPU C0 R2报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md)。真实初始化完成，完整C0因函数闭包检查失败。
 
-历史CPU通过与本次GPU失败分别保留。当前未自动重跑，也未进入restore/跨D/正式四臂。
-
-| 阶段 | 阅读入口 | 展开文件 | 省略非文本附件 |
+| 阶段 | 阅读入口 | 文件数 | 省略附件 |
 |---|---|---:|---:|
 | task001 | [报告](reviews/task001/FINAL_REVIEW.md) | 22 | 0 |
 | task002a | [报告](reviews/task002a/README_PLEASE_READ.md) | 32 | 2 |
@@ -22,5 +20,6 @@
 | task004c-b-integration | [报告](reviews/task004c-b-integration/TASK004C_B_FINAL_BA_FILLER_HOOK_REPORT.md) | 170 | 20 |
 | task004c-b-release-fixes | [报告](reviews/task004c-b-release-fixes/FINAL_REVIEW.md) | 238 | 0 |
 | task004c-b-gpu-c0-20261124 | [报告](reviews/task004c-b-gpu-c0-20261124/FINAL_REVIEW.md) | 58 | 0 |
+| task004c-b-gpu-c0-r2-20261124 | [报告](reviews/task004c-b-gpu-c0-r2-20261124/FINAL_REVIEW.md) | 89 | 0 |
 
-原ZIP身份、逐文件SHA和省略范围见[publication/manifests](publication/manifests/)。最新GPU包和前一CPU修复包均完整上传，其余阶段按各自出版清单判定范围。
+最新包完整上传，原SHA清单保持不变。历史包省略内容以publication/manifests为准。

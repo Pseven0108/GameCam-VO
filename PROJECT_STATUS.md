@@ -1,31 +1,14 @@
 # 当前状态 · 2026-11-24
 
-## 当前研究主线
+- VIPER / DROID-W / stride=1；stride=4分支不作为当前主线。
+- 当前运行源码：02f8c8308274489ff7eff83fa9b87b98db74122e；只修NativeViperRGB。
+- 当前任务：TASK004C-B-GPU-C0-R2。
+- 状态：BLOCKED_AT_C0_CLOSURE_UNREGISTERED_LORA_DROPOUT_FUNCTION，等待人工评审。
 
-- 项目：GameCam-VO；主数据集：VIPER。
-- 主Baseline：DROID-W。原版DROID-SLAM只作为既有对照，不在本次发布中重跑。
-- stride=1；stride=4分支已放弃作为当前主线。
-- 当前候选：668a88c74c7f7a88a572679d2bd8e86c0a05514b。
-- 当前阶段：TASK004C-B-GPU-C0，BLOCKED_AT_FIRST_RGB_INPUT_CONTRACT，STOPPED_FOR_USER_REVIEW。
+已通过：21个真实Loader用例、18帧CPU连续校验、最终152项完整回归、487张RGB SHA及原始保护资产核验。
 
-## 本轮已验证
+实际GPU：1次生命周期、18帧完成、16+8次graph.update、24次native BA，进入frame-end保存边界；56.164秒后exit1，无自动重试。C0未生成，47族/网络Buffer/RNG未持久化，完整大小未知。
 
-1. Local BA缺失/错误phase、motion_only均失败关闭，保留原vanilla安全边界与INIT_D=0。
-2. buffer保持500。原尺寸CPU文件映射共享读写通过，新增34项与历史118项完整回归152/152。
-3. 精确序列化逻辑字节预算机制通过合成测试；每次实际写入前重新检查空间。
-4. 原始093完整候选、R2配置、权重、CUDA扩展与BA数学未修改。
+首个保存阻断是Metric3D lora_dropout未注册函数。未改序列化器或模型，后续是否还存在未知字段尚未验证。没有restore、S0/S1、跨D或B1-B4；无轨迹性能提升结论。
 
-## 尚未验证或未授权
-
-- 真实Tracker/Rerun GPU跨进程链路未验证。
-- 完整真实C0大小未知，保留多个arena的后续全流程存储尚未准入。
-- 本轮没有真实C0、RGB前缀或B1/B2/B3/B4。
-- 不能把合成通过解释为真实SLAM性能提升。
-
-GitHub发布是文档和源码同步，不包含任何新的实验运行授权。所有历史执行记录见各阶段原报告。
-
-## 最新GPU C0结果
-
-已执行1次真实GPU启动，运行58.316秒后exit1。父类RGB_NoPose的无深度占位Tensor与NativeViperRGB的None检查冲突，RGB001未进入跟踪；0次BA、无真实C0。CPU真实loader复现唯一失败条件depth_is_None。
-
-候选源码、R2、权重和CUDA扩展均未改变。只回收本次两个全零临时Arena，历史删除0。未自动重试，未执行restore/跨D/B1-B4。完整C0大小仍未知。修复建议未应用。
+原BaseDataset、BA、CUDA扩展、原R2、权重、RGB和历史结果保持不变。两块本轮Arena保留取证；GPU进程已退出，服务器保持在线。GitHub发布不授予下一阶段实验授权。

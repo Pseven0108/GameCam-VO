@@ -1,0 +1,18 @@
+{
+  "CPU_passed": false,
+  "GPU_started": false,
+  "results": [
+    {
+      "name": "REAL_LOADER",
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"REAL_PARENT_REAL_RGB_CPU_ONLY_NO_MODELS\", \"total\": 21, \"passed\": 21, \"failures\": 0, \"errors\": 0, \"seconds\": 1.1783487796783447, \"cuda_initialized\": false, \"checkpoint_deserialized\": false, \"GT_sources_read\": false, \"first_18_real_frames_checked\": 18, \"None_depth_policy\": \"rejected, per explicitly required Tensor-only contract\", \"nonCPU_negative_device\": \"meta; no real CUDA tensor created\", \"input_manifest_sha256\": \"5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537\", \"dataset_source_sha256\": \"2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "ORIGINAL_152",
+      "exit_code": 1,
+      "stdout": "{\"scope\": \"CPU_ONLY_RELEASE_FIXES_NO_NATIVE_C0_OR_MODELS\", \"total\": 152, \"passed\": 151, \"legacy_118_cases\": 118, \"new_cases\": 34, \"failures\": 0, \"errors\": 1, \"seconds\": 35.02532386779785, \"cuda_initialized\": false, \"pretrained_model_constructed\": false, \"real_RGB_inputs\": 0, \"native_C0_created\": false}\ntests.test_native.NativePythonBodyTests.test_native_CUDA_BA_call_arguments_preserved_static\nTraceback (most recent call last):\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/tests/test_native.py\", line 288, in test_native_CUDA_BA_call_arguments_preserved_static\n    self.assertEqual(calls(ROOT/'source_before/src/depth_video.py'),calls(ROOT/'source_candidate/src/depth_video.py'))\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/tests/test_native.py\", line 287, in calls\n    return [ast.dump(n,include_attributes=False) for n in ast.walk(ast.parse(path.read_text())) if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and isinstance(n.func.value,ast.Name) and n.func.value.id=='droid_backends']\n  File \"/opt/conda/lib/python3.10/pathlib.py\", line 1134, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/opt/conda/lib/python3.10/pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/source_before/src/depth_video.py'\n\n",
+      "stderr": ""
+    }
+  ]
+}

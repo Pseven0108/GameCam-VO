@@ -22,10 +22,23 @@ class NativeViperRGB(RGB_NoPose):
     def __getitem__(self,index):
         if type(index) is not int or not 0<=index<80:raise ControlError('RGB beyond 080 is not authorized')
         if index!=self.seen:raise ControlError('Native stream cursor mismatch')
+        # Reject label sources before the parent loader can read them.
+        if self.depth_paths is not None or self.poses is not None:
+            raise ControlError('RGB-only stream contains an unexpected label source')
         row=self.frames[index];p=Path(self.color_paths[index])
+        if type(row.get('rgb_id')) is not int or row['rgb_id']!=index+1:
+            raise ControlError('RGB frame ID does not match the frozen cursor')
         expected=row.get('sha256',row.get('rgb_sha256'))
         if expected and file_sha(p)!=expected:raise ControlError('RGB content changed')
         item=super().__getitem__(index);ts,color,depth,pose=item
-        if ts!=index or pose is not None or depth is not None or tuple(color.shape)!=(1,3,360,640):raise ControlError('R2 RGB-only input contract mismatch')
+        if (type(ts) is not int or ts!=index or pose is not None
+                or not isinstance(color,torch.Tensor) or tuple(color.shape)!=(1,3,360,640)):
+            raise ControlError('R2 RGB-only input contract mismatch')
+        # BaseDataset uses this exact zero Tensor to represent absent depth.
+        # Keep the original tuple and reject None, labels, NaN/Inf and other layouts.
+        if (not isinstance(depth,torch.Tensor) or depth.dtype!=torch.float32
+                or depth.device.type!='cpu' or tuple(depth.shape)!=tuple(color.shape[-2:])
+                or depth.layout!=torch.strided or bool(torch.count_nonzero(depth))):
+            raise ControlError('Invalid RGB-only zero-depth placeholder')
         self.seen+=1
         return item

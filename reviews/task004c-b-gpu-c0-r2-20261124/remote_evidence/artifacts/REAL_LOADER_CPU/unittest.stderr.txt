@@ -1,0 +1,26 @@
+test_Inf_depth_rejected (__main__.RealLoaderTests) ... ok
+test_NaN_depth_rejected (__main__.RealLoaderTests) ... ok
+test_RGB001_real_decode (__main__.RealLoaderTests) ... ok
+test_RGB001_through_RGB018_real_sequential (__main__.RealLoaderTests) ... ok
+test_RGB_shape_rejected (__main__.RealLoaderTests) ... ok
+test_above_authorized_range_rejected (__main__.RealLoaderTests) ... ok
+test_depth_None_rejected_by_strict_Tensor_only_contract (__main__.RealLoaderTests) ... ok
+test_depth_dtype_rejected (__main__.RealLoaderTests) ... ok
+test_depth_label_source_rejected_before_parent_read (__main__.RealLoaderTests) ... ok
+test_depth_shape_rejected (__main__.RealLoaderTests) ... ok
+test_failed_observation_does_not_advance_seen (__main__.RealLoaderTests) ... ok
+test_frame_ID_rejected_before_parent_read (__main__.RealLoaderTests) ... ok
+test_nonCPU_meta_depth_rejected_without_CUDA (__main__.RealLoaderTests) ... ok
+test_nonempty_pose_rejected (__main__.RealLoaderTests) ... ok
+test_nonzero_depth_rejected (__main__.RealLoaderTests) ... ok
+test_parent_tuple_and_tensor_identity_preserved (__main__.RealLoaderTests) ... ok
+test_pose_label_source_rejected_before_parent_read (__main__.RealLoaderTests) ... ok
+test_real_zero_placeholder_is_accepted (__main__.RealLoaderTests) ... ok
+test_skipped_index_rejected (__main__.RealLoaderTests) ... ok
+test_timestamp_bool_rejected (__main__.RealLoaderTests) ... ok
+test_timestamp_rejected (__main__.RealLoaderTests) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.178s
+
+OK

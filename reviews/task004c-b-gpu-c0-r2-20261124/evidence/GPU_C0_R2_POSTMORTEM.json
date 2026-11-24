@@ -1,0 +1,221 @@
+{
+  "status": "BLOCKED_AT_C0_CLOSURE_UNREGISTERED_LORA_DROPOUT_FUNCTION",
+  "source_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+  "runtime_parent_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "changed_runtime_files": [
+    "native_control/dataset.py"
+  ],
+  "GPU_native_lifecycles": 1,
+  "GPU_exit_code": 1,
+  "runtime_seconds": 56.164318561553955,
+  "real_frames_completed": 18,
+  "last_completed_RGB": 18,
+  "next_input_index": 18,
+  "next_RGB_id": 19,
+  "graph_update_phase_counts": {
+    "frontend_init_neighborhood": 8,
+    "frontend_init_proximity": 8,
+    "frontend_init_second": 8
+  },
+  "first_stage_graph_updates": 16,
+  "second_stage_graph_updates": 8,
+  "native_BA_calls_begun": 24,
+  "native_BA_calls_completed": 24,
+  "requested_native_inner_iterations": 48,
+  "initialization_complete": true,
+  "C0_save_callback_reached": true,
+  "frame_end_before_next_input_verified": true,
+  "C0_created": false,
+  "complete_C0_bytes": null,
+  "exact_complete_C0_budget_computed": false,
+  "snapshot_failure_stage": "state_inventory/ObjectEncoder before prepare_state or any C0 payload write",
+  "47_families_C0_persisted": 0,
+  "RNG_persisted": false,
+  "model_buffers_C0_persisted": false,
+  "Restore_executed": false,
+  "S0_S1_created": false,
+  "cross_D_executed": false,
+  "B1_B2_B3_B4_executed": false,
+  "GPU_retried": false,
+  "sampled_GPU_peak_used_MiB": 13865,
+  "sampled_shm_peak_bytes": 294912,
+  "trace_kind_counts": {
+    "graph.create": 1,
+    "frame.begin": 18,
+    "motion.decision": 18,
+    "motion.natural": 18,
+    "keyframe.insert.begin": 12,
+    "keyframe.insert.end": 12,
+    "frame.end": 18,
+    "graph.add.begin": 3,
+    "graph.add.end": 3,
+    "graph.update.begin": 24,
+    "native.ba.begin": 24,
+    "ba.continuous.before": 24,
+    "ba.continuous.after": 24,
+    "native.ba.end": 24,
+    "graph.update.end": 24,
+    "graph.remove.begin": 2,
+    "graph.remove.end": 2,
+    "init.second_stage.begin": 1,
+    "graph.init_age_reset": 1,
+    "init.second_stage.end": 1,
+    "init.complete": 1
+  },
+  "init_event": {
+    "context_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+    "kind": "init.complete",
+    "payload": {
+      "actual_rgb": 18,
+      "graph_updates": 24,
+      "next_boundary": "TRACKER_FRAME_END"
+    },
+    "rgb": 18,
+    "time_ns": 1795516754391503690
+  },
+  "last_frame_end_event": {
+    "context_sha256": "9f6b39eaea471bcd914aac6305d1898cf08851239389d7fe8b9f5f4e300b316f",
+    "kind": "frame.end",
+    "payload": {
+      "next_input_index": 18
+    },
+    "rgb": 18,
+    "time_ns": 1795516754392945536
+  },
+  "closure_blocker": {
+    "source_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+    "source_sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+    "class_line": 27,
+    "class_end_line": 89,
+    "lambdas": [],
+    "actual_runtime_failure_path": "Tracker.motion_filter.metric_depth_estimator...LoRALinear.lora_dropout",
+    "actual_object_not_recovered_after_exit": true,
+    "identity_lambda_identification_is_source_based": true,
+    "model_or_serializer_patched": false,
+    "additional_unsupported_fields_unknown": true
+  },
+  "backing_files": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/attempts/capture/shared_cpu/3678353.bin",
+      "bytes": 1382400000,
+      "allocated_bytes": 1382404096,
+      "st_dev": 64848,
+      "inode": 3678353,
+      "mode": 384,
+      "sha256": "3e0996455187a9e1745249dce03a74b13971c291e53f738b76818a2aca7b3d87",
+      "retained": true
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/attempts/capture/shared_cpu/3678354.bin",
+      "bytes": 864000000,
+      "allocated_bytes": 864006144,
+      "st_dev": 64848,
+      "inode": 3678354,
+      "mode": 384,
+      "sha256": "d526414fd5671aa1048df2fe8d613ff36e0f913fb0c13d138a7d224dd88cc99e",
+      "retained": true
+    }
+  ],
+  "backing_files_retained_for_failure_evidence": true,
+  "remaining_attempt_pgroup": [],
+  "active_Arena_maps": [],
+  "proc_maps_permission_errors": [],
+  "GPU_compute_apps_after": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "rerun_recordings": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1/attempts/capture/native/rerun_stream.rrd",
+      "bytes": 3450264,
+      "sha256": "9b7a0b897e18577f18d038dba92134252b6a9435d6bf67a69a4edad2029d203c"
+    }
+  ],
+  "Rerun_browser_rendering_verified": false,
+  "disk_after": {
+    "total": 105089261568,
+    "used": 81138032640,
+    "free": 23934451712
+  },
+  "shm_after": {
+    "total": 25769803776,
+    "used": 163840,
+    "free": 25769639936
+  },
+  "protected_pins_after": {
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml": {
+      "expected": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "actual": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so": {
+      "expected": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "actual": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "match": true
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": {
+      "expected": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "actual": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "match": true
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": {
+      "expected": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "actual": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "match": true
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": {
+      "expected": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "actual": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "match": true
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": {
+      "expected": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "actual": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/depth_video.py": {
+      "expected": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
+      "actual": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/factor_graph.py": {
+      "expected": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
+      "actual": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/frontend.py": {
+      "expected": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
+      "actual": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/tracker.py": {
+      "expected": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+      "actual": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/slam.py": {
+      "expected": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
+      "actual": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/motion_filter.py": {
+      "expected": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+      "actual": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/backend.py": {
+      "expected": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "actual": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "match": true
+    },
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/trajectory_filler.py": {
+      "expected": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3",
+      "actual": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3",
+      "match": true
+    }
+  },
+  "algorithm_formula_modified": false,
+  "historical_files_deleted": 0,
+  "server_shutdown": false
+}

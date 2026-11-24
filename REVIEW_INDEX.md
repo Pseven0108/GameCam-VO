@@ -1,3 +1,9 @@
+# 最新评审
+
+[task005a-d-schedule-mechanism-20261125](reviews/task005a-d-schedule-mechanism-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005a-d-schedule-mechanism-20261125/GAMECAM_TASK005A_D_SCHEDULE_MECHANISM_REVIEW_20261125.zip) · [展开文件](reviews/task005a-d-schedule-mechanism-20261125)。
+
+---
+
 # 最新完整评审入口
 
 [task004c-b-crossover-full-20261125](reviews/task004c-b-crossover-full-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task004c-b-crossover-full-20261125/TASK004C_B_CROSSOVER_FULL_REVIEW_20261125.zip) · [展开目录](reviews/task004c-b-crossover-full-20261125)。

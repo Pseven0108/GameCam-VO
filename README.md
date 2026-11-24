@@ -1,15 +1,11 @@
-# GameCam-VO · 最新完整评审
+# GameCam-VO · TASK005A
 
-# 当前状态 · Task004C-B 四组受控交叉实验
+Task004C-B 已封存为本项目第一项完整四组受控交叉实验；其固定提交和完整ZIP保持不变。TASK005A只分析已有证据，新增GPU运行0次，22项CPU检查通过。
 
-**COMPLETE：B1、B2、B4、B3 均完成487帧、原生Final BA和完整Filler，退出码均为0。**
+D×S反转在相同72个真实关键帧的前端位置Sim(3)ATE已存在；D同时改变深度对角正则与先验梯度，随后Pose/disparity/U/对应关系连续反馈。尺度诊断和姿态误差并不具有相同反转，不能声称D普遍有害或已唯一锁定Metric3D错误。
 
-- Common C0、INIT_D=0、val_007、seed43、stride=1。
-- S1和S0各包含D=1/D=0；离散调度固定，连续优化分别演化。
-- 早期失败现场保留，冻结优化公式、权重、R2 YAML及CUDA扩展未变。
-- 单序列单种子描述性机制实验，不等同于原始E0全流程或跨场景验证。
-- 原生Rerun记录保留，浏览器渲染未核实。实验结果、本地完整C0备份及GitHub评审包核验后，已完成关机。平台终端shutdown两次调用均报错且SSH仍可达，最终使用已授权的云控制台关机，页面已实测显示“已停止”。没有宣称终端命令成功，计费状态未单独核验。
+[最终报告](reviews/task005a-d-schedule-mechanism-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005a-d-schedule-mechanism-20261125/GAMECAM_TASK005A_D_SCHEDULE_MECHANISM_REVIEW_20261125.zip) · [展开证据](reviews/task005a-d-schedule-mechanism-20261125) · [原实验封存决定](reviews/task005a-d-schedule-mechanism-20261125/TASK004CB_FORMAL_SEAL.md)。
 
-[最终报告](reviews/task004c-b-crossover-full-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task004c-b-crossover-full-20261125/TASK004C_B_CROSSOVER_FULL_REVIEW_20261125.zip) · [展开证据](reviews/task004c-b-crossover-full-20261125) · [评价表](reviews/task004c-b-crossover-full-20261125/evaluation/CROSSOVER_SUMMARY.csv)。
+本轮未连接或启停实例，未修改旧结果，未开展下一阶段GPU实验。
 
 [历史评审索引](REVIEW_INDEX.md)

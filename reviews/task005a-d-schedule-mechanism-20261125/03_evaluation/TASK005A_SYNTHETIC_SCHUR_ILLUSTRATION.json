@@ -1,0 +1,51 @@
+{
+  "status": "ILLUSTRATION_ONLY_NOT_NATIVE_REPLAY",
+  "alpha": 0.01,
+  "eta": 1e-07,
+  "results": [
+    {
+      "geometry": "well_conditioned_geometry",
+      "D": 0,
+      "pose": 1.000000599999882,
+      "depth": 1.9999996000000788,
+      "pose_absolute_error": 5.999998820005459e-07,
+      "normal_condition_number": 46.97870535994158,
+      "prior_depth": 2.5,
+      "true_depth": 2.0,
+      "illustration_only_NOT_native_reconstruction": true
+    },
+    {
+      "geometry": "well_conditioned_geometry",
+      "D": 1,
+      "pose": 0.9852941176470562,
+      "depth": 2.009803921568629,
+      "pose_absolute_error": 0.014705882352943789,
+      "normal_condition_number": 46.15490245664846,
+      "prior_depth": 2.5,
+      "true_depth": 2.0,
+      "illustration_only_NOT_native_reconstruction": true
+    },
+    {
+      "geometry": "near_collinear_noisy_geometry",
+      "D": 0,
+      "pose": 3.0010000000000003,
+      "depth": -0.0,
+      "pose_absolute_error": 2.0010000000000003,
+      "normal_condition_number": 13346675.327268627,
+      "prior_depth": 2.5,
+      "true_depth": 2.0,
+      "illustration_only_NOT_native_reconstruction": true
+    },
+    {
+      "geometry": "near_collinear_noisy_geometry",
+      "D": 1,
+      "pose": 0.49987505624702894,
+      "depth": 2.499875006249846,
+      "pose_absolute_error": 0.5001249437529711,
+      "normal_condition_number": 802.766117139056,
+      "prior_depth": 2.5,
+      "true_depth": 2.0,
+      "illustration_only_NOT_native_reconstruction": true
+    }
+  ]
+}

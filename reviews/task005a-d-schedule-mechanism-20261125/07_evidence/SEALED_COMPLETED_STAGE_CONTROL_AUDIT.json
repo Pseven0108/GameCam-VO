@@ -1,0 +1,170 @@
+{
+  "preserved_failed_attempts": [
+    {
+      "evidence": "raw_evidence\\R2_READY\\attempts\\B1\\PROCESS_RECEIPT.json",
+      "mode": "B1",
+      "exit_code": 1,
+      "success": false,
+      "preserved": true,
+      "not_used_as_successful_formal_arm": true
+    }
+  ],
+  "reused_successful_prestages_from": "R2_READY",
+  "successful_formal_namespace": "R3_OFFLINE",
+  "stages_verified": 9,
+  "stages": [
+    {
+      "mode": "restore_check",
+      "status": "PASS",
+      "real_tracker_frame_events": 1,
+      "first_rgb": 19,
+      "last_rgb": 19,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 5,
+      "local_BA_D_W_U_calls_verified": 5,
+      "schedule_events": null,
+      "rerun_bytes": 2254,
+      "formal": false
+    },
+    {
+      "mode": "record_S1",
+      "status": "PASS",
+      "real_tracker_frame_events": 62,
+      "first_rgb": 19,
+      "last_rgb": 80,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 103,
+      "local_BA_D_W_U_calls_verified": 103,
+      "schedule_events": 817,
+      "rerun_bytes": 2051617,
+      "formal": false
+    },
+    {
+      "mode": "replay_D0_S1",
+      "status": "PASS",
+      "real_tracker_frame_events": 62,
+      "first_rgb": 19,
+      "last_rgb": 80,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 103,
+      "local_BA_D_W_U_calls_verified": 103,
+      "schedule_events": 817,
+      "rerun_bytes": 24605102,
+      "formal": false
+    },
+    {
+      "mode": "record_S0",
+      "status": "PASS",
+      "real_tracker_frame_events": 62,
+      "first_rgb": 19,
+      "last_rgb": 80,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 97,
+      "local_BA_D_W_U_calls_verified": 97,
+      "schedule_events": 807,
+      "rerun_bytes": 134776479,
+      "formal": false
+    },
+    {
+      "mode": "replay_D1_S0",
+      "status": "PASS",
+      "real_tracker_frame_events": 62,
+      "first_rgb": 19,
+      "last_rgb": 80,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 97,
+      "local_BA_D_W_U_calls_verified": 97,
+      "schedule_events": 807,
+      "rerun_bytes": 2695258,
+      "formal": false
+    },
+    {
+      "mode": "B1",
+      "status": "PASS",
+      "real_tracker_frame_events": 469,
+      "first_rgb": 19,
+      "last_rgb": 487,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 1230,
+      "local_BA_D_W_U_calls_verified": 839,
+      "schedule_events": 8395,
+      "rerun_bytes": 33437913,
+      "formal": true
+    },
+    {
+      "mode": "B2",
+      "status": "PASS",
+      "real_tracker_frame_events": 469,
+      "first_rgb": 19,
+      "last_rgb": 487,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 1230,
+      "local_BA_D_W_U_calls_verified": 839,
+      "schedule_events": 8395,
+      "rerun_bytes": 1051706949,
+      "formal": true
+    },
+    {
+      "mode": "B4",
+      "status": "PASS",
+      "real_tracker_frame_events": 469,
+      "first_rgb": 19,
+      "last_rgb": 487,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 1148,
+      "local_BA_D_W_U_calls_verified": 757,
+      "schedule_events": 8233,
+      "rerun_bytes": 3208329480,
+      "formal": true
+    },
+    {
+      "mode": "B3",
+      "status": "PASS",
+      "real_tracker_frame_events": 469,
+      "first_rgb": 19,
+      "last_rgb": 487,
+      "object_nodes_match": 18143,
+      "full_BA_triplets": 1148,
+      "local_BA_D_W_U_calls_verified": 757,
+      "schedule_events": 8233,
+      "rerun_bytes": 42432708,
+      "formal": true
+    }
+  ],
+  "pairs": [
+    {
+      "producer": "record_S1",
+      "consumer": "replay_D0_S1",
+      "identical_discrete_events": 817,
+      "same_topology_and_BA_schedule": true,
+      "BA_pose_updates_differ": 103,
+      "independent_continuous_states": true
+    },
+    {
+      "producer": "record_S0",
+      "consumer": "replay_D1_S0",
+      "identical_discrete_events": 807,
+      "same_topology_and_BA_schedule": true,
+      "BA_pose_updates_differ": 97,
+      "independent_continuous_states": true
+    },
+    {
+      "producer": "B1",
+      "consumer": "B2",
+      "identical_discrete_events": 8395,
+      "same_topology_and_BA_schedule": true,
+      "BA_pose_updates_differ": 1230,
+      "independent_continuous_states": true
+    },
+    {
+      "producer": "B4",
+      "consumer": "B3",
+      "identical_discrete_events": 8233,
+      "same_topology_and_BA_schedule": true,
+      "BA_pose_updates_differ": 1148,
+      "independent_continuous_states": true
+    }
+  ],
+  "formal_complete": 4,
+  "missing": []
+}

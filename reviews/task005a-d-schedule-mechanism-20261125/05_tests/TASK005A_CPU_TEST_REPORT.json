@@ -1,0 +1,38 @@
+{
+  "tests_run": 22,
+  "failures": 0,
+  "errors": 0,
+  "status": "PASS",
+  "synthetic_random_seeds": [
+    5001,
+    5002,
+    5003
+  ],
+  "native_execution": false,
+  "new_GPU_runs": 0,
+  "tests": [
+    "test_01_w2c_inverse",
+    "test_02_sim3_fit",
+    "test_03_sim3_gauge_invariance",
+    "test_04_common_support_exactly_72",
+    "test_05_common_support_scores_all_equal_n",
+    "test_06_unavailable_KF_not_filled",
+    "test_07_reversal_precedes_final",
+    "test_08_all_four_first_BA_inputs_equal",
+    "test_09_discrete_structure_fixed",
+    "test_10_local_D_scope",
+    "test_11_native_grid_finite",
+    "test_12_clamp_scope_valid",
+    "test_13_prior_identity_at_common_support",
+    "test_14_kernel_matches_frozen_commit",
+    "test_15_forced_schedule_mismatches",
+    "test_16_weighted_events_are_not_replicates",
+    "test_17_fullsolve_matches_Schur",
+    "test_18_regularizer_can_reverse_with_geometry",
+    "test_19_U_gate_threshold",
+    "test_20_export_and_postfinal_KF_agree",
+    "test_21_GT_identity_and_mapping",
+    "test_22_sealed_experiment_unmodified"
+  ],
+  "limits": "Checks validate offline analysis and controls; they do not validate native solver optimality or primary root cause."
+}

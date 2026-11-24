@@ -1,0 +1,222 @@
+{
+  "checks": [
+    {
+      "schedule": "S1",
+      "arms": [
+        "B1",
+        "B2"
+      ],
+      "local_discrete_structure_exact_match": true,
+      "local_calls": 839,
+      "trace_records": 2460,
+      "continuous_hash_equality_counts": {
+        "ba.continuous.before": {
+          "disps_equal": 1,
+          "disps_total": 1230,
+          "eta_equal": 1,
+          "eta_total": 1230,
+          "poses_equal": 1,
+          "poses_total": 1230,
+          "target_equal": 1,
+          "target_total": 1230,
+          "uncertainties_equal": 1,
+          "uncertainties_total": 1230,
+          "weight_equal": 1,
+          "weight_total": 1230
+        },
+        "ba.continuous.after": {
+          "disps_equal": 0,
+          "disps_total": 1230,
+          "eta_equal": 1,
+          "eta_total": 1230,
+          "poses_equal": 0,
+          "poses_total": 1230,
+          "target_equal": 1,
+          "target_total": 1230,
+          "uncertainties_equal": 0,
+          "uncertainties_total": 1230,
+          "weight_equal": 1,
+          "weight_total": 1230
+        }
+      },
+      "first_continuous_divergence": {
+        "ba.continuous.after:disps": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:poses": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:uncertainties": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:disps": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:eta": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:poses": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:target": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:uncertainties": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:weight": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:eta": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:target": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:weight": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        }
+      },
+      "continuous_state_NOT_frozen": true
+    },
+    {
+      "schedule": "S0",
+      "arms": [
+        "B3",
+        "B4"
+      ],
+      "local_discrete_structure_exact_match": true,
+      "local_calls": 757,
+      "trace_records": 2296,
+      "continuous_hash_equality_counts": {
+        "ba.continuous.before": {
+          "disps_equal": 1,
+          "disps_total": 1148,
+          "eta_equal": 1,
+          "eta_total": 1148,
+          "poses_equal": 1,
+          "poses_total": 1148,
+          "target_equal": 1,
+          "target_total": 1148,
+          "uncertainties_equal": 1,
+          "uncertainties_total": 1148,
+          "weight_equal": 1,
+          "weight_total": 1148
+        },
+        "ba.continuous.after": {
+          "disps_equal": 0,
+          "disps_total": 1148,
+          "eta_equal": 1,
+          "eta_total": 1148,
+          "poses_equal": 0,
+          "poses_total": 1148,
+          "target_equal": 1,
+          "target_total": 1148,
+          "uncertainties_equal": 0,
+          "uncertainties_total": 1148,
+          "weight_equal": 1,
+          "weight_total": 1148
+        }
+      },
+      "first_continuous_divergence": {
+        "ba.continuous.after:disps": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:poses": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:uncertainties": {
+          "call": 25,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:disps": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:eta": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:poses": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:target": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:uncertainties": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.before:weight": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:eta": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:target": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        },
+        "ba.continuous.after:weight": {
+          "call": 26,
+          "rgb": 19,
+          "phase": "frontend_local_predecision"
+        }
+      },
+      "continuous_state_NOT_frozen": true
+    }
+  ],
+  "all_four_first_BA_six_tensor_hashes_equal": true,
+  "first_BA_rgb": 19,
+  "first_BA_native_call": 25,
+  "hash_keys": [
+    "disps",
+    "eta",
+    "poses",
+    "target",
+    "uncertainties",
+    "weight"
+  ],
+  "not_full_residual_or_Hessian_checkpoint": true
+}

@@ -1,0 +1,43 @@
+{
+  "date_Asia_Shanghai": "2026-11-25",
+  "python_executable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1123-915-0_26.1123.915.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "CUDA_VISIBLE_DEVICES": "",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "scripts": [
+    {
+      "path": "02_analysis\\task005a_analysis.py",
+      "sha256": "62570330cb74c0656bd094c8fa4817ed201ee918df94c035dfbc49d1c0ba1291"
+    },
+    {
+      "path": "02_analysis\\task005a_metric_sensitivity.py",
+      "sha256": "77911d03e2f346ec55f4f91861b414985358171d044e1352c5c46f4ed89e722b"
+    },
+    {
+      "path": "02_analysis\\task005a_package.py",
+      "sha256": "31abf33ac59dadb422449d76d4db4bc72d5d23c9929435d2e01baed922ba1bcf"
+    },
+    {
+      "path": "02_analysis\\task005a_reports.py",
+      "sha256": "62f37ff85f7b8de38b6d9e70f22cc198d90077dc5734bb00ad44436d176bfee5"
+    },
+    {
+      "path": "02_analysis\\task005a_secondary.py",
+      "sha256": "e200d067fccfd22a45b281441ec978ecc37c9104c649616627df62c9aed660e1"
+    },
+    {
+      "path": "02_analysis\\task005a_tests_and_figures.py",
+      "sha256": "93a9cc99954bbff91f327c8185add00612666a06e7d0232f936217126087f705"
+    }
+  ],
+  "execution_order": [
+    "task005a_analysis.py",
+    "task005a_secondary.py",
+    "task005a_tests_and_figures.py",
+    "task005a_metric_sensitivity.py",
+    "task005a_reports.py"
+  ],
+  "no_dependency_install": true,
+  "original_experiment_untouched": true
+}

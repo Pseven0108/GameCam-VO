@@ -1,0 +1,53 @@
+{
+  "sealed_input_path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004C_B_IO_COMPAT_20261124_R1\\evaluation\\CROSSOVER_SUMMARY.csv",
+  "sealed_input_sha256": "46203732f9e38588ec17dc593fdc2dd354c8f916c5da7f0ecd709a49f044d5ef",
+  "independent_global_position_sim3_checks": [
+    {
+      "arm": "B1",
+      "recomputed_sim3": 17.469482156810198,
+      "sealed_sim3": 17.469482156810198,
+      "absolute_difference": 0.0
+    },
+    {
+      "arm": "B2",
+      "recomputed_sim3": 8.680145357169707,
+      "sealed_sim3": 8.680145357169707,
+      "absolute_difference": 0.0
+    },
+    {
+      "arm": "B4",
+      "recomputed_sim3": 83.25501925071276,
+      "sealed_sim3": 83.25501925071276,
+      "absolute_difference": 0.0
+    },
+    {
+      "arm": "B3",
+      "recomputed_sim3": 66.50175093969132,
+      "sealed_sim3": 66.50175093969132,
+      "absolute_difference": 0.0
+    }
+  ],
+  "contrasts": [
+    {
+      "metric": "ate_sim3_game_units",
+      "D_on_minus_off_S1": 8.789336799640491,
+      "D_on_minus_off_S0": -16.753268311021444,
+      "sign_reversal": true
+    },
+    {
+      "metric": "ate_se3_inherited_sref_game_units",
+      "D_on_minus_off_S1": 440.8865070737317,
+      "D_on_minus_off_S0": 101.6092360039429,
+      "sign_reversal": false
+    },
+    {
+      "metric": "orientation_rmse_sim3_deg",
+      "D_on_minus_off_S1": 1.7818393406222781,
+      "D_on_minus_off_S0": 4.307939965726719,
+      "sign_reversal": false
+    }
+  ],
+  "S_REF": 19.1341794347,
+  "S_REF_provenance": "Inherited historical Task004A E0 GT-derived alignment; diagnostic, not recovered metric scale",
+  "conclusion": "Sign reversal is established for global-Sim3 POSITION ATE; it is not a uniform claim across metric scale or orientation."
+}

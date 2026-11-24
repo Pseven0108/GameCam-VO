@@ -1,0 +1,103 @@
+{
+  "schema": "TASK004C_B_STAGE_LEDGER_V1",
+  "stage": "CPU_FINAL_GATE_BLOCKED_NEW_TIMM_FORMAT_ENUM",
+  "updated_UTC": "2026-11-24T13:38:18.258408+00:00",
+  "source_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+  "ConfigDict_corrections": {
+    "authorized": 2,
+    "consumed": 1
+  },
+  "GPU_C0": {
+    "authorized": 2,
+    "consumed": 0
+  },
+  "short_runs": {
+    "authorized": 4,
+    "consumed": 0
+  },
+  "formal_runs": {
+    "authorized": 4,
+    "consumed": 0
+  },
+  "CPU_gates": {
+    "schema": "CONFIGDICT_CLOSURE_CPU_FINAL_GATE_V1",
+    "status": "BLOCKED_NEW_TIMM_FORMAT_ENUM",
+    "CPU_passed": false,
+    "ConfigDict_specific_status": "PASS",
+    "ConfigDict_unit_tests": {
+      "passed": 14,
+      "total": 14
+    },
+    "legacy_tests": {
+      "passed": 152,
+      "total": 152
+    },
+    "real_ConfigDict_subgraph": {
+      "status": "PASS",
+      "source_ConfigDict_nodes": 6,
+      "reachable_graph_nodes": 24,
+      "exact_mapping_and_attribute_graph_equal": true,
+      "nested_types_order_alias_cycles_preserved": true,
+      "source_snapshot_unchanged": true,
+      "full_model_restore_passed": false,
+      "full_forward_outputs_restored": false,
+      "native_C0": false,
+      "CUDA_initialized": false,
+      "runtime_seconds": 4.0692126750946045,
+      "source_state_sha256": "2fc3f3cd64675a6a931d1c9c6e89f8f70abf4f713d823c7e9f3cf26177322e53",
+      "derived_subgraph_sha256": "30efff2ea7bd399c5068426b76b39f2322c34bcc17ac370c4976de2aa0289c1a",
+      "limitation": "Only exact actual model ConfigDict subgraph; independent FiT3D Format blocker remains"
+    },
+    "full_real_model_roundtrip": {
+      "passed": false,
+      "exit_code": 1,
+      "runtime_seconds": 271.92837715148926,
+      "blocking_class": "timm.layers.format:Format",
+      "restored_forward": "NOT_REACHED",
+      "restored_gradient": "NOT_REACHED",
+      "complete_graph_comparison": "NOT_REACHED",
+      "47_family_restore_comparison": "NOT_REACHED"
+    },
+    "source_fixed_forward_SHA_matches_historical": true,
+    "format_inside_ConfigDict": false,
+    "format_present_in_historical_snapshot": true,
+    "ConfigDict_correction_budget": {
+      "authorized": 2,
+      "consumed": 1,
+      "remaining": 1,
+      "exhausted": false
+    },
+    "GPU_C0_attempts": {
+      "authorized": 2,
+      "consumed": 0
+    },
+    "short_runs": {
+      "authorized": 4,
+      "consumed": 0
+    },
+    "formal_runs": {
+      "authorized": 4,
+      "consumed": 0
+    },
+    "native_C0_created": false,
+    "CUDA_initialized": false,
+    "new_type_adapter_implemented": false,
+    "stop_reason": "Full real-model restore fails on independent FiT3D timm Format enum; do not use ConfigDict-specific budget as generic type-repair authorization",
+    "next_scope": "Source-pinned exact Format enum adapter and new full strict roundtrip; then finish authorized stage continuation gates before C0"
+  },
+  "native_C0_exists": false,
+  "remaining_sequence": [
+    "real_model_fresh_process",
+    "GPU_C0",
+    "fresh_restore_process_RGB019",
+    "short_4arms_to_RGB080",
+    "full_B1_B2_B4_B3_to_RGB487",
+    "offline_evaluation",
+    "GitHub_publication"
+  ],
+  "automatic_GPU_retry": false,
+  "GPU_keep_online": true,
+  "provenance": "Current original test receipts plus source commit receipt; no GPU C0 consumption observed",
+  "scope_exhausted": false,
+  "stop_reason": "Full real-model restore fails on independent FiT3D timm Format enum; do not use ConfigDict-specific budget as generic type-repair authorization"
+}

@@ -1,0 +1,46 @@
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+xFormers not available
+xFormers not available
+xFormers not available
+xFormers not available
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+xFormers not available
+xFormers not available
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 349, in decode
+    try:value=object.__new__(cls)
+TypeError: object.__new__(Format) is not safe, use str.__new__()
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/model_roundtrip.py", line 324, in <module>
+    func(sink, counter, observer_file)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/model_roundtrip.py", line 211, in run_child
+    bundle, manifest = load_state(SNAPSHOT, services=service)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 356, in load_state
+    result=decode(m['root'])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 327, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 327, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 352, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 327, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 352, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 327, in decode
+    for k,v in n['items']:value[decode(k)]=decode(v)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 352, in decode
+    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py", line 350, in decode
+    except TypeError as e:raise ControlError('Class needs an explicit construction-free adapter: '+n['class']) from e
+control_common.ControlError: Class needs an explicit construction-free adapter: timm.layers.format:Format

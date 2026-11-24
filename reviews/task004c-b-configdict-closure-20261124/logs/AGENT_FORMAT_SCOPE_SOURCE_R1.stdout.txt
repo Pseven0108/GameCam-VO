@@ -1,0 +1,64 @@
+TARGETS {"o0010475": {"attrs": [["_value_", "NHWC"], ["_name_", "NHWC"], ["__objclass__", {"$class": "timm.layers.format:Format"}]], "class": "timm.layers.format:Format", "kind": "object"}}
+REFERENCE {"source_node": "o0010416", "source_class": "timm.layers.patch_embed:PatchEmbed", "kind": "object", "path": ["attrs", 22, 1], "target": "o0010475"}
+CLASS_PIN {"key": "timm.layers.format:Format", "source_sha256": "8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae"}
+timm_version 0.9.10
+SOURCE_META {"class": "timm.layers.format:Format", "MRO": ["timm.layers.format:Format", "builtins:str", "enum:Enum", "builtins:object"], "path": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/timm/layers/format.py", "sha256": "8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae", "members": [["NCHW", "NCHW", "str"], ["NHWC", "NHWC", "str"], ["NCL", "NCL", "str"], ["NLC", "NLC", "str"]]}
+SOURCE_TEXT from enum import Enum
+from typing import Union
+
+import torch
+
+
+class Format(str, Enum):
+    NCHW = 'NCHW'
+    NHWC = 'NHWC'
+    NCL = 'NCL'
+    NLC = 'NLC'
+
+
+FormatT = Union[str, Format]
+
+
+def get_spatial_dim(fmt: FormatT):
+    fmt = Format(fmt)
+    if fmt is Format.NLC:
+        dim = (1,)
+    elif fmt is Format.NCL:
+        dim = (2,)
+    elif fmt is Format.NHWC:
+        dim = (1, 2)
+    else:
+        dim = (2, 3)
+    return dim
+
+
+def get_channel_dim(fmt: FormatT):
+    fmt = Format(fmt)
+    if fmt is Format.NHWC:
+        dim = 3
+    elif fmt is Format.NLC:
+        dim = 2
+    else:
+        dim = 1
+    return dim
+
+
+def nchw_to(x: torch.Tensor, fmt: Format):
+    if fmt == Format.NHWC:
+        x = x.permute(0, 2, 3, 1)
+    elif fmt == Format.NLC:
+        x = x.flatten(2).transpose(1, 2)
+    elif fmt == Format.NCL:
+        x = x.flatten(2)
+    return x
+
+
+def nhwc_to(x: torch.Tensor, fmt: Format):
+    if fmt == Format.NCHW:
+        x = x.permute(0, 3, 1, 2)
+    elif fmt == Format.NLC:
+        x = x.flatten(1, 2)
+    elif fmt == Format.NCL:
+        x = x.flatten(1, 2).transpose(1, 2)
+    return x
+

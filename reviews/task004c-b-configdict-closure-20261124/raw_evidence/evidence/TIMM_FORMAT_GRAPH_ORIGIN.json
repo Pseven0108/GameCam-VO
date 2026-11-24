@@ -1,0 +1,38 @@
+{
+  "new_format_nodes": [
+    {
+      "node_id": "o0010475",
+      "kind": "object",
+      "attrs": [
+        [
+          "_value_",
+          "NHWC"
+        ],
+        [
+          "_name_",
+          "NHWC"
+        ],
+        [
+          "__objclass__",
+          {
+            "$class": "timm.layers.format:Format"
+          }
+        ]
+      ],
+      "shortest_reference_path": "root['models']['FiT3D']._modules['model']._modules['patch_embed'].output_fmt",
+      "reachable_from_ConfigDict": false
+    }
+  ],
+  "historical_format_nodes": [
+    "o0010456"
+  ],
+  "ConfigDict_nodes": [
+    "o0010344",
+    "o0010345",
+    "o0010346",
+    "o0010349",
+    "o0010353",
+    "o0010354"
+  ],
+  "failure_is_newly_exposed_not_new_model_field": true
+}

@@ -1,7 +1,7 @@
 # GPT-chat评审入口
 
-指定仓库Pseven0108/GameCam-VO、分支codex/task004c-b-autonomous-20261124，先读README、PROJECT_STATUS、REVIEW_INDEX，再读reviews/task004c-b-autonomous-20261124/TASK004C_B_AUTONOMOUS_FINAL_REVIEW.md。
+本次请指定分支`codex/task004c-b-configdict-closure-20261124`或完整发布Commit，先读`README.md`、`PROJECT_STATUS.md`、`REVIEW_INDEX.md`，再读`reviews/task004c-b-configdict-closure-20261124/FINAL_REVIEW.md`。
 
-本轮停止于CPU真实模型恢复，不是GPU显卡故障。重点检查：71个函数的严格识别、ConfigDict的映射遗漏与构造失败、两轮修正上限、152通用回归与真实模型失败的区别，以及未启动任何新GPU实验。
+重点审核：ConfigDict完整性、完整模型失败边界、Format真实对象路径、CPU fixture局限、预算和原始资产保全。子图通过不能替代完整模型恢复。当前没有新GPU实验结果。
 
-原始连接信息已从本轮公开材料脱敏，公开SHA以本轮FILE_SHA256_MANIFEST.json为准；不要要求脱敏文件匹配原始日志SHA。模型/RGB/Arena/CPU快照Tensor载荷没有上传。
+无需上传ZIP；公开Markdown、JSON、源码patch和原始stdout/stderr都可按路径直接阅读。ZIP仅为本地归档，公开SHA针对脱敏内容。不要仅凭根目录旧默认分支判断最新状态。

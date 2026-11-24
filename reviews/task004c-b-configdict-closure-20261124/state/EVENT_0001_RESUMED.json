@@ -1,0 +1,40 @@
+{
+  "schema": "TASK004C_B_STAGE_LEDGER_V1",
+  "stage": "CPU_REAL_MODEL_ROUNDTRIP_PENDING",
+  "updated_UTC": "2026-11-24T13:23:07.450201+00:00",
+  "source_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+  "ConfigDict_corrections": {
+    "authorized": 2,
+    "consumed": 1
+  },
+  "GPU_C0": {
+    "authorized": 2,
+    "consumed": 0
+  },
+  "short_runs": {
+    "authorized": 4,
+    "consumed": 0
+  },
+  "formal_runs": {
+    "authorized": 4,
+    "consumed": 0
+  },
+  "CPU_gates": {
+    "ConfigDict": "14/14 PASS",
+    "legacy": "152/152 PASS",
+    "real_model_fresh_process": "NOT_EXECUTED"
+  },
+  "native_C0_exists": false,
+  "remaining_sequence": [
+    "real_model_fresh_process",
+    "GPU_C0",
+    "fresh_restore_process_RGB019",
+    "short_4arms_to_RGB080",
+    "full_B1_B2_B4_B3_to_RGB487",
+    "offline_evaluation",
+    "GitHub_publication"
+  ],
+  "automatic_GPU_retry": false,
+  "GPU_keep_online": true,
+  "provenance": "Current original test receipts plus source commit receipt; no GPU C0 consumption observed"
+}

@@ -1,8 +1,8 @@
 {
-  "canonical_commit": "a324b57760fdaf4929385f2271991d773533799d",
-  "canonical_tree": "19b22b429226383c3ef996e40c4a5483a5339acf",
-  "scope": "Base tracked-source export plus one byte-verified input-adapter change; original source commit distinct from GitHub publication commit",
-  "canonical_source_endpoint": "sc01-ssh.gpuhome.cc:30448",
+  "canonical_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+  "canonical_tree": "4dcec1e2c80f6bcc3e42046229d0dd54f9464ff8",
+  "scope": "Historical tracked-source export with byte-verified incremental changes; runtime candidate commit is distinct from publication commit",
+  "canonical_source_endpoint": "REDACTED_SSH_ENDPOINT",
   "export": {
     "source_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
     "source_tree": "68f690859ee2e8d6c62ac4f85c787d7eb6ffe78f",
@@ -27,15 +27,28 @@
     "dataset_after_sha256": "2b2eeee4beff110def2bcbdf57c96384780aacd26853aaa296ec4b6890e523d9",
     "source": "new instance verified working tree; previous full export retained as base provenance"
   },
-  "previous_source_commit": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+  "previous_source_commit": "a324b57760fdaf4929385f2271991d773533799d",
   "latest_incremental_update": {
-    "from": "02f8c8308274489ff7eff83fa9b87b98db74122e",
-    "to": "a324b57760fdaf4929385f2271991d773533799d",
+    "from": "a324b57760fdaf4929385f2271991d773533799d",
+    "to": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
     "changed_files": [
-      "native_control/metric3d_identity.py",
+      "native_control/configdict_adapter.py",
       "native_control/snapshot.py"
     ],
-    "status": "CPU_RESTORE_BLOCKED_NO_NEW_GPU",
-    "actual_BA_math_or_model_forward_changes": false
-  }
+    "Metric3D_identity_adapter_unchanged": true,
+    "status": "CONFIGDICT_PASS_FULL_MODEL_TIMM_FORMAT_BLOCKED",
+    "BA_math_or_model_forward_changes": false
+  },
+  "incremental_update_history": [
+    {
+      "from": "02f8c8308274489ff7eff83fa9b87b98db74122e",
+      "to": "a324b57760fdaf4929385f2271991d773533799d",
+      "changed_files": [
+        "native_control/metric3d_identity.py",
+        "native_control/snapshot.py"
+      ],
+      "status": "CPU_RESTORE_BLOCKED_NO_NEW_GPU",
+      "actual_BA_math_or_model_forward_changes": false
+    }
+  ]
 }

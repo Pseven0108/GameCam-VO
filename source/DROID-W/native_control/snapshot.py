@@ -23,6 +23,7 @@ import torch
 
 from control_common import ControlError, canonical, digest, file_sha, require_space
 from checkpoint.checkpoint_adapter import value_sha
+from native_control import configdict_adapter
 
 FORMAT = 'GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V3_GZIP_LOSSLESS'
 HOOKS = ('_backward_hooks', '_backward_pre_hooks', '_forward_hooks', '_forward_pre_hooks',
@@ -118,6 +119,12 @@ class ObjectEncoder:
             node={'kind':'partial','function':self.encode(x.func),'args':self.encode(x.args),'keywords':self.encode(x.keywords),'attrs':self.encode(vars(x))}
         elif type(x) in (dict,OrderedDict):
             node={'kind':'ordered_dict' if type(x) is OrderedDict else 'dict','items':[[self.encode(k),self.encode(v)] for k,v in x.items()]}
+        elif isinstance(x, dict):
+            if type(x).__module__ + ':' + type(x).__qualname__ != configdict_adapter.CLASS_KEY:
+                raise ControlError('Unregistered dict subclass: ' + repr(type(x)))
+            pin = class_pin(type(x))
+            self.classes[pin['key']] = pin
+            node = configdict_adapter.encode_mapping(x, self.encode)
         elif type(x) in (list,tuple,set,frozenset,torch.Size):
             kind={list:'list',tuple:'tuple',set:'set',frozenset:'frozenset',torch.Size:'torch_size'}[type(x)]
             values=sorted(x,key=repr) if type(x) in (set,frozenset) else x
@@ -259,6 +266,13 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
         cls=_resolve(key)
         if class_pin(cls)!=pin:raise ControlError('Runtime class implementation SHA mismatch: '+key)
         classes[key]=cls
+    for node in m['nodes'].values():
+        if node['kind'] == configdict_adapter.TAG:
+            if node.get('class') != configdict_adapter.CLASS_KEY:
+                raise ControlError('ConfigDict snapshot class mismatch')
+            configdict_adapter.validate_class(classes[node['class']], node.get('pin'))
+        elif node['kind'] == 'object' and issubclass(classes[node['class']], dict):
+            raise ControlError('Mapping entries absent from legacy object node: ' + node['class'])
     # Validate every file before deserializing tensor-only payloads.
     storages={}
     for sid,s in m['storages'].items():
@@ -277,6 +291,7 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
             if s['cpu_shared']:raw.share_memory_()
         storages[sid]=raw.untyped_storage()
     objects={}; constructing=set();services=services or {}
+    pending_configdicts = []
     def decode(x):
         if not isinstance(x,dict):return x
         if '$service' in x:
@@ -310,6 +325,9 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
         elif kind in ('dict','ordered_dict'):
             value={} if kind=='dict' else OrderedDict();objects[nid]=value
             for k,v in n['items']:value[decode(k)]=decode(v)
+        elif kind == configdict_adapter.TAG:
+            value = configdict_adapter.allocate(classes[n['class']], n)
+            pending_configdicts.append((value, n))
         elif kind in ('list','set'):
             value=[] if kind=='list' else set();objects[nid]=value
             for v in n['items']:(value.append if kind=='list' else value.add)(decode(v))
@@ -336,6 +354,10 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_
         objects[nid]=value;constructing.remove(nid)
         return value
     result=decode(m['root'])
+    # All encountered ConfigDict shells are memoized before their edges resolve.
+    # Hydration may discover additional shells as it walks nested dictionaries.
+    for value, node in pending_configdicts:
+        configdict_adapter.hydrate(value, node, decode)
     if torch.cuda.is_initialized():torch.cuda.synchronize()
     return result,m
 

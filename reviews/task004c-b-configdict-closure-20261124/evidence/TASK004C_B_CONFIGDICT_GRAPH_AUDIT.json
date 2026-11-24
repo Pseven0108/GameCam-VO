@@ -1,0 +1,157 @@
+{
+  "source_state_sha256": "2fc3f3cd64675a6a931d1c9c6e89f8f70abf4f713d823c7e9f3cf26177322e53",
+  "real_subgraph": {
+    "status": "PASS",
+    "source_ConfigDict_nodes": 6,
+    "reachable_graph_nodes": 24,
+    "exact_mapping_and_attribute_graph_equal": true,
+    "nested_types_order_alias_cycles_preserved": true,
+    "source_snapshot_unchanged": true,
+    "full_model_restore_passed": false,
+    "full_forward_outputs_restored": false,
+    "native_C0": false,
+    "CUDA_initialized": false,
+    "runtime_seconds": 4.0692126750946045,
+    "source_state_sha256": "2fc3f3cd64675a6a931d1c9c6e89f8f70abf4f713d823c7e9f3cf26177322e53",
+    "derived_subgraph_sha256": "30efff2ea7bd399c5068426b76b39f2322c34bcc17ac370c4976de2aa0289c1a",
+    "limitation": "Only exact actual model ConfigDict subgraph; independent FiT3D Format blocker remains"
+  },
+  "ConfigDict_encoded_nodes": [
+    {
+      "id": "o0010344",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 8,
+      "ordered_keys": [
+        "model",
+        "data_basic",
+        "load_from",
+        "cudnn_benchmark",
+        "test_metrics",
+        "max_value",
+        "batchsize_per_gpu",
+        "thread_per_gpu"
+      ],
+      "mapping_sha256": "4c8a0debd4c1d0e93e622ead99a558c21fa304a4024b2f5e3aea67f2b5f9f0c3",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "87dc6395d0b6be33a594430184a430e8384c01070480865eb7541f6aa2980bef"
+    },
+    {
+      "id": "o0010345",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 3,
+      "ordered_keys": [
+        "backbone",
+        "type",
+        "decode_head"
+      ],
+      "mapping_sha256": "f9949fde9c1072d19a085959c56a77920d6670f91010aa6ca8bd1ff97521095e",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "6c78139dc1d3efccfb9758240ad0ecedbc6b0344c11055b49d1182a66be92342"
+    },
+    {
+      "id": "o0010346",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 4,
+      "ordered_keys": [
+        "type",
+        "prefix",
+        "out_channels",
+        "drop_path_rate"
+      ],
+      "mapping_sha256": "999d82504824508c3292182a92e120e397ee87cfe83e32b4d1f3844f33146ab7",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "58c501fe639ec1e6890fe7ed5f09579c845d0fb8f589b08ed2788a5d230f60fb"
+    },
+    {
+      "id": "o0010349",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 14,
+      "ordered_keys": [
+        "type",
+        "in_channels",
+        "use_cls_token",
+        "feature_channels",
+        "decoder_channels",
+        "up_scale",
+        "hidden_channels",
+        "n_gru_layers",
+        "n_downsample",
+        "iters",
+        "slow_fast_gru",
+        "num_register_tokens",
+        "prefix",
+        "detach"
+      ],
+      "mapping_sha256": "5522edc32011b934ea6f8b3648e96303ea0f3402cdba3d44f3152fafb063d566",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "7fedac84f0e16fea4dddc825bc055d226aec640e442b92ae995bbe522234ca95"
+    },
+    {
+      "id": "o0010353",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 6,
+      "ordered_keys": [
+        "canonical_space",
+        "depth_range",
+        "depth_normalize",
+        "crop_size",
+        "clip_depth_range",
+        "vit_size"
+      ],
+      "mapping_sha256": "157e1abac72580f344f9d86137ae6934e65c8e92bb1d0754fe4763aad0a6e4f3",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "2fc580d1590a8a9db8c9a5068442981e681766829b9a0bfa857ba592cf081b11"
+    },
+    {
+      "id": "o0010354",
+      "class": "mmcv.utils.config:ConfigDict",
+      "items": 2,
+      "ordered_keys": [
+        "img_size",
+        "focal_length"
+      ],
+      "mapping_sha256": "3c895d21cbd0c8480d252e93f9ec9f31658f7d5113b0d580de03574b5a71fbde",
+      "attributes_sha256": "a44c0be2c6031f385323a72d024281161d18560458b7aca6b04f36364f285d55",
+      "reference_sha256": "517826ee2d16a7f3cd9a658783e9f6abf4bd118200e9b846b0c8d2f41ad62865"
+    }
+  ],
+  "independent_failure_origin": {
+    "new_format_nodes": [
+      {
+        "node_id": "o0010475",
+        "kind": "object",
+        "attrs": [
+          [
+            "_value_",
+            "NHWC"
+          ],
+          [
+            "_name_",
+            "NHWC"
+          ],
+          [
+            "__objclass__",
+            {
+              "$class": "timm.layers.format:Format"
+            }
+          ]
+        ],
+        "shortest_reference_path": "root['models']['FiT3D']._modules['model']._modules['patch_embed'].output_fmt",
+        "reachable_from_ConfigDict": false
+      }
+    ],
+    "historical_format_nodes": [
+      "o0010456"
+    ],
+    "ConfigDict_nodes": [
+      "o0010344",
+      "o0010345",
+      "o0010346",
+      "o0010349",
+      "o0010353",
+      "o0010354"
+    ],
+    "failure_is_newly_exposed_not_new_model_field": true
+  },
+  "full_runtime_reencode": "NOT_REACHED"
+}

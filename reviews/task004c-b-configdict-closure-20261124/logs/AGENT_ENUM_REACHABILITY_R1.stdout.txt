@@ -1,0 +1,66 @@
+VERSION 0.9.10 SHA256 8b4d8d2d76d65cfbf8589092505e0c9d28d0a7af7df941abe59deb9cc664dfae
+  1 from enum import Enum
+  2 from typing import Union
+  3 
+  4 import torch
+  5 
+  6 
+  7 class Format(str, Enum):
+  8     NCHW = 'NCHW'
+  9     NHWC = 'NHWC'
+ 10     NCL = 'NCL'
+ 11     NLC = 'NLC'
+ 12 
+ 13 
+ 14 FormatT = Union[str, Format]
+ 15 
+ 16 
+ 17 def get_spatial_dim(fmt: FormatT):
+ 18     fmt = Format(fmt)
+ 19     if fmt is Format.NLC:
+ 20         dim = (1,)
+ 21     elif fmt is Format.NCL:
+ 22         dim = (2,)
+ 23     elif fmt is Format.NHWC:
+ 24         dim = (1, 2)
+ 25     else:
+ 26         dim = (2, 3)
+ 27     return dim
+ 28 
+ 29 
+ 30 def get_channel_dim(fmt: FormatT):
+ 31     fmt = Format(fmt)
+ 32     if fmt is Format.NHWC:
+ 33         dim = 3
+ 34     elif fmt is Format.NLC:
+ 35         dim = 2
+ 36     else:
+ 37         dim = 1
+ 38     return dim
+ 39 
+ 40 
+ 41 def nchw_to(x: torch.Tensor, fmt: Format):
+ 42     if fmt == Format.NHWC:
+ 43         x = x.permute(0, 2, 3, 1)
+ 44     elif fmt == Format.NLC:
+ 45         x = x.flatten(2).transpose(1, 2)
+ 46     elif fmt == Format.NCL:
+ 47         x = x.flatten(2)
+ 48     return x
+ 49 
+ 50 
+ 51 def nhwc_to(x: torch.Tensor, fmt: Format):
+ 52     if fmt == Format.NCHW:
+ 53         x = x.permute(0, 3, 1, 2)
+ 54     elif fmt == Format.NLC:
+ 55         x = x.flatten(1, 2)
+ 56     elif fmt == Format.NCL:
+ 57         x = x.flatten(1, 2).transpose(1, 2)
+ 58     return x
+FAILURE /root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/PARENT_FAILURE.json {
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/model_roundtrip.py\", line 324, in <module>\n    func(sink, counter, observer_file)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/model_roundtrip.py\", line 303, in run_parent\n    assert child.returncode == 0, 'Fresh child failed; see its stderr and evidence'\nAssertionError: Fresh child failed; see its stderr and evidence\n",
+  "CUDA_initialized": false
+}
+CHILD_FAILURE /root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/CHILD_FAILURE.json p.py\", line 324, in <module>\n    func(sink, counter, observer_file)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/cpu_tests/REAL_MODEL_ROUNDTRIP_R1/model_roundtrip.py\", line 211, in run_child\n    bundle, manifest = load_state(SNAPSHOT, services=service)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 356, in load_state\n    result=decode(m['root'])\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 327, in decode\n    for k,v in n['items']:value[decode(k)]=decode(v)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 327, in decode\n    for k,v in n['items']:value[decode(k)]=decode(v)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 352, in decode\n    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 327, in decode\n    for k,v in n['items']:value[decode(k)]=decode(v)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 352, in decode\n    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 327, in decode\n    for k,v in n['items']:value[decode(k)]=decode(v)\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 352, in decode\n    for key,val in n['attrs']:object.__setattr__(value,key,decode(val))\n  File \"/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1/native_control/snapshot.py\", line 350, in decode\n    except TypeError as e:raise ControlError('Class needs an explicit construction-free adapter: '+n['class']) from e\ncontrol_common.ControlError: Class needs an explicit construction-free adapter: timm.layers.format:Format\n",
+  "CUDA_initialized": false
+}

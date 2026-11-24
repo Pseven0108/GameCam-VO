@@ -1,0 +1,65 @@
+{
+  "historical_snapshot": {
+    "status": "PASS",
+    "historical_snapshot_state_sha256": "1aa48a77cea13322ef250e3281b2d91278e3dbf2737ae501d6ac8c3f7a236ea0",
+    "historical_files_total": 800,
+    "historical_tensor_file_SHA_verified": 798,
+    "new_CPU_fixture_state_sha256": "2fc3f3cd64675a6a931d1c9c6e89f8f70abf4f713d823c7e9f3cf26177322e53",
+    "new_CPU_fixture_files_total": 851,
+    "new_tensor_file_SHA_verified": 849,
+    "source_manifest_and_COMPLETE_verified": true,
+    "original_content_modified": false,
+    "GPU_C0_created": false,
+    "CUDA_initialized": false
+  },
+  "protected_files": [
+    {
+      "file": "r2_sealed_config.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "matches_lock": true
+    },
+    {
+      "file": "droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "bytes": 2461696,
+      "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "matches_lock": true
+    },
+    {
+      "file": "droid.pth",
+      "bytes": 16061701,
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "matches_lock": true
+    },
+    {
+      "file": "dinov2_reg_small_finetuned.pth",
+      "bytes": 88283296,
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "matches_lock": true
+    },
+    {
+      "file": "metric_depth_vit_large_800k.pth",
+      "bytes": 1647972663,
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "matches_lock": true
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 88245200,
+      "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "matches_lock": true
+    }
+  ],
+  "source_commit": "aa0cca3ed0d6e5d381422d8219234b8c0c6ad065",
+  "source_tree": "4dcec1e2c80f6bcc3e42046229d0dd54f9464ff8",
+  "worktree_clean": true,
+  "tracked_start_entries_verified": 3738,
+  "changed_from_start": [
+    "native_control/configdict_adapter.py",
+    "native_control/snapshot.py"
+  ],
+  "Metric3D_identity_adapter_SHA256": "b723b0eecb68449d9f9126c3453ec940c473d17a377d1ff4629dc32be036a3b4",
+  "Metric3D_identity_adapter_unchanged": true,
+  "input_manifest_modified": false,
+  "historical_results_modified": false
+}

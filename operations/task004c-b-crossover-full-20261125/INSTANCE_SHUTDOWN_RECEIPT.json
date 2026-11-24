@@ -1,0 +1,87 @@
+{
+  "user_authorized": true,
+  "status": "INSTANCE_STOPPED_CONFIRMED_IN_CLOUD_CONSOLE",
+  "actual_shutdown_method": "cloud_console_shutdown_switch_and_confirmation",
+  "terminal_shutdown_success": false,
+  "terminal_invocations": 2,
+  "automatic_retry_loop": false,
+  "terminal_exit_zero_did_not_prove_shutdown": true,
+  "endpoint_matched_to_console_before_action": true,
+  "console_transition_observed": [
+    "运行中",
+    "关机中",
+    "已停止"
+  ],
+  "console_stopped_observed_utc": "2026-11-24T19:35:30.433Z",
+  "instance_console_power_state_independently_verified": true,
+  "billing_state_independently_verified": false,
+  "instance_deleted_or_released": false,
+  "historical_data_deleted": false,
+  "new_GPU_experiments_started_for_shutdown": 0,
+  "results_archived_before_shutdown": true,
+  "sealed_review_ZIP_unchanged": true,
+  "review_ZIP_SHA256": "765f2d39054faa21578393b4b131cfaf6652480663bc1f682ba5551cdf64b96a",
+  "console_screenshot_sha256": "28e9a1df06eb12b4af9d8f218f8af97f8721e32a935742e8facba6ae71951018",
+  "console_AX_sha256": "aa1a08bc73c0fde7dbd15ba737154c8b104b49e545469474bb25295851142970",
+  "terminal_receipt_sha256": "fb8d7d47595aa7778c05c2e09bbb2437f82ba866d47c5c79839a6ae8609fd0a4",
+  "interactive_terminal_receipt_sha256": "cf825b7a2b9a4de2107415084189e6d30e7189c2388ed70b60c1303f3115cc21",
+  "receipt_created_utc": "2026-11-24T19:38:12.588429+00:00",
+  "target_identity_sha256": "402822bc5000bfb63df0b3b6e8284b7df0af9c59a6579d1fb07e5786265d30dd",
+  "target_gpu_model": "RTX 3090",
+  "SSH_host_key_was_pinned": true,
+  "terminal_attempts": [
+    {
+      "method": "pinned_SSH_noninteractive_platform_shutdown",
+      "start_unix": 1795548356.6200805,
+      "end_unix": 1795548387.157913,
+      "exit_code": 0,
+      "observed_error": "level=error (no explanatory message)",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "2f10fbc6c77c274c5c7e758abea444510a9a1b366a080649b369d013957fec17",
+      "subsequent_read_only_SSH_probes": [
+        {
+          "unix": 1795548362.153722,
+          "ssh_exit_code": 0,
+          "marker_returned": true
+        },
+        {
+          "unix": 1795548372.1336367,
+          "ssh_exit_code": 0,
+          "marker_returned": true
+        },
+        {
+          "unix": 1795548387.1578166,
+          "ssh_exit_code": 0,
+          "marker_returned": true
+        }
+      ],
+      "shutdown_success": false
+    },
+    {
+      "method": "pinned_SSH_interactive_login_shell_shutdown",
+      "start_unix": 1795548504.7128754,
+      "end_unix": 1795548550.224573,
+      "exit_code": 0,
+      "observed_error": "ERRO[0000] (no explanatory message)",
+      "stdout_sha256": "345a4ddfebdd3a60bdefe4f230b28e029f8bec4496d5f15151074282b815fcc7",
+      "stderr_sha256": "b8ab6f7fcc8506007e402fa3596ca37ed7979bdd1b65282247df2c8cd6a206c2",
+      "subsequent_read_only_SSH_probes": [
+        {
+          "unix": 1795548520.244858,
+          "ssh_exit_code": 0,
+          "marker_returned": true
+        },
+        {
+          "unix": 1795548550.2245216,
+          "ssh_exit_code": 0,
+          "marker_returned": true
+        }
+      ],
+      "shutdown_success": false
+    }
+  ],
+  "console_screenshot_published": false,
+  "screenshot_retained_locally_with_SHA256": true,
+  "raw_access_metadata_published": false,
+  "note": "Both platform CLI attempts returned exit 0 but logged errors and left SSH reachable. The authorized console fallback was matched to the experiment SSH endpoint before shutdown; the console then visibly changed to stopping and stopped. Billing status was not separately verified."
+}

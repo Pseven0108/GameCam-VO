@@ -1,0 +1,1517 @@
+[
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "cfg",
+    "line": 30
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "output",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "ht",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "wd",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "counter",
+    "line": 36
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "printer",
+    "line": 38
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "metric_depth_reg",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "mono_thres",
+    "line": 43
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "device",
+    "line": 44
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "down_scale",
+    "line": 45
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "slice_h",
+    "line": 46
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "slice_w",
+    "line": 47
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "timestamp",
+    "line": 49
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "images",
+    "line": 51
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "dirty",
+    "line": 54
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "npc_dirty",
+    "line": 56
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "poses",
+    "line": 58
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "disps",
+    "line": 59
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "zeros",
+    "line": 60
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "disps_up",
+    "line": 61
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "intrinsics",
+    "line": 62
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "mono_disps",
+    "line": 63
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "mono_disps_up",
+    "line": 64
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "depth_scale",
+    "line": 65
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "depth_shift",
+    "line": 66
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "valid_depth_mask",
+    "line": 67
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "valid_depth_mask_small",
+    "line": 68
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "fmaps",
+    "line": 70
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "nets",
+    "line": 71
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "inps",
+    "line": 72
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "debug",
+    "line": 76
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "uncertainty_aware",
+    "line": 78
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "enable_bidirectional_uncer",
+    "line": 79
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "dino_feats",
+    "line": 92
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "dino_feats_resize",
+    "line": 93
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "uncertainties",
+    "line": 94
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "affine_weights",
+    "line": 97
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "affine_weights",
+    "line": 102
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "enable_affine_transform",
+    "line": 103
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "temp_y_cdot",
+    "line": 104
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "dino_feats",
+    "line": 106
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "dino_feats_resize",
+    "line": 107
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "feature_downsample_factor",
+    "line": 87
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "feature_downsample_factor",
+    "line": 89
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "video",
+    "line": 13
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "update_op",
+    "line": 14
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "device",
+    "line": 15
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "max_factors",
+    "line": 16
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "corr_impl",
+    "line": 17
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ht",
+    "line": 20
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "wd",
+    "line": 21
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "coords0",
+    "line": 23
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj",
+    "line": 25
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "age",
+    "line": 26
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "damping",
+    "line": 29
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight",
+    "line": 32
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_inac",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_inac",
+    "line": 36
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_bad",
+    "line": 37
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_bad",
+    "line": 38
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target_inac",
+    "line": 40
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight_inac",
+    "line": 41
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_bad",
+    "line": 91
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_bad",
+    "line": 92
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii",
+    "line": 96
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj",
+    "line": 97
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "age",
+    "line": 98
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "corr",
+    "line": 99
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "damping",
+    "line": 100
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "net",
+    "line": 101
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "inp",
+    "line": 102
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target",
+    "line": 103
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight",
+    "line": 104
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_inac",
+    "line": 105
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_inac",
+    "line": 106
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_bad",
+    "line": 107
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_bad",
+    "line": 108
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target_inac",
+    "line": 109
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight_inac",
+    "line": 110
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii",
+    "line": 152
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj",
+    "line": 153
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "age",
+    "line": 154
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "net",
+    "line": 157
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target",
+    "line": 159
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight",
+    "line": 160
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii",
+    "line": 173
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj",
+    "line": 174
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "age",
+    "line": 175
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target",
+    "line": 186
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight",
+    "line": 187
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "age",
+    "line": 285
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "corr",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "net",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "inp",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "corr",
+    "line": 143
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "inp",
+    "line": 146
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_inac",
+    "line": 168
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_inac",
+    "line": 169
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target_inac",
+    "line": 170
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight_inac",
+    "line": 171
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "corr",
+    "line": 178
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "net",
+    "line": 181
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "inp",
+    "line": 184
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "ii_inac",
+    "line": 223
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "jj_inac",
+    "line": 224
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target_inac",
+    "line": 225
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight_inac",
+    "line": 226
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "net",
+    "line": 250
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "target",
+    "line": 257
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "weight",
+    "line": 258
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "cfg",
+    "line": 10
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "video",
+    "line": 11
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "update_op",
+    "line": 12
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "t1",
+    "line": 15
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "is_initialized",
+    "line": 18
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "max_age",
+    "line": 20
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "iters1",
+    "line": 22
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "iters2",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "warmup",
+    "line": 26
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "beta",
+    "line": 27
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "frontend_nms",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "keyframe_thresh",
+    "line": 29
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "frontend_window",
+    "line": 30
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "frontend_thresh",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "frontend_radius",
+    "line": 32
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "frontend_max_factors",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "enable_loop",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "loop_closing",
+    "line": 36
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "enable_opt_dyn_mask",
+    "line": 38
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "graph",
+    "line": 40
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "max_consecutive_drop_of_keyframes",
+    "line": 54
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "num_keyframes_dropped",
+    "line": 55
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "t1",
+    "line": 60
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "t1",
+    "line": 135
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "is_initialized",
+    "line": 171
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_pose",
+    "line": 172
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_disp",
+    "line": 173
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_time",
+    "line": 174
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "t1",
+    "line": 184
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "is_initialized",
+    "line": 215
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_pose",
+    "line": 216
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_disp",
+    "line": 217
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_time",
+    "line": 218
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "num_keyframes_dropped",
+    "line": 84
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "num_keyframes_dropped",
+    "line": 90
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "t1",
+    "line": 87
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "last_loop_t",
+    "line": 103
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "cfg",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "device",
+    "line": 32
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "verbose",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "logger",
+    "line": 34
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "save_dir",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "droid_net",
+    "line": 41
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "printer",
+    "line": 43
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "num_running_thread",
+    "line": 51
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "all_trigered",
+    "line": 53
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "video",
+    "line": 56
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "ba",
+    "line": 57
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "traj_filler",
+    "line": 60
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "tracker",
+    "line": 68
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "mapper",
+    "line": 69
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "stream",
+    "line": 70
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "final_clean",
+    "line": 71
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "tracker",
+    "line": 98
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "all_trigered",
+    "line": 100
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "mapper",
+    "line": 115
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "all_trigered",
+    "line": 118
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "ba",
+    "line": 138
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "final_clean",
+    "line": 239
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "H",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "W",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "fx",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "fy",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "cx",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "cy",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "visualizer",
+    "line": 331
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "cfg",
+    "line": 18
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "device",
+    "line": 19
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "net",
+    "line": 20
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "video",
+    "line": 21
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "verbose",
+    "line": 22
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "pipe",
+    "line": 23
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "output",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "event_writer",
+    "line": 25
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "frontend_window",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "motion_filter",
+    "line": 30
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "enable_online_ba",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "frontend",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "online_ba",
+    "line": 34
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "ba_freq",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "finish_first_online_ba",
+    "line": 36
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "printer",
+    "line": 38
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "prev_kf_counter",
+    "line": 40
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "prev_kf_counter",
+    "line": 105
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "finish_first_online_ba",
+    "line": 133
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "copy_ns",
+    "line": 156
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "ord",
+    "line": 160
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "bytes_out",
+    "line": 173
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "io_ns_total",
+    "line": 174
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "capture_ns_total",
+    "line": 175
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "copy_ns_total",
+    "line": 176
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "copy_ns",
+    "line": 177
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "frame_id",
+    "line": 200
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "added",
+    "line": 201
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "added",
+    "line": 212
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "ba_id",
+    "line": 253
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "before",
+    "line": 264
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "batch",
+    "line": 318
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "filler_n",
+    "line": 319
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "filler_n",
+    "line": 333
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "_file",
+    "line": 171
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "stage",
+    "line": 180
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "current_step",
+    "line": 180
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "frame_id",
+    "line": 242
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "before",
+    "line": 311
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "doc",
+    "line": 104
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "frames",
+    "line": 105
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "ids",
+    "line": 106
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "color_paths",
+    "line": 107
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "n_img",
+    "line": 108
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "out",
+    "line": 109
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "phase",
+    "line": 110
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "seen",
+    "line": 111
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "fill_seen",
+    "line": 112
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "peak",
+    "line": 113
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "fixed",
+    "line": 114
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "phase",
+    "line": 131
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "peak",
+    "line": 139
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "seen",
+    "line": 150
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "fill_seen",
+    "line": 156
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "cfg",
+    "line": 21
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "video",
+    "line": 22
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "update_op",
+    "line": 23
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "device",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "t0",
+    "line": 26
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "t1",
+    "line": 27
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "beta",
+    "line": 29
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_thresh",
+    "line": 30
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_radius",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_nms",
+    "line": 32
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_normalize",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "output",
+    "line": 34
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_loop_window",
+    "line": 36
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_loop_thresh",
+    "line": 37
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_loop_radius",
+    "line": 38
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_loop_nms",
+    "line": 39
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "num_levels",
+    "line": 41
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "radius",
+    "line": 42
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "corr_pyramid",
+    "line": 43
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "num_levels",
+    "line": 113
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "radius",
+    "line": 114
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "pyramid",
+    "line": 119
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "conv1",
+    "line": 51
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "conv2",
+    "line": 52
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "relu",
+    "line": 53
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "eta",
+    "line": 55
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "upmask",
+    "line": 61
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "corr_encoder",
+    "line": 88
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "flow_encoder",
+    "line": 95
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "weight",
+    "line": 102
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "delta",
+    "line": 110
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "gru",
+    "line": 117
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "agg",
+    "line": 118
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "fnet",
+    "line": 159
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "cnet",
+    "line": 160
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "update",
+    "line": 161
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "cfg",
+    "line": 16
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "cnet",
+    "line": 18
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "fnet",
+    "line": 19
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "update",
+    "line": 20
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "video",
+    "line": 22
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "thresh",
+    "line": 23
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "device",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "count",
+    "line": 26
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "MEAN",
+    "line": 29
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "STDV",
+    "line": 30
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "uncertainty_aware",
+    "line": 32
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "save_dir",
+    "line": 33
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "metric_depth_estimator",
+    "line": 34
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "feat_extractor",
+    "line": 37
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "net",
+    "line": 71
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "inp",
+    "line": 71
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "fmap",
+    "line": 71
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "count",
+    "line": 98
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "count",
+    "line": 113
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "net",
+    "line": 100
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "inp",
+    "line": 100
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "fmap",
+    "line": 100
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "cfg",
+    "line": 15
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "cnet",
+    "line": 18
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "fnet",
+    "line": 19
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "update",
+    "line": 20
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "count",
+    "line": 22
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "video",
+    "line": 23
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "device",
+    "line": 24
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "printer",
+    "line": 25
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "MEAN",
+    "line": 28
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "STDV",
+    "line": 29
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "uncertainty_aware",
+    "line": 31
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "feat_extractor",
+    "line": 35
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "model",
+    "line": 19
+  }
+]

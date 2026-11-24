@@ -1,0 +1,16 @@
+{
+  "viewer_argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun",
+    "--bind",
+    "127.0.0.1",
+    "--port",
+    "9875",
+    "--serve-web",
+    "--web-viewer-port",
+    "9876",
+    "--ws-server-port",
+    "9877",
+    "--server-memory-limit",
+    "768MB"
+  ]
+}

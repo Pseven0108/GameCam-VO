@@ -1,0 +1,399 @@
+# GAMECAM-VO TASK004C
+# CONTROLLED MECHANISM ISOLATION
+
+用户已批准两个研究方案：
+
+A. Fixed-State BA Direct D Effect
+B. Fixed-Keyframe Schedule Crossover
+
+目标：分离 Metric3D 深度正则 D 对 DROID-W 前端局部几何优化的直接影响，以及通过关键帧选择和图结构变化产生的间接影响。
+
+## 0. EXISTING EVIDENCE AND BOUNDARIES
+
+固定实验环境：
+
+- VIPER Validation Night val_007
+- RGB 00001–00487
+- 640×360
+- stride=1
+- buffer=500
+- DROID-W commit c3414af6047d06bafc1a6645d09f23247f3b2cdc
+- 原始 R2 YAML
+- 原始权重及 CUDA 扩展
+
+Task004B 已确认：
+
+- D=1 vs D=0 的 Sim3 ATE 主效应为46.652。
+- 95% CI [25.068, 68.236]。
+- 关闭D后的关键帧数量增加48.25。
+- 95% CI [43.903, 52.597]。
+- 12个固定W/U配对中，关闭D后Sim3 ATE均更低。
+- 12个固定W/U配对中，关闭D后关键帧均更多。
+
+但 Task004B 估计的是 TOTAL_FRONTEND_EFFECT。
+
+不能将其解释为纯 BA 直接效应或已证明的关键帧中介因果效应。
+
+D=0的定义：不向指定前端局部BA注入缓存Metric3D深度正则，不停止Metric3D预测及缓存。
+
+W、U在本轮全部固定为1。
+
+## 1. IMPORTANT: DO NOT DUPLICATE OLD EXPERIMENTS
+
+此前已经做过一次同状态 BA 比较：
+
+- BA278。
+- 133 edges。
+- Joint optimization compression约20.47%。
+- Pose-only/frozen disparity compression约38.88%。
+- Frozen disparity未修复问题。
+- Reprojection RMS分别为0.3112和0.4150。
+
+但这次实验没有直接切换Metric3D深度正则。
+
+因此，本轮必须执行 D=1 vs D=0 的固定状态实验。
+
+不得将旧实验描述为Metric3D直接效应证明。
+
+旧BA278实验不是历史BA280的精确复现。
+
+## 2. PHASE 0: READ-ONLY AUDIT
+
+首先进行CPU-only只读审计。
+
+检查：
+
+1. Task004B Seed43 E0原始归档。
+2. Task004B Seed43 E1原始归档。
+3. 两组 observer.jsonl。
+4. 两组 native/video.npz。
+5. 两组完整原始配置及哈希。
+6. Metric3D预测缓存。
+7. DROID-W BA调用源码。
+8. Task004B framewise keyframe decisions。
+9. Task004B local target pair BA updates。
+
+重点检查能否恢复完整的 BA 输入状态：
+
+- poses
+- disparities / inverse depth
+- intrinsics
+- source/target indices
+- graph edges
+- correlation features
+- context and hidden state
+- U uncertainty
+- effective UBA weights
+- Metric3D depth prior
+- active window
+- BA parameters and iteration count
+
+必须确认保存的数据能够重建真实BA调用。
+
+Observer中的位姿记录不等于完整BA输入快照。
+
+不得用不完整日志伪造完整状态。
+
+生成：
+
+TASK004C_PHASE0_CHECKPOINT_AUDIT.md
+
+如果缺少完整张量快照，报告具体缺失内容并停止GPU实验，不擅自启动新的完整487帧运行。
+
+## 3. EXPERIMENT A: FIXED-STATE BA D TOGGLE
+
+### 3.1 Objective
+
+证明或否定：
+
+在完全相同的BA输入状态下，Metric3D深度正则D是否直接改变局部位姿优化结果。
+
+### 3.2 Candidate checkpoints
+
+优先检查Seed43：
+
+- E0: D=1,W=1,U=1。
+- E1: D=0,W=1,U=1。
+
+重点候选：
+
+E0:
+- trigger RGB328
+- BA550, BA551, BA552
+
+E1:
+- trigger RGB328
+- BA660, BA661, BA662
+
+必须确认：
+
+- RGB312和RGB328均处于有效pose window。
+- 两者在当前BA观测边中。
+- 对应direct edge有效。
+- 快照位于第一次目标BA调用之前。
+
+如原始归档无法恢复快照，不得仅凭BA编号推测状态。
+
+### 3.3 Paired replay
+
+对于每个完整快照：
+
+复制同一状态为两个分支。
+
+Branch A:
+- D=1
+- W=1
+- U=1
+
+Branch B:
+- D=0
+- W=1
+- U=1
+
+仅改变Metric3D深度正则是否注入。
+
+严格固定：
+
+- 初始poses
+- disparities
+- intrinsics
+- graph edges
+- source/target indices
+- correlation features
+- context
+- hidden state
+- U
+- UBA weights
+- optimizer
+- damping
+- iteration count
+- CUDA kernel
+- BA调用顺序
+
+两个分支必须使用同一份输入张量的独立副本。
+
+禁止在一个分支运行后直接使用其更新后的状态作为另一个分支输入。
+
+不执行keyframe accept/reject决策。
+
+不改变图结构。
+
+### 3.4 Measurements
+
+记录每次BA调用：
+
+1. pose translation increment。
+2. pose rotation increment。
+3. RGB312→RGB328 relative pose。
+4. translation direction error。
+5. fixed-scale displacement ratio。
+6. reprojection residual。
+7. Metric3D prior residual。
+8. uncertainty weights。
+9. disparity update norm。
+10. pose update norm。
+11. BA objective before/after。
+12. gradient and normal-equation contribution when available。
+13. negative disparity and clamp statistics。
+
+直接BA结果必须来自真实BA状态。
+
+不得使用Filler或插值位姿代替直接BA结果。
+
+### 3.5 Interpretation
+
+如果D=1在相同输入状态下持续产生更差的位姿更新，支持D的直接几何影响。
+
+如果两分支单次BA差异很小，但完整前端结果差异明显，则应重点检查多轮优化累积和关键帧选择。
+
+不得预先认定某个分支一定更好。
+
+## 4. EXPERIMENT B: FIXED KEYFRAME SCHEDULE CROSSOVER
+
+### 4.1 Objective
+
+分离D与关键帧选择、图结构变化之间的影响。
+
+### 4.2 Schedule sources
+
+使用Seed43原始Task004B记录：
+
+S1:
+- E0
+- D=1,W=1,U=1
+
+S0:
+- E1
+- D=0,W=1,U=1
+
+两组framewise keyframe decisions从RGB21开始出现差异。
+
+必须从共同初始化结束后的main-loop起点开始重放，不能从不同的已分叉状态直接比较。
+
+验证两组初始化状态和模型输入哈希。
+
+### 4.3 Four-arm crossover
+
+| Arm | D | Schedule |
+|---|---:|---|
+| B1 | 1 | S1 |
+| B2 | 0 | S1 |
+| B3 | 1 | S0 |
+| B4 | 0 | S0 |
+
+W=1,U=1固定。
+
+### 4.4 Freeze requirements
+
+每个Schedule必须冻结：
+
+- accepted/rejected RGB IDs
+- keyframe insertion order
+- keyframe cache update
+- active window
+- graph edge insertion/removal
+- BA call schedule
+- source/target edge indices
+- iteration count
+- keyframe eviction policy
+
+不能只冻结最终关键帧数量。
+
+同一Schedule内，D=1和D=0必须使用完全相同的关键帧和图结构调度。
+
+D允许改变BA优化输出，但不能改变外部强制调度。
+
+Final BA、Filler、初始化及其原始处理流程保持不变。
+
+### 4.5 Measurements
+
+每个Arm记录：
+
+- final keyframe IDs
+- graph topology
+- edge count
+- 312→328 local relative pose
+- 309→325
+- 301→353
+- Sim3 ATE
+- SE3 ATE
+- Translation RPE
+- Rotation RPE
+- Filler contribution
+- Final BA contribution
+- runtime and memory
+
+直接关键帧端点缺失时标记UNAVAILABLE。
+
+不得用Filler补齐后冒充直接关键帧BA结果。
+
+### 4.6 Interpretation
+
+比较：
+
+1. D=1 vs D=0 under S1。
+2. D=1 vs D=0 under S0。
+3. S1 vs S0 under D=1。
+4. S1 vs S0 under D=0。
+
+报告D效应、schedule效应及D×schedule交互。
+
+称为controlled keyframe-schedule intervention。
+
+不得直接宣称已经获得自然因果中介效应。
+
+## 5. SOURCE AND RESOURCE PROTECTION
+
+- 不修改原始R2 YAML。
+- 不修改原始模型权重。
+- 不重编译CUDA扩展。
+- 不修改永久网络配置。
+- 不删除历史实验数据。
+- 所有新增结果放入独立Task004C目录。
+- 保留原始源码及SHA256。
+- 不使用GT作为模型输入。
+
+GPU实验只在Phase0确认快照完整、可重放之后开始。
+
+若必须新增完整487帧运行才能采集缺失快照，先提交资源预算和修改清单，等待用户确认。
+
+## 6. NATIVE DROID-SLAM
+
+本轮不重新运行原生DROID-SLAM。
+
+沿用已经完成的严格R2 stride-1配对基线：
+
+- Original DROID-SLAM commit 2dfd39f0。
+- DROID-W commit c3414af6。
+- 92/92 paired segments。
+- 49,815 RGB frames。
+- 640×360。
+- Same RGB/K/segmentation/evaluation。
+- val_007完整487帧已有对照。
+
+不将DROID-W E8视为原生DROID-SLAM。
+
+不把DROID-SLAM加入D开关直接效应实验。
+
+## 7. STOP CONDITIONS
+
+如果发生：
+
+- 缺少完整checkpoint。
+- 两分支初始张量哈希不一致。
+- Graph edge不一致。
+- W/U意外变化。
+- D开关作用范围超出指定BA。
+- 无法冻结keyframe schedule。
+- CUDA/BA错误。
+- 数据或归档损坏。
+
+立即停止当前阶段。
+
+保留全部证据。
+
+不自动重试，不擅自增加实验组。
+
+## 8. DELIVERABLES
+
+TASK004C_PHASE0_CHECKPOINT_AUDIT.md
+
+TASK004C_A_FIXED_STATE_D_TOGGLE.csv
+
+TASK004C_A_BA_RESIDUAL_ANALYSIS.csv
+
+TASK004C_A_POSE_UPDATE_COMPARISON.csv
+
+TASK004C_B_KEYFRAME_SCHEDULE_MANIFEST.csv
+
+TASK004C_B_CROSSOVER_RESULTS.csv
+
+TASK004C_B_GRAPH_TOPOLOGY_COMPARISON.csv
+
+TASK004C_B_DIRECT_ENDPOINT_COMPARISON.csv
+
+TASK004C_DIRECT_VS_INDIRECT_EFFECT.md
+
+TASK004C_FINAL_RESEARCH_REVIEW.md
+
+Include original logs, snapshot hashes, exact configurations and SHA256 manifests.
+
+## 9. AUTHORIZATION BOUNDARY
+
+APPROVED:
+- Read-only Phase0 audit.
+- Experiment A fixed-state D toggle.
+- Experiment B fixed-keyframe schedule crossover.
+- Minimal isolated replay if existing checkpoints are complete.
+
+NOT APPROVED:
+- New native DROID-SLAM runs.
+- New datasets.
+- Full factorial D/W/U repetition.
+- Improved DROID-W algorithm implementation.
+- Automatic full 487-frame recapture if checkpoints are missing.
+- Task004D or further experiments.
+
+Finish both approved experiments and submit the review package.
+
+END OF TASK004C AUTHORIZATION

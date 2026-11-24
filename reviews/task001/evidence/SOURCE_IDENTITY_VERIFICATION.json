@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "repositories": {
+    "DROID-SLAM": {
+      "repository": "https://github.com/princeton-vl/DROID-SLAM",
+      "commit": "2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99",
+      "tree_sha1": "7ab46b59d34893957fe7c88d5d8d6e6bb842e4dc",
+      "snapshot": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-SLAM",
+      "local_branch": null,
+      "local_worktree_kind": "EXTRACTED_ARCHIVE_NO_GIT",
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\inputs\\DROID-SLAM-2dfd39f0dcad.tar.gz",
+      "archive_sha256": "8a942b151558ef293cd5eff260eaeef0ae88f576128776c91397eb7b1d9bdecf",
+      "archive_bytes": 2789434,
+      "tracked_entries": 106,
+      "blobs_verified": 104,
+      "gitlink_pointers_verified": 2,
+      "recursive_dependency_equivalence_verified": false,
+      "historical_intake_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/git_intake/DROID-SLAM",
+      "historical_intake_head": "2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99",
+      "historical_intake_branch": "NOT_RECORDED_IN_INVENTORY",
+      "historical_intake_status_rows": 0,
+      "historical_deployed_tracked_changes": 0,
+      "stale_gitmodules_entries": [],
+      "current_server_checked": false
+    },
+    "DROID-W": {
+      "repository": "https://github.com/MoyangLi00/DROID-W",
+      "commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+      "tree_sha1": "5b0eb293baf41b8267fc656ca34c23a7b421c44f",
+      "snapshot": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W",
+      "local_branch": null,
+      "local_worktree_kind": "EXTRACTED_ARCHIVE_NO_GIT",
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\inputs\\DROID-W-c3414af6047d.tar.gz",
+      "archive_sha256": "b5c9de72dd5a2cb7ad2c00274150cdf2b05bbabda7887b362a7abc234f11ee13",
+      "archive_bytes": 34384996,
+      "tracked_entries": 211,
+      "blobs_verified": 208,
+      "gitlink_pointers_verified": 3,
+      "recursive_dependency_equivalence_verified": false,
+      "historical_intake_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/git_intake/DROID-W",
+      "historical_intake_head": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+      "historical_intake_branch": "NOT_RECORDED_IN_INVENTORY",
+      "historical_intake_status_rows": 0,
+      "historical_deployed_tracked_changes": 0,
+      "stale_gitmodules_entries": [
+        "thirdparty/eigen",
+        "thirdparty/evaluate_3d_reconstruction_lib",
+        "thirdparty/fit3d"
+      ],
+      "current_server_checked": false
+    }
+  },
+  "ledgers": {
+    "file_rows": 285,
+    "file_status": {
+      "ADDED": 179,
+      "MODIFIED": 7,
+      "DELETED": 74,
+      "RELOCATED_MODIFIED": 22,
+      "RELOCATED_IDENTICAL": 2,
+      "UNCHANGED": 1
+    },
+    "symbol_rows": 1003,
+    "symbol_status": {
+      "ADDED": 636,
+      "REMOVED": 217,
+      "RAW_IDENTICAL": 57,
+      "CHANGED": 82,
+      "STRUCTURAL_EQUAL": 11
+    },
+    "symbol_scope": "Historical AST/lexical index; current checks cover file pairs and line bounds."
+  },
+  "matched_r2": {
+    "final_status": "COMPLETE",
+    "pairs": 92,
+    "sequences": 47,
+    "frames": 49815,
+    "segment": {
+      "segment": "val_007_full_00001-00487",
+      "sequence": "val_007",
+      "environment": "Night",
+      "calibration_branch": "FIXED_K_NATIVE_RESIZE",
+      "first_rgb": "1",
+      "last_rgb": "487",
+      "input_frames": "487",
+      "slam_status": "COMPLETE",
+      "wild_status": "COMPLETE",
+      "slam_valid_poses": "487",
+      "wild_valid_poses": "487",
+      "slam_keyframes": "77",
+      "wild_keyframes": "85",
+      "gt_path_game_units": "565.113934072132",
+      "slam_ate_sim3_game_units": "8.557823850294776",
+      "wild_ate_sim3_game_units": "53.13085787013349",
+      "slam_ate_se3_game_units": "146.03155333684066",
+      "wild_ate_se3_game_units": "146.91639340877802",
+      "slam_ate_sim3_path_pct": "1.5143537142374626",
+      "wild_ate_sim3_path_pct": "9.401795755995602",
+      "slam_scale_est_to_gt": "19.337889409844603",
+      "wild_scale_est_to_gt": "19.171099852265705",
+      "normalized_ate_gap_wild_minus_slam_pp": "7.887442041758139",
+      "paired_scored": "True",
+      "normalized_ate_winner": "DROID-SLAM",
+      "slam_relative_sim3_improvement_pct": "83.89293116400931",
+      "sim3_ate_gap_wild_minus_slam_game_units": "44.573034019838715"
+    },
+    "stride": 1,
+    "input_manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+    "matched_outside_stride1_results_used": false
+  }
+}

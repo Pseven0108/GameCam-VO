@@ -1,0 +1,58 @@
+{
+  "state": "E0",
+  "depth_pixels": 43200,
+  "valid_prior_pixels": 43196,
+  "initial_disparity": {
+    "n": 43200,
+    "finite": 43200,
+    "min": 9.999999747378752e-06,
+    "median": 0.0758553147315979,
+    "p95": 0.17845532223582264,
+    "max": 0.6460077166557312,
+    "l2": 19.99307611372683
+  },
+  "mono_disparity": {
+    "n": 43200,
+    "finite": 43200,
+    "min": 0.0,
+    "median": 0.07412552461028099,
+    "p95": 0.18446400985121725,
+    "max": 0.6517321467399597,
+    "l2": 21.10420977772289
+  },
+  "initial_mono_difference": {
+    "n": 43200,
+    "finite": 43200,
+    "min": -0.1785599971190095,
+    "median": 0.0026645734906196594,
+    "p95": 0.04201080836355682,
+    "max": 0.084381980355829,
+    "l2": 6.873056149622997
+  },
+  "initial_C_geometry": {
+    "n": 43200,
+    "finite": 43200,
+    "min": 5.993247845395787e-05,
+    "median": 0.17325284286054327,
+    "p95": 29.35647050896373,
+    "max": 211.17928220014926,
+    "l2": 3876.7047745284876
+  },
+  "prior_C": 0.01,
+  "fraction_prior_C_gt_geometry_on_prior_support": 0.11672377071951107,
+  "b_geometry_l2": 5.056123077842255,
+  "b_prior_l2": 0.06872691333920027,
+  "fraction_abs_bprior_gt_bgeometry": 0.37475692193721644,
+  "eta": {
+    "n": 43200,
+    "finite": 43200,
+    "min": 1.0000000116860974e-07,
+    "median": 1.0927576710173525e-07,
+    "p95": 2.12710856430931e-05,
+    "max": 0.007653518579900265,
+    "l2": 0.016142351552844048
+  },
+  "full_schur_condition_number": null,
+  "full_schur_not_captured": true,
+  "classification": "CPU_RECONSTRUCTION_INITIAL_LINEARIZATION_ONLY"
+}

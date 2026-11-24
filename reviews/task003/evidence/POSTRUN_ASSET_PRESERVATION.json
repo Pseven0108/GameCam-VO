@@ -1,0 +1,87 @@
+{
+  "base_hashes": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/tracker.py",
+      "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "bytes": 8158
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/motion_filter.py",
+      "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "bytes": 6223
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py",
+      "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "bytes": 10646
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/slam.py",
+      "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "bytes": 13630
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/factor_graph.py",
+      "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "bytes": 22050
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/depth_video.py",
+      "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "bytes": 45293
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/trajectory_filler.py",
+      "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "bytes": 5510
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/eval_traj.py",
+      "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "bytes": 7372
+    }
+  ],
+  "weights": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth",
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "bytes": 16061701
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "bytes": 88283296
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "bytes": 1647972663
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors",
+      "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "bytes": 88245200
+    }
+  ],
+  "extension": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "bytes": 2461696
+    }
+  ],
+  "historical_R2": [
+    {
+      "path": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/results/val_007_full_00001-00487/attempt_001/native_config.yaml",
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "bytes": 3371
+    },
+    {
+      "path": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/results/val_007_full_00001-00487/attempt_001/trajectory.npz",
+      "sha256": "7db5457fd92a43e6f3bd4408c4f7f14e84c53c0449a2b51e7dd756894a03054a",
+      "bytes": 26217
+    }
+  ],
+  "jpeg_count": 487,
+  "status": "PASS_NO_ASSET_DRIFT"
+}

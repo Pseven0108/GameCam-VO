@@ -1,0 +1,130 @@
+{
+  "hostname": "jupyter-i79kcwfcpprebhvm",
+  "endpoint": "sc01-ssh.gpuhome.cc:30448",
+  "workspace_exists": true,
+  "source_exists": true,
+  "disk": {
+    "total": 105089261568,
+    "used": 78454575104,
+    "free": 26617909248
+  },
+  "shm": {
+    "total": 25769803776,
+    "used": 0,
+    "free": 25769803776
+  },
+  "GPU_queries": 0,
+  "cuda_initialized": false,
+  "models_loaded": false,
+  "remote_mutations": 0,
+  "HEAD": {
+    "exit_code": 0,
+    "stdout": "668a88c74c7f7a88a572679d2bd8e86c0a05514b\n",
+    "stderr": ""
+  },
+  "status": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "parent": {
+    "exit_code": 0,
+    "stdout": "0931141cf88247dc8fb0c7628c1d91b6531fea90\n",
+    "stderr": ""
+  },
+  "tracked_count": 3737,
+  "audit_exists": true,
+  "release_audit": {
+    "baseline_commit": "0931141cf88247dc8fb0c7628c1d91b6531fea90",
+    "new_full_candidate_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+    "parent_is_exact_baseline": true,
+    "forbidden_local_text_commit_used": false,
+    "original_candidate_paths_unchanged": 3721,
+    "protected_asset_pins_unchanged": 14,
+    "original_118_record_sha256": "d594db46b3d640c8fc59998836099f12066c6ae18d8d11e3cbfefdfa98a7cabd",
+    "CPU_report_sha256": "2015fb395581a92c2f3f83504c65aad6369fefe9e0d7d1180db80818ae39a396",
+    "tests_total": 152,
+    "tests_passed": 152,
+    "protected_math_and_C_CUDA_paths_unchanged": 1906,
+    "native_extension_call_AST_unchanged": true,
+    "changed_paths": "A\tconfigs/B1.yaml\nA\tconfigs/B2.yaml\nA\tconfigs/B3.yaml\nA\tconfigs/B4.yaml\nA\tconfigs/identity_lock.json\nM\tnative_control/admission.py\nM\tnative_control/binding.py\nA\tnative_control/file_backed.py\nM\tnative_control/install.py\nM\tnative_control/snapshot.py\nA\tnative_control/storage_budget.py\nM\trunner/run_experiment.py\nM\trunner/run_native_smoke.py\nM\tsrc/depth_video.py\nA\ttests/__init__.py\nA\ttests/file_support.py\nA\ttests/fixtures.py\nA\ttests/run_cpu_tests.py\nA\ttests/run_native_cpu_tests.py\nA\ttests/run_release_cpu_tests.py\nA\ttests/test_control.py\nA\ttests/test_native.py\nA\ttests/test_release_fixes.py",
+    "storage_gate_CPU_only": {
+      "backend": "owned_file_mmap",
+      "native_large_CPU_storage_bytes": 2246400000,
+      "extra_data_disk_reservation_bytes": 2263177216,
+      "required_shm_bytes": 67108864,
+      "validation_passed": true,
+      "issues": [],
+      "residual_shm_is_static_envelope_not_native_measurement": true,
+      "native_Tracker_Rerun_GPU_validation_passed": false
+    },
+    "certificate": {
+      "schema": "GAMECAM_FILE_BACKED_CPU_VALIDATION_V1",
+      "PASS": true,
+      "total_tensor_bytes": 2246400000,
+      "shm_delta_bytes": 61440,
+      "torch_distribution_version": "2.1.0+cu118",
+      "file_backed_module_sha256": "9eb99974da124fa78f75a7a977fdac738247761751db62f58a2c7c2554394cf7",
+      "baseline_commit": "0931141cf88247dc8fb0c7628c1d91b6531fea90",
+      "test_report_sha256": "2015fb395581a92c2f3f83504c65aad6369fefe9e0d7d1180db80818ae39a396",
+      "full_proof_sha256": "fc35539567d255f3d5d684e10789a87af2ecfb8e29e6342508a0cf4995df7dc2",
+      "native_Tracker_Rerun_GPU_validated": false,
+      "GPU_execution_authorized_this_task": false
+    },
+    "budget_fixture": {
+      "scope": "CPU_SYNTHETIC_FIXTURE_NOT_REAL_C0",
+      "plan": {
+        "schema": "GAMECAM_EXACT_SERIALIZED_BUDGET_V1",
+        "serialized_tensor_files_bytes": 36244,
+        "manifest_bytes": 2286,
+        "complete_bytes": 86,
+        "exact_checkpoint_logical_bytes": 38616,
+        "file_count": 5,
+        "filesystem_block_bytes": 4096,
+        "rounded_file_data_reservation_bytes": 53248,
+        "filesystem_metadata_reserve_bytes": 16777216,
+        "retained_scratch_reserve_bytes": 536870912,
+        "safety_floor_bytes": 10737418240,
+        "minimum_free_before_save_bytes": 11291119616,
+        "physical_filesystem_overhead_is_exact": false,
+        "logical_serialization_bytes_are_exact": true,
+        "unique_runtime_storage_bytes": 32830
+      },
+      "actual_logical_bytes": 38616,
+      "actual_allocated_file_bytes": 53248,
+      "exact_logical_match": true,
+      "complete_real_C0_bytes": null,
+      "cuda_initialized": false
+    },
+    "synthetic_temp_payloads_removed": [
+      {
+        "file": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+        "inode": 4989025,
+        "bytes": 1382400000,
+        "sha256": "a8dfb679d15a7c9f633de2514bc8c8f4964298150ee5316a88356f3101399b37"
+      },
+      {
+        "file": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+        "inode": 4989026,
+        "bytes": 864000000,
+        "sha256": "6f076cad73179bc6dd2549244e494106ac2b5d5cb8812e8fd3cfdb9a9281c9e0"
+      }
+    ],
+    "historical_files_deleted": 0,
+    "data_disk_after": {
+      "total": 105358065664,
+      "used": 78454804480,
+      "free": 26886483968
+    },
+    "shm_after": {
+      "total": 2147483648,
+      "used": 0,
+      "free": 2147483648
+    },
+    "cuda_initialized": false,
+    "GPU_queries": 0,
+    "model_runs": 0,
+    "real_C0_created": false,
+    "RGB_prefixes_executed": 0
+  }
+}

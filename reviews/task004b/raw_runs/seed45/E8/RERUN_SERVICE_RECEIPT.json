@@ -1,0 +1,29 @@
+{
+  "pid": 8086,
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun",
+    "--bind",
+    "127.0.0.1",
+    "--port",
+    "9875",
+    "--serve-web",
+    "--web-viewer-port",
+    "9876",
+    "--ws-server-port",
+    "9877",
+    "--server-memory-limit",
+    "768MB",
+    "--save",
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E8/attempt_001_7b26a118a60b/native_rerun.rrd"
+  ],
+  "listeners": [
+    {
+      "port": 9875,
+      "address": "0100007F",
+      "table": "tcp",
+      "inode": "14131375"
+    }
+  ],
+  "browser_rendering": "NOT_REQUIRED_NOT_VERIFIED",
+  "recording_path": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E8/attempt_001_7b26a118a60b/native_rerun.rrd"
+}

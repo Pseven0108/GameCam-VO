@@ -1,0 +1,1066 @@
+{
+  "stage": "task004a-readiness",
+  "source_package": "experiments/DROID_W_TASK004A_RELEASE_READINESS/GAMECAM_TASK004A_RELEASE_READINESS_REVIEW.zip",
+  "source_package_bytes": 555128,
+  "source_package_sha256": "49a6f95b91f8b8a6957d99c5486acf845129a00f036f41538cf7575459cd2bf6",
+  "original_CRC": "PASS",
+  "included_count": 172,
+  "excluded_count": 3,
+  "full_original_package_uploaded": false,
+  "entrypoint": "reviews/task004a-readiness/TASK004A_FINAL_REVIEW.md",
+  "included": [
+    {
+      "archive_member": "_local_probe/probe_05/browser.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/browser.stderr.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/browser.stdout.txt",
+      "bytes": 212,
+      "sha256": "3845e305941ed45414ba9a74d93cd9b4f9707bb51fbb62dda5aa01f888bd0c18",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/browser.stdout.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/browser_transport.json",
+      "bytes": 232,
+      "sha256": "efe1082e7053d4d1e3017e59820a30f335cf3cae81e3ed77a060cdf16304a510",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/browser_transport.json"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/emitter.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/emitter.stderr.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/emitter.stdout.txt",
+      "bytes": 414,
+      "sha256": "4488134012f5445cc8e8c62bb74bcd8c963e362606434774dabedc9d755e8938",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/emitter.stdout.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/rerun.stderr.txt",
+      "bytes": 136,
+      "sha256": "5182c0793624a614bdb3681a1f9a318bf15c5b9921ebcc3c7467bc14a8fc3764",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/rerun.stderr.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/rerun.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/rerun.stdout.txt"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/RERUN_LOCAL_PROBE_RESULT.json",
+      "bytes": 1739,
+      "sha256": "37b4b52b9245c828028b0f97facf58ee68ed1f6c6a54e5d6e688eb721ae6b903",
+      "repository_path": "reviews/task004a-readiness/_local_probe/probe_05/RERUN_LOCAL_PROBE_RESULT.json"
+    },
+    {
+      "archive_member": "assets/candidates/preview/src/depth_video.py",
+      "bytes": 45982,
+      "sha256": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/src/depth_video.py"
+    },
+    {
+      "archive_member": "assets/candidates/preview/src/factor_graph.py",
+      "bytes": 22206,
+      "sha256": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/src/factor_graph.py"
+    },
+    {
+      "archive_member": "assets/candidates/preview/src/frontend.py",
+      "bytes": 11522,
+      "sha256": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/src/frontend.py"
+    },
+    {
+      "archive_member": "assets/candidates/preview/src/slam.py",
+      "bytes": 14088,
+      "sha256": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/src/slam.py"
+    },
+    {
+      "archive_member": "assets/candidates/preview/src/trajectory_filler.py",
+      "bytes": 5817,
+      "sha256": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/src/trajectory_filler.py"
+    },
+    {
+      "archive_member": "assets/candidates/preview/task003_observer.py",
+      "bytes": 16508,
+      "sha256": "1d9173fad166f2563d68a010b8efe98ff326ecf24d54ec4b265a80107a4abea6",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/preview/task003_observer.py"
+    },
+    {
+      "archive_member": "assets/candidates/r2_sealed_config.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/r2_sealed_config.yaml"
+    },
+    {
+      "archive_member": "assets/candidates/task004_controls.py",
+      "bytes": 3323,
+      "sha256": "acea04ebaee3f9b6356c57eb88909dcc9abbd5ebdd15effcf9bd54178d0100b8",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/task004_controls.py"
+    },
+    {
+      "archive_member": "assets/candidates/TASK004_ON_TASK003.diff",
+      "bytes": 15117,
+      "sha256": "1deb7a9869d57d7fba8f6d6e994a0028f900e20ee6943a8794a3ade073e8c2e3",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/TASK004_ON_TASK003.diff"
+    },
+    {
+      "archive_member": "assets/candidates/task004_run_segment.py",
+      "bytes": 11685,
+      "sha256": "f7b7111ea75358921740a57e9dbce0c884cfc7a3850e00e4136a6e84d67220ac",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/task004_run_segment.py"
+    },
+    {
+      "archive_member": "assets/candidates/TASK004_RUNNER_REFERENCE_DIFF.diff",
+      "bytes": 2389,
+      "sha256": "bd3e071adc39e685f163d78222365ecf0b7e86cbb0d9c100a5aa2cfc2eddbe1e",
+      "repository_path": "reviews/task004a-readiness/assets/candidates/TASK004_RUNNER_REFERENCE_DIFF.diff"
+    },
+    {
+      "archive_member": "assets/evidence/SOURCE_AND_CANDIDATE_IDENTITY.json",
+      "bytes": 7525,
+      "sha256": "9aa70e872823a4f6b92a39e8eb051b48766b7393887142ddd15ae9f918ea12bf",
+      "repository_path": "reviews/task004a-readiness/assets/evidence/SOURCE_AND_CANDIDATE_IDENTITY.json"
+    },
+    {
+      "archive_member": "assets/policies/E0.json",
+      "bytes": 247,
+      "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E0.json"
+    },
+    {
+      "archive_member": "assets/policies/E1.json",
+      "bytes": 247,
+      "sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E1.json"
+    },
+    {
+      "archive_member": "assets/policies/E2.json",
+      "bytes": 247,
+      "sha256": "7ef39b96a69139a4a2d07d404d3cdbb37516f4bff5d8ac520529e1b0d5f6eb85",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E2.json"
+    },
+    {
+      "archive_member": "assets/policies/E3.json",
+      "bytes": 247,
+      "sha256": "d91c5a0c6a702f86f3d81e8623088ac7dd787df6efa5a70acb4e4156a9e2a4ca",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E3.json"
+    },
+    {
+      "archive_member": "assets/policies/E4.json",
+      "bytes": 247,
+      "sha256": "55ba54a86e3938158fb4910532b65c26b1fb0919b84ce253819470560d6b4d8e",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E4.json"
+    },
+    {
+      "archive_member": "assets/policies/E6.json",
+      "bytes": 247,
+      "sha256": "6e2df5994153531597ca43be109a5ca80acd510389c090d049353271c47dff8d",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E6.json"
+    },
+    {
+      "archive_member": "assets/policies/E7.json",
+      "bytes": 247,
+      "sha256": "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E7.json"
+    },
+    {
+      "archive_member": "assets/policies/E8.json",
+      "bytes": 247,
+      "sha256": "64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed",
+      "repository_path": "reviews/task004a-readiness/assets/policies/E8.json"
+    },
+    {
+      "archive_member": "assets/policies/F0.json",
+      "bytes": 246,
+      "sha256": "a93ce75d82b081e8ff64258d077dcd3fc93edb27c566583c6452206057b2a868",
+      "repository_path": "reviews/task004a-readiness/assets/policies/F0.json"
+    },
+    {
+      "archive_member": "assets/policies/F1.json",
+      "bytes": 246,
+      "sha256": "979d5ca2439eafd6bf2749eadd615bdfa4f06ae170919b56504ea775489b1b19",
+      "repository_path": "reviews/task004a-readiness/assets/policies/F1.json"
+    },
+    {
+      "archive_member": "assets/policies/F2.json",
+      "bytes": 246,
+      "sha256": "a9a48ca50917d8e56ba8a97a79e74133d258bd53849ed38e66aa50d00fd57a34",
+      "repository_path": "reviews/task004a-readiness/assets/policies/F2.json"
+    },
+    {
+      "archive_member": "assets/TASK004_FACTORIAL_MATRIX.csv",
+      "bytes": 968,
+      "sha256": "a36501bd7f9e2e98da007f0758ad69e2d914123c2ea8b751e0e773f5246d428d",
+      "repository_path": "reviews/task004a-readiness/assets/TASK004_FACTORIAL_MATRIX.csv"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "823ba428d4ec0f62b342cc69ad8fa4a004e4973445717ded3d98880d9cdb45dc",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "bee429534dc872f00ba488e39c2204c52a6ec76256751e23b12af4978df898ae",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "e23382c0e3a8666a8b63178b500c928e579d416b5948520b519e0d9d8e67c43b",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "2aef9be3f35d3864a4e8b2650ce216b18b5a89e5462b443dd2d827c0bac95ede",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "89f28f80d94dc117af7820ff6dde4570b9cbdbd0e40b03ad7bcc64b68ee8187a",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/01-E3-4292babdd1fe/VALIDATION_RECEIPT.json",
+      "bytes": 11506,
+      "sha256": "94b8b17c897e53ba1acf0e599e9e1eff5f7b4350ae06fa53c8417bd402f9977a",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/01-E3-4292babdd1fe/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "4532329a421f8c63203e3d98c83b49a8e538aeded454f81956c19da455e1b69e",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/LAUNCH_RECEIPT.json",
+      "bytes": 1305,
+      "sha256": "754a386dff27a5a7f4d7fd92b90acc35ad34ea8826eb03d77b29e6cb2261eb72",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "4a1d5acf099f5da2f4c0220eb4205ba50032f66505071f5b2dd04677fc5bafe5",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/PROCESS_RECEIPT.json",
+      "bytes": 139,
+      "sha256": "0e8e7bf6fb61b910be253bc78e715063dd5558c7641dfd1f5ab3bdda6879cf56",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "f14aa707934e01a79172fd9e4ad8a02fb7527a1747f06300700968781d0f7e31",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/02-E4-8d4b24fe9091/VALIDATION_RECEIPT.json",
+      "bytes": 11823,
+      "sha256": "4f65db558bb0ed1f41ee92491cb6a0ca87e89ae7478eb7b37a58cdb383cddfdc",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/02-E4-8d4b24fe9091/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "dd393c97dc64624b7e6674a6a391f7b6757555d485c9659f983278b71f3744f9",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "5180feb411ec5d57b44e51ade2c74d4ef1070efa984b5c10274206773a2a06ba",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "9a2b7f876501da860b7e446143ea41f70482c6427415476a1fa31e66e9e58a3e",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/PROCESS_RECEIPT.json",
+      "bytes": 139,
+      "sha256": "7b71e125d39410f235c59379288c1fa3b6733824fb45900ee9f96ad6ac0ef930",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "e429850bb633113285bf7ff46122aa16e4d4d852dcd04f67fb3f684143ad39d9",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/03-E7-f4a5e48622c5/VALIDATION_RECEIPT.json",
+      "bytes": 11395,
+      "sha256": "5d6fc59e73185ad2861061058ade2eaf621af8844de0cbab1524a09972c7b6aa",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/03-E7-f4a5e48622c5/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "8c495702ff762c471cd9a5f91c3e866118ab6660e3e2f3f45a18b07352838e5d",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "3af2439aff47931474fd8c73ad3b6eb59b1637213169361bc8682d524bc8482c",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "451d3fc9c504f5b0be25aa7d8654d27824c313d47d2a39b5bf61b70b34035215",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "d66461e5de953992fe12b447bb62d7a3792f96b2004814db5202a7d32a2508dc",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/VALIDATION_RECEIPT.json",
+      "bytes": 11941,
+      "sha256": "ad4c845d659e0c44e683177d365b81ec941ddc4226e148e5d954ce0d6f4569da",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/04-E0-5cd5e5daf30f/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "5ac05a081b3acda193fec454f63ec823a068c6fa48e275620cf95ec36be9a491",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "309b6a84540a2b1f1962d5e0a3f8f3a40c082adecb8a9ed049bee513b0082232",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "7a2cf1e4562a7196b9f8d61cddf28b3bc0497d22a8213267e3895cfb0e6c0188",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "124d79fffc2df1c8d1114af2385bf92e5b60e35891b433dec94bb030ff90f694",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "adb9d6de4f4c147bfb064e2f55df6e4c3980259553b98b95be1b3d1336b65795",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/05-E8-59b4142748b2/VALIDATION_RECEIPT.json",
+      "bytes": 11415,
+      "sha256": "98be835788ff671d5bbe0a0a4dcab2733c1631d67ff47e32036249e8aae151de",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/05-E8-59b4142748b2/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "8ff1a3462812a5fc2ce61cba0e1021cb015e6ccc98db54de0fe5b568ac960dd9",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "59c7384239637972c6757e72fb142b36b599d8e48e537b43772786a7d8f07603",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "eac3b53208ab50966e937add1642cebe48f3533e024ec54a0d0b4a63530dcf42",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "df774b4c204ef7028f84c141cd5d447f99285d118a0af546e34164f9e46ef454",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "1411a573a1612764d3b0fdfcd03a2ab6db5bb388564283a280575492edec3fce",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/06-E6-df0dda8a478c/VALIDATION_RECEIPT.json",
+      "bytes": 11408,
+      "sha256": "79e49ac2e179a785e9d35b6fbcd7b8d1ae8e7c017564564d3260202b9a081ef7",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/06-E6-df0dda8a478c/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "d88a9177bd116e526956f5aa8165621fad25b36e7b3430ad333123ae055a8176",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "35a9f4b1597c86be6b3685d6b56de8703657b562d5e5af3390a95c0e0fb127d1",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "110fd03876d87c9e14d1cf0e6136b861daa68c6b4b2c7a466a0f01761cfaebb1",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "47af29433bf289c6ef6888a98926bf3e29e06080283631f8ff7e629a087256c7",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "49b2ea6840e63224b54f5804344169c5c5ea3597a972702fd4e89e6545d93e68",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/VALIDATION_RECEIPT.json",
+      "bytes": 11497,
+      "sha256": "b4b96fe848e36434fd90b2d024694fe98e058b39b16e534a30279d58f8a85f58",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/07-E1-6f7b6a454f2e/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/LAUNCH_INTENT.json",
+      "bytes": 1264,
+      "sha256": "9c3fb084e1f9e09643a25ecf7dc4bde1b5d39d02cb3a2ad9ff0e1fb32d516d64",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/LAUNCH_INTENT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/LAUNCH_RECEIPT.json",
+      "bytes": 1306,
+      "sha256": "d3a383e0a3ecd51257b7e69ff6010a37291d25af9e598002c9a24cca790ae806",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/LAUNCH_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/process.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/process.stderr.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/process.stdout.txt",
+      "bytes": 49,
+      "sha256": "c33a544b311a280a82b9c3bd6d5e845ebde5f4a77ba691b52a0c8c789947bf1f",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/process.stdout.txt"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/PROCESS_RECEIPT.json",
+      "bytes": 140,
+      "sha256": "e3318f307e036aefb7be3510d44f2d997409925d246f407b81cfc917bfc2e2d6",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/PROCESS_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/task004_policy_receipt.json",
+      "bytes": 195,
+      "sha256": "25be19e2d46d6bad0b8ceccf4079407291b0a876e5a87e19c091592efdcf2741",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/task004_policy_receipt.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/08-E2-c90ff2ea9871/VALIDATION_RECEIPT.json",
+      "bytes": 11929,
+      "sha256": "6239c3fee67bedf50edbfa6bb9be5d579141fcb54294892c5f435c449a722a82",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/08-E2-c90ff2ea9871/VALIDATION_RECEIPT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/CAMPAIGN_CLAIM.json",
+      "bytes": 229,
+      "sha256": "4896aca5a364b9c1164fcc8dc58006a2bd17a1ef6cf75119b12167af31464b02",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/CAMPAIGN_CLAIM.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/CAMPAIGN_RESULT.json",
+      "bytes": 547,
+      "sha256": "04a3a14caac936b56a943bc3fdba34ca894b4d179545c8b73794e13f4c4dd475",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/SYNTHETIC_DIRECT_KEYFRAME_ENDPOINT_METRICS.csv",
+      "bytes": 1933,
+      "sha256": "ba3f66b7d5018359d96957b56666e1b378877871fa48ed9babb97e424f2c3bed",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/SYNTHETIC_DIRECT_KEYFRAME_ENDPOINT_METRICS.csv"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/SYNTHETIC_ENDPOINT_RETENTION.csv",
+      "bytes": 1774,
+      "sha256": "5bb3065b807df6160bb3f60ffda245cfbf7d5329feb39ebd1501dc1437297212",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/SYNTHETIC_ENDPOINT_RETENTION.csv"
+    },
+    {
+      "archive_member": "evaluation/mock_campaign_03/SYNTHETIC_FIXED_RGB_ENDPOINT_METRICS.csv",
+      "bytes": 2110,
+      "sha256": "488665439f5725cdf1a43ecef28e1c9e00b905ba4a31f8bc8a0790de91dce03c",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_campaign_03/SYNTHETIC_FIXED_RGB_ENDPOINT_METRICS.csv"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/01-E3-4292babdd1fe.verified.json",
+      "bytes": 6395,
+      "sha256": "f7b9d05d21a1ae6cdee95d60d72ce87f6b8c3b2aaf2550902305d96edc53e08f",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/01-E3-4292babdd1fe.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/02-E4-8d4b24fe9091.verified.json",
+      "bytes": 6395,
+      "sha256": "8f64187e768e46054ae2d9849248b239448b7c773cbf72892b02d1f9aed024e6",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/02-E4-8d4b24fe9091.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/03-E7-f4a5e48622c5.verified.json",
+      "bytes": 6395,
+      "sha256": "a88093ced68073bbf230def5682384de065399f805f6e463fc3b882524c0c9e6",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/03-E7-f4a5e48622c5.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/04-E0-5cd5e5daf30f.verified.json",
+      "bytes": 6395,
+      "sha256": "da6531a478495e1abbfb505f81827a064571af323916af307b87a4d5fa3b0f2b",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/04-E0-5cd5e5daf30f.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/05-E8-59b4142748b2.verified.json",
+      "bytes": 6395,
+      "sha256": "992972eacc8c71262080d093feb76921ab88464c66ba1bc305a642176083d801",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/05-E8-59b4142748b2.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/06-E6-df0dda8a478c.verified.json",
+      "bytes": 6395,
+      "sha256": "b3b3491ac54a56525d63f4b560a2157232f81a82803b01e6cc69d25ef2456d8d",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/06-E6-df0dda8a478c.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/07-E1-6f7b6a454f2e.verified.json",
+      "bytes": 6395,
+      "sha256": "1611e2ac308f539df15598049242f7a65d1c80bbd511e79411f070d29141f3aa",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/07-E1-6f7b6a454f2e.verified.json"
+    },
+    {
+      "archive_member": "evaluation/mock_receiver_03/08-E2-c90ff2ea9871.verified.json",
+      "bytes": 6395,
+      "sha256": "2d3e9ea79545bd708138514684bda18e2157164970c9aeb249ca4e8e2d20c7d2",
+      "repository_path": "reviews/task004a-readiness/evaluation/mock_receiver_03/08-E2-c90ff2ea9871.verified.json"
+    },
+    {
+      "archive_member": "evaluation/safety_tests_02/child_failed_run/CAMPAIGN_RESULT.json",
+      "bytes": 442,
+      "sha256": "223405c5cfd4f5694af05b4d8277fc10dd35a4d1eb8e3a28db64e4605821689e",
+      "repository_path": "reviews/task004a-readiness/evaluation/safety_tests_02/child_failed_run/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evaluation/safety_tests_02/copy_failed_run/CAMPAIGN_RESULT.json",
+      "bytes": 440,
+      "sha256": "ea089a70de879c3854648cc4a35e54806098cc2be7b7fc72400f0ba187cfba18",
+      "repository_path": "reviews/task004a-readiness/evaluation/safety_tests_02/copy_failed_run/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evaluation/safety_tests_02/disk_failed_run/CAMPAIGN_RESULT.json",
+      "bytes": 437,
+      "sha256": "a177b609565d69e6d4709b83e5ccb58bc1ca8dfe73cbe3f5334ae8e6de01dee4",
+      "repository_path": "reviews/task004a-readiness/evaluation/safety_tests_02/disk_failed_run/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evaluation/safety_tests_02/next_space_run/CAMPAIGN_RESULT.json",
+      "bytes": 461,
+      "sha256": "73adbdeb14166846ce7b0db2d287feb24299f738d8a7af0c714d3f77cfe27dfc",
+      "repository_path": "reviews/task004a-readiness/evaluation/safety_tests_02/next_space_run/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evaluation/safety_tests_02/trace_failed_run/CAMPAIGN_RESULT.json",
+      "bytes": 446,
+      "sha256": "63cc3afcfeddf6e11ae6b376b0c587684caffb3fa52272e1d6029d8ff5461f31",
+      "repository_path": "reviews/task004a-readiness/evaluation/safety_tests_02/trace_failed_run/CAMPAIGN_RESULT.json"
+    },
+    {
+      "archive_member": "evidence/F0_CONTROL_FLOW_CPU_MOCK.json",
+      "bytes": 3255,
+      "sha256": "427739576c4e21f2d1ff508608f9e9523c05829bbcecb67e4ebeac507c02900b",
+      "repository_path": "reviews/task004a-readiness/evidence/F0_CONTROL_FLOW_CPU_MOCK.json"
+    },
+    {
+      "archive_member": "evidence/FROZEN_SOURCE_AND_HISTORY_RECHECK.json",
+      "bytes": 52964,
+      "sha256": "3bdf3f41c8236641e83a10b5fceaab170d1dcb774ca6022360230f2434c7627a",
+      "repository_path": "reviews/task004a-readiness/evidence/FROZEN_SOURCE_AND_HISTORY_RECHECK.json"
+    },
+    {
+      "archive_member": "evidence/MOCK_ARCHIVES_RECHECK.json",
+      "bytes": 2583,
+      "sha256": "0bc17fb95355ceccd180aa8edbef02ed307bcbf1acf248c9b5799205fe351c09",
+      "repository_path": "reviews/task004a-readiness/evidence/MOCK_ARCHIVES_RECHECK.json"
+    },
+    {
+      "archive_member": "evidence/TASK003_HISTORICAL_REPLAY.json",
+      "bytes": 11019,
+      "sha256": "d95f4d19d2659b775546f0c3741da8e2a745eee150fca42f22068f6aa5bce2c1",
+      "repository_path": "reviews/task004a-readiness/evidence/TASK003_HISTORICAL_REPLAY.json"
+    },
+    {
+      "archive_member": "evidence/TASK004_INPUT_ARCHIVE_VERIFICATION.json",
+      "bytes": 409,
+      "sha256": "fef974e4de169bc1178bd839156881a262d9ef91121046156986000be7858f9d",
+      "repository_path": "reviews/task004a-readiness/evidence/TASK004_INPUT_ARCHIVE_VERIFICATION.json"
+    },
+    {
+      "archive_member": "EXECUTION_LOG.md",
+      "bytes": 1546,
+      "sha256": "f71e5db1d9f2734cc445e446cf2cfc956718b8532bc39823d984009fc2d9dcec",
+      "repository_path": "reviews/task004a-readiness/EXECUTION_LOG.md"
+    },
+    {
+      "archive_member": "fixtures/mock_child.py",
+      "bytes": 8085,
+      "sha256": "6e5efd1e6e4230523661dcb93ccc2bcc356c6761ef103b720719d560e770a2af",
+      "repository_path": "reviews/task004a-readiness/fixtures/mock_child.py"
+    },
+    {
+      "archive_member": "logs/historical_replay.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/historical_replay.exit.txt"
+    },
+    {
+      "archive_member": "logs/historical_replay.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/historical_replay.stderr.txt"
+    },
+    {
+      "archive_member": "logs/historical_replay.stdout.txt",
+      "bytes": 117,
+      "sha256": "213407ae6f33e8ca3b0919db1d0cf779a42ae4004d31150e236b4da961798e3c",
+      "repository_path": "reviews/task004a-readiness/logs/historical_replay.stdout.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_01.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_01.exit.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_01.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_01.stderr.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_01.stdout.txt",
+      "bytes": 414,
+      "sha256": "b88e8056a987b000d5c24de616f427d0a5613a695cd04c8dd8a9b211b4bac6ec",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_01.stdout.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_02.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_02.exit.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_02.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_02.stderr.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_02.stdout.txt",
+      "bytes": 414,
+      "sha256": "0c7ffddb14e5978334eaa2790a04bdb912d1992f5ba610a9ad453e6b6c318abd",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_02.stdout.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_03.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_03.exit.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_03.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_03.stderr.txt"
+    },
+    {
+      "archive_member": "logs/mock_campaign_03.stdout.txt",
+      "bytes": 414,
+      "sha256": "5fd269de554f16ebe72f489570f756e179bbe81492c5871907120df24e26c974",
+      "repository_path": "reviews/task004a-readiness/logs/mock_campaign_03.stdout.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_01.exit.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_01.exit.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_01.stderr.txt",
+      "bytes": 2601,
+      "sha256": "5505512f535f569ec2d30629f162dd8741c0561908f663b94781256710f10c01",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_01.stderr.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_01.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_01.stdout.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_02.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_02.exit.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_02.stderr.txt",
+      "bytes": 1908,
+      "sha256": "97e881bc7991426275ac2c68d400767a058149cb25b25bbd506a111655aa0b77",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_02.stderr.txt"
+    },
+    {
+      "archive_member": "logs/release_tests_02.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/release_tests_02.stdout.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_01.exit.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_01.exit.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_01.stderr.txt",
+      "bytes": 539,
+      "sha256": "b80e17a03a2de79d69b135a0fff04a30415bfb444fc18e2bbbd9dcb115473945",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_01.stderr.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_01.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_01.stdout.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_02.exit.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_02.exit.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_02.stderr.txt",
+      "bytes": 589,
+      "sha256": "5805925d9f1848739ef79531b547b7f1450218b41ec8fb73d280f0452ca3635c",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_02.stderr.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_02.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_02.stdout.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_03.exit.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_03.exit.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_03.stderr.txt",
+      "bytes": 589,
+      "sha256": "deda035f149bbacea6e9c23827498cd870a4ce8510cda5ff9a6ca770b33e51d2",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_03.stderr.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_03.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_03.stdout.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_04.exit.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_04.exit.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_04.stderr.txt",
+      "bytes": 539,
+      "sha256": "518b93cc892bea0a698869bc9a04f376cf7f6a520312b5bcb7a0699b0110a336",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_04.stderr.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_04.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_04.stdout.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_05.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_05.exit.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_05.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_05.stderr.txt"
+    },
+    {
+      "archive_member": "logs/rerun_probe_05.stdout.txt",
+      "bytes": 1564,
+      "sha256": "05e9c295000b198695bb64f47078cc90498b874177aa66376922b28659858fd9",
+      "repository_path": "reviews/task004a-readiness/logs/rerun_probe_05.stdout.txt"
+    },
+    {
+      "archive_member": "README_请先读.md",
+      "bytes": 1345,
+      "sha256": "68ca81aecafd65d423af8764f97f8e890572459f0440560977f1d9ef6702584c",
+      "repository_path": "reviews/task004a-readiness/README_请先读.md"
+    },
+    {
+      "archive_member": "SECURITY_AUDIT.json",
+      "bytes": 693,
+      "sha256": "0ac85d4d6c0ad69576a2f5810fff187ec6ef3bb8ceeb6b6fd3ba0a4302430e86",
+      "repository_path": "reviews/task004a-readiness/SECURITY_AUDIT.json"
+    },
+    {
+      "archive_member": "TASK004_DIRECT_KEYFRAME_ENDPOINT_METRICS.csv",
+      "bytes": 1438,
+      "sha256": "e052816c781a9fd839a049f7d42632b41124cbb863e4ced384cec3a5bfa94a04",
+      "repository_path": "reviews/task004a-readiness/TASK004_DIRECT_KEYFRAME_ENDPOINT_METRICS.csv"
+    },
+    {
+      "archive_member": "TASK004_E5_F0_FINAL_RECHECK.md",
+      "bytes": 2165,
+      "sha256": "3b755b078139a46168b993b5bb433071db010fe8a113411ddcdf9bd9b17697dd",
+      "repository_path": "reviews/task004a-readiness/TASK004_E5_F0_FINAL_RECHECK.md"
+    },
+    {
+      "archive_member": "TASK004_ENDPOINT_RETENTION.csv",
+      "bytes": 1139,
+      "sha256": "ac33ce664a5c5b22553fd60b4dff4ef0fe7b2afc3d82bdbde4f7b7cc90a7d887",
+      "repository_path": "reviews/task004a-readiness/TASK004_ENDPOINT_RETENTION.csv"
+    },
+    {
+      "archive_member": "TASK004_ENDPOINT_RETENTION_PLAN.md",
+      "bytes": 3038,
+      "sha256": "528f30f7af3c4de8a24496d2df12115d30c92cfd5e311b94b3ef47530ad8f565",
+      "repository_path": "reviews/task004a-readiness/TASK004_ENDPOINT_RETENTION_PLAN.md"
+    },
+    {
+      "archive_member": "TASK004_FIXED_RGB_ENDPOINT_METRICS.csv",
+      "bytes": 1310,
+      "sha256": "af255b840df095ddf1210b035109c774c916803326c1eb04ccef6c21e93ad726",
+      "repository_path": "reviews/task004a-readiness/TASK004_FIXED_RGB_ENDPOINT_METRICS.csv"
+    },
+    {
+      "archive_member": "TASK004A_FINAL_REVIEW.md",
+      "bytes": 1812,
+      "sha256": "66c7f5fd31d5392ea8456fa1df87fd1a755baf5af3a170bfe0954efe288d6ef8",
+      "repository_path": "reviews/task004a-readiness/TASK004A_FINAL_REVIEW.md"
+    },
+    {
+      "archive_member": "TASK004A_LOG_PARSER_TEST.md",
+      "bytes": 2152,
+      "sha256": "a07d8511956d6aae90b99c6567b673b7ce0221e0e9c399c6c17549d88eb3ad43",
+      "repository_path": "reviews/task004a-readiness/TASK004A_LOG_PARSER_TEST.md"
+    },
+    {
+      "archive_member": "TASK004A_RELEASE_READINESS.md",
+      "bytes": 3411,
+      "sha256": "7d85fdf136b469d79475b79ab312ff015519974609981cb4a4f68afbd0109c4e",
+      "repository_path": "reviews/task004a-readiness/TASK004A_RELEASE_READINESS.md"
+    },
+    {
+      "archive_member": "TASK004A_RERUN_PREFLIGHT_PLAN.md",
+      "bytes": 2336,
+      "sha256": "eec9a72c76773881cd9a28e7adc9f1c9018b11cbd28e624fc2b5bdfd1722ef51",
+      "repository_path": "reviews/task004a-readiness/TASK004A_RERUN_PREFLIGHT_PLAN.md"
+    },
+    {
+      "archive_member": "TASK004A_RUNNER_AUDIT.md",
+      "bytes": 2391,
+      "sha256": "62d9190bdb9ec3758a43fdfa30e500579781084c62bf27420b8fa6a818cb682c",
+      "repository_path": "reviews/task004a-readiness/TASK004A_RUNNER_AUDIT.md"
+    },
+    {
+      "archive_member": "TASK004A_STORAGE_ARCHIVE_PLAN.md",
+      "bytes": 2220,
+      "sha256": "cd539df4e4bf3a6a38d46696a84b0d94c426281ecba72267cbea588037eba337",
+      "repository_path": "reviews/task004a-readiness/TASK004A_STORAGE_ARCHIVE_PLAN.md"
+    },
+    {
+      "archive_member": "tests/f0_mock.py",
+      "bytes": 6434,
+      "sha256": "7344885096aecf68b91e2a923b0c8ab44524c079656cd47d5b37690bca99a4c9",
+      "repository_path": "reviews/task004a-readiness/tests/f0_mock.py"
+    },
+    {
+      "archive_member": "tests/test_readiness.py",
+      "bytes": 12404,
+      "sha256": "6a771c04dc689eba87ea6ff8a5494f630fadc1b9bf2d6a10122973121d83c297",
+      "repository_path": "reviews/task004a-readiness/tests/test_readiness.py"
+    },
+    {
+      "archive_member": "tools/__init__.py",
+      "bytes": 45,
+      "sha256": "b0abb29a2c6c6c62a6d1eb3517035ecfe4c7c2f7adfd2e067a9540358f7a3a33",
+      "repository_path": "reviews/task004a-readiness/tools/__init__.py"
+    },
+    {
+      "archive_member": "tools/archive.py",
+      "bytes": 4276,
+      "sha256": "638b9f11952c403bb5068ae9044f6e4e931c1143291f5d9dca93d9e621cf2fab",
+      "repository_path": "reviews/task004a-readiness/tools/archive.py"
+    },
+    {
+      "archive_member": "tools/attempt_contract.py",
+      "bytes": 4315,
+      "sha256": "d3784d6a5f3c3e18cc1b76056afb0817b270acb962e32c2c1b86947f896824f3",
+      "repository_path": "reviews/task004a-readiness/tools/attempt_contract.py"
+    },
+    {
+      "archive_member": "tools/contracts.py",
+      "bytes": 5549,
+      "sha256": "b36628ad65c826effa0d18e010019f5f1085b383311bd16a6f3cd9a7f3155cbb",
+      "repository_path": "reviews/task004a-readiness/tools/contracts.py"
+    },
+    {
+      "archive_member": "tools/endpoints.py",
+      "bytes": 11068,
+      "sha256": "16cad5b37c2c376e4dc40faeb80d57750892736329c25127540f69cdc22b79d4",
+      "repository_path": "reviews/task004a-readiness/tools/endpoints.py"
+    },
+    {
+      "archive_member": "tools/historical_replay.py",
+      "bytes": 6437,
+      "sha256": "1c0e6010bca0e3be36d721e2f5043a7bce9faf778f3f4eb0841fc2113d084767",
+      "repository_path": "reviews/task004a-readiness/tools/historical_replay.py"
+    },
+    {
+      "archive_member": "tools/package_review.py",
+      "bytes": 8069,
+      "sha256": "bec33dbeaacdd33ba60259270e273e42616aaba45c136c37e4c1b7c3f0556329",
+      "repository_path": "reviews/task004a-readiness/tools/package_review.py"
+    },
+    {
+      "archive_member": "tools/rerun_probe.py",
+      "bytes": 8816,
+      "sha256": "a26bf0a82bc87c575d260d4bd0f96c3651cf0380048d5ba5eb67addd96489ae0",
+      "repository_path": "reviews/task004a-readiness/tools/rerun_probe.py"
+    },
+    {
+      "archive_member": "tools/scheduler.py",
+      "bytes": 12838,
+      "sha256": "21f8bfe6979c0f7fab8860cee510c1242f9da1191cec159f4633589ed5806086",
+      "repository_path": "reviews/task004a-readiness/tools/scheduler.py"
+    },
+    {
+      "archive_member": "tools/trace_audit.py",
+      "bytes": 16169,
+      "sha256": "98fbec7adae2c40c51a28a94a6e5db3cc33c3f8e7843e027e2c65dfe9d4dd5da",
+      "repository_path": "reviews/task004a-readiness/tools/trace_audit.py"
+    },
+    {
+      "archive_member": "FILE_SHA256_MANIFEST.json",
+      "bytes": 29089,
+      "sha256": "a44a1e883366edf770a2c2d3888c65208460e240c46138627ee449e95cd7f523",
+      "repository_path": "reviews/task004a-readiness/FILE_SHA256_MANIFEST.json"
+    }
+  ],
+  "excluded": [
+    {
+      "archive_member": "_local_probe/probe_05/browser_after.png",
+      "bytes": 349962,
+      "sha256": "4793290d1bc1867cc44648d5862a4d4ad99e520522b04d942f0e90b993ae9630",
+      "reason": "Nontext historical attachment; retained locally"
+    },
+    {
+      "archive_member": "_local_probe/probe_05/browser_before.png",
+      "bytes": 5056,
+      "sha256": "872ecf7a93c357382c863b85668a921063db8b151fcf36612efb7e5efa2ec221",
+      "reason": "Nontext historical attachment; retained locally"
+    },
+    {
+      "archive_member": "tools/rerun_browser.mjs",
+      "bytes": 4879,
+      "sha256": "4cabc65e200bc4b4cfb47ac49960dfa1070e1787ce2a80b3aa9b0629f474e283",
+      "reason": "Nontext historical attachment; retained locally"
+    }
+  ],
+  "historical_internal_manifest_may_reference_omitted_attachments": true
+}

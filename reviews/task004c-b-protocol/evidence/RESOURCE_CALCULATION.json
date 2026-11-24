@@ -1,0 +1,337 @@
+{
+  "video_buffers": [
+    {
+      "name": "timestamp",
+      "shape": [
+        500
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 2000
+    },
+    {
+      "name": "images",
+      "shape": [
+        500,
+        3,
+        360,
+        640
+      ],
+      "itemsize": 4,
+      "device": "CPU",
+      "bytes": 1382400000
+    },
+    {
+      "name": "dirty",
+      "shape": [
+        500
+      ],
+      "itemsize": 1,
+      "device": "CUDA",
+      "bytes": 500
+    },
+    {
+      "name": "npc_dirty",
+      "shape": [
+        500
+      ],
+      "itemsize": 1,
+      "device": "CUDA",
+      "bytes": 500
+    },
+    {
+      "name": "poses",
+      "shape": [
+        500,
+        7
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 14000
+    },
+    {
+      "name": "disps",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 7200000
+    },
+    {
+      "name": "zeros",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 7200000
+    },
+    {
+      "name": "disps_up",
+      "shape": [
+        500,
+        360,
+        640
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 460800000
+    },
+    {
+      "name": "intrinsics",
+      "shape": [
+        500,
+        4
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 8000
+    },
+    {
+      "name": "mono_disps",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 7200000
+    },
+    {
+      "name": "mono_disps_up",
+      "shape": [
+        500,
+        360,
+        640
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 460800000
+    },
+    {
+      "name": "depth_scale",
+      "shape": [
+        500
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 2000
+    },
+    {
+      "name": "depth_shift",
+      "shape": [
+        500
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 2000
+    },
+    {
+      "name": "valid_depth_mask",
+      "shape": [
+        500,
+        360,
+        640
+      ],
+      "itemsize": 1,
+      "device": "CUDA",
+      "bytes": 115200000
+    },
+    {
+      "name": "valid_depth_mask_small",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 1,
+      "device": "CUDA",
+      "bytes": 1800000
+    },
+    {
+      "name": "fmaps",
+      "shape": [
+        500,
+        1,
+        128,
+        45,
+        80
+      ],
+      "itemsize": 2,
+      "device": "CUDA",
+      "bytes": 460800000
+    },
+    {
+      "name": "nets",
+      "shape": [
+        500,
+        128,
+        45,
+        80
+      ],
+      "itemsize": 2,
+      "device": "CUDA",
+      "bytes": 460800000
+    },
+    {
+      "name": "inps",
+      "shape": [
+        500,
+        128,
+        45,
+        80
+      ],
+      "itemsize": 2,
+      "device": "CUDA",
+      "bytes": 460800000
+    },
+    {
+      "name": "dino_feats",
+      "shape": [
+        500,
+        25,
+        45,
+        384
+      ],
+      "itemsize": 4,
+      "device": "CPU",
+      "bytes": 864000000
+    },
+    {
+      "name": "dino_feats_resize",
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 2764800000
+    },
+    {
+      "name": "uncertainties",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 7200000
+    },
+    {
+      "name": "affine_weights",
+      "shape": [
+        385
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 1540
+    },
+    {
+      "name": "temp_y_cdot",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "itemsize": 4,
+      "device": "CUDA",
+      "bytes": 7200000
+    }
+  ],
+  "full_video_logical_bytes": 7468230540,
+  "video_cpu_logical_bytes": 2246400000,
+  "video_cuda_logical_bytes": 5221830540,
+  "illustrative_13_slot_bytes": 194175494,
+  "illustrative_13_slot_conditions": "NOT a valid checkpoint estimate by itself; must prove every omitted full-buffer chunk is constructor-exact and preserve scratch/lookahead slots",
+  "corr_bytes_per_edge_fp16": 34200000,
+  "corr_bytes_per_edge_fp32": 68400000,
+  "initialization_directed_edge_upper_bound": 132,
+  "historical_archive_count": 24,
+  "max_historical_uncompressed_output_bytes": 1505684695,
+  "max_historical_archive_bytes": 884529802,
+  "last_resource": {
+    "utc": "2026-11-23T16:20:23.275955+00:00",
+    "GPU_kept_online": true,
+    "shutdown": false,
+    "reboot": false,
+    "data_free_bytes": 14257266688,
+    "gpu": {
+      "exit_code": 0,
+      "stdout": "NVIDIA GeForce RTX 3090, 24125, 0\n",
+      "stderr": ""
+    },
+    "compute_apps": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "archive_status": "complete",
+    "new_model_or_BA_execution": false
+  },
+  "remote_safety_floor_bytes": 10737418240,
+  "historical_headroom_above_floor_bytes": 3519848448,
+  "conservative_serial_storage_formula": "C0_saved + S1_saved + S0_saved + sum(4 output bounds) + max(one temporary archive bound) + measured scratch bound + 10GiB <= free_at_launch",
+  "four_raw_plus_single_archive_historical_bound_bytes": 6907268582,
+  "historical_numeric_ranges": {
+    "keyframes": {
+      "min": 87,
+      "max": 166,
+      "mean": 135.70833333333334,
+      "count": 24
+    },
+    "model_elapsed_s": {
+      "min": 205.5873370469999,
+      "max": 244.98365955800546,
+      "mean": 222.42884004791708,
+      "count": 24
+    },
+    "peak_gpu_used_mib": {
+      "min": 16151,
+      "max": 17497,
+      "mean": 16795.75,
+      "count": 24
+    },
+    "peak_shm_used_bytes": {
+      "min": 2246557696,
+      "max": 2247786496,
+      "mean": 2247172096,
+      "count": 16
+    },
+    "ba_calls": {
+      "min": 1174,
+      "max": 1332,
+      "mean": 1271.4166666666667,
+      "count": 24
+    },
+    "predecision_ba_calls": {
+      "min": 609,
+      "max": 609,
+      "mean": 609,
+      "count": 24
+    },
+    "retained_ba_calls": {
+      "min": 150,
+      "max": 308,
+      "mean": 247.41666666666666,
+      "count": 24
+    }
+  },
+  "estimated_new_GPU_peak": "UNKNOWN_NOT_MEASURED",
+  "estimated_new_GPU_time": "UNKNOWN_NOT_MEASURED",
+  "C0_actual_serialized_bytes": null,
+  "S1_actual_bytes": null,
+  "S0_actual_bytes": null,
+  "four_raw_plus_four_archives_historical_bound_bytes": 9560857988,
+  "C0_active_corr_edge_upper_bound_after_final_init_prune": 44,
+  "C0_active_corr_upper_bound_conditions": "warmup12, no self-loop, final rm_factors(ii<8) completed, no later insertion",
+  "total_new_time_estimate": "UNKNOWN; historic 4*model interval is a reference only"
+}

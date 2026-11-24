@@ -1,0 +1,156 @@
+{
+  "status": "BLOCKED_BEFORE_GPU_LAUNCH",
+  "launch_attempts_consumed": 0,
+  "launch_attempts_authorized": 1,
+  "runtime_exit_code": null,
+  "actual_task003_config": null,
+  "runtime_observations": "UNVERIFIED",
+  "cuda_context_initialized": false,
+  "model_loaded": false,
+  "viewer_started": false,
+  "candidate_protocol": {
+    "sequence": "val_007_full_00001-00487",
+    "rgb_id_range_inclusive": [
+      1,
+      487
+    ],
+    "stride": 1,
+    "output_wh": [
+      640,
+      360
+    ],
+    "calibration_branch": "FIXED_K_NATIVE_RESIZE",
+    "rgb_only": true,
+    "gt_fields_in_model_input": 0,
+    "task003_gt_upload_count": 0,
+    "gt_evaluation_local_only": true,
+    "original_runtime_yaml_cam": {
+      "H": 1080,
+      "H_edge": 0,
+      "H_out": 360,
+      "W": 1920,
+      "W_edge": 0,
+      "W_out": 640,
+      "cx": 958.4999999994144,
+      "cy": 538.5000052970587,
+      "fx": 1158.0337615093588,
+      "fy": 1158.033774136447,
+      "png_depth_scale": 1.0
+    },
+    "actual_historical_loader_k": [
+      386.01129150390625,
+      386.01129150390625,
+      319.5,
+      179.5
+    ],
+    "device": "cuda:0",
+    "buffer": 500,
+    "warmup": 12,
+    "setup_seed": 43,
+    "online_global_ba": false,
+    "final_global_ba": true,
+    "eval_before_final_ba": false,
+    "metric_depth_reg": true,
+    "gamma_depth": 0.01,
+    "depth_model": "metric3d_vit_large",
+    "feature_model": "dinov2_reg_small_fine",
+    "uncertainty_active": true,
+    "enable_opt_dyn_mask": true,
+    "enable_bidirectional_uncer": false,
+    "droidvis": true,
+    "mapping": false,
+    "gui": false,
+    "loop": false,
+    "spawn": true,
+    "filler_use_dino_features": false
+  },
+  "source_based_expectations": {
+    "final_outer_updates_requested": [
+      7,
+      12
+    ],
+    "final_native_iterations_per_call": 2,
+    "final_update_u": false,
+    "final_metric_depth_regularization_during_solve": false,
+    "filler_pose_only": true,
+    "filler_outer_updates_per_batch_requested": 12
+  },
+  "assets": {
+    "commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+    "r2_archive_sha256": "582c778c5649d13b06d0f8ac16160441c37b06f5eb6dd644a1279393d6162315",
+    "native_config_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+    "manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+    "pixel_tensor_sha256": "2e27f696f9553821d1e43cdd673118c90e3932904b9df652d887105f04fbb26a",
+    "rgb_cache": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/val_007",
+    "weights": [
+      {
+        "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth",
+        "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+        "expected_sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+        "matches": true,
+        "bytes": 16061701
+      },
+      {
+        "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth",
+        "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+        "expected_sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+        "matches": true,
+        "bytes": 88283296
+      },
+      {
+        "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+        "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+        "expected_sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+        "matches": true,
+        "bytes": 1647972663
+      },
+      {
+        "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors",
+        "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+        "expected_sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+        "matches": true,
+        "bytes": 88245200
+      }
+    ],
+    "extension": {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e"
+    },
+    "environment": {
+      "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+      "torch": "2.1.0+cu118",
+      "cuda_build": "11.8",
+      "cv2": "4.8.1",
+      "lietorch": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/lietorch/__init__.py",
+      "backend": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "cuda_initialized": false,
+      "executable": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python"
+    },
+    "freeze_sha256": "44e62ee5fe635ce52a3a5266fe1cd98a8affd42011713b41c0509d55dd8497b9",
+    "candidate_patch_sha256": "177e085d368c4f45d094b4c127f3a58d908ba145c893e20da24308d51964be21",
+    "runner_sha256": "058ef44f50f81bea2d3adfbd7d602ad8c924da298478dc79e6b6ba33e621c1f3"
+  },
+  "relocation": {
+    "allowed": [
+      "data.input_folder",
+      "data.output"
+    ],
+    "historical_paths": {
+      "input_folder": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/inputs/val_007_full_00001-00487",
+      "output": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/results/val_007_full_00001-00487/attempt_001"
+    },
+    "actual_isolated_remote_paths": null,
+    "r2_source_unchanged": true
+  },
+  "latest_resource_gate": {
+    "utc": "2026-11-22T15:29:22Z",
+    "host": "jupyter-6g08vd8ezmzwvd1k",
+    "gpu": "GPU_NOT_MOUNTED_OR_SMI_UNAVAILABLE",
+    "gpu_memory_free_mib": null,
+    "data_disk_free_bytes": 9332125696,
+    "data_disk_min_bytes": 10737418240,
+    "shm_free_bytes": 2147483648,
+    "shm_min_bytes": 8589934592,
+    "result": "BLOCKED"
+  }
+}

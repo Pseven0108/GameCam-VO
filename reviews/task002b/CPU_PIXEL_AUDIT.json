@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "expected_segments": 92,
+  "scheduled_jpegs": 49815,
+  "verified_jpegs": 49815,
+  "verified_bytes": 10614139224,
+  "exact_duplicate_jpeg_hash_groups": 0,
+  "exact_cross_sequence_duplicate_jpeg_groups": 0,
+  "exact_redundant_jpeg_records": 0,
+  "cpu_pixel_samples": 280,
+  "cpu_opencv": "4.13.0",
+  "numpy": "2.2.6",
+  "historical_opencv": "4.8.1",
+  "local_full_replays": [
+    {
+      "segment": "val_007_full_00001-00487",
+      "decoded_frames": 487,
+      "scheduled_frames": 487,
+      "replay_bgr_sha256": "5e3ba6149ddd0c1edd3a0d23cdd757708629f485ecbb636e6058ae18341b3d36",
+      "replay_rgb_f32_sha256": "2e27f696f9553821d1e43cdd673118c90e3932904b9df652d887105f04fbb26a",
+      "original_bgr_sha256": "5e3ba6149ddd0c1edd3a0d23cdd757708629f485ecbb636e6058ae18341b3d36",
+      "original_rgb_f32_sha256": "2e27f696f9553821d1e43cdd673118c90e3932904b9df652d887105f04fbb26a",
+      "bgr_matches_history": true,
+      "rgb_f32_matches_history": true
+    },
+    {
+      "segment": "val_042_full_00001-00529",
+      "decoded_frames": 529,
+      "scheduled_frames": 529,
+      "replay_bgr_sha256": "e316891dffd7b347267252be0c21ad0c3fab458fffd6132aa1942a860e1f41d0",
+      "replay_rgb_f32_sha256": "6be5aa2fa0ab2e31d92dd30839dc0e0df360efa786f60976a5598d861420d4bc",
+      "original_bgr_sha256": "e316891dffd7b347267252be0c21ad0c3fab458fffd6132aa1942a860e1f41d0",
+      "original_rgb_f32_sha256": "6be5aa2fa0ab2e31d92dd30839dc0e0df360efa786f60976a5598d861420d4bc",
+      "bgr_matches_history": true,
+      "rgb_f32_matches_history": true
+    }
+  ],
+  "encoder_dtype": "float32 in NumPy replay, before convolution/autocast effects",
+  "float32_arithmetic_sensitivity": {
+    "hypothesis": "direct division vs multiply by rounded reciprocal, not a device claim",
+    "changed_channel_value_combinations": 322,
+    "channel_value_combinations": 768,
+    "max_abs_normalized_delta": 7.152557373046875e-07
+  },
+  "shards": [
+    {
+      "path": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-19_2-9_jpg.zip",
+      "bytes": 2485165440,
+      "indexed_jpegs": 13046
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-47_0_jpg.zip",
+      "bytes": 1040427616,
+      "indexed_jpegs": 4959
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-47_1_jpg.zip",
+      "bytes": 1049369199,
+      "indexed_jpegs": 5002
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_20-39_2-9_jpg.zip",
+      "bytes": 2998559788,
+      "indexed_jpegs": 15578
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_40-47_2-9_jpg.zip",
+      "bytes": 2877650749,
+      "indexed_jpegs": 11230
+    }
+  ],
+  "exceptions": [],
+  "wall_seconds": 52.65599999995902
+}

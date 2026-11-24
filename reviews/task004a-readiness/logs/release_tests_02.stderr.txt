@@ -1,0 +1,19 @@
+test_01_eight_serial_attempts_and_verified_receipts (__main__.Readiness.test_01_eight_serial_attempts_and_verified_receipts) ... ok
+test_02_missing_keyframe_has_export_but_no_direct_score (__main__.Readiness.test_02_missing_keyframe_has_export_but_no_direct_score) ... ok
+test_03_nonzero_process_exit_stops_and_preserves_partial (__main__.Readiness.test_03_nonzero_process_exit_stops_and_preserves_partial) ... ok
+test_04_zero_exit_with_unpaired_trace_stops (__main__.Readiness.test_04_zero_exit_with_unpaired_trace_stops) ... ok
+test_05_space_deficit_refuses_launch (__main__.Readiness.test_05_space_deficit_refuses_launch) ... ok
+test_06_space_rechecked_before_next_without_auto_cleanup (__main__.Readiness.test_06_space_rechecked_before_next_without_auto_cleanup) ... ok
+test_07_archive_copy_failure_stops_group_without_deleting_output (__main__.Readiness.test_07_archive_copy_failure_stops_group_without_deleting_output) ... ok
+test_08_policy_byte_change_refused (__main__.Readiness.test_08_policy_byte_change_refused) ... ok
+test_09_existing_campaign_refuses_retry (__main__.Readiness.test_09_existing_campaign_refuses_retry) ... ok
+test_10_trace_rejects_mutated_pair_counter_and_filler_key (__main__.Readiness.test_10_trace_rejects_mutated_pair_counter_and_filler_key) ... ok
+test_11_corrupt_zip_and_crc_valid_wrong_contents (__main__.Readiness.test_11_corrupt_zip_and_crc_valid_wrong_contents) ... ok
+test_12_admission_success_claim_does_not_bypass_native_guard (__main__.Readiness.test_12_admission_success_claim_does_not_bypass_native_guard) ... ok
+test_13_f0_and_f2_control_flow_mock (__main__.Readiness.test_13_f0_and_f2_control_flow_mock) ... ok
+test_14_launch_receipt_and_staged_policy_must_agree (__main__.Readiness.test_14_launch_receipt_and_staged_policy_must_agree) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 3.547s
+
+OK

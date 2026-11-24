@@ -1,0 +1,299 @@
+SOURCE: /root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/depth_video.py
+SHA256: 78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc
+334:     def ba(self, target, weight, eta, ii, jj, t0=1, t1=None, iters=2, lm=1e-4, ep=0.1, gamma=0.02, tao=0.1, lr=1e-2, weight_decay=2e-4,
+335:            motion_only=False, enable_update_uncer=False, enable_udba=False, visualization_stage=False, *, task004_phase=None):      # ii, jj represent all img pairs
+336:         
+337:         with self.get_lock():
+338:             # [t0, t1] window of bundle adjustment optimization
+339:             if t1 is None:
+340:                 t1 = max(ii.max().item(), jj.max().item()) + 1
+341: 
+342:             target = target.view(-1, self.ht//self.down_scale, self.wd//self.down_scale, 2).permute(0,3,1,2).contiguous()
+343:             weight = weight.view(-1, self.ht//self.down_scale, self.wd//self.down_scale, 2).permute(0,3,1,2).contiguous()
+344: 
+345:             # if there is NaN of inf value for self.affine_weights, assert
+346:             if self.uncertainty_aware:
+347:                 assert not torch.isnan(self.affine_weights).any(), "self.affine_weights has NaN value"
+348:                 assert not torch.isinf(self.affine_weights).any(), "self.affine_weights has inf value"
+349:             observe = task003()
+350:             use_depth, enable_udba, enable_update_uncer = task004_local_flags(
+351:                 task004_phase, observe.stage, self, motion_only, enable_update_uncer, enable_udba)
+352:             observe.ba_before(self, target, weight, eta, ii, jj, t0, t1, iters, lm, ep, lr, weight_decay,
+353:                               motion_only, enable_update_uncer, enable_udba, metric_selected=use_depth,
+354:                               local_phase=task004_phase)
+355:             if not use_depth:
+356:                 droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.zeros,           # the shape of poses is determined by buffer size
+357:                     target, weight, self.uncertainties, 
+358:                     self.temp_y_cdot,
+359:                     self.dino_feats_resize,
+360:                     self.affine_weights,
+361:                     eta, ii, jj, t0, t1, iters, lm, ep, 
+362:                     self.cfg['tracking']['uncertainty_params']['gamma_data'], 
+363:                     self.cfg['tracking']['uncertainty_params']['gamma_prior'], 
+364:                     self.cfg['tracking']['uncertainty_params']['gamma_depth'],
+365:                     lr, weight_decay,
+366:                     motion_only, False, enable_update_uncer,
+367:                     enable_udba, self.enable_affine_transform,
+368:                     self.enable_bidirectional_uncer,
+369:                     self.debug)         # poses: [buffer, 7], disps: [buffer, h, w], 
+370:             else:
+371:                 droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.mono_disps,
+372:                     target, weight, self.uncertainties, 
+373:                     self.temp_y_cdot,
+374:                     self.dino_feats_resize,
+375:                     self.affine_weights,
+376:                     eta, ii, jj, t0, t1, iters, lm, ep, 
+377:                     self.cfg['tracking']['uncertainty_params']['gamma_data'], 
+378:                     self.cfg['tracking']['uncertainty_params']['gamma_prior'], 
+379:                     self.cfg['tracking']['uncertainty_params']['gamma_depth'],
+380:                     lr, weight_decay,
+381:                     motion_only, False, enable_update_uncer,
+382:                     enable_udba, self.enable_affine_transform,
+383:                     self.enable_bidirectional_uncer,
+384:                     self.debug)          # t0, t1: window of keyframes for BA
+385:             
+386:             task003().ba_after(self)
+387:             self.disps.clamp_(min=1e-5)
+388:             task003().ba_after(self, clamped=True)
+
+SOURCE: /root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/factor_graph.py
+SHA256: 80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c
+15:         self.device = device
+16:         self.max_factors = max_factors
+17:         self.corr_impl = corr_impl
+18: 
+19:         # operator at 1/8 resolution
+20:         self.ht = ht = video.ht // self.video.down_scale
+21:         self.wd = wd = video.wd // self.video.down_scale
+22: 
+23:         self.coords0 = pops.coords_grid(ht, wd, device=device)
+24:         self.ii = torch.as_tensor([], dtype=torch.long, device=device)
+25:         self.jj = torch.as_tensor([], dtype=torch.long, device=device)
+26:         self.age = torch.as_tensor([], dtype=torch.long, device=device)
+27: 
+28:         self.corr, self.net, self.inp = None, None, None
+29:         self.damping = 1e-6 * torch.ones_like(self.video.disps)
+30: 
+31:         self.target = torch.zeros([1, 0, ht, wd, 2], device=device, dtype=torch.float)
+32:         self.weight = torch.zeros([1, 0, ht, wd, 2], device=device, dtype=torch.float)
+33: 
+34:         # inactive factors
+35:         self.ii_inac = torch.as_tensor([], dtype=torch.long, device=device)
+36:         self.jj_inac = torch.as_tensor([], dtype=torch.long, device=device)
+37:         self.ii_bad = torch.as_tensor([], dtype=torch.long, device=device)
+38:         self.jj_bad = torch.as_tensor([], dtype=torch.long, device=device)
+39: 
+40:         self.target_inac = torch.zeros([1, 0, ht, wd, 2], device=device, dtype=torch.float)
+41:         self.weight_inac = torch.zeros([1, 0, ht, wd, 2], device=device, dtype=torch.float)
+42: 
+
+SOURCE: /root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/factor_graph.py
+SHA256: 80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c
+239:         """ run update operator on factor graph """
+240: 
+241:         # motion features
+242:         with torch.amp.autocast('cuda', enabled=False):
+243:             coords1, mask = self.video.reproject(self.ii, self.jj)      # reprojected coordinates, ii->jj, [1, N, ht, wd, 2]
+244:             motn = torch.cat([coords1 - self.coords0, self.target - coords1], dim=-1)       # projected motion + reprojected error, target: coord1 + delta
+245:             motn = motn.permute(0,1,4,2,3).clamp(-64.0, 64.0)
+246:         
+247:         # correlation features
+248:         corr = self.corr(coords1)   # [1, N, 196, ht, wd]
+249: 
+250:         self.net, delta, weight, damping, upmask = \
+251:             self.update_op(self.net, self.inp, corr, motn, self.ii, self.jj)        # delta: predicted steps [1, N, ht, wd, 2]
+252: 
+253:         if t0 is None:
+254:             t0 = max(1, self.ii.min().item()+1)
+255: 
+256:         with torch.amp.autocast('cuda',enabled=False):
+257:             self.target = coords1 + delta.to(dtype=torch.float)                     # update target as the reprojected coordinates + delta
+258:             self.weight = weight.to(dtype=torch.float)
+259: 
+260:             self.damping[torch.unique(self.ii)] = damping
+261: 
+262:             if use_inactive:
+263:                 m = (self.ii_inac >= t0 - 3) & (self.jj_inac >= t0 - 3)
+264:                 ii = torch.cat([self.ii_inac[m], self.ii], 0)
+265:                 jj = torch.cat([self.jj_inac[m], self.jj], 0)
+266:                 target = torch.cat([self.target_inac[:,m], self.target], 1)
+267:                 weight = torch.cat([self.weight_inac[:,m], self.weight], 1)
+268: 
+269:             else:
+270:                 ii, jj, target, weight = self.ii, self.jj, self.target, self.weight
+271: 
+272:             damping = .2 * self.damping[torch.unique(ii)].contiguous() + EP     # damping factor: avoid singlevalue tensor
+273: 
+274:             # bundle adjustment
+275:             self.video.ba(target, weight, damping, ii, jj, t0, t1, 
+276:                 iters=itrs, lm=1e-4, ep=0.1, lr=self.video.cfg['tracking']['uncertainty_params']['lr'], 
+277:                 weight_decay=self.video.cfg['tracking']['uncertainty_params']['weight_decay'],
+278:                 motion_only=motion_only, 
+279:                 enable_update_uncer=enable_update_uncer, 
+280:                 enable_udba=enable_udba, 
+281:                 visualization_stage=visualization_stage, task004_phase=task004_phase)
+282:         
+283:             self.video.upsample(torch.unique(self.ii), upmask)
+284: 
+285:         self.age += 1
+286: 
+287: 
+288:     @torch.amp.autocast('cuda',enabled=False)
+289:     @torch.no_grad()
+290:     def update_lowmem(self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-7, steps=8, enable_wq=True, enable_update_uncer=True, enable_udba=True, visualization_stage=False, save_edges_weights=False):
+291:         """ run update operator on factor graph - reduced memory implementation """
+
+SOURCE: /root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/slam.py
+SHA256: 46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a
+127:             self.terminate()
+128: 
+129:     @timer.section("Final Global BA")
+130:     def backend(self):
+131:         self.printer.print("Final Global BA Triggered!", FontColor.TRACKER)
+132: 
+133:         task003().boundary("final_pre", self.video)
+134:         metric_depth_reg_activated = self.video.metric_depth_reg
+135:         if metric_depth_reg_activated:
+136:             self.video.metric_depth_reg = False
+137: 
+138:         self.ba = Backend(self.droid_net, self.video, self.cfg)
+139:         torch.cuda.empty_cache()
+140:         task003().boundary("final_ba_phase_1", self.video)
+141:         self.ba.dense_ba(7, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'])
+142:         task003().boundary("final_phase_1_done", self.video)
+143:         if task004_policy().final_phases == 2:
+144:             torch.cuda.empty_cache()
+145:             task003().boundary("final_ba_phase_2", self.video)
+146:             self.ba.dense_ba(12, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'], save_edges_weights=False)
+147:             task003().boundary("final_phase_2_done", self.video)
+148:         self.printer.print("Final Global BA Done!", FontColor.TRACKER)
+149: 
+150:         if metric_depth_reg_activated:
+151:             self.video.metric_depth_reg = True
+152: 
+153:     def terminate(self):
+154:         """fill poses for non-keyframe images and evaluate"""
+155: 
+156:         if (
+157:             self.cfg["tracking"]["backend"]["final_ba"]
+158:             and self.cfg["mapping"]["eval_before_final_ba"]
+159:         ):
+160:             self.video.save_video(f"{self.save_dir}/video.npz")
+161:             if not isinstance(self.stream, RGB_NoPose):
+162:                 try:
+163:                     ate_statistics, global_scale, r_a, t_a = kf_traj_eval(
+164:                         f"{self.save_dir}/video.npz",
+165:                         f"{self.save_dir}/traj/before_final_ba",
+166:                         "kf_traj",
+167:                         self.stream,
+168:                         self.logger,
+169:                         self.printer,
+170:                     )
+171:                 except Exception as e:
+172:                     self.printer.print(e, FontColor.ERROR)
+173:             if self.cfg["mapping"]["enable"]:
+174:                 self.mapper.save_all_kf_figs(
+175:                     self.save_dir,
+176:                     iteration="before_refine",
+177:                 )
+178:             if self.cfg["tracking"]["uncertainty_params"]["visualize"]:
+179:                 self.video.visualize_all_opt_params(
+180:                     self.save_dir,
+181:                     iteration="final",
+
+SOURCE: /root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/depth_video.py
+SHA256: 78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc
+808:     def save_video(self,path:str):
+809:         poses = []
+810:         for i in range(self.counter.value):
+811:             depth, depth_mask, pose = self.get_depth_and_pose(i,'cpu')
+812:             poses.append(pose)
+813:         poses = torch.stack(poses,dim=0).numpy()
+814: 
+815:         timestamps = self.timestamp[:self.counter.value].cpu().numpy()
+816:         images = self.images[:self.counter.value].cpu().numpy()
+817:         tum_poses = self.poses[:self.counter.value].cpu().numpy()
+818:         mono_disps = self.mono_disps_up[:self.counter.value].cpu().numpy()
+819:         droid_disps_up = self.disps_up[:self.counter.value].cpu().numpy()
+820:         droid_disps = self.disps[:self.counter.value].cpu().numpy()
+821:         intrinsics = self.intrinsics[:self.counter.value].cpu().numpy()
+822:         uncertainties = self.uncertainties[:self.counter.value].cpu().numpy()
+823:         np.savez(path,
+824:             timestamps=timestamps,
+825:             images=images,
+826:             poses=poses,tum_poses=tum_poses,
+827:             mono_disps=mono_disps,
+828:             droid_disps_up=droid_disps_up,
+829:             droid_disps=droid_disps,
+830:             intrinsics=intrinsics,
+831:             uncertainties=uncertainties)
+832:         self.printer.print(f"Saved final depth video: {path}",FontColor.INFO)
+833: 
+834:     def save_poses(self,path:str):
+
+OBSERVER SOURCE: Task004A preview/task003_observer.py
+246:     def ba_before(self,video,target,weight,eta,ii,jj,t0,t1,iters,lm,ep,lr,weight_decay,motion_only,update_u,use_u,*,metric_selected,local_phase):
+247:         now = perf_counter_ns()
+248:         n = video.counter.value
+249:         ir,jr = self.array(ii),self.array(jj)
+250:         if not (0 <= t0 <= t1 <= n and len(ir)==len(jr) and
+251:                 np.all((ir>=0)&(ir<n)&(jr>=0)&(jr<n))):
+252:             raise ValueError('inconsistent native BA window or slot graph')
+253:         self.ba_id += 1
+254:         rows = self.slots(video,0,n)
+255:         ids = [row['rgb_id'] for row in rows]
+256:         sample = sample_edges(ir,jr,ids)
+257:         h = video.cfg['tracking']['uncertainty_params']
+258:         # Only the decimated 24-edge sample is materialized. CPU copies seek the current stream state.
+259:         def obs(value):
+260:             return self.array(value[:,:,::GRID_STEP,::GRID_STEP][sample]).transpose(0,2,3,1) if sample else None
+261:         data = dict(indices=(ir[sample],jr[sample]),target=obs(target),weight=obs(weight),
+262:                     k=self.array(video.intrinsics[0]).copy(),use_u=bool(use_u),
+263:                     target_u=bool(video.enable_bidirectional_uncer),n=n)
+264:         self.before = data
+265:         kx = np.union1d(np.arange(t0,t1),ir)
+266:         used = bool(metric_selected and not motion_only and h['gamma_depth']!=0)
+267:         # Native support is a strict disparity > 0 mask for the selected depth slots.
+268:         prior_all = self.array(video.mono_disps[:n]) if not motion_only else None
+269:         counts = [{'slot':int(i),'rgb_id':ids[i],'positive_mask_count':int((prior_all[i]>0).sum()),
+270:                    'total':int(prior_all[i].size)} for i in kx] if not motion_only else []
+271:         self.emit('ba_before',now,ba_id=self.ba_id,t0=t0,t1=t1,native_iterations_requested=iters,lm=lm,ep=ep,
+272:                   lr=lr,weight_decay=weight_decay,motion_only=bool(motion_only),
+273:                   source_uba=bool(use_u),target_uba=bool(use_u and video.enable_bidirectional_uncer),update_u=bool(update_u),
+274:                   gamma_depth=h['gamma_depth'],gamma_data=h['gamma_data'],gamma_prior=h['gamma_prior'],
+275:                   affine_u=bool(video.enable_affine_transform),
+276:                   metric_depth_configured=bool(video.metric_depth_reg),metric_depth_branch_active=used,
+277:                   metric_depth_prior_selected=bool(metric_selected),task004_local_phase=local_phase,
+278:                   metric_depth_window_samples=int(len(kx)*video.mono_disps.shape[-2]*video.mono_disps.shape[-1]),
+279:                   metric_depth_positive_support=sum(row['positive_mask_count'] for row in counts) if used else 0,
+280:                   prior_support=counts if used else [],cached_prior_support=counts,
+281:                   cached_prior_positive_support=sum(row['positive_mask_count'] for row in counts),
+282:                   cached_prior_total=sum(row['total'] for row in counts),
+283:                   backend_k=data['k'],eta_sample=stats(self.array(eta[::GRID_STEP,::GRID_STEP,::GRID_STEP])),
+284:                   edge_slots=np.column_stack((ir,jr)),sample_edge_indices=sample,rows=rows,
+285:                   **self.ba_numeric(video,data))
+286: 
+287:     def ba_numeric(self,video,data):
+288:         n=data['n']
+289:         d = self.array(video.disps[:n,::GRID_STEP,::GRID_STEP])
+290:         u = self.array(video.uncertainties[:n,::GRID_STEP,::GRID_STEP])
+291:         if data['target'] is None:
+292:             geom = None
+293:         else:
+294:             geom = geometry(data['k'],self.array(video.poses[:n]),d,u,*data['indices'],
+295:                             data['target'],data['weight'],data['use_u'],data['target_u'])
+296:         return dict(sample_grid_step=GRID_STEP,disparity=stats(d),positive_depth=depth_from_disp(d),uncertainty=stats(u),geometry=geom)
+297: 
+298:     def ba_after(self,video,clamped=False):
+299:         now = perf_counter_ns()
+300:         data = self.before
+301:         # Count all active slots at the native return and immediately after Python clamp.
+302:         full = self.array(video.disps[:data['n']])
+303:         grid = dict(scope='ALL_PIXELS_ACTIVE_SLOT_PREFIX', active_slots=data['n'],
+304:                     total=int(full.size), negative=int((np.isfinite(full) & (full < 0)).sum()),
+305:                     nonfinite=int((~np.isfinite(full)).sum()),
+306:                     float32_floor_count=int((full == np.float32(1e-5)).sum()))
+307:         if clamped:
+308:             d = full[:,::GRID_STEP,::GRID_STEP]
+309:             self.emit('ba_after_clamp',now,ba_id=self.ba_id,disparity=stats(d),full_disparity_grid=grid,
+310:                       float32_floor_count=int((d==np.float32(1e-5)).sum()))

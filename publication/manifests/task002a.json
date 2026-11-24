@@ -1,0 +1,220 @@
+{
+  "stage": "task002a",
+  "source_package": "experiments/DROID_W_TASK002A_ABLATION_SWITCH_DEPENDENCY_AUDIT/CHAT_REVIEW_PACKAGE/GAMECAM_DROID_W_TASK002A_REVIEW.zip",
+  "source_package_bytes": 170607,
+  "source_package_sha256": "e302174d9d99156101e57358d18574ca47232216c1bb46c3609aeae3096ecd01",
+  "original_CRC": "PASS",
+  "included_count": 32,
+  "excluded_count": 2,
+  "full_original_package_uploaded": false,
+  "entrypoint": "reviews/task002a/README_PLEASE_READ.md",
+  "included": [
+    {
+      "archive_member": "README_PLEASE_READ.md",
+      "bytes": 2076,
+      "sha256": "1e9275cb1d6b916c341e759a0fe979254ae2a501d68249a8a449c025e5f42fc9",
+      "repository_path": "reviews/task002a/README_PLEASE_READ.md"
+    },
+    {
+      "archive_member": "DROID_W_R2_CONFIG_VERIFICATION.md",
+      "bytes": 9415,
+      "sha256": "87930f56cc4ec8ccb7d5d3297b5be0b2aa13a5ca7a2e2e02a0399d7fe8bfd902",
+      "repository_path": "reviews/task002a/DROID_W_R2_CONFIG_VERIFICATION.md"
+    },
+    {
+      "archive_member": "DROID_W_ABLATION_SWITCH_MATRIX.md",
+      "bytes": 13967,
+      "sha256": "a23be8c39619b289d28fcb8703a91aadce7da816bee39689c12a20a3274605d2",
+      "repository_path": "reviews/task002a/DROID_W_ABLATION_SWITCH_MATRIX.md"
+    },
+    {
+      "archive_member": "DROID_W_MODULE_DEPENDENCY_GRAPH.md",
+      "bytes": 8691,
+      "sha256": "172a8659eb627de5e5b23c50898d95cf8646f96a6bce470a31813fb97047dd7a",
+      "repository_path": "reviews/task002a/DROID_W_MODULE_DEPENDENCY_GRAPH.md"
+    },
+    {
+      "archive_member": "DROID_W_BA_STAGE_CONTROL_REPORT.md",
+      "bytes": 8395,
+      "sha256": "b5179f3026d3d3df2ac63cb12f3f30a1681260d2567d92a8534f6df75822dd8d",
+      "repository_path": "reviews/task002a/DROID_W_BA_STAGE_CONTROL_REPORT.md"
+    },
+    {
+      "archive_member": "DROID_W_PROPOSED_ABLATION_PLAN.md",
+      "bytes": 9857,
+      "sha256": "43ab650f48a1de664ab243e7f1eaf7f0c714b4477d29cd3bef6e71fdfdc12545",
+      "repository_path": "reviews/task002a/DROID_W_PROPOSED_ABLATION_PLAN.md"
+    },
+    {
+      "archive_member": "evidence/DROID-W/configs/droid_w.yaml",
+      "bytes": 6585,
+      "sha256": "4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d",
+      "repository_path": "reviews/task002a/evidence/DROID-W/configs/droid_w.yaml"
+    },
+    {
+      "archive_member": "evidence/DROID-W/configs/Dynamic/YouTube/youtube.yaml",
+      "bytes": 603,
+      "sha256": "191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88",
+      "repository_path": "reviews/task002a/evidence/DROID-W/configs/Dynamic/YouTube/youtube.yaml"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/config.py",
+      "bytes": 2124,
+      "sha256": "0d0b18e572cc5b577d3ba41e1bee31c3c65da3fa7137df06504c477251d2086d",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/config.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/motion_filter.py",
+      "bytes": 6223,
+      "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/motion_filter.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/depth_video.py",
+      "bytes": 45293,
+      "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/depth_video.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/factor_graph.py",
+      "bytes": 22050,
+      "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/factor_graph.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/frontend.py",
+      "bytes": 10646,
+      "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/frontend.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/backend.py",
+      "bytes": 5273,
+      "sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/backend.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/tracker.py",
+      "bytes": 8158,
+      "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/tracker.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/slam.py",
+      "bytes": 13630,
+      "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/slam.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/trajectory_filler.py",
+      "bytes": 5510,
+      "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/trajectory_filler.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/mapper.py",
+      "bytes": 65332,
+      "sha256": "0818a5e5b4f7392ff7f21a96087210a4e8f89484ad44ab391d7e763310060192",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/mapper.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/utils/eval_traj.py",
+      "bytes": 7372,
+      "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/utils/eval_traj.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/utils/mono_priors/metric_depth_estimators.py"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/utils/mono_priors/img_feature_extractors.py",
+      "bytes": 6521,
+      "sha256": "f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346",
+      "repository_path": "reviews/task002a/evidence/DROID-W/src/utils/mono_priors/img_feature_extractors.py"
+    },
+    {
+      "archive_member": "evidence/DROID-SLAM/droid_slam/depth_video.py",
+      "bytes": 7627,
+      "sha256": "b8c2ee090b99061afd124e14e34b945c7ee44a1fdc30fb8341c7c7181a78ee77",
+      "repository_path": "reviews/task002a/evidence/DROID-SLAM/droid_slam/depth_video.py"
+    },
+    {
+      "archive_member": "evidence/R2/VIPER_R2_FROZEN_VAL92_MANIFEST.csv",
+      "bytes": 48590,
+      "sha256": "b991fd5019307373601b5e2fd5460a83049ffea517140e1fcf6401996a091acb",
+      "repository_path": "reviews/task002a/evidence/R2/VIPER_R2_FROZEN_VAL92_MANIFEST.csv"
+    },
+    {
+      "archive_member": "evidence/R2/VIPER_R2_PROTOCOL_LOCK.json",
+      "bytes": 2198,
+      "sha256": "a58aa17c022990d1c5b01b0afae0adb06dc86a8ec1c6c6e345d003ef026d1eb5",
+      "repository_path": "reviews/task002a/evidence/R2/VIPER_R2_PROTOCOL_LOCK.json"
+    },
+    {
+      "archive_member": "evidence/R2/wild_reference/val_007_full_00001-00487/native_config.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "repository_path": "reviews/task002a/evidence/R2/wild_reference/val_007_full_00001-00487/native_config.yaml"
+    },
+    {
+      "archive_member": "evidence/R2/wild_reference/val_007_full_00001-00487/attempt.json",
+      "bytes": 1742,
+      "sha256": "96285f1e5718777192cc2fd777fc27e7db3e2b089f461a4d3ad1f83d207a3830",
+      "repository_path": "reviews/task002a/evidence/R2/wild_reference/val_007_full_00001-00487/attempt.json"
+    },
+    {
+      "archive_member": "evidence/R2/evidence/R1_PRESERVATION_AND_SCORE_CHECK.json",
+      "bytes": 105994,
+      "sha256": "8101787a928dc45a3115516b1e459c5c1ba2087fd987b40b71e4397ca90d694f",
+      "repository_path": "reviews/task002a/evidence/R2/evidence/R1_PRESERVATION_AND_SCORE_CHECK.json"
+    },
+    {
+      "archive_member": "evidence/R2/evaluation/BASELINE_VERSION_AUDIT.md",
+      "bytes": 1010,
+      "sha256": "0bb3be2b18dc9abd2918fdcb0847332be8e3b0124c2ef33f164f76d6bbbbc43b",
+      "repository_path": "reviews/task002a/evidence/R2/evaluation/BASELINE_VERSION_AUDIT.md"
+    },
+    {
+      "archive_member": "evidence/R2/pipeline/freeze_inputs.py",
+      "bytes": 9750,
+      "sha256": "df7db4d76978eb60682eefc237f61bfb1e119f83315d8e69a9a3b0f36f28ecf9",
+      "repository_path": "reviews/task002a/evidence/R2/pipeline/freeze_inputs.py"
+    },
+    {
+      "archive_member": "evidence/R1/pipeline/run_segment.py",
+      "bytes": 10850,
+      "sha256": "428ca308f9df4d9375251f463fb560673c323aa9e62c9a2fcc98ffa6e99180e6",
+      "repository_path": "reviews/task002a/evidence/R1/pipeline/run_segment.py"
+    },
+    {
+      "archive_member": "evidence/Task001/SOURCE_IDENTITY_VERIFICATION.json",
+      "bytes": 4717,
+      "sha256": "b573957c953ca24971b66627de7f2b67f671b758d7ec29a3a44d4e2e9834a908",
+      "repository_path": "reviews/task002a/evidence/Task001/SOURCE_IDENTITY_VERIFICATION.json"
+    },
+    {
+      "archive_member": "FILE_SHA256_MANIFEST.json",
+      "bytes": 5549,
+      "sha256": "d42a81f606a60272213293cae919b10fc2755b256c46e43ca8d9bae063565d69",
+      "repository_path": "reviews/task002a/FILE_SHA256_MANIFEST.json"
+    }
+  ],
+  "excluded": [
+    {
+      "archive_member": "evidence/DROID-W/src/lib/droid.cpp",
+      "bytes": 7635,
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "reason": "Nontext historical attachment; retained locally"
+    },
+    {
+      "archive_member": "evidence/DROID-W/src/lib/droid_kernels.cu",
+      "bytes": 62996,
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "reason": "Nontext historical attachment; retained locally"
+    }
+  ],
+  "historical_internal_manifest_may_reference_omitted_attachments": true
+}

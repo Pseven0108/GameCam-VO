@@ -1,0 +1,1153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task004C-B S1 schedule schema",
+  "description": "SCHEMA ONLY. No natural schedule has been recorded. Full numeric pose/target/weight/U payloads are deliberately excluded; their optional diagnostics belong in a separate audit stream.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schedule_id",
+    "mode",
+    "producer_arm",
+    "producer_D",
+    "init_D",
+    "local_W",
+    "local_U",
+    "C0_content_sha256",
+    "input_manifest_sha256",
+    "source_manifest_sha256",
+    "protocol_sha256",
+    "last_initialization_rgb_id",
+    "next_input_index",
+    "end_rgb_id",
+    "scope",
+    "events",
+    "complete",
+    "footer"
+  ],
+  "properties": {
+    "schema": {
+      "const": "GAMECAM_TASK004C_B_EXECUTABLE_SCHEDULE_V1"
+    },
+    "schedule_id": {
+      "const": "S1"
+    },
+    "mode": {
+      "const": "NATURAL_RECORDED"
+    },
+    "producer_arm": {
+      "const": "B1"
+    },
+    "producer_D": {
+      "const": 1
+    },
+    "init_D": {
+      "const": 0
+    },
+    "local_W": {
+      "const": 1
+    },
+    "local_U": {
+      "const": 1
+    },
+    "C0_content_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "input_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "protocol_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "last_initialization_rgb_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 486
+    },
+    "next_input_index": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 486
+    },
+    "end_rgb_id": {
+      "const": 487
+    },
+    "scope": {
+      "const": "FRONTEND_AND_FINAL_GRAPH_AND_FILLER_DISCRETE_EVENTS"
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "complete": {
+      "const": true
+    },
+    "footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_count",
+        "frame_count_after_C0",
+        "native_ba_call_count",
+        "event_chain_sha256",
+        "final_control_state_sha256",
+        "failure_count"
+      ],
+      "properties": {
+        "event_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "frame_count_after_C0": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "native_ba_call_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "event_chain_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "final_control_state_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "failure_count": {
+          "const": 0
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slot",
+        "rgb_id",
+        "instance_id"
+      ],
+      "properties": {
+        "slot": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 499
+        },
+        "rgb_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 487
+        },
+        "instance_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "edge_id",
+        "source_instance",
+        "target_instance",
+        "source_slot",
+        "target_slot",
+        "pool",
+        "age"
+      ],
+      "properties": {
+        "edge_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_instance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_instance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_slot": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 499
+        },
+        "target_slot": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 499
+        },
+        "pool": {
+          "enum": [
+            "active",
+            "inactive",
+            "bad"
+          ]
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "graph_id",
+        "graph_type",
+        "slot_map",
+        "active_edges",
+        "inactive_edges",
+        "bad_edges",
+        "ordered_topology_sha256"
+      ],
+      "properties": {
+        "graph_id": {
+          "type": "string"
+        },
+        "graph_type": {
+          "enum": [
+            "frontend_volume",
+            "final_alt_phase1",
+            "final_alt_phase2",
+            "filler_volume",
+            "online_disabled",
+            "loop_disabled"
+          ]
+        },
+        "slot_map": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/slot"
+          }
+        },
+        "active_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        },
+        "inactive_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        },
+        "bad_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        },
+        "ordered_topology_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "ba": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "call_id",
+        "stage",
+        "graph_id",
+        "graph_update_id",
+        "t0",
+        "t1",
+        "native_iterations",
+        "outer_iteration",
+        "use_inactive",
+        "motion_only",
+        "ordered_native_edge_ids",
+        "source_unique_slots",
+        "lm",
+        "ep",
+        "graph_EP",
+        "learning_rate",
+        "weight_decay",
+        "depth_selection_rule",
+        "U_update_rule",
+        "W_use_rule",
+        "support_hash"
+      ],
+      "properties": {
+        "call_id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stage": {
+          "enum": [
+            "frontend_local_predecision",
+            "frontend_local_retained",
+            "final_ba_phase_1",
+            "final_ba_phase_2",
+            "trajectory_filler"
+          ]
+        },
+        "graph_id": {
+          "type": "string"
+        },
+        "graph_update_id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "t0": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "t1": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "native_iterations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "outer_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "use_inactive": {
+          "type": "boolean"
+        },
+        "motion_only": {
+          "type": "boolean"
+        },
+        "ordered_native_edge_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_unique_slots": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 499
+          }
+        },
+        "lm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ep": {
+          "type": "number",
+          "minimum": 0
+        },
+        "graph_EP": {
+          "type": "number",
+          "minimum": 0
+        },
+        "learning_rate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "weight_decay": {
+          "type": "number",
+          "minimum": 0
+        },
+        "depth_selection_rule": {
+          "enum": [
+            "ARM_D_FOR_LOCAL",
+            "NATIVE_FINAL_DEPTH_OFF",
+            "NATIVE_FILLER_MOTION_ONLY"
+          ]
+        },
+        "U_update_rule": {
+          "enum": [
+            "NATIVE_LOCAL_ON",
+            "NATIVE_FINAL_OFF",
+            "NATIVE_FILLER_OFF"
+          ]
+        },
+        "W_use_rule": {
+          "const": "NATIVE_ON"
+        },
+        "support_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ordinal",
+        "kind",
+        "phase",
+        "rgb_id",
+        "input_index",
+        "counter_before",
+        "counter_after",
+        "previous_event_sha256",
+        "event_sha256",
+        "payload",
+        "timestamp"
+      ],
+      "properties": {
+        "ordinal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "frame_begin",
+            "motion_gate",
+            "video_append",
+            "graph_add_request",
+            "graph_add_effect",
+            "graph_remove_effect",
+            "keyframe_remove",
+            "keyframe_retain",
+            "ba_begin",
+            "ba_end",
+            "graph_update_end",
+            "frame_end",
+            "final_phase_begin",
+            "final_phase_end",
+            "filler_batch_begin",
+            "filler_batch_end",
+            "pipeline_end",
+            "graph_create",
+            "graph_clear",
+            "inactive_support_select",
+            "edge_age_update",
+            "slot_reindex"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "frontend",
+            "final_ba",
+            "filler",
+            "pipeline"
+          ]
+        },
+        "rgb_id": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 487
+        },
+        "input_index": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 486
+        },
+        "counter_before": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 500
+        },
+        "counter_after": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 500
+        },
+        "previous_event_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "event_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "natural_gate": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "selected_gate": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "force_flag": {
+              "type": "boolean"
+            },
+            "mutation_primitive": {
+              "type": "string"
+            },
+            "store_to_inactive": {
+              "type": "boolean"
+            },
+            "request_edges": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/edge"
+              }
+            },
+            "affected_edge_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keyframe_instance": {
+              "$ref": "#/$defs/slot"
+            },
+            "graph_before": {
+              "$ref": "#/$defs/graph"
+            },
+            "graph_after": {
+              "$ref": "#/$defs/graph"
+            },
+            "ba": {
+              "$ref": "#/$defs/ba"
+            },
+            "branch": {
+              "enum": [
+                "dropped",
+                "retained",
+                "skipped"
+              ]
+            },
+            "drop_counter": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "filler_rgb_ids": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 487
+              }
+            },
+            "filler_anchor_pairs": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "temporary_slot_range": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "completion_status": {
+              "enum": [
+                "COMPLETE",
+                "FAILED"
+              ]
+            },
+            "graph_update_id": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "edge_age_delta": {
+              "type": "integer"
+            },
+            "control_state_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "records_written": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "selected_support_edge_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "source_unique_slots": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 499
+              }
+            },
+            "slot_reindex_map": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "instance_id",
+                  "old_slot",
+                  "new_slot"
+                ],
+                "properties": {
+                  "instance_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "old_slot": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 499
+                  },
+                  "new_slot": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 499
+                  }
+                }
+              }
+            }
+          }
+        },
+        "timestamp": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "frame_begin"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "motion_gate"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "natural_gate",
+                  "selected_gate",
+                  "reason",
+                  "force_flag"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "video_append"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "keyframe_instance",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_add_request"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "mutation_primitive",
+                  "request_edges",
+                  "graph_before"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_add_effect"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "mutation_primitive",
+                  "affected_edge_ids",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_remove_effect"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "mutation_primitive",
+                  "affected_edge_ids",
+                  "store_to_inactive",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "keyframe_remove"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "keyframe_instance",
+                  "branch",
+                  "drop_counter",
+                  "slot_reindex_map",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "keyframe_retain"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "keyframe_instance",
+                  "branch",
+                  "drop_counter",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "ba_begin"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "ba",
+                  "graph_before"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "ba_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "ba",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_update_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "graph_update_id",
+                  "graph_after",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "frame_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "final_phase_begin"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "final_phase_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "filler_batch_begin"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "filler_rgb_ids",
+                  "filler_anchor_pairs",
+                  "temporary_slot_range",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "filler_batch_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "filler_rgb_ids",
+                  "filler_anchor_pairs",
+                  "temporary_slot_range",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "pipeline_end"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "completion_status",
+                  "records_written",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_create"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "graph_after",
+                  "control_state_sha256"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "graph_clear"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "mutation_primitive",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "inactive_support_select"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "selected_support_edge_ids",
+                  "source_unique_slots",
+                  "graph_before"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "edge_age_update"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "edge_age_delta",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "slot_reindex"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "required": [
+                  "slot_reindex_map",
+                  "graph_before",
+                  "graph_after"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

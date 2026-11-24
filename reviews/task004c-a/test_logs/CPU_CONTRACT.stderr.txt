@@ -1,0 +1,26 @@
+test_d_only_digest (__main__.ContractTests.test_d_only_digest) ... ok
+test_duplicate_rgb (__main__.ContractTests.test_duplicate_rgb) ... ok
+test_exact_endpoints (__main__.ContractTests.test_exact_endpoints) ... ok
+test_independent_clones (__main__.ContractTests.test_independent_clones) ... ok
+test_missing_reverse_edge (__main__.ContractTests.test_missing_reverse_edge) ... ok
+test_native_argument_count (__main__.ContractTests.test_native_argument_count) ... ok
+test_nonpickle_roundtrip_hash (__main__.ContractTests.test_nonpickle_roundtrip_hash) ... ERROR
+test_not_retained (__main__.ContractTests.test_not_retained) ... ok
+test_outside_window (__main__.ContractTests.test_outside_window) ... ok
+
+======================================================================
+ERROR: test_nonpickle_roundtrip_hash (__main__.ContractTests.test_nonpickle_roundtrip_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z\RECOVERY_20261123T152953805Z/tools/cpu_contract_tests.py", line 18, in test_nonpickle_roundtrip_hash
+    a=np.arange(24,dtype=np.float32).reshape(3,8)[:,::2];r=save_array(d,'strided',a);p=pathlib.Path(d)/r['file']
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z\RECOVERY_20261123T152953805Z/tools\checkpoint_io.py", line 16, in save_array
+    if shutil.disk_usage(folder).free < FLOOR+a.nbytes+4096:raise RuntimeError('STORAGE_BLOCKED before '+name)
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: STORAGE_BLOCKED before strided
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.004s
+
+FAILED (errors=1)

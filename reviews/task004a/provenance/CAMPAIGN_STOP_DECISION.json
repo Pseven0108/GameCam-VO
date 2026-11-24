@@ -1,0 +1,49 @@
+{
+  "schema": "GAMECAM_TASK004A_FAIL_STOP_V1",
+  "status": "STOPPED_AFTER_E7_RENDER_VERIFICATION_FAILURE",
+  "recorded_utc": "2026-11-23T08:48:23.898Z",
+  "authorized_order": [
+    "E3",
+    "E4",
+    "E7",
+    "E0",
+    "E8",
+    "E6",
+    "E1",
+    "E2"
+  ],
+  "authorized_run_limit": 8,
+  "started_arms": [
+    "E3",
+    "E4",
+    "E7"
+  ],
+  "completed_model_arms": [
+    "E3",
+    "E4",
+    "E7"
+  ],
+  "not_started_arms": [
+    "E0",
+    "E8",
+    "E6",
+    "E1",
+    "E2"
+  ],
+  "automatic_model_retries": 0,
+  "stop_reason": "E7 browser capture exited 1 after Page.captureScreenshot timeout; saved failure screenshot shows empty E7 scene, so mandatory native scene rendering is not verified",
+  "cause": "UNDETERMINED_BROWSER_OR_STREAM_STATE",
+  "e7_model_exit_code": 0,
+  "e7_exported_poses": 487,
+  "e7_browser_binary_payload_bytes": 201579184,
+  "evidence": {
+    "model_receipt": "evidence/RUN_E7.stdout.txt",
+    "browser_trace": "TASK004A_RERUN_VISUAL_EVIDENCE/E7/evidence/browser_transport.json",
+    "browser_screenshot": "TASK004A_RERUN_VISUAL_EVIDENCE/E7/evidence/browser_at_failure.png",
+    "capture_receipt": "TASK004A_RERUN_VISUAL_EVIDENCE/E7/CAPTURE_PROCESS_RECEIPT.json"
+  },
+  "preserve_remote_and_local_outputs": true,
+  "shutdown_server": false,
+  "task004b_started": false,
+  "e5f_started": false
+}

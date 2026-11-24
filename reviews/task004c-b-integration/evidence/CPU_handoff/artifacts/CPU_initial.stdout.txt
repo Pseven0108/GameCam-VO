@@ -1,0 +1,114 @@
+{"scope": "CPU_NATIVE_INTERFACE_AND_SYNTHETIC_REGRESSION_NOT_GPU", "total": 96, "passed": 85, "failures": 1, "errors": 10, "seconds": 9.289970636367798, "cuda_initialized": false, "model_constructed": false, "native_gpu_runs": 0}
+tests.test_native.SnapshotTests.test_bound_method_is_rebound_to_restored_owner
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 39, in test_bound_method_is_rebound_to_restored_owner
+    p,_=self.save();a=load_state(p)[0]['tracker'];self.assertIs(a.update_op.__self__,a.model)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_cpu_shared_storage_is_preserved
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 84, in test_cpu_shared_storage_is_preserved
+    x=torch.arange(12).share_memory_();p,m=self.save({'x':x,'v':x[3:]});y=load_state(p)[0]
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_empty_scalar_half_bool_and_nonfinite_values
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 88, in test_empty_scalar_half_bool_and_nonfinite_values
+    p,_=self.save(b);dst=load_state(p)[0];self.assertEqual(dst['scalar'].item(),3);self.assertTrue(np.isnan(dst['nan']));self.assertEqual(dst['slice'],slice(3,None,8))
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_explicit_generator_next_draw_matches
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 41, in test_explicit_generator_next_draw_matches
+    src=fixture_bundle();p,_=self.save(src);dst=load_state(p)[0]
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_independent_process_exit_and_restore
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 54, in test_independent_process_exit_and_restore
+    self.assertEqual(q.returncode,0,q.stderr);second=json.loads(q.stdout)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+
+tests.test_native.SnapshotTests.test_model_buffers_modes_and_custom_cache
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 29, in test_model_buffers_modes_and_custom_cache
+    src=fixture_bundle();p,m=self.save(src);dst,_=load_state(p)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_numpy_and_non_string_dictionary_keys
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 90, in test_numpy_and_non_string_dictionary_keys
+    b={'n':np.arange(12,dtype=np.float64).reshape(3,4).copy(),'dict':{(1,2):np.float32(3)}};p,m=self.save(b);dst=load_state(p)[0]
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_reencoding_matches_manifest_nodes
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 44, in test_reencoding_matches_manifest_nodes
+    p,m=self.save();a,_=load_state(p);enc=ObjectEncoder();tree=enc.encode(a)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_roundtrip_entire_object_fields
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 26, in test_roundtrip_entire_object_fields
+    p,m=self.save();a,_=load_state(p);self.assertIs(a['tracker'],a['same_tracker']);self.assertIs(a['tracker'].self_reference,a['tracker'])
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_service_must_be_explicitly_rebound
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 62, in test_service_must_be_explicitly_rebound
+    with self.assertRaises(ControlError):load_state(p)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+
+tests.test_native.SnapshotTests.test_storage_alias_offset_stride_and_object_alias
+Traceback (most recent call last):
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/tests/test_native.py", line 35, in test_storage_alias_offset_stride_and_object_alias
+    p,m=self.save();a=load_state(p)[0]['tracker'];self.assertIs(a.view,a.same_view)
+  File "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1/native_control/snapshot.py", line 201, in load_state
+    raw=torch.load(root/s['file'],map_location='cpu',weights_only=True,mmap=True)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/serialization.py", line 1002, in load
+    raise ValueError("f must be a string filename in order to use mmap argument")
+ValueError: f must be a string filename in order to use mmap argument
+

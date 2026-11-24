@@ -1,0 +1,43 @@
+{
+  "status": "TRACE_HAS_TERMINAL_EXPORT",
+  "runtime_process_exit_code": null,
+  "trace": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\remote\\capture\\observer.jsonl",
+  "trace_sha256": "62d385b24f5c83f7ae09033e7ef2c5ae1a146d49c412f1f5d4a40dc250ff3e10",
+  "observed_pid": 1203,
+  "validated_prefix_bytes": 44365711,
+  "trace_error": null,
+  "events_by_type": {
+    "tracking_start": 1,
+    "keyframe_candidate_inserted": 215,
+    "keyframe_decision": 487,
+    "motion_filter_score": 486,
+    "stage_boundary": 9,
+    "ba_before": 1172,
+    "ba_after_native": 1172,
+    "ba_after_clamp": 1172,
+    "frontend_distance": 203,
+    "filler_interpolated": 31,
+    "filler_pose_update": 372,
+    "filler_batch_result": 31,
+    "export_matrix": 1,
+    "observer_overhead": 1
+  },
+  "native_ba_calls_returned": {
+    "frontend_init_neighborhood": 8,
+    "frontend_init_proximity": 8,
+    "frontend_init_second": 8,
+    "frontend_local_predecision": 609,
+    "frontend_local_retained": 148,
+    "final_ba_phase_1": 7,
+    "final_ba_phase_2": 12,
+    "filler_pose_only": 372
+  },
+  "rows_by_file": {
+    "TASK003_KEYFRAME_EVENT_LOG.csv": 1392,
+    "TASK003_FRONTEND_LOCAL_BA_LOG.csv": 2347,
+    "TASK003_FINAL_BA_ITERATION_LOG.csv": 62,
+    "TASK003_METRIC_DEPTH_SUMMARY.csv": 3731,
+    "TASK003_UNCERTAINTY_SUMMARY.csv": 2344,
+    "TASK003_FILLER_UPDATE_LOG.csv": 1551
+  }
+}

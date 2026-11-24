@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-23T13:20:07.213272+00:00",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "seed_block_offset_separated_from_D",
+      "status": "PASS"
+    },
+    {
+      "name": "factorial_D_and_DU_recovered",
+      "status": "PASS"
+    },
+    {
+      "name": "blocked_rank10_df14",
+      "status": "PASS"
+    },
+    {
+      "name": "seedwise_contrast_matches_regression",
+      "status": "PASS"
+    },
+    {
+      "name": "missing_history_not_imputed_no_three_block_CI",
+      "status": "PASS"
+    },
+    {
+      "name": "missing_outcome_not_silently_fitted",
+      "status": "PASS"
+    }
+  ],
+  "synthetic_only": true,
+  "torch_imported": false
+}

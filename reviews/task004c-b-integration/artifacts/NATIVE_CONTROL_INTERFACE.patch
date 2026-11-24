@@ -1,0 +1,259 @@
+--- a/src/backend.py
++++ b/src/backend.py
+@@ -119,3 +119,6 @@
+         torch.cuda.empty_cache()
+         return t_end - t_start_loop, n_edges
+ 
++
++from native_control.install import install_backend
++install_backend(Backend)
+--- a/src/depth_video.py
++++ b/src/depth_video.py
+@@ -1,4 +1,5 @@
+ from task004_controls import local_flags as task004_local_flags
++from native_control.install import selected_flags
+ from task003_observer import recorder as task003
+ import numpy as np
+ import torch
+@@ -347,7 +348,7 @@
+                 assert not torch.isnan(self.affine_weights).any(), "self.affine_weights has NaN value"
+                 assert not torch.isinf(self.affine_weights).any(), "self.affine_weights has inf value"
+             observe = task003()
+-            use_depth, enable_udba, enable_update_uncer = task004_local_flags(
++            use_depth, enable_udba, enable_update_uncer = selected_flags(task004_local_flags,
+                 task004_phase, observe.stage, self, motion_only, enable_update_uncer, enable_udba)
+             observe.ba_before(self, target, weight, eta, ii, jj, t0, t1, iters, lm, ep, lr, weight_decay,
+                               motion_only, enable_update_uncer, enable_udba, metric_selected=use_depth,
+@@ -893,4 +894,6 @@
+             depth_l1 = diff_depth_l1.sum() / (mask).sum()
+             depth_l1_list_max_4m.append(depth_l1.cpu().numpy())
+ 
+-        return np.asarray(depth_l1_list).mean(), np.asarray(depth_l1_list_max_4m).mean(), np.asarray(mask_list).mean()+        return np.asarray(depth_l1_list).mean(), np.asarray(depth_l1_list_max_4m).mean(), np.asarray(mask_list).mean()
++from native_control.install import install_depth_video
++install_depth_video(DepthVideo)
+--- a/src/factor_graph.py
++++ b/src/factor_graph.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ import torch
+ import numpy as np
+@@ -87,6 +88,7 @@
+         """ remove bad edges """
+         conf = torch.mean(self.weight, dim=[0,2,3,4])
+         mask = (torch.abs(self.ii-self.jj) > 2) & (conf < 0.001)
++        mask = task004c().bad_edge_mask(self, mask)
+ 
+         self.ii_bad = torch.cat([self.ii_bad, self.ii[mask]])
+         self.jj_bad = torch.cat([self.jj_bad, self.jj[mask]])
+@@ -557,6 +559,7 @@
+             d[max(0, di-nms):min(ilen, di+nms+1), max(0, dj-nms):min(jlen, dj+nms+1)] = np.inf
+ 
+ 
++        es, loop_edges = task004c().edge_plan(self, es, loop_edges)
+         if len(es) < 3 or (loop and loop_edges==0):
+             return 0
+ 
+@@ -565,4 +568,6 @@
+         self.add_factors(ii, jj, remove=True)
+         edge_num = len(self.ii)
+ 
+-        return edge_num+        return edge_num
++from native_control.install import install_factor_graph
++install_factor_graph(FactorGraph)
+--- a/src/frontend.py
++++ b/src/frontend.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ import torch
+ from src.factor_graph import FactorGraph
+@@ -79,7 +80,8 @@
+         d = self.video.distance([self.t1-2], [self.t1-1], beta=self.beta, bidirectional=True)
+         task003().distance(self.video, d, self.keyframe_thresh)
+         # Ssee self.max_consecutive_drop_of_keyframes in initi for explanation of the following process
+-        if (d.item() < self.keyframe_thresh) & (self.num_keyframes_dropped < self.max_consecutive_drop_of_keyframes) & (not force_to_add_keyframe):
++        native_drop = (d.item() < self.keyframe_thresh) & (self.num_keyframes_dropped < self.max_consecutive_drop_of_keyframes) & (not force_to_add_keyframe)
++        if task004c().keyframe_decision(native_drop, distance=float(d.item()), threshold=float(self.keyframe_thresh)):
+             self.graph.rm_keyframe(self.t1 - 1)
+             self.num_keyframes_dropped += 1
+             with self.video.get_lock():
+@@ -199,6 +201,7 @@
+ 
+         # we don't want the edges from initialization start with very old age
+         self.graph.age = torch.maximum(self.graph.age-8, torch.tensor(0).to(self.graph.age.device))
++        task004c().init_age_reset(self.graph)
+ 
+         # self.video.normalize()
+         self.video.poses[self.t1] = self.video.poses[self.t1-1].clone()
+@@ -236,3 +239,6 @@
+             self.__update(force_to_add_keyframe, event_writer)
+             self.video.update_valid_depth_mask()
+ 
++
++from native_control.install import install_frontend
++install_frontend(Frontend)
+--- a/src/motion_filter.py
++++ b/src/motion_filter.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ import torch
+ import lietorch
+@@ -68,6 +69,7 @@
+ 
+         ### always add first frame to the depth video ###
+         if self.video.counter.value == 0:
++            task004c().motion_decision(True, False, self.thresh)
+             net, inp = self.__context_encoder(inputs[:,[0]])
+             self.net, self.inp, self.fmap = net, inp, gmap
+             mono_depth = predict_metric_depth(self.metric_depth_estimator,tstamp,image,self.cfg,self.device,save_depth=(self.cfg['mono_prior']['save_depth'] or self.cfg['mapping']["enable"]))
+@@ -97,7 +99,9 @@
+ 
+             # check motion magnitue / add new frame to video
+             task003().motion_score(delta, self.thresh, force_to_add_keyframe)
+-            if delta.norm(dim=-1).mean().item() > self.thresh or force_to_add_keyframe:
++            native_admit = delta.norm(dim=-1).mean().item() > self.thresh or force_to_add_keyframe
++            native_admit, force_to_add_keyframe = task004c().motion_decision(native_admit, force_to_add_keyframe, self.thresh)
++            if native_admit:
+                 self.count = 0
+                 net, inp = self.__context_encoder(inputs[:,[0]])
+                 self.net, self.inp, self.fmap = net, inp, gmap
+--- a/src/slam.py
++++ b/src/slam.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task004_controls import policy as task004_policy
+ from task003_observer import recorder as task003
+ import os
+@@ -138,13 +139,17 @@
+         self.ba = Backend(self.droid_net, self.video, self.cfg)
+         torch.cuda.empty_cache()
+         task003().boundary("final_ba_phase_1", self.video)
++        task004c().final_phase("begin", stage=1, steps=7, metric_depth_reg=self.video.metric_depth_reg)
+         self.ba.dense_ba(7, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'])
+         task003().boundary("final_phase_1_done", self.video)
++        task004c().final_phase("end", stage=1)
+         if task004_policy().final_phases == 2:
+             torch.cuda.empty_cache()
+             task003().boundary("final_ba_phase_2", self.video)
++            task004c().final_phase("begin", stage=2, steps=12, metric_depth_reg=self.video.metric_depth_reg)
+             self.ba.dense_ba(12, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'], save_edges_weights=False)
+             task003().boundary("final_phase_2_done", self.video)
++            task004c().final_phase("end", stage=2)
+         self.printer.print("Final Global BA Done!", FontColor.TRACKER)
+ 
+         if metric_depth_reg_activated:
+@@ -286,6 +291,11 @@
+     def run(self):
+         mp.set_start_method("spawn", force=True)
+         exit_event = mp.Event()
++        native_barrier = None
++        if os.environ.get("GAMECAM_NATIVE_CONTROL_BOUNDED") == "1":
++            from native_control.barrier import WriterBarrier
++            native_barrier = WriterBarrier(mp.get_context("spawn"))
++            self.video._native_writer_barrier = native_barrier
+ 
+         m_pipe, t_pipe = mp.Pipe()
+ 
+@@ -335,6 +345,7 @@
+                     web_port=9876,                           # port the node will serve on
+                     record_path=f"{self.save_dir}/rerun_stream.rrd",  # optional
+                     exit_event=exit_event,
++                    writer_barrier=native_barrier,
+                 )
+             )
+             self.visualizer.start()
+--- a/src/tracker.py
++++ b/src/tracker.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ from src.motion_filter import MotionFilter
+ from src.frontend import Frontend 
+@@ -57,10 +58,13 @@
+         prev_ba_idx = 0
+ 
+         intrinsic = stream.get_intrinsic()
++        native_resume = task004c().tracker_begin(self, stream, dict(next_input_index=0, prev_kf_idx=prev_kf_idx, curr_kf_idx=curr_kf_idx, prev_ba_idx=prev_ba_idx, intrinsic=intrinsic))
++        prev_kf_idx, curr_kf_idx, prev_ba_idx, intrinsic = (native_resume[k] for k in ("prev_kf_idx", "curr_kf_idx", "prev_ba_idx", "intrinsic"))
+         task003().start_tracking(self.video)
+         # for (timestamp, image, _, _) in tqdm(stream):
+-        for i in range(len(stream)):        # iterate through the stream
++        for i in range(native_resume["next_input_index"], min(len(stream), 80) if task004c().enabled else len(stream)):        # iterate through the stream
+             timestamp, image, _, _ = stream[i]
++            task004c().frame_begin(i, timestamp)
+             with torch.no_grad():
+                 starting_count = self.video.counter.value
+ 
+@@ -143,6 +147,7 @@
+ 
+             prev_kf_idx = curr_kf_idx
+             self.printer.update_pbar()
++            task004c().frame_end(self, stream, dict(next_input_index=i+1, prev_kf_idx=prev_kf_idx, curr_kf_idx=curr_kf_idx, prev_ba_idx=prev_ba_idx, intrinsic=intrinsic))
+ 
+         self.pipe.send({"is_keyframe":True, "video_idx":None,
+                         "timestamp":None, "just_initialized": False, 
+--- a/src/trajectory_filler.py
++++ b/src/trajectory_filler.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ import torch
+ import lietorch
+@@ -75,6 +76,7 @@
+         fmap = self.__feature_encoder(inputs)
+ 
+         # temporally put the non-keyframe at the end of keyframe queue
++        task004c().filler_begin(self.video, N, M, t0, t1, timestamps)
+         self.video.counter.value += M
+         self.video[N:N+M] = (tt, images[:, 0], Gs.data, 1, depths, intrinsics / 8.0, fmap, None, None, dino_features)
+         task003().filler_begin(self.video, N, M, t0, t1)
+@@ -98,6 +100,7 @@
+         Gs = SE3(self.video.poses[N:N+M].clone())
+         task003().filler_end(self.video, N, M)
+         self.video.counter.value -= M
++        task004c().filler_end(N, M)
+ 
+         return [Gs]
+ 
+--- a/src/utils/droid_visualization_rerun.py
++++ b/src/utils/droid_visualization_rerun.py
+@@ -67,6 +67,7 @@
+     filter_thresh=0.005, #filter_thresh=0.005,
+     scale=1.0,
+     exit_event=None,
++    writer_barrier=None,
+ ):
+     """
+     Start a headless Rerun Web Viewer on the SLURM node and stream data to it.
+@@ -111,6 +112,8 @@
+ 
+     try:
+         while True:
++            if writer_barrier is not None:
++                writer_barrier.pause_point(torch.cuda.synchronize)
+             # Check which frames need updating
+             with video.get_lock():
+                 dirty_index, = torch.where(video.dirty.clone())
+@@ -194,3 +197,5 @@
+ 
+     except KeyboardInterrupt:
+         pass
++
++_gamecam_original_native_viewer = droid_visualization_rerun
+--- a/src/utils/eval_traj.py
++++ b/src/utils/eval_traj.py
+@@ -1,3 +1,4 @@
++from native_control.runtime import active as task004c
+ from task003_observer import recorder as task003
+ # Copyright 2024 The Splat-SLAM Authors.
+ # Licensed under the Apache License, Version 2.0
+@@ -150,6 +151,7 @@
+     kf_poses = SE3(traj_filler.video.poses[:kf_num].clone()).inv().matrix().data.cpu().numpy()
+     traj_est[kf_timestamps] = kf_poses
+     task003().export(traj_est, kf_timestamps)
++    task004c().export(list(range(1,len(traj_est)+1)), ["KEYFRAME_BA" if i in set(kf_timestamps.tolist()) else "TRAJECTORY_FILLER" for i in range(len(traj_est))])
+     return traj_est
+ 
+ 

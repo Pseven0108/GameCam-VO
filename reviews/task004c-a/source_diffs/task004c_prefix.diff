@@ -1,0 +1,158 @@
+--- source/task004_run_segment.py
++++ tools/task004c_prefix.py
+@@ -23,20 +23,6 @@
+ from transfer_common import digest, dump, load
+ from segment_input import BUFFER, RAW, OUT, checked_manifest, remap_for
+ 
+-
+-
+-def seed_receipt(out,scope,seed):
+-    import random,pickle
+-    record=dict(scope=scope,pid=os.getpid(),configured_seed=seed,torch_initial_seed=torch.initial_seed(),
+-        python_state_sha256=hashlib.sha256(pickle.dumps(random.getstate())).hexdigest(),
+-        numpy_state_sha256=hashlib.sha256(pickle.dumps(np.random.get_state())).hexdigest(),
+-        torch_cpu_state_sha256=hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest(),
+-        cuda_initialized=torch.cuda.is_initialized(),cudnn_deterministic=torch.backends.cudnn.deterministic,
+-        cudnn_benchmark=torch.backends.cudnn.benchmark,extra_rng_draws=0,
+-        seeding_scope='NATIVE_MAIN_SETUP_ONLY_SPAWN_CHILD_NOT_EXTRA_RESEEDED')
+-    if torch.cuda.is_initialized():
+-        record['cuda_state_sha256']=[hashlib.sha256(s.cpu().numpy().tobytes()).hexdigest() for s in torch.cuda.get_rng_state_all()]
+-    dump(out/('seed_receipt_'+scope+'.json'),record)
+ 
+ def progress(out, phase, **extra):
+     dump(out/'progress.json', dict(phase=phase,time_unix=time.time(),**extra))
+@@ -63,13 +49,13 @@
+     from src.utils import droid_visualization_rerun as native
+     import rerun as rr
+ 
+-    out=Path(kw.pop('record_path')).parent.parent
+-    kw['app_id']=out.parent.parent.name+'_'+out.parent.name+'_'+out.name
++    out=Path(kw['record_path']).parent.parent
++    kw['app_id']=out.parent.parent.name+'_'+out.name
+ 
+     def connect(*,port,open_browser):
+         if port!=9876 or open_browser:
+             raise ValueError('unexpected native viewer configuration')
+-        rr.connect_tcp('127.0.0.1:9875',flush_timeout_sec=4.)
++        return None  # approved data-priority file recording; no viewer/network service
+ 
+     rr.serve_web=connect
+     native._to_rr_transform=lambda m: rr.Transform3D(translation=m[:3,3],mat3x3=m[:3,:3])
+@@ -93,7 +79,7 @@
+                 dump(out/'native_camera_stream.json',dict(frustum_messages=count,pid=os.getpid()))
+ 
+     rr.log=log
+-    native.droid_visualization_rerun(video,record_path=None,**kw)
++    native.droid_visualization_rerun(video,**kw)
+     if count:
+         dump(out/'native_camera_stream.json',dict(frustum_messages=count,pid=os.getpid()))
+ 
+@@ -161,42 +147,22 @@
+ 
+ class ObservedSLAM(SLAM):
+     def tracking(self,pipe):
+-        seed_receipt(self.stream.out,'tracking_spawn_entry',self.cfg['setup_seed'])
+-        cached_priors()
+-        torch.set_num_threads(2)
+-        cv2.setNumThreads(1)
+-        self.stream.video=self.video
+-        self.stream.rgb_hash=hashlib.sha256()
+-        self.stream.phase='tracking'
+-        super().tracking(pipe)
+-        if not self.final_clean or self.stream.seen!=len(self.stream) or self.stream.fill_seen!=len(self.stream):
+-            raise ValueError('incomplete tracking or filler')
+-        dump(self.stream.out/'tracking_child_ok.json',dict(pid=os.getpid(),read_frames=self.stream.seen,
+-             filler_frames=self.stream.fill_seen,scaled_rgb_tensor_sha256=self.stream.rgb_hash.hexdigest(),
+-             gpu_torch_peak_allocated_bytes=torch.cuda.max_memory_allocated(),
+-             gpu_torch_peak_reserved_bytes=torch.cuda.max_memory_reserved()))
++        from task004c_capture import install,PrefixCaptured
++        cached_priors();torch.set_num_threads(2);cv2.setNumThreads(1)
++        self.stream.video=self.video;self.stream.rgb_hash=hashlib.sha256();self.stream.phase='tracking'
++        import droid_backends
++        original=install(self.video,self.stream.out,task004_policy().arm,self.stream)
++        try:
++            super().tracking(pipe)
++        except PrefixCaptured:
++            progress(self.stream.out,'captured_before_target_ba',done=self.stream.seen,n=len(self.stream))
++            return
++        finally:
++            droid_backends.ba=original
++        raise RuntimeError('PREFIX_EXHAUSTED_WITHOUT_ELIGIBLE_RGB328_BA')
+ 
+     def terminate(self):
+-        self.stream.phase=None
+-        if not self.tracker.frontend.is_initialized:
+-            raise RuntimeError('TRACKING_NEVER_INITIALIZED')
+-        n=self.video.counter.value
+-        if n+16>BUFFER:
+-            raise RuntimeError(f'BUFFER_CAPACITY: filler {n}+16/{BUFFER}')
+-        indices=self.video.timestamp[:n].cpu().int().tolist()
+-        if not indices or indices!=sorted(set(indices)) or indices[-1]>=len(self.stream) or indices[0]<0:
+-            raise ValueError('invalid upstream keyframe index list')
+-        dump(self.stream.out/'keyframes.json',dict(final_count=n,peak_tracking_count=max(n,self.stream.peak),
+-             local_indices=indices,rgb_ids=[self.stream.ids[i] for i in indices]))
+-        super().terminate()
+-
+-    def backend(self):
+-        progress(self.stream.out,'final_ba',done=self.stream.seen,n=len(self.stream),keyframes=self.video.counter.value)
+-        if task004_policy().final_phases == 0:
+-            task003().boundary('final_pre', self.video)
+-            task003().boundary('final_ba_skipped', self.video)
+-            return None
+-        return super().backend()
++        raise RuntimeError('FINAL_BA_AND_FILLER_NOT_AUTHORIZED_FOR_PREFIX')
+ 
+ 
+ def main():
+@@ -217,9 +183,6 @@
+     if digest(args.manifest)!='5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537' or [f['rgb_id'] for f in doc['frames']]!=list(range(1,488)):
+         raise ValueError('Task 003 is limited to the sealed stride-1 val_007 RGB manifest')
+     cfg=yaml.safe_load(serialized)
+-    seed=int(os.environ['GAMECAM_TASK004B_SEED'])
+-    if seed not in (44,45):raise ValueError('Task004B seed outside authorized budget')
+-    cfg['setup_seed']=seed
+     if Path(cfg['tracking']['pretrained']).resolve()!=args.weights.resolve():
+         raise ValueError('sealed tracker path differs from admitted weight path')
+     trace=Path(os.environ['GAMECAM_TASK003_OBSERVER_JSONL'])
+@@ -231,8 +194,8 @@
+          local_dwu=list(active.local_dwu), final_phases=active.final_phases,
+          policy_sha256=os.environ['GAMECAM_TASK004_POLICY_SHA256']))
+     setup_seed(cfg['setup_seed'])
+-    seed_receipt(args.out,'main',seed)
+     stream=ViperRGB(cfg,args.manifest,args.out)
++    stream.frames=stream.frames[:328];stream.ids=stream.ids[:328];stream.color_paths=stream.color_paths[:328];stream.n_img=328
+     np.testing.assert_allclose(stream.get_intrinsic().numpy(),doc['output_k'],rtol=0,atol=1.3e-4)
+     np.testing.assert_array_equal(stream.get_intrinsic().numpy(),[386.01129150390625, 386.01129150390625, 319.5, 179.5])
+     config.save_config(cfg,str(args.out/'native_config.yaml'))
+@@ -243,28 +206,9 @@
+     progress(args.out,'model_init',done=0,n=len(stream))
+     slam=ObservedSLAM(cfg,stream)
+     slam.run()
+-    child=load(args.out/'tracking_child_ok.json')
+-    if child['scaled_rgb_tensor_sha256']!='2e27f696f9553821d1e43cdd673118c90e3932904b9df652d887105f04fbb26a':
+-        raise ValueError('tracking loader byte identity mismatch; preserve diagnostics')
+-    export=args.out/'native/traj/est_poses_full.txt'
+-    poses=np.loadtxt(export,ndmin=2)
+-    if poses.shape!=(len(stream),8) or not np.array_equal(poses[:,0],np.arange(len(stream))):
+-        raise ValueError('INVALID_POSE_EXPORT upstream integer IDs')
+-    valid=np.isfinite(poses).all(1)&(np.abs(np.linalg.norm(poses[:,4:],axis=1)-1)<2e-3)
+-    kf=load(args.out/'keyframes.json')
+-    dest=args.out/'trajectory.npz'
+-    np.savez_compressed(dest,rgb_ids=np.asarray(stream.ids),c2w_xyzw=poses[:,1:],valid=valid,
+-                        keyframe_local_indices=kf['local_indices'],keyframe_rgb_ids=kf['rgb_ids'])
+-    viewer=load(args.out/'native_camera_stream.json') if (args.out/'native_camera_stream.json').is_file() else {}
+-    summary=dict(input_frames=len(stream),poses_exported=len(poses),valid_poses=int(valid.sum()),
+-         trajectory_sha256=digest(dest),upstream_text_sha256=digest(export),keyframes=kf['final_count'],
+-         peak_tracking_keyframes=kf['peak_tracking_count'],native_viewer_exit=slam.visualizer.exitcode,
+-         native_camera_messages=viewer.get('frustum_messages',0),native_viewer_pid=slam.visualizer.pid,**child)
+-    dump(args.out/'model_result.json',summary)
+-    if not valid.all():
+-        raise ValueError('INVALID_POSE_EXPORT nonfinite or invalid quaternion')
+-    progress(args.out,'complete',done=len(stream),n=len(stream),keyframes=kf['final_count'])
+-
++    capture=load(args.out/'CAPTURE_COMPLETE.json')
++    if capture['read_frames']!=328:raise RuntimeError('capture did not process exact prefix')
++    progress(args.out,'capture_complete',done=328,n=328,active_count=capture['active_count'])
+ 
+ if __name__=='__main__':
+     main()

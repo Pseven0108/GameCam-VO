@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-23T13:06:39.816484+00:00",
+  "checks": [
+    {
+      "name": "df2_student_t_975_analytic",
+      "status": "PASS"
+    },
+    {
+      "name": "sample_mean_sd_df2_ci",
+      "status": "PASS"
+    },
+    {
+      "name": "CI_absent_for_two_blocks",
+      "status": "PASS"
+    },
+    {
+      "name": "factorial_main_and_threeway",
+      "status": "PASS"
+    },
+    {
+      "name": "null_missing_ci_not_zero",
+      "status": "PASS"
+    }
+  ],
+  "passed": 5,
+  "failed": 0,
+  "legacy_checks": 6,
+  "torch_imported": false
+}

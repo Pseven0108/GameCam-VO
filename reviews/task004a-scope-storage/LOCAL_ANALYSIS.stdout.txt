@@ -1,0 +1,267 @@
+{
+  "capture_bytes": 44542362,
+  "capture_file_count": 18,
+  "capture_totals": {
+    "other": 14430,
+    "trajectory": 60057,
+    "rerun_logs": 995,
+    "observation": 44466880
+  },
+  "review_zip": {
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\GAMECAM_TASK003_VAL007_OBSERVATION_REVIEW.zip",
+    "bytes": 11245448,
+    "sha256": "7b665e1b909d852ea8949856cf41cc4f80d7364ae98f286e06e713a102fed344",
+    "members": 95,
+    "payload_uncompressed_bytes": 97521351,
+    "capture_members": 18,
+    "complete_native_attempt": false
+  },
+  "resources": {
+    "n": 106,
+    "first_utc": "2026-11-22T19:07:13.872439+00:00",
+    "last_utc": "2026-11-22T19:10:53.691959+00:00",
+    "ranges": {
+      "disk_free_bytes": {
+        "first": 14510026752,
+        "last": 14066569216,
+        "min": 14066569216,
+        "max": 14510026752
+      },
+      "shm_free_bytes": {
+        "first": 25769803776,
+        "last": 25769709568,
+        "min": 23523246080,
+        "max": 25769803776
+      },
+      "cgroup_memory_bytes": {
+        "first": 2730291200,
+        "last": 4804874240,
+        "min": 2730291200,
+        "max": 10082914304
+      },
+      "gpu_used_mib": {
+        "first": 17,
+        "last": 5342,
+        "min": 17,
+        "max": 16752
+      },
+      "trace_bytes": {
+        "first": 0,
+        "last": 44365711,
+        "min": 0,
+        "max": 44365711
+      }
+    }
+  },
+  "history": {
+    "ref": "HISTORICAL_TASK003_NOT_E0",
+    "raw_trace_events": 5353,
+    "counters": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1172,
+      "ba_after_native": 1172,
+      "ba_after_clamp": 1172,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "local_calls_by_phase": {
+      "frontend_local_predecision": 609,
+      "frontend_local_retained": 148
+    },
+    "predecision_pct": 80.44914134742405,
+    "local_calls_for_rejected_candidates": 387,
+    "decisions": {
+      "RETAINED_WARMUP_PENDING": 11,
+      "MOTION_FILTER_REJECTED": 272,
+      "RETAINED": 75,
+      "LOCAL_BA_REJECTED": 129
+    },
+    "local_accepted": 74,
+    "local_rejected": 129,
+    "local_dwu_by_phase": {
+      "frontend_local_predecision": {
+        "111": 609
+      },
+      "frontend_local_retained": {
+        "111": 148
+      }
+    },
+    "native_distance": {
+      "thresholds": [
+        3.0
+      ],
+      "all": {
+        "n": 203,
+        "min": 0.39069032669067383,
+        "p05": 0.833930116891861,
+        "p50": 2.311056613922119,
+        "p95": 5.309119844436645,
+        "max": 7.3095855712890625
+      },
+      "retained": {
+        "n": 74,
+        "min": 0.8678573966026306,
+        "p05": 2.3129776597023013,
+        "p50": 3.9854623079299927,
+        "p95": 6.307360553741453,
+        "max": 7.3095855712890625
+      },
+      "rejected": {
+        "n": 129,
+        "min": 0.39069032669067383,
+        "p05": 0.7172596216201782,
+        "p50": 1.9712870121002197,
+        "p95": 2.862793731689453,
+        "max": 2.995922803878784
+      }
+    },
+    "final_keyframes": 86,
+    "final_export_poses": 487,
+    "first_common_312_328": {
+      "phase": "frontend_local_predecision",
+      "ba_id": 552,
+      "events": [
+        2600,
+        2601,
+        2602
+      ]
+    }
+  },
+  "receiver": {
+    "checked_utc": "2026-11-22T22:40:48.5481675Z",
+    "candidate_receiver": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_SCOPE_STORAGE_RECHECK\\receive_candidate",
+    "previous_mock_receiver": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_receiver_03",
+    "volume": {
+      "DriveLetter": "D",
+      "DriveType": "Fixed",
+      "FileSystem": "NTFS",
+      "Size": 677746774016,
+      "SizeRemaining": 26554470400,
+      "AllocationUnitSize": 4096
+    },
+    "partition": {
+      "DiskNumber": 0,
+      "PartitionNumber": 4,
+      "DriveLetter": "D"
+    },
+    "reparse_components": [],
+    "state": "LOCAL_CANDIDATE_NOT_BOUND_TO_NATIVE_RUN"
+  },
+  "simulation_inputs": {
+    "starts": {
+      "TASK003_EARLIER_PREFLIGHT": 14654005248,
+      "TASK003_FINAL_PREFLIGHT": 14510059520
+    },
+    "known_output_proxy": {
+      "raw_bytes": 443319080,
+      "zip_allowance_bytes": 448878670,
+      "file_count": 19
+    },
+    "source_gate_bytes": 13958643712,
+    "floor_bytes": 10737418240,
+    "budget_bytes": 3221225472,
+    "full_budget_example": {
+      "raw_bytes": 1610612736,
+      "zip_bytes": 1610612736
+    },
+    "forecast": "SIMULATION_ONLY_NO_CURRENT_REMOTE_DISK_MEASUREMENT"
+  },
+  "first_blocks": [
+    {
+      "initial_ref": "TASK003_EARLIER_PREFLIGHT",
+      "scenario": "KNOWN_OUTPUT_PROXY",
+      "placement": "REMOTE_ZIP_INDEPENDENT_LOCAL_COPY",
+      "arm": "E4",
+      "source_before_bytes": 13761807498,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 892197750,
+      "all_eight_source_start_min_bytes": 20204027962,
+      "all_eight_receiver_start_min_bytes": 6363376162
+    },
+    {
+      "initial_ref": "TASK003_EARLIER_PREFLIGHT",
+      "scenario": "KNOWN_OUTPUT_PROXY",
+      "placement": "BOTH_ZIPS_ON_SOURCE_FILESYSTEM",
+      "arm": "E4",
+      "source_before_bytes": 13312928828,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 1341076420,
+      "all_eight_source_start_min_bytes": 23346178652,
+      "all_eight_receiver_start_min_bytes": null
+    },
+    {
+      "initial_ref": "TASK003_EARLIER_PREFLIGHT",
+      "scenario": "FULL_3GIB_REMOTE_BUDGET",
+      "placement": "REMOTE_ZIP_INDEPENDENT_LOCAL_COPY",
+      "arm": "E4",
+      "source_before_bytes": 11432779776,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 3221225472,
+      "all_eight_source_start_min_bytes": 36507222016,
+      "all_eight_receiver_start_min_bytes": 14495514624
+    },
+    {
+      "initial_ref": "TASK003_EARLIER_PREFLIGHT",
+      "scenario": "FULL_3GIB_REMOTE_BUDGET",
+      "placement": "BOTH_ZIPS_ON_SOURCE_FILESYSTEM",
+      "arm": "E3",
+      "source_before_bytes": 14654005248,
+      "status": "BLOCKED_PER_ARM_PEAK_BUDGET",
+      "source_peak_new_bytes": 4831838208,
+      "all_eight_source_start_min_bytes": null,
+      "all_eight_receiver_start_min_bytes": null
+    },
+    {
+      "initial_ref": "TASK003_FINAL_PREFLIGHT",
+      "scenario": "KNOWN_OUTPUT_PROXY",
+      "placement": "REMOTE_ZIP_INDEPENDENT_LOCAL_COPY",
+      "arm": "E4",
+      "source_before_bytes": 13617861770,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 892197750,
+      "all_eight_source_start_min_bytes": 20204027962,
+      "all_eight_receiver_start_min_bytes": 6363376162
+    },
+    {
+      "initial_ref": "TASK003_FINAL_PREFLIGHT",
+      "scenario": "KNOWN_OUTPUT_PROXY",
+      "placement": "BOTH_ZIPS_ON_SOURCE_FILESYSTEM",
+      "arm": "E4",
+      "source_before_bytes": 13168983100,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 1341076420,
+      "all_eight_source_start_min_bytes": 23346178652,
+      "all_eight_receiver_start_min_bytes": null
+    },
+    {
+      "initial_ref": "TASK003_FINAL_PREFLIGHT",
+      "scenario": "FULL_3GIB_REMOTE_BUDGET",
+      "placement": "REMOTE_ZIP_INDEPENDENT_LOCAL_COPY",
+      "arm": "E4",
+      "source_before_bytes": 11288834048,
+      "status": "BLOCKED_SOURCE_ADMISSION",
+      "source_peak_new_bytes": 3221225472,
+      "all_eight_source_start_min_bytes": 36507222016,
+      "all_eight_receiver_start_min_bytes": 14495514624
+    },
+    {
+      "initial_ref": "TASK003_FINAL_PREFLIGHT",
+      "scenario": "FULL_3GIB_REMOTE_BUDGET",
+      "placement": "BOTH_ZIPS_ON_SOURCE_FILESYSTEM",
+      "arm": "E3",
+      "source_before_bytes": 14510059520,
+      "status": "BLOCKED_PER_ARM_PEAK_BUDGET",
+      "source_peak_new_bytes": 4831838208,
+      "all_eight_source_start_min_bytes": null,
+      "all_eight_receiver_start_min_bytes": null
+    }
+  ]
+}

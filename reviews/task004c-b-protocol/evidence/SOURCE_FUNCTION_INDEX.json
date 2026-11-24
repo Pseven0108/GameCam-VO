@@ -1,0 +1,1130 @@
+[
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "scaled",
+    "line": 17,
+    "end_line": 19
+  },
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "virtual_k",
+    "line": 22,
+    "end_line": 29
+  },
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "remap_for",
+    "line": 32,
+    "end_line": 37
+  },
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "json_k",
+    "line": 40,
+    "end_line": 44
+  },
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "checked_manifest",
+    "line": 47,
+    "end_line": 84
+  },
+  {
+    "file": "source_evidence/execution/segment_input.py",
+    "name": "selfcheck",
+    "line": 87,
+    "end_line": 102
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "DepthVideo",
+    "line": 26,
+    "end_line": 896
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "__init__",
+    "line": 29,
+    "end_line": 107
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "get_lock",
+    "line": 109,
+    "end_line": 110
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "__item_setter",
+    "line": 112,
+    "end_line": 176
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "__setitem__",
+    "line": 178,
+    "end_line": 180
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "__getitem__",
+    "line": 182,
+    "end_line": 198
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "append",
+    "line": 200,
+    "end_line": 202
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "init_w_mono_disp",
+    "line": 204,
+    "end_line": 207
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "format_indicies",
+    "line": 212,
+    "end_line": 224
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "upsample",
+    "line": 226,
+    "end_line": 230
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "upsample_weight",
+    "line": 232,
+    "end_line": 236
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "normalize",
+    "line": 238,
+    "end_line": 245
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "reproject",
+    "line": 248,
+    "end_line": 256
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "distance",
+    "line": 258,
+    "end_line": 288
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "project_images_with_mask",
+    "line": 290,
+    "end_line": 332
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "ba",
+    "line": 334,
+    "end_line": 388
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "visualize_uncertainty",
+    "line": 391,
+    "end_line": 616
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "visualize_all_opt_params",
+    "line": 619,
+    "end_line": 734
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "get_depth_scale_and_shift",
+    "line": 736,
+    "end_line": 746
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "get_pose",
+    "line": 748,
+    "end_line": 751
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "get_depth_and_pose",
+    "line": 753,
+    "end_line": 765
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "update_valid_depth_mask",
+    "line": 768,
+    "end_line": 802
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "set_dirty",
+    "line": 804,
+    "end_line": 806
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "save_video",
+    "line": 808,
+    "end_line": 832
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "save_poses",
+    "line": 834,
+    "end_line": 845
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "eval_depth_l1",
+    "line": 847,
+    "end_line": 896
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "visualize_dino_feature_pca",
+    "line": 493,
+    "end_line": 522
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "_pca_to_rgb_single",
+    "line": 525,
+    "end_line": 542
+  },
+  {
+    "file": "source_evidence/execution/src/depth_video.py",
+    "name": "color_map",
+    "line": 709,
+    "end_line": 710
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "FactorGraph",
+    "line": 10,
+    "end_line": 568
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "__init__",
+    "line": 12,
+    "end_line": 41
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "__filter_repeated_edges",
+    "line": 43,
+    "end_line": 70
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "print_edges",
+    "line": 72,
+    "end_line": 84
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "filter_edges",
+    "line": 86,
+    "end_line": 93
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "clear_edges",
+    "line": 95,
+    "end_line": 110
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "add_factors",
+    "line": 114,
+    "end_line": 160
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "rm_factors",
+    "line": 163,
+    "end_line": 187
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "rm_keyframe",
+    "line": 191,
+    "end_line": 232
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "update",
+    "line": 237,
+    "end_line": 285
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "update_lowmem",
+    "line": 290,
+    "end_line": 344
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "add_neighborhood_factors",
+    "line": 347,
+    "end_line": 355
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "nms_invalidate_",
+    "line": 359,
+    "end_line": 415
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "precompute_offsets",
+    "line": 418,
+    "end_line": 425
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "add_proximity_factors",
+    "line": 428,
+    "end_line": 488
+  },
+  {
+    "file": "source_evidence/execution/src/factor_graph.py",
+    "name": "add_backend_proximity_factors",
+    "line": 491,
+    "end_line": 568
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "Frontend",
+    "line": 7,
+    "end_line": 237
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "__init__",
+    "line": 9,
+    "end_line": 55
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "__update",
+    "line": 57,
+    "end_line": 130
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "__initialize",
+    "line": 132,
+    "end_line": 180
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "initialize_second_stage",
+    "line": 182,
+    "end_line": 224
+  },
+  {
+    "file": "source_evidence/execution/src/frontend.py",
+    "name": "__call__",
+    "line": 226,
+    "end_line": 237
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "SLAM",
+    "line": 28,
+    "end_line": 355
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "gen_pose_matrix",
+    "line": 357,
+    "end_line": 361
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "__init__",
+    "line": 29,
+    "end_line": 71
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "load_pretrained",
+    "line": 73,
+    "end_line": 89
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "tracking",
+    "line": 91,
+    "end_line": 112
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "mapping",
+    "line": 114,
+    "end_line": 127
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "backend",
+    "line": 130,
+    "end_line": 151
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "terminate",
+    "line": 153,
+    "end_line": 239
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "_eval_depth_all",
+    "line": 241,
+    "end_line": 284
+  },
+  {
+    "file": "source_evidence/execution/src/slam.py",
+    "name": "run",
+    "line": 286,
+    "end_line": 355
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "Tracker",
+    "line": 16,
+    "end_line": 149
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "__init__",
+    "line": 17,
+    "end_line": 43
+  },
+  {
+    "file": "source_evidence/execution/src/tracker.py",
+    "name": "run",
+    "line": 45,
+    "end_line": 149
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "integer",
+    "line": 17,
+    "end_line": 21
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "rgb",
+    "line": 24,
+    "end_line": 28
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "safe",
+    "line": 31,
+    "end_line": 43
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "stats",
+    "line": 46,
+    "end_line": 58
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "depth_from_disp",
+    "line": 61,
+    "end_line": 63
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "mul",
+    "line": 66,
+    "end_line": 69
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "conj",
+    "line": 72,
+    "end_line": 73
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "rotate",
+    "line": 76,
+    "end_line": 78
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "geometry",
+    "line": 81,
+    "end_line": 117
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "sample_edges",
+    "line": 120,
+    "end_line": 130
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "Recorder",
+    "line": 134,
+    "end_line": 343
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "recorder",
+    "line": 349,
+    "end_line": 353
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "spread",
+    "line": 125,
+    "end_line": 126
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "array",
+    "line": 153,
+    "end_line": 157
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "emit",
+    "line": 159,
+    "end_line": 177
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "context",
+    "line": 179,
+    "end_line": 180
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "slots",
+    "line": 182,
+    "end_line": 186
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "start_tracking",
+    "line": 188,
+    "end_line": 197
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "input_frame",
+    "line": 199,
+    "end_line": 202
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "motion_score",
+    "line": 204,
+    "end_line": 208
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "inserted",
+    "line": 210,
+    "end_line": 219
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "decision",
+    "line": 221,
+    "end_line": 230
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "distance",
+    "line": 232,
+    "end_line": 236
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "boundary",
+    "line": 238,
+    "end_line": 244
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "ba_before",
+    "line": 246,
+    "end_line": 285
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "ba_numeric",
+    "line": 287,
+    "end_line": 296
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "ba_after",
+    "line": 298,
+    "end_line": 314
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "filler_begin",
+    "line": 316,
+    "end_line": 324
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "filler_step",
+    "line": 326,
+    "end_line": 328
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "filler_end",
+    "line": 330,
+    "end_line": 333
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "export",
+    "line": 335,
+    "end_line": 343
+  },
+  {
+    "file": "source_evidence/execution/task003_observer.py",
+    "name": "obs",
+    "line": 259,
+    "end_line": 260
+  },
+  {
+    "file": "source_evidence/execution/task004_controls.py",
+    "name": "Policy",
+    "line": 20,
+    "end_line": 24
+  },
+  {
+    "file": "source_evidence/execution/task004_controls.py",
+    "name": "parse_policy",
+    "line": 27,
+    "end_line": 42
+  },
+  {
+    "file": "source_evidence/execution/task004_controls.py",
+    "name": "policy",
+    "line": 46,
+    "end_line": 53
+  },
+  {
+    "file": "source_evidence/execution/task004_controls.py",
+    "name": "local_flags",
+    "line": 56,
+    "end_line": 68
+  },
+  {
+    "file": "source_evidence/execution/task004_controls.py",
+    "name": "require_approved_runtime",
+    "line": 71,
+    "end_line": 91
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "seed_receipt",
+    "line": 28,
+    "end_line": 39
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "progress",
+    "line": 41,
+    "end_line": 42
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "cached_priors",
+    "line": 45,
+    "end_line": 59
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "native_viewer",
+    "line": 62,
+    "end_line": 98
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "ViperRGB",
+    "line": 101,
+    "end_line": 159
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "ObservedSLAM",
+    "line": 162,
+    "end_line": 199
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "main",
+    "line": 202,
+    "end_line": 266
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "load_cached",
+    "line": 51,
+    "end_line": 57
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "connect",
+    "line": 69,
+    "end_line": 72
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "log",
+    "line": 79,
+    "end_line": 93
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "__init__",
+    "line": 102,
+    "end_line": 114
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "get_color",
+    "line": 116,
+    "end_line": 126
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "task004_begin_filler",
+    "line": 128,
+    "end_line": 132
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "__getitem__",
+    "line": 134,
+    "end_line": 159
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "tracking",
+    "line": 163,
+    "end_line": 177
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "terminate",
+    "line": 179,
+    "end_line": 191
+  },
+  {
+    "file": "source_evidence/execution/task004_run_segment.py",
+    "name": "backend",
+    "line": 193,
+    "end_line": 199
+  },
+  {
+    "file": "source_evidence/execution/transfer_common.py",
+    "name": "digest",
+    "line": 16,
+    "end_line": 21
+  },
+  {
+    "file": "source_evidence/execution/transfer_common.py",
+    "name": "load",
+    "line": 24,
+    "end_line": 25
+  },
+  {
+    "file": "source_evidence/execution/transfer_common.py",
+    "name": "dump",
+    "line": 28,
+    "end_line": 33
+  },
+  {
+    "file": "source_evidence/execution/transfer_common.py",
+    "name": "csv_write",
+    "line": 36,
+    "end_line": 43
+  },
+  {
+    "file": "source_evidence/execution/transfer_common.py",
+    "name": "rows",
+    "line": 46,
+    "end_line": 48
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "Backend",
+    "line": 19,
+    "end_line": 120
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "__init__",
+    "line": 20,
+    "end_line": 39
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "backend_ba",
+    "line": 42,
+    "end_line": 67
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "dense_ba",
+    "line": 70,
+    "end_line": 91
+  },
+  {
+    "file": "source_evidence/frozen/src/backend.py",
+    "name": "loop_ba",
+    "line": 96,
+    "end_line": 120
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "CorrSampler",
+    "line": 21,
+    "end_line": 36
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "CorrBlock",
+    "line": 39,
+    "end_line": 90
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "CorrLayer",
+    "line": 93,
+    "end_line": 108
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "AltCorrBlock",
+    "line": 111,
+    "end_line": 159
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "forward",
+    "line": 23,
+    "end_line": 28
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "backward",
+    "line": 31,
+    "end_line": 36
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "__init__",
+    "line": 40,
+    "end_line": 55
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "__call__",
+    "line": 57,
+    "end_line": 67
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "cat",
+    "line": 69,
+    "end_line": 73
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "__getitem__",
+    "line": 75,
+    "end_line": 79
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "corr",
+    "line": 82,
+    "end_line": 90
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "forward",
+    "line": 95,
+    "end_line": 99
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "backward",
+    "line": 102,
+    "end_line": 108
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "__init__",
+    "line": 112,
+    "end_line": 124
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "corr_fn",
+    "line": 126,
+    "end_line": 145
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/corr.py",
+    "name": "__call__",
+    "line": 147,
+    "end_line": 159
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "cvx_upsample",
+    "line": 23,
+    "end_line": 37
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "upsample_disp",
+    "line": 40,
+    "end_line": 45
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "GraphAgg",
+    "line": 48,
+    "end_line": 80
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "UpdateModule",
+    "line": 83,
+    "end_line": 153
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "DroidNet",
+    "line": 156,
+    "end_line": 161
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "__init__",
+    "line": 49,
+    "end_line": 63
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "forward",
+    "line": 65,
+    "end_line": 80
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "__init__",
+    "line": 84,
+    "end_line": 118
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "forward",
+    "line": 120,
+    "end_line": 153
+  },
+  {
+    "file": "source_evidence/frozen/src/modules/droid_net/droid_net.py",
+    "name": "__init__",
+    "line": 157,
+    "end_line": 161
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "MotionFilter",
+    "line": 10,
+    "end_line": 120
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "__init__",
+    "line": 15,
+    "end_line": 37
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "__context_encoder",
+    "line": 40,
+    "end_line": 43
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "__feature_encoder",
+    "line": 46,
+    "end_line": 48
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "track",
+    "line": 52,
+    "end_line": 115
+  },
+  {
+    "file": "source_evidence/frozen/src/motion_filter.py",
+    "name": "get_img_feature",
+    "line": 118,
+    "end_line": 120
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "PoseTrajectoryFiller",
+    "line": 10,
+    "end_line": 142
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "__init__",
+    "line": 14,
+    "end_line": 31
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "setup_feature_extractor",
+    "line": 33,
+    "end_line": 35
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "__feature_encoder",
+    "line": 38,
+    "end_line": 40
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "__fill",
+    "line": 42,
+    "end_line": 97
+  },
+  {
+    "file": "source_evidence/frozen/src/trajectory_filler.py",
+    "name": "__call__",
+    "line": 100,
+    "end_line": 142
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/common.py",
+    "name": "setup_seed",
+    "line": 10,
+    "end_line": 16
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/common.py",
+    "name": "as_intrinsics_matrix",
+    "line": 19,
+    "end_line": 29
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/common.py",
+    "name": "update_cam",
+    "line": 32,
+    "end_line": 53
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/common.py",
+    "name": "align_scale_and_shift",
+    "line": 57,
+    "end_line": 93
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "Fit3DModels",
+    "line": 16,
+    "end_line": 60
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "get_feature_extractor",
+    "line": 68,
+    "end_line": 85
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "predict_img_features",
+    "line": 90,
+    "end_line": 154
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "process_image",
+    "line": 157,
+    "end_line": 176
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "_save_features",
+    "line": 179,
+    "end_line": 192
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "__init__",
+    "line": 17,
+    "end_line": 19
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/img_feature_extractors.py",
+    "name": "get_intermediate_layers",
+    "line": 21,
+    "end_line": 60
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/metric_depth_estimators.py",
+    "name": "get_metric_depth_estimator",
+    "line": 14,
+    "end_line": 35
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/metric_depth_estimators.py",
+    "name": "_create_dpt2_model",
+    "line": 38,
+    "end_line": 71
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/metric_depth_estimators.py",
+    "name": "predict_metric_depth",
+    "line": 76,
+    "end_line": 115
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/metric_depth_estimators.py",
+    "name": "_predict_metric3d_depth",
+    "line": 118,
+    "end_line": 156
+  },
+  {
+    "file": "source_evidence/frozen/src/utils/mono_priors/metric_depth_estimators.py",
+    "name": "_save_depth_map",
+    "line": 159,
+    "end_line": 163
+  }
+]

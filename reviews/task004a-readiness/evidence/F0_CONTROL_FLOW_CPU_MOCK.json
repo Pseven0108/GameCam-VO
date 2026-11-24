@@ -1,0 +1,167 @@
+{
+  "F0": {
+    "mode": "CPU_F0_MOCK_ONLY",
+    "final_phases": 0,
+    "events": [
+      [
+        "keyframe_index",
+        4
+      ],
+      [
+        "progress",
+        "final_ba"
+      ],
+      [
+        "final_pre",
+        true
+      ],
+      [
+        "final_ba_skipped",
+        true
+      ],
+      [
+        "save_video",
+        true,
+        4,
+        "MOCK_NOT_WRITTEN/native/video.npz"
+      ],
+      [
+        "setup_feature_extractor"
+      ],
+      [
+        "fill",
+        true,
+        487
+      ],
+      [
+        "export",
+        487,
+        "MOCK_NOT_WRITTEN/native/traj"
+      ],
+      [
+        "timer_summary"
+      ]
+    ],
+    "keyframe_index": {
+      "final_count": 4,
+      "peak_tracking_count": 4,
+      "local_indices": [
+        0,
+        311,
+        327,
+        486
+      ],
+      "rgb_ids": [
+        1,
+        312,
+        328,
+        487
+      ]
+    },
+    "actual_backend_outputs_verified": false,
+    "sources": {
+      "backend": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\backend.py",
+      "slam": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\assets\\candidates\\preview\\src\\slam.py",
+      "runner": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\assets\\candidates\\task004_run_segment.py"
+    }
+  },
+  "F2": {
+    "mode": "CPU_F0_MOCK_ONLY",
+    "final_phases": 2,
+    "events": [
+      [
+        "keyframe_index",
+        4
+      ],
+      [
+        "progress",
+        "final_ba"
+      ],
+      [
+        "final_pre",
+        true
+      ],
+      [
+        "construct_backend",
+        false
+      ],
+      [
+        "empty_cache_STUB"
+      ],
+      [
+        "final_ba_phase_1",
+        false
+      ],
+      [
+        "dense_ba_STUB",
+        7,
+        false
+      ],
+      [
+        "final_phase_1_done",
+        false
+      ],
+      [
+        "empty_cache_STUB"
+      ],
+      [
+        "final_ba_phase_2",
+        false
+      ],
+      [
+        "dense_ba_STUB",
+        12,
+        false
+      ],
+      [
+        "final_phase_2_done",
+        false
+      ],
+      [
+        "save_video",
+        true,
+        4,
+        "MOCK_NOT_WRITTEN/native/video.npz"
+      ],
+      [
+        "setup_feature_extractor"
+      ],
+      [
+        "fill",
+        true,
+        487
+      ],
+      [
+        "export",
+        487,
+        "MOCK_NOT_WRITTEN/native/traj"
+      ],
+      [
+        "timer_summary"
+      ]
+    ],
+    "keyframe_index": {
+      "final_count": 4,
+      "peak_tracking_count": 4,
+      "local_indices": [
+        0,
+        311,
+        327,
+        486
+      ],
+      "rgb_ids": [
+        1,
+        312,
+        328,
+        487
+      ]
+    },
+    "actual_backend_outputs_verified": false,
+    "sources": {
+      "backend": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\backend.py",
+      "slam": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\assets\\candidates\\preview\\src\\slam.py",
+      "runner": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\assets\\candidates\\task004_run_segment.py"
+    }
+  },
+  "status": "PASS_CPU_CALL_PATH_ONLY"
+}

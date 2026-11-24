@@ -1,0 +1,954 @@
+{
+  "archives": [
+    {
+      "attempt_id": "attempt_001_2d2d0ead7815",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E3_attempt_001_2d2d0ead7815.zip",
+      "bytes": 255406707,
+      "sha256": "3076a2560f502246e48d83c1d871c62ef475a1d4e3f1e3cad11653a96d1198cb",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "f310e5eb010b4dac1bac2e18e9a0b3c423f5d5465b98b8c6e029c39dc33fc3d0"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1426,
+          "sha256": "0ea6a27b26c7566259fe3f817f707b490a6f8bd9d1f9a90638f23c84cfcd5231"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "f7e57183b553a3fc656609cb90df952fade15ffa43522ff78c1c4774d4af8668"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 204,
+          "sha256": "c054557f14588ae2536d957a08f7986c4e18a7eddbb34e069eec022b71a4d643"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3027,
+          "sha256": "96f4d111a69532635fc0fc4811c5eede91b4d8bc1441e00348d1d1fe51f81abb"
+        },
+        "keyframes.json": {
+          "bytes": 2044,
+          "sha256": "52f83f483ce853ad84c4fa07dce1273a51b568cf6e322830519626d860e476c4"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "371ff5fc6eb16304a738691a2052006aee1082a8afecc70cc6f29a3df3f1eaa8"
+        },
+        "native/events.out.tfevents.1795422714.jupyter-yd6gks8uzfbxzdb4.1039.0": {
+          "bytes": 3605,
+          "sha256": "3e59f13053c8b900468ab3f9c4315bbc474c98f77286fe9b84eb98541b553393"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "f7900c42037f008553dfa1f18222a12688c2656e471a04ce4331dda9d4ac436b"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35294,
+          "sha256": "8dfd63f24309bbc5d135c10e4e58da333d0d3746fd5f54fb6a7c6987b6c5ed11"
+        },
+        "native/video.npz": {
+          "bytes": 514699518,
+          "sha256": "fd810bd0c8ce92f12e71eab671ac0cb00df357c7de083442f6375afc146880ed"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "1aa19cb106a4c09c9ec5afd4bd6cdfe28969fef93756608a25e230958cd90641"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "e0b7cedce90cbebec082d56bc26b8f6f642d744c302a232a27bcbc018867f2c5"
+        },
+        "observer.jsonl": {
+          "bytes": 55934988,
+          "sha256": "b87d01aa92fc14e3d2e44abb7cdeaa4253cdd63d4542c033aa9e3d175500830d"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "d91c5a0c6a702f86f3d81e8623088ac7dd787df6efa5a70acb4e4156a9e2a4ca"
+        },
+        "process.stderr.txt": {
+          "bytes": 86812,
+          "sha256": "fc976d1c9679016c814e1327ebe546389b0ca6938a752aaf6755b1cd5533681f"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "e23449d9ecd1836323a3563f3ed2ebd27e0d58f737286410a6ef6800d3add540"
+        },
+        "progress.json": {
+          "bytes": 108,
+          "sha256": "276074d84ad2842a7ae19431e2a47c090d882ed1191b03d888f3000e747aa755"
+        },
+        "resource.jsonl": {
+          "bytes": 26312,
+          "sha256": "ad552bfc5b7e2134a5ac2de89c285e98d0063ad2fbfdd4924278b50663fd5813"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "54d6ecf5d4f24d359eef2c244b812881c0c581e740c90d6c7ff7eca629ea52c9"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "89f28f80d94dc117af7820ff6dde4570b9cbdbd0e40b03ad7bcc64b68ee8187a"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "c4c26f47d7f3b9c4ae8de2d98ff4e3901dad019689ce76366cb907d636891db9"
+        },
+        "trajectory.npz": {
+          "bytes": 26323,
+          "sha256": "e93b24feb2745748c595617acb78c19e904a8f97d13ecf2d072a7e0c56699a48"
+        }
+      },
+      "arm": "E3"
+    },
+    {
+      "attempt_id": "attempt_001_5c896f87773b",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E4_attempt_001_5c896f87773b.zip",
+      "bytes": 373934745,
+      "sha256": "0ae419148280a1f94cdd3b8bcf0b615b7b6f34d85a1a27b7c79857545a098cf0",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "992b7807c3e83831b2aa62f2dbecba1b8fe906decd53626d57eaa03db43440e1"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "3be5c3b2085e528331428e6341e3ce4bf000598d28b072866e663ca7642c2014"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "57b47344fc7758416c797fffe1c06e40ba645e12bd1c28b4910ef4a1e5cc1f29"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 205,
+          "sha256": "40b48b47ad4fc85780ab30fee6b80856f9e0c1089fbeb406c77c5e367233d0f1"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3027,
+          "sha256": "2d17f09c52a42875df7df976892948e427df1ae2bf799a1da84d1517e85c2c68"
+        },
+        "keyframes.json": {
+          "bytes": 2898,
+          "sha256": "5ab7fd8a4442bd716108911809caed45f3a600f95b1116cf3146c5427f77b304"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "ddb1345cd9d0e2997a6103cccc0c4a5329badd80fd82e24dd421548b887b7561"
+        },
+        "native/events.out.tfevents.1795422979.jupyter-yd6gks8uzfbxzdb4.1516.0": {
+          "bytes": 3605,
+          "sha256": "82d9b88ae22adb98b98e417fcb119e0b57ac24479b3630dc55e84a09ee3e1701"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "96282c6bbc99ee5ae30737e2132c8831455b6a67cb467e570e0994b7400c0c12"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35374,
+          "sha256": "94cd51bd1a817d9914dd502be822620d8db746beb4cabb39b8a4c8b256987ea0"
+        },
+        "native/video.npz": {
+          "bytes": 741908206,
+          "sha256": "eeb03f8a1bbe0b021baecac05c20ff3d34e386b1518ca11d9290add8bf3d867b"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "ae4b2d628e9b8ace636b0b23168273263ea1773f811acc119412069e99687fc0"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "457e5573ac1e890581466bc7ada04aacf7bfdc0b8fd8322b2e0c3393192ffbf7"
+        },
+        "observer.jsonl": {
+          "bytes": 74459029,
+          "sha256": "c7671542f122db2b81a6beff0b9922ab630c11846f911c8d59f016ce7b62bd8d"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "55ba54a86e3938158fb4910532b65c26b1fb0919b84ce253819470560d6b4d8e"
+        },
+        "process.stderr.txt": {
+          "bytes": 86763,
+          "sha256": "85ac595bbffd76c3f660d7a0658bdfec970ef3439161a8d9f0597dd6316e2c4c"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "4580e6a763dea31381f01673b739824a96fd45990533ed4d385ace8e882a88c3"
+        },
+        "progress.json": {
+          "bytes": 108,
+          "sha256": "60ec3a24cff66381516a617d987f61fbf2ac1b7317e504dbe664d61dd2b89ae6"
+        },
+        "resource.jsonl": {
+          "bytes": 30135,
+          "sha256": "1a8203e220f8a411a161ca640f3bdd6b9ae2a552904fb2022f8b8958b5e52d66"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "35de8f0fa178711f27a0e1208963c9f49631b065e79d68995f179989643923c4"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "f14aa707934e01a79172fd9e4ad8a02fb7527a1747f06300700968781d0f7e31"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "e2e29d90efe74a5306e713e579ea31b6b5f435e4eea06a0512dc876cd91de2ae"
+        },
+        "trajectory.npz": {
+          "bytes": 26440,
+          "sha256": "9575fb629d319b2d66a2d669fecd7db2f882c1ea6de30b36043917468d64a405"
+        }
+      },
+      "arm": "E4"
+    },
+    {
+      "attempt_id": "attempt_001_ff5df043a249",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E7_attempt_001_ff5df043a249.zip",
+      "bytes": 264699419,
+      "sha256": "40b4b132b468603041bbd333bd48a18114a77a8c20737b843f480ef5988dd849",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "cbd47c43b7d5756198ba420a7c88f67f0fbed093a362f99f60f2c3bdcb2eb2ae"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "f4bd11e6f56e514acfe3072f195ecf74a95a6f7888bdcb7a6ddee6a6ca28720a"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "a12a60526b7f4e8799e14e893f1719626ab745c3601839bbab92dbe75ba7c802"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 205,
+          "sha256": "f4cac7a0bd60c3a7934641b5fa75c12ea3e93d7f45d963f51390fcf0b7db5090"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3027,
+          "sha256": "8dc8cac3190a47be8e868b52a674790216f8c0558ebc70e21e0e7e032d140f95"
+        },
+        "keyframes.json": {
+          "bytes": 2112,
+          "sha256": "97eabfc646e5dee71898f6a9c86a852686bf45baf3fec6b56268879b018eb54a"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "ad1b20d133dcb2e5ca4fb2677f72c141b06a9702594984ea8936c9e0fa8155eb"
+        },
+        "native/events.out.tfevents.1795423293.jupyter-yd6gks8uzfbxzdb4.2005.0": {
+          "bytes": 3605,
+          "sha256": "3c1eb62a1cf40b9fdc9d9c2a617e5754d7ef9e6838b5b56cb40374b8ec3ec387"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "96545f7401b230ad7e961f49e4cdda794c9814c74241490fba44f127680c1dff"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35143,
+          "sha256": "f4cbb3c2ffd9272487786a9eca0bcd2cbf4d0397a0e2af1788c3e48aae08545f"
+        },
+        "native/video.npz": {
+          "bytes": 533247166,
+          "sha256": "c605a72da1544968233be1a833444f5c8f60b36478981f9bdb1047c250e2f132"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "474e6e1b2c1c639cdff1a0682d0e4c3577ee46509203b8be7494f48ded6af0b7"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "b0a9d7bb3f936349536803dba96650a306dcdc3912c75d56e1afa6f755d9591d"
+        },
+        "observer.jsonl": {
+          "bytes": 57537954,
+          "sha256": "e7754a9c1709c70a2ea3cb6d46e831d5f8fff572355be7bd9afce9c17415286b"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099"
+        },
+        "process.stderr.txt": {
+          "bytes": 87118,
+          "sha256": "317e8f68aace03637c35cf32c6fd5b76f5a0d5cf0806c1fc0aabf97ca3ef98dd"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "19ce4a5603d176320c831194e054a760bf094c1ce4a96551032baf369bae5b6c"
+        },
+        "progress.json": {
+          "bytes": 107,
+          "sha256": "61074b14274f79f0f1bbdcb8ee79ec51b03a713bd5d584c249cb436f70702099"
+        },
+        "resource.jsonl": {
+          "bytes": 26602,
+          "sha256": "5a01e174cd06478ea5857fee3f7baeb3eb75be0c65f012571e416e4cdfe0d1f4"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "637ebd741984570a6b019fa1459db58dc78311af66810c61fa5acd0ce93e1d9a"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "e429850bb633113285bf7ff46122aa16e4d4d852dcd04f67fb3f684143ad39d9"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "845620e12913686d89ba27c99b7e347f99cb17f69c6966751e78382653083426"
+        },
+        "trajectory.npz": {
+          "bytes": 26357,
+          "sha256": "6c2bdaafb20a3cc1a4e7785b93c6b1c979620ca9ec74edf70b7223ee6de7c5ce"
+        }
+      },
+      "arm": "E7"
+    },
+    {
+      "attempt_id": "attempt_001_73db5d7864a1",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E0_attempt_001_73db5d7864a1.zip",
+      "bytes": 199505553,
+      "sha256": "63de46ffa435f477f3702fbc31fc738bb92994e03ba5cb8b7939bf948ecc3588",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "28f31447864f03e1737f08b0e7d4832922086b39674718f943a3997aa86e135b"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "e6e37ac05cc0a94306a184280e83ff624e494f1e8f331f482c38b35ad7b6b325"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "8b0d988daa632c3f460a9f34975675effb7ccbcfb9b7e5a8b8d656e768511dd0"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 205,
+          "sha256": "524c7ac4c9c8a1b10028e10ee6f27e629886785b45e5b54c621eaa438c451d25"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3162,
+          "sha256": "8a73eff97a79936bb2b1f66107ee0e17c3601408a1132839dde5e2ebb0aec5e8"
+        },
+        "keyframes.json": {
+          "bytes": 1610,
+          "sha256": "1e7a8dac0068c517f7243613fa123f275da0a1d1c0532fa33ad6fa40d6683d51"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 655,
+          "sha256": "408268c739eca920ba1c1472676a63316d192b4ecf53a31a4bcdc6b691a9a85d"
+        },
+        "native/events.out.tfevents.1795424212.jupyter-yd6gks8uzfbxzdb4.2546.0": {
+          "bytes": 3605,
+          "sha256": "06fa53faaf73938724eef8ed22c595f6e59e38e8696996e8c207f8b170b313f7"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "76a3c4f5a21c5a89186f394bf47b6a6136078e00898d40093a372afb64055198"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 34258,
+          "sha256": "7494a855da352b14ce8cb3047170e8c78fff4140174ed1faa208888afe5f0b87"
+        },
+        "native/video.npz": {
+          "bytes": 403413630,
+          "sha256": "a0a0476a2e7859edf0de1b6b80aac46b6f1aebe457cadfa8dbeafb3bbff44431"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "904ffa39d71ffb5322f0a1ad13b6fcaf1f1622a90fda9ae81da0f3c4914091bd"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "8dcdd11710c2774f089c36e2bb35efc6b934b170ae2b763842e9bb15e82f4458"
+        },
+        "observer.jsonl": {
+          "bytes": 46785246,
+          "sha256": "752a1ef1f2163daaf07056f6f6046e9bfff92d8f84f8e59069efa386cabf56ee"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+        },
+        "process.stderr.txt": {
+          "bytes": 87354,
+          "sha256": "8f7ee76ccbd55aae9e342790d24d2554d3999dd9b038aef81a39693440821b01"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "04979da3400b06b6726733f00bf15fdbd4182a935fad7921cd18e230a1643dde"
+        },
+        "progress.json": {
+          "bytes": 107,
+          "sha256": "24c7f7a7373acd83224d1287e6679fcdb87bebfa4f468d27f65319c13f63b42c"
+        },
+        "resource.jsonl": {
+          "bytes": 28572,
+          "sha256": "184c0a7285bd79b437c368e715e8fd6796d916ff9b304f5ef31b52a8e7748fc9"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "90575da3ad11160a0a1b4c79a1beb2ff9ebb1404e9dac68e59b28adade121754"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "aba228753887dcd88cbc715fa39438c188c5056c6b42c4fe59fc23e9b3395dae"
+        },
+        "trajectory.npz": {
+          "bytes": 26223,
+          "sha256": "f4669d07e6ca31d71dbeecabed46a8223557433b10903fd3dc01860addfd208e"
+        }
+      },
+      "arm": "E0"
+    },
+    {
+      "attempt_id": "attempt_001_c93599e10485",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E8_attempt_001_c93599e10485.zip",
+      "bytes": 380508940,
+      "sha256": "364098c5061ebaf749be89f692d267f2b302df8eb035020ea510e8022a97dff8",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "62264194ed73d1a18eee6199a6b1604c536bb0125f8b4ee1530753f508d537e2"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "ea3c9acada4d75ec37a16806adae93ffc4dd2105ae5e42bbeed23c6d2434ff6f"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "bb601072e4dd92b11c1c3e41de4f48ef3ea668d1326469f7832ff3da809ef256"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 203,
+          "sha256": "06c4a4d5e5763daa65d1229aeccde5ca56ccf053ecd2e6e6bcef2719745f9df0"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3162,
+          "sha256": "55f840b52adc4a39d2be6e427663e659005d1bdaef6fc60b1badec73b33ee9a2"
+        },
+        "keyframes.json": {
+          "bytes": 2948,
+          "sha256": "99d51d9478f9ae968efc4a5dbfee25c40da6aee89f94aa4365a3dc4b857c1d55"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "679ee46aece7fb998450d479a930409d11ed196dee3f1cd16b293ed90bf06d2f"
+        },
+        "native/events.out.tfevents.1795424440.jupyter-yd6gks8uzfbxzdb4.3024.0": {
+          "bytes": 3605,
+          "sha256": "183c911726dd9fb100fdf85bcbae3f0a5f6d18d1a5241542cdd9e520d87b910b"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "0a2c69f5bc1ab9edb547c09b7ba758277e7cd2307f72f98ec5e9dfee7e4ae530"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35395,
+          "sha256": "2b8229abd6d12a7a08a3478f971db6dfabdddf555b22f9516ca2f507bee684fd"
+        },
+        "native/video.npz": {
+          "bytes": 755818942,
+          "sha256": "9092d1df27f8922772bd4b40d60b04877629dcbc9fe0cd1a1d82eb24534598f5"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "934c17cfa4d20aead95b16e25cedd23867d9bd8f1ded68bcaeba71394f0047e8"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "5d9f18385432fd55fc78b3d36531a634662232776663b801210c55ccbc0c26d9"
+        },
+        "observer.jsonl": {
+          "bytes": 75813537,
+          "sha256": "f92e14911a16c66fd19f9cc99e2d3fdf78e18b6be1f8ae63b52a6fc3218b1bad"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed"
+        },
+        "process.stderr.txt": {
+          "bytes": 86815,
+          "sha256": "ecbfa231f9e43ba1203995961d05ac92f0d1c33c54320a4ea9b55d82ff8ed10c"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "29014e94d36de98137e916b8c5dbf69f6ad6184e722d530031ab920a07853d22"
+        },
+        "progress.json": {
+          "bytes": 107,
+          "sha256": "828c3646ee84f7f16b539cd3ca76d64620089b0b4580ecf356c95025b73467c1"
+        },
+        "resource.jsonl": {
+          "bytes": 29035,
+          "sha256": "f1940cd82350bbd027890c66c792de564544147fd232c3ca27f5bf296d6eeca7"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "fed10013beae073fdd0b0e6aa6d24c84eb19b5402301aa30d666159872aa7a50"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "adb9d6de4f4c147bfb064e2f55df6e4c3980259553b98b95be1b3d1336b65795"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "e6ec007a053924d7df035f3c242df58cb0c5414ff1c4cab2342843a50d3f5693"
+        },
+        "trajectory.npz": {
+          "bytes": 26482,
+          "sha256": "301d8d598df488ae61f1d16e558e478b34bbdb1a8da0b30ceb832c721e1c8f11"
+        }
+      },
+      "arm": "E8"
+    },
+    {
+      "attempt_id": "attempt_001_e959617a51f3",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E6_attempt_001_e959617a51f3.zip",
+      "bytes": 375664382,
+      "sha256": "09e1fc914b7aa089485966488e312decbd979e53c3d8e15ddb98be3bc475fa70",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "cc152834414b0840d7823a0dc50acdc0342a591150766bf59bab4c1281ab4e7f"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "7294f659204dfc344ccf23519faf29d0f6911f13728adb2b08a97b8656770ea5"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "7c20b13b28c974149220717b93e51ee582429601ebd98eba71979ff92f52d334"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 204,
+          "sha256": "4c0f03b247458dbc454bc68592b1d1b9c9166862fd85591a6732db98522c9123"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3162,
+          "sha256": "7c32271cda0b410e7c196c241d0c233239b084d8d0ad1894101e344b2ce331d6"
+        },
+        "keyframes.json": {
+          "bytes": 2912,
+          "sha256": "e037fef2ccea2cb225d56d85d479f555f113279464fad61f5b41fab4ae152b1d"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "3a27175124937a426a8f499f80e0ca37db88978a862a32593a3ff226d580364f"
+        },
+        "native/events.out.tfevents.1795424672.jupyter-yd6gks8uzfbxzdb4.3612.0": {
+          "bytes": 3605,
+          "sha256": "0fe9ecf017d672d842522065410409e0cbfa364d15477404d080543f38fd14ad"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "654e92d92273c3761d33de595c6272ef801bfffd2ab2086bd8a81ff8750ec6fe"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35387,
+          "sha256": "c7e00629f1dd1154b8d7484c656da44007ec62a4397d7047ad62322002be7323"
+        },
+        "native/video.npz": {
+          "bytes": 746545118,
+          "sha256": "33c72707b7cff89379cb199281278e011a81e656df5f49a3e2ccd58cb60f3e71"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "273762a84b4c9eeca152b1d9eaedd2c4d708eaaa5eb99c5d5e4a84c8ea867d2a"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "3fb5a343eb78aca7c52faa652c3c6597be1eb90b9b489d9fe3e092acbba90816"
+        },
+        "observer.jsonl": {
+          "bytes": 75129741,
+          "sha256": "a709037f5f1fde1e1b0330e9693272a6148a4fb5e69d924972f5781c19cf8152"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "6e2df5994153531597ca43be109a5ca80acd510389c090d049353271c47dff8d"
+        },
+        "process.stderr.txt": {
+          "bytes": 86759,
+          "sha256": "7cd482262122a816e16646d1c6ae49b6b29a4a0428625e5bb990b5d110a682c0"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "11fa82a72f227363db8c442c1967f169906fbfa2bd18c1f56bfcf4722e7a3bde"
+        },
+        "progress.json": {
+          "bytes": 108,
+          "sha256": "de1434f189cfd3f4857269a91002d0cb8aafb2fa1b05613efffe88fce284d296"
+        },
+        "resource.jsonl": {
+          "bytes": 28500,
+          "sha256": "78eef08ed65258a4594357ffe38650a761362bf8504f0cade1bcdfb6e47d58fe"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "6b5350e09a29e388fa2501d57323d7d54095cc5cd5ff46a37d0d99f92c7653a5"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "1411a573a1612764d3b0fdfcd03a2ab6db5bb388564283a280575492edec3fce"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "bb209d46927b150282679e4b765bc7f75235d220319441910f6aa28db8f89b83"
+        },
+        "trajectory.npz": {
+          "bytes": 26479,
+          "sha256": "265217281a15cfa18d20d8c2379f15c2074097c205db5f3c1c2e5e2451e23a12"
+        }
+      },
+      "arm": "E6"
+    },
+    {
+      "attempt_id": "attempt_001_21d6b33f8f65",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E1_attempt_001_21d6b33f8f65.zip",
+      "bytes": 366800294,
+      "sha256": "3842935f34fd52c2308bc2fa7271cd3c5fd9966ccba8181340e71f107e8eae22",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "5ae704f38834791c84a6dd393a3e0f640c36ce9019bec503f46f907c8dbeeb8b"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "5062775d778135fa2927717a72811200e5aaa04455fdd45dcd0d8c4cb8a979bb"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "44de782074d03849ff14288d63826a407eb38e1475589c4634c0c6e6a09816f1"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 204,
+          "sha256": "8bbce35888d67d47de608c347ce5edba338c7b003313dd04709605076c310b8e"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3162,
+          "sha256": "877a4a8134d47b74c89294554caa3813876441d643bef7b42458c6c988aec6ed"
+        },
+        "keyframes.json": {
+          "bytes": 2846,
+          "sha256": "09ecaef98243419027c8f16b37a090845b60e7a90de1412467f254857766d706"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "2a8e70f73ed858423b002525426b79495bd3813187ff35474fbe30c6fb911131"
+        },
+        "native/events.out.tfevents.1795424903.jupyter-yd6gks8uzfbxzdb4.4209.0": {
+          "bytes": 3605,
+          "sha256": "13602a7f43b16c8e39b699980b5302a42732c0e08bd47e8d60f96179b25a0de1"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "44667f5c35c323f10b12556fc17fbe64b664cb323c488eff7379b17662eb9df3"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35374,
+          "sha256": "e85e2738013dc1725af70bbe7e2126e5e5fe117dae8a7e1e82f165a65f75b79b"
+        },
+        "native/video.npz": {
+          "bytes": 727997470,
+          "sha256": "9ce5786c9f8bf542907739f779e5f61cd573b449a475655f7d7ce09a5131711d"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "aaf32549beba9234505ba1446f86f408f0c08b10b35723b19306ae71517693cc"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "a5a66535bf76aa714a1e11065cae84fd164b1355cc4106df2139bb15e1f633dd"
+        },
+        "observer.jsonl": {
+          "bytes": 73693624,
+          "sha256": "9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640"
+        },
+        "process.stderr.txt": {
+          "bytes": 86995,
+          "sha256": "d61fabe9176f4cc5f47c04906a74b7dd0848f764701ffa68e6bf4db56d15b71d"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "80a92ddb2be902743f174c3dc7ddcc8486e73912806607bfadd262e94e831778"
+        },
+        "progress.json": {
+          "bytes": 108,
+          "sha256": "1324450aac7b56f74a86506df259a04a9ca08a65b4469eab2f1f7a8462bd688d"
+        },
+        "resource.jsonl": {
+          "bytes": 30399,
+          "sha256": "849ca7fc741fda0abed460754c671137fb946588bbb863b0da21286c6a3d6d10"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "2dc58fb61bc7b8d4f5afa22a519da247669b9affe5e40ce46dcd99f431ccd559"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "49b2ea6840e63224b54f5804344169c5c5ea3597a972702fd4e89e6545d93e68"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "102ef73a04f41c6672d89ed9c118f973800ce510f3ae550b0d4b16b3926a15d7"
+        },
+        "trajectory.npz": {
+          "bytes": 26484,
+          "sha256": "d485a577412826015d7bb9a182ef43a5c4f52d3f244647dd58fb1f52ed5eb225"
+        }
+      },
+      "arm": "E1"
+    },
+    {
+      "attempt_id": "attempt_001_8af9e8106b05",
+      "path": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/sealed_results/E2_attempt_001_8af9e8106b05.zip",
+      "bytes": 306850136,
+      "sha256": "f682279f6f04ecd4f1970978399f92343fc0c286b039ab9c8a67c59b31c9faee",
+      "crc": "PASS",
+      "payload_matches": 26,
+      "files": {
+        "LAUNCH_INTENT.json": {
+          "bytes": 806,
+          "sha256": "ea0353a4bbd3137f2f74086f60b5df1014431ae5fd8510ef0f33e0cb15a4e415"
+        },
+        "LAUNCH_RECEIPT.json": {
+          "bytes": 1427,
+          "sha256": "f7e100c8b853cf273634646e417841e0b4852740580b819e30f31ba80f16dde2"
+        },
+        "OUTPUT_INTEGRITY.json": {
+          "bytes": 3733,
+          "sha256": "4174a6169e86ee31780d39b974f77b146b0d8c303dae807ecde0fdbd211717d5"
+        },
+        "PROCESS_RECEIPT.json": {
+          "bytes": 205,
+          "sha256": "0f54dbaa7b0129b2431905557a4ca575d32a669bda413894be948f69315dbe12"
+        },
+        "RUNTIME_LAUNCH_CONFIG.json": {
+          "bytes": 3162,
+          "sha256": "114f12dbf460acbbfaeb545004267b2a313978eb7bb6af6cb184f252a8ab80ed"
+        },
+        "keyframes.json": {
+          "bytes": 2422,
+          "sha256": "45b6ee5582dc4aa0a468821f35803e3a49df71f7c50efd33498bd957982b7a06"
+        },
+        "model_input.json": {
+          "bytes": 4619,
+          "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+        },
+        "model_result.json": {
+          "bytes": 657,
+          "sha256": "b3798f5e8814ba860f43a65e8ec71ad905ccbe14687a1b51af4bc57aa953c5d0"
+        },
+        "native/events.out.tfevents.1795425146.jupyter-yd6gks8uzfbxzdb4.4820.0": {
+          "bytes": 3605,
+          "sha256": "364e1a54618d4b9816297a23c2d6aaa197988c4a3d25ad24ab09133a71830fa6"
+        },
+        "native/timer_summary.csv": {
+          "bytes": 316,
+          "sha256": "3ceaf3d67a9243361ecbd8d13c7ee7e944a9c08544e281b9cac3161a6764de97"
+        },
+        "native/traj/est_poses_full.txt": {
+          "bytes": 35041,
+          "sha256": "3ae1d5251ae494f24bfa7d6af95678a68b5a6fd23642956048e8f32d9d6bfe94"
+        },
+        "native/video.npz": {
+          "bytes": 612074670,
+          "sha256": "2bb33911f30813f52b8cba4fd9a8ca16267dc1618e10eafc8ab6d747f1dbb218"
+        },
+        "native_camera_stream.json": {
+          "bytes": 46,
+          "sha256": "2beb5d9b2441a31a53b55d6d45267f895978ffc4638bef3f843b26b8be267dc1"
+        },
+        "native_config.yaml": {
+          "bytes": 3381,
+          "sha256": "c5db66c4e327ead14b93c10841e58ccac8251ebff57ef1f076327de685f1175d"
+        },
+        "observer.jsonl": {
+          "bytes": 62181210,
+          "sha256": "288edb7018d2b69a4bedc2047fa6443bb773556eb51167eebaeeba31b6130a73"
+        },
+        "policy.json": {
+          "bytes": 247,
+          "sha256": "7ef39b96a69139a4a2d07d404d3cdbb37516f4bff5d8ac520529e1b0d5f6eb85"
+        },
+        "process.stderr.txt": {
+          "bytes": 86748,
+          "sha256": "3d6a1be9f59a3cfbc600e00256481289ff14683c5af2d1cf66c7c55a433b63d2"
+        },
+        "process.stdout.txt": {
+          "bytes": 1345,
+          "sha256": "f806e269a81d1a9cfd9ead93b30a2393a512006529bea9796ff53bcce4d0f738"
+        },
+        "progress.json": {
+          "bytes": 107,
+          "sha256": "393b89d831ae1e21a524e73e31f0875485c8bb6e2a10470435b252071e5f9f2a"
+        },
+        "resource.jsonl": {
+          "bytes": 27706,
+          "sha256": "13cb81fa827abbb88c4f84a56360a040c8032eb79b231c5a2d8dc1be842f8843"
+        },
+        "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+          "bytes": 16743,
+          "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+        },
+        "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+          "bytes": 1243,
+          "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+        },
+        "runtime_cache/matplotlib/fontlist-v390.json": {
+          "bytes": 26026,
+          "sha256": "a6e8785ab9377bd47eb4d46d22cfa9d30f196a91276b9f1fd48e77d9ca2fce54"
+        },
+        "task004_policy_receipt.json": {
+          "bytes": 195,
+          "sha256": "25be19e2d46d6bad0b8ceccf4079407291b0a876e5a87e19c091592efdcf2741"
+        },
+        "tracking_child_ok.json": {
+          "bytes": 258,
+          "sha256": "6c0bcd27d1ae4aed62a2d6a0ec4069a56c9d7f3ed18b8407aa31295e4f06f635"
+        },
+        "trajectory.npz": {
+          "bytes": 26401,
+          "sha256": "4512c5b4107c204391879e40b174aef71aebe2b06f72ca5eda4f641d11e2b5cf"
+        }
+      },
+      "arm": "E2"
+    }
+  ],
+  "remote_evidence_utf8": {
+    "evidence/RESUME_E2.stdout.txt": "{\"event\": \"GPU_STARTED\", \"arm\": \"E2\", \"pid\": 4704, \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E2/attempt_001_8af9e8106b05\"}\n{\"event\": \"GPU_COMPLETE\", \"arm\": \"E2\", \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E2/attempt_001_8af9e8106b05\", \"status\": \"COMPLETE\", \"elapsed_s\": 220.24572551000165, \"peak_gpu_used_mib\": 16151, \"keyframes\": 132, \"ba_calls\": 1264, \"poses\": 487, \"observer_sha256\": \"288edb7018d2b69a4bedc2047fa6443bb773556eb51167eebaeeba31b6130a73\", \"policy_sha256\": \"7ef39b96a69139a4a2d07d404d3cdbb37516f4bff5d8ac520529e1b0d5f6eb85\", \"no_retry\": true}\n",
+    "evidence/DATA_PRIORITY_SERVICE_CLEANUP.json": "{\n  \"utc\": \"2026-11-23T09:15:52.693350+00:00\",\n  \"service_pid\": 2388,\n  \"service_exit_code\": -15,\n  \"ports_after\": [],\n  \"owned_service_closed\": true,\n  \"finished\": [\n    \"E0\",\n    \"E8\",\n    \"E6\",\n    \"E1\",\n    \"E2\"\n  ],\n  \"error\": null,\n  \"server_shutdown_performed\": false\n}",
+    "evidence/RESUME_E2_CONTROL_RECEIPT.json": "{\n  \"arm\": \"E2\",\n  \"exit_code\": 0,\n  \"utc\": \"2026-11-23T09:15:52.220998+00:00\",\n  \"no_retry\": true\n}",
+    "evidence/RESUME_AUTHORIZATION_DATA_PRIORITY.json": "{\n  \"schema\": \"TASK004A_DATA_PRIORITY_RESUME_V1\",\n  \"utc\": \"2026-11-23T08:56:34.414091+00:00\",\n  \"user_message\": \"\\u53ef\\u4ee5\\u6682\\u65f6\\u4e0d\\u7528\\u7ba1\\u53ef\\u89c6\\u5316\\uff0c\\u6211\\u73b0\\u5728\\u6682\\u65f6\\u53ea\\u8981\\u6d88\\u878d\\u540e\\u7684\\u7ed3\\u679c\\u548c\\u6570\\u636e\",\n  \"remaining\": [\n    \"E0\",\n    \"E8\",\n    \"E6\",\n    \"E1\",\n    \"E2\"\n  ],\n  \"existing_preserved\": [\n    \"E3\",\n    \"E4\",\n    \"E7\"\n  ],\n  \"retry_any_model\": false,\n  \"algorithm_or_yaml_changed\": false,\n  \"browser_rendering_gate_waived\": true,\n  \"native_rerun_writer_retained\": true,\n  \"shutdown_authorized\": false\n}",
+    "evidence/RESUME_E8_CONTROL_RECEIPT.json": "{\n  \"arm\": \"E8\",\n  \"exit_code\": 0,\n  \"utc\": \"2026-11-23T09:04:16.046467+00:00\",\n  \"no_retry\": true\n}",
+    "evidence/RESUME_E1_CONTROL_RECEIPT.json": "{\n  \"arm\": \"E1\",\n  \"exit_code\": 0,\n  \"utc\": \"2026-11-23T09:12:09.889930+00:00\",\n  \"no_retry\": true\n}",
+    "evidence/RESUME_E6.stderr.txt": "",
+    "evidence/LOCKDOWN.json": "{\n  \"root\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\",\n  \"source\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source\",\n  \"pipeline\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline\",\n  \"manifest\": \"/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json\",\n  \"config\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/release/candidates/r2_sealed_config.yaml\",\n  \"python\": \"/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python\",\n  \"weights\": [\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors\"\n  ],\n  \"extension\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so\",\n  \"torch_home\": \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub\",\n  \"hf_home\": \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface\",\n  \"pins\": {\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline/transfer_common.py\": \"4f91e5f39375575640f1034fc6aff02ef06dfd342f1e4741c4da68b70e5627e4\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline/segment_input.py\": \"eb5afb40b87fd56995138f916944637566ec59a4f3b2b84a4f96cf795a1d6903\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline/task004_run_segment.py\": \"f7b7111ea75358921740a57e9dbce0c884cfc7a3850e00e4136a6e84d67220ac\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/setup.py\": \"ac43c0c94239c42ca983ebf45a8a6c68db0ad6c1a75a059226fa16d96f4b7921\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/task003_observer.py\": \"1d9173fad166f2563d68a010b8efe98ff326ecf24d54ec4b265a80107a4abea6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so\": \"6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/task004_controls.py\": \"5e661eefb12cccd9f94199b80edaf37aba292060971b5246751f082ade7ec244\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/run.py\": \"d722dfe7b587beedd4f88f4749aefa55945af3d9bac47c1cb2e612a657945c63\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/app.py\": \"52fe296af84ccb9a784e5e7c8a204b817fe150eefbdea81e07010c3415acf4f4\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/run_video.py\": \"208c173e383c0515a3a23d35b2a4cde816560f1c01af19913fc4dedc4b1cf32c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/run.py\": \"b8beab6341314bc864cfc0283e0e303f55571af4e2e456c3d3afbc4aae67249a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py\": \"d22df8d0da44c8525ebed898fd9c33b3acfcda919a84d577cc2a08bfd3d50ac1\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dpt.py\": \"7cc9a29b41d31e1628e5c8b8705e25ae95bc6490f779dbb695297ce2341566f5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py\": \"093266ea08084c7cce7b8ddd779ecfaaa13055735faa8a7d68b5924f385b395b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py\": \"949100aac4d9c19c9d65319dbd362886c5d46a72d7586ba4fd500e9f1d51570c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/__init__.py\": \"e3c28c7b775165b6844000eb69f44d104d6c3803ac7da5d59f6ac3ecfb46d9d8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py\": \"c18c5b3f021408597a473bb710070ec3fb3b39f5a2e42e88ae83ced425a608b5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py\": \"b3f82e19926c9cfb63f10136aca5e8a723bde1ad62dae1d04f90d405f9439baf\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py\": \"0d2410ce8b8b4499a6b0cdab939ae2bceab8971efd8660d999b0f3088f28cbf7\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py\": \"356817b5d1390737128cbcc03a5333fd3060b73beae478772282ccb851d0ef85\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py\": \"df81d9901240214edc1831ce1b77558dcd6227b29a2f000fc5f546df55d2d09a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py\": \"351aa24b8af4bef923ebe3bed5e5e8503b08e39bf06ee045d6444a485a2036a8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py\": \"a97df1dbb687457a40c387fdc3482edee7ddc5c142c7d2735ca6235a8ae2885f\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_to_pointcloud.py\": \"d4d30d0ce76c2fdbf539cd97bed01948d7506acd8fe75481ab4b32c4170310d7\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/train.py\": \"1461b9a4ffc880085b3a1d193d052da5ce416a999421c65b792267e65fccfb10\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/run.py\": \"ce2ecbb342933ff442f6fefab14ef5f5b7aea42c7987325f6f3166c9c73f84cb\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py\": \"0ceeaecd4e8026f8218694014642515fb7a0943c1833b75edc91ae7a79ac9690\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py\": \"120698fd0ad9a4d169b4b9ef26035ad0cb11eed4089af53e07e38f5717024b1d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py\": \"093266ea08084c7cce7b8ddd779ecfaaa13055735faa8a7d68b5924f385b395b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py\": \"949100aac4d9c19c9d65319dbd362886c5d46a72d7586ba4fd500e9f1d51570c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/__init__.py\": \"e3c28c7b775165b6844000eb69f44d104d6c3803ac7da5d59f6ac3ecfb46d9d8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py\": \"c18c5b3f021408597a473bb710070ec3fb3b39f5a2e42e88ae83ced425a608b5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py\": \"b3f82e19926c9cfb63f10136aca5e8a723bde1ad62dae1d04f90d405f9439baf\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py\": \"0d2410ce8b8b4499a6b0cdab939ae2bceab8971efd8660d999b0f3088f28cbf7\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py\": \"356817b5d1390737128cbcc03a5333fd3060b73beae478772282ccb851d0ef85\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py\": \"df81d9901240214edc1831ce1b77558dcd6227b29a2f000fc5f546df55d2d09a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py\": \"351aa24b8af4bef923ebe3bed5e5e8503b08e39bf06ee045d6444a485a2036a8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py\": \"a97df1dbb687457a40c387fdc3482edee7ddc5c142c7d2735ca6235a8ae2885f\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py\": \"4b0d8a02bf824c44333db2ffc5325040d9225431d0c277765fd67b6ca7447617\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py\": \"30794974e677419313d6f0e29f9e8467e059a03e6d68eb1a17123b1c5476bc11\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py\": \"e6951506752e4bbedc683c25f3197aeafe02fda191fb63a496f3d5a027ddfc40\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/dataset/transform.py\": \"684a884faf897d0be24b18fb215140d0226dd62b8b27cb8aab740f9066715965\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/util/dist_helper.py\": \"97eb1d0eaa639c2599813c3b5578cb39d9d415efe99aea1ff7cf6eab1ea8e9c8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/util/utils.py\": \"e69aa66e267e9b251826dbb0386b6f47fdd5fc4a4e2bfd1c98405f4bb1be526b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/util/loss.py\": \"4acc0c1c805bc16dba34e7bd0ee9ffb9ba50d374868412cf96dffff087023a2b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/depth_anything_v2/metric_depth/util/metric.py\": \"595ae2f0c8bda88f6588d35b199b5ec9d4ba7ad531f58bd593d5ef4d28263794\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/setup.py\": \"f10eba30b02e62667160174ed16d886efa8b5666836db538be8bd6d89d1f0990\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/eigen/debug/gdb/__init__.py\": \"8f9be0fd76125d088a5db2c9f9cfb553cc3da70cdf4f23f568adffd821477337\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/eigen/debug/gdb/printers.py\": \"2d7d8345946747eb53cc7dd990af3e6a3bdfc2f282ebc1737d72c5d0f99f7c08\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/eigen/scripts/relicense.py\": \"644d4ae0d2f4f41ee9b018793fd6c0f5abc8a138149ac4c82feccc8548e18edb\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch_backends.cpython-310-x86_64-linux-gnu.so\": \"dac095876a6661fdb88c1a914aed7ffe600c5f859a6ba2fec8f9bc6b4db289b5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch_extras.cpython-310-x86_64-linux-gnu.so\": \"1e6e64734fc2c6589a096a677ed5a032c1c00f0a6f0b47678975c94043cfd7a0\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/run_tests.py\": \"e470a784e8707bf62d2edcf3db3023d8a00058cc4ead78d6e345b580415b3bc9\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/broadcasting.py\": \"6dd188ee0ae2890006029c86359eaaa38597c3591c2b455976033d867b22b143\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/__init__.py\": \"a48acae939f2005c2efec3aa49194a62d4bec0727b811fda27320df6b00bbcc6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/groups.py\": \"c169847978bcf82f69d7612b60a6cfa863b62b13f32bdd0cde93cd5e938a1bca\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/gradcheck.py\": \"767c8f5d9f11d4101063d4811b08cd1b38259d5402f994f2d15cd018699cfafe\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/build/lib.linux-x86_64-cpython-310/lietorch/group_ops.py\": \"304185cd507e142aa379eabd379b63fb0959763b6a7fcc87d678ebf70ec4b81d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/run_tests.py\": \"e470a784e8707bf62d2edcf3db3023d8a00058cc4ead78d6e345b580415b3bc9\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/broadcasting.py\": \"6dd188ee0ae2890006029c86359eaaa38597c3591c2b455976033d867b22b143\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/__init__.py\": \"a48acae939f2005c2efec3aa49194a62d4bec0727b811fda27320df6b00bbcc6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/groups.py\": \"c169847978bcf82f69d7612b60a6cfa863b62b13f32bdd0cde93cd5e938a1bca\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/gradcheck.py\": \"767c8f5d9f11d4101063d4811b08cd1b38259d5402f994f2d15cd018699cfafe\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/lietorch/group_ops.py\": \"304185cd507e142aa379eabd379b63fb0959763b6a7fcc87d678ebf70ec4b81d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/logger.py\": \"3c3e4d896c695f1125d3596cfd6679c0bf4199f211377363af3ca3d054a5c4f8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/rslam.py\": \"612bd39d266c153688a1a5eba8e2d15405f25251d752a8ae814490a5eda79693\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/sim3_net.py\": \"4f0232407b3d9a7841b6861edbaaa7081810f234953b8f04a92ffb7680d34168\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/slam_system.py\": \"88088dad32640bf6fc6ab443949a1eb4da43ea7a3f5e946ecfa6f7479ab3f9ec\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/gru.py\": \"85da66ae30e8027e015fc1197b4ea816f1b1e30c70f24d70f09364f9e10e131c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/corr.py\": \"a4278cb5dda9905277564c754d9ec073957247be5aa8e75f4b4f9d40dd02fd8d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/extractor.py\": \"c33a75d20ce9d634811301673c934d93b06715b22b685fdbea33b9e057300cd2\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/clipping.py\": \"c737e35b2cea75ab58242985ea5c6f0218a2991a49fb1287b7bece0d79828d8f\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/networks/modules/unet.py\": \"8eb2bc0891e703611ad97f125d9dc2bfac2164d3877032547878382cac706c06\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/ba.py\": \"17d887a387b4556b9bc5cafca0fe6fbf094ecd69ac2378733e4f233c3d039f87\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/projective_ops.py\": \"5ef35f589c87c0a0992ef65593b7fe41d116a0e228425441f963489da577bb4b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/losses.py\": \"03cce6546392f0544a469885a6907e7272ea551e19766ca02f8aae0b8e42ecd6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/graph_utils.py\": \"079121e4a290e3100e616c32e3a04e5643dc8f68e07435b885a9029ef607fefc\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/chol.py\": \"e1c28ed30dbf5f38d5f202e8b43a0776046b4d5696f3e1dd003fe96122580564\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/geom/sampler_utils.py\": \"988b2ee0e38c53a06f21793601641563fa9a56cfbee84b9248742e8de655a224\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/tartan.py\": \"99882ddb01803e66d2d77300aa9320f196f2d2d8b407b0af34c97108b7234185\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/scannet.py\": \"dbe3c163e87c3150747d29b6ec2017cfb61bb6ea117dda05f35475564a63921c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/stream.py\": \"51a554fa1fa61c7b7ffb05ad6d7d0390a5d0fdce099f52f5065571344878f133\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/tum.py\": \"226c4745291fd3340b320b73ed4a7ea8c53fc281313590420de72b3e5e0fdce0\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/factory.py\": \"cc399480ebbdac0907ffefeb11a9072fdd002bd089eaf6849e89e8af92e879fd\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/__init__.py\": \"01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/augmentation.py\": \"c115fbaf9abb1279eeb56bc805c5ea010ccb7a232824d806d565796a867e684e\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/base.py\": \"232e75750fbc07c2719b35d882d135a5b536655867ff3d7d5e47275386e06b63\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/eth3d.py\": \"8a88d89ae887dd7bf2676f62ccbbb59f24e39cb93d4fc63058306a3154bab881\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/nyu2.py\": \"5e5980110b08f324ec99bb2f7b318b5d2c557b2c4b5a25105f14c4a4e2787317\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/core/data_readers/rgbd_utils.py\": \"f10463bc3ffe542f8e69b7d3d1d3ee7f95019f214a2fc0aab5fe72abfa13b264\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/viz.py\": \"d70567ef0c3b3f9b665a651774e7d81a9bc3a757f79a496ae647e328bde2df25\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/train.py\": \"e55507587f69c56f7d1a96613be8b4d288f8244daa4d4f46b3637b71b9ba3285\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/demo.py\": \"cd5eea159295e55758b6512791e461567b46165aae49c79d551744bfb3566076\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/evaluate.py\": \"0d55a3ec80859522bb7b2a163fa96e189f2dda02f2452adccd40118b4ef6b3e3\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/reprojection_test.py\": \"d97f9d108e6b83b2c65b828d0b5b9c4c2f6eec7a03bb1b4c270137aa5ef79186\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/rgbd_benchmark/evaluate_rpe.py\": \"4d6a652c678381e28340f4798b64fe5a688b3f93a282ab6686d5b36138983060\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/rgbd_benchmark/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/rgbd_benchmark/associate.py\": \"9acf503cc029453ff36b64a311b39d0fff3ff4fc535475e801e5bb000a51f530\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/rgbdslam/rgbd_benchmark/evaluate_ate.py\": \"08b5c11d802dff0cc8b9eafb16207d9c60b1191e6eb9eb6038c67e1b5507be46\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/registration/viz.py\": \"85b877515002b7d39379fc733d443b83ad3642bdb9eea15b56bd019e13f6e0f2\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/registration/main.py\": \"70383df6d5a27eb8ef6dac2ce1be7c9b8255b8c3bedcf6b87bfa6bff265f71b3\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/registration/demo.py\": \"d0f44b9decdb0c02f584eac99e5d3731a1b5993c79de4cc24b7f40e91b66f57f\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/lietorch/examples/pgo/main.py\": \"60ec649511613c6f657fbb45826435deafb5dcfbed568bc17a8893d462106729\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/gaussian_renderer/__init__.py\": \"67b9527bc3dcb4d641640444097cdd89ac75e457bc1f1c02a3f961086a10b4bc\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/scene/gaussian_model.py\": \"8a84c37e344e07e299eb7080f45b475d69a417914fe272dd02031a092125ddf5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/image_utils.py\": \"6ab8928540df890e7eabaac71504fff041a12d011335ff34f33d0ff5893cd8f0\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/graphics_utils.py\": \"cf76d337a527cbb4c0c0a9c88712428843d930a7195b0d1f0544675a39f628bc\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/general_utils.py\": \"ea298eeac0995b3695335b88ff8c95edca16cfc870bd248b354b1f541851f3ef\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/loss_utils.py\": \"9ba844d711ab8eb9110129639bc6ffd8ce79aa4f38deca460c8f2ef0971175af\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/system_utils.py\": \"8b906d4fe5d7a8dea3ec1b86ab3b512c645ef9ff483c3990612549b0443c3c42\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/gaussian_splatting/utils/sh_utils.py\": \"7db79c605c1fe474a4bf964233d3afb4c9c35186dc1f2f90fe9ba1bcdbafd72b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/diff-gaussian-rasterization-w-pose/setup.py\": \"3bc4065d0ba274aca98a68930c8897f56110bd56f17c5d04c4b66c20bdf36e71\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/diff-gaussian-rasterization-w-pose/build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization/_C.cpython-310-x86_64-linux-gnu.so\": \"a4108108c7c9450984938304ed2424aa3d7420826cf5ff0b1045d1800c0b9e46\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/diff-gaussian-rasterization-w-pose/build/lib.linux-x86_64-cpython-310/diff_gaussian_rasterization/__init__.py\": \"0ef349b89b2dfac3a08ef4a949fb7c94de4840aa5f0fa9778e254317b229017c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/diff-gaussian-rasterization-w-pose/diff_gaussian_rasterization/__init__.py\": \"0ef349b89b2dfac3a08ef4a949fb7c94de4840aa5f0fa9778e254317b229017c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/simple-knn/setup.py\": \"7bdd8713863b446f3b1e3c059cb2db8598e51c8fe7f73937a0097f5c047ae841\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/thirdparty/simple-knn/build/lib.linux-x86_64-cpython-310/simple_knn/_C.cpython-310-x86_64-linux-gnu.so\": \"95ad4050108c032b3ec9afbee57f7ced866d385bbedf6b95c28d738c8081ad36\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/droid_w.yaml\": \"4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/sriracha-tree.yaml\": \"9318aeccfe4a0d8736371e56b647d442db6356b9e3c47535d51aa47556c0f14d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/teddy.yaml\": \"5884681db5f700f850bcfa0aa34075e0e5c17e30ef274bb295e1a6423546d108\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/dycheck.yaml\": \"78527e64f33d52f2617f46194dd2840b30af2c5176b79ba03e6bc2db131ec0c6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/block.yaml\": \"3e8b7c132bf27fec3d844096f28f004fa61893dd3198993424f049d1b372c4be\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/pillow.yaml\": \"43fd2826169480cf0e085460c3895567ad4666989f7ceaf3d99fd97d195bfc66\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/haru-sit.yaml\": \"2f5d0ec6ea85c760d6fc76049fb5f26ef4ce02098b5a0c6c980ffe676ba61078\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/backpack.yaml\": \"9c7a998073fc7940e9ec4e5b4aa61751f28d93a5492a1e010dc7f3ddd9534993\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/spin.yaml\": \"264cd4855d2a265bc1b2d67d647e5014263fa39c983ea47fa3670a89b1dbaa7d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/mochi-high-five.yaml\": \"c6dcc86170ab5657c5f043c34d9aa6dba3b2bcc2179964153983f53228db5df1\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/paper-windmill.yaml\": \"dca08071720dbd0aad26c854ff2ec6729ac756fddd5068dcf2fb60cc4d8cf00d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/apple.yaml\": \"93740f9a5c7b884e97cc4741cc2399b83c9dc423ca451937693a53ae32e931cd\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/handwavy.yaml\": \"b858da263eb0aeff143363e267fe1f78bc1f5c33b68ceaeff137f2b28aa98b38\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DyCheck/creeper.yaml\": \"ef0d1797f76b0eb8b78bf49598931d4840a20e847d38c734bcf88dc8948d110c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_moving_nonobstructing_box2.yaml\": \"cbb557953a0279ab6155c0ce69e403ef1454271ba92557c0e2af1a22be3967fd\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_crowd2.yaml\": \"106cbec11ea7aaebe0352a915461ebc78d1d99840020028d52f410edb6110a7d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_balloon.yaml\": \"8622a7896a6fe7b4e51d0f04d272067d52679a63c38e97bb6fe9f131b9673389\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_person_tracking.yaml\": \"a9b6aafdd9ba51ba926854b2d06dee0ebf73a37899b46841f9b045f3a32113c4\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_dynamic.yaml\": \"a54b6a1c95458901c772dfb0e736bfb3362a6efb9f40a283eb77795705e8ef5a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_balloon2.yaml\": \"93bf556c291dd6810a204398f8e290ba9502eb1098b7fc6f09033dcc4de951c9\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_person_tracking2.yaml\": \"27d63a3055e28b39da3308ca459aad240b61dcd800d9ac1d194864fc8a20e6ee\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_moving_nonobstructing_box.yaml\": \"2f0a39d3862dc936b127d17d8412cf0700abc2fd490b3e9222f5141e385c40ed\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/Bonn/bonn_crowd.yaml\": \"1337422c8350668cbbfbe9934e1e6ef317cbcbd169899a3c2518e1614e539794\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/taylor_22.yaml\": \"cc60feacbdc7970aeef5984bce54c3d21ef513c048f4f699088fd2f93efd79c8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/tomyum.yaml\": \"d5c4d7ce8b22ff134e9524666a49d709577843ce7e18fa8b379ec488ae70be39\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/elephant_herd.yaml\": \"0ab16ff1a218f08ce6b6418b85fddf7978c1448da38486a16d97e20326d61296\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_06.yaml\": \"2cbdd075677360080d9ae195a4e233a47225d7c2ba36e32857e9ef9231b01fa2\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/tomyum2.yaml\": \"461a2649091dea02ec152fbaf47bacbf66295a6d3a7be4f73eb1a6252ff2312c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/tokyo_walking3.yaml\": \"3dbf79bc8bde63fbea7420277368c95b78097a2d353f8c45083b2c254c927fbf\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_04.yaml\": \"f824559d6de7b0cc2d3941edc709db4929ba91d7b5a8a7e2ed99ee98ab47d96a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/giraffe.yaml\": \"91fdee27d37b3660554250669e2b4660024926b7be86faf81533111a6053386c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_02.yaml\": \"a6f4a85bd2c7a2b3fcd8779ca0a133efb065609e14f4f3aa9ee355f4339e44ff\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_05.yaml\": \"ffa1791382d4b47036e8adc61e1f5c01e3325bc6b7ba86262214a40973618d17\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_03.yaml\": \"b92d22bc475fe2c2d52ee1dfe5fddd2dfc23783141d37ba9c2cc8679cccd3b67\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/stmoritz_01.yaml\": \"c0dad8ab41b1d3f51df730c094824a6f2de63989e9ec68b00cb69e74e8f7fd19\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/youtube.yaml\": \"191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/tokyo_walking1.yaml\": \"e341bebda053e21cb38ae78a5b14c217f1ee4719edb2fce408cb3d1a60550f19\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/YouTube/tokyo_walking2.yaml\": \"3633dd27f36e51a80b7c133074b4a358d9f69584f4efd87ac60825c75473c700\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown5.yaml\": \"77bf54a05f781f95c3eb27ed1736d6bbf58b4fafa90471ea78428167ab353479\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown6.yaml\": \"490a8394aac758dd655f9217d30fa72715973ffb97ac87cd758c769340258861\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown4.yaml\": \"752e34a8bf83e51c2c98d1efb9b101bcc5f3b4c0819f3b7058efdf4f41fa32b2\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown3.yaml\": \"4c35be4fe9bd33271498bbe5dc322e63714e03fd04821bd5b257d3332fae7bb7\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/droidw.yaml\": \"d382b598c8e66d958f127210b6f459053bfd252d86e64043927f4c1953644dcc\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown7.yaml\": \"48f7aff3c47f105f4515a3d5ad28158946401272995896ff0c2f6852722a383b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown2.yaml\": \"5e5094457f96e525a2374bb3d8e8c0764a2de1d137a607686c568a18f9563f10\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/DROIDW/downtown1.yaml\": \"6f82f4a1c311bef25d20fc53c739c5c51069918b3518bef76040def7bf306098\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/tum_dynamic.yaml\": \"44aca16c764c66fc4480a97b83b8fc8b2feb112a5eed85394850a59c41366e36\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_sitting_xyz.yaml\": \"56f65b46cdd0d776a1d642d02ffbf7c17c847ed40325b2c57afe89c86ef206ff\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere_static.yaml\": \"d62759a87080042e7038d45047f2b0ffdbfa066dafe67e4a75193006af920bc1\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere_static.yaml\": \"6c0147fd6066551b24ecbb38ef74ee23514de78fa78a56c1a9d600e2342354f8\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg2_desk_with_person.yaml\": \"b041303a3b883960f17da8dede75e2959064e755dcc7ccf76515cb42e74646d5\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_walking_rpy.yaml\": \"3e7b803a361170210176e6b28185b9fbe3a05adf2eec0765b182bc2089707bc6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_sitting_rpy.yaml\": \"0ecdd6ebb378c522a1651d7ee31693a316ddf94c176893f29c9c29a38e5eef8a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere.yaml\": \"22150447b5d8d263397d7471170fd1e19b193f278de49ca23a8b405cf908b7bd\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere.yaml\": \"0c20ae2a77f0e44c80468249502382ef06a6d13689685aeb6406cab0edb271bb\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/configs/Dynamic/TUM_RGBD/freiburg3_walking_xyz.yaml\": \"0f116e62f4ac580fc954440d12602493f5e5833c5096a59e00dc3a59f8c7cd18\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/motion_filter.py\": \"431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/backend.py\": \"6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/trajectory_filler.py\": \"e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/slam.py\": \"46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/depth_video.py\": \"78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/factor_graph.py\": \"80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/tracker.py\": \"c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/config.py\": \"0d0b18e572cc5b577d3ba41e1bee31c3c65da3fa7137df06504c477251d2086d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/mapper.py\": \"0818a5e5b4f7392ff7f21a96087210a4e8f89484ad44ab391d7e763310060192\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/frontend.py\": \"bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/gru.py\": \"376165d58ab254c1b7169bf5783b24d9611e2973ec3ccc389d58cd10f9cd4505\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/corr.py\": \"a3123d1f8f08ae196092fa2ce3831110959d71cec549ae90eef2c9848b5674e0\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/extractor.py\": \"7a4209643412b035fd81e4472b8e1632fde00d94cd7ec93cc43abbb7e0a15170\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/__init__.py\": \"75352870a554717830f333c8c8c32f281beb1d2a2f5b912396221973a9f1986c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/droid_net.py\": \"3d960a8f656770865a93719fc7e02fd8efc34ba708f9e0395f31400d564a0012\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/modules/droid_net/clipping.py\": \"420b7ec6177b323630a21268cf29786d3fd9c5821b0095e0a01dd5738a5fe65b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/cuda_timer.py\": \"60158a1c4602269d1725ab995b15ffa337df8d5eff18770846ced0d56f30436f\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/datasets.py\": \"aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/eval_utils.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/plot_utils.py\": \"484e1c9bff3952155d88f4ae7ca4bc441bed597a64d64d7cc78d6b3933230561\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/camera_utils.py\": \"969837112ec288d683d6998a6e9383f6063e6b03a5b8ecb91e3bd30ce52acce6\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/common.py\": \"cb6d9f3942089e02cd89ca4bfca58cb804d52455853b13e87b27dbe1d742a905\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/colmap_read_model.py\": \"0cf3a39ea930b57b5d232185afb5786c1ff6637047a358e099862c143cccc535\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/Printer.py\": \"6ee8d870e607098d44a97e22cbb62a80b3005d7a47962e582bac999eef54bf6b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/visualization.py\": \"e2d12c453ef55b8c1ef7470f3e935f3be21c5617d1365d9b0476595e634d2c07\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/sys_timer.py\": \"d9f87d8a11174f2df18cf2145c9d36d852b1a42082dc7a913206a80ca8db23c3\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/pose_utils.py\": \"761143bb7ec2b2480718c52e2aa78343db7799298781b79bfcc27cf8345e55fd\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/droid_visualization_rerun.py\": \"722d108c680dfade2b7f3854b19726446c3c31c4918c152e3edf3941af99c408\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/eval_traj.py\": \"93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/slam_utils.py\": \"5ea8c210687f3da69e4a6ec92aff01d747d14fcf8611f4c0a5547bee04e58cab\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/mono_priors/img_feature_extractors.py\": \"f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/mono_priors/metric_depth_estimators.py\": \"d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/dyn_uncertainty/mapping_utils.py\": \"f386990a428c2149747ec4cc7d50d132c7309653a80de378ea229669278b826e\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/dyn_uncertainty/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/utils/dyn_uncertainty/median_filter.py\": \"fa2f8fd57ab7fd30dd6787b9aa9f387d794702fbb19512031f767ba0e046168c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/geom/ba.py\": \"2d0804ba6c79eb8c89941ff1569ac611ff6ce97a37ff0aa646cd1b759f288376\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/geom/projective_ops.py\": \"591576b0ab77475d61c8e39975b38820c6ca3a0585dd581e29858703d3fd8b07\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/geom/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/geom/chol.py\": \"a56c479198666eae61cd82380d1ec5a04637df254e8dc9c98d516578990eab86\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/slam_gui.py\": \"8d07634168c0e7bda618c64d4f115d687fa03f53b4ca315d3f1dde6eb506baea\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/gui_utils.py\": \"12e45dfb8a6c246f68589ffab2fa24a2dad91e8f64b5baa1dba7ab3afd199419\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/gl_render/util_gau.py\": \"b69654cf773754d47dccebeff6800cb32335fb137830f65657648a8f3c8d044c\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/gl_render/render_ogl.py\": \"057e8825956ffc24d0262cd199442a4a92576ab855ef1d2acc9e1e282511de7b\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/gl_render/__init__.py\": \"4b7fb7adf68ad14438dea52ba330df345e5e8ab8f5853b361bc38ad2df281c28\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/src/gui/gl_render/util.py\": \"6d70f17046c7b01f45e7cd92564891ddcfd5a2b8ce9f6356ac56bf2abed3be55\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/scripts_eval/summarize_rmse.py\": \"b12a5bac885f695bbd49352942688a5e4849006b22caf019cae255379c8ff219\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source/scripts_eval/evaluate_droidw.py\": \"c8ded8c1ee6e7716f53407b52ea0eb5884c210a35d9b25bdaa27cd67e816e4b1\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth\": \"46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth\": \"09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth\": \"15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972\",\n    \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors\": \"dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d\",\n    \"/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json\": \"5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537\",\n    \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/release/candidates/r2_sealed_config.yaml\": \"a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc\"\n  }\n}",
+    "evidence/RESUME_E8.stdout.txt": "{\"event\": \"GPU_STARTED\", \"arm\": \"E8\", \"pid\": 2907, \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E8/attempt_001_c93599e10485\"}\n{\"event\": \"GPU_COMPLETE\", \"arm\": \"E8\", \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E8/attempt_001_c93599e10485\", \"status\": \"COMPLETE\", \"elapsed_s\": 231.0277336379986, \"peak_gpu_used_mib\": 16831, \"keyframes\": 163, \"ba_calls\": 1326, \"poses\": 487, \"observer_sha256\": \"f92e14911a16c66fd19f9cc99e2d3fdf78e18b6be1f8ae63b52a6fc3218b1bad\", \"policy_sha256\": \"64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed\", \"no_retry\": true}\n",
+    "evidence/RESUME_E6.stdout.txt": "{\"event\": \"GPU_STARTED\", \"arm\": \"E6\", \"pid\": 3496, \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E6/attempt_001_e959617a51f3\"}\n{\"event\": \"GPU_COMPLETE\", \"arm\": \"E6\", \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E6/attempt_001_e959617a51f3\", \"status\": \"COMPLETE\", \"elapsed_s\": 227.57717627400052, \"peak_gpu_used_mib\": 16863, \"keyframes\": 161, \"ba_calls\": 1322, \"poses\": 487, \"observer_sha256\": \"a709037f5f1fde1e1b0330e9693272a6148a4fb5e69d924972f5781c19cf8152\", \"policy_sha256\": \"6e2df5994153531597ca43be109a5ca80acd510389c090d049353271c47dff8d\", \"no_retry\": true}\n",
+    "evidence/RESUME_E0.stdout.txt": "{\"event\": \"GPU_STARTED\", \"arm\": \"E0\", \"pid\": 2442, \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E0/attempt_001_73db5d7864a1\"}\n{\"event\": \"GPU_COMPLETE\", \"arm\": \"E0\", \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E0/attempt_001_73db5d7864a1\", \"status\": \"COMPLETE\", \"elapsed_s\": 225.4714410680026, \"peak_gpu_used_mib\": 16573, \"keyframes\": 87, \"ba_calls\": 1174, \"poses\": 487, \"observer_sha256\": \"752a1ef1f2163daaf07056f6f6046e9bfff92d8f84f8e59069efa386cabf56ee\", \"policy_sha256\": \"242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500\", \"no_retry\": true}\n",
+    "evidence/RESUME_E2.stderr.txt": "",
+    "evidence/RESUME_E8.stderr.txt": "",
+    "evidence/RESUME_E6_CONTROL_RECEIPT.json": "{\n  \"arm\": \"E6\",\n  \"exit_code\": 0,\n  \"utc\": \"2026-11-23T09:08:05.911233+00:00\",\n  \"no_retry\": true\n}",
+    "evidence/RESUME_E1.stdout.txt": "{\"event\": \"GPU_STARTED\", \"arm\": \"E1\", \"pid\": 4093, \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E1/attempt_001_21d6b33f8f65\"}\n{\"event\": \"GPU_COMPLETE\", \"arm\": \"E1\", \"attempt\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E1/attempt_001_21d6b33f8f65\", \"status\": \"COMPLETE\", \"elapsed_s\": 241.6546331540012, \"peak_gpu_used_mib\": 16919, \"keyframes\": 157, \"ba_calls\": 1314, \"poses\": 487, \"observer_sha256\": \"9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0\", \"policy_sha256\": \"fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640\", \"no_retry\": true}\n",
+    "evidence/RESUME_E1.stderr.txt": "",
+    "evidence/ALL_EIGHT_RUNS_COMPLETE.json": "{\n  \"utc\": \"2026-11-23T09:15:52.221388+00:00\",\n  \"arms\": [\n    \"E3\",\n    \"E4\",\n    \"E7\",\n    \"E0\",\n    \"E8\",\n    \"E6\",\n    \"E1\",\n    \"E2\"\n  ],\n  \"model_runs\": 8,\n  \"browser_gate_waived_for_remaining\": true\n}",
+    "evidence/RESUME_E0_CONTROL_RECEIPT.json": "{\n  \"arm\": \"E0\",\n  \"exit_code\": 0,\n  \"utc\": \"2026-11-23T09:00:22.788702+00:00\",\n  \"no_retry\": true\n}",
+    "evidence/PREFLIGHT.json": "{\n  \"status\": \"PASS\",\n  \"hostname\": \"jupyter-yd6gks8uzfbxzdb4\",\n  \"gpu\": \"NVIDIA GeForce RTX 3090, 24576, 24125\",\n  \"data_free_bytes\": 56334258176,\n  \"shm_free_bytes\": 25769803776,\n  \"cgroup_memory_max\": \"107374182400\",\n  \"source_blobs_verified\": 208,\n  \"rgb_hashes_verified\": 487,\n  \"reference_files_verified\": 41,\n  \"four_weights_verified\": 4,\n  \"release_files_verified\": 36,\n  \"cuda_initialized\": false,\n  \"model_constructed\": false,\n  \"root\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\"\n}",
+    "evidence/RESUME_E0.stderr.txt": "",
+    "evidence/rerun_data_priority/stderr.txt": "",
+    "evidence/rerun_data_priority/SERVICE_RECEIPT.json": "{\n  \"event\": \"viewer_ready\",\n  \"utc\": \"2026-11-23T08:56:35.254306+00:00\",\n  \"pid\": 2388,\n  \"native_identity\": {\n    \"pid\": 2388,\n    \"ppid\": 2387,\n    \"executable\": \"/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun\",\n    \"cwd\": \"/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/evidence/rerun_data_priority\",\n    \"argv\": [\n      \"/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun\",\n      \"--bind\",\n      \"127.0.0.1\",\n      \"--port\",\n      \"9875\",\n      \"--serve-web\",\n      \"--web-viewer-port\",\n      \"9876\",\n      \"--ws-server-port\",\n      \"9877\",\n      \"--server-memory-limit\",\n      \"768MB\"\n    ]\n  },\n  \"listeners\": [\n    {\n      \"table\": \"tcp\",\n      \"address\": \"0100007F\",\n      \"port\": 9876,\n      \"inode\": \"7324081\"\n    },\n    {\n      \"table\": \"tcp\",\n      \"address\": \"0100007F\",\n      \"port\": 9877,\n      \"inode\": \"7324080\"\n    },\n    {\n      \"table\": \"tcp\",\n      \"address\": \"0100007F\",\n      \"port\": 9875,\n      \"inode\": \"7324079\"\n    }\n  ],\n  \"browser_required\": false,\n  \"reason\": \"LATEST_USER_PRIORITIZES_ABLATION_RESULTS\"\n}",
+    "evidence/rerun_data_priority/stdout.txt": ""
+  },
+  "protection": {
+    "pinned_files": 233,
+    "mismatches": []
+  },
+  "disk_free_bytes": 48108425216
+}

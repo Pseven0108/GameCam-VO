@@ -1,0 +1,50 @@
+--- /dev/null
++++ isolated/checkpoint_io.py
+@@ -0,0 +1,47 @@
++"""Immutable, non-pickle native BA checkpoints; no model/torch imports."""
++import json,hashlib,os,pathlib,shutil,time
++import numpy as np
++NAMES=['poses','disps','K','selected_prior','target','weight','U','temp_y_cdot','dino','affine','eta','ii','jj','t0','t1','iterations','lm','ep','gamma_data','gamma_prior','gamma_depth','lr','weight_decay','motion_only','depth_only','update_u','use_uba','affine_u','bidirectional','debug']
++TENSOR_COUNT=13
++FLOOR=10*1024**3
++def sha_file(p):
++ h=hashlib.sha256()
++ with open(p,'rb') as f:
++  for b in iter(lambda:f.read(4*1024**2),b''):h.update(b)
++ return h.hexdigest()
++def new_json(p,x):
++ with pathlib.Path(p).open('x',encoding='utf8') as f:json.dump(x,f,indent=2,allow_nan=False);f.write('\n')
++def save_array(folder,name,a,extra=None):
++ a=np.asarray(a);p=pathlib.Path(folder)/(name+'.npy')
++ if shutil.disk_usage(folder).free < FLOOR+a.nbytes+4096:raise RuntimeError('STORAGE_BLOCKED before '+name)
++ with p.open('xb') as f:np.save(f,a,allow_pickle=False)
++ return dict(file=p.name,dtype=a.dtype.str,shape=list(a.shape),data_sha256=hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest(),file_sha256=sha_file(p),bytes=p.stat().st_size,**(extra or {}))
++def validate(folder):
++ folder=pathlib.Path(folder);m=json.loads((folder/'CHECKPOINT.json').read_text());out={}
++ assert m['schema']=='TASK004C_COMPLETE_NATIVE_INPUT_V1'
++ assert set(m['arrays'])==set(NAMES[:13]+['mono_disps','zeros','timestamp'])
++ for k,r in m['arrays'].items():
++  p=folder/r['file'];assert sha_file(p)==r['file_sha256'],('file sha',k)
++  a=np.load(p,mmap_mode='r',allow_pickle=False);assert list(a.shape)==r['shape'] and a.dtype.str==r['dtype']
++  assert hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()==r['data_sha256'],('tensor sha',k)
++  assert np.isfinite(a).all(),('nonfinite',k)
++  out[k]=a
++ gate(out['timestamp'][:m['active_count']],out['ii'],out['jj'],m['scalars']['t0'],m['scalars']['t1'])
++ assert np.count_nonzero(out['zeros'])==0
++ assert m['scalars']['update_u'] and m['scalars']['use_uba'] and not m['scalars']['motion_only'] and not m['scalars']['depth_only']
++ assert m['scalars']['iterations']==2 and m['scalars']['gamma_depth']==.01
++ return m,out
++def gate(timestamp,ii,jj,t0,t1):
++ ids=np.asarray(timestamp,dtype=np.int64)+1
++ if not len(ids) or len(set(ids.tolist()))!=len(ids):raise ValueError('slot RGB IDs not unique')
++ slots=[]
++ for rgb in (312,328):
++  x=np.flatnonzero(ids==rgb)
++  if len(x)!=1 or not t0<=x[0]<t1:raise ValueError('endpoint absent/outside optimized pose window')
++  slots.append(int(x[0]))
++ a,b=slots
++ if not (np.any((ii==a)&(jj==b)) and np.any((ii==b)&(jj==a))):raise ValueError('missing directed endpoint edges')
++ return {'rgb312_slot':a,'rgb328_slot':b,'both_in_optimized_window':True,'both_directed_edges':True}
++def common_digest(m):
++ d={'arrays':{k:{x:v[x] for x in ['dtype','shape','data_sha256','stride']} for k,v in m['arrays'].items() if k not in ['selected_prior','timestamp']},'scalars':m['scalars']}
++ return hashlib.sha256(json.dumps(d,sort_keys=True).encode()).hexdigest()

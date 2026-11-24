@@ -1,0 +1,48 @@
+--- /dev/null
++++ isolated/replay_one.py
+@@ -0,0 +1,45 @@
++"""Exactly one native BA call; all branches restore fresh identical input bytes."""
++import os,json,time,pathlib,hashlib,sys
++import numpy as np
++from checkpoint_io import validate,NAMES,new_json,save_array,common_digest,sha_file
++
++def main():
++ state=pathlib.Path(sys.argv[1]);out=pathlib.Path(sys.argv[2]);D=int(sys.argv[3]);assert D in (0,1)
++ authp=pathlib.Path(os.environ['GAMECAM_TASK004C_AUTHORIZATION']);auth=json.loads(authp.read_text())
++ receipt=json.loads((out/'LAUNCH_INTENT.json').read_text())
++ assert receipt['mode']=='ONE_FIXED_NATIVE_BA_REPLAY' and receipt['D']==D and receipt['authorization_sha256']==sha_file(authp)
++ assert out.parent==pathlib.Path(auth['remote_root'])/'replays' and state.parent.parent==pathlib.Path(auth['remote_root'])/'captures'
++ m,arr=validate(state);assert m['common_input_digest']==common_digest(m)
++ import torch,droid_backends
++ torch.set_num_threads(2);torch.cuda.set_device(0)
++ assert sha_file(droid_backends.__file__)==auth['lock']['pins'][auth['lock']['extension']]
++ values=[];restored={};start=time.monotonic()
++ for name in NAMES[:13]:
++  source=('mono_disps' if D else 'zeros') if name=='selected_prior' else name
++  a=np.asarray(arr[source]);ref=m['arrays'][source]
++  t=torch.empty_strided(tuple(a.shape),tuple(ref['stride']),dtype=getattr(torch,str(np.dtype(a.dtype))),device='cuda:0')
++  t.copy_(torch.from_numpy(a.copy()))
++  b=t.detach().cpu().numpy();h=hashlib.sha256(np.ascontiguousarray(b).tobytes()).hexdigest()
++  assert h==ref['data_sha256'],('restored hash mismatch',name)
++  restored[name]=dict(data_sha256=h,shape=list(t.shape),stride=list(t.stride()),source=source)
++  values.append(t)
++ for name in NAMES[13:]:values.append(m['scalars'][name])
++ common={k:v for k,v in restored.items() if k!='selected_prior'}
++ new_json(out/'INPUT_RESTORATION.json',dict(checkpoint_file_sha256=sha_file(state/'CHECKPOINT.json'),state_id=m['state_id'],D=D,W=1,U=1,input_hashes=restored,common_input_digest=m['common_input_digest'],all_hashes_exact=True,restore_seconds=time.monotonic()-start,extension_sha256=sha_file(droid_backends.__file__)))
++ torch.cuda.synchronize();start=time.monotonic()
++ native_result=droid_backends.ba(*values)
++ torch.cuda.synchronize();elapsed=time.monotonic()-start
++ saved={}
++ for name,t in [('poses_native',values[0]),('disps_native',values[1]),('U_native',values[6]),('temp_y_cdot_native',values[7]),('affine_native',values[9]),('dx_last_inner',native_result[0]),('dz_last_inner',native_result[1])]:
++  saved[name]=save_array(out,name,t.detach().cpu().numpy())
++ n=m['active_count'];disp=values[1][:n].detach().cpu().numpy()
++ neg=int((disp<0).sum());nonfinite=int((~np.isfinite(disp)).sum());count=int((disp<np.float32(1e-5)).sum())
++ values[1].clamp_(min=1e-5);torch.cuda.synchronize()
++ saved['disps_clamp']=save_array(out,'disps_clamp',values[1].detach().cpu().numpy())
++ for name,t in [('K',values[2]),('selected_prior',values[3]),('target',values[4]),('weight',values[5]),('dino',values[8]),('eta',values[10]),('ii',values[11]),('jj',values[12])]:
++  h=hashlib.sha256(t.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
++  assert h==restored[name]['data_sha256'],('unexpected native input mutation',name)
++ assert nonfinite==0 and np.isfinite(values[0].detach().cpu().numpy()).all()
++ new_json(out/'REPLAY_COMPLETE.json',dict(state_id=m['state_id'],D=D,W=1,U=1,native_ba_calls=1,native_inner_iterations=m['scalars']['iterations'],native_seconds=elapsed,negative_disparities_native_active=neg,clamp_affected_active=count,nonfinite_active=nonfinite,arrays=saved,all_immutable_inputs_unchanged=True,model_constructed=False,network_forward=False,peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_reserved_bytes=torch.cuda.max_memory_reserved()))
++ print(json.dumps(dict(complete=True,state_id=m['state_id'],D=D,negative=neg,clamped=count,native_seconds=elapsed)))
++if __name__=='__main__':main()

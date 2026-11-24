@@ -1,0 +1,524 @@
+
+
+已批准
+
+&#x20;正式进入 **TASK004C-B-NATIVE-INTEGRATION（DROID-W 原生实验控制接入）**。
+
+
+
+这次允许 Codex 在独立实验代码副本中修改必要的控制接口，但不允许修改 DROID-W 的 BA 数学公式、优化算法或模型权重。
+
+我建议把本次授权分为两部分：
+
+1. 完成原生接入和 CPU 测试。
+2. 接入通过后，允许进行有限的真实 GPU 保存、恢复和跨 D 调度验证。
+
+正式 B1、B2、B3、B4 的完整487帧实验仍需单独批准。
+
+## **一、执行路线**
+
+1. **冻结原始源码，建立独立工作区**
+
+   保留原始 DROID-W 和已有 observer 修改，建立可追溯的候选版本。
+2. **Checkpoint 原生接入**
+
+   让真实 Tracker 能够在初始化结束后保存 C0，并在新的 Python 进程中恢复。
+3. **关键帧事件原生接入**
+
+   在 Motion Filter、FactorGraph、Local BA 等位置接入 Recorder。
+4. **Schedule Replay 原生接入**
+
+   验证 S1 能否在 D=0 下重放，S0 能否在 D=1 下重放。
+5. **CPU 测试与资源审核**
+
+   不加载真实模型，先验证所有接口。
+6. **有限 GPU 验证**
+
+   建立真实 C0，最多验证到 RGB080，不进行完整487帧实验。
+
+## **二、直接交给 Codex 的任务书**
+
+# GAMECAM-VO TASK004C-B-NATIVE-INTEGRATION
+
+# DROID-W 原生实验控制接入
+
+## 1. 用户授权
+
+用户正式批准原生接入。
+
+允许：
+
+- 在独立候选源码中增加Checkpoint接口。
+- 增加Tracker暂停和恢复接口。
+- 增加Keyframe Schedule Recorder。
+- 增加Schedule Replay。
+- 增加Local BA、Final BA和Filler事件记录。
+- 完成CPU合成测试。
+- 完成有限真实GPU保存、恢复和短程交叉调度验证。
+
+禁止：
+
+- 修改原始冻结源码。
+- 修改BA数学公式和CUDA优化算法。
+- 修改模型权重。
+- 修改原始R2 YAML。
+- 重编译CUDA扩展。
+- 重新运行原生DROID-SLAM。
+- 删除历史实验结果。
+- 自动运行完整487帧。
+- 启动正式B1/B2/B3/B4实验。
+
+RTX 3090保持在线，不关机、不重启、不释放GPU。
+
+## 2. PHASE 0：源码保护与独立工作区
+
+先核验：
+
+- DROID-W冻结源码SHA256。
+- 原有observer修改。
+- CUDA扩展SHA256。
+- 四份模型权重SHA256。
+- R2 YAML SHA256。
+- 当前Git状态。
+- 数据盘可用空间。
+- /dev/shm。
+- GPU状态。
+
+注意：此前远端源码目录没有Git仓库。
+
+不得假设可以直接使用git worktree。
+
+如果没有Git仓库：\
+在独立候选源码副本中初始化Git，建立明确的冻结基线提交，并记录上游commit及本地observer差异。
+
+不得在原始冻结源码目录执行git init或危险Git命令。
+
+不使用：
+
+- git reset --hard
+- git clean -fd
+
+必须验证候选副本与原始冻结源码的初始SHA256一致。
+
+输出：\
+TASK004C_B_NATIVE_SOURCE_PROTECTION.md
+
+TASK004C_B_NATIVE_BASELINE_MANIFEST.json
+
+## 3. PHASE 1：Tracker原生Checkpoint接入
+
+目标：
+
+让真实DROID-W能够在初始化结束后暂停，保存完整运行状态，并在独立Python进程中恢复。
+
+### 3.1 初始化边界
+
+INIT_D=0\
+W=1\
+U=1
+
+RGB018是历史候选边界。
+
+必须检查源码确认：
+
+- 初始化是否真正完成。
+- 24次初始化graph.update是否结束。
+- 是否已经进入RGB019主循环。
+- 是否存在尚未完成的CUDA计算。
+- D是否在初始化阶段参与。
+
+只有确认后才能将其确定为C0边界。
+
+### 3.2 完整状态保存
+
+通过源码审计建立真实状态清单。
+
+必须覆盖：
+
+- Tracker所有关键运行变量。
+- poses。
+- disparities。
+- mono_disps。
+- intrinsics。
+- context。
+- hidden states。
+- DINO features。
+- correlation features。
+- U。
+- UBA weights。
+- target。
+- weight。
+- eta。
+- affine weights。
+- graph ii/jj。
+- edge IDs、age、active/inactive/bad状态。
+- keyframe IDs及插入顺序。
+- buffer slot映射。
+- frame index。
+- BA counters。
+- cache状态。
+- 必要的循环局部变量。
+- Python、NumPy、PyTorch CPU和CUDA RNG。
+- 相关确定性设置。
+
+不能只保存observer日志。
+
+不能遗漏任何影响后续执行的状态。
+
+### 3.3 保存方式
+
+优先使用：
+
+- Tensor独立数据文件。
+- JSON元数据manifest。
+- 明确的状态恢复Adapter。
+
+避免不受控地pickle整个Tracker或Python对象。
+
+保存前执行CUDA同步，确保不存在尚未完成的计算。
+
+保留：
+
+- dtype。
+- shape。
+- stride。
+- storage offset。
+- tensor共享存储关系。
+- device。
+- SHA256。
+
+支持原子保存，保存失败不得破坏已有快照。
+
+### 3.4 恢复测试
+
+必须在新的Python进程中恢复。
+
+检查：
+
+1. 所有张量哈希。
+2. 图结构。
+3. 缓存。
+4. RNG状态。
+5. buffer映射。
+6. 下一帧输入。
+7. 下一次BA调用。
+
+至少完成一次真实进程退出后的恢复。
+
+不得把同一进程内复制变量冒充跨进程恢复。
+
+输出：\
+TASK004C_B_NATIVE_CHECKPOINT_REPORT.md
+
+TASK004C_B_NATIVE_C0_SCHEMA.json
+
+TASK004C_B_NATIVE_C0_MANIFEST.json
+
+## 4. PHASE 2：Motion Filter与FactorGraph原生Recorder
+
+在真实调用位置增加事件记录。
+
+### Motion Filter
+
+记录：
+
+- RGB ID。
+- 运动过滤结果。
+- accept/reject。
+- rejection reason。
+- 对应阈值。
+- 时间顺序。
+
+### Keyframe管理
+
+记录：
+
+- keyframe insertion。
+- keyframe removal。
+- eviction reason。
+- active keyframe IDs。
+- 插入顺序。
+
+### FactorGraph
+
+记录：
+
+- edge insertion。
+- edge removal。
+- source/target frame IDs。
+- edge type。
+- edge age。
+- active/bad状态。
+- graph topology hash。
+
+必须使用稳定RGB ID识别关键帧，不能只依赖可能变化的buffer slot。
+
+### Local BA
+
+记录：
+
+- BA调用序号。
+- BA窗口。
+- source/target indices。
+- edge IDs。
+- iteration count。
+- 调用前后状态摘要。
+- BA完成或失败。
+
+不得修改原始BA公式、梯度、阻尼、权重和优化器。
+
+输出：\
+TASK004C_B_NATIVE_RECORDER_REPORT.md
+
+TASK004C_B_NATIVE_EVENT_SCHEMA.json
+
+## 5. PHASE 3：Final BA与Filler接入
+
+记录Final BA和Filler：
+
+- 调用顺序。
+- 输入关键帧。
+- 图结构。
+- BA窗口。
+- 优化次数。
+- 轨迹补全区间。
+- 使用的关键帧和边。
+- 输出位姿来源。
+
+本阶段不需要运行完整487帧来验证所有最终阶段。
+
+但必须完成：
+
+- 源码调用路径审计。
+- 原生接口接入。
+- 对应CPU合成调用测试。
+
+后续正式实验时必须产生真实运行记录。
+
+输出：\
+TASK004C_B_FINAL_BA_FILLER_HOOK_REPORT.md
+
+## 6. PHASE 4：Schedule Replay原生接入
+
+建立两套自然调度：
+
+S1：\
+INIT_D=0后，D=1、W=1、U=1自然运行。
+
+S0：\
+INIT_D=0后，D=0、W=1、U=1自然运行。
+
+交叉验证：
+
+- D=0 + S1。
+- D=1 + S0。
+
+必须固定：
+
+- keyframe accept/reject。
+- 插入和删除顺序。
+- graph edge增加和删除事件。
+- BA调用顺序。
+- BA窗口。
+- iteration count。
+
+允许各分支独立计算：
+
+- poses。
+- disparities。
+- image correlation。
+- residuals。
+- 动态权重。
+- U更新。
+
+不得冻结连续优化结果。
+
+如果某项强制事件在当前状态下无法执行：\
+立即停止并报告，不允许自动跳过或修改事件。
+
+注意：\
+固定调度是对离散事件的干预，不代表所有连续优化状态相同。
+
+输出：\
+TASK004C_B_NATIVE_REPLAY_REPORT.md
+
+TASK004C_B_NATIVE_SCHEDULE_VALIDATION.json
+
+## 7. PHASE 5：CPU完整测试
+
+先不加载VIPER真实模型。
+
+完成：
+
+- 原生接口静态检查。
+- Checkpoint roundtrip。
+- 新进程恢复模拟。
+- Recorder事件完整性。
+- Replay事件顺序。
+- 图结构一致性。
+- 不兼容事件安全停止。
+- 四份YAML参数检查。
+- 原Runner dry-run。
+- 原有54项合成测试回归。
+
+不得覆盖已有54项测试结果。
+
+输出：\
+TASK004C_B_NATIVE_CPU_TEST_REPORT.md
+
+## 8. PHASE 6：有限GPU真实验证
+
+仅在PHASE 0～5全部通过后执行。
+
+用户已经批准有限GPU验证，但没有批准正式四组实验。
+
+### GPU准入
+
+重新检查：
+
+- RTX 3090。
+- CUDA环境。
+- 数据盘。
+- /dev/shm。
+- 权重和扩展哈希。
+
+清理后的历史数据盘可用空间为25.510 GiB，但必须重新实测。
+
+至少保留10 GiB安全空间。
+
+C0实际大小未知，必须先估算再写入。
+
+不得删除任何历史实验文件。
+
+### 测试A：真实C0
+
+- 使用VIPER Night val_007。
+- 初始化D=0、W=1、U=1。
+- 到达真实初始化结束边界。
+- 保存C0。
+- 退出Python进程。
+- 启动新进程。
+- 恢复C0。
+- 验证全部关键张量和运行状态。
+
+### 测试B：短程自然调度
+
+从C0独立恢复：
+
+- D=1自然生成S1。
+- D=0自然生成S0。
+
+### 测试C：短程跨D重放
+
+- D=0重放S1。
+- D=1重放S0。
+
+初始测试区间：\
+RGB019～RGB080。
+
+最多推进到RGB080。
+
+如果该区间没有足够的关键帧和图结构事件来验证Replay：\
+停止并提交证据，不自动延长到RGB128或完整487帧。
+
+所有运行串行执行。
+
+这些运行属于机制控制框架验证，不计为正式B1/B2/B3/B4研究实验。
+
+输出：\
+TASK004C_B_NATIVE_GPU_SMOKE_TEST.md
+
+TASK004C_B_NATIVE_RESTORE_RECEIPTS.json
+
+TASK004C_B_NATIVE_CROSS_D_REPLAY.csv
+
+## 9. STOP CONDITIONS
+
+任何以下情况出现，立即停止：
+
+- C0存在缺失的关键运行状态。
+- 跨进程恢复哈希不一致。
+- 恢复后下一帧输入不一致。
+- BA调用顺序变化。
+- Schedule无法跨D重放。
+- Graph topology发生未记录变化。
+- CUDA错误。
+- 源码或权重哈希变化。
+- 数据盘预计低于10 GiB安全余量。
+- 必须修改BA数学公式才能实现功能。
+
+禁止自动重试。
+
+保留所有错误现场和日志。
+
+## 10. 最终交付
+
+TASK004C_B_NATIVE_SOURCE_PROTECTION.md
+
+TASK004C_B_NATIVE_CHECKPOINT_REPORT.md
+
+TASK004C_B_NATIVE_C0_SCHEMA.json
+
+TASK004C_B_NATIVE_C0_MANIFEST.json
+
+TASK004C_B_NATIVE_RECORDER_REPORT.md
+
+TASK004C_B_NATIVE_EVENT_SCHEMA.json
+
+TASK004C_B_FINAL_BA_FILLER_HOOK_REPORT.md
+
+TASK004C_B_NATIVE_REPLAY_REPORT.md
+
+TASK004C_B_NATIVE_SCHEDULE_VALIDATION.json
+
+TASK004C_B_NATIVE_CPU_TEST_REPORT.md
+
+TASK004C_B_NATIVE_GPU_SMOKE_TEST.md
+
+TASK004C_B_NATIVE_RESTORE_RECEIPTS.json
+
+TASK004C_B_NATIVE_CROSS_D_REPLAY.csv
+
+TASK004C_B_NATIVE_INTEGRATION_FINAL_REVIEW\.md
+
+提交全部新增源码、测试和SHA256清单。
+
+## 11. 最终授权边界
+
+批准：
+
+- 原生实验控制接口开发。
+- 独立候选源码修改。
+- CPU测试。
+- 一份真实C0保存。
+- 新进程恢复。
+- RGB019～RGB080有限GPU交叉调度验证。
+
+不批准：
+
+- 完整487帧运行。
+- 正式B1/B2/B3/B4研究实验。
+- 新原生DROID-SLAM运行。
+- 算法改进。
+- CUDA扩展重编译。
+- 进一步扩大实验规模。
+
+完成后停止并提交评审包，等待用户再次批准正式交叉实验。
+
+END OF TASK004C-B-NATIVE-INTEGRATION
+
+## **三、我特别关注的三个验收点**
+
+这次我不会只看 Codex 是否报告“代码修改成功”，而是重点看：
+
+| 验收项   | 真正通过的标准                 |
+| ----- | ----------------------- |
+| C0    | 真实 DROID-W 保存后，退出进程还能恢复 |
+| S0/S1 | 两套调度能够在相反 D 条件下真实重放     |
+| 算法一致性 | 不改变 BA 数学公式和连续优化行为      |
+
+尤其是 C0：必须证明它不是一个普通的模型权重文件，而是能够让 DROID-W 从 RGB019 继续工作的完整运行现场。
+
+**你现在把这份任务书交给 Codex。**
+
+3090继续保持在线。完成后把 `TASK004C_B_NATIVE_INTEGRATION_FINAL_REVIEW.zip` 发给我，我们再审核是否真正具备正式四组实验的启动条件。

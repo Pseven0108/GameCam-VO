@@ -1,0 +1,264 @@
+{
+  "schema": "GAMECAM_NATIVE_EXPLICIT_OBJECT_STORAGE_V2",
+  "native_live_schema_instantiated": false,
+  "candidate_boundary": {
+    "rgb_id": 18,
+    "next_rgb": 19,
+    "status": "REQUIRES_LIVE_CONFIRMATION",
+    "init_D": 0,
+    "W": 1,
+    "U": 1,
+    "required_successful_updates": {
+      "frontend_init_neighborhood": 8,
+      "frontend_init_proximity": 8,
+      "frontend_init_second": 8
+    }
+  },
+  "cursor_fields": [
+    "next_input_index",
+    "prev_kf_idx",
+    "curr_kf_idx",
+    "prev_ba_idx",
+    "intrinsic"
+  ],
+  "objects": {
+    "Tracker": {
+      "source": "src/tracker.py",
+      "static_self_assignments": [
+        "ba_freq",
+        "cfg",
+        "device",
+        "enable_online_ba",
+        "event_writer",
+        "finish_first_online_ba",
+        "frontend",
+        "frontend_window",
+        "motion_filter",
+        "net",
+        "online_ba",
+        "output",
+        "pipe",
+        "prev_kf_counter",
+        "printer",
+        "verbose",
+        "video"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "MotionFilter": {
+      "source": "src/motion_filter.py",
+      "static_self_assignments": [
+        "MEAN",
+        "STDV",
+        "cfg",
+        "cnet",
+        "count",
+        "device",
+        "feat_extractor",
+        "fmap",
+        "fnet",
+        "inp",
+        "metric_depth_estimator",
+        "net",
+        "save_dir",
+        "thresh",
+        "uncertainty_aware",
+        "update",
+        "video"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "Frontend": {
+      "source": "src/frontend.py",
+      "static_self_assignments": [
+        "beta",
+        "cfg",
+        "enable_loop",
+        "enable_opt_dyn_mask",
+        "frontend_max_factors",
+        "frontend_nms",
+        "frontend_radius",
+        "frontend_thresh",
+        "frontend_window",
+        "graph",
+        "is_initialized",
+        "iters1",
+        "iters2",
+        "keyframe_thresh",
+        "last_disp",
+        "last_loop_t",
+        "last_pose",
+        "last_time",
+        "loop_closing",
+        "max_age",
+        "max_consecutive_drop_of_keyframes",
+        "num_keyframes_dropped",
+        "t1",
+        "update_op",
+        "video",
+        "warmup"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "FactorGraph": {
+      "source": "src/factor_graph.py",
+      "static_self_assignments": [
+        "age",
+        "coords0",
+        "corr",
+        "corr_impl",
+        "damping",
+        "device",
+        "ht",
+        "ii",
+        "ii_bad",
+        "ii_inac",
+        "inp",
+        "jj",
+        "jj_bad",
+        "jj_inac",
+        "max_factors",
+        "net",
+        "target",
+        "target_inac",
+        "update_op",
+        "video",
+        "wd",
+        "weight",
+        "weight_inac"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "DepthVideo": {
+      "source": "src/depth_video.py",
+      "static_self_assignments": [
+        "affine_weights",
+        "cfg",
+        "counter",
+        "debug",
+        "depth_scale",
+        "depth_shift",
+        "device",
+        "dino_feats",
+        "dino_feats_resize",
+        "dirty",
+        "disps",
+        "disps_up",
+        "down_scale",
+        "enable_affine_transform",
+        "enable_bidirectional_uncer",
+        "feature_downsample_factor",
+        "fmaps",
+        "ht",
+        "images",
+        "inps",
+        "intrinsics",
+        "metric_depth_reg",
+        "mono_disps",
+        "mono_disps_up",
+        "mono_thres",
+        "nets",
+        "npc_dirty",
+        "output",
+        "poses",
+        "printer",
+        "slice_h",
+        "slice_w",
+        "temp_y_cdot",
+        "timestamp",
+        "uncertainties",
+        "uncertainty_aware",
+        "valid_depth_mask",
+        "valid_depth_mask_small",
+        "wd",
+        "zeros"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "Backend": {
+      "source": "src/backend.py",
+      "static_self_assignments": [
+        "backend_loop_nms",
+        "backend_loop_radius",
+        "backend_loop_thresh",
+        "backend_loop_window",
+        "backend_nms",
+        "backend_normalize",
+        "backend_radius",
+        "backend_thresh",
+        "beta",
+        "cfg",
+        "device",
+        "output",
+        "t0",
+        "t1",
+        "update_op",
+        "video"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "PoseTrajectoryFiller": {
+      "source": "src/trajectory_filler.py",
+      "static_self_assignments": [
+        "MEAN",
+        "STDV",
+        "cfg",
+        "cnet",
+        "count",
+        "device",
+        "feat_extractor",
+        "fnet",
+        "printer",
+        "uncertainty_aware",
+        "update",
+        "video"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    },
+    "CorrBlock": {
+      "source": "src/modules/droid_net/corr.py",
+      "static_self_assignments": [
+        "corr_pyramid",
+        "num_levels",
+        "radius"
+      ],
+      "capture_rule": "ALL_RUNTIME___dict___FIELDS_OR_FAIL"
+    }
+  },
+  "full_model_state": "Parameters, persistent/nonpersistent buffers, module modes, Python tensor caches and shared object references",
+  "rng": "Python, NumPy legacy state, Torch CPU/CUDA and registered explicit torch.Generator objects; saved runtime flags must match",
+  "storages": [
+    "device",
+    "dtype",
+    "shape",
+    "stride",
+    "offset",
+    "requires_grad",
+    "parameter_kind",
+    "CPU shared flag",
+    "storage aliases",
+    "value and file SHA256"
+  ],
+  "external_service_rebinding": [
+    "tracker pipe",
+    "event writer",
+    "printer",
+    "video counter coordination object",
+    "Rerun writer barrier",
+    "observer output file"
+  ],
+  "separately_saved_service_values": [
+    "video.counter.value",
+    "printer.progress_counter.value"
+  ],
+  "derived_not_live_at_C0": {
+    "eta": "recomputed by unchanged graph.update from graph.damping and EP",
+    "effective_UBA_weight": "recomputed by unchanged native code from U and frozen switches"
+  },
+  "unsupported_state_policy": "STOP before native C0 installation; no omitted unknown fields or fabricated caches",
+  "limitations": [
+    "No native live closure has run",
+    "Numpy views and opaque hooks require an explicit adapter; not silently copied",
+    "No outstanding BA/CUDA work or Rerun dirty writer is permitted at the capture barrier"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "CPU_MOCK_ONLY",
+  "id": "mock-9d8d3dcefdf0498ca979f05788137223",
+  "status": "STOPPED",
+  "order": [
+    "E3",
+    "E4",
+    "E7",
+    "E0",
+    "E8",
+    "E6",
+    "E1",
+    "E2"
+  ],
+  "started": [
+    "E3",
+    "E4"
+  ],
+  "completed": [
+    "E3"
+  ],
+  "failed_arm": "E4",
+  "failure": "ValueError: CPU fixture exited 31",
+  "failure_archive_error": null,
+  "gpu_runs": 0,
+  "retried": false,
+  "cleanup_authorized": false
+}

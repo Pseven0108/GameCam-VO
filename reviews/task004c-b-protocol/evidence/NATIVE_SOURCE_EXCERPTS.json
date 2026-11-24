@@ -1,0 +1,87 @@
+{
+  "source": "D:/aaa/GameCam-VO/experiments/DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z/RECOVERY_20261123T152953805Z/source/src/lib/droid_kernels.cu",
+  "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+  "frozen_sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+  "excerpts": [
+    {
+      "line": 826,
+      "text": "      if       (abs(1.0/dj - 1.0/d00) < t) atomicAdd(&counter[block_id][i][j], 1.0f);"
+    },
+    {
+      "line": 827,
+      "text": "      else if  (abs(1.0/dj - 1.0/d01) < t) atomicAdd(&counter[block_id][i][j], 1.0f);"
+    },
+    {
+      "line": 828,
+      "text": "      else if  (abs(1.0/dj - 1.0/d10) < t) atomicAdd(&counter[block_id][i][j], 1.0f);"
+    },
+    {
+      "line": 829,
+      "text": "      else if  (abs(1.0/dj - 1.0/d11) < t) atomicAdd(&counter[block_id][i][j], 1.0f);"
+    },
+    {
+      "line": 1477,
+      "text": "    atomicAdd(&kf_count[ix], 1.0f);"
+    },
+    {
+      "line": 1478,
+      "text": "    atomicAdd(&kf_count[jx], 1.0f);"
+    },
+    {
+      "line": 1639,
+      "text": "      // use atomicAdd to add the value to the J_data"
+    },
+    {
+      "line": 1645,
+      "text": "      atomicAdd(&Jjj_data[block_id][k00], Jj_00);"
+    },
+    {
+      "line": 1646,
+      "text": "      atomicAdd(&Jjj_data[block_id][k01], Jj_01);"
+    },
+    {
+      "line": 1647,
+      "text": "      atomicAdd(&Jjj_data[block_id][k10], Jj_10);"
+    },
+    {
+      "line": 1648,
+      "text": "      atomicAdd(&Jjj_data[block_id][k11], Jj_11);"
+    },
+    {
+      "line": 1651,
+      "text": "        atomicAdd(&loss_data[block_id], res / (uncer_i * uncer_reproj_j));"
+    },
+    {
+      "line": 1719,
+      "text": "      atomicAdd(&loss_prior[block_id], loss_reg);"
+    },
+    {
+      "line": 1752,
+      "text": "      atomicAdd(&J_linear[block_id][c], dL2dw);"
+    },
+    {
+      "line": 1755,
+      "text": "    atomicAdd(&J_linear[block_id][dim_feat], dL2dy);"
+    },
+    {
+      "line": 1784,
+      "text": "    const float gamma_depth,"
+    },
+    {
+      "line": 1878,
+      "text": "      const float alpha = gamma_depth;"
+    },
+    {
+      "line": 1879,
+      "text": "      torch::Tensor m = (disps_sens.index({kx, \"...\"}) > 0).to(torch::TensorOptions().dtype(torch::kFloat32)).view({-1, ht*wd});"
+    },
+    {
+      "line": 1880,
+      "text": "      torch::Tensor C = accum_cuda(Cii, ii, kx) + m * alpha + (1 - m) * eta.view({-1, ht*wd});"
+    },
+    {
+      "line": 1881,
+      "text": "      torch::Tensor w = accum_cuda(wi, ii, kx) - m * alpha * (disps.index({kx, \"...\"}) - disps_sens.index({kx, \"...\"})).view({-1, ht*wd});"
+    }
+  ]
+}

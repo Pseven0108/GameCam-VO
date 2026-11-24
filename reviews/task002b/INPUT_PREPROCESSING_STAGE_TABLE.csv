@@ -1,0 +1,12 @@
+Stage,DROID-SLAM,DROID-W,Consistency,Evidence_class,Coverage,Reference,Limitation
+原始JPEG,同一冻结成员及SHA256,同一冻结成员及SHA256,一致,原始数据与封存清单,49815/49815,RGB_SOURCE_SEGMENT_AUDIT.csv,重复检查针对JPEG字节
+解码,cv2.imdecode IMREAD_COLOR → BGR uint8 HWC,cv2.imread → BGR uint8 HWC,抽样一致,源码和CPU重建,280样本及2个整段回放,CPU_PREPROCESSING_REPLAY_SAMPLES.csv,整个数据集的解码缓冲未全部重新生成
+固定K缩放,INTER_LINEAR 1920×1080 → 640×360,原生cv2.resize 默认INTER_LINEAR 无畸变校正与裁边,一致,源码与历史哈希交叉复核,82区段,verify_pixels.py:66–70 / datasets.py:134–155,首帧K是原始内参的固定近似
+虚拟K重映射,直接反向remap至640×360,相同源K与目标K做一次remap,一致,源码与历史哈希交叉复核,10区段6403帧,verify_pixels.py:71–88 / run_segment.py:96–106,用相机标注校准并单独统计
+Loader边界,[1×3×360×640] BGR uint8 [0..255],[1×3×360×640] RGB float32 [0..1],表示不同且可对应,历史回执,92区段,R2_RUNTIME_INPUT_RECEIPT_PARITY.csv,不同类型哈希不能直接相比；经历史同一缓冲转换比对
+DROID encoder归一化,BGR→RGB 除255后按通道减均值除标准差,已是RGB [0..1] 直接用同一均值与标准差,公式与CPU输出一致,源码和CPU重建,280个样本最大绝对差0,CPU_PIXEL_AUDIT.json,真实GPU encoder输入逐位一致UNVERIFIED
+固定与虚拟源K,来自封存输入清单,来自同一封存输入清单,一致,原Camera CSV及清单,47条序列49815行, R2_CAMERA_K_PROVENANCE_AUDIT.json,变焦组以每帧源K重投影至固定虚拟K
+640×360内部参数,冻结实际float32 fx fy cx cy,native loader实收同一float32 fx fy cx cy,4项逐位一致,实际K运行回执与重建,92/92, R2_CAMERA_K_PROVENANCE_BY_SEGMENT.csv,相对名义K最大共同舍入4.053e-5 px
+1/8内部参数,运行时核验已缓存关键帧K/8,源代码down_scale=8在关键帧和补位时缩放,数学一致与部分回执,运行断言/源码,92区段可重建,run_original.py:109–110 / motion_filter.py:86–110,DROID-W逐关键帧设备缓存没有单独导出
+Trajectory Filler,同一BGR再次读取且跟踪/补位哈希相同,DROID-W用同一loader且补位帧数完整,协议一致；W补位独立哈希未记录,源码与历史回执,92区段,R2_RUNTIME_INPUT_RECEIPT_PARITY.csv,filler有效pose不能视为前端直接跟踪
+模型内部新增分支,没有DROID-W的Metric3D/FiT3D路径,原生额外深度和特征计算,算法差异,源码,不作为共同输入差异,motion_filter.py / trajectory_filler.py,未验证这些机制对RPE的因果贡献

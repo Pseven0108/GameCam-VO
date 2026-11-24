@@ -1,0 +1,70 @@
+{
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline/task004_run_segment.py",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/results/E8/attempt_001_c93599e10485",
+    "--weights",
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth"
+  ],
+  "cwd": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source",
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "PYTHONPATH": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/pipeline:/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/source",
+    "TORCH_HOME": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub",
+    "HF_HOME": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface",
+    "GAMECAM_TASK004_AUTHORIZATION": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/release/AUTHORIZATION.json",
+    "GAMECAM_TASK004_POLICY": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/release/policies/E8.json",
+    "GAMECAM_TASK004_POLICY_SHA256": "64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed",
+    "GAMECAM_TASK003_SEALED_CONFIG": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/release/candidates/r2_sealed_config.yaml"
+  },
+  "cuda_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2022 NVIDIA Corporation\nBuilt on Wed_Sep_21_10:33:58_PDT_2022\nCuda compilation tools, release 11.8, V11.8.89\nBuild cuda_11.8.r11.8/compiler.31833905_0\n",
+  "rerun": {
+    "event": "viewer_ready",
+    "utc": "2026-11-23T08:56:35.254306+00:00",
+    "pid": 2388,
+    "native_identity": {
+      "pid": 2388,
+      "ppid": 2387,
+      "executable": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun",
+      "cwd": "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z/evidence/rerun_data_priority",
+      "argv": [
+        "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun",
+        "--bind",
+        "127.0.0.1",
+        "--port",
+        "9875",
+        "--serve-web",
+        "--web-viewer-port",
+        "9876",
+        "--ws-server-port",
+        "9877",
+        "--server-memory-limit",
+        "768MB"
+      ]
+    },
+    "listeners": [
+      {
+        "table": "tcp",
+        "address": "0100007F",
+        "port": 9876,
+        "inode": "7324081"
+      },
+      {
+        "table": "tcp",
+        "address": "0100007F",
+        "port": 9877,
+        "inode": "7324080"
+      },
+      {
+        "table": "tcp",
+        "address": "0100007F",
+        "port": 9875,
+        "inode": "7324079"
+      }
+    ],
+    "browser_required": false,
+    "reason": "LATEST_USER_PRIORITIZES_ABLATION_RESULTS"
+  }
+}

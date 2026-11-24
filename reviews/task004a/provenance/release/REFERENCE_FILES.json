@@ -1,0 +1,325 @@
+{
+  "hostname": "jupyter-yd6gks8uzfbxzdb4",
+  "expected_source_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "files": [
+    {
+      "label": "Original R2 YAML",
+      "path": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/results/val_007_full_00001-00487/attempt_001/native_config.yaml",
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "bytes": 3371
+    },
+    {
+      "label": "Staged copy of R2 YAML",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/native_config.yaml",
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "bytes": 3371
+    },
+    {
+      "label": "droid.pth",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth",
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "bytes": 16061701
+    },
+    {
+      "label": "dinov2_reg_small_finetuned.pth",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "bytes": 88283296
+    },
+    {
+      "label": "metric_depth_vit_large_800k.pth",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "bytes": 1647972663
+    },
+    {
+      "label": "model.safetensors",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors",
+      "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "bytes": 88245200
+    },
+    {
+      "label": "droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "bytes": 2461696
+    },
+    {
+      "label": "droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "bytes": 2461696
+    },
+    {
+      "label": "487-frame RGB manifest with fixed K",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+      "sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+      "bytes": 104223
+    },
+    {
+      "label": "Task003 instrumentation patch",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/TASK003_INSTRUMENTATION_PATCH.diff",
+      "sha256": "177e085d368c4f45d094b4c127f3a58d908ba145c893e20da24308d51964be21",
+      "bytes": 28260
+    },
+    {
+      "label": "Task003 postimage: tracker.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/tracker.py",
+      "sha256": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+      "bytes": 8481
+    },
+    {
+      "label": "Task003 postimage: motion_filter.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/motion_filter.py",
+      "sha256": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+      "bytes": 6528
+    },
+    {
+      "label": "Task003 postimage: frontend.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/frontend.py",
+      "sha256": "85a38ab85896c65adeb09dc3274e18c7ebcd8dc9f887afb8a8bbdf42e4e1d1da",
+      "bytes": 11437
+    },
+    {
+      "label": "Task003 postimage: slam.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/slam.py",
+      "sha256": "2b158db4ac2d40a3a51a8f39d0509b7e5b6ced4ab6b3aa29763ec9fee81fc0a6",
+      "bytes": 13971
+    },
+    {
+      "label": "Task003 postimage: factor_graph.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/factor_graph.py",
+      "sha256": "6eeb1a7e2ee98c2e7558f535de2034492f0c1e8affe5da1d383fd96bfb9d3b3e",
+      "bytes": 22154
+    },
+    {
+      "label": "Task003 postimage: depth_video.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/depth_video.py",
+      "sha256": "79dd220b5b4d4f8c2c9b84baf930a3287b78638689f7ba9d2b960ba2a8a84ed2",
+      "bytes": 45585
+    },
+    {
+      "label": "Task003 postimage: trajectory_filler.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/trajectory_filler.py",
+      "sha256": "b8c8aa9648f7e1882cd0949ff197284cddc6f054ab0a0985afad15b5d5e28e42",
+      "bytes": 5773
+    },
+    {
+      "label": "Task003 postimage: eval_traj.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/utils/eval_traj.py",
+      "sha256": "93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2",
+      "bytes": 7467
+    },
+    {
+      "label": "Task003 postimage: task003_observer.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/task003_observer.py",
+      "sha256": "7b34c8f34370e7a1e0663d32709f421cfd1be8c476b6f95c0ee1e75804e41804",
+      "bytes": 15207
+    },
+    {
+      "label": "Task003 runtime YAML capture (relocated I/O)",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/results/val_007_full_00001-00487/attempt_001/native_config.yaml",
+      "sha256": "2a3b02ee11cc8a57b592fc19f0601eedee3f8d952b309f3490d868a4b7a660a6",
+      "bytes": 3377
+    },
+    {
+      "label": "Task003 input snapshot before staging",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/INPUT.json",
+      "sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+      "bytes": 104223
+    },
+    {
+      "label": "Sealed pipeline / upstream source: tracker.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/tracker.py",
+      "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "bytes": 8158
+    },
+    {
+      "label": "Sealed pipeline / upstream source: motion_filter.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/motion_filter.py",
+      "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "bytes": 6223
+    },
+    {
+      "label": "Sealed pipeline / upstream source: frontend.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py",
+      "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "bytes": 10646
+    },
+    {
+      "label": "Sealed pipeline / upstream source: depth_video.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/depth_video.py",
+      "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "bytes": 45293
+    },
+    {
+      "label": "Sealed pipeline / upstream source: slam.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/slam.py",
+      "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "bytes": 13630
+    },
+    {
+      "label": "Sealed pipeline / upstream source: trajectory_filler.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/trajectory_filler.py",
+      "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "bytes": 5510
+    },
+    {
+      "label": "Sealed pipeline / upstream source: eval_traj.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/eval_traj.py",
+      "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "bytes": 7372
+    },
+    {
+      "label": "Sealed pipeline / upstream source: factor_graph.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/factor_graph.py",
+      "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "bytes": 22050
+    },
+    {
+      "label": "Sealed pipeline / upstream source: backend.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/backend.py",
+      "sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "bytes": 5273
+    },
+    {
+      "label": "Sealed pipeline / upstream source: droid_kernels.cu",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/lib/droid_kernels.cu",
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "bytes": 62996
+    },
+    {
+      "label": "Sealed pipeline / upstream source: droid.cpp",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/lib/droid.cpp",
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "bytes": 7635
+    },
+    {
+      "label": "Sealed pipeline / upstream source: datasets.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/datasets.py",
+      "sha256": "aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287",
+      "bytes": 23476
+    },
+    {
+      "label": "Sealed pipeline / upstream source: metric_depth_estimators.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "bytes": 5426
+    },
+    {
+      "label": "Sealed pipeline / upstream source: setup.py",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/setup.py",
+      "sha256": "ac43c0c94239c42ca983ebf45a8a6c68db0ad6c1a75a059226fa16d96f4b7921",
+      "bytes": 1080
+    },
+    {
+      "label": "Sealed pipeline / upstream source: segment_input.py",
+      "path": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/pipeline/segment_input.py",
+      "sha256": "eb5afb40b87fd56995138f916944637566ec59a4f3b2b84a4f96cf795a1d6903",
+      "bytes": 4963
+    },
+    {
+      "label": "Sealed pipeline / upstream source: transfer_common.py",
+      "path": "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/pipeline/transfer_common.py",
+      "sha256": "4f91e5f39375575640f1034fc6aff02ef06dfd342f1e4741c4da68b70e5627e4",
+      "bytes": 1371
+    },
+    {
+      "label": "Sealed pipeline / upstream source: TASK003_RUNTIME_CONFIG.json",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/TASK003_RUNTIME_CONFIG.json",
+      "sha256": "a2456c1adfcd2f4702c4a1e51dc35d67ad0cfa5e1272ed965206e97769498a69",
+      "bytes": 6146
+    },
+    {
+      "label": "Sealed pipeline / upstream source: PATCH_VERIFICATION.json",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/PATCH_VERIFICATION.json",
+      "sha256": "8f36c23651f641b7ab45645393e0d68b13f7c9c555846486e32926923438027d",
+      "bytes": 8152
+    },
+    {
+      "label": "Sealed pipeline / upstream source: task003_run_segment.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/task003_run_segment.py",
+      "sha256": "058ef44f50f81bea2d3adfbd7d602ad8c924da298478dc79e6b6ba33e621c1f3",
+      "bytes": 10920
+    },
+    {
+      "label": "Sealed pipeline / upstream source: task003_observer.py",
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/task003_observer.py",
+      "sha256": "7b34c8f34370e7a1e0663d32709f421cfd1be8c476b6f95c0ee1e75804e41804",
+      "bytes": 15207
+    }
+  ],
+  "sources": [
+    {
+      "label": "DROID-W",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W-c3414af6047d.tar.gz",
+      "sha256": "b5c9de72dd5a2cb7ad2c00274150cdf2b05bbabda7887b362a7abc234f11ee13",
+      "bytes": 34384996,
+      "commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+      "expected_files": 208
+    },
+    {
+      "label": "DROID-W_thirdparty_diff-gaussian-rasterization-w-pose",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/diff-gaussian-rasterization-w-pose",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W_thirdparty_diff-gaussian-rasterization-w-pose-43e21bff91cd.tar.gz",
+      "sha256": "5bf95a6be4169ac0f98785e50944e3c4d91795d0b30d4d64d56fd06e6c2af75e",
+      "bytes": 52850,
+      "commit": "43e21bff91cd24986ee3dd52fe0bb06952e50ec7",
+      "expected_files": 22
+    },
+    {
+      "label": "DROID-W_thirdparty_diff-gaussian-rasterization-w-pose_third_party_glm",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/diff-gaussian-rasterization-w-pose/third_party/glm",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W_thirdparty_diff-gaussian-rasterization-w-pose_third_party_glm-5c46b9c07008.tar.gz",
+      "sha256": "d93f55fe6bc9dd9159dfde2c6181c504e15ce2d220e20e3ca653012154e9696b",
+      "bytes": 4389683,
+      "commit": "5c46b9c07008ae65cb81ab79cd677ecc1934b903",
+      "expected_files": 1529
+    },
+    {
+      "label": "DROID-W_thirdparty_lietorch",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W_thirdparty_lietorch-0fa9ce8ffca8.tar.gz",
+      "sha256": "4d169d6b5ddc7e5c0975749575cf150ddcd646954a27bb0d66bcca6ecec2ab9f",
+      "bytes": 6082094,
+      "commit": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6",
+      "expected_files": 91
+    },
+    {
+      "label": "DROID-W_thirdparty_lietorch_eigen",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W_thirdparty_lietorch_eigen-824272cde8ca.tar.gz",
+      "sha256": "d3d83bc94632d6c70b74e6dd15e6ee616ab22c0ef06196c418e09b1e37908006",
+      "bytes": 2718321,
+      "commit": "824272cde8ca2541e8b67b0887f5ded92b128d1f",
+      "expected_files": 1779
+    },
+    {
+      "label": "DROID-W_thirdparty_simple-knn",
+      "source_dir": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/simple-knn",
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence/DROID-W_thirdparty_simple-knn-da5f991fb5b4.tar.gz",
+      "sha256": "0c99384d390db03223fec97adf27b5ca382eca1b853ff7922873ec1f637b032f",
+      "bytes": 3173,
+      "commit": "da5f991fb5b4146531b3912d8084162cf1485701",
+      "expected_files": 7
+    }
+  ],
+  "rgb_root": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/val_007",
+  "output_k": [
+    386.0112538364529,
+    386.0112580454823,
+    319.4999999998048,
+    179.50000176568622
+  ],
+  "attempt": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/results/val_007_full_00001-00487/attempt_001",
+  "compiler": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/bin/nvcc",
+  "native_video": {
+    "bytes": 398776718,
+    "sha256": "0e666099e82da5ac547688d880b65d5e60ff6c48f6fc22b9b7c16984b6220ce3"
+  },
+  "observer": {
+    "bytes": 44365711,
+    "sha256": "62d385b24f5c83f7ae09033e7ef2c5ae1a146d49c412f1f5d4a40dc250ff3e10"
+  }
+}

@@ -1,0 +1,53 @@
+--- R2/pipeline/run_segment.py
++++ Task003/task003_run_segment.py
+@@ -181,27 +181,24 @@
+     cv2.setNumThreads(1)
+     torch.set_num_threads(2)
+     doc=checked_manifest(args.manifest)
+-    cfg=config.load_config('./configs/Dynamic/YouTube/youtube.yaml')
+-    cfg.update(scene='native',dataset='youtube',stride=1,max_frames=-1,droidvis=True,gui=False,save_gt_poses=False)
++    import yaml
++    yaml_path=Path(os.environ['GAMECAM_TASK003_SEALED_CONFIG'])
++    serialized=yaml_path.read_bytes()
++    if hashlib.sha256(serialized).hexdigest()!='a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc':
++        raise ValueError('historical configuration byte identity mismatch')
++    if digest(args.manifest)!='5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537' or [f['rgb_id'] for f in doc['frames']]!=list(range(1,488)):
++        raise ValueError('Task 003 is limited to the sealed stride-1 val_007 RGB manifest')
++    cfg=yaml.safe_load(serialized)
++    if Path(cfg['tracking']['pretrained']).resolve()!=args.weights.resolve():
++        raise ValueError('sealed tracker path differs from admitted weight path')
++    trace=Path(os.environ['GAMECAM_TASK003_OBSERVER_JSONL'])
++    if trace.parent.resolve()!=args.out.resolve() or trace.exists():
++        raise ValueError('observation output must be new and belong to this attempt')
+     cfg['data'].update(output=str(args.out),input_folder=str(args.manifest.parent))
+-    cfg['tracking'].update(pretrained=str(args.weights),buffer=BUFFER)
+-    # Upstream scales principal points without the half-pixel term. Supply the inverse
+-    # of that map so the native projection receives the exact post-resize calibration.
+-    raw=(np.asarray(doc['output_k'])*3).tolist()
+-    cfg['cam'].update(H=RAW[1],W=RAW[0],H_out=OUT[1],W_out=OUT[0],H_edge=0,W_edge=0,
+-                      fx=raw[0],fy=raw[1],cx=raw[2],cy=raw[3])
+-    cfg['cam'].pop('distortion',None)
+-    cfg['mapping']['eval_before_final_ba']=False  # Only omit the redundant diagnostic preview.
+-    if cfg['fast_mode']:
+-        cfg['mapping']['final_refine_iters']=3000
+-    if (cfg['mapping']['enable'] or cfg['mapping']['full_resolution'] or
+-        cfg['tracking']['force_keyframe_every_n_frames']!=-1 or
+-        cfg['tracking']['uncertainty_params']['gamma_depth']!=.01 or
+-        not cfg['tracking']['backend']['final_ba'] or not cfg['tracking']['backend']['metric_depth_reg']):
+-        raise ValueError('upstream YouTube tracking contract changed')
+     setup_seed(cfg['setup_seed'])
+     stream=ViperRGB(cfg,args.manifest,args.out)
+     np.testing.assert_allclose(stream.get_intrinsic().numpy(),doc['output_k'],rtol=0,atol=1.3e-4)
++    np.testing.assert_array_equal(stream.get_intrinsic().numpy(),[386.01129150390625, 386.01129150390625, 319.5, 179.5])
+     config.save_config(cfg,str(args.out/'native_config.yaml'))
+     dump(args.out/'model_input.json',dict(manifest_sha256=digest(args.manifest),actual_loader_k=stream.get_intrinsic().tolist(),
+          rgb_ids=stream.ids,stride=1,size=list(OUT),branch=doc['branch'],pose_inputs=0,multiprocessing='spawn'))
+@@ -211,6 +208,8 @@
+     slam=ObservedSLAM(cfg,stream)
+     slam.run()
+     child=load(args.out/'tracking_child_ok.json')
++    if child['scaled_rgb_tensor_sha256']!='2e27f696f9553821d1e43cdd673118c90e3932904b9df652d887105f04fbb26a':
++        raise ValueError('tracking loader byte identity mismatch; preserve diagnostics')
+     export=args.out/'native/traj/est_poses_full.txt'
+     poses=np.loadtxt(export,ndmin=2)
+     if poses.shape!=(len(stream),8) or not np.array_equal(poses[:,0],np.arange(len(stream))):

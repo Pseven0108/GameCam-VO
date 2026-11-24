@@ -1,0 +1,176 @@
+{
+  "status": "VERIFIED_COPY",
+  "source": {
+    "attempt_id": "04-E0-5cd5e5daf30f",
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_campaign_03\\archives\\04-E0-5cd5e5daf30f.zip",
+    "bytes": 208552,
+    "sha256": "95522628fb6d48bb259052877f9a416a1b2288936ca12d0de9dffeaee53b286a",
+    "crc": "PASS",
+    "payload_matches": 19,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 1264,
+        "sha256": "8c495702ff762c471cd9a5f91c3e866118ab6660e3e2f3f45a18b07352838e5d"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1306,
+        "sha256": "3af2439aff47931474fd8c73ad3b6eb59b1637213169361bc8682d524bc8482c"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 140,
+        "sha256": "d66461e5de953992fe12b447bb62d7a3792f96b2004814db5202a7d32a2508dc"
+      },
+      "VALIDATION_RECEIPT.json": {
+        "bytes": 11941,
+        "sha256": "ad4c845d659e0c44e683177d365b81ec941ddc4226e148e5d954ce0d6f4569da"
+      },
+      "keyframes.json": {
+        "bytes": 199,
+        "sha256": "a2c697e3ce05e1e9e380c747c6f3126a3a53adcba73dd1582d387003daab5f08"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 524,
+        "sha256": "98e899e1a99ae22293a875aa5642babfe41bd48c1e0aa7001abc07f1b6250551"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 97992,
+        "sha256": "f22d2316dfa35ca367eda7d809f0e3a2981060d109b88e5d8f526f0fbfec01f8"
+      },
+      "native/video.npz": {
+        "bytes": 580,
+        "sha256": "a3b82b56eedd8abbcaa6f0768a4fe59ee52895d080266138d0b27733e7fd616a"
+      },
+      "native_camera_stream.json": {
+        "bytes": 44,
+        "sha256": "07ae6804536c2b5ba1f764305a975ba95655cfd9b7b3f0214bc9c48ccea43e7b"
+      },
+      "native_config.yaml": {
+        "bytes": 3458,
+        "sha256": "21972076d2128bb8b8565a70df38fe5fb2e4d9161a49b35c5d99bfffbe62df99"
+      },
+      "observer.jsonl": {
+        "bytes": 3774250,
+        "sha256": "98412aa79df309cef256a0908fc4f80bf131f89586eb519ddb3f8989c629f8be"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+      },
+      "process.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "process.stdout.txt": {
+        "bytes": 49,
+        "sha256": "451d3fc9c504f5b0be25aa7d8654d27824c313d47d2a39b5bf61b70b34035215"
+      },
+      "progress.json": {
+        "bytes": 71,
+        "sha256": "38359006e5c147b5bf5749d941d66241bad1124a071fd857dbf898127b442a16"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 163,
+        "sha256": "b2dd01bf4bc1b39d72fd12c193958d7fe0a265c85b235a9887af71bf16e88910"
+      },
+      "trajectory.npz": {
+        "bytes": 11458,
+        "sha256": "875df0a1dac63fd2b7c516457d862b0f8d782a8bc8d1f5dbe16068de501b3832"
+      }
+    }
+  },
+  "received": {
+    "attempt_id": "04-E0-5cd5e5daf30f",
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_receiver_03\\04-E0-5cd5e5daf30f.zip",
+    "bytes": 208552,
+    "sha256": "95522628fb6d48bb259052877f9a416a1b2288936ca12d0de9dffeaee53b286a",
+    "crc": "PASS",
+    "payload_matches": 19,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 1264,
+        "sha256": "8c495702ff762c471cd9a5f91c3e866118ab6660e3e2f3f45a18b07352838e5d"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1306,
+        "sha256": "3af2439aff47931474fd8c73ad3b6eb59b1637213169361bc8682d524bc8482c"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 140,
+        "sha256": "d66461e5de953992fe12b447bb62d7a3792f96b2004814db5202a7d32a2508dc"
+      },
+      "VALIDATION_RECEIPT.json": {
+        "bytes": 11941,
+        "sha256": "ad4c845d659e0c44e683177d365b81ec941ddc4226e148e5d954ce0d6f4569da"
+      },
+      "keyframes.json": {
+        "bytes": 199,
+        "sha256": "a2c697e3ce05e1e9e380c747c6f3126a3a53adcba73dd1582d387003daab5f08"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 524,
+        "sha256": "98e899e1a99ae22293a875aa5642babfe41bd48c1e0aa7001abc07f1b6250551"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 97992,
+        "sha256": "f22d2316dfa35ca367eda7d809f0e3a2981060d109b88e5d8f526f0fbfec01f8"
+      },
+      "native/video.npz": {
+        "bytes": 580,
+        "sha256": "a3b82b56eedd8abbcaa6f0768a4fe59ee52895d080266138d0b27733e7fd616a"
+      },
+      "native_camera_stream.json": {
+        "bytes": 44,
+        "sha256": "07ae6804536c2b5ba1f764305a975ba95655cfd9b7b3f0214bc9c48ccea43e7b"
+      },
+      "native_config.yaml": {
+        "bytes": 3458,
+        "sha256": "21972076d2128bb8b8565a70df38fe5fb2e4d9161a49b35c5d99bfffbe62df99"
+      },
+      "observer.jsonl": {
+        "bytes": 3774250,
+        "sha256": "98412aa79df309cef256a0908fc4f80bf131f89586eb519ddb3f8989c629f8be"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+      },
+      "process.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "process.stdout.txt": {
+        "bytes": 49,
+        "sha256": "451d3fc9c504f5b0be25aa7d8654d27824c313d47d2a39b5bf61b70b34035215"
+      },
+      "progress.json": {
+        "bytes": 71,
+        "sha256": "38359006e5c147b5bf5749d941d66241bad1124a071fd857dbf898127b442a16"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 163,
+        "sha256": "b2dd01bf4bc1b39d72fd12c193958d7fe0a265c85b235a9887af71bf16e88910"
+      },
+      "trajectory.npz": {
+        "bytes": 11458,
+        "sha256": "875df0a1dac63fd2b7c516457d862b0f8d782a8bc8d1f5dbe16068de501b3832"
+      }
+    }
+  },
+  "cleanup_authorized": false
+}

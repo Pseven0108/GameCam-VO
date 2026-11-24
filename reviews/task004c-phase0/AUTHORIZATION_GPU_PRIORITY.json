@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-23",
+  "gpu_policy": "KEEP_CURRENT_3090_ONLINE_NO_SHUTDOWN_NO_REBOOT",
+  "phase0": "read-only CPU checkpoint audit plus nvidia-smi resource inspection",
+  "approved_A": "two complete historical input states x D=1/0 paired BA replay; W=U=1",
+  "approved_B": "fixed full S1/S0 schedule crossover D=1/0 after A succeeds",
+  "missing_checkpoint_policy": "identify missing tensors, inspect existing reconstructability, report minimum recapture budget; no full 487-frame run without new confirmation",
+  "automatic_retries": false,
+  "additional_factorials": false,
+  "shutdown_authorized": false
+}

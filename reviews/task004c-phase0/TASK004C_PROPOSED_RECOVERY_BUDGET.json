@@ -1,0 +1,101 @@
+{
+  "executed": false,
+  "requires_user_decision": true,
+  "A_minimum": {
+    "prefix_captures": 2,
+    "frames_per_prefix": 328,
+    "total_rgb_processing": 656,
+    "end_before_first_target_BA": true,
+    "final_ba": false,
+    "filler": false,
+    "new_states_not_exact_historical": true,
+    "paired_native_replays": 4
+  },
+  "B_minimum": {
+    "common_initialization_missing": true,
+    "init_rgb_1_to_18_capture_required": true,
+    "four_post_init_continuations_rgb_19_to_487": true,
+    "total_full_sequence_metric_requirement": true,
+    "complete_graph_mutation_schedule_missing": true,
+    "cannot_launch_now": true
+  },
+  "A_native_input_uncompressed_budget": [
+    {
+      "state": "E0",
+      "buffer": 500,
+      "edges": 128,
+      "raw_bytes": 2815390404,
+      "components": {
+        "poses": 14000,
+        "disparities": 7200000,
+        "mono_disps": 7200000,
+        "zeros": 7200000,
+        "uncertainties": 7200000,
+        "temp_y_cdot": 7200000,
+        "dino_feats_resize": 2764800000,
+        "affine_weights": 1540,
+        "kernel_K": 16,
+        "ii_jj": 2048,
+        "target": 3686400,
+        "weight": 3686400,
+        "eta_upper_bound": 7200000
+      },
+      "scope": "uncompressed native-BA inputs only; not a complete frontend checkpoint",
+      "historical_dtypes_recorded": false,
+      "source_expected_dtypes": "float32 tensors, int64 indices; must validate during capture"
+    },
+    {
+      "state": "E1",
+      "buffer": 500,
+      "edges": 94,
+      "raw_bytes": 2813431460,
+      "components": {
+        "poses": 14000,
+        "disparities": 7200000,
+        "mono_disps": 7200000,
+        "zeros": 7200000,
+        "uncertainties": 7200000,
+        "temp_y_cdot": 7200000,
+        "dino_feats_resize": 2764800000,
+        "affine_weights": 1540,
+        "kernel_K": 16,
+        "ii_jj": 1504,
+        "target": 2707200,
+        "weight": 2707200,
+        "eta_upper_bound": 7200000
+      },
+      "scope": "uncompressed native-BA inputs only; not a complete frontend checkpoint",
+      "historical_dtypes_recorded": false,
+      "source_expected_dtypes": "float32 tensors, int64 indices; must validate during capture"
+    }
+  ],
+  "A_input_total_bytes": 5628821864,
+  "remote_free_bytes": 21982736384,
+  "safety_floor_bytes": 10737418240,
+  "free_after_two_A_inputs_and_floor_bytes": 5616496280,
+  "additional_output_and_frontend_checkpoint_bytes": "UNKNOWN_MUST_MEASURE_DURING_CAPTURE; raw-byte native input count is not an all-in campaign bound",
+  "historical_timing_reference": [
+    {
+      "arm": "E0",
+      "source": "observed historical Task004A; not a new run",
+      "tracking_start_to_rgb328_seconds": 101.973349581,
+      "one_ba_observer_envelope_seconds": 0.024958547,
+      "full_run_elapsed_seconds": 223.52994199500245,
+      "historical_peak_gpu_mib": 16573,
+      "full_run_frames": 487,
+      "proposed_prefix_frames": 328
+    },
+    {
+      "arm": "E1",
+      "source": "observed historical Task004A; not a new run",
+      "tracking_start_to_rgb328_seconds": 105.552868876,
+      "one_ba_observer_envelope_seconds": 0.025709014,
+      "full_run_elapsed_seconds": 238.7690708500013,
+      "historical_peak_gpu_mib": 16919,
+      "full_run_frames": 487,
+      "proposed_prefix_frames": 328
+    }
+  ],
+  "future_runtime": "UNKNOWN: startup/copy/instrumentation overhead and B schedule implementation unmeasured",
+  "no_shutdown": true
+}

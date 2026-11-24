@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\rerun_probe.py", line 163, in <module>
+    main(opt)
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\rerun_probe.py", line 120, in main
+    need(emitted.returncode == 0, 'synthetic SDK emission failed')
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\contracts.py", line 43, in need
+    raise ValueError(message)
+ValueError: synthetic SDK emission failed

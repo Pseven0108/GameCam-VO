@@ -1,0 +1,1286 @@
+{
+  "E0": {
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\\raw_archives\\E0_attempt_001_73db5d7864a1.zip",
+    "bytes": 199505553,
+    "sha256": "63de46ffa435f477f3702fbc31fc738bb92994e03ba5cb8b7939bf948ecc3588",
+    "members": [
+      {
+        "name": "LAUNCH_INTENT.json",
+        "bytes": 806,
+        "compressed_bytes": 476,
+        "crc32": "5bf4cd91"
+      },
+      {
+        "name": "LAUNCH_RECEIPT.json",
+        "bytes": 1427,
+        "compressed_bytes": 679,
+        "crc32": "cdf87bb1"
+      },
+      {
+        "name": "OUTPUT_INTEGRITY.json",
+        "bytes": 3733,
+        "compressed_bytes": 1640,
+        "crc32": "b4421ff2"
+      },
+      {
+        "name": "PROCESS_RECEIPT.json",
+        "bytes": 205,
+        "compressed_bytes": 163,
+        "crc32": "688f0e6a"
+      },
+      {
+        "name": "RUNTIME_LAUNCH_CONFIG.json",
+        "bytes": 3162,
+        "compressed_bytes": 1153,
+        "crc32": "7925274c"
+      },
+      {
+        "name": "keyframes.json",
+        "bytes": 1610,
+        "compressed_bytes": 470,
+        "crc32": "13f6d760"
+      },
+      {
+        "name": "model_input.json",
+        "bytes": 4619,
+        "compressed_bytes": 1224,
+        "crc32": "2fbae13f"
+      },
+      {
+        "name": "model_result.json",
+        "bytes": 655,
+        "compressed_bytes": 364,
+        "crc32": "ce582381"
+      },
+      {
+        "name": "native/events.out.tfevents.1795424212.jupyter-yd6gks8uzfbxzdb4.2546.0",
+        "bytes": 3605,
+        "compressed_bytes": 1749,
+        "crc32": "1b76b774"
+      },
+      {
+        "name": "native/timer_summary.csv",
+        "bytes": 316,
+        "compressed_bytes": 227,
+        "crc32": "d8264e5e"
+      },
+      {
+        "name": "native/traj/est_poses_full.txt",
+        "bytes": 34258,
+        "compressed_bytes": 15873,
+        "crc32": "4cc5da19"
+      },
+      {
+        "name": "native/video.npz",
+        "bytes": 403413630,
+        "compressed_bytes": 190694376,
+        "crc32": "381f4c4c"
+      },
+      {
+        "name": "native_camera_stream.json",
+        "bytes": 46,
+        "compressed_bytes": 44,
+        "crc32": "20a97bba"
+      },
+      {
+        "name": "native_config.yaml",
+        "bytes": 3381,
+        "compressed_bytes": 1545,
+        "crc32": "3f87ddeb"
+      },
+      {
+        "name": "observer.jsonl",
+        "bytes": 46785246,
+        "compressed_bytes": 8728089,
+        "crc32": "70704c30"
+      },
+      {
+        "name": "policy.json",
+        "bytes": 247,
+        "compressed_bytes": 194,
+        "crc32": "0a71ec83"
+      },
+      {
+        "name": "process.stderr.txt",
+        "bytes": 87354,
+        "compressed_bytes": 11128,
+        "crc32": "9f53f94a"
+      },
+      {
+        "name": "process.stdout.txt",
+        "bytes": 1345,
+        "compressed_bytes": 723,
+        "crc32": "21089bed"
+      },
+      {
+        "name": "progress.json",
+        "bytes": 107,
+        "compressed_bytes": 87,
+        "crc32": "1890951e"
+      },
+      {
+        "name": "resource.jsonl",
+        "bytes": 28572,
+        "compressed_bytes": 5292,
+        "crc32": "22e2e7a3"
+      },
+      {
+        "name": "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle",
+        "bytes": 16743,
+        "compressed_bytes": 6172,
+        "crc32": "7b436300"
+      },
+      {
+        "name": "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle",
+        "bytes": 1243,
+        "compressed_bytes": 609,
+        "crc32": "e8b1d5f4"
+      },
+      {
+        "name": "runtime_cache/matplotlib/fontlist-v390.json",
+        "bytes": 26026,
+        "compressed_bytes": 1841,
+        "crc32": "964e920e"
+      },
+      {
+        "name": "task004_policy_receipt.json",
+        "bytes": 195,
+        "compressed_bytes": 157,
+        "crc32": "c1ba9a27"
+      },
+      {
+        "name": "tracking_child_ok.json",
+        "bytes": 258,
+        "compressed_bytes": 171,
+        "crc32": "fa2a13e4"
+      },
+      {
+        "name": "trajectory.npz",
+        "bytes": 26223,
+        "compressed_bytes": 25972,
+        "crc32": "768e4222"
+      },
+      {
+        "name": "_TASK004A_ARCHIVE_MANIFEST.json",
+        "bytes": 3331,
+        "compressed_bytes": 1699,
+        "crc32": "cb535809"
+      }
+    ],
+    "payload_checks": [
+      {
+        "member": "LAUNCH_INTENT.json",
+        "bytes": 806,
+        "sha256": "28f31447864f03e1737f08b0e7d4832922086b39674718f943a3997aa86e135b",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "LAUNCH_RECEIPT.json",
+        "bytes": 1427,
+        "sha256": "e6e37ac05cc0a94306a184280e83ff624e494f1e8f331f482c38b35ad7b6b325",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "OUTPUT_INTEGRITY.json",
+        "bytes": 3733,
+        "sha256": "8b0d988daa632c3f460a9f34975675effb7ccbcfb9b7e5a8b8d656e768511dd0",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "PROCESS_RECEIPT.json",
+        "bytes": 205,
+        "sha256": "524c7ac4c9c8a1b10028e10ee6f27e629886785b45e5b54c621eaa438c451d25",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "RUNTIME_LAUNCH_CONFIG.json",
+        "bytes": 3162,
+        "sha256": "8a73eff97a79936bb2b1f66107ee0e17c3601408a1132839dde5e2ebb0aec5e8",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "keyframes.json",
+        "bytes": 1610,
+        "sha256": "1e7a8dac0068c517f7243613fa123f275da0a1d1c0532fa33ad6fa40d6683d51",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "model_input.json",
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "model_result.json",
+        "bytes": 655,
+        "sha256": "408268c739eca920ba1c1472676a63316d192b4ecf53a31a4bcdc6b691a9a85d",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/events.out.tfevents.1795424212.jupyter-yd6gks8uzfbxzdb4.2546.0",
+        "bytes": 3605,
+        "sha256": "06fa53faaf73938724eef8ed22c595f6e59e38e8696996e8c207f8b170b313f7",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/timer_summary.csv",
+        "bytes": 316,
+        "sha256": "76a3c4f5a21c5a89186f394bf47b6a6136078e00898d40093a372afb64055198",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/traj/est_poses_full.txt",
+        "bytes": 34258,
+        "sha256": "7494a855da352b14ce8cb3047170e8c78fff4140174ed1faa208888afe5f0b87",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/video.npz",
+        "bytes": 403413630,
+        "sha256": "a0a0476a2e7859edf0de1b6b80aac46b6f1aebe457cadfa8dbeafb3bbff44431",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native_camera_stream.json",
+        "bytes": 46,
+        "sha256": "904ffa39d71ffb5322f0a1ad13b6fcaf1f1622a90fda9ae81da0f3c4914091bd",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native_config.yaml",
+        "bytes": 3381,
+        "sha256": "8dcdd11710c2774f089c36e2bb35efc6b934b170ae2b763842e9bb15e82f4458",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "observer.jsonl",
+        "bytes": 46785246,
+        "sha256": "752a1ef1f2163daaf07056f6f6046e9bfff92d8f84f8e59069efa386cabf56ee",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "policy.json",
+        "bytes": 247,
+        "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "process.stderr.txt",
+        "bytes": 87354,
+        "sha256": "8f7ee76ccbd55aae9e342790d24d2554d3999dd9b038aef81a39693440821b01",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "process.stdout.txt",
+        "bytes": 1345,
+        "sha256": "04979da3400b06b6726733f00bf15fdbd4182a935fad7921cd18e230a1643dde",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "progress.json",
+        "bytes": 107,
+        "sha256": "24c7f7a7373acd83224d1287e6679fcdb87bebfa4f468d27f65319c13f63b42c",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "resource.jsonl",
+        "bytes": 28572,
+        "sha256": "184c0a7285bd79b437c368e715e8fd6796d916ff9b304f5ef31b52a8e7748fc9",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle",
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle",
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/matplotlib/fontlist-v390.json",
+        "bytes": 26026,
+        "sha256": "90575da3ad11160a0a1b4c79a1beb2ff9ebb1404e9dac68e59b28adade121754",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "task004_policy_receipt.json",
+        "bytes": 195,
+        "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "tracking_child_ok.json",
+        "bytes": 258,
+        "sha256": "aba228753887dcd88cbc715fa39438c188c5056c6b42c4fe59fc23e9b3395dae",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "trajectory.npz",
+        "bytes": 26223,
+        "sha256": "f4669d07e6ca31d71dbeecabed46a8223557433b10903fd3dc01860addfd208e",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      }
+    ],
+    "event_counts": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1174,
+      "ba_after_native": 1174,
+      "ba_after_clamp": 1174,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "event_keys": {
+      "tracking_start": [
+        "backend_stride",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "droidvis",
+        "enable_loop",
+        "enable_online_ba",
+        "event",
+        "filler_batch",
+        "mapping_enabled",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "keyframe_candidate_inserted": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "native_mono_prior",
+        "outer_iteration",
+        "pid",
+        "pose_init",
+        "predicted_depth",
+        "row",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "keyframe_decision": [
+        "after_count",
+        "before_count",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "local_initialized",
+        "outcome",
+        "outer_iteration",
+        "pid",
+        "row",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "motion_filter_score": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "forced",
+        "native_decision_proxy",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "score",
+        "stage",
+        "threshold",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "stage_boundary": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "metric_depth_configured",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "ba_before": [
+        "affine_u",
+        "ba_id",
+        "backend_k",
+        "cached_prior_positive_support",
+        "cached_prior_support",
+        "cached_prior_total",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "edge_slots",
+        "ep",
+        "eta_sample",
+        "event",
+        "filler_batch",
+        "gamma_data",
+        "gamma_depth",
+        "gamma_prior",
+        "geometry",
+        "lm",
+        "lr",
+        "metric_depth_branch_active",
+        "metric_depth_configured",
+        "metric_depth_positive_support",
+        "metric_depth_prior_selected",
+        "metric_depth_window_samples",
+        "motion_only",
+        "native_iterations_requested",
+        "outer_iteration",
+        "pid",
+        "positive_depth",
+        "prior_support",
+        "rows",
+        "sample_edge_indices",
+        "sample_grid_step",
+        "schema",
+        "source_uba",
+        "stage",
+        "t0",
+        "t1",
+        "target_uba",
+        "task004_local_phase",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "uncertainty",
+        "update_u",
+        "weight_decay"
+      ],
+      "ba_after_native": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "full_disparity_grid",
+        "geometry",
+        "outer_iteration",
+        "pid",
+        "positive_depth",
+        "rows",
+        "sample_grid_step",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "uncertainty"
+      ],
+      "ba_after_clamp": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "float32_floor_count",
+        "full_disparity_grid",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "frontend_distance": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "score",
+        "stage",
+        "threshold",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "filler_interpolated": [
+        "bracket_rows",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "filler_pose_update": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "update_number"
+      ],
+      "filler_batch_result": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "export_matrix": [
+        "anchor_rgb_ids",
+        "c2w",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rgb_ids",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "observer_overhead": [
+        "bytes_before_summary",
+        "capture_and_summary_ns",
+        "capture_and_summary_ns_total",
+        "copy_to_cpu_ns",
+        "copy_to_cpu_ns_total",
+        "encode_and_write_ns_total",
+        "event",
+        "events_before_summary",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ]
+    },
+    "outer_identity_match": true,
+    "internal_sha256_matches": 26,
+    "all_crc_pass": true
+  },
+  "E1": {
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\\raw_archives\\E1_attempt_001_21d6b33f8f65.zip",
+    "bytes": 366800294,
+    "sha256": "3842935f34fd52c2308bc2fa7271cd3c5fd9966ccba8181340e71f107e8eae22",
+    "members": [
+      {
+        "name": "LAUNCH_INTENT.json",
+        "bytes": 806,
+        "compressed_bytes": 475,
+        "crc32": "4e585a8d"
+      },
+      {
+        "name": "LAUNCH_RECEIPT.json",
+        "bytes": 1427,
+        "compressed_bytes": 679,
+        "crc32": "9766eeb8"
+      },
+      {
+        "name": "OUTPUT_INTEGRITY.json",
+        "bytes": 3733,
+        "compressed_bytes": 1649,
+        "crc32": "f8452b6d"
+      },
+      {
+        "name": "PROCESS_RECEIPT.json",
+        "bytes": 204,
+        "compressed_bytes": 164,
+        "crc32": "0379b2ff"
+      },
+      {
+        "name": "RUNTIME_LAUNCH_CONFIG.json",
+        "bytes": 3162,
+        "compressed_bytes": 1154,
+        "crc32": "d9b99d41"
+      },
+      {
+        "name": "keyframes.json",
+        "bytes": 2846,
+        "compressed_bytes": 736,
+        "crc32": "3dd5d52c"
+      },
+      {
+        "name": "model_input.json",
+        "bytes": 4619,
+        "compressed_bytes": 1224,
+        "crc32": "2fbae13f"
+      },
+      {
+        "name": "model_result.json",
+        "bytes": 657,
+        "compressed_bytes": 366,
+        "crc32": "5d00f3d2"
+      },
+      {
+        "name": "native/events.out.tfevents.1795424903.jupyter-yd6gks8uzfbxzdb4.4209.0",
+        "bytes": 3605,
+        "compressed_bytes": 1753,
+        "crc32": "6a3f63fd"
+      },
+      {
+        "name": "native/timer_summary.csv",
+        "bytes": 316,
+        "compressed_bytes": 227,
+        "crc32": "1195939a"
+      },
+      {
+        "name": "native/traj/est_poses_full.txt",
+        "bytes": 35374,
+        "compressed_bytes": 16199,
+        "crc32": "ac98a2dc"
+      },
+      {
+        "name": "native/video.npz",
+        "bytes": 727997470,
+        "compressed_bytes": 344081564,
+        "crc32": "59756cfa"
+      },
+      {
+        "name": "native_camera_stream.json",
+        "bytes": 46,
+        "compressed_bytes": 42,
+        "crc32": "38260345"
+      },
+      {
+        "name": "native_config.yaml",
+        "bytes": 3381,
+        "compressed_bytes": 1545,
+        "crc32": "107029b0"
+      },
+      {
+        "name": "observer.jsonl",
+        "bytes": 73693624,
+        "compressed_bytes": 22634492,
+        "crc32": "53110c36"
+      },
+      {
+        "name": "policy.json",
+        "bytes": 247,
+        "compressed_bytes": 196,
+        "crc32": "285f825a"
+      },
+      {
+        "name": "process.stderr.txt",
+        "bytes": 86995,
+        "compressed_bytes": 11160,
+        "crc32": "56e49e36"
+      },
+      {
+        "name": "process.stdout.txt",
+        "bytes": 1345,
+        "compressed_bytes": 726,
+        "crc32": "15c16a61"
+      },
+      {
+        "name": "progress.json",
+        "bytes": 108,
+        "compressed_bytes": 87,
+        "crc32": "181bc279"
+      },
+      {
+        "name": "resource.jsonl",
+        "bytes": 30399,
+        "compressed_bytes": 5536,
+        "crc32": "3433a52b"
+      },
+      {
+        "name": "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle",
+        "bytes": 16743,
+        "compressed_bytes": 6172,
+        "crc32": "7b436300"
+      },
+      {
+        "name": "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle",
+        "bytes": 1243,
+        "compressed_bytes": 609,
+        "crc32": "e8b1d5f4"
+      },
+      {
+        "name": "runtime_cache/matplotlib/fontlist-v390.json",
+        "bytes": 26026,
+        "compressed_bytes": 1838,
+        "crc32": "f7e9d5ca"
+      },
+      {
+        "name": "task004_policy_receipt.json",
+        "bytes": 195,
+        "compressed_bytes": 157,
+        "crc32": "ffe94e97"
+      },
+      {
+        "name": "tracking_child_ok.json",
+        "bytes": 258,
+        "compressed_bytes": 171,
+        "crc32": "9f4dd62f"
+      },
+      {
+        "name": "trajectory.npz",
+        "bytes": 26484,
+        "compressed_bytes": 26233,
+        "crc32": "65d3b936"
+      },
+      {
+        "name": "_TASK004A_ARCHIVE_MANIFEST.json",
+        "bytes": 3331,
+        "compressed_bytes": 1704,
+        "crc32": "8cf5b61a"
+      }
+    ],
+    "payload_checks": [
+      {
+        "member": "LAUNCH_INTENT.json",
+        "bytes": 806,
+        "sha256": "5ae704f38834791c84a6dd393a3e0f640c36ce9019bec503f46f907c8dbeeb8b",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "LAUNCH_RECEIPT.json",
+        "bytes": 1427,
+        "sha256": "5062775d778135fa2927717a72811200e5aaa04455fdd45dcd0d8c4cb8a979bb",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "OUTPUT_INTEGRITY.json",
+        "bytes": 3733,
+        "sha256": "44de782074d03849ff14288d63826a407eb38e1475589c4634c0c6e6a09816f1",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "PROCESS_RECEIPT.json",
+        "bytes": 204,
+        "sha256": "8bbce35888d67d47de608c347ce5edba338c7b003313dd04709605076c310b8e",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "RUNTIME_LAUNCH_CONFIG.json",
+        "bytes": 3162,
+        "sha256": "877a4a8134d47b74c89294554caa3813876441d643bef7b42458c6c988aec6ed",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "keyframes.json",
+        "bytes": 2846,
+        "sha256": "09ecaef98243419027c8f16b37a090845b60e7a90de1412467f254857766d706",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "model_input.json",
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "model_result.json",
+        "bytes": 657,
+        "sha256": "2a8e70f73ed858423b002525426b79495bd3813187ff35474fbe30c6fb911131",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/events.out.tfevents.1795424903.jupyter-yd6gks8uzfbxzdb4.4209.0",
+        "bytes": 3605,
+        "sha256": "13602a7f43b16c8e39b699980b5302a42732c0e08bd47e8d60f96179b25a0de1",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/timer_summary.csv",
+        "bytes": 316,
+        "sha256": "44667f5c35c323f10b12556fc17fbe64b664cb323c488eff7379b17662eb9df3",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/traj/est_poses_full.txt",
+        "bytes": 35374,
+        "sha256": "e85e2738013dc1725af70bbe7e2126e5e5fe117dae8a7e1e82f165a65f75b79b",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native/video.npz",
+        "bytes": 727997470,
+        "sha256": "9ce5786c9f8bf542907739f779e5f61cd573b449a475655f7d7ce09a5131711d",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native_camera_stream.json",
+        "bytes": 46,
+        "sha256": "aaf32549beba9234505ba1446f86f408f0c08b10b35723b19306ae71517693cc",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "native_config.yaml",
+        "bytes": 3381,
+        "sha256": "a5a66535bf76aa714a1e11065cae84fd164b1355cc4106df2139bb15e1f633dd",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "observer.jsonl",
+        "bytes": 73693624,
+        "sha256": "9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "policy.json",
+        "bytes": 247,
+        "sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "process.stderr.txt",
+        "bytes": 86995,
+        "sha256": "d61fabe9176f4cc5f47c04906a74b7dd0848f764701ffa68e6bf4db56d15b71d",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "process.stdout.txt",
+        "bytes": 1345,
+        "sha256": "80a92ddb2be902743f174c3dc7ddcc8486e73912806607bfadd262e94e831778",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "progress.json",
+        "bytes": 108,
+        "sha256": "1324450aac7b56f74a86506df259a04a9ca08a65b4469eab2f1f7a8462bd688d",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "resource.jsonl",
+        "bytes": 30399,
+        "sha256": "849ca7fc741fda0abed460754c671137fb946588bbb863b0da21286c6a3d6d10",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle",
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle",
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "runtime_cache/matplotlib/fontlist-v390.json",
+        "bytes": 26026,
+        "sha256": "2dc58fb61bc7b8d4f5afa22a519da247669b9affe5e40ce46dcd99f431ccd559",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "task004_policy_receipt.json",
+        "bytes": 195,
+        "sha256": "49b2ea6840e63224b54f5804344169c5c5ea3597a972702fd4e89e6545d93e68",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "tracking_child_ok.json",
+        "bytes": 258,
+        "sha256": "102ef73a04f41c6672d89ed9c118f973800ce510f3ae550b0d4b16b3926a15d7",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      },
+      {
+        "member": "trajectory.npz",
+        "bytes": 26484,
+        "sha256": "d485a577412826015d7bb9a182ef43a5c4f52d3f244647dd58fb1f52ed5eb225",
+        "sha256_match": true,
+        "crc_checked_by_full_stream_read": true
+      }
+    ],
+    "event_counts": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1314,
+      "ba_after_native": 1314,
+      "ba_after_clamp": 1314,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "event_keys": {
+      "tracking_start": [
+        "backend_stride",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "droidvis",
+        "enable_loop",
+        "enable_online_ba",
+        "event",
+        "filler_batch",
+        "mapping_enabled",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "keyframe_candidate_inserted": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "native_mono_prior",
+        "outer_iteration",
+        "pid",
+        "pose_init",
+        "predicted_depth",
+        "row",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "keyframe_decision": [
+        "after_count",
+        "before_count",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "local_initialized",
+        "outcome",
+        "outer_iteration",
+        "pid",
+        "row",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "motion_filter_score": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "forced",
+        "native_decision_proxy",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "score",
+        "stage",
+        "threshold",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "stage_boundary": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "metric_depth_configured",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "ba_before": [
+        "affine_u",
+        "ba_id",
+        "backend_k",
+        "cached_prior_positive_support",
+        "cached_prior_support",
+        "cached_prior_total",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "edge_slots",
+        "ep",
+        "eta_sample",
+        "event",
+        "filler_batch",
+        "gamma_data",
+        "gamma_depth",
+        "gamma_prior",
+        "geometry",
+        "lm",
+        "lr",
+        "metric_depth_branch_active",
+        "metric_depth_configured",
+        "metric_depth_positive_support",
+        "metric_depth_prior_selected",
+        "metric_depth_window_samples",
+        "motion_only",
+        "native_iterations_requested",
+        "outer_iteration",
+        "pid",
+        "positive_depth",
+        "prior_support",
+        "rows",
+        "sample_edge_indices",
+        "sample_grid_step",
+        "schema",
+        "source_uba",
+        "stage",
+        "t0",
+        "t1",
+        "target_uba",
+        "task004_local_phase",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "uncertainty",
+        "update_u",
+        "weight_decay"
+      ],
+      "ba_after_native": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "full_disparity_grid",
+        "geometry",
+        "outer_iteration",
+        "pid",
+        "positive_depth",
+        "rows",
+        "sample_grid_step",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "uncertainty"
+      ],
+      "ba_after_clamp": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "disparity",
+        "event",
+        "filler_batch",
+        "float32_floor_count",
+        "full_disparity_grid",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "frontend_distance": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "score",
+        "stage",
+        "threshold",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "filler_interpolated": [
+        "bracket_rows",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "filler_pose_update": [
+        "ba_id",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type",
+        "update_number"
+      ],
+      "filler_batch_result": [
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rows",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "export_matrix": [
+        "anchor_rgb_ids",
+        "c2w",
+        "capture_and_summary_ns",
+        "copy_to_cpu_ns",
+        "event",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "rgb_ids",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ],
+      "observer_overhead": [
+        "bytes_before_summary",
+        "capture_and_summary_ns",
+        "capture_and_summary_ns_total",
+        "copy_to_cpu_ns",
+        "copy_to_cpu_ns_total",
+        "encode_and_write_ns_total",
+        "event",
+        "events_before_summary",
+        "filler_batch",
+        "outer_iteration",
+        "pid",
+        "schema",
+        "stage",
+        "time_unix_ns",
+        "trigger_rgb_id",
+        "type"
+      ]
+    },
+    "outer_identity_match": true,
+    "internal_sha256_matches": 26,
+    "all_crc_pass": true
+  }
+}

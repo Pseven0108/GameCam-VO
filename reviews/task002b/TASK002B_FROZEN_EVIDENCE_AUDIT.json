@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "protocol": "VIPER_MATCHED_DUAL_BASELINE_R2_V1",
+  "inputs": [
+    "D:\\aaa\\GameCam-VO\\experiments\\VIPER_MATCHED_DUAL_BASELINE_R2",
+    "D:\\aaa\\GameCam-VO\\experiments\\DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1"
+  ],
+  "pinned_commits": {
+    "DROID-SLAM": "2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99",
+    "DROID-W": "c3414af6047d06bafc1a6645d09f23247f3b2cdc"
+  },
+  "r2_zip_path": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_MATCHED_DUAL_BASELINE_R2\\evaluation\\VIPER_MATCHED_DUAL_BASELINE_R2_REVIEW_PACKAGE.zip",
+  "r2_zip_sha256": "582c778c5649d13b06d0f8ac16160441c37b06f5eb6dd644a1279393d6162315",
+  "r2_zip_crc": "PASS",
+  "r2_zip_member_count": 2391,
+  "frozen_manifest_sha256": "b991fd5019307373601b5e2fd5460a83049ffea517140e1fcf6401996a091acb",
+  "metric_version": "VIPER_R1_SEGMENT_METRICS_V1",
+  "evaluation_source_sha256": "be1a605d1a0fbfa22db61ae7f4eabbde080bb12ce01110ee8f2684aeaefc477e",
+  "evaluated_sequences": 47,
+  "planned_sequences": 47,
+  "evaluated_segments": 92,
+  "planned_segments": 92,
+  "expected_input_frames": 49815,
+  "input_receipts_pass": 92,
+  "trajectory_exports_verified": 184,
+  "exported_poses": {
+    "DROID-SLAM": 49815,
+    "DROID-W": 49815
+  },
+  "keyframes": {
+    "DROID-SLAM": 8042,
+    "DROID-W": 12568
+  },
+  "rpe_scope_offset_rows": 2944,
+  "official_historical_rpe_rows": 2944,
+  "historical_rpe_comparison_cells": 11416,
+  "max_rpe_cell_absolute_delta": 1.6852298543312827e-06,
+  "historic_ate_and_scale_comparison_cells": 736,
+  "max_ate_scale_cell_absolute_delta": 0.0,
+  "val007_reference_comparison_cells": 20,
+  "max_case_absolute_delta": 0.0,
+  "rtol_atol": 1e-07,
+  "scipy": "1.16.3",
+  "numpy": "2.2.6",
+  "python": "3.11.18 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 18:13:29) [MSC v.1942 64 bit (AMD64)]",
+  "direct_tracking_success_rate": null,
+  "exceptions": [],
+  "wall_seconds": 5.765999999828637
+}

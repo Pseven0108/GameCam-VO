@@ -1,0 +1,21 @@
+# Publication workspace: datasets, credentials and generated model artifacts stay out.
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+**/.ssh/
+datasets/
+data/
+downloads/
+weights/
+checkpoints/
+*.safetensors
+*.pth
+*.rrd
+*.so
+*.o
+*.npy
+*.npz

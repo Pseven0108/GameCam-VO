@@ -1,0 +1,147 @@
+{
+  "stage": "task001",
+  "source_package": "experiments/DROID_SLAM_DROID_W_TASK001_STATIC_AUDIT/DROID_SLAM_DROID_W_TASK001_STATIC_AUDIT_REVIEW.zip",
+  "source_package_bytes": 104456,
+  "source_package_sha256": "234fd9947ed2fab48c2bd2dc3eb202a9f2e1e2f26869eb4def2cf97670fb28a0",
+  "original_CRC": "PASS",
+  "included_count": 22,
+  "excluded_count": 0,
+  "full_original_package_uploaded": false,
+  "entrypoint": "reviews/task001/FINAL_REVIEW.md",
+  "included": [
+    {
+      "archive_member": "README_请先读.md",
+      "bytes": 1318,
+      "sha256": "5946f9836eafba8f35d6ea1fda91d327e98fdca7f588ade043f320a23bce187a",
+      "repository_path": "reviews/task001/README_请先读.md"
+    },
+    {
+      "archive_member": "FINAL_REVIEW.md",
+      "bytes": 11772,
+      "sha256": "1e88109a4b2f86ad8662a1a0e0d43c311a0621a9adb456af755e0ce0253845da",
+      "repository_path": "reviews/task001/FINAL_REVIEW.md"
+    },
+    {
+      "archive_member": "ARCHITECTURE_AND_BA.md",
+      "bytes": 12501,
+      "sha256": "8557d5ce5304b82dfdf0a65ed65897bc07e2bd0e11ad58359fc535aa1fdca847",
+      "repository_path": "reviews/task001/ARCHITECTURE_AND_BA.md"
+    },
+    {
+      "archive_member": "INSTRUMENTATION_PROPOSAL.md",
+      "bytes": 6580,
+      "sha256": "09beb2ca885be0bc24dc3a486fc68e40487471a40282bcad54cdd6c2f2a3653e",
+      "repository_path": "reviews/task001/INSTRUMENTATION_PROPOSAL.md"
+    },
+    {
+      "archive_member": "EXECUTION_LOG.md",
+      "bytes": 1600,
+      "sha256": "f9c6546aabc8e8d38db7cac2fc2d3465be8d99ad78d101c7686db17bda7b6d70",
+      "repository_path": "reviews/task001/EXECUTION_LOG.md"
+    },
+    {
+      "archive_member": "verify_static_sources.py",
+      "bytes": 13914,
+      "sha256": "33527e4743bfdb56fb37b66ddb2d8d9a90b509a192779daf0c774d629f43631b",
+      "repository_path": "reviews/task001/verify_static_sources.py"
+    },
+    {
+      "archive_member": "evidence/SOURCE_IDENTITY_VERIFICATION.json",
+      "bytes": 4717,
+      "sha256": "b573957c953ca24971b66627de7f2b67f671b758d7ec29a3a44d4e2e9834a908",
+      "repository_path": "reviews/task001/evidence/SOURCE_IDENTITY_VERIFICATION.json"
+    },
+    {
+      "archive_member": "evidence/SOURCE_ENTRY_VERIFICATION.csv",
+      "bytes": 43571,
+      "sha256": "2852f95c9241093bd6dae477a3162cb2fe79ba94f101f68f0aa74530d9fedee6",
+      "repository_path": "reviews/task001/evidence/SOURCE_ENTRY_VERIFICATION.csv"
+    },
+    {
+      "archive_member": "evidence/SOURCE_DIFF_MASTER.csv",
+      "bytes": 133187,
+      "sha256": "c7ed544b470be1ee137ffd29deb3bf588c302afdf68a4a25b5a554c4c7f96fbe",
+      "repository_path": "reviews/task001/evidence/SOURCE_DIFF_MASTER.csv"
+    },
+    {
+      "archive_member": "evidence/FUNCTION_DIFF_LEDGER.csv",
+      "bytes": 163810,
+      "sha256": "cf8bf1d6d116d7e60a114e958cef20628e3ce363c5d3cd47cbbdd043058e3bb7",
+      "repository_path": "reviews/task001/evidence/FUNCTION_DIFF_LEDGER.csv"
+    },
+    {
+      "archive_member": "evidence/MATCHED_R2_VAL007_LOCAL_DISPLACEMENT.csv",
+      "bytes": 916,
+      "sha256": "96f15f753cc9477152124d3189356479d5f06fd09a7e9b1aa1922b46b29ac35a",
+      "repository_path": "reviews/task001/evidence/MATCHED_R2_VAL007_LOCAL_DISPLACEMENT.csv"
+    },
+    {
+      "archive_member": "evidence/AUDIT_INPUT_FINGERPRINTS.csv",
+      "bytes": 3758,
+      "sha256": "b0f21e3c8847bc5d2d8062b3c7303fca6354ee1109428648e419fc29a604934b",
+      "repository_path": "reviews/task001/evidence/AUDIT_INPUT_FINGERPRINTS.csv"
+    },
+    {
+      "archive_member": "evidence/MATCHED_R2_BASELINE_VERSION_AUDIT.md",
+      "bytes": 1010,
+      "sha256": "0bb3be2b18dc9abd2918fdcb0847332be8e3b0124c2ef33f164f76d6bbbbc43b",
+      "repository_path": "reviews/task001/evidence/MATCHED_R2_BASELINE_VERSION_AUDIT.md"
+    },
+    {
+      "archive_member": "evidence/MATCHED_R2_INPUT_PAIRING_AUDIT.md",
+      "bytes": 893,
+      "sha256": "0b0317e5d8f1fda9221f55b151636b9b7a9a8b654743d6a95bbdf0e9b751eb53",
+      "repository_path": "reviews/task001/evidence/MATCHED_R2_INPUT_PAIRING_AUDIT.md"
+    },
+    {
+      "archive_member": "evidence/MATCHED_R2_PAIRED_SEGMENT_COMPARISON.csv",
+      "bytes": 32216,
+      "sha256": "2b570cf17896a8aafb5e3bcac8ed49910424767c99137ac6a88f83fdad11f8ff",
+      "repository_path": "reviews/task001/evidence/MATCHED_R2_PAIRED_SEGMENT_COMPARISON.csv"
+    },
+    {
+      "archive_member": "logs/attempt_001/stdout.txt",
+      "bytes": 240,
+      "sha256": "fdce0b1b90e0d9bf1efbd3d06008edc2234a40187e2da258a9eabc1e6a392c4f",
+      "repository_path": "reviews/task001/logs/attempt_001/stdout.txt"
+    },
+    {
+      "archive_member": "logs/attempt_001/stderr.txt",
+      "bytes": 755,
+      "sha256": "fb9896e2f0667a161d048e1882cdc0066cfecd3ed2d51e034f6c0c573d8aba4e",
+      "repository_path": "reviews/task001/logs/attempt_001/stderr.txt"
+    },
+    {
+      "archive_member": "logs/attempt_001/exit_code.txt",
+      "bytes": 3,
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "repository_path": "reviews/task001/logs/attempt_001/exit_code.txt"
+    },
+    {
+      "archive_member": "logs/attempt_002/stdout.txt",
+      "bytes": 381,
+      "sha256": "80081f390920f4e7a72d69cff47ea89945f606d354bd12275d6e502bc8d98fd9",
+      "repository_path": "reviews/task001/logs/attempt_002/stdout.txt"
+    },
+    {
+      "archive_member": "logs/attempt_002/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_path": "reviews/task001/logs/attempt_002/stderr.txt"
+    },
+    {
+      "archive_member": "logs/attempt_002/exit_code.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "repository_path": "reviews/task001/logs/attempt_002/exit_code.txt"
+    },
+    {
+      "archive_member": "FILE_SHA256_MANIFEST.csv",
+      "bytes": 2161,
+      "sha256": "706baece0f257fbbfae07528eb63065b817084fdc13fe7649461a87b594d50bb",
+      "repository_path": "reviews/task001/FILE_SHA256_MANIFEST.csv"
+    }
+  ],
+  "excluded": [],
+  "historical_internal_manifest_may_reference_omitted_attachments": false
+}

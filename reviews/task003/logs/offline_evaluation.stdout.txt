@@ -1,0 +1,18 @@
+PASS: Sim3, SE3, exact original-ID gap handling, local ratio, rotation RPE, stationary exclusion
+PASS: trace and trajectory SHA; configuration diff; camera correspondence; native matrix equals exported poses.
+309 325 filler_interpolated F->F ratio=0.2367657 RPEt=26.8252 RPErot=2.293 4752 4802
+309 325 filler_batch_result F->F ratio=0.2009077 RPEt=30.7567 RPErot=0.201 4801 4851
+309 325 exported F->F ratio=0.2009056 RPEt=30.7567 RPErot=0.201 5352 5352
+301 353 filler_interpolated F->K ratio=0.3790243 RPEt=74.0743 RPErot=1.210 4702 4902
+301 353 filler_batch_result F->K ratio=0.3725286 RPEt=73.2536 RPErot=1.220 4751 4951
+301 353 exported F->K ratio=0.3725025 RPEt=73.2561 RPErot=1.218 5352 5352
+312 328 first_colocated_frontend_before K->K ratio=0.0000000 RPEt=26.6145 RPErot=0.483 2600 2600
+312 328 first_colocated_frontend_after K->K ratio=0.6904878 RPEt=26.4375 RPErot=1.151 2601 2601
+312 328 last_colocated_frontend_after K->K ratio=0.1173943 RPEt=28.8115 RPErot=0.257 3737 3737
+312 328 final_pre K->K ratio=0.1173943 RPEt=28.8115 RPErot=0.257 3740 3740
+312 328 final_phase_1_done K->K ratio=0.2892762 RPEt=29.0576 RPErot=0.490 3763 3763
+312 328 final_phase_2_done K->K ratio=0.1600955 RPEt=28.9611 RPErot=0.148 3801 3801
+312 328 filler_interpolated K->K ratio=0.1600950 RPEt=28.9611 RPErot=0.148 4752 4802
+312 328 filler_batch_result K->K ratio=0.1601851 RPEt=28.9606 RPErot=0.149 4801 4851
+312 328 exported K->K ratio=0.1600945 RPEt=28.9611 RPErot=0.148 5352 5352
+312 328 separate_insert_events K->K ratio=0.3105925 RPEt=33.2234 RPErot=5.891 2528 2599

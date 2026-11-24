@@ -1,0 +1,7 @@
+# 共同初始化与调度核查
+
+E0/E1均在RGB18完成第二初始化，初始化关键帧身份完全一致。pose原始分量最大差0.002861261367797852，最大translation行L2差0.002947162838953808（native坐标，不能当作米）。这是跨运行差异，不是D导致的初始化差异证据。没有共同完整检查点哈希。
+
+第一条accept/reject/count分歧发生在RGB21：S1/E0为LOCAL_BA_REJECTED，S0/E1为RETAINED。974条历史逐帧决策与2488条BA边界记录已独立导出并注明来源。
+
+BA调用的边和窗口能从日志精确读取；但graph age、inactive/bad caches、correlation和network状态没有全量保存，所有缓存变更也没有逐操作日志。当前manifest是历史观察资料，不是可直接执行的完整强制调度。B四臂未运行，不能填入任何新ATE/RPE或端点成绩。

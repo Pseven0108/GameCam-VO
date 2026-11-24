@@ -1,0 +1,183 @@
+{
+  "checkpoint_file_sha256": "f28ca8313536f09cc8fd402fde059a7e547638bc8496e9897e5d672b4e416abb",
+  "state_id": "E1_E1_NEW_PREFIX_RGB328",
+  "D": 0,
+  "W": 1,
+  "U": 1,
+  "input_hashes": {
+    "poses": {
+      "data_sha256": "bf788a1d6d02ee92dbb04b668bc3d8ba4cb8e0f02d1def977b33ba7b5e76c640",
+      "shape": [
+        500,
+        7
+      ],
+      "stride": [
+        7,
+        1
+      ],
+      "source": "poses"
+    },
+    "disps": {
+      "data_sha256": "072a56693db421ed0b580ad59aa5d40f7df21a188e49fda14da2e75094f38ec7",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "source": "disps"
+    },
+    "K": {
+      "data_sha256": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+      "shape": [
+        4
+      ],
+      "stride": [
+        1
+      ],
+      "source": "K"
+    },
+    "selected_prior": {
+      "data_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "source": "zeros"
+    },
+    "target": {
+      "data_sha256": "d29885e126cb2179f8b53c1342413652db0641b630ca19816351458c0ca6e9fa",
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "source": "target"
+    },
+    "weight": {
+      "data_sha256": "af1e468eb41c12253e14d6ddc9cc4d03fb81299011b7d3fcf8f1ba09595f91d3",
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "source": "weight"
+    },
+    "U": {
+      "data_sha256": "119845b3ec1d4da2a4ba68bd08a907cb3c22ad54f5ce3a6d26c43548319614b2",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "source": "U"
+    },
+    "temp_y_cdot": {
+      "data_sha256": "4d3b12b10dfb8a834e5f41eb9978b699fdfacb609e9bc1ec274e64be4baeda4f",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "source": "temp_y_cdot"
+    },
+    "dino": {
+      "data_sha256": "05ce89501081dee92e457e431f8a49ec15e149bb40e5564dc6a9b8c8d27a22b3",
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "source": "dino"
+    },
+    "affine": {
+      "data_sha256": "aab0a092d01118a468e4961a9ae8756c55752e9e3878cb9f39a7444cfad37dab",
+      "shape": [
+        385
+      ],
+      "stride": [
+        1
+      ],
+      "source": "affine"
+    },
+    "eta": {
+      "data_sha256": "90df71a4eb8320c7a5a48856a6bab4a2d9349a240d4f5a41c4592cb2ce4158a9",
+      "shape": [
+        15,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "source": "eta"
+    },
+    "ii": {
+      "data_sha256": "53e48a560c25dbae693510464fbc2948c3b3fbf83c4d6beb39809537480c19d6",
+      "shape": [
+        94
+      ],
+      "stride": [
+        1
+      ],
+      "source": "ii"
+    },
+    "jj": {
+      "data_sha256": "e15927fb053fc7f9b4cfa34a12dabdf3f415f61761f576a08a2a0cde4c7094fb",
+      "shape": [
+        94
+      ],
+      "stride": [
+        1
+      ],
+      "source": "jj"
+    }
+  },
+  "common_input_digest": "3623f2df290f63200c73cac016a06b3187035481a9a32be7c447b85098bd22f8",
+  "all_hashes_exact": true,
+  "restore_seconds": 7.37275079000392,
+  "extension_sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e"
+}

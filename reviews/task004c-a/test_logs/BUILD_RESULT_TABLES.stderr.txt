@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 259, in _get_code_from_file
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z\RECOVERY_20261123T152953805Z\tools\build_result_tables.py", line 41
+    (ROOT/'EXECUTION_LOG.md').write_text('
+                                         ^
+SyntaxError: unterminated string literal (detected at line 41)

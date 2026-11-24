@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-22T18:53:01.892396+00:00",
+  "hostname": "jupyter-6g08vd8ezmzwvd1k",
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/rerun",
+    "--bind",
+    "127.0.0.1",
+    "--port",
+    "9875",
+    "--serve-web",
+    "--web-viewer-port",
+    "9876",
+    "--ws-server-port",
+    "9877",
+    "--server-memory-limit",
+    "768MB"
+  ],
+  "viewer_version": "rerun-cli 0.22.1 (default grpc map_view nasm native_viewer release web_viewer) [rustc 1.81.0 (eeb90cda1 2024-09-04), LLVM 18.1.7] x86_64-unknown-linux-gnu release-0.22.1 6b5a938, built 2025-02-20T10:00:25Z\nVideo features: av1 default ffmpeg nasm serde",
+  "workspace": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1",
+  "any_model_started": false,
+  "pid": 723,
+  "status": "REMOTE_VIEWER_STARTED",
+  "http_status": 200,
+  "loopback_listeners": [
+    {
+      "addr_hex": "0100007F",
+      "port": 9875,
+      "table": "/proc/net/tcp"
+    },
+    {
+      "addr_hex": "0100007F",
+      "port": 9877,
+      "table": "/proc/net/tcp"
+    },
+    {
+      "addr_hex": "0100007F",
+      "port": 9876,
+      "table": "/proc/net/tcp"
+    }
+  ]
+}

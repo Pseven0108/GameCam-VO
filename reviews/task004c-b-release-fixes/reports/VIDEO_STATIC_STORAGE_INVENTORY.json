@@ -1,0 +1,259 @@
+{
+  "scope": "STATIC_SOURCE_ONLY_NOT_REAL_C0",
+  "buffer": 500,
+  "image_size": [
+    640,
+    360
+  ],
+  "source": "candidate/src/depth_video.py:51-106",
+  "fields": [
+    {
+      "field": "timestamp",
+      "shape": [
+500
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 2000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "images",
+      "shape": [
+500,
+3,
+360,
+640
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 1382400000,
+      "device_by_frozen_config": "CPU file-backed"
+    },
+    {
+      "field": "dirty",
+      "shape": [
+500
+      ],
+      "bytes_per_element": 1,
+      "logical_bytes": 500,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "npc_dirty",
+      "shape": [
+500
+      ],
+      "bytes_per_element": 1,
+      "logical_bytes": 500,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "poses",
+      "shape": [
+500,
+7
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 14000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "disps",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 7200000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "zeros",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 7200000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "disps_up",
+      "shape": [
+500,
+360,
+640
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 460800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "intrinsics",
+      "shape": [
+500,
+4
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 8000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "mono_disps",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 7200000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "mono_disps_up",
+      "shape": [
+500,
+360,
+640
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 460800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "depth_scale",
+      "shape": [
+500
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 2000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "depth_shift",
+      "shape": [
+500
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 2000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "valid_depth_mask",
+      "shape": [
+500,
+360,
+640
+      ],
+      "bytes_per_element": 1,
+      "logical_bytes": 115200000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "valid_depth_mask_small",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 1,
+      "logical_bytes": 1800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "fmaps",
+      "shape": [
+500,
+1,
+128,
+45,
+80
+      ],
+      "bytes_per_element": 2,
+      "logical_bytes": 460800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "nets",
+      "shape": [
+500,
+128,
+45,
+80
+      ],
+      "bytes_per_element": 2,
+      "logical_bytes": 460800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "inps",
+      "shape": [
+500,
+128,
+45,
+80
+      ],
+      "bytes_per_element": 2,
+      "logical_bytes": 460800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "dino_feats",
+      "shape": [
+500,
+25,
+45,
+384
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 864000000,
+      "device_by_frozen_config": "CPU file-backed"
+    },
+    {
+      "field": "dino_feats_resize",
+      "shape": [
+500,
+384,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 2764800000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "uncertainties",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 7200000,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "affine_weights",
+      "shape": [
+385
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 1540,
+      "device_by_frozen_config": "CUDA"
+    },
+    {
+      "field": "temp_y_cdot",
+      "shape": [
+500,
+45,
+80
+      ],
+      "bytes_per_element": 4,
+      "logical_bytes": 7200000,
+      "device_by_frozen_config": "CUDA"
+    }
+  ],
+  "video_logical_bytes": 7468230540,
+  "complete_real_C0_bytes": null
+}

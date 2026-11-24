@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\rerun_probe.py", line 161, in <module>
+    main(opt)
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\rerun_probe.py", line 128, in main
+    need(sum(after[k] >= max(40, before[k] + 30) for k in ('magenta', 'green', 'cyan')) == 3,
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_RELEASE_READINESS\tools\contracts.py", line 43, in need
+    raise ValueError(message)
+ValueError: expected three-color geometry did not visibly render

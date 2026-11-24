@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/pipeline/task003_run_segment.py",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/results/val_007_full_00001-00487/attempt_001",
+    "--weights",
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth"
+  ],
+  "cwd": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W",
+  "overrides": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "PYTHONPATH": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/pipeline:/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W",
+    "PATH": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "TORCH_HOME": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub",
+    "HF_HOME": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface",
+    "HF_HUB_OFFLINE": "1",
+    "XDG_CACHE_HOME": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/runtime_cache",
+    "GAMECAM_TASK003_SEALED_CONFIG": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/native_config.yaml",
+    "GAMECAM_TASK003_OBSERVER_JSONL": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/results/val_007_full_00001-00487/attempt_001/observer.jsonl"
+  }
+}

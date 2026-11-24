@@ -1,0 +1,418 @@
+{
+  "utc": "2026-11-23T09:22:32.796855+00:00",
+  "ground_truth_path": "D:\\aaa\\GameCam-VO\\experiments\\DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1\\offline_gt\\val_007.npz",
+  "ground_truth_sha256": "91fb149c066bb488ac6071602a4b50fe1540243f2db3369a3706f63b705d7008",
+  "s_ref": 19.1341794347,
+  "arms": [
+    {
+      "arm": "E3",
+      "trace": {
+        "sha256": "b87d01aa92fc14e3d2e44abb7cdeaa4253cdd63d4542c033aa9e3d175500830d",
+        "bytes": 55934988,
+        "pid_event_counts": {
+          "1039": 5503
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1222,
+          "ba_after_native": 1222,
+          "ba_after_clamp": 1222,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1222,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 198,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 807,
+        "local_returned_rejected": 312,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5502
+      },
+      "trajectory_sha256": "e93b24feb2745748c595617acb78c19e904a8f97d13ecf2d072a7e0c56699a48",
+      "observer_sha256": "b87d01aa92fc14e3d2e44abb7cdeaa4253cdd63d4542c033aa9e3d175500830d",
+      "elapsed_cpu_s": 2.672000000020489,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E4",
+      "trace": {
+        "sha256": "c7671542f122db2b81a6beff0b9922ab630c11846f911c8d59f016ce7b62bd8d",
+        "bytes": 74459029,
+        "pid_event_counts": {
+          "1516": 5797
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1320,
+          "ba_after_native": 1320,
+          "ba_after_clamp": 1320,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1320,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 296,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 905,
+        "local_returned_rejected": 165,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5796
+      },
+      "trajectory_sha256": "9575fb629d319b2d66a2d669fecd7db2f882c1ea6de30b36043917468d64a405",
+      "observer_sha256": "c7671542f122db2b81a6beff0b9922ab630c11846f911c8d59f016ce7b62bd8d",
+      "elapsed_cpu_s": 3.2659999998286366,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E7",
+      "trace": {
+        "sha256": "e7754a9c1709c70a2ea3cb6d46e831d5f8fff572355be7bd9afce9c17415286b",
+        "bytes": 57537954,
+        "pid_event_counts": {
+          "2005": 5527
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1230,
+          "ba_after_native": 1230,
+          "ba_after_clamp": 1230,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1230,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 206,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 815,
+        "local_returned_rejected": 300,
+        "local_joint_snapshot_calls": 232,
+        "local_both_in_pose_window": 232,
+        "local_both_in_pose_window_and_observed": 232,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5526
+      },
+      "trajectory_sha256": "6c2bdaafb20a3cc1a4e7785b93c6b1c979620ca9ec74edf70b7223ee6de7c5ce",
+      "observer_sha256": "e7754a9c1709c70a2ea3cb6d46e831d5f8fff572355be7bd9afce9c17415286b",
+      "elapsed_cpu_s": 2.719000000040978,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E0",
+      "trace": {
+        "sha256": "752a1ef1f2163daaf07056f6f6046e9bfff92d8f84f8e59069efa386cabf56ee",
+        "bytes": 46785246,
+        "pid_event_counts": {
+          "2546": 5359
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1174,
+          "ba_after_native": 1174,
+          "ba_after_clamp": 1174,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1174,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 150,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 759,
+        "local_returned_rejected": 384,
+        "local_joint_snapshot_calls": 234,
+        "local_both_in_pose_window": 234,
+        "local_both_in_pose_window_and_observed": 234,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5358
+      },
+      "trajectory_sha256": "f4669d07e6ca31d71dbeecabed46a8223557433b10903fd3dc01860addfd208e",
+      "observer_sha256": "752a1ef1f2163daaf07056f6f6046e9bfff92d8f84f8e59069efa386cabf56ee",
+      "elapsed_cpu_s": 2.093000000109896,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E8",
+      "trace": {
+        "sha256": "f92e14911a16c66fd19f9cc99e2d3fdf78e18b6be1f8ae63b52a6fc3218b1bad",
+        "bytes": 75813537,
+        "pid_event_counts": {
+          "3024": 5815
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1326,
+          "ba_after_native": 1326,
+          "ba_after_clamp": 1326,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1326,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 302,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 911,
+        "local_returned_rejected": 156,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5814
+      },
+      "trajectory_sha256": "301d8d598df488ae61f1d16e558e478b34bbdb1a8da0b30ceb832c721e1c8f11",
+      "observer_sha256": "f92e14911a16c66fd19f9cc99e2d3fdf78e18b6be1f8ae63b52a6fc3218b1bad",
+      "elapsed_cpu_s": 3.328999999910593,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E6",
+      "trace": {
+        "sha256": "a709037f5f1fde1e1b0330e9693272a6148a4fb5e69d924972f5781c19cf8152",
+        "bytes": 75129741,
+        "pid_event_counts": {
+          "3612": 5803
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1322,
+          "ba_after_native": 1322,
+          "ba_after_clamp": 1322,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1322,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 298,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 907,
+        "local_returned_rejected": 162,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5802
+      },
+      "trajectory_sha256": "265217281a15cfa18d20d8c2379f15c2074097c205db5f3c1c2e5e2451e23a12",
+      "observer_sha256": "a709037f5f1fde1e1b0330e9693272a6148a4fb5e69d924972f5781c19cf8152",
+      "elapsed_cpu_s": 3.280999999959022,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E1",
+      "trace": {
+        "sha256": "9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0",
+        "bytes": 73693624,
+        "pid_event_counts": {
+          "4209": 5779
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1314,
+          "ba_after_native": 1314,
+          "ba_after_clamp": 1314,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1314,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 290,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 899,
+        "local_returned_rejected": 174,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5778
+      },
+      "trajectory_sha256": "d485a577412826015d7bb9a182ef43a5c4f52d3f244647dd58fb1f52ed5eb225",
+      "observer_sha256": "9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0",
+      "elapsed_cpu_s": 3.25,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    },
+    {
+      "arm": "E2",
+      "trace": {
+        "sha256": "288edb7018d2b69a4bedc2047fa6443bb773556eb51167eebaeeba31b6130a73",
+        "bytes": 62181210,
+        "pid_event_counts": {
+          "4820": 5629
+        },
+        "events": {
+          "tracking_start": 1,
+          "keyframe_candidate_inserted": 215,
+          "keyframe_decision": 487,
+          "motion_filter_score": 486,
+          "stage_boundary": 9,
+          "ba_before": 1264,
+          "ba_after_native": 1264,
+          "ba_after_clamp": 1264,
+          "frontend_distance": 203,
+          "filler_interpolated": 31,
+          "filler_pose_update": 372,
+          "filler_batch_result": 31,
+          "export_matrix": 1,
+          "observer_overhead": 1
+        },
+        "calls": 1264,
+        "calls_by_stage": {
+          "frontend_init_neighborhood": 8,
+          "frontend_init_proximity": 8,
+          "frontend_init_second": 8,
+          "frontend_local_predecision": 609,
+          "frontend_local_retained": 240,
+          "final_ba_phase_1": 7,
+          "final_ba_phase_2": 12,
+          "filler_pose_only": 372
+        },
+        "local_returned": 849,
+        "local_returned_rejected": 249,
+        "local_joint_snapshot_calls": 3,
+        "local_both_in_pose_window": 3,
+        "local_both_in_pose_window_and_observed": 3,
+        "unfinished": [],
+        "keyframe_decisions": 487,
+        "filler_batch_output_frames": 487,
+        "export_event": 5628
+      },
+      "trajectory_sha256": "4512c5b4107c204391879e40b174aef71aebe2b06f72ca5eda4f641d11e2b5cf",
+      "observer_sha256": "288edb7018d2b69a4bedc2047fa6443bb773556eb51167eebaeeba31b6130a73",
+      "elapsed_cpu_s": 2.75,
+      "remote_model_validation": "PASS",
+      "local_receipt_trace_export_validation": "PASS"
+    }
+  ],
+  "cpu_only": true,
+  "torch_imported": false
+}

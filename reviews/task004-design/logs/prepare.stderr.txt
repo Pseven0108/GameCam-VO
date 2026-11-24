@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 338, in <module>
+    main()
+    ~~~~^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 305, in main
+    out = patched_sources(base)
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 86, in patched_sources
+    check(n == 3, f'Expected 3 local syntactic call sites (2 reachable with loop disabled), got {n}')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 35, in check
+    raise ValueError(reason)
+ValueError: Expected 3 local syntactic call sites (2 reachable with loop disabled), got 2

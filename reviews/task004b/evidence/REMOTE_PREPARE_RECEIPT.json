@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "root": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z",
+  "protected_files": 3962,
+  "release_files": 31,
+  "disk_free": 47965650944,
+  "rrd_help": "Manipulate the contents of .rrd and .rbl files\n\nUsage: rerun rrd <COMMAND>\n\nCommands:\n  compare  Compares the data between 2 .rrd files, returning a successful shell exit code if they match\n  print    Print the contents of one or more .rrd/.rbl files/streams\n  compact  Compacts the contents of one or more .rrd/.rbl files/streams and writes the result standard output\n  merge    Merges the contents of multiple .rrd/.rbl files/streams, and writes the result to standard output\n  filter   Filters out data from .rrd/.rbl files/streams, and writes the result to standard output\n  help     Print this message or the help of the given subcommand(s)\n\nOptions:\n  -h, --help  Print help\n"
+}

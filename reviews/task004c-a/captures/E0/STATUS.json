@@ -1,0 +1,45 @@
+{
+  "mode": "capture",
+  "key": "E0",
+  "phase": "complete",
+  "before": {
+    "time_unix": 1795448623.424817,
+    "disk_free": 21982633984,
+    "shm_used": 1310720,
+    "nvidia_smi_exit": 0,
+    "gpu_memory_mib": "0, 24125"
+  },
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "-u",
+    "/root/rivermind-data/DROID_W_TASK004C_RECOVERY_20261123T152953805Z/control/task004c_prefix.py",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "/root/rivermind-data/DROID_W_TASK004C_RECOVERY_20261123T152953805Z/captures/E0",
+    "--weights",
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth"
+  ],
+  "cwd": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source",
+  "attempt_dir": "/root/rivermind-data/DROID_W_TASK004C_RECOVERY_20261123T152953805Z/captures/E0",
+  "pid": 11370,
+  "last": {
+    "time_unix": 1795448769.9851577,
+    "disk_free": 19125886976,
+    "shm_used": 1392640,
+    "nvidia_smi_exit": 0,
+    "gpu_memory_mib": "5325, 18801"
+  },
+  "elapsed": 148.5759090319989,
+  "exit_code": 0,
+  "expected_completion": true,
+  "peak_shm_bytes": 2247864320,
+  "peak_gpu_mib": 16733,
+  "minimum_disk_free": 19125886976,
+  "after": {
+    "time_unix": 1795448772.109549,
+    "disk_free": 19125886976,
+    "shm_used": 1392640,
+    "nvidia_smi_exit": 0,
+    "gpu_memory_mib": "0, 24125"
+  }
+}

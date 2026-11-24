@@ -1,0 +1,23 @@
+{
+  "mode": "CPU_MOCK_ONLY",
+  "id": "mock-7a26ea0c25b447e28dd2ea79c154d634",
+  "status": "STOPPED",
+  "order": [
+    "E3",
+    "E4",
+    "E7",
+    "E0",
+    "E8",
+    "E6",
+    "E1",
+    "E2"
+  ],
+  "started": [],
+  "completed": [],
+  "failed_arm": "E3",
+  "failure": "ValueError: insufficient disk: 13958643711 < 13958643712 bytes",
+  "failure_archive_error": null,
+  "gpu_runs": 0,
+  "retried": false,
+  "cleanup_authorized": false
+}

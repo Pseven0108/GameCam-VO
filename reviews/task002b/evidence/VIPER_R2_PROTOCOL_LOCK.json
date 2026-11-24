@@ -1,0 +1,53 @@
+{
+  "protocol": "VIPER_MATCHED_DUAL_BASELINE_R2_V1",
+  "source": "reconciled sealed R1 terminal attempts and evidence",
+  "slam_commit": "2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99",
+  "wild_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "segments": 92,
+  "sequences": 47,
+  "frames": 49815,
+  "fixed_segments": 82,
+  "fixed_sequences": 45,
+  "variable_segments": 10,
+  "variable_sequences": 2,
+  "stride": 1,
+  "image_wh": [
+    640,
+    360
+  ],
+  "initialization": "independent per frozen segment",
+  "slam_entrypoint": "official synchronous Droid (demo default)",
+  "visualization": "upstream native viewer on the current private noVNC desktop; separate attempt record for any fallback",
+  "slam_buffer": 512,
+  "pose_input_to_gpu": false,
+  "evaluation": {
+    "metric_version": "VIPER_R1_SEGMENT_METRICS_V1",
+    "source_sha256": "be1a605d1a0fbfa22db61ae7f4eabbde080bb12ce01110ee8f2684aeaefc477e",
+    "plan_sha256": {
+      "FULL_PLAN.json": "bd3f142921311da418646b0608741f0cea4f7b2075e94e7004e836abcdf3f0c9",
+      "FULL_RESOURCE_01_PLAN.json": "32e1346f52fd4ec9fce57a8ed023a540c6aaf9fef9975a9e41654c07abfff241"
+    },
+    "alignment": "independent segment, one translation fit for each SE3 and Sim3; never join segment poses",
+    "rpe_offsets": [
+      1,
+      15,
+      60,
+      150
+    ],
+    "translation_units": "game units",
+    "rotation_units": "degrees",
+    "sample_nominal_fps": 15,
+    "input_gt_pose_count": 0,
+    "evaluation_pose_rows": "RGB_ID-1",
+    "case_count": 124,
+    "coverage_semantics": "finite exported poses including filler; denominator includes original input exceptions",
+    "failure_semantics": "terminal segment export failure and unavailable exported poses; no per-frame direct tracking success log",
+    "planned_segments": 320,
+    "terminal_segments": 320,
+    "scored_segments": 320
+  },
+  "manifest_sha256": "b991fd5019307373601b5e2fd5460a83049ffea517140e1fcf6401996a091acb",
+  "rgb_worklist_sha256": "299898f304a4bce1bc4a293bf5d619af6f8b8d6b2bc7504db1288714b453fdc3",
+  "r1_review_sha256": "b10534d2089d6ebb3d60fe0b39df8616fe50e2fa7fbde62aec07e6f21a6a8b8d",
+  "r1_evidence_files": 745
+}

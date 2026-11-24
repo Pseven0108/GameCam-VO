@@ -1,0 +1,15 @@
+{
+  "Doff_supported_on_primary_error_and_sim3": true,
+  "keyframe_increase_supported": true,
+  "conditional_counts": {
+    "sim3_Doff_lower": 12,
+    "endpoint_Doff_lower": 11,
+    "kf_Doff_more": 12,
+    "conditional_pairs": 12,
+    "se3_Doff_lower": 2
+  },
+  "total_frontend_effect_only": true,
+  "pure_direct_effect_established": false,
+  "mediator_causality_established": false,
+  "cross_environment_generalization_established": false
+}

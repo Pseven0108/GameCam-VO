@@ -1,0 +1,35 @@
+--- source/task004_controls.py
++++ tools/task004_controls.py
+@@ -69,23 +69,15 @@
+ 
+ 
+ def require_approved_runtime():
+-    path=Path(os.environ['GAMECAM_TASK004_AUTHORIZATION'])
++    path=Path(os.environ['GAMECAM_TASK004C_AUTHORIZATION'])
+     raw=path.read_bytes()
+-    if sha256(raw).hexdigest()!="ce286e8a61947d6ee295341da39d46b227d0160709eaeaa0d6d391b3dc34217c":
+-        raise SystemExit('Task004B authorization identity mismatch')
+-    doc=json.loads(raw);root=Path(doc['remote_root']);active=policy()
+-    seed=int(os.environ['GAMECAM_TASK004B_SEED'])
+-    attempt=Path(os.environ['GAMECAM_TASK004_ATTEMPT'])
+-    receipt=json.loads((attempt/'LAUNCH_INTENT.json').read_bytes())
+-    if (doc['schema']!='GAMECAM_TASK004B_AUTHORIZED_REPEATED_FACTORIAL_V1'
+-        or seed not in doc['seeds'] or active.campaign!='FACTORIAL'
+-        or active.arm not in doc['orders'][str(seed)]
+-        or path!=root/'release/AUTHORIZATION.json'
+-        or attempt.parent!=root/'results'/('seed'+str(seed))/active.arm
+-        or receipt['arm']!=active.arm or receipt['seed']!=seed
+-        or receipt['mode']!='REAL_GPU_CONFIRMATORY'
++    if sha256(raw).hexdigest()!='7e1435438985582c1dfb8d7fd7063263f3d1652d8a9ab2003b9b6071c7fa7450':raise SystemExit('Task004C approval hash mismatch')
++    doc=json.loads(raw);root=Path(doc['remote_root']);attempt=Path(os.environ['GAMECAM_TASK004C_ATTEMPT'])
++    active=policy();receipt=json.loads((attempt/'LAUNCH_INTENT.json').read_text())
++    if (doc['schema']!='GAMECAM_TASK004C_PREFIX_AND_REPLAY_APPROVED_V1' or active.arm not in ('E0','E1')
++        or active.local_dwu not in ((1,1,1),(0,1,1)) or attempt!=root/'captures'/active.arm
++        or receipt['mode']!='PREFIX_RGB1_328_COMPLETE_NATIVE_CAPTURE' or receipt['arm']!=active.arm
+         or receipt['authorization_sha256']!=sha256(raw).hexdigest()
+-        or receipt['policy_sha256']!=os.environ['GAMECAM_TASK004_POLICY_SHA256']
+-        or Path(os.environ['GAMECAM_TASK003_SEALED_CONFIG'])!=root/'release/candidates/r2_sealed_config.yaml'):
+-        raise SystemExit('Task004B runtime outside approved seed, release or attempt')
++        or Path(os.environ['GAMECAM_TASK003_SEALED_CONFIG'])!=Path(doc['lock']['config'])):
++        raise SystemExit('Task004C prefix outside approved scope')
+     return active

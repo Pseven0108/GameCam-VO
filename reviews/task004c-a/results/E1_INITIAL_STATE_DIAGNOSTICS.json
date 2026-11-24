@@ -1,0 +1,68 @@
+{
+  "state_id": "E1_E1_NEW_PREFIX_RGB328",
+  "geometry": {
+    "weighted_geometry_sse": 8.100115520516518,
+    "valid_pixels": 314780,
+    "total_edge_pixels": 338400,
+    "reprojection_vector_rms_lowres_px": 2.1739087302061013,
+    "effective_uba_note": "source uncertainty, full grid, geometry kernel MIN_DEPTH=.25",
+    "depth_C_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": 0.0,
+      "median": 0.0,
+      "p95": 0.013998064174836138,
+      "max": 16.19943006214293,
+      "l2": 194.99793589309073
+    },
+    "depth_b_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": -0.1709243388013138,
+      "median": 0.0,
+      "p95": 3.683259450530584e-07,
+      "max": 0.09784879407370899,
+      "l2": 1.4736338237528874
+    }
+  },
+  "depth_support": 53992,
+  "positive_depth_fraction": 0.9998518518518519,
+  "eta": {
+    "n": 54000,
+    "finite": 54000,
+    "min": 1.0000000116860974e-07,
+    "median": 1.0104071890282285e-07,
+    "p95": 1.3901727470511105e-05,
+    "max": 0.0027158637531101704,
+    "l2": 0.010091669857501984
+  },
+  "C_prior_positive": 0.01,
+  "C_geometry": {
+    "n": 54000,
+    "finite": 54000,
+    "min": 0.0,
+    "median": 0.004364987787355564,
+    "p95": 1.373643576370815,
+    "max": 16.19943006214293,
+    "l2": 194.99793589309073
+  },
+  "b_prior": {
+    "n": 54000,
+    "finite": 54000,
+    "min": -1.5536553955078125,
+    "median": -0.000728975385427475,
+    "p95": 0.0012217471934854972,
+    "max": 0.008998043537139892,
+    "l2": 2.930834009659028
+  },
+  "b_geometry": {
+    "n": 54000,
+    "finite": 54000,
+    "min": -0.1709243388013138,
+    "median": -1.4517270542713043e-07,
+    "p95": 0.0005685293353321847,
+    "max": 0.09784879407370899,
+    "l2": 1.4736338237528874
+  },
+  "diagnostic_scope": "CPU_FLOAT64_INITIAL_LINEARIZATION_TERMS_NOT_CAPTURED_NATIVE_INTERNALS"
+}

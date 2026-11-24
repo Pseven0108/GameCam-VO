@@ -1,0 +1,239 @@
+{
+  "sequence_frame_rows": 3008,
+  "sequence_pair_rows": 7520,
+  "frame_contrast_rows": 640,
+  "pair_contrast_rows": 1408,
+  "compression_screen_pair_hits": 9035,
+  "same_class_consecutive_runs": 214,
+  "adjacent_and_direct": [
+    {
+      "calibration_branch": "FIXED_K_NATIVE_RESIZE",
+      "model": "DROID-SLAM",
+      "adjacent_pairs": 6296,
+      "gap_rgb": {
+        "median": 4.0,
+        "p95": 16.0,
+        "max": 440.0
+      },
+      "translation_rpe_descriptive_variable_gap": {
+        "median": 0.09008025263458408,
+        "p95": 1.1794325168212072,
+        "max": 462.63242407026166
+      },
+      "direct_anchors": 6378,
+      "exported_vs_direct_position_delta": {
+        "median": 0.0006638138679467677,
+        "p95": 0.004400165136017998,
+        "max": 0.8672081221083165
+      },
+      "exported_vs_direct_angle_deg": {
+        "median": 0.004755338125102211,
+        "p95": 0.009557879899185273,
+        "max": 0.7390568386085202
+      }
+    },
+    {
+      "calibration_branch": "FIXED_K_NATIVE_RESIZE",
+      "model": "DROID-W",
+      "adjacent_pairs": 10143,
+      "gap_rgb": {
+        "median": 2.0,
+        "p95": 11.0,
+        "max": 422.0
+      },
+      "translation_rpe_descriptive_variable_gap": {
+        "median": 0.28534516947891336,
+        "p95": 7.716526832924403,
+        "max": 199.30735995575841
+      },
+      "direct_anchors": null,
+      "exported_vs_direct_position_delta": null,
+      "exported_vs_direct_angle_deg": null
+    },
+    {
+      "calibration_branch": "VIRTUAL_K_DIRECT_REMAP",
+      "model": "DROID-SLAM",
+      "adjacent_pairs": 1654,
+      "gap_rgb": {
+        "median": 3.0,
+        "p95": 7.0,
+        "max": 57.0
+      },
+      "translation_rpe_descriptive_variable_gap": {
+        "median": 0.039766451440874546,
+        "p95": 0.4858492959038891,
+        "max": 24.75638191130369
+      },
+      "direct_anchors": 1664,
+      "exported_vs_direct_position_delta": {
+        "median": 0.0004946468653435798,
+        "p95": 0.0010871181396126491,
+        "max": 5.2725953642902645
+      },
+      "exported_vs_direct_angle_deg": {
+        "median": 0.004744119546807964,
+        "p95": 0.008980680406155545,
+        "max": 1.9042306110625573
+      }
+    },
+    {
+      "calibration_branch": "VIRTUAL_K_DIRECT_REMAP",
+      "model": "DROID-W",
+      "adjacent_pairs": 2333,
+      "gap_rgb": {
+        "median": 2.0,
+        "p95": 6.0,
+        "max": 45.0
+      },
+      "translation_rpe_descriptive_variable_gap": {
+        "median": 0.021998096979974766,
+        "p95": 0.11811738976367481,
+        "max": 5.650498328419557
+      },
+      "direct_anchors": null,
+      "exported_vs_direct_position_delta": null,
+      "exported_vs_direct_angle_deg": null
+    }
+  ],
+  "case_comparators": [
+    {
+      "model": "DROID-SLAM",
+      "first_rgb": 309,
+      "last_rgb": 325,
+      "offset": 16,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "OWN_TYPE_ONLY",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->FILLED_FRAME",
+      "other_pairs": 293,
+      "ratio_count": 293,
+      "ratio_median": 1.00967925251,
+      "ratio_p10": 0.6156997305190001,
+      "ratio_case_empirical_fraction_at_or_below": 0.5870307167235495,
+      "translation_error_median": 0.920461039831,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-SLAM",
+      "first_rgb": 309,
+      "last_rgb": 325,
+      "offset": 16,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "EXACT_CROSS_CLASS",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->FILLED_FRAME",
+      "other_pairs": 221,
+      "ratio_count": 221,
+      "ratio_median": 1.00515819831,
+      "ratio_p10": 0.599606665019,
+      "ratio_case_empirical_fraction_at_or_below": 0.6108597285067874,
+      "translation_error_median": 0.964249272477,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-SLAM",
+      "first_rgb": 301,
+      "last_rgb": 353,
+      "offset": 52,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "OWN_TYPE_ONLY",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->KEYFRAME",
+      "other_pairs": 275,
+      "ratio_count": 275,
+      "ratio_median": 1.00453914308,
+      "ratio_p10": 0.8413042181118,
+      "ratio_case_empirical_fraction_at_or_below": 0.5345454545454545,
+      "translation_error_median": 1.99783043998,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-SLAM",
+      "first_rgb": 301,
+      "last_rgb": 353,
+      "offset": 52,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "EXACT_CROSS_CLASS",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->KEYFRAME",
+      "other_pairs": 34,
+      "ratio_count": 34,
+      "ratio_median": 1.00507791313,
+      "ratio_p10": 0.9855186622833,
+      "ratio_case_empirical_fraction_at_or_below": 0.5294117647058824,
+      "translation_error_median": 1.0511375604095,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-W",
+      "first_rgb": 309,
+      "last_rgb": 325,
+      "offset": 16,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "OWN_TYPE_ONLY",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->FILLED_FRAME",
+      "other_pairs": 284,
+      "ratio_count": 284,
+      "ratio_median": 0.552457428241,
+      "ratio_p10": 0.0525007167751,
+      "ratio_case_empirical_fraction_at_or_below": 0.4753521126760563,
+      "translation_error_median": 22.50924485685,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-W",
+      "first_rgb": 309,
+      "last_rgb": 325,
+      "offset": 16,
+      "endpoint_type": "FILLED_FRAME->FILLED_FRAME",
+      "comparison": "EXACT_CROSS_CLASS",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->FILLED_FRAME",
+      "other_pairs": 221,
+      "ratio_count": 221,
+      "ratio_median": 0.550523312933,
+      "ratio_p10": 0.0462238227379,
+      "ratio_case_empirical_fraction_at_or_below": 0.47058823529411764,
+      "translation_error_median": 22.4671748036,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-W",
+      "first_rgb": 301,
+      "last_rgb": 353,
+      "offset": 52,
+      "endpoint_type": "FILLED_FRAME->KEYFRAME",
+      "comparison": "OWN_TYPE_ONLY",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->KEYFRAME",
+      "other_pairs": 48,
+      "ratio_count": 48,
+      "ratio_median": 1.44939365817,
+      "ratio_p10": 0.04790388194469,
+      "ratio_case_empirical_fraction_at_or_below": 0.20833333333333334,
+      "translation_error_median": 43.466339521449996,
+      "case_pair_passes_gt_motion_screen": true
+    },
+    {
+      "model": "DROID-W",
+      "first_rgb": 301,
+      "last_rgb": 353,
+      "offset": 52,
+      "endpoint_type": "FILLED_FRAME->KEYFRAME",
+      "comparison": "EXACT_CROSS_CLASS",
+      "slam_type": "FILLED_FRAME->FILLED_FRAME",
+      "wild_type": "FILLED_FRAME->KEYFRAME",
+      "other_pairs": 34,
+      "ratio_count": 34,
+      "ratio_median": 1.45636776762,
+      "ratio_p10": 0.05114396734839,
+      "ratio_case_empirical_fraction_at_or_below": 0.17647058823529413,
+      "translation_error_median": 43.466339521449996,
+      "case_pair_passes_gt_motion_screen": true
+    }
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261122,
+  "sequence_unit": "original VIPER sequence; no cross-segment pairing"
+}

@@ -1,0 +1,420 @@
+{
+  "scope": "CPU_SYNTHETIC_NATIVE_SIZED_SHARED_BUFFERS_NOT_REAL_TRACKER_RERUN_OR_C0",
+  "total_tensor_bytes": 2246400000,
+  "parent_pid": 908,
+  "child_pids": [
+    975,
+    976
+  ],
+  "child_exit_codes": [
+    0,
+    0
+  ],
+  "before": {
+    "images": {
+      "dtype": "torch.float32",
+      "shape": [
+        500,
+        3,
+        360,
+        640
+      ],
+      "stride": [
+        691200,
+        230400,
+        640,
+        1
+      ],
+      "offset": 0,
+      "is_shared": true,
+      "sha256": "c7115d3737af564c47211adc7fe17fba658d48e82d65108100f3034866857452",
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+        "byte_size": 1382400000,
+        "st_dev": 64874,
+        "st_ino": 4989025,
+        "mode": 384
+      }
+    },
+    "dino": {
+      "dtype": "torch.float32",
+      "shape": [
+        500,
+        25,
+        45,
+        384
+      ],
+      "stride": [
+        432000,
+        17280,
+        384,
+        1
+      ],
+      "offset": 0,
+      "is_shared": true,
+      "sha256": "e6a5ddf8b8edf0d8a384434d25647848ba2a3e868745fc9b760511db254093c9",
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+        "byte_size": 864000000,
+        "st_dev": 64874,
+        "st_ino": 4989026,
+        "mode": 384
+      }
+    }
+  },
+  "initial_readers": [
+    {
+      "stage": "initial",
+      "role": "TRACKER_CPU_STANDIN",
+      "pid": 975,
+      "images": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          3,
+          360,
+          640
+        ],
+        "stride": [
+          691200,
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "c7115d3737af564c47211adc7fe17fba658d48e82d65108100f3034866857452",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+          "byte_size": 1382400000,
+          "st_dev": 64874,
+          "st_ino": 4989025,
+          "mode": 384
+        }
+      },
+      "dino": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          25,
+          45,
+          384
+        ],
+        "stride": [
+          432000,
+          17280,
+          384,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "e6a5ddf8b8edf0d8a384434d25647848ba2a3e868745fc9b760511db254093c9",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+          "byte_size": 864000000,
+          "st_dev": 64874,
+          "st_ino": 4989026,
+          "mode": 384
+        }
+      },
+      "shm_used": 61440,
+      "cuda_initialized": false
+    },
+    {
+      "stage": "initial",
+      "role": "RERUN_CPU_STANDIN",
+      "pid": 976,
+      "images": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          3,
+          360,
+          640
+        ],
+        "stride": [
+          691200,
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "c7115d3737af564c47211adc7fe17fba658d48e82d65108100f3034866857452",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+          "byte_size": 1382400000,
+          "st_dev": 64874,
+          "st_ino": 4989025,
+          "mode": 384
+        }
+      },
+      "dino": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          25,
+          45,
+          384
+        ],
+        "stride": [
+          432000,
+          17280,
+          384,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "e6a5ddf8b8edf0d8a384434d25647848ba2a3e868745fc9b760511db254093c9",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+          "byte_size": 864000000,
+          "st_dev": 64874,
+          "st_ino": 4989026,
+          "mode": 384
+        }
+      },
+      "shm_used": 61440,
+      "cuda_initialized": false
+    }
+  ],
+  "after_readers": [
+    {
+      "stage": "after",
+      "role": "TRACKER_CPU_STANDIN",
+      "pid": 975,
+      "images": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          3,
+          360,
+          640
+        ],
+        "stride": [
+          691200,
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "a8dfb679d15a7c9f633de2514bc8c8f4964298150ee5316a88356f3101399b37",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+          "byte_size": 1382400000,
+          "st_dev": 64874,
+          "st_ino": 4989025,
+          "mode": 384
+        }
+      },
+      "dino": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          25,
+          45,
+          384
+        ],
+        "stride": [
+          432000,
+          17280,
+          384,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "6f076cad73179bc6dd2549244e494106ac2b5d5cb8812e8fd3cfdb9a9281c9e0",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+          "byte_size": 864000000,
+          "st_dev": 64874,
+          "st_ino": 4989026,
+          "mode": 384
+        }
+      },
+      "last_values": [
+        73.25,
+        -18.5
+      ],
+      "shm_used": 61440,
+      "cuda_initialized": false
+    },
+    {
+      "stage": "after",
+      "role": "RERUN_CPU_STANDIN",
+      "pid": 976,
+      "images": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          3,
+          360,
+          640
+        ],
+        "stride": [
+          691200,
+          230400,
+          640,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "a8dfb679d15a7c9f633de2514bc8c8f4964298150ee5316a88356f3101399b37",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+          "byte_size": 1382400000,
+          "st_dev": 64874,
+          "st_ino": 4989025,
+          "mode": 384
+        }
+      },
+      "dino": {
+        "dtype": "torch.float32",
+        "shape": [
+          500,
+          25,
+          45,
+          384
+        ],
+        "stride": [
+          432000,
+          17280,
+          384,
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "sha256": "6f076cad73179bc6dd2549244e494106ac2b5d5cb8812e8fd3cfdb9a9281c9e0",
+        "descriptor": {
+          "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+          "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+          "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+          "byte_size": 864000000,
+          "st_dev": 64874,
+          "st_ino": 4989026,
+          "mode": 384
+        }
+      },
+      "last_values": [
+        73.25,
+        -18.5
+      ],
+      "shm_used": 61440,
+      "cuda_initialized": false
+    }
+  ],
+  "final": {
+    "images": {
+      "dtype": "torch.float32",
+      "shape": [
+        500,
+        3,
+        360,
+        640
+      ],
+      "stride": [
+        691200,
+        230400,
+        640,
+        1
+      ],
+      "offset": 0,
+      "is_shared": true,
+      "sha256": "a8dfb679d15a7c9f633de2514bc8c8f4964298150ee5316a88356f3101399b37",
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+        "byte_size": 1382400000,
+        "st_dev": 64874,
+        "st_ino": 4989025,
+        "mode": 384
+      }
+    },
+    "dino": {
+      "dtype": "torch.float32",
+      "shape": [
+        500,
+        25,
+        45,
+        384
+      ],
+      "stride": [
+        432000,
+        17280,
+        384,
+        1
+      ],
+      "offset": 0,
+      "is_shared": true,
+      "sha256": "6f076cad73179bc6dd2549244e494106ac2b5d5cb8812e8fd3cfdb9a9281c9e0",
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+        "byte_size": 864000000,
+        "st_dev": 64874,
+        "st_ino": 4989026,
+        "mode": 384
+      }
+    }
+  },
+  "backings": [
+    {
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+        "byte_size": 1382400000,
+        "st_dev": 64874,
+        "st_ino": 4989025,
+        "mode": 384
+      },
+      "logical_bytes": 1382400000,
+      "allocated_bytes": 1382404096
+    },
+    {
+      "descriptor": {
+        "schema": "GAMECAM_OWNED_FILE_STORAGE_V1",
+        "root": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing",
+        "path": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+        "byte_size": 864000000,
+        "st_dev": 64874,
+        "st_ino": 4989026,
+        "mode": 384
+      },
+      "logical_bytes": 864000000,
+      "allocated_bytes": 864006144
+    }
+  ],
+  "shm_baseline_used_bytes": 0,
+  "shm_sample_peak_used_bytes": 61440,
+  "shm_delta_bytes": 61440,
+  "shm_total_bytes": 2147483648,
+  "disk_free_bytes": 24640712704,
+  "duration_seconds": 28.905145406723022,
+  "cuda_initialized": false,
+  "model_constructed": false,
+  "real_RGB_frames": 0,
+  "native_C0_created": false,
+  "PASS": true
+}

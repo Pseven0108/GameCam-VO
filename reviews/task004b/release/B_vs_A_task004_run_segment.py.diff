@@ -1,0 +1,58 @@
+--- Task004A/task004_run_segment.py
++++ Task004B/task004_run_segment.py
+@@ -23,6 +23,20 @@
+ from transfer_common import digest, dump, load
+ from segment_input import BUFFER, RAW, OUT, checked_manifest, remap_for
+ 
++
++
++def seed_receipt(out,scope,seed):
++    import random,pickle
++    record=dict(scope=scope,pid=os.getpid(),configured_seed=seed,torch_initial_seed=torch.initial_seed(),
++        python_state_sha256=hashlib.sha256(pickle.dumps(random.getstate())).hexdigest(),
++        numpy_state_sha256=hashlib.sha256(pickle.dumps(np.random.get_state())).hexdigest(),
++        torch_cpu_state_sha256=hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest(),
++        cuda_initialized=torch.cuda.is_initialized(),cudnn_deterministic=torch.backends.cudnn.deterministic,
++        cudnn_benchmark=torch.backends.cudnn.benchmark,extra_rng_draws=0,
++        seeding_scope='NATIVE_MAIN_SETUP_ONLY_SPAWN_CHILD_NOT_EXTRA_RESEEDED')
++    if torch.cuda.is_initialized():
++        record['cuda_state_sha256']=[hashlib.sha256(s.cpu().numpy().tobytes()).hexdigest() for s in torch.cuda.get_rng_state_all()]
++    dump(out/('seed_receipt_'+scope+'.json'),record)
+ 
+ def progress(out, phase, **extra):
+     dump(out/'progress.json', dict(phase=phase,time_unix=time.time(),**extra))
+@@ -50,7 +64,7 @@
+     import rerun as rr
+ 
+     out=Path(kw.pop('record_path')).parent.parent
+-    kw['app_id']=out.parent.name
++    kw['app_id']=out.parent.parent.name+'_'+out.parent.name+'_'+out.name
+ 
+     def connect(*,port,open_browser):
+         if port!=9876 or open_browser:
+@@ -147,6 +161,7 @@
+ 
+ class ObservedSLAM(SLAM):
+     def tracking(self,pipe):
++        seed_receipt(self.stream.out,'tracking_spawn_entry',self.cfg['setup_seed'])
+         cached_priors()
+         torch.set_num_threads(2)
+         cv2.setNumThreads(1)
+@@ -202,6 +217,9 @@
+     if digest(args.manifest)!='5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537' or [f['rgb_id'] for f in doc['frames']]!=list(range(1,488)):
+         raise ValueError('Task 003 is limited to the sealed stride-1 val_007 RGB manifest')
+     cfg=yaml.safe_load(serialized)
++    seed=int(os.environ['GAMECAM_TASK004B_SEED'])
++    if seed not in (44,45):raise ValueError('Task004B seed outside authorized budget')
++    cfg['setup_seed']=seed
+     if Path(cfg['tracking']['pretrained']).resolve()!=args.weights.resolve():
+         raise ValueError('sealed tracker path differs from admitted weight path')
+     trace=Path(os.environ['GAMECAM_TASK003_OBSERVER_JSONL'])
+@@ -213,6 +231,7 @@
+          local_dwu=list(active.local_dwu), final_phases=active.final_phases,
+          policy_sha256=os.environ['GAMECAM_TASK004_POLICY_SHA256']))
+     setup_seed(cfg['setup_seed'])
++    seed_receipt(args.out,'main',seed)
+     stream=ViperRGB(cfg,args.manifest,args.out)
+     np.testing.assert_allclose(stream.get_intrinsic().numpy(),doc['output_k'],rtol=0,atol=1.3e-4)
+     np.testing.assert_array_equal(stream.get_intrinsic().numpy(),[386.01129150390625, 386.01129150390625, 319.5, 179.5])

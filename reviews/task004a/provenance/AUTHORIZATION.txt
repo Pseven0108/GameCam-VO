@@ -1,0 +1,240 @@
+明白。现在把重点转到正式消融，不再反复做无关的环境检查。
+
+我已经检查了你上传的 GAMECAM_TASK004A_RERUN_BOOTSTRAP_REVIEW.zip，发现上次 Rerun 失败并不是端口冲突或服务本身损坏：
+- 远端 Rerun 原生进程实际上已经启动。
+- 9875、9876、9877 均绑定在 127.0.0.1。
+- 检查程序错误地要求监听进程必须是 Python 父进程，实际上监听由它启动的原生子进程 PID 733 持有。
+- 清理已经完成，六个端口均恢复空闲。
+- SSH 隧道、浏览器和合成数据发送尚未执行。
+ZIP 内23项文件的 SHA-256 全部匹配。
+
+因此不需要重新部署 Rerun，也不需要修改 DROID-W。只需要修正这个进程归属检查。
+
+这次你的新指令也明确批准了正式 GPU 消融。我将按已批准的八组矩阵和顺序执行准备，不再要求你重复确认。
+正式执行指令：Task004A GPU Screening
+八组筛选实验已获批准
+执行顺序（固定）
+E3
+关闭 U 更新
+
+
+E4
+
+关闭深度先验 + UBA
+
+E7
+
+关闭 UBA + U 更新
+
+E0
+
+原始 Baseline 重复
+
+E8
+
+三个机制全部关闭
+
+E6
+
+关闭深度先验 + U 更新
+
+E1
+
+关闭深度先验
+
+E2
+
+关闭 UBA
+
+
+E5 保留给后续 Final BA 分阶段实验，不纳入本轮八组筛选。
+
+把下面指令交给 Codex：
+GAMECAM TASK004A — FORMAL GPU SCREENING
+FINAL EXECUTION AUTHORIZATION
+User authorization: APPROVED.
+
+The user explicitly requests that ablation experiments begin without further unnecessary preparation delays.
+A. Fix the Rerun false-negative gate
+Previous attempt:
+Session b58186fa-4904-4d3e-b11e-e888b18e66c4
+
+Finding:
+- Rerun launcher PID 732.
+- Native Rerun child PID 733.
+- Child owned all three expected loopback sockets.
+- Previous gate incorrectly required the launcher itself to own the sockets.
+- All resources were subsequently cleaned.
+- No tunnel or browser test occurred.
+Correct the isolated orchestration check.
+
+Accept the native child only if all conditions hold:
+1. Exact Rerun executable path matches the frozen environment.
+2. Parent PID matches the launched Python launcher.
+3. Command-line arguments match the expected Rerun command.
+4. Working directory matches the temporary session.
+5. All three socket inodes belong to this exact child.
+6. All three listeners bind exclusively to 127.0.0.1.
+7. No unexpected process owns the fixed ports.
+Do not disable process ownership verification.
+
+Do not modify the Rerun binary or permanent network configuration.
+B. Rerun verification
+Perform one corrected remote synthetic test.
+- Rerun 0.22.1.
+- Existing three ports.
+- One-time SSH tunnel.
+- Synthetic point cloud.
+- Camera frustum.
+- XYZ axes.
+- Timestamped updates.
+Require actual browser rendering.
+
+If successful, retain the verified Rerun service and tunnel for the eight experiments, using a unique recording ID for each run.
+
+If unsuccessful:
+STOP before GPU experiment launch.
+
+Do not bypass Rerun by silently disabling visualization.
+C. Final live preflight
+Before GPU execution, verify:
+- RTX 3090.
+- CUDA 11.8 environment.
+- Four model weights.
+- CUDA extension.
+- Frozen original R2 configuration.
+- 487 RGB inputs.
+- GT and camera intrinsics.
+- buffer=500.
+- /dev/shm.
+- Container memory.
+- Remote strategy SHA-256.
+- Available data disk space.
+Last recorded remote free space:
+52.47 GiB.
+
+Require at least 37 GiB free before starting the eight-arm sequence, retaining the planned 10 GiB safety reserve and archive staging budget.
+
+Deploy all eight exact approved strategy configurations into an isolated remote directory.
+
+Verify all eight SHA-256 values.
+
+Never overwrite original R2 YAML.
+D. FORMAL GPU EXECUTION
+User now authorizes all eight new screening runs.
+
+Fixed sequence:
+
+E3 → E4 → E7 → E0 → E8 → E6 → E1 → E2
+
+Each run must:
+- Use setup_seed=43.
+- Use 487 RGB frames.
+- Use 640×360.
+- Use stride=1.
+- Use buffer=500.
+- Use original DROID-W commit and weights.
+- Use the approved Task003 instrumentation.
+- Use native Rerun visualization.
+- Have its own attempt ID.
+- Have its own output directory.
+- Have its own configuration hash.
+Only one experiment may execute at a time.
+
+Do not change any unapproved algorithm parameter.
+E. Research measurement
+For every run, record:
+1. Frontend predecision BA.
+2. Frontend retained BA.
+3. Keyframe acceptance and rejection.
+4. Keyframe IDs.
+5. 312→328 fixed RGB endpoint.
+6. 312→328 direct keyframe endpoint when valid.
+7. 309→325.
+8. 301→353.
+9. Translation ratio.
+10. Translation direction error.
+11. Translation RPE.
+12. Rotation RPE.
+13. Sim(3) ATE.
+14. SE(3) ATE.
+15. U distribution.
+16. Effective UBA weights.
+17. Negative disparity and clamp statistics.
+18. Final BA phase results.
+19. Filler results.
+20. Runtime and memory statistics.
+Do not fabricate missing endpoint values.
+F. Failure policy
+No automatic retry.
+
+If any run encounters:
+- OOM.
+- CUDA error.
+- Native BA failure.
+- Rerun failure.
+- Missing critical logs.
+- Corrupted output.
+- Insufficient disk space.
+- Strategy hash mismatch.
+Immediately stop the entire sequence.
+
+Preserve all partial evidence.
+
+Do not start the next experiment.
+
+Do not delete previous results.
+
+Wait for user review.
+G. Final delivery
+After eight successful runs, generate:
+1. TASK004A_ALL_RUNS_SUMMARY.md
+2. TASK004A_FACTORIAL_RESULTS.csv
+3. TASK004A_ENDPOINT_COMPARISON.csv
+4. TASK004A_KEYFRAME_SELECTION_COMPARISON.csv
+5. TASK004A_LOCAL_BA_TIMELINE_COMPARISON.csv
+6. TASK004A_UNCERTAINTY_ANALYSIS.csv
+7. TASK004A_DISPARITY_DIAGNOSTICS.csv
+8. TASK004A_ATE_RPE_COMPARISON.csv
+9. TASK004A_RERUN_VISUAL_EVIDENCE/
+10. TASK004A_RESOURCE_REPORT.md
+11. TASK004A_FINAL_CAUSAL_SCREENING_REVIEW.md
+Package all raw logs, outputs, configurations, and SHA-256 manifests.
+
+Do not automatically start Task004B or E5-F.
+H. Authorization boundary
+APPROVED:
+- One corrected Rerun bootstrap.
+- One temporary SSH tunnel.
+- Eight sequential GPU screening runs.
+NOT APPROVED:
+- 24-run confirmation study.
+- E5-F Final BA decomposition.
+- Additional datasets.
+- Additional ablations.
+- Automatic reruns.
+Start immediately after the corrected Rerun and resource gates pass.
+
+END OF AUTHORIZATION
+
+
+
+
+五、我会怎样判断最终结果？
+本轮最重要的不是哪个实验 ATE 最低，而是三个问题：
+1. 哪个机制关闭后，312→328 的位移压缩明显缓解？
+2. 哪个机制改变了关键帧选择，进而改变了整个前端图结构？
+3. 是否存在单独关闭效果不明显、联合关闭才明显改善的交互作用？
+这三点将决定我们后续论文的核心创新方向。
+当前执行授权
+项目	状态
+正式八组 GPU 筛选	已批准
+Rerun 修复与验证	待执行
+E0～E8	0/8
+Task004B	未授权
+E5-F	未授权
+
+
+这次不再扩展研究方案。先完成 Rerun 修复，通过后立即启动 E3，按顺序推进八组实验。
+
+说明：我已根据上传的报告完成故障定位和执行授权指令编制，但当前无法直接控制你的智川云服务器；需要由 Codex 实际执行并返回运行结果。

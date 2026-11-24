@@ -1,0 +1,61 @@
+{
+  "task": "TASK004C",
+  "scope": "TWO_NEW_PREFIXES_AND_FOUR_NATIVE_REPLAYS",
+  "seeds": {
+    "prefix_setup_seed": 43,
+    "tracking_child_extra_reseed": false,
+    "same_D_replicates": 1
+  },
+  "weights_and_configuration": {
+    "root": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z",
+    "source": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source",
+    "pipeline": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/pipeline",
+    "python": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "manifest": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "config": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml",
+    "extension": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so",
+    "weights": [
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors"
+    ],
+    "pins": {
+      "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d"
+    }
+  },
+  "states": [
+    "E0_E0_NEW_PREFIX_RGB328",
+    "E1_E1_NEW_PREFIX_RGB328"
+  ],
+  "replays": [
+    "E0_D1",
+    "E0_D0",
+    "E1_D1",
+    "E1_D0"
+  ],
+  "native_calls_per_replay": 1,
+  "inner_iterations_per_call": 2,
+  "GT_identity": {
+    "gt_path": "D:\\aaa\\GameCam-VO\\experiments\\DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1\\offline_gt\\val_007.npz",
+    "sha256": "91fb149c066bb488ac6071602a4b50fe1540243f2db3369a3706f63b705d7008",
+    "fixed_scale": 19.1341794347,
+    "GT_used_only_offline": true,
+    "camera_frame_mapping": "rgb_id_minus_1",
+    "pose_convention": "native W2C converted via historical audited helper",
+    "alignment_note": "One prefix-before rotation per state, held fixed across branches; no branch refitting",
+    "unit": "game units; no meter assertion",
+    "torch_imported": false
+  },
+  "analysis": "tools/endpoint_analysis.py, geometry_analysis.py, common_support_analysis.py",
+  "raw_archive_sha256": "9e6f0a7567cc571516f17972f337494e6b69f96b9947f1f81cfa1a8a19ee8f0a",
+  "not_full_frontend_restart_checkpoint": true,
+  "experiment_B": "NOT_EXECUTED_BLOCKED",
+  "CUDA_atomic_nondeterminism": "NOT_CHARACTERIZED_NO_IDENTICAL_D_REPLICATES",
+  "raw_snapshot_scope": "13 actual native tensor inputs plus mono_disps,zeros,timestamp; exact recorded dtype,stride; all scalar arguments"
+}

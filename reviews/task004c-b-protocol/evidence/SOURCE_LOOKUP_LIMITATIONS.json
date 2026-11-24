@@ -1,0 +1,46 @@
+{
+  "parent_project_git_query": {
+    "exit_code": 0,
+    "stdout": "388fedf14ab1a071ab9c6955174ff092589300f3\n",
+    "stderr": ""
+  },
+  "not_baseline_HEAD": true,
+  "git_show_attempts": [
+    {
+      "path": "src/motion_filter.py",
+      "outcome": "rejected",
+      "message": "fatal: path 'src/motion_filter.py' does not exist in 'c3414af6047d06bafc1a6645d09f23247f3b2cdc'\n",
+      "exit_code": null,
+      "exit_code_note": "Not retained by the preliminary helper; do not fabricate an exit code"
+    },
+    {
+      "path": "src/backend.py",
+      "outcome": "rejected",
+      "message": "fatal: path 'src/backend.py' does not exist in 'c3414af6047d06bafc1a6645d09f23247f3b2cdc'\n",
+      "exit_code": null,
+      "exit_code_note": "Not retained by the preliminary helper; do not fabricate an exit code"
+    },
+    {
+      "path": "src/trajectory_filler.py",
+      "outcome": "rejected",
+      "message": "fatal: path 'src/trajectory_filler.py' does not exist in 'c3414af6047d06bafc1a6645d09f23247f3b2cdc'\n",
+      "exit_code": null,
+      "exit_code_note": "Not retained by the preliminary helper; do not fabricate an exit code"
+    },
+    {
+      "path": "src/modules/droid_net/corr.py",
+      "outcome": "rejected",
+      "message": "fatal: path 'src/modules/droid_net/corr.py' does not exist in 'c3414af6047d06bafc1a6645d09f23247f3b2cdc'\n",
+      "exit_code": null,
+      "exit_code_note": "Not retained by the preliminary helper; do not fabricate an exit code"
+    },
+    {
+      "path": "src/modules/droid_net/droid_net.py",
+      "outcome": "rejected",
+      "message": "fatal: path 'src/modules/droid_net/droid_net.py' does not exist in 'c3414af6047d06bafc1a6645d09f23247f3b2cdc'\n",
+      "exit_code": null,
+      "exit_code_note": "Not retained by the preliminary helper; do not fabricate an exit code"
+    }
+  ],
+  "resolution": "Use saved official c3414af tree blob identities and last remote frozen SHA256, not parent project Git; files verified and copied as evidence only"
+}

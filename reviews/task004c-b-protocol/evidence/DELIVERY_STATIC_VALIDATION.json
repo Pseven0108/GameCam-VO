@@ -1,0 +1,126 @@
+{
+  "task": "TASK004C-B-PROTOCOL",
+  "utc": "2026-11-23T17:42:04.820144+00:00",
+  "verification_kind": "LOCAL_DELIVERY_STATIC_CONSISTENCY_NOT_RESEARCH_OR_NATIVE_RUNTIME_TEST",
+  "jsonschema_package_available": false,
+  "full_JSON_Schema_metaschema_validation": "NOT_PERFORMED_NO_DEPENDENCY_INSTALLED",
+  "CUDA_VISIBLE_DEVICES": "",
+  "checks": [
+    {
+      "name": "requested_deliverables_present",
+      "status": "PASS",
+      "detail": {
+        "nonempty_requested_files": 10
+      }
+    },
+    {
+      "name": "all_delivery_json_parse",
+      "status": "PASS",
+      "detail": {
+        "parsed_files": 24
+      }
+    },
+    {
+      "name": "S1_schema_structure_and_refs",
+      "status": "PASS",
+      "detail": {
+        "schema_nodes_checked": 234,
+        "resolved_internal_references": 10,
+        "scope": "selected syntax / required-property / local-reference checks, not full metaschema certification"
+      }
+    },
+    {
+      "name": "S0_schema_structure_and_refs",
+      "status": "PASS",
+      "detail": {
+        "schema_nodes_checked": 234,
+        "resolved_internal_references": 10,
+        "scope": "selected syntax / required-property / local-reference checks, not full metaschema certification"
+      }
+    },
+    {
+      "name": "all_22_event_kinds_have_payload_requirements",
+      "status": "PASS",
+      "detail": [
+        {
+          "schedule": "S1",
+          "event_kinds": 22,
+          "event_payload_rules": 22
+        },
+        {
+          "schedule": "S0",
+          "event_kinds": 22,
+          "event_payload_rules": 22
+        }
+      ]
+    },
+    {
+      "name": "S1_S0_same_contract_except_producer",
+      "status": "PASS",
+      "detail": "Only title, schedule_id, producer_arm, producer_D differ"
+    },
+    {
+      "name": "C0_is_explicitly_uncaptured_design",
+      "status": "PASS",
+      "detail": "No C0 / capture / restore success claim in design manifest"
+    },
+    {
+      "name": "tensor_design_metadata_complete_but_not_fabricated",
+      "status": "PASS",
+      "detail": {
+        "tensor_families": 47,
+        "live_tensor_hashes": 0
+      }
+    },
+    {
+      "name": "supplemental_source_Git_Blob_and_SHA",
+      "status": "PASS",
+      "detail": {
+        "Git_Blob_matches": 8,
+        "additional_prior_frozen_SHA_matches": 5
+      }
+    },
+    {
+      "name": "protected_original_files_unchanged",
+      "status": "PASS",
+      "detail": {
+        "original_files_unchanged": 22,
+        "scope": "source/config/history inputs; no fresh remote attestation"
+      }
+    },
+    {
+      "name": "resource_arithmetic_and_unknown_fields",
+      "status": "PASS",
+      "detail": {
+        "video_logical_bytes": 7468230540,
+        "historical_headroom_bytes": 3519848448,
+        "four_raw_plus_four_archives_reference_bytes": 9560857988,
+        "actual_C0_and_schedule_sizes": "UNKNOWN"
+      }
+    },
+    {
+      "name": "historical_resource_references_match_records",
+      "status": "PASS",
+      "detail": {
+        "archive_indexes": 24,
+        "historical_complete_cost_rows": 24,
+        "new_model_runs": 0
+      }
+    },
+    {
+      "name": "critical_protocol_decisions_consistent",
+      "status": "PASS",
+      "detail": "Two-stage boundary, four-arm matrix and nonexecuted validation explicitly distinguished"
+    },
+    {
+      "name": "safety_scope_and_no_execution_claims",
+      "status": "PASS",
+      "detail": "Scope flags consistent with local static task; not a fresh remote/GPU measurement"
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "exit_code": 0,
+  "runtime_replay_tested": false,
+  "GPU_runs": 0
+}

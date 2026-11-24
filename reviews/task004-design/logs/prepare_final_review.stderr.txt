@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 359, in <module>
+    main()
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 348, in main
+    matrix()
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 267, in matrix
+    with (ROOT / 'TASK004_FACTORIAL_MATRIX.csv').open('x', encoding='utf-8', newline='') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004_CAUSAL_ABLATION\\TASK004_FACTORIAL_MATRIX.csv'

@@ -1,0 +1,127 @@
+{
+  "upstream_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "source_path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W",
+  "verified_source_blobs": {
+    "src/tracker.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\tracker.py",
+      "bytes": 8158,
+      "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "git_blob_sha1": "26ef06e8d8519f9f51f2e723471ac741ac242075"
+    },
+    "src/motion_filter.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\motion_filter.py",
+      "bytes": 6223,
+      "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "git_blob_sha1": "c46b3b0b5ef403d2463d43df09d8cba737eff667"
+    },
+    "src/frontend.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\frontend.py",
+      "bytes": 10646,
+      "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "git_blob_sha1": "a12cfd36d4597846979fc5fd79e77bf0e795145b"
+    },
+    "src/slam.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\slam.py",
+      "bytes": 13630,
+      "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "git_blob_sha1": "3f50eaea5b8080696c20634ab355c5ba502c012e"
+    },
+    "src/factor_graph.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\factor_graph.py",
+      "bytes": 22050,
+      "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "git_blob_sha1": "0b208fa23c26fe267df2f6c85913fbd00268dae1"
+    },
+    "src/depth_video.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\depth_video.py",
+      "bytes": 45293,
+      "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "git_blob_sha1": "87f63043cd7c68a2d02278e6042336e0dc98a12e"
+    },
+    "src/trajectory_filler.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\trajectory_filler.py",
+      "bytes": 5510,
+      "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "git_blob_sha1": "c7cd884166e48b55347c4efb0aa417ff16d35021"
+    },
+    "src/utils/eval_traj.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\utils\\eval_traj.py",
+      "bytes": 7372,
+      "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "git_blob_sha1": "4d7b9b937af0cd588c6601995e1ea0ed29596fec"
+    },
+    "src/lib/droid.cpp": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\lib\\droid.cpp",
+      "bytes": 7635,
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "git_blob_sha1": "0c3d91040527b8cbafa2b811e1d18152010a26fa"
+    },
+    "src/lib/droid_kernels.cu": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\lib\\droid_kernels.cu",
+      "bytes": 62996,
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "git_blob_sha1": "9c171af1bfafc278e9776f2f89667054a66dc2bf"
+    },
+    "src/backend.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\backend.py",
+      "bytes": 5273,
+      "sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "git_blob_sha1": "2a565ea49f42cf765a6c8d615f892496ae223f50"
+    },
+    "src/utils/mono_priors/metric_depth_estimators.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\utils\\mono_priors\\metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "git_blob_sha1": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc"
+    },
+    "src/utils/mono_priors/img_feature_extractors.py": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\src\\utils\\mono_priors\\img_feature_extractors.py",
+      "bytes": 6521,
+      "sha256": "f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346",
+      "git_blob_sha1": "9ce349057d1a2f052a92383a9c3bdbf2f82ae487"
+    }
+  },
+  "task003_patch": {
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\remote\\incoming\\TASK003_INSTRUMENTATION_PATCH.diff",
+    "bytes": 28260,
+    "sha256": "177e085d368c4f45d094b4c127f3a58d908ba145c893e20da24308d51964be21"
+  },
+  "task003_postimages": {
+    "src/tracker.py": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+    "src/motion_filter.py": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+    "src/frontend.py": "85a38ab85896c65adeb09dc3274e18c7ebcd8dc9f887afb8a8bbdf42e4e1d1da",
+    "src/slam.py": "2b158db4ac2d40a3a51a8f39d0509b7e5b6ced4ab6b3aa29763ec9fee81fc0a6",
+    "src/factor_graph.py": "6eeb1a7e2ee98c2e7558f535de2034492f0c1e8affe5da1d383fd96bfb9d3b3e",
+    "src/depth_video.py": "79dd220b5b4d4f8c2c9b84baf930a3287b78638689f7ba9d2b960ba2a8a84ed2",
+    "src/trajectory_filler.py": "b8c8aa9648f7e1882cd0949ff197284cddc6f054ab0a0985afad15b5d5e28e42",
+    "src/utils/eval_traj.py": "93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2",
+    "task003_observer.py": "7b34c8f34370e7a1e0663d32709f421cfd1be8c476b6f95c0ee1e75804e41804"
+  },
+  "task004_postimages": {
+    "src/tracker.py": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+    "src/motion_filter.py": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+    "src/frontend.py": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
+    "src/slam.py": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
+    "src/factor_graph.py": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
+    "src/depth_video.py": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
+    "src/trajectory_filler.py": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3",
+    "src/utils/eval_traj.py": "93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2",
+    "task003_observer.py": "1d9173fad166f2563d68a010b8efe98ff326ecf24d54ec4b265a80107a4abea6",
+    "task004_controls.py": "acea04ebaee3f9b6356c57eb88909dcc9abbd5ebdd15effcf9bd54178d0100b8"
+  },
+  "changed": [
+    "src/depth_video.py",
+    "src/factor_graph.py",
+    "src/frontend.py",
+    "src/slam.py",
+    "src/trajectory_filler.py",
+    "task003_observer.py"
+  ],
+  "patched_candidate_runner": {
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004_CAUSAL_ABLATION\\candidates\\task004_run_segment.py",
+    "bytes": 11685,
+    "sha256": "f7b7111ea75358921740a57e9dbce0c884cfc7a3850e00e4136a6e84d67220ac"
+  },
+  "native_extension_modified": false,
+  "original_source_unchanged": true
+}

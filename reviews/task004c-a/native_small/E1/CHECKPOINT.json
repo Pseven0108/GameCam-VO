@@ -1,0 +1,364 @@
+{
+  "schema": "TASK004C_COMPLETE_NATIVE_INPUT_V1",
+  "state_id": "E1_E1_NEW_PREFIX_RGB328",
+  "historical_state_reconstruction": false,
+  "arm": "E1",
+  "trigger_rgb": 328,
+  "observer_ba_id": 656,
+  "stage": "frontend_local_predecision",
+  "active_count": 123,
+  "eligibility": {
+    "rgb312_slot": 120,
+    "rgb328_slot": 122,
+    "both_in_optimized_window": true,
+    "both_directed_edges": true
+  },
+  "arrays": {
+    "poses": {
+      "file": "poses.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        7
+      ],
+      "data_sha256": "bf788a1d6d02ee92dbb04b668bc3d8ba4cb8e0f02d1def977b33ba7b5e76c640",
+      "file_sha256": "e9b3aaaf95fffd02dfb15ad681e725152b6eab690f2cc9a977d3a25ab77ba030",
+      "bytes": 14128,
+      "stride": [
+        7,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "disps": {
+      "file": "disps.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "072a56693db421ed0b580ad59aa5d40f7df21a188e49fda14da2e75094f38ec7",
+      "file_sha256": "04c15cba0d83b7f134d8800d8edae1decbf84270288f8cfd93f3c677c8d8d67b",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "K": {
+      "file": "K.npy",
+      "dtype": "<f4",
+      "shape": [
+        4
+      ],
+      "data_sha256": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+      "file_sha256": "625e79239bcf7c419a382210f9ae826b96463507c3c435297b27f84efb089d94",
+      "bytes": 144,
+      "stride": [
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "selected_prior": {
+      "file": "selected_prior.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+      "file_sha256": "9c94dd1b2197eec6a43fc1267a73cead19642cef2f5989901991640ba4628343",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "target": {
+      "file": "target.npy",
+      "dtype": "<f4",
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "data_sha256": "d29885e126cb2179f8b53c1342413652db0641b630ca19816351458c0ca6e9fa",
+      "file_sha256": "6ba024bfd3828574c0750ad55a871e1a09f261eee019be2164fd4790cff30cd6",
+      "bytes": 2707328,
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "weight": {
+      "file": "weight.npy",
+      "dtype": "<f4",
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "data_sha256": "af1e468eb41c12253e14d6ddc9cc4d03fb81299011b7d3fcf8f1ba09595f91d3",
+      "file_sha256": "385c67ca6a9c9e9126356f2b3f59304c1bafeeb16c15bda027f08c7b864c13e8",
+      "bytes": 2707328,
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "U": {
+      "file": "U.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "119845b3ec1d4da2a4ba68bd08a907cb3c22ad54f5ce3a6d26c43548319614b2",
+      "file_sha256": "df8c60c2fd705af9b29455e686df0b8fc93e8ed62d3087df342e76677050a465",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "temp_y_cdot": {
+      "file": "temp_y_cdot.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "4d3b12b10dfb8a834e5f41eb9978b699fdfacb609e9bc1ec274e64be4baeda4f",
+      "file_sha256": "92a14c0d63c49872480b4d47ff43bb9b9e16b2c20d3e7519b3856e386460bb31",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "dino": {
+      "file": "dino.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "data_sha256": "05ce89501081dee92e457e431f8a49ec15e149bb40e5564dc6a9b8c8d27a22b3",
+      "file_sha256": "383f15fc6ab16f977a48ce32d5451c3365efcbac6104deed423c2d7ff0fdc474",
+      "bytes": 2764800128,
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "affine": {
+      "file": "affine.npy",
+      "dtype": "<f4",
+      "shape": [
+        385
+      ],
+      "data_sha256": "aab0a092d01118a468e4961a9ae8756c55752e9e3878cb9f39a7444cfad37dab",
+      "file_sha256": "f8b13bdac9200a152ebc9a1e0a759e02376926c2322f037842ca382f1956eb6d",
+      "bytes": 1668,
+      "stride": [
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "eta": {
+      "file": "eta.npy",
+      "dtype": "<f4",
+      "shape": [
+        15,
+        45,
+        80
+      ],
+      "data_sha256": "90df71a4eb8320c7a5a48856a6bab4a2d9349a240d4f5a41c4592cb2ce4158a9",
+      "file_sha256": "9e17f8c812f8a83e0bf12b0df2454f0b4c8f5e614e5b08e687f66211d55abaca",
+      "bytes": 216128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "ii": {
+      "file": "ii.npy",
+      "dtype": "<i8",
+      "shape": [
+        94
+      ],
+      "data_sha256": "53e48a560c25dbae693510464fbc2948c3b3fbf83c4d6beb39809537480c19d6",
+      "file_sha256": "f6b528b99f0abcc15d50bbc730fa02926cd6ab9f3f4e8969ceaa048fb88d1048",
+      "bytes": 880,
+      "stride": [
+        1
+      ],
+      "torch_dtype": "torch.int64",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "jj": {
+      "file": "jj.npy",
+      "dtype": "<i8",
+      "shape": [
+        94
+      ],
+      "data_sha256": "e15927fb053fc7f9b4cfa34a12dabdf3f415f61761f576a08a2a0cde4c7094fb",
+      "file_sha256": "da98e11cd1d14e9a6da5abb115be41373a76991cdb6ddfdd0a72976cbcecf0f0",
+      "bytes": 880,
+      "stride": [
+        1
+      ],
+      "torch_dtype": "torch.int64",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "mono_disps": {
+      "file": "mono_disps.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "a279a8df583d8b314b8db1632c11a8314935a7a602642cc7bbfbec369fb65b10",
+      "file_sha256": "12225dbd688c8c2da68442e116cb42b532c827cb598f707fb7ac63234aabf606",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "zeros": {
+      "file": "zeros.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+      "file_sha256": "9c94dd1b2197eec6a43fc1267a73cead19642cef2f5989901991640ba4628343",
+      "bytes": 7200128,
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    },
+    "timestamp": {
+      "file": "timestamp.npy",
+      "dtype": "<f4",
+      "shape": [
+        500
+      ],
+      "data_sha256": "7da47371de90b47c099d50e3770196a85f6edca1cb20299f3a24f00f40e06bae",
+      "file_sha256": "cec10b7737dca5213794672a7ee6afa23112715f89dd0dd76f1db3562cdd04c2",
+      "bytes": 2128,
+      "stride": [
+        1
+      ],
+      "torch_dtype": "torch.float32",
+      "source_device": "cuda:0",
+      "storage_offset": 0,
+      "contiguous": true
+    }
+  },
+  "scalars": {
+    "t0": 111,
+    "t1": 123,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "update_u": true,
+    "use_uba": true,
+    "affine_u": true,
+    "bidirectional": false,
+    "debug": false
+  },
+  "native_extension_file": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so",
+  "selected_prior_at_capture": "zeros",
+  "scope": "ONE_NATIVE_BA_CALL_FIXED_NETWORK_TARGETS",
+  "frontend_restart_complete": false,
+  "common_input_digest": "3623f2df290f63200c73cac016a06b3187035481a9a32be7c447b85098bd22f8",
+  "scaled_prefix_rgb_sha256": "c20cc6c9646b0b920f9b3f972c48eb664e6e048b645d755f11a4810ab7aee882",
+  "captured_seconds": 11.646333475000574
+}

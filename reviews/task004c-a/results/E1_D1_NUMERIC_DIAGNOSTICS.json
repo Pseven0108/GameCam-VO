@@ -1,0 +1,161 @@
+{
+  "state_id": "E1_E1_NEW_PREFIX_RGB328",
+  "arm": "E1",
+  "D": 1,
+  "W": 1,
+  "U": 1,
+  "active_count": 123,
+  "optimization_window": [
+    111,
+    123
+  ],
+  "geometry_before": {
+    "weighted_geometry_sse": 8.100115520516518,
+    "valid_pixels": 314780,
+    "total_edge_pixels": 338400,
+    "reprojection_vector_rms_lowres_px": 2.1739087302061013,
+    "effective_uba_note": "source uncertainty, full grid, geometry kernel MIN_DEPTH=.25",
+    "depth_C_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": 0.0,
+      "median": 0.0,
+      "p95": 0.013998064174836138,
+      "max": 16.19943006214293,
+      "l2": 194.99793589309073
+    },
+    "depth_b_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": -0.1709243388013138,
+      "median": 0.0,
+      "p95": 3.683259450530584e-07,
+      "max": 0.09784879407370899,
+      "l2": 1.4736338237528874
+    }
+  },
+  "geometry_after_native_fixed_initial_U": {
+    "weighted_geometry_sse": 20.302599776140344,
+    "valid_pixels": 335952,
+    "total_edge_pixels": 338400,
+    "reprojection_vector_rms_lowres_px": 16.65355489475158,
+    "effective_uba_note": "source uncertainty, full grid, geometry kernel MIN_DEPTH=.25",
+    "depth_C_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": 0.0,
+      "median": 0.0,
+      "p95": 0.043303905823174664,
+      "max": 49.44519678179259,
+      "l2": 569.7346411531466
+    },
+    "depth_b_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": -3.9723700605674166,
+      "median": 0.0,
+      "p95": 5.700352334370142e-05,
+      "max": 0.12633417005176467,
+      "l2": 7.490790897274592
+    }
+  },
+  "geometry_after_native_updated_U": {
+    "weighted_geometry_sse": 19.516450769855986,
+    "valid_pixels": 335952,
+    "total_edge_pixels": 338400,
+    "reprojection_vector_rms_lowres_px": 16.65355489475158,
+    "effective_uba_note": "source uncertainty, full grid, geometry kernel MIN_DEPTH=.25",
+    "depth_C_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": 0.0,
+      "median": 0.0,
+      "p95": 0.0430535895722093,
+      "max": 49.44519678179259,
+      "l2": 569.6381955886893
+    },
+    "depth_b_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": -3.9723700605674166,
+      "median": 0.0,
+      "p95": 5.578068452532178e-05,
+      "max": 0.12633417005176467,
+      "l2": 7.031739117627875
+    }
+  },
+  "geometry_after_clamp_fixed_initial_U": {
+    "weighted_geometry_sse": 20.47296527619098,
+    "valid_pixels": 335952,
+    "total_edge_pixels": 338400,
+    "reprojection_vector_rms_lowres_px": 16.653628510893487,
+    "effective_uba_note": "source uncertainty, full grid, geometry kernel MIN_DEPTH=.25",
+    "depth_C_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": 0.0,
+      "median": 0.0,
+      "p95": 0.04301049800518141,
+      "max": 49.44519678179259,
+      "l2": 569.7365002439552
+    },
+    "depth_b_stats": {
+      "n": 442800,
+      "finite": 442800,
+      "min": -3.9723700605674166,
+      "median": 0.0,
+      "p95": 4.4494953496451375e-05,
+      "max": 0.12633417005176467,
+      "l2": 7.505568028521501
+    }
+  },
+  "mono_residual_sse_before": 85897.8828125,
+  "mono_residual_sse_after_native": 640.8455810546875,
+  "mono_residual_sse_after_clamp": 638.0618286132812,
+  "D1_prior_quadratic_before": 858.9788281250001,
+  "D1_prior_quadratic_after_native": 6.408455810546875,
+  "D0_local_eta_step_damping": 0.028440624475479126,
+  "disparity_delta": {
+    "n": 442800,
+    "finite": 442800,
+    "min": -155.3515625,
+    "median": 0.0,
+    "p95": 0.0,
+    "max": 0.40791553258895874,
+    "l2": 284.1625061035156
+  },
+  "U_delta": {
+    "n": 442800,
+    "finite": 442800,
+    "min": 0.0,
+    "median": 0.0,
+    "p95": 0.014594385027885435,
+    "max": 0.02095174789428711,
+    "l2": 3.1926984786987305
+  },
+  "native_return_last_inner_dx": {
+    "n": 72,
+    "finite": 72,
+    "min": -0.8310755491256714,
+    "median": -0.0004471770953387022,
+    "p95": 0.04715664573013782,
+    "max": 0.08758988976478577,
+    "l2": 1.4993547201156616
+  },
+  "native_return_last_inner_dz": {
+    "n": 54000,
+    "finite": 54000,
+    "min": -0.5773310661315918,
+    "median": 0.0012221968499943614,
+    "p95": 0.1455305516719817,
+    "max": 1.0481393337249756,
+    "l2": 18.680795669555664
+  },
+  "full_native_objective_available": false,
+  "normal_system_available": false,
+  "native_seconds": 0.15224920000036946,
+  "negative_disparities_native_active": 2881,
+  "clamp_affected_active": 2897,
+  "peak_allocated_bytes": 2835333632,
+  "peak_reserved_bytes": 2854223872
+}

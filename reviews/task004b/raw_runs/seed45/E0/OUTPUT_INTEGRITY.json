@@ -1,0 +1,145 @@
+{
+  "files": {
+    "LAUNCH_INTENT.json": {
+      "bytes": 839,
+      "sha256": "ce961b9447bf2ff0ec68689d85629bf47e3ae98a0cecde4bfc4e464b01d59021"
+    },
+    "LAUNCH_RECEIPT.json": {
+      "bytes": 1465,
+      "sha256": "d4c2a647abb3bfbe8ddf89e15e7a722a39984effaa7c601456c92919bc1b2367"
+    },
+    "PROCESS_RECEIPT.json": {
+      "bytes": 245,
+      "sha256": "899a5ce96a26087e5bd1247a5643bddbd0710f2973a5c3d85d572ac98155e6e5"
+    },
+    "RERUN_RECORDING_VALIDATION.json": {
+      "bytes": 323,
+      "sha256": "bd382fd8efe549a344fa966ddb8bec1a4d40c3e29785717345327401f4f1f245"
+    },
+    "RERUN_SERVICE_CLEANUP.json": {
+      "bytes": 75,
+      "sha256": "24316ecb41218febf663bff058cb8d0cc7571bb7b757b12d8ded93ad7d0ded8f"
+    },
+    "RERUN_SERVICE_RECEIPT.json": {
+      "bytes": 833,
+      "sha256": "8a08513318b6b908be83fce43ed2fabd1d01c45b36e06a5ee86902f9bab642e7"
+    },
+    "RUNTIME_LAUNCH_CONFIG.json": {
+      "bytes": 2453,
+      "sha256": "43a1d512d5070c5c5a53b328e5a9a6e54a26d58c173a82bc8dbc57cd13cc3b0e"
+    },
+    "keyframes.json": {
+      "bytes": 1964,
+      "sha256": "fb51872b21a4d0900580a89a2cae22eb4707f4c4fd08e1b12acf1858bd82b6e6"
+    },
+    "model_input.json": {
+      "bytes": 4619,
+      "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+    },
+    "model_result.json": {
+      "bytes": 657,
+      "sha256": "e07f4494c16f7ff58b87a7f1f184637f6f4e6e8c696597002a76b7f457927d5f"
+    },
+    "native/events.out.tfevents.1795441814.jupyter-yd6gks8uzfbxzdb4.8894.0": {
+      "bytes": 3611,
+      "sha256": "16b820030be407717664a8637022914ca853e6bb28e0a4d678a3b4fe4ab3a6c7"
+    },
+    "native/timer_summary.csv": {
+      "bytes": 316,
+      "sha256": "ede76d34680386a18a5f2c5cc2f43fe2f2966371fd45b6cd21fac32eade79ea4"
+    },
+    "native/traj/est_poses_full.txt": {
+      "bytes": 35536,
+      "sha256": "503670016d6c51e5a217fb66f747985587fb42251f6cffd9f0dc8ab4df2d9237"
+    },
+    "native/video.npz": {
+      "bytes": 496151870,
+      "sha256": "388bbb540f703e1cb88ed7fbf980b4a0028e98842ba1caafaf38d527585ba86e"
+    },
+    "native_camera_stream.json": {
+      "bytes": 46,
+      "sha256": "5879a09c0ef40a6ecdc5626b48cbdb9b4d474a818b6751d42062abeb203a9b20"
+    },
+    "native_config.yaml": {
+      "bytes": 3387,
+      "sha256": "1cde91540ea2885178077e517c639bbfe7755c7180048a643254d0fead787b07"
+    },
+    "native_rerun.rrd": {
+      "bytes": 51503807,
+      "sha256": "40d25f056d97f27d338890a1b9593ac4eb22609a82950173d77ac69b30983f01"
+    },
+    "observer.jsonl": {
+      "bytes": 54549811,
+      "sha256": "d9bbb4323da9ce071d70c90580b3a5c6760666dc774f02014a53993c918ac463"
+    },
+    "policy.json": {
+      "bytes": 247,
+      "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+    },
+    "process.stderr.txt": {
+      "bytes": 86812,
+      "sha256": "4aec2ac81cb3420b6adc18b64308b788817eeeb042f48fc944eb86d71fc61c55"
+    },
+    "process.stdout.txt": {
+      "bytes": 1351,
+      "sha256": "e7776b3c575dbdd6296958b30e0910a979e70598c81bfd38818097157423dc1f"
+    },
+    "progress.json": {
+      "bytes": 108,
+      "sha256": "7384de2a6e93b3aef425f6f972c3cbd53f4ccad5bc350c53ad75dda4618b301d"
+    },
+    "rerun_recording_print.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rerun_recording_print.txt": {
+      "bytes": 3001113,
+      "sha256": "5a6f91cb19282c637fdd789cb1033c6563de8223c5c144a4e4ce54b8162220ed"
+    },
+    "rerun_service.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rerun_service.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resource.jsonl": {
+      "bytes": 30207,
+      "sha256": "97f74b051570ee20d3d7bfccd3d76f2cfeb2d47dacdca2a0336fe4f0958e0214"
+    },
+    "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+      "bytes": 16743,
+      "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+    },
+    "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+      "bytes": 1243,
+      "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+    },
+    "runtime_cache/matplotlib/fontlist-v390.json": {
+      "bytes": 26026,
+      "sha256": "48c3420c1b0ae338574ae47a56a734cb7cdc9e57c76ead07805b01da49e8b4e2"
+    },
+    "seed_receipt_main.json": {
+      "bytes": 559,
+      "sha256": "0dfdd5004c51966ef37f3a2d0bf589c5c4e359926527900db1db7415fb9e5afb"
+    },
+    "seed_receipt_tracking_spawn_entry.json": {
+      "bytes": 694,
+      "sha256": "21a7cf68058ef2419c5d2fe8541304a82ab842882dcedd2bed477c8bacee183b"
+    },
+    "task004_policy_receipt.json": {
+      "bytes": 195,
+      "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+    },
+    "tracking_child_ok.json": {
+      "bytes": 258,
+      "sha256": "63947899969e156e2826451ec01b61ea379eeb80a5ca9ef8e99d1fba676a3b5c"
+    },
+    "trajectory.npz": {
+      "bytes": 26283,
+      "sha256": "04ab11a1e5f25f2b784facfa88548599ba67180ed4e64e1540f038c46d34b050"
+    }
+  },
+  "validated_utc": "2026-11-23T13:53:36.782763+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "name": "E0_archive_26_payloads",
+      "passed": true
+    },
+    {
+      "name": "E1_archive_26_payloads",
+      "passed": true
+    },
+    {
+      "name": "all_six_target_windows_and_bidirectional_edges",
+      "passed": true
+    },
+    {
+      "name": "all_six_W_U_true",
+      "passed": true
+    },
+    {
+      "name": "487_decisions_each",
+      "passed": true
+    },
+    {
+      "name": "initialization_poses_are_not_identical",
+      "passed": true
+    },
+    {
+      "name": "all_208_frozen_source_hashes",
+      "passed": true
+    },
+    {
+      "name": "all_selected_pinned_config_weights_extension",
+      "passed": true
+    },
+    {
+      "name": "remote_native_video_matches_verified_archive",
+      "passed": true
+    },
+    {
+      "name": "old_BA278_rejected_as_different_protocol",
+      "passed": true
+    },
+    {
+      "name": "not_treating_summary_as_complete_checkpoint",
+      "passed": true,
+      "reason": "negative eligibility is reported, no GPU job launch exists"
+    }
+  ],
+  "checks_passed": 11,
+  "experiment_A_pass": false,
+  "experiment_B_pass": false,
+  "tests_are_evidence_checks_not_new_Slam_results": true
+}

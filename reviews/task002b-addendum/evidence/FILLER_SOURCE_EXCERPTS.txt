@@ -1,0 +1,435 @@
+[2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99] DROID-SLAM/droid_slam/droid.py  SHA-256=3c307145c978a9df9237baf8c8e6af124b92342ea1ae623be9cbc49f2c70f67f
+  lines 71-85
+   71      def terminate(self, stream=None):
+   72          """ terminate the visualization process, return poses [t, q] """
+   73  
+   74          del self.frontend
+   75  
+   76          torch.cuda.empty_cache()
+   77          print("#" * 32)
+   78          self.backend(7)
+   79  
+   80          torch.cuda.empty_cache()
+   81          print("#" * 32)
+   82          self.backend(12)
+   83  
+   84          camera_trajectory = self.traj_filler(stream)
+   85          return camera_trajectory.inv().data.cpu().numpy()
+
+[2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99] DROID-SLAM/droid_slam/trajectory_filler.py  SHA-256=b270f3d27a655edb81c4e60134e26a50d70a05a01e66792de7f39d169c2e5d5d
+  lines 50-84
+   50          ### linear pose interpolation ###
+   51          N = self.video.counter.value
+   52          M = len(tstamps)
+   53  
+   54          ts = self.video.tstamp[:N]
+   55          Ps = SE3(self.video.poses[:N])
+   56  
+   57          t0 = torch.as_tensor([ts[ts<=t].shape[0] - 1 for t in tstamps])
+   58          t1 = torch.where(t0<N-1, t0+1, t0)
+   59  
+   60          dt = ts[t1] - ts[t0] + 1e-3
+   61          dP = Ps[t1] * Ps[t0].inv()
+   62  
+   63          v = dP.log() / dt.unsqueeze(-1)
+   64          w = v * (tt - ts[t0]).unsqueeze(-1)
+   65          Gs = SE3.exp(w) * Ps[t0]
+   66  
+   67          # extract features (no need for context features)
+   68          inputs = inputs.sub_(self.MEAN).div_(self.STDV)
+   69          fmap = self.__feature_encoder(inputs)
+   70  
+   71          self.video.counter.value += M
+   72          self.video[N:N+M] = (tt, images[:,0], Gs.data, 1, None, intrinsics / 8.0, fmap)
+   73  
+   74          graph = FactorGraph(self.video, self.update)
+   75          graph.add_factors(t0.cuda(), torch.arange(N, N+M).cuda())
+   76          graph.add_factors(t1.cuda(), torch.arange(N, N+M).cuda())
+   77  
+   78          for itr in range(6):
+   79              graph.update(N, N+M, motion_only=True)
+   80      
+   81          Gs = SE3(self.video.poses[N:N+M].clone())
+   82          self.video.counter.value -= M
+   83  
+   84          return [ Gs ]
+  lines 97-110
+   97          for (tstamp, image, intrinsic) in image_stream:
+   98              tstamps.append(tstamp)
+   99              images.append(image)
+  100              intrinsics.append(intrinsic)
+  101  
+  102              if len(tstamps) == 16:
+  103                  pose_list += self.__fill(tstamps, images, intrinsics)
+  104                  tstamps, images, intrinsics = [], [], []
+  105  
+  106          if len(tstamps) > 0:
+  107              pose_list += self.__fill(tstamps, images, intrinsics)
+  108  
+  109          # stitch pose segments together
+  110          return lietorch.cat(pose_list, 0)
+
+[2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99] DROID-SLAM/droid_slam/depth_video.py  SHA-256=b8c2ee090b99061afd124e14e34b945c7ee44a1fdc30fb8341c7c7181a78ee77
+  lines 213-225
+  213      def ba(self, target, weight, eta, ii, jj, t0=1, t1=None, itrs=2, lm=1e-4, ep=0.1, motion_only=False):
+  214          """ dense bundle adjustment (DBA) """
+  215  
+  216          with self.get_lock():
+  217  
+  218              # [t0, t1] window of bundle adjustment optimization
+  219              if t1 is None:
+  220                  t1 = max(ii.max().item(), jj.max().item()) + 1
+  221  
+  222              droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.disps_sens,
+  223                  target, weight, eta, ii, jj, t0, t1, itrs, lm, ep, motion_only)
+  224  
+  225              self.disps.clamp_(min=0.001)
+
+[2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99] DROID-SLAM/src/droid_kernels.cu  SHA-256=f1ad3b86cd1c1b26a18fd27c8b2a82fe3848571db30850141f5b14ec4ddfbea4
+  lines 1394-1402
+ 1394      if (motion_only) {
+ 1395        dx = A.solve(lm, ep);
+ 1396  
+ 1397        // update poses
+ 1398        pose_retr_kernel<<<1, THREADS>>>(
+ 1399          poses.packed_accessor32<float,2,torch::RestrictPtrTraits>(),
+ 1400          dx.packed_accessor32<float,2,torch::RestrictPtrTraits>(), t0, t1);
+ 1401      }
+ 1402      
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/trajectory_filler.py  SHA-256=762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3
+  lines 31-35
+   31          self.uncertainty_aware = cfg['tracking']["uncertainty_params"]['activate']        
+   32          
+   33      def setup_feature_extractor(self):
+   34          if self.uncertainty_aware:
+   35              self.feat_extractor = get_feature_extractor(self.cfg)
+  lines 53-95
+   53          ### linear pose interpolation ###
+   54          N = self.video.counter.value
+   55          M = len(timestamps)
+   56  
+   57          ts = self.video.timestamp[:N]
+   58          Ps = SE3(self.video.poses[:N])
+   59  
+   60          # found the location of current timestamp in keyframe queue
+   61          t0 = torch.tensor([ts[ts<=t].shape[0] - 1 for t in timestamps])
+   62          t1 = torch.where(t0 < N-1, t0+1, t0)
+   63  
+   64          # time interval between nearby keyframes
+   65          dt = ts[t1] - ts[t0] + 1e-3
+   66          dP = Ps[t1] * Ps[t0].inv()
+   67  
+   68          v = dP.log() / dt.unsqueeze(dim=-1)
+   69          w = v * (tt - ts[t0]).unsqueeze(dim=-1)
+   70          Gs = SE3.exp(w) * Ps[t0]
+   71  
+   72          # extract features (no need for context features)
+   73          inputs = inputs.sub_(self.MEAN).div_(self.STDV)
+   74          fmap = self.__feature_encoder(inputs)
+   75  
+   76          # temporally put the non-keyframe at the end of keyframe queue
+   77          self.video.counter.value += M
+   78          self.video[N:N+M] = (tt, images[:, 0], Gs.data, 1, depths, intrinsics / 8.0, fmap, None, None, dino_features)
+   79  
+   80          if self.uncertainty_aware:
+   81              # interpolate the uncertainty mask
+   82              w0 = ((ts[t1] - tt) / dt).view(-1, 1, 1)
+   83              w1 = (1 - ((ts[t1] - tt) / dt)).view(-1, 1, 1)
+   84              self.video.uncertainties[N:N+M] = w0 * self.video.uncertainties[t0] + w1 * self.video.uncertainties[t1]
+   85  
+   86          graph = FactorGraph(self.video, self.update)
+   87          # build edge between current frame and nearby keyframes for optimization
+   88          graph.add_factors(t0.cuda(), torch.arange(N, N+M).cuda())
+   89          graph.add_factors(t1.cuda(), torch.arange(N, N+M).cuda())
+   90  
+   91          for _ in range(12):
+   92              graph.update(N, N+M, motion_only=True, enable_update_uncer=False, enable_udba=True)
+   93  
+   94          Gs = SE3(self.video.poses[N:N+M].clone())
+   95          self.video.counter.value -= M
+  lines 115-142
+  115          intrinsic = image_stream.get_intrinsic()
+  116          for (timestamp, image, _ , _)  in tqdm(image_stream):
+  117              timestamps.append(timestamp)
+  118              images.append(image)
+  119              intrinsics.append(intrinsic)
+  120              if self.uncertainty_aware and self.cfg['traj_filler']['use_dino_features']:
+  121                  dino_feature = predict_img_features(self.feat_extractor,
+  122                                                      timestamp,image,
+  123                                                      self.cfg,
+  124                                                      self.device,
+  125                                                      save_feat=False)
+  126                  dino_features.append(dino_feature)
+  127              else:
+  128                  dino_features = None
+  129  
+  130              if len(timestamps) == 16:
+  131                  pose_list += self.__fill(timestamps, images, None, intrinsics, dino_features)
+  132                  if dino_features is not None:
+  133                      dino_feats += dino_features 
+  134                  timestamps, images, intrinsics, dino_features = [], [], [], []
+  135  
+  136          if len(timestamps) > 0:
+  137              pose_list += self.__fill(timestamps, images, None, intrinsics, dino_features)
+  138              if dino_features is not None:
+  139                  dino_feats += dino_features
+  140  
+  141          # stitch pose segments together
+  142          return lietorch.cat(pose_list, dim=0), dino_feats
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/utils/eval_traj.py  SHA-256=69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346
+  lines 143-165
+  143  def full_traj_fill(traj_filler, mapper, stream, fast_mode=False):
+  144      traj_est_inv, dino_feats = traj_filler(stream)
+  145      traj_est_lietorch = traj_est_inv.inv()
+  146      traj_est = traj_est_lietorch.matrix().data.cpu().numpy()
+  147      kf_num = traj_filler.video.counter.value
+  148      kf_timestamps = traj_filler.video.timestamp[:kf_num].cpu().int().numpy()
+  149      kf_poses = SE3(traj_filler.video.poses[:kf_num].clone()).inv().matrix().data.cpu().numpy()
+  150      traj_est[kf_timestamps] = kf_poses
+  151      return traj_est
+  152  
+  153  
+  154  def full_traj_eval(traj_est, stream, printer, logger, plot_parent_dir, plot_name):
+  155  
+  156      import os
+  157      if not os.path.exists(plot_parent_dir):
+  158          os.makedirs(plot_parent_dir)
+  159          
+  160      save_traj(traj_est,f'{plot_parent_dir}/est_poses_full.txt')
+  161  
+  162  
+  163      if isinstance(stream, RGB_NoPose):
+  164          # We don't have GT pose to evaluate
+  165          return traj_est, None, None
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/slam.py  SHA-256=0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c
+  lines 127-151
+  127      @timer.section("Final Global BA")
+  128      def backend(self):
+  129          self.printer.print("Final Global BA Triggered!", FontColor.TRACKER)
+  130  
+  131          metric_depth_reg_activated = self.video.metric_depth_reg
+  132          if metric_depth_reg_activated:
+  133              self.video.metric_depth_reg = False
+  134  
+  135          self.ba = Backend(self.droid_net, self.video, self.cfg)
+  136          torch.cuda.empty_cache()
+  137          self.ba.dense_ba(7, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'])
+  138          torch.cuda.empty_cache()
+  139          self.ba.dense_ba(12, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'], save_edges_weights=False)
+  140          self.printer.print("Final Global BA Done!", FontColor.TRACKER)
+  141  
+  142          if metric_depth_reg_activated:
+  143              self.video.metric_depth_reg = True
+  144  
+  145      def terminate(self):
+  146          """fill poses for non-keyframe images and evaluate"""
+  147  
+  148          if (
+  149              self.cfg["tracking"]["backend"]["final_ba"]
+  150              and self.cfg["mapping"]["eval_before_final_ba"]
+  151          ):
+  lines 174-179
+  174                  )
+  175  
+  176          if self.cfg["tracking"]["backend"]["final_ba"]:
+  177              self.backend()
+  178  
+  179          self.video.save_video(f"{self.save_dir}/video.npz")
+  lines 217-227
+  217          else:
+  218              traj_est = None
+  219              with timer.section("Full Trajectory Filling"):
+  220                  self.traj_filler.setup_feature_extractor()
+  221                  traj_est = full_traj_fill(
+  222                      self.traj_filler,
+  223                      None,
+  224                      self.stream,
+  225                      fast_mode=True,
+  226                  )
+  227              full_traj_eval(traj_est, self.stream, self.printer, self.logger, f"{self.save_dir}/traj", "full_traj")
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/depth_video.py  SHA-256=187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869
+  lines 333-378
+  333             motion_only=False, enable_update_uncer=False, enable_udba=False, visualization_stage=False):      # ii, jj represent all img pairs
+  334          
+  335          with self.get_lock():
+  336              # [t0, t1] window of bundle adjustment optimization
+  337              if t1 is None:
+  338                  t1 = max(ii.max().item(), jj.max().item()) + 1
+  339  
+  340              target = target.view(-1, self.ht//self.down_scale, self.wd//self.down_scale, 2).permute(0,3,1,2).contiguous()
+  341              weight = weight.view(-1, self.ht//self.down_scale, self.wd//self.down_scale, 2).permute(0,3,1,2).contiguous()
+  342  
+  343              # if there is NaN of inf value for self.affine_weights, assert
+  344              if self.uncertainty_aware:
+  345                  assert not torch.isnan(self.affine_weights).any(), "self.affine_weights has NaN value"
+  346                  assert not torch.isinf(self.affine_weights).any(), "self.affine_weights has inf value"
+  347              if not self.metric_depth_reg:
+  348                  droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.zeros,           # the shape of poses is determined by buffer size
+  349                      target, weight, self.uncertainties, 
+  350                      self.temp_y_cdot,
+  351                      self.dino_feats_resize,
+  352                      self.affine_weights,
+  353                      eta, ii, jj, t0, t1, iters, lm, ep, 
+  354                      self.cfg['tracking']['uncertainty_params']['gamma_data'], 
+  355                      self.cfg['tracking']['uncertainty_params']['gamma_prior'], 
+  356                      self.cfg['tracking']['uncertainty_params']['gamma_depth'],
+  357                      lr, weight_decay,
+  358                      motion_only, False, enable_update_uncer,
+  359                      enable_udba, self.enable_affine_transform,
+  360                      self.enable_bidirectional_uncer,
+  361                      self.debug)         # poses: [buffer, 7], disps: [buffer, h, w], 
+  362              else:
+  363                  droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.mono_disps,
+  364                      target, weight, self.uncertainties, 
+  365                      self.temp_y_cdot,
+  366                      self.dino_feats_resize,
+  367                      self.affine_weights,
+  368                      eta, ii, jj, t0, t1, iters, lm, ep, 
+  369                      self.cfg['tracking']['uncertainty_params']['gamma_data'], 
+  370                      self.cfg['tracking']['uncertainty_params']['gamma_prior'], 
+  371                      self.cfg['tracking']['uncertainty_params']['gamma_depth'],
+  372                      lr, weight_decay,
+  373                      motion_only, False, enable_update_uncer,
+  374                      enable_udba, self.enable_affine_transform,
+  375                      self.enable_bidirectional_uncer,
+  376                      self.debug)          # t0, t1: window of keyframes for BA
+  377              
+  378              self.disps.clamp_(min=1e-5)
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/factor_graph.py  SHA-256=a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec
+  lines 267-281
+  267  
+  268              else:
+  269                  ii, jj, target, weight = self.ii, self.jj, self.target, self.weight
+  270  
+  271              damping = .2 * self.damping[torch.unique(ii)].contiguous() + EP     # damping factor: avoid singlevalue tensor
+  272  
+  273              # bundle adjustment
+  274              self.video.ba(target, weight, damping, ii, jj, t0, t1, 
+  275                  iters=itrs, lm=1e-4, ep=0.1, lr=self.video.cfg['tracking']['uncertainty_params']['lr'], 
+  276                  weight_decay=self.video.cfg['tracking']['uncertainty_params']['weight_decay'],
+  277                  motion_only=motion_only, 
+  278                  enable_update_uncer=enable_update_uncer, 
+  279                  enable_udba=enable_udba, 
+  280                  visualization_stage=visualization_stage)
+  281          
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/lib/droid_kernels.cu  SHA-256=4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7
+  lines 323-336
+  323      if (enable_udba) {
+  324        float scale_uncer = fmaxf(45.0 * uncertainties[ix][i][j] - 35.0, 0.1f);
+  325        float w_uncer = fmaxf(fminf(1.0 / scale_uncer, 1.0f), 0.0f);
+  326        wu = wu * w_uncer;
+  327        wv = wv * w_uncer;
+  328        if (enable_bidirectional_uncer) {
+  329          float target_x = target[block_id][0][i][j];
+  330          float target_y = target[block_id][1][i][j];
+  331          const bool inside = (target_x >= 0.0f && target_x <= (float)(wd - 1) &&
+  332                              target_y >= 0.0f && target_y <= (float)(ht - 1));
+  333          if (inside) {
+  334            // interpolate the uncertainty from the neighboring pixels
+  335            const int x0 = (int)floorf(target_x);
+  336            const int y0 = (int)floorf(target_y);
+  lines 1867-1874
+ 1867      if (motion_only) {
+ 1868        dx = A.solve(lm, ep);
+ 1869  
+ 1870        // update poses
+ 1871        pose_retr_kernel<<<1, THREADS>>>(
+ 1872          poses.packed_accessor32<float,2,torch::RestrictPtrTraits>(),
+ 1873          dx.packed_accessor32<float,2,torch::RestrictPtrTraits>(), t0, t1);
+ 1874      }
+  lines 1915-1920
+ 1915      if (enable_update_uncer)
+ 1916      {
+ 1917        dino_feats_projective_transform_kernel<<<num, THREADS>>>(
+ 1918          targets.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+ 1919          uncertainties.packed_accessor32<float,3,torch::RestrictPtrTraits>(),
+ 1920          dino_feats.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+
+[c3414af6047d06bafc1a6645d09f23247f3b2cdc] DROID-W/src/utils/mono_priors/img_feature_extractors.py  SHA-256=f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346
+  lines 68-88
+   68  def get_feature_extractor(cfg: Dict) -> nn.Module:
+   69      """
+   70      Get the feature extractor model based on the configuration.
+   71      """
+   72      device = cfg["device"]
+   73      extractor_model = cfg["mono_prior"]["feature_extractor"]
+   74  
+   75      if extractor_model in ["dinov2_reg_small_fine", "dinov2_small_fine"]:
+   76          return Fit3DModels(extractor_model, device)
+   77      elif extractor_model in ["dinov2_vits14", "dinov2_vits14_reg"]:
+   78          return (
+   79              torch.hub.load("facebookresearch/dinov2", extractor_model).to(device).eval()
+   80          )
+   81      elif extractor_model in ["dinov3_vits16", "dinov3_vits16plus"]:
+   82          return None
+   83      else:
+   84          # If use other feature extractor as prior, add code here
+   85          raise NotImplementedError("Unsupported feature extractor")
+   86  
+   87  
+   88  @torch.no_grad()
+
+[byte-identical to sealed R2 ZIP member] VIPER_MATCHED_DUAL_BASELINE_R2/pipeline/run_original.py  SHA-256=81d02318f67343f634fbb16b3f258c4fe3f8cd31d9da6117f4d8f15ad0f2647e
+  lines 118-137
+  118      progress('final_backend',count,keyframes=nkey)
+  119      traj = np.asarray(model.terminate(filler()))
+  120      if after.hexdigest()!=want or model.video.counter.value!=nkey:
+  121          raise ValueError('FILLER_RGB_HASH_OR_KEYFRAME_MISMATCH')
+  122      if traj.shape!=(len(ids),7):
+  123          raise ValueError('INVALID_POSE_EXPORT wrong row count or pose shape')
+  124      valid = pose_mask(traj)
+  125      tstamp = model.video.tstamp[:nkey].cpu().numpy()
+  126      kindex = tstamp.astype(np.int64)
+  127      if (not np.array_equal(kindex,tstamp) or np.any(np.diff(kindex)<=0) or kindex[0]!=0 or kindex[-1]>=len(ids)):
+  128          raise ValueError('INVALID_POSE_EXPORT keyframe timeline')
+  129      direct = SE3(model.video.poses[:nkey]).inv().data.detach().cpu().numpy()
+  130      if not pose_mask(direct).all():
+  131          raise ValueError('INVALID_POSE_EXPORT keyframe poses')
+  132      np.savez_compressed(out/'trajectory.npz',rgb_ids=ids,c2w_xyzw=traj,valid=valid,keyframe_local_indices=kindex,
+  133                          keyframe_rgb_ids=ids[kindex],keyframe_ba_c2w_xyzw=direct)
+  134      dump(out/'model_result.json',dict(trajectory_sha256=digest(out/'trajectory.npz'),poses_exported=len(traj),
+  135           valid_poses=int(valid.sum()),keyframes=nkey,peak_tracking_keyframes=peak,non_keyframe_filled=len(ids)-nkey,
+  136           full_native_export='Trajectory Filler runs on all timestamps, including keyframe positions',
+  137           source_keyframe_export='direct final BA poses saved in keyframe_ba_c2w_xyzw',
+
+[Task 002B checked runner SHA-256] DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/pipeline/run_segment.py  SHA-256=428ca308f9df4d9375251f463fb560673c323aa9e62c9a2fcc98ffa6e99180e6
+  lines 155-165
+  155              raise RuntimeError('TRACKING_NEVER_INITIALIZED')
+  156          n=self.video.counter.value
+  157          if n+16>BUFFER:
+  158              raise RuntimeError(f'BUFFER_CAPACITY: filler {n}+16/{BUFFER}')
+  159          indices=self.video.timestamp[:n].cpu().int().tolist()
+  160          if not indices or indices!=sorted(set(indices)) or indices[-1]>=len(self.stream) or indices[0]<0:
+  161              raise ValueError('invalid upstream keyframe index list')
+  162          dump(self.stream.out/'keyframes.json',dict(final_count=n,peak_tracking_count=max(n,self.stream.peak),
+  163               local_indices=indices,rgb_ids=[self.stream.ids[i] for i in indices]))
+  164          super().terminate()
+  165  
+  lines 210-230
+  210      progress(args.out,'model_init',done=0,n=len(stream))
+  211      slam=ObservedSLAM(cfg,stream)
+  212      slam.run()
+  213      child=load(args.out/'tracking_child_ok.json')
+  214      export=args.out/'native/traj/est_poses_full.txt'
+  215      poses=np.loadtxt(export,ndmin=2)
+  216      if poses.shape!=(len(stream),8) or not np.array_equal(poses[:,0],np.arange(len(stream))):
+  217          raise ValueError('INVALID_POSE_EXPORT upstream integer IDs')
+  218      valid=np.isfinite(poses).all(1)&(np.abs(np.linalg.norm(poses[:,4:],axis=1)-1)<2e-3)
+  219      kf=load(args.out/'keyframes.json')
+  220      dest=args.out/'trajectory.npz'
+  221      np.savez_compressed(dest,rgb_ids=np.asarray(stream.ids),c2w_xyzw=poses[:,1:],valid=valid,
+  222                          keyframe_local_indices=kf['local_indices'],keyframe_rgb_ids=kf['rgb_ids'])
+  223      viewer=load(args.out/'native_camera_stream.json') if (args.out/'native_camera_stream.json').is_file() else {}
+  224      summary=dict(input_frames=len(stream),poses_exported=len(poses),valid_poses=int(valid.sum()),
+  225           trajectory_sha256=digest(dest),upstream_text_sha256=digest(export),keyframes=kf['final_count'],
+  226           peak_tracking_keyframes=kf['peak_tracking_count'],native_viewer_exit=slam.visualizer.exitcode,
+  227           native_camera_messages=viewer.get('frustum_messages',0),native_viewer_pid=slam.visualizer.pid,**child)
+  228      dump(args.out/'model_result.json',summary)
+  229      if not valid.all():
+  230          raise ValueError('INVALID_POSE_EXPORT nonfinite or invalid quaternion')

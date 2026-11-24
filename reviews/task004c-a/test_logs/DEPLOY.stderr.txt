@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z\RECOVERY_20261123T152953805Z/tools/deploy.py", line 17, in <module>
+    r=remote(code,{'auth':AUTH,'auth_raw':(ROOT/'AUTHORIZATION.json').read_text(),'auth_sha256':hashlib.sha256((ROOT/'AUTHORIZATION.json').read_bytes()).hexdigest(),'files':files,'policies':policies},'DEPLOY',60)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004C_MECHANISM_ISOLATION_20261123T145542826Z\RECOVERY_20261123T152953805Z/tools\transport.py", line 14, in remote
+    q=subprocess.run(ssh_base(PRE)+['-o','ClearAllForwardings=yes',HOST,cmd],input=base64.b64encode(code.encode())+b'\n'+json.dumps(payload).encode()+b'\n',capture_output=True,creationflags=CREATE,timeout=timeout)
+                     ^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\bootstrap\run_once.py", line 53, in ssh_base
+    pin = subprocess.run([str(exe.with_name("ssh-keygen.exe")), "-l", "-E", "sha256", "-f", str(known)],
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Windows\\System32\\OpenSSH\\ssh-keygen.exe', '-l', '-E', 'sha256', '-f', 'D:\\aaa\\GameCam-VO\\experiments\\VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408\\evidence\\sc01-30723.known_hosts']' returned non-zero exit status 255.

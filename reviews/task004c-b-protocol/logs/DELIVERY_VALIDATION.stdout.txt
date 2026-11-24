@@ -1,0 +1,15 @@
+PASS requested_deliverables_present
+PASS all_delivery_json_parse
+PASS S1_schema_structure_and_refs
+PASS S0_schema_structure_and_refs
+PASS all_22_event_kinds_have_payload_requirements
+PASS S1_S0_same_contract_except_producer
+PASS C0_is_explicitly_uncaptured_design
+PASS tensor_design_metadata_complete_but_not_fabricated
+PASS supplemental_source_Git_Blob_and_SHA
+PASS protected_original_files_unchanged
+PASS resource_arithmetic_and_unknown_fields
+PASS historical_resource_references_match_records
+PASS critical_protocol_decisions_consistent
+PASS safety_scope_and_no_execution_claims
+{"passed": 14, "failed": 0, "exit_code": 0}

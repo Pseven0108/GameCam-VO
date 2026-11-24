@@ -1,0 +1,126 @@
+{
+  "status": "PASS_BEFORE_MODEL",
+  "checked_utc": "2026-11-22T19:07:13.766706+00:00",
+  "hostname": "jupyter-6g08vd8ezmzwvd1k",
+  "boot_id": "876d198d-b051-4271-b1f8-8c0b984410de",
+  "gpu": {
+    "index": "0",
+    "name": "NVIDIA GeForce RTX 3090",
+    "uuid": "GPU-82ff89bb-fc14-1f6b-2636-2958ae150735",
+    "memory.total": "24576",
+    "memory.used": "17",
+    "memory.free": "24108",
+    "utilization.gpu": "0",
+    "driver_version": "580.119.02",
+    "compute_cap": "8.6"
+  },
+  "other_compute_processes": "",
+  "shm_free_bytes": 25769803776,
+  "disk_free_bytes": 14510059520,
+  "memory_max": "107374182400",
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0",
+  "viewer_pid": 723,
+  "viewer_ports": [
+    9875,
+    9876,
+    9877
+  ],
+  "browser": {
+    "checked_unix": 1795374381.623,
+    "checked_utc": "2026-11-22T19:06:21.623Z",
+    "url": "http://127.0.0.1:20636/?url=ws%3A%2F%2F127.0.0.1%3A20637",
+    "http": 200,
+    "ws_bytes": 7630,
+    "ws_frames": 6,
+    "ws_connected": true,
+    "visible_synthetic_entities": true,
+    "observed_entities": [
+      "/synthetic_preflight/proof",
+      "/synthetic_preflight/colored_points"
+    ],
+    "recording_id": "1da4b4c0-ffd1-4337-871e-c31870e048b5",
+    "screenshot_sha256": "b8794215a7af10a5a7ad61ca44cd8f673f104eb1309baa3cd6ce7c11dea42ee8"
+  },
+  "source_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "sealed_config": {
+    "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/incoming/native_config.yaml",
+    "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+    "bytes": 3371
+  },
+  "manifest": {
+    "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+    "bytes": 104223
+  },
+  "extension": {
+    "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+    "sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+    "bytes": 2461696
+  },
+  "patch_postimages": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/tracker.py",
+      "sha256": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
+      "bytes": 8481
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/motion_filter.py",
+      "sha256": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
+      "bytes": 6528
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/frontend.py",
+      "sha256": "85a38ab85896c65adeb09dc3274e18c7ebcd8dc9f887afb8a8bbdf42e4e1d1da",
+      "bytes": 11437
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/slam.py",
+      "sha256": "2b158db4ac2d40a3a51a8f39d0509b7e5b6ced4ab6b3aa29763ec9fee81fc0a6",
+      "bytes": 13971
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/factor_graph.py",
+      "sha256": "6eeb1a7e2ee98c2e7558f535de2034492f0c1e8affe5da1d383fd96bfb9d3b3e",
+      "bytes": 22154
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/depth_video.py",
+      "sha256": "79dd220b5b4d4f8c2c9b84baf930a3287b78638689f7ba9d2b960ba2a8a84ed2",
+      "bytes": 45585
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/trajectory_filler.py",
+      "sha256": "b8c8aa9648f7e1882cd0949ff197284cddc6f054ab0a0985afad15b5d5e28e42",
+      "bytes": 5773
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/src/utils/eval_traj.py",
+      "sha256": "93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2",
+      "bytes": 7467
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/source/DROID-W/task003_observer.py",
+      "sha256": "7b34c8f34370e7a1e0663d32709f421cfd1be8c476b6f95c0ee1e75804e41804",
+      "bytes": 15207
+    }
+  ],
+  "pipeline": [
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/pipeline/segment_input.py",
+      "sha256": "eb5afb40b87fd56995138f916944637566ec59a4f3b2b84a4f96cf795a1d6903",
+      "bytes": 4963
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/pipeline/transfer_common.py",
+      "sha256": "4f91e5f39375575640f1034fc6aff02ef06dfd342f1e4741c4da68b70e5627e4",
+      "bytes": 1371
+    },
+    {
+      "path": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/pipeline/task003_run_segment.py",
+      "sha256": "058ef44f50f81bea2d3adfbd7d602ad8c924da298478dc79e6b6ba33e621c1f3",
+      "bytes": 10920
+    }
+  ],
+  "staged_identity_sha256": "a3bb965d4099a49d9426d9d9b48029271219e1471d9c73b157e949da7fa8b2a0",
+  "gt_uploaded": 0
+}

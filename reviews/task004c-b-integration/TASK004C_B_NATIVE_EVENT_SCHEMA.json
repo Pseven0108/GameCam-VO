@@ -1,0 +1,42 @@
+{
+  "schema": "GAMECAM_NATIVE_DISCRETE_SCHEDULE_V2",
+  "kind_catalog": {
+    "frame.begin": "input index, RGB ID",
+    "frame.end": "next input index; native counter/RGB slot map verified",
+    "motion.decision": "admitted, force, threshold, reason",
+    "keyframe.decision": "drop, reason",
+    "keyframe.insert.begin/end": "stable RGB token, slot, insertion order via ordered context, counter",
+    "keyframe.remove.begin/end": "stable RGB token and tail slot; unaudited non-tail compaction stops",
+    "graph.create": "graph identity, implementation, capacity",
+    "graph.add.begin/end": "source/target slots with stable RGB/edge identity in context",
+    "graph.remove.begin/end": "ordered edge mask, store flag and before/after context",
+    "graph.filter.begin/end": "bad-edge lifecycle",
+    "graph.bad_mask": "scheduled bad-edge mask",
+    "graph.init_age_reset": "initialization age reset",
+    "graph.clear.begin/end": "graph retirement",
+    "graph.backend_plan": "backend edges, loop edge count and nonempty branch",
+    "graph.update.begin/end": "graph ID, stage, t0/t1, iteration and phase switches",
+    "graph.update_lowmem.begin/end": "backend steps and windows",
+    "native.ba.begin/end": "actual native BA invocation order, ii/jj, iteration and frozen scalar controls",
+    "init.second_stage.begin/end": "second-stage lifecycle",
+    "init.complete": "24 successful initialization updates and actual boundary",
+    "final.begin/end": "native final stages 7 then12",
+    "backend.dense.begin/end": "dense graph/BA controls",
+    "filler.batch.begin/result/end": "batch RGB IDs, bracket anchors, temporary slots and counter restoration",
+    "export": "final pose provenance: KEYFRAME_BA or TRAJECTORY_FILLER"
+  },
+  "event_envelope": [
+    "index",
+    "kind",
+    "rgb",
+    "context",
+    "payload",
+    "previous_sha256",
+    "sha256"
+  ],
+  "context": "Ordered stable RGB slot tokens; graph IDs; edge instance IDs; source/target RGB tokens, slots, active/inactive/bad state and age",
+  "journal_continuous_result_fields_allowed": false,
+  "continuous_results_location": "native_trace.jsonl and inherited observer.jsonl; never selected from a source schedule",
+  "prefix_lifecycle": "Each frame019..080, nested operation pairing, immutable hash chain, footer only after complete RGB080",
+  "GPU_validation_status": "NOT_EXECUTED"
+}

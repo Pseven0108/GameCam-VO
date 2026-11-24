@@ -1,0 +1,32 @@
+{
+  "scope": "Task 002B local CPU audit and packaging only",
+  "gpu_requested": false,
+  "gpu_used": false,
+  "cuda_context_initialized": false,
+  "checkpoint_deserialized": false,
+  "model_constructed": false,
+  "model_forward_executed": false,
+  "model_training": false,
+  "slam_executed": false,
+  "ablations_executed": false,
+  "task003_started": false,
+  "ssh_connected": false,
+  "new_data_downloaded": false,
+  "historical_files_written": false,
+  "production_source_or_config_changed": false,
+  "dataset_or_gt_modified": false,
+  "model_weight_modified": false,
+  "original_r1_and_r2_zip_hash_rechecked": true,
+  "original_corpus_in_zip": false,
+  "source_excerpt_files_verified": 19,
+  "required_csv_row_counts_verified": {
+    "R2_RPE_PER_SEGMENT.csv": 2944,
+    "R2_RPE_PER_SEQUENCE.csv": 376,
+    "R2_RPE_ENVIRONMENT_SUMMARY.csv": 192,
+    "R2_SEQUENCE_BOOTSTRAP_COMPARISON.csv": 64,
+    "INPUT_PREPROCESSING_STAGE_TABLE.csv": 11,
+    "R2_TRAJECTORY_AND_GT_INTEGRITY.csv": 184,
+    "R2_RUNTIME_INPUT_RECEIPT_PARITY.csv": 92,
+    "R2_CAMERA_K_PROVENANCE_BY_SEQUENCE.csv": 47
+  }
+}

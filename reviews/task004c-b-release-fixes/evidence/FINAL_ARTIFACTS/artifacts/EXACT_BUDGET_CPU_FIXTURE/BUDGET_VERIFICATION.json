@@ -1,0 +1,25 @@
+{
+  "scope": "CPU_SYNTHETIC_FIXTURE_NOT_REAL_C0",
+  "plan": {
+    "schema": "GAMECAM_EXACT_SERIALIZED_BUDGET_V1",
+    "serialized_tensor_files_bytes": 36244,
+    "manifest_bytes": 2286,
+    "complete_bytes": 86,
+    "exact_checkpoint_logical_bytes": 38616,
+    "file_count": 5,
+    "filesystem_block_bytes": 4096,
+    "rounded_file_data_reservation_bytes": 53248,
+    "filesystem_metadata_reserve_bytes": 16777216,
+    "retained_scratch_reserve_bytes": 536870912,
+    "safety_floor_bytes": 10737418240,
+    "minimum_free_before_save_bytes": 11291119616,
+    "physical_filesystem_overhead_is_exact": false,
+    "logical_serialization_bytes_are_exact": true,
+    "unique_runtime_storage_bytes": 32830
+  },
+  "actual_logical_bytes": 38616,
+  "actual_allocated_file_bytes": 53248,
+  "exact_logical_match": true,
+  "complete_real_C0_bytes": null,
+  "cuda_initialized": false
+}

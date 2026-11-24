@@ -1,0 +1,270 @@
+--- a/src/depth_video.py
++++ b/src/depth_video.py
+@@ -1,3 +1,4 @@
++from task004_controls import local_flags as task004_local_flags
+ from task003_observer import recorder as task003
+ import numpy as np
+ import torch
+@@ -331,7 +332,7 @@
+         return projected_image.permute(0, 3, 1, 2), valid_mask  # Return to [B, C, H, W]
+ 
+     def ba(self, target, weight, eta, ii, jj, t0=1, t1=None, iters=2, lm=1e-4, ep=0.1, gamma=0.02, tao=0.1, lr=1e-2, weight_decay=2e-4,
+-           motion_only=False, enable_update_uncer=False, enable_udba=False, visualization_stage=False):      # ii, jj represent all img pairs
++           motion_only=False, enable_update_uncer=False, enable_udba=False, visualization_stage=False, *, task004_phase=None):      # ii, jj represent all img pairs
+         
+         with self.get_lock():
+             # [t0, t1] window of bundle adjustment optimization
+@@ -345,8 +346,13 @@
+             if self.uncertainty_aware:
+                 assert not torch.isnan(self.affine_weights).any(), "self.affine_weights has NaN value"
+                 assert not torch.isinf(self.affine_weights).any(), "self.affine_weights has inf value"
+-            task003().ba_before(self, target, weight, eta, ii, jj, t0, t1, iters, lm, ep, lr, weight_decay, motion_only, enable_update_uncer, enable_udba)
+-            if not self.metric_depth_reg:
++            observe = task003()
++            use_depth, enable_udba, enable_update_uncer = task004_local_flags(
++                task004_phase, observe.stage, self, motion_only, enable_update_uncer, enable_udba)
++            observe.ba_before(self, target, weight, eta, ii, jj, t0, t1, iters, lm, ep, lr, weight_decay,
++                              motion_only, enable_update_uncer, enable_udba, metric_selected=use_depth,
++                              local_phase=task004_phase)
++            if not use_depth:
+                 droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.zeros,           # the shape of poses is determined by buffer size
+                     target, weight, self.uncertainties, 
+                     self.temp_y_cdot,
+--- a/src/factor_graph.py
++++ b/src/factor_graph.py
+@@ -235,7 +235,7 @@
+     @torch.amp.autocast('cuda',enabled=True)
+     @torch.no_grad()
+     def update(self, t0=None, t1=None, itrs=2, use_inactive=False,
+-               EP=1e-7, motion_only=False, enable_update_uncer=True, enable_udba=True, visualization_stage=False):
++               EP=1e-7, motion_only=False, enable_update_uncer=True, enable_udba=True, visualization_stage=False, *, task004_phase=None):
+         """ run update operator on factor graph """
+ 
+         # motion features
+@@ -278,7 +278,7 @@
+                 motion_only=motion_only, 
+                 enable_update_uncer=enable_update_uncer, 
+                 enable_udba=enable_udba, 
+-                visualization_stage=visualization_stage)
++                visualization_stage=visualization_stage, task004_phase=task004_phase)
+         
+             self.video.upsample(torch.unique(self.ii), upmask)
+ 
+--- a/src/frontend.py
++++ b/src/frontend.py
+@@ -73,7 +73,7 @@
+             self.graph.update(None, None, use_inactive=True, 
+                 enable_update_uncer=self.enable_opt_dyn_mask, 
+                 enable_udba=self.enable_opt_dyn_mask, 
+-                visualization_stage=visualization_stage)
++                visualization_stage=visualization_stage, task004_phase="frontend_local_predecision")
+ 
+         # distance computation based on reproj(coords_i) - coords_i
+         d = self.video.distance([self.t1-2], [self.t1-1], beta=self.beta, bidirectional=True)
+@@ -112,7 +112,7 @@
+                     self.graph.update(t0=None, t1=None, use_inactive=True, 
+                         enable_update_uncer=self.enable_opt_dyn_mask,
+                         enable_udba=self.enable_opt_dyn_mask,
+-                        visualization_stage=visualization_stage)
++                        visualization_stage=visualization_stage, task004_phase="frontend_local_retained")
+ 
+         # set pose for next itration
+         self.video.poses[self.t1] = self.video.poses[self.t1-1]
+--- a/src/slam.py
++++ b/src/slam.py
+@@ -1,3 +1,4 @@
++from task004_controls import policy as task004_policy
+ from task003_observer import recorder as task003
+ import os
+ import torch
+@@ -139,10 +140,11 @@
+         task003().boundary("final_ba_phase_1", self.video)
+         self.ba.dense_ba(7, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'])
+         task003().boundary("final_phase_1_done", self.video)
+-        torch.cuda.empty_cache()
+-        task003().boundary("final_ba_phase_2", self.video)
+-        self.ba.dense_ba(12, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'], save_edges_weights=False)
+-        task003().boundary("final_phase_2_done", self.video)
++        if task004_policy().final_phases == 2:
++            torch.cuda.empty_cache()
++            task003().boundary("final_ba_phase_2", self.video)
++            self.ba.dense_ba(12, enable_udba=self.cfg['tracking']['frontend']['enable_opt_dyn_mask'], save_edges_weights=False)
++            task003().boundary("final_phase_2_done", self.video)
+         self.printer.print("Final Global BA Done!", FontColor.TRACKER)
+ 
+         if metric_depth_reg_activated:
+--- a/src/trajectory_filler.py
++++ b/src/trajectory_filler.py
+@@ -118,6 +118,7 @@
+ 
+         self.printer.print("Filling full trajectory ...",FontColor.INFO)
+         intrinsic = image_stream.get_intrinsic()
++        image_stream.task004_begin_filler()
+         for (timestamp, image, _ , _)  in tqdm(image_stream):
+             timestamps.append(timestamp)
+             images.append(image)
+--- a/task003_observer.py
++++ b/task003_observer.py
+@@ -11,7 +11,7 @@
+ FOCUS = frozenset((301, 309, 312, 325, 328, 353))
+ EDGE_LIMIT = 24
+ GRID_STEP = 4
+-SCHEMA = 'GAMECAM_TASK003_RUNTIME_OBSERVER_V1'
++SCHEMA = 'GAMECAM_TASK004_RUNTIME_OBSERVER_CANDIDATE_V1'
+ 
+ 
+ def integer(value):
+@@ -102,10 +102,15 @@
+     residual = target-repro
+     factor = np.fmax(np.fmin(1./np.fmax(45.*u[ii]-35.,.1),1.),0.) if enabled else np.ones_like(z)
+     effective = np.where(valid[...,None],.001*weight*factor[...,None],0.)
+-    live = valid & np.isfinite(effective).all(-1) & (effective>0).any(-1)
++    usable_weight = np.isfinite(effective).all(-1) & (effective>=0).all(-1)
++    live = valid & usable_weight & (effective>0).any(-1)
++    zero = valid & usable_weight & (effective==0).all(-1)
+     return dict(coverage='DETERMINISTIC_EDGE_AND_PIXEL_SUBSAMPLE', arithmetic='CPU_RECONSTRUCTION',
+                 sampled_pixels=int(valid.size), valid_projection_samples=int(valid.sum()),
+-                positive_weight_observation_samples=int(live.sum()), valid_fraction=float(valid.mean()) if valid.size else None,
++                positive_weight_observation_samples=int(live.sum()),
++                zero_weight_valid_projection_samples=int(zero.sum()),
++                invalid_weight_valid_projection_samples=int((valid & ~usable_weight).sum()),
++                valid_fraction=float(valid.mean()) if valid.size else None,
+                 residual_lowres_px=stats(np.linalg.norm(residual[valid],axis=-1)),
+                 raw_weight=stats(weight), effective_weight=stats(effective),
+                 source_uncertainty_multiplier=stats(factor),
+@@ -238,7 +243,7 @@
+         self.emit('stage_boundary',now,rows=self.slots(video,0,video.counter.value),
+                   metric_depth_configured=bool(video.metric_depth_reg))
+ 
+-    def ba_before(self,video,target,weight,eta,ii,jj,t0,t1,iters,lm,ep,lr,weight_decay,motion_only,update_u,use_u):
++    def ba_before(self,video,target,weight,eta,ii,jj,t0,t1,iters,lm,ep,lr,weight_decay,motion_only,update_u,use_u,*,metric_selected,local_phase):
+         now = perf_counter_ns()
+         n = video.counter.value
+         ir,jr = self.array(ii),self.array(jj)
+@@ -258,18 +263,23 @@
+                     target_u=bool(video.enable_bidirectional_uncer),n=n)
+         self.before = data
+         kx = np.union1d(np.arange(t0,t1),ir)
+-        used = bool(video.metric_depth_reg and not motion_only and h['gamma_depth']!=0)
++        used = bool(metric_selected and not motion_only and h['gamma_depth']!=0)
+         # Native support is a strict disparity > 0 mask for the selected depth slots.
+-        prior_all = self.array(video.mono_disps[:n]) if used else None
++        prior_all = self.array(video.mono_disps[:n]) if not motion_only else None
+         counts = [{'slot':int(i),'rgb_id':ids[i],'positive_mask_count':int((prior_all[i]>0).sum()),
+-                   'total':int(prior_all[i].size)} for i in kx] if used else []
++                   'total':int(prior_all[i].size)} for i in kx] if not motion_only else []
+         self.emit('ba_before',now,ba_id=self.ba_id,t0=t0,t1=t1,native_iterations_requested=iters,lm=lm,ep=ep,
+                   lr=lr,weight_decay=weight_decay,motion_only=bool(motion_only),
+                   source_uba=bool(use_u),target_uba=bool(use_u and video.enable_bidirectional_uncer),update_u=bool(update_u),
+                   gamma_depth=h['gamma_depth'],gamma_data=h['gamma_data'],gamma_prior=h['gamma_prior'],
+                   affine_u=bool(video.enable_affine_transform),
+                   metric_depth_configured=bool(video.metric_depth_reg),metric_depth_branch_active=used,
+-                  metric_depth_positive_support=sum(row['positive_mask_count'] for row in counts),prior_support=counts,
++                  metric_depth_prior_selected=bool(metric_selected),task004_local_phase=local_phase,
++                  metric_depth_window_samples=int(len(kx)*video.mono_disps.shape[-2]*video.mono_disps.shape[-1]),
++                  metric_depth_positive_support=sum(row['positive_mask_count'] for row in counts) if used else 0,
++                  prior_support=counts if used else [],cached_prior_support=counts,
++                  cached_prior_positive_support=sum(row['positive_mask_count'] for row in counts),
++                  cached_prior_total=sum(row['total'] for row in counts),
+                   backend_k=data['k'],eta_sample=stats(self.array(eta[::GRID_STEP,::GRID_STEP,::GRID_STEP])),
+                   edge_slots=np.column_stack((ir,jr)),sample_edge_indices=sample,rows=rows,
+                   **self.ba_numeric(video,data))
+@@ -288,13 +298,19 @@
+     def ba_after(self,video,clamped=False):
+         now = perf_counter_ns()
+         data = self.before
++        # Count all active slots at the native return and immediately after Python clamp.
++        full = self.array(video.disps[:data['n']])
++        grid = dict(scope='ALL_PIXELS_ACTIVE_SLOT_PREFIX', active_slots=data['n'],
++                    total=int(full.size), negative=int((np.isfinite(full) & (full < 0)).sum()),
++                    nonfinite=int((~np.isfinite(full)).sum()),
++                    float32_floor_count=int((full == np.float32(1e-5)).sum()))
+         if clamped:
+-            d = self.array(video.disps[:data['n'],::GRID_STEP,::GRID_STEP])
+-            self.emit('ba_after_clamp',now,ba_id=self.ba_id,disparity=stats(d),
++            d = full[:,::GRID_STEP,::GRID_STEP]
++            self.emit('ba_after_clamp',now,ba_id=self.ba_id,disparity=stats(d),full_disparity_grid=grid,
+                       float32_floor_count=int((d==np.float32(1e-5)).sum()))
+             self.before = {}
+         else:
+-            self.emit('ba_after_native',now,ba_id=self.ba_id,rows=self.slots(video,0,data['n']),
++            self.emit('ba_after_native',now,ba_id=self.ba_id,rows=self.slots(video,0,data['n']),full_disparity_grid=grid,
+                       **self.ba_numeric(video,data))
+ 
+     def filler_begin(self,video,n,m,t0,t1):
+--- /dev/null
++++ b/task004_controls.py
+@@ -0,0 +1,73 @@
++"""Phase-local policy for the review candidate. No model or tensor imports."""
++
++from dataclasses import dataclass
++from functools import lru_cache
++from hashlib import sha256
++import json
++import os
++from pathlib import Path
++
++
++SCHEMA = "GAMECAM_TASK004_PHASE_POLICY_V1"
++R2_CONFIG_SHA256 = "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc"
++LOCAL_PHASES = frozenset(("frontend_local_predecision", "frontend_local_retained"))
++FACTORIAL = dict(E0=(1, 1, 1), E1=(0, 1, 1), E2=(1, 0, 1), E3=(1, 1, 0),
++                 E4=(0, 0, 1), E6=(0, 1, 0), E7=(1, 0, 0), E8=(0, 0, 0))
++FINAL = dict(F0=0, F1=1, F2=2)
++
++
++@dataclass(frozen=True)
++class Policy:
++    arm: str
++    local_dwu: tuple
++    final_phases: int
++    campaign: str
++
++
++def parse_policy(doc):
++    fields = {"schema", "base_config_sha256", "campaign", "arm", "local_dwu", "final_phases"}
++    if type(doc) is not dict or set(doc) != fields:
++        raise ValueError("Unexpected Task 004 policy fields")
++    if doc["schema"] != SCHEMA or doc["base_config_sha256"] != R2_CONFIG_SHA256:
++        raise ValueError("Task 004 policy must bind the sealed R2 configuration")
++    arm, bits, phases = doc["arm"], doc["local_dwu"], doc["final_phases"]
++    if (type(arm) is not str or type(bits) is not list or len(bits) != 3
++            or any(type(v) is not int or v not in (0, 1) for v in bits) or type(phases) is not int):
++        raise ValueError("Invalid Task 004 factor encoding")
++    bits = tuple(bits)
++    campaign = doc["campaign"]
++    if not ((campaign == "FACTORIAL" and arm in FACTORIAL and bits == FACTORIAL[arm] and phases == 2)
++            or (campaign == "E5_FINAL" and arm in FINAL and bits == FACTORIAL["E0"] and phases == FINAL[arm])):
++        raise ValueError("Invalid Task 004 arm, factors, or final-BA phase count")
++    return Policy(arm, bits, phases, campaign)
++
++
++@lru_cache(maxsize=1)
++def policy():
++    path = Path(os.environ["GAMECAM_TASK004_POLICY"])
++    if not path.is_absolute():
++        raise ValueError("Task 004 policy path must be absolute")
++    raw = path.read_bytes()
++    if sha256(raw).hexdigest() != os.environ["GAMECAM_TASK004_POLICY_SHA256"]:
++        raise ValueError("Task 004 policy hash mismatch")
++    return parse_policy(json.loads(raw))
++
++
++def local_flags(phase, observer_stage, video, motion_only, update_u, use_u):
++    if phase is None:
++        if observer_stage in LOCAL_PHASES:
++            raise ValueError("Observed local BA is missing its explicit Task 004 marker")
++        return video.metric_depth_reg, use_u, update_u
++    if phase not in LOCAL_PHASES or phase != observer_stage or motion_only:
++        raise ValueError("Task 004 local-BA scope mismatch")
++    if not (video.metric_depth_reg and use_u and update_u and video.uncertainty_aware
++            and video.enable_affine_transform and not video.enable_bidirectional_uncer
++            and video.cfg["tracking"]["uncertainty_params"]["gamma_depth"] == 0.01
++            and not video.cfg["tracking"]["frontend"]["enable_loop"]):
++        raise ValueError("Task 004 vanilla local-BA contract mismatch")
++    return tuple(bool(flag) for flag in policy().local_dwu)
++
++
++def require_approved_runtime():
++    # This review bundle has no launch authorization. A future runner revision is required.
++    raise SystemExit("Task 004 static review candidate: GPU execution is not approved")

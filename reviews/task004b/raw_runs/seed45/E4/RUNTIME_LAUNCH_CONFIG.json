@@ -1,0 +1,52 @@
+{
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/pipeline/task004_run_segment.py",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E4/attempt_001_e2da2c891181",
+    "--weights",
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth"
+  ],
+  "cwd": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source",
+  "seed": 45,
+  "base_config_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "PYTHONPATH": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/pipeline:/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source",
+    "GAMECAM_TASK004B_SEED": "45",
+    "GAMECAM_TASK004_AUTHORIZATION": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/AUTHORIZATION.json",
+    "GAMECAM_TASK004_POLICY": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/policies/E4.json",
+    "GAMECAM_TASK004_POLICY_SHA256": "55ba54a86e3938158fb4910532b65c26b1fb0919b84ce253819470560d6b4d8e",
+    "GAMECAM_TASK003_SEALED_CONFIG": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml"
+  },
+  "rerun": {
+    "pid": 10014,
+    "argv": [
+      "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/rerun_sdk/rerun_cli/rerun",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "9875",
+      "--serve-web",
+      "--web-viewer-port",
+      "9876",
+      "--ws-server-port",
+      "9877",
+      "--server-memory-limit",
+      "768MB",
+      "--save",
+      "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E4/attempt_001_e2da2c891181/native_rerun.rrd"
+    ],
+    "listeners": [
+      {
+        "port": 9875,
+        "address": "0100007F",
+        "table": "tcp",
+        "inode": "14273635"
+      }
+    ],
+    "browser_rendering": "NOT_REQUIRED_NOT_VERIFIED",
+    "recording_path": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E4/attempt_001_e2da2c891181/native_rerun.rrd"
+  }
+}

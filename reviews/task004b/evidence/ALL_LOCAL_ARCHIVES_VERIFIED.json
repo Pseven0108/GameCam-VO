@@ -1,0 +1,2594 @@
+[
+  {
+    "seed": 44,
+    "arm": "E3",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E3_attempt_001_cfc1d9cbbd28.zip",
+    "bytes": 308826766,
+    "sha256": "4115cc0707d6da2cb1359e22d66b86e182cf95b951dcc28bd4d0ceb8f31e4943",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "224b8c4e5c8ede80ba995af9fb65295dd1abc68a43ac19ef86415aa9efeee061"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1464,
+        "sha256": "486f6c4b54e274b5b43f73b1152cfa995961b0514bfbc8c3181eb8d2e40c8ebd"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5198,
+        "sha256": "6ba261abffcfa1c4b9e1a8d0feeb2ef82106b793d1ac5d79fa885bce6ae98c06"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 244,
+        "sha256": "219a310fc758b20eb1125ee8178cef19a726d38c0d6d9f7055cdac6d768d8ce3"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "368bb8d444d2fe31806a5e3bb29ed66537dd13237b4b17cf18199026cae4f162"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 74,
+        "sha256": "b031ff30ae676b19e4e8e2a5f0fe8d24da1cb564d77625887c8152683b1ed49d"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 832,
+        "sha256": "04a875e097b8b0e581a221aa7feb6f5f4dba67f16b0480f39ca2430dc0e6299c"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2452,
+        "sha256": "2c0d8368443e3c552f923e08594c30a33052e200998764b762eda7d9c7823230"
+      },
+      "keyframes.json": {
+        "bytes": 2328,
+        "sha256": "0bbfa03842ec6317487cacced81c85a4ce0045fa0313bd02d23ccd248ffb654c"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 655,
+        "sha256": "4539014650d1a5ab9a7b3b8fb3df65a024d92fadfb35c2f1a9690faa892e08e0"
+      },
+      "native/events.out.tfevents.1795438518.jupyter-yd6gks8uzfbxzdb4.906.0": {
+        "bytes": 3611,
+        "sha256": "a95e3e688b38f8175673d015595a0ec57d8db0d02f6346928bd49757314f115e"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "5086b609f364b115009d0910e6b5c17a2083e009ef580a2405c3046a32efc0ae"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35051,
+        "sha256": "ab00319ac57fcd51887aa63aee75ed92ff359661f2755aabddf26be92747ded6"
+      },
+      "native/video.npz": {
+        "bytes": 588890110,
+        "sha256": "650020d56bbcffa708cf7df0bdad51eb7b19e9e07a219f2dab4f4a05e931b224"
+      },
+      "native_camera_stream.json": {
+        "bytes": 45,
+        "sha256": "753a94f4de0097cf75d1f8efcc2d613d45caa65b061504f19bf21a1a52930673"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "6219256b2c4f1711a22b9f128c2563f0d7d4e753d566c6d194ece072c5b02f2b"
+      },
+      "native_rerun.rrd": {
+        "bytes": 37275461,
+        "sha256": "2e2716029d35e2ecce3564885b4f4bacb024eb32ba8d8f768dc45f63fb145fce"
+      },
+      "observer.jsonl": {
+        "bytes": 60376726,
+        "sha256": "227ce1d9fccbdc7b86e876d9e3923853d1ca52233f85f48bcd4aade96b52406b"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "d91c5a0c6a702f86f3d81e8623088ac7dd787df6efa5a70acb4e4156a9e2a4ca"
+      },
+      "process.stderr.txt": {
+        "bytes": 87214,
+        "sha256": "0df68148daf11c634389871dbd6b3f0d84700fe6c3fad1f32e1b8de1854ac3da"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "e3ef65f807d41de3623dcf3541d5c840f8649391b5b505b4191e109c1000c6bc"
+      },
+      "progress.json": {
+        "bytes": 107,
+        "sha256": "855b78443b89d8a0417d15b7f80a923d1bc4fc3ee28f43728fdbad61279a4e4a"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 2454647,
+        "sha256": "a53d675cf83ce5062fca56e9945a76cfb7beb8365e7ba57cea081caeada6ac42"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 29435,
+        "sha256": "c469dec48c4eb5de089399850b0f0ecaffc7da5af8cf360aa4688d0c5be4448e"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "e55458aea819530e7241ec58020b71a88c4a3540880eaeec85a98732f215232d"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 558,
+        "sha256": "ade76bd83df8440c591d07464d1ffc77628530225bf90eb432fe69e66e20a1c7"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "4283195c0451789f8a78777e7a91ceb54feaa680668a7360a8a529b9947382ad"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "89f28f80d94dc117af7820ff6dde4570b9cbdbd0e40b03ad7bcc64b68ee8187a"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 257,
+        "sha256": "7dfadf3a6c0a72d4aaeab9cab65fe6208fb208b543d9323f074e450a1e96b494"
+      },
+      "trajectory.npz": {
+        "bytes": 26518,
+        "sha256": "dfc8a1572eea1acd30c3155f64ec095371eb99a3edeb8f32d4416719f15f0103"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 14.220125800000005,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E4",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E4_attempt_001_3f5c69f4d86c.zip",
+    "bytes": 864144887,
+    "sha256": "463fffe557ab52d40db88a5883e35ece0518c72730988f9ad99a7ef8b657d79a",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "27a126bfd237b2c482178d9fc96b457cfd271d9c0024472a0ca7fe95b1757fea"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "8237c6c936b1fd3465852d12e428a0b5120431f52063a17a7067dffe287a6b40"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "fba9f2ffd71146cd26777a80a8f4ae4ebbeb764f85c98fabc3cff33d04534858"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "e94b98a6ffda79e6929d3903291f236cb894586703b5c5126af9c52bb034593c"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "ddd5bcc9516b62f517e2f1f06d378c357bb867c52a841b371dbefff81269d143"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "b8b38efc70e6b55868972bff1110faa0adad8e8d9cc37b507a29c44b25095410"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "9089fbb571e3caf73681b2597ca31c237463d15db87ae77ca8a7e6d049b71961"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "c4f31fbbb83ba31412e4300a0f6ee102a659e021e6aed9c0b0d3025a78694235"
+      },
+      "keyframes.json": {
+        "bytes": 2902,
+        "sha256": "1ad29c7a9ecd2aeb317a44d0df07b68602b9f255e483bd2df44512ca7ad958f5"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "c6344db178355cb581dc6f1fb602b919d22fc9c444c153a471581e5ec5062955"
+      },
+      "native/events.out.tfevents.1795438755.jupyter-yd6gks8uzfbxzdb4.1482.0": {
+        "bytes": 3611,
+        "sha256": "a851bfddce4333db50164be271309ba0140db5092d73c869475769f4f19b0dbf"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "5b50ef34a6215d250f2fa64f0a5301ea432f5e29c0153c8c031302ef45f1f036"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35350,
+        "sha256": "0edb42ce10637544905bc55b133796e59cc2c33c9af738ecedff29e2d96c8cb9"
+      },
+      "native/video.npz": {
+        "bytes": 741908206,
+        "sha256": "75b4b1e4a14eaae901ad9a8c9f4d588c360fe8c56d5167c7a8b192aa08f396ac"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "8fe6494e0d71e1e9ade4cad013057949401b3892222fc45d693daed37191c87f"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "626ca9b4ad74ae934f38d766ff57247ecd88b1a85f9530b970b0aceefde31442"
+      },
+      "native_rerun.rrd": {
+        "bytes": 649059886,
+        "sha256": "8988924245af9efb343e256b8506e66f6e09a2e9b8fd331c04eb130b5be7977f"
+      },
+      "observer.jsonl": {
+        "bytes": 74116779,
+        "sha256": "857db48ad764fddc6e3cfad95c1f7c3ed74fad27a5a8bc2ef88f43c6e74845d3"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "55ba54a86e3938158fb4910532b65c26b1fb0919b84ce253819470560d6b4d8e"
+      },
+      "process.stderr.txt": {
+        "bytes": 86940,
+        "sha256": "921fddc2026b5488a1cd7c31a43034cb25fb7bde9d4a458833d69e694eb1f5be"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "fb084d0993a3c4de8b41342246347f6c59c7095b31ac3cbcd4b8931955f4dea3"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "c01f2439c4bcddd97e37e4b6d19345062aa7bcb7650456005091bd38732a242d"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3291822,
+        "sha256": "f8392c59cc0facdca11c77f9493a7009d6eb35793c8e707bd1a2b87657efeedd"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 33219,
+        "sha256": "da788ea2ff7fd49d22019017837073db59accda2c343faccf847396955b22f66"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "5c478383155101858e6b0839511e7cccc804b48aa47243f25158b3e67a4e67cc"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "422145a8273914073d7994c4e663fe3c742ec181e1e3956188380c9e14451012"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 692,
+        "sha256": "25883640d42caba88c0c509eca32c54d9af95409986cd6cba9f843ceddc11aa4"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "f14aa707934e01a79172fd9e4ad8a02fb7527a1747f06300700968781d0f7e31"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "5229abafde3791dd0bc5f2bbd61f07a1235f472bf23c2d16b5cc113175876820"
+      },
+      "trajectory.npz": {
+        "bytes": 26527,
+        "sha256": "5e69cf1ab220a2d36790f421bb366f76fe9d2c57360a2ce61034dbd243060327"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 58.04335609999998,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E7",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E7_attempt_001_ff537d357da6.zip",
+    "bytes": 289975809,
+    "sha256": "b46c42f5cb5a081586b0015b72724477c1006c0b561b1b28f9332ec4cbaec4fa",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "33c45594a06caf91230f46bda9a74b4622a2edcd47327b9b8ecfb8a43024b743"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "a2a686d2093814b11f4ebf25eda3ffa6d2a9cc857569396d311131f253a02bee"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "c1b9ff71d132410037ebc8c0ae6133b2b7c48559dd4506b567cd246680e97a09"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "faf67c97c16965fea0aad4c044cd23e778cd14a91119f9665e8fb8fc4adcc95f"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "5030ac9aede3b60daa9e29d06ead22543e6afe10a883532561dd91d55dfa685e"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "9d901c4e0005bad6887dd559aad4d22bc8c2b11f3884c52f157974f0baf184cb"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "c09c77a8a90b786ccec7147ae98a531c5a2b1de0d32bc9199e182eee7518f557"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "20b97b9443259e009132f68e6adf2a95540e5bfea0c3e35fecbd57aa1484aa75"
+      },
+      "keyframes.json": {
+        "bytes": 2164,
+        "sha256": "b55d1c1286ce6229d0ff6d78a148757702123540f631fec267b495ac594431a7"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "ad63a70d5c43bbb6b07ad59fa7a46b7cef0255fd69a4eb8efc7f2b5762d1dd00"
+      },
+      "native/events.out.tfevents.1795439059.jupyter-yd6gks8uzfbxzdb4.2216.0": {
+        "bytes": 3611,
+        "sha256": "74d918a5e161cd4c2f96e009b5daccabd8fdb69276541496dd0d80409104a5b5"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "d640734839472d786e62e5140139ec58265c25fd43d43f2f05749692bc8c0afa"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 34889,
+        "sha256": "c168723f8fe74a6b789db56642f553b14088d0339b3cef0b4ddf557e1a86b0d3"
+      },
+      "native/video.npz": {
+        "bytes": 547157902,
+        "sha256": "e9cb695f3e55401beb9120ad1fad78a6a24859af34e8969b7bb01d01f1a5cef0"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "62028343a25126e66f618bf466ffd0d18cf32b767c7c5e9d74844fc31aafaa61"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "04270bc6aac822e55f0cb0b0b89ff87d04be4d128f9d8104caae166cc2f5cc94"
+      },
+      "native_rerun.rrd": {
+        "bytes": 42129922,
+        "sha256": "81114c1ae08053babef43ad5bec8f624a5a7e1b2d89eb8b9f0af733eeae57e51"
+      },
+      "observer.jsonl": {
+        "bytes": 58804301,
+        "sha256": "8a29cb8ab60e88aeae88afecb794b26fd81c7efa4682d246fab1c87f6d12665a"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099"
+      },
+      "process.stderr.txt": {
+        "bytes": 86798,
+        "sha256": "876eeac5b054dc1e9d1336344878bf3575a775f6642b58ee7e8c4b24b6c06557"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "4490000220dbbb2ae4d943724dfe61c82e3be215515371407abbc0f4f03aab73"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "c5fdff7cc4bb6e2f1c3298df1eb0bd628df14c1a24b193243860b534527fb513"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 2817528,
+        "sha256": "6395e3405ea8478b12d072912de3a61600ecc52b45d7478cee3d6340e2a171b1"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 29625,
+        "sha256": "05a5bf950a0613b553a0845b8297e2c6804fcca1bf3a16b65461ed572367a6aa"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "2252550e1d0795c6498e66ed00a3d3060a90893a4de78ce847be20996497a52c"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "dc7be351bce51ef209584f9a8e4188d8dbe6ee206be1e2f795641da283d66bd3"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "ddd3337eabbfc90dcf0b16bfee23cbed6efc52ee91c15717cee00d7df61242b5"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "e429850bb633113285bf7ff46122aa16e4d4d852dcd04f67fb3f684143ad39d9"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "63f41cdcb17866eff819a85bf86cb69b32a37344111fa6e130ecbcb007d1b206"
+      },
+      "trajectory.npz": {
+        "bytes": 26302,
+        "sha256": "510b1d3cb8dbf3716ce4368691044507f2108936b2961b7a35f43ab0c112ad1f"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 17.2978721999998,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E0",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E0_attempt_001_59b50d626d66.zip",
+    "bytes": 219759928,
+    "sha256": "0541479ffd152ca71ea584ba6589e00fd758b45d5e8f81323eaf34c87ea37510",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "f05d8e404567760dbcfcf04e5213537a592af4cf140d14dcf0cd464146deddd5"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "fbff1719b3c5521ed4d8593961408741d361b84b5ad9659dd0f1829de66aab64"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "a089ce846247bed6bf4debf4dea9c983729b1cbd1a68bf291449b04c85e5b123"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 244,
+        "sha256": "b8c383a2ebda400ebb3f3e2b49729d2bca1af40285c29a7d26f5f18b4831aace"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "35b2efcac45835c6c8b3481e5705621daa92bc0a4c2d5e46026bec6a6b270b4f"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "fc4bf3cdf439fff58aefd9b0808d9b009eabe20007499f5e835f28cd1b40f746"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "62ae02e077475cfc92ebef369cb4efbcc3f14fd45e4699b61a5d37c08a8ab61c"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "7999f5eeb24191208f97ac13b4c4746b92afc20247628d14f6adc11ed260a351"
+      },
+      "keyframes.json": {
+        "bytes": 1622,
+        "sha256": "feafed657330bdc84f80664bf671aae8282a5c508cb25e2f647280aaf47c3be8"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 655,
+        "sha256": "cb41a1b3fc8b81857c4d28f4fad5da6261517e6caaa9623bf8c066d8c07809c6"
+      },
+      "native/events.out.tfevents.1795439296.jupyter-yd6gks8uzfbxzdb4.2866.0": {
+        "bytes": 3611,
+        "sha256": "7f1384766a86e34b7cd1fffcfce27ac3a35c8a501862b10778f9d58291e2eea8"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "d4c3e836d395fefb8f09eb275720fc1a4f6e2a9cbd99b72064af8be314c8bf80"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 34131,
+        "sha256": "010726e0d1337d73e3074cd9f4cace5c2c40cdbfa8ea437f8215ededb9efaf27"
+      },
+      "native/video.npz": {
+        "bytes": 408050542,
+        "sha256": "0cf336267d0d69117ed82640a2f24d8aa6b169bbbd66b5f8c4f1e4ba8e54e1b0"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "30f8d69bcd5a656f2632c7b799a8f682f9f6bf8cad5e196df7eebf7b85e805b5"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "08bd82badd0d6f2a8ec876b8e5fba135c0a5f9fe1fe1f5991d9ee2e53023abf6"
+      },
+      "native_rerun.rrd": {
+        "bytes": 44892908,
+        "sha256": "cb1392681011e6214a0c42a97b335881f405f9c200da667dee6bfa8404570c9b"
+      },
+      "observer.jsonl": {
+        "bytes": 47173634,
+        "sha256": "afb0f4b8579ce2161d9db1a0eb2681d231ef7c1a57c02af2e5bf4ba52c3351fc"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+      },
+      "process.stderr.txt": {
+        "bytes": 86812,
+        "sha256": "5c4520387e6d817c7d392cbfb2e18877d87d19ac3f9aff118ea93370e15f9962"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "9a7ea8e03ea58cb80b54f5a5ecc903dcfb931f433ca16b7a93d9a2c325f05f89"
+      },
+      "progress.json": {
+        "bytes": 107,
+        "sha256": "897df3a8c3f1cf95e5c0f019c3a4f675d0bea8dc068efde96e60516a95dcc62b"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3207157,
+        "sha256": "241a1dc5f4a64e435db26f4f01f0a003cd94cbf05c16dc1af919b5e2a387887f"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 29908,
+        "sha256": "ae644306de20678dd1a5b4f59d6332a6631f0103573441264b3ed70e772f42cf"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "33f7ac823b46d81411b4c00268bfc5d545c46e20cd9d55cb9e2830745bbfa556"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "a3c041ace17931d4ac6e321a8dfe1fd7a6f559c46f5601674d1f782229b8a87e"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "e1e2c3b7a41f034bf07e8c4e8e786aa350e91ccbf7f4fa21f9246aae663f6319"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "16cc782786e23fd59fd6533f3afb01e92670522ef537488b904f17633e45f41c"
+      },
+      "trajectory.npz": {
+        "bytes": 26324,
+        "sha256": "8fe7f044459c7e3430a6124e6775a800f8bbae3514bf1e617ce97f1f11150d01"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 10.331173000000035,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E8",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E8_attempt_001_e4d62d475153.zip",
+    "bytes": 884529802,
+    "sha256": "3ed9fec519bc4cacc9321adc5028e17c4f88c4fd2d1aee3478503671ace8552e",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "b2d76137d5a2f1cfb94b480e06b6c1ad87f51899588d9b650047574a0821f912"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "592e761962084f0bb688d81fe556eff230209e94fc06f75f8e99c0e376085399"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "2f42545874e455aedb2a09487387d48ba0dfd6c3dd443bc31f22150f939622dd"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "c32afeb3e74a5f0909e97e7cfef06233f0be4d4927c0fa93410a42b084212a76"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "160fa99b433766c3203eee4928c68fbe46cca3e772dba320f9721a823f79986a"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "30d35de127fc37deaf000b4eb7f2aad141a198aade68910da15ee135171d68ec"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "eac395ce881117aab70b60546996492759f0cf279a324e01e3197ae634e3bcf5"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "2cf8e81e2b34023c3b97525ebb118fab06255d59d6ee92dc0587dc1e714eec51"
+      },
+      "keyframes.json": {
+        "bytes": 3002,
+        "sha256": "9409b141d460ccff4168a9c9f5ac50e3ad9f0ad13bc79bf7e96880ae5481be6e"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "3a064284d7f353a3a5407205d5a22e835ca2c07a663684e5b13d3542e39914da"
+      },
+      "native/events.out.tfevents.1795439530.jupyter-yd6gks8uzfbxzdb4.3518.0": {
+        "bytes": 3611,
+        "sha256": "4e85bc3bc8372ea1ebd01743d5b16aabbb8cae289a6a11f82488d8b6199191da"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "324aed0327b4e25c9bee08c0cd23814c42d9499fa91c05bc5ec5e10f96d11121"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35357,
+        "sha256": "6f6e9dd977a6209946f9a195e9888cebe8cb1a89e8dadb59bcfa39c21cf89347"
+      },
+      "native/video.npz": {
+        "bytes": 769729678,
+        "sha256": "a99fb9413794ff30ec4ba66dab87f7b6ba59ee280b649d1f8d3f077e745b7ec4"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "12e563c4d8df88e2049b40a74b558fccfd7a13ca1e0493468543f3ed4e6d3eb3"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "d1ae94a10930d7b2fbd1721a2faba1fa3cd600c9fecb19b5b4cdf0a91a01b9b5"
+      },
+      "native_rerun.rrd": {
+        "bytes": 655242788,
+        "sha256": "5b73dee9e7b4557d90eaa086bf4968f28dd66eae8a5e1300dc2d6be5d5cea5ef"
+      },
+      "observer.jsonl": {
+        "bytes": 77174178,
+        "sha256": "3856824f6db7b5d4862fdb69ff3e9c11cccb86cd02a338987d1550f89dad8c21"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed"
+      },
+      "process.stderr.txt": {
+        "bytes": 87436,
+        "sha256": "e73d0d35f92893442ec8efbaa6dcc3f09992cd45d5532e700af50ab55b7227a7"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "3e381a138fc11681c6fb884510212b9bdc948eff0e4d37d796b868c1cd39888f"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "94170d7cdfbb203c33531bb1c09a25e79e120e0c17b6634349cad896a577e3f3"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3277100,
+        "sha256": "2acada60fcfee82116797e91549da1af708fa0d36cc9ce061bd1706acd7c7acc"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 32554,
+        "sha256": "790200dce5f7109aa27793777a1e3dd5878c34ab8f367731c6a1efc874961ce1"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "ac2186a876fa78384e13b0ea23b5a19a994b7d23dbaaa1bb9550d70b424cc14c"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "776e40d0f1e0bd6c722498ec337c3068fc79f388bd8f81778d1c8a3328a48276"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "c3a305aacdc2f13e535d7de9fe1360d9fdb4dbc6fefd50010781b403c76f5345"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "adb9d6de4f4c147bfb064e2f55df6e4c3980259553b98b95be1b3d1336b65795"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "92d357069345d9c5f7010bf445782b3b04c27a9c322692752003b784a96459d6"
+      },
+      "trajectory.npz": {
+        "bytes": 26531,
+        "sha256": "a940703461ac166d3371f7092be454c8c247c1d62f8eab4a8ea2e78ed9d3bf7b"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 105.08406519999971,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E6",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E6_attempt_001_210dfb3b5b07.zip",
+    "bytes": 841521449,
+    "sha256": "e4952912d89b15b1bcc3d6df6a697d6e144153ba5f86c7fcde35258363d27ce1",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "52365363dd8d58e1a908f48218c090775ef6551512822033bb9511e8a7b696e5"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "bbceb531b504a0657e65316c2ec240222787f7a7853f905a9822bf6b850fd426"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "ad50319c68a738455964b516bdc0c010a873b66ffbf29958a571b7c81e3321c7"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "63b7516f7ec8fcccd41d37124a907594236ff5b2cfabb1959c88cfb8af63b626"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "b263c754d074d2e7573d1b376bc3854814fab5c58afe1d6bd18d4e8be6bafea9"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "b6aa3f8e7d3b58d5c72a173ab153f47982410434bf2ba1af6ad704297bb06304"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "6505fd74aa076fed8220ae3637978edbabb14d9152eacc4cf9a331141ffcb52e"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "9922124c2eec6d570838d1733eea34424ebed3869312f40c22761badcb828769"
+      },
+      "keyframes.json": {
+        "bytes": 2864,
+        "sha256": "730b4fb3cfe4cb01122d04c8ec3b83927159b2d40dc52aaaad15f1fc80ffe38e"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "c7d125d4f6558d4125b02c7827962c5aea9af337a558bdc1b1fa9dbe76ac7943"
+      },
+      "native/events.out.tfevents.1795439833.jupyter-yd6gks8uzfbxzdb4.4236.0": {
+        "bytes": 3611,
+        "sha256": "5b575e81ead091f3c24ec196c6dfc6d1b0b6c70be3b1744e915d2cdb0587c6b1"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "b0ce75f08351aed13ad9ceb328ce8ff707dc869dc3a3958c63c88deb95441743"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35352,
+        "sha256": "beb4b6bfa4f019a203e5bd48f991ecf0f484dbed684cdb3118d028412e982256"
+      },
+      "native/video.npz": {
+        "bytes": 732634382,
+        "sha256": "e7a9da973993cde358808cb5c86f055f7fb42f2dd70fefd111de237abb9d02a0"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "2b0764f84e5eb4486a4ec7d2dcb6df4043db109e7f42a2c41afdcc7b538f5813"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "604792dea5ec1b9bebe397b7de2fb8a38cbc914904f603e41eafab9cbffd48e8"
+      },
+      "native_rerun.rrd": {
+        "bytes": 627735245,
+        "sha256": "c509ad0437981f89fd27f880ea22d1ca9fc3d3e6b401b1d487bcbcd0fe8d8cc8"
+      },
+      "observer.jsonl": {
+        "bytes": 73814045,
+        "sha256": "167614588de17f6c2bc47b699795f43bd131b8582fecda1717e3b22b4ff00cd6"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "6e2df5994153531597ca43be109a5ca80acd510389c090d049353271c47dff8d"
+      },
+      "process.stderr.txt": {
+        "bytes": 86872,
+        "sha256": "55d535c00343aa48bbf0120bd9e591c929631359706e0e88e8bb7e87a2faaadb"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "dbcaffd287d05e7545c6211abbd9d34843423a9c387fff5071b8f5afb36042c7"
+      },
+      "progress.json": {
+        "bytes": 107,
+        "sha256": "a57eb48ded46ae490ea5dcd6b346ef68624d17228e5f52fb64d403d9b40e2ed5"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3211114,
+        "sha256": "65d07624a5c7b513fa97c25c38c42e3a8ff28797cb54dcdac7f3a3397b2b74fe"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 32544,
+        "sha256": "3abb203eb72e05b54449eba002e2c8be8cc15ab47b6f98cf822b151e735fb09f"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "a14f2ba34cb49f086850fd75aa843da2ffd336945f7ffe8a426d61744d624462"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "32f45f9322371f81dec4269cace7d5b50473c9fa4c0b576a2022db19acdcdb7d"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "153316b0275063b2899974fe3ab797f86d087a0aed9d6cbdb232788b67cccdab"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "1411a573a1612764d3b0fdfcd03a2ab6db5bb388564283a280575492edec3fce"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "7417caece77caf635f00d391a0d67ee7404865c4d1d4e2547f8923cd55530a32"
+      },
+      "trajectory.npz": {
+        "bytes": 26469,
+        "sha256": "6efc2d9769fa520a39d1a86b87d51227ff78b6f55fadba589418b66140463178"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 130.1749676999998,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E1",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E1_attempt_001_4e95393624b0.zip",
+    "bytes": 876530477,
+    "sha256": "03884142fc8ece42681f8b4976616ce1103a0543d5dfa6b8ab7f608d06763d25",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "dccb45962538807666298a4b2670eb5db9c18bbd539dd87cdc9f92c7a58fd630"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "48746c6689546c4884af97c17fe24bc1bcf13c2fa435642c580557688f473fe2"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "55477f7d4cd52b949ff9002ab986605ff935653a2437796d0b43ecd69648211f"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "2d908db070de2b1265ec3c9ae203e9663bfd773533f6ab0481107f32a183c8c4"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "2373d5f051a7569f356cde23da7367de043c1d1a309676a3b5e29abc36932e3b"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "27e348789fabf87eba41e9f5871a6f7a3468b926f87f8e01399d784cdf28dbe0"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "035144d0ab2234763fc1681d3e34e51b7a28c9966f668e366fcd35a66c72d9a2"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "8660f5ca920c1679ec0b002099822a83a90f4998c072c666d6d4b284faff679d"
+      },
+      "keyframes.json": {
+        "bytes": 2920,
+        "sha256": "27204013c6069c19bd7be53c3fc3b6f5114a43cb82626ccf545a6e66df012110"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "ad9f850e13fea7e087c8436eefd111ad8b5a50999d02c14f519cb0449644d0c3"
+      },
+      "native/events.out.tfevents.1795440127.jupyter-yd6gks8uzfbxzdb4.4918.0": {
+        "bytes": 3611,
+        "sha256": "17f4426340c6e3cdc7f21a307a8c0b77962af7f82e4c508c7dc71fade2e29baf"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "eac62f4cc3fb2abb7cf03540c914067a54e091ba51015ae43ee7487f195d105a"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35351,
+        "sha256": "7cca93e515f2bb20ca0fff7460eb8ef57064bf6040472822fd732d84169a5504"
+      },
+      "native/video.npz": {
+        "bytes": 746545118,
+        "sha256": "3b160c540ebf8ad0b62f9cd00fa38c6b7c9a4aece721aa215a694c5d48866edd"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "84beddf10490038e610af286ca95d75716f9d13e54a83971a4a2fc363466769b"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "8bf21b68e6b28f5f3268ff14a849a7e823bab43cb9e8e81ef04389d890cacdd1"
+      },
+      "native_rerun.rrd": {
+        "bytes": 662634058,
+        "sha256": "18dbb37f180dc5d0d27eff4ad80131ade281a45abcee60145faec27bc5e1cdd5"
+      },
+      "observer.jsonl": {
+        "bytes": 74666824,
+        "sha256": "8a9699e3f9ceb63c51012fa0e7e5cba017895f518dadf62101652394654776bd"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640"
+      },
+      "process.stderr.txt": {
+        "bytes": 86748,
+        "sha256": "1f745bf41a66f617e70c49842b15bb7eafeba07f4c07078df6e7ee02fd9a6dec"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "cf458450e8e595301b8758aae71304da4190af6a759022327f8a58da3e9b35ca"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "fd5f1a67d469c664a74f19949e1171868c9532f835cb50f3a0611160d5a89dba"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3263739,
+        "sha256": "c27cd694e0c8c5d8e9491b3b8324adfac6243201f3194791e8ee321d1b44ea5d"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 33210,
+        "sha256": "0d9a5b0d60a8d1554bc895241f33044ca5de3ab2dfd8dd3ece87372f50925e64"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "1dc8618934a5b26eb79dd1da100fc3e91824f7fad750389325822ee23cf87bcb"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "48faaa628b4f27751ea8f03e06b93e95347c2a00930737e13ba8553d2548eee5"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "4d884f3e954d1c065569eb90927460d2313745a69f8687ba637c19ee65fae93c"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "49b2ea6840e63224b54f5804344169c5c5ea3597a972702fd4e89e6545d93e68"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "417bc233bf93380414f2a122fba51f2065de9de6cfaec5594510f2240db4ebd0"
+      },
+      "trajectory.npz": {
+        "bytes": 26503,
+        "sha256": "024d9dc6dd51a94fb650cc2ca96fb43a09ae7df552dad55ff26e6d1cffc9bb4f"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 146.47975629999974,
+    "remote_deleted": false
+  },
+  {
+    "seed": 44,
+    "arm": "E2",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed44_E2_attempt_001_f477507a2f08.zip",
+    "bytes": 281478805,
+    "sha256": "4db9d5bdb42cb632c6222eca46abd806f828507f4da06d221e72281c09e595c4",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "98c0984aa1418f75efe9d6a994f3a90dcc24aeee618a8775c0b1765014510247"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "0acd67b8297d153b9ee7adccc61e090c477a201a77a2ce5beaa657125dd57be8"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "12d672f0ab9cc6b15cf2ea0cb2470d1f3e2d2d8f51bbef6e85be8603134918e3"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "d3b8700a8d3b2a55398d1f0dde3a023cfd966170c31a65ffdffb7439c23a4c1a"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "d93a2fb17026ca73cc06ecb9a0793e7a4c04dbe6250ae56b9c828eaa693a849e"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "564ced029abb82201312ff977be246bbf4ca8860b68738ec40fc100f1bfc7bd3"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "785127ce49146217875460575dd1f5e74d41f74c47044780a9b87504dd98a3e5"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "65dfbf2fc0a2a21e1a7d3bbca19dc2e091365a0a552fe0073bd576cd07a5cd09"
+      },
+      "keyframes.json": {
+        "bytes": 2092,
+        "sha256": "5fba85ba0f5f721a0e155642bfa93486a77b67ca1fdc17801a6ea326fac7f3cc"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "1bd9c2b09c7a2d7f2c068044a088d66beda26335f0f74d7720986d147fec70f9"
+      },
+      "native/events.out.tfevents.1795440430.jupyter-yd6gks8uzfbxzdb4.5580.0": {
+        "bytes": 3611,
+        "sha256": "59eb08339d53e19016200bf00ecbc2771b2bd55b2c1b0592bcd38acf3b3ca132"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "0489469b214adf5a2c5ab3e9848e6b8640de1731adff6570ae8852aa05fbb493"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 34989,
+        "sha256": "38979cfbb4869e21889b12aeb6dad40e3b9d5600fe9be3d1daba1fe697caf6d5"
+      },
+      "native/video.npz": {
+        "bytes": 528610254,
+        "sha256": "fc885f3d057644f9577b6ac9046f567bf017fbccad4c1f991e194cf83bfb1ba9"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "eb4fab4fd23c844c4a1e26757678e66e7b45882865645267c4c824f1f494d583"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "20011b3109899e665f990be54fc10341b90e231dd0c1211d690c0ac6d3e7ce44"
+      },
+      "native_rerun.rrd": {
+        "bytes": 41932684,
+        "sha256": "a0a29ed174a48c1f49b9b77976ed2995586b86cb9b6b5b842c5b97213848c5e6"
+      },
+      "observer.jsonl": {
+        "bytes": 57164283,
+        "sha256": "50e9a1bf3a9e77fc4365d35f5fcb7843b842c1e663ccd8d7c13f69cc92e96320"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "7ef39b96a69139a4a2d07d404d3cdbb37516f4bff5d8ac520529e1b0d5f6eb85"
+      },
+      "process.stderr.txt": {
+        "bytes": 87037,
+        "sha256": "26d3bdd4dbf27048725a174349841b6d86d61ac0f90ee06e79e18b53d4206ae1"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "d2d73ff1b44fb24bb6c817433e1cea1c5c859aa879c12914cc76924d3d4930b9"
+      },
+      "progress.json": {
+        "bytes": 107,
+        "sha256": "93cc8ebe7f956f8efc4cdbfd37ba37f6490540e97fe0da4125b123f2b0ca12df"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 2753807,
+        "sha256": "7c2b3dae2ddf5355fbe31184f2665bf7b4236b4e832f6baa1a45661a070e6dbd"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 30535,
+        "sha256": "e9ba07d8d021b11564b2d7304599bbec404465b8c157f01bc7451bd026d48270"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "41c57c0366ac7e1c4f4bcf462ee472d61cc6b79c81939572b0160a52a547d7f7"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "d0287910ad7902458a5e63f1e7844ffb3a4d1b2713a6a20382205dbe40ddd354"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "cb2b8ad797383d393c0b6736622fe582299e9d73cd38fd8ca166a104a21eb3dc"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "25be19e2d46d6bad0b8ceccf4079407291b0a876e5a87e19c091592efdcf2741"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "14ea6baa38aa4f223a1dae557d1f0423b3b70a60408dc561853ef2c2c3d8750a"
+      },
+      "trajectory.npz": {
+        "bytes": 26325,
+        "sha256": "bfade4f0703ea37ef8018736bbf58a48ae92fd5811d31ed82e401ed841dca2c1"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 32.9643145,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E2",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E2_attempt_001_d9911bae5767.zip",
+    "bytes": 287294765,
+    "sha256": "c9bcb2c7071da91fae2c0b6310de4ba0c555e216925b665c7c06017255545e39",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "70195618827e6ce43cfe76ac13154da527044939368c1205c18288496b714783"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "e0f651348b559310c92fe312e044587f00d02d009fd14cb126e27f4dba138eb7"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "317efa89c6c13b97d48661b3a33e32d2c92f4cc9d754ffafee88f8738a2fb857"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "03f3f685a304c2443534791b0625da90f38e0cb68db58193a8e90f2c876d4575"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "237d4353e71dadf05e3079a9078b104e91b7f1c14ef352782f8148394a29dea4"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "e8562ac7574d45052a6b685189ca6512f201053551acf738743804a26368b88e"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "adc24a3eeb65304a721491e49e7718a517b1d5597c166cad9f5a8021ab82211c"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "c7311c37049775958b4138459eb696b3dd6fae0108535321a9a6152b17eef4d4"
+      },
+      "keyframes.json": {
+        "bytes": 2130,
+        "sha256": "92d558a22718eade8cebf4ac3efb341821701710f158c32183cd1f77564ea3ae"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "0bc20099044f3fff5769af1d173b53cd024287dee7541b352cd7722cd6058758"
+      },
+      "native/events.out.tfevents.1795440671.jupyter-yd6gks8uzfbxzdb4.6152.0": {
+        "bytes": 3611,
+        "sha256": "123c2ab8af616ca6e7ffd6d3cf956244c4c31f96015826301b4e6e2c5353797f"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "aba736e716d6c82fcd1ecd4801f583137663ae9dbcd1c9c305ef53429bf2d90b"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35277,
+        "sha256": "2a42f276950e3af6d04de2993f6b2545abe938a851713f7ef9d06a34d7115e55"
+      },
+      "native/video.npz": {
+        "bytes": 537884078,
+        "sha256": "78ebd9d831d5109f03812a720c80b8f2744b54b6834fb158eddefab4bc9b9b3a"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "8ad38b8e9dcaf3fa4bc0fd57f72a5f343f02304c433278c0ada1a5957d20231c"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "5f0f4fcc1dddf1d302f417a8339dbf44644b684eaff0f19dbc5daacd866bc9de"
+      },
+      "native_rerun.rrd": {
+        "bytes": 44593355,
+        "sha256": "9b725a8e19b67fd99c5a94be4e6cf5e3f91c64990113c2f3d3772f334a71a661"
+      },
+      "observer.jsonl": {
+        "bytes": 58060723,
+        "sha256": "b009862abccabfb0a9dacb747603a5d2330fe6714d609add47beda97bc1ad904"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "7ef39b96a69139a4a2d07d404d3cdbb37516f4bff5d8ac520529e1b0d5f6eb85"
+      },
+      "process.stderr.txt": {
+        "bytes": 86946,
+        "sha256": "bfb77efcdbea04f8f66dbc0cb76247646f7328dcdb9b336465c99565eedb6a1a"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "5fd518d091c4e5c77099aeddcb9723fe1f40b40a150ba666626e96cf9b5be6cf"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "13a64204c797a16c1ab9a556b6ed03b2a3274519553aefb47cfc7cb559bc5bae"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 2920336,
+        "sha256": "8abd735baea06416182ad77f199c4229606ebe4ebeff9b8933a0d94e33e5a792"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 31124,
+        "sha256": "3b83c7822709ee602d57134748e0374e49a9ca514897cf012a9802f4f326738b"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "e2c8811d7eac8aa48a951d511c43f3d02529ba60c5180419656e7a8c2c31d92d"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "7c3dddfe9adb360cf6c9d6878e4fb9e3c36d1d731d8e425050d9dfd7f5b20717"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "d8a2b676cf6f66c3139b66384d4c36b5b7262cca3b0a558d27e307faa2b25ce0"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "25be19e2d46d6bad0b8ceccf4079407291b0a876e5a87e19c091592efdcf2741"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "2f61e38444bf5468c2240aa4d01eb79c44094fd3bde5205065ab0dcfb2ab59f4"
+      },
+      "trajectory.npz": {
+        "bytes": 26391,
+        "sha256": "d695457aa4d386ac107adad0246457ce3a04750498647a87b82a4fe005d31450"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 27.585429100000056,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E1",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E1_attempt_001_ad8473f37f40.zip",
+    "bytes": 880225178,
+    "sha256": "7a9c93dd4ff25df39f6937611c06e0fd280ce6e3eee60c9ec296f79a2f89a2f1",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "d86e2690db512900789a38a1743418a36007261676dbc8f112e2a741fd400ae8"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "bf5e0984de3addf8e9c8120da5c04d21b6887b7f1c881ad01d432634e85b79aa"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "ae594d0bf27761afc92682655356dad77f034276afcd245a56b83b6ffb0aa1ef"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "9da5577149247dc3f8cd01d35610ac523c8a462cea16e5bb0759243b4cb36b28"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "6bf8d6d9f6f401f5aeaf2d5a78acb54579ed6d388777a83ee02d1888aef2d7ed"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "2e4340bf1925cb991f0bcdbbdb98174a19603df198b7cc0dc40a025aea71e3b0"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "c41988577f506426dcb0a6b8e48c77eb79a32971131202e9c9adddf573f62d71"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "6bffce8ff53e695f53e4d5d2141d509297c9c5d14de5362916d811c656d27c2a"
+      },
+      "keyframes.json": {
+        "bytes": 2920,
+        "sha256": "9f94c9617b0044511cdcaea0b4346568b1127721655e78810e4104704db10962"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "bed815c45c550ec1c5f91a45ee837cd172bab632a892974fcbc8c959468396b0"
+      },
+      "native/events.out.tfevents.1795440918.jupyter-yd6gks8uzfbxzdb4.6848.0": {
+        "bytes": 3611,
+        "sha256": "0ef8da47e9fe1988b64fe2ac718bbd1d3bc141986828d53424234e475ce24c9d"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "649ba09bf6d7d5143271a348f6389f3d96d210dee76898086d0bffb67fa7e0d1"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35347,
+        "sha256": "cf5ac083c807164cca6fc1e08c9dfaf88bd45423ea8ffa1601db915e5553e7c0"
+      },
+      "native/video.npz": {
+        "bytes": 746545118,
+        "sha256": "b9b5e905a4db77d1a0b8bbd0e3a3cba0db8c9cd048823dd39eed9d479f66cc0f"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "6ab8493721f67498832e1b0ef12d0531442a20d41b16ab9675a808e5c18d7b09"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "2ae2dcbd9428d2aa41e5fa786c62b27c9724db14b957db1ef3bc25c99d3edb11"
+      },
+      "native_rerun.rrd": {
+        "bytes": 668529113,
+        "sha256": "d131336c1516979ecb9cd577f358dc2a4689d18962c78c8ea46122c8733113b0"
+      },
+      "observer.jsonl": {
+        "bytes": 74570498,
+        "sha256": "8e11f5edcc9ce28ce3415dc0b068ce84922a367fe9d837813667871f5c56d159"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640"
+      },
+      "process.stderr.txt": {
+        "bytes": 87714,
+        "sha256": "1c49c719f9166fd414ef38a6361ca642f8b32661e72759bca41d8a0dc2adac88"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "40eb101da9671ecb506f5af6f0b76dbb11e5e82bcc4c12fdf6aab6fa4431aba6"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "b8a1fd4bd3ef0da3b50695c87ba2fc645df9b20998eda6044917507b4ec8f46e"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3277711,
+        "sha256": "605b2a9d7ba5cef577264e5face977b38942eda3622ca9923a148236df291927"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 34705,
+        "sha256": "d40e03771817f29f492751aca8afe8898637f9fef9e66340fde318a915b0b6bb"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "62c4441d72aeb461a3913d9f324ebcbead0ca5ac4a9ba32ee2f14fe9cf6c5093"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "1684a57d418486fd5a292cffb9d8e33d57f54cc06b9f406ddf4d1462148aa68b"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "065a67452d4cff31a76d5c55c3668fa73cc49d2470c923ed94ed7707624ee88e"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "49b2ea6840e63224b54f5804344169c5c5ea3597a972702fd4e89e6545d93e68"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "4443e9ed676198e38959b726e140d3e2993e50a21319d82ec813f637776e69e0"
+      },
+      "trajectory.npz": {
+        "bytes": 26490,
+        "sha256": "ed46c58ca69a9aa63aa18becfb2eaa69abd266fe008962b01df0f225a9316fd4"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 67.35312639999938,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E6",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E6_attempt_001_0dc81e49fbd2.zip",
+    "bytes": 875544390,
+    "sha256": "fc9b05c49f2dc929bab2982e63f0bb9c9575cfeb48ea1b6dc50426aeb5452f6d",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "eebffefe1327f3a8ad4ed9a8f320dee51a08e9d3f76e63e5f7ea91bbf8ce6ed1"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "d7ec552fca3a892a1bf0d39f63e1a466d4dba99f793a11db5e300a212bea0273"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "8dbfe0d188734906160c867e20af2d195d01fe93e0efc7b502eddf1a252a2563"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "952ef90a2d497baf4610e040a565025fc36887cf24c482c94f1971c9a109351e"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "e24ed4fa3e444a9f8c0b4ad5c88b3c1972cb3d1de591af9277bf2cfc16deff05"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "6879e6c62536e084a1e5c816f663f03d6baa90d763e0fd0717b06f8c95dd71d1"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "886e2f9f47135f775072225fa92221314606d8fb870cd2a592bddb90ee2085f1"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "f52601e15929a612eaae85fae4b87f27133aa7509b1d6c3da6eaf2f77896a34a"
+      },
+      "keyframes.json": {
+        "bytes": 2792,
+        "sha256": "7ce1b22f13cfd00963a200d8507dc56e6beafd4eaedda3d971d08c8d3eb79daf"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "926680086c05a07099ea44f01e3b7b968fadb0cd642d38de1b36260e36f5e614"
+      },
+      "native/events.out.tfevents.1795441235.jupyter-yd6gks8uzfbxzdb4.7580.0": {
+        "bytes": 3611,
+        "sha256": "fa1da3ee5887f7233ce6f3a26eadddab5e402ca0d41011e7c5d1ece852de37cb"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "082309b8257c269f9f552104b0e5be6d6b913676e4af598fe2ef05b3eddbc044"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35346,
+        "sha256": "951def888191101d18a6130d7fcf7910d3b84c96639df3193fb4c34a3be6371e"
+      },
+      "native/video.npz": {
+        "bytes": 714086734,
+        "sha256": "9a026a4d6ee6de125c80616dd29899ecb19b4ebc70ce881cb1b73dc3c4af8f56"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "9bf9f4fdc0874e9268fceec09dbbf35aa6bd946292e37dc5376588fc55861299"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "5b0dc7448670e5e449d02dbbb76961b4a130686ce22daa2de0b6a3a54828cca6"
+      },
+      "native_rerun.rrd": {
+        "bytes": 683353148,
+        "sha256": "e6cf62e2e2c7695ae8a96352553dc2dd4ba1ee42faac202dcc7aa1d13c0f41b9"
+      },
+      "observer.jsonl": {
+        "bytes": 72289795,
+        "sha256": "506bf17b399d6ff133dc8af330dbb2caf4cbc7ebc034231883b294289154f597"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "6e2df5994153531597ca43be109a5ca80acd510389c090d049353271c47dff8d"
+      },
+      "process.stderr.txt": {
+        "bytes": 86917,
+        "sha256": "68afa050b9731c239ca8b3dd1cc87be7be76a2e6c1bf74b347dcffa548fd08ca"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "34377c57f9b72050f2525882fde4d595ce1955382b3566a17f39070013621865"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "3c8cc0d6a1c2f5d0c7485ab06371f197294b5a32ea8fa7692a34ee075d6be748"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3162839,
+        "sha256": "5b27c0588df48bb1be0329b3e22ce59fd3d0a11678449ed1f81696481cf6caab"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 31328,
+        "sha256": "597b49675b6956b23e86cc3e8d46903139585064884923487f5995e3f78d57ae"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "5199b9ebe8c818c8a1d44a71d09044bbcee66c0857077246af62a66a30ddb9bb"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "c463fd0e8128cb05309fc2f7fc38f3a00a3d6a45421aa990426214bf3b21b1ae"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "5c786461b58dfa91c23bcae7968fa9cde58a6ba5f0434a32d6a59057c20ceb63"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "1411a573a1612764d3b0fdfcd03a2ab6db5bb388564283a280575492edec3fce"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "8eb6b9684a07296c24e983951e5c4d73cb2dcc1b9b689ef0d24c59409409a95b"
+      },
+      "trajectory.npz": {
+        "bytes": 26497,
+        "sha256": "4bd337da0879327fe37bcd14f10fbc1cfb5fb32b596eb60be811f2c9b74d81ba"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 81.92262720000053,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E8",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E8_attempt_001_7b26a118a60b.zip",
+    "bytes": 873478669,
+    "sha256": "3880f49b9ffccf8ee8981f5b9c56ab4248e968eda5daff94b5f929e25240a699",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "0fdfc86c85ce6582dfa75804a2acaf4c178f55e67b8096304075839082febcbf"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "8809fa889b920c664eddcc99d41f15a07a9375e5e1418718f22e130a37e71ba9"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "9bba9cd030e4dd0d42ee5e79a438ab6773b3474e3e57863c36d0ef2dd1d4234d"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "e3c21d6ea8e003979efcc727ac6ccbcab1cb22508688e900fdb23b3b982915ae"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "c9426476e272163bab9e7fe6360b0346e4e78e51cddd7acf3b28efdabc75d2d0"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "d858092fa3e3e52468e89a4ab9e85a1c59059812b6e4a8efec977c916ef45504"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "eaebfa649a01d404111c3652df1f55c3de40e233540cd0986db68944c6931a59"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "8a26c5ea480a2ff95d503c6b739245c7b1be2892d68b48202ccaacaa1437854a"
+      },
+      "keyframes.json": {
+        "bytes": 2864,
+        "sha256": "44ce87a09b5c8cb768a64d3ddc572425f578b4469ae1304f0e6cc015b895d1a4"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "108f68cf9bd2533418682c2774086513d9c3f600cce921c882f002fb335572dd"
+      },
+      "native/events.out.tfevents.1795441524.jupyter-yd6gks8uzfbxzdb4.8230.0": {
+        "bytes": 3611,
+        "sha256": "ce8de1a191b41d659aa86630a8106e29dc8b6e8598cdab32fc6c0c09f39f0efe"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "4ea1c45f9341c22101f1340709ebda0067e2b7c64da79053cd66169f6ca88f30"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35346,
+        "sha256": "fefc932b428949342a0fc7412c76f6d234f5d2f648dda7417d2d18d8b59e1e0c"
+      },
+      "native/video.npz": {
+        "bytes": 732634382,
+        "sha256": "7907d69eeab82a785ce2de3b9df3d2adfc700f42451f6a23249cba3289debc6c"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "6f77a796fcdebc20b0a4e289ac87a7509c4f713b442410656297d0d7614e0221"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "b8261d5dd0ed957450fc7ede94438069b691878c697e5e6f2034f7022b376c85"
+      },
+      "native_rerun.rrd": {
+        "bytes": 668485427,
+        "sha256": "a9f3c88bb9b7347de9ccdf347d04b503b421622740671302616ee5a20d57a671"
+      },
+      "observer.jsonl": {
+        "bytes": 73221120,
+        "sha256": "8bac6a1f55cf9a5f5eb5abfcce603b0f5d321eab75d5cab1192ba3cde938a593"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "64974dcb64b819d26c7bb725d9c55ecc7c77bfcf7597ffcdf57fb4f3332025ed"
+      },
+      "process.stderr.txt": {
+        "bytes": 86689,
+        "sha256": "bd450ae1132fb4a2349490c7d2b537b1eb5a6a292b2f9e23c1c6e69a241bf412"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "87bdd781df53f889cbecba4e9d4d7c9088af1dd8e2dd2ba38923f369275b6b20"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "97c1305a6b401cc2cce21c3e96181ecaee6b86ca0f859f2712ba4278fe491b10"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3287293,
+        "sha256": "73db67ef2f9d4000e1cef9643a833ba11f1519597580f74e0a892c9d749a14b9"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 31675,
+        "sha256": "983584124e3b5de493ea89c2603335a1b00a08ae8a7e3d6504bb59e7ec4a552a"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "531601692596e6575d2208661ec017b091363b962f24880a16c2ceea4c32fef6"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "90167147430fe8149a16095044e5a22948509933e853b03dd3300204d7c76dcf"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "be1b3d3208047f9a4daa2037ebcab809062df7893f343ef5ab902038307d786c"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "adb9d6de4f4c147bfb064e2f55df6e4c3980259553b98b95be1b3d1336b65795"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "46e3659b46c9d0912f3299197bca470558e10b785f69d6972660ebc686d4979a"
+      },
+      "trajectory.npz": {
+        "bytes": 26422,
+        "sha256": "88de5e30ce4cbb4f11a0e733e69cae0321d155b31944315becf0d218876f50d9"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 49.7958950000002,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E0",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E0_attempt_001_13e927ee876f.zip",
+    "bytes": 271119591,
+    "sha256": "6255ac212d9154ba82b9158897c1defc87ec18a0c74cd13eab65f28b0d6dee43",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "ce961b9447bf2ff0ec68689d85629bf47e3ae98a0cecde4bfc4e464b01d59021"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "d4c2a647abb3bfbe8ddf89e15e7a722a39984effaa7c601456c92919bc1b2367"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "a1b55a778f81d1d516114250242952680a22da28ff041e8e18ec06611fb728cc"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "899a5ce96a26087e5bd1247a5643bddbd0710f2973a5c3d85d572ac98155e6e5"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "bd382fd8efe549a344fa966ddb8bec1a4d40c3e29785717345327401f4f1f245"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "24316ecb41218febf663bff058cb8d0cc7571bb7b757b12d8ded93ad7d0ded8f"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "8a08513318b6b908be83fce43ed2fabd1d01c45b36e06a5ee86902f9bab642e7"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "43a1d512d5070c5c5a53b328e5a9a6e54a26d58c173a82bc8dbc57cd13cc3b0e"
+      },
+      "keyframes.json": {
+        "bytes": 1964,
+        "sha256": "fb51872b21a4d0900580a89a2cae22eb4707f4c4fd08e1b12acf1858bd82b6e6"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "e07f4494c16f7ff58b87a7f1f184637f6f4e6e8c696597002a76b7f457927d5f"
+      },
+      "native/events.out.tfevents.1795441814.jupyter-yd6gks8uzfbxzdb4.8894.0": {
+        "bytes": 3611,
+        "sha256": "16b820030be407717664a8637022914ca853e6bb28e0a4d678a3b4fe4ab3a6c7"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "ede76d34680386a18a5f2c5cc2f43fe2f2966371fd45b6cd21fac32eade79ea4"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35536,
+        "sha256": "503670016d6c51e5a217fb66f747985587fb42251f6cffd9f0dc8ab4df2d9237"
+      },
+      "native/video.npz": {
+        "bytes": 496151870,
+        "sha256": "388bbb540f703e1cb88ed7fbf980b4a0028e98842ba1caafaf38d527585ba86e"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "5879a09c0ef40a6ecdc5626b48cbdb9b4d474a818b6751d42062abeb203a9b20"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "1cde91540ea2885178077e517c639bbfe7755c7180048a643254d0fead787b07"
+      },
+      "native_rerun.rrd": {
+        "bytes": 51503807,
+        "sha256": "40d25f056d97f27d338890a1b9593ac4eb22609a82950173d77ac69b30983f01"
+      },
+      "observer.jsonl": {
+        "bytes": 54549811,
+        "sha256": "d9bbb4323da9ce071d70c90580b3a5c6760666dc774f02014a53993c918ac463"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "242cd6248dea4186b803b5c45d4e7838825f6bc9bd1ba92f6d79b241d12e4500"
+      },
+      "process.stderr.txt": {
+        "bytes": 86812,
+        "sha256": "4aec2ac81cb3420b6adc18b64308b788817eeeb042f48fc944eb86d71fc61c55"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "e7776b3c575dbdd6296958b30e0910a979e70598c81bfd38818097157423dc1f"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "7384de2a6e93b3aef425f6f972c3cbd53f4ccad5bc350c53ad75dda4618b301d"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3001113,
+        "sha256": "5a6f91cb19282c637fdd789cb1033c6563de8223c5c144a4e4ce54b8162220ed"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 30207,
+        "sha256": "97f74b051570ee20d3d7bfccd3d76f2cfeb2d47dacdca2a0336fe4f0958e0214"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "48c3420c1b0ae338574ae47a56a734cb7cdc9e57c76ead07805b01da49e8b4e2"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "0dfdd5004c51966ef37f3a2d0bf589c5c4e359926527900db1db7415fb9e5afb"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "21a7cf68058ef2419c5d2fe8541304a82ab842882dcedd2bed477c8bacee183b"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "45e6f0f3e107a31f23a9919828c894a73f7d0fc9206e2c123021cdf2a7927b1d"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "63947899969e156e2826451ec01b61ea379eeb80a5ca9ef8e99d1fba676a3b5c"
+      },
+      "trajectory.npz": {
+        "bytes": 26283,
+        "sha256": "04ab11a1e5f25f2b784facfa88548599ba67180ed4e64e1540f038c46d34b050"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 71.525533,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E7",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E7_attempt_001_7ed61f6a40ef.zip",
+    "bytes": 292829994,
+    "sha256": "03b3ad4c4a458422b9184f514b71adb00cfe0cfb9279343e919d148e59b9922c",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "f5744a0d7b48623962e1825d8856f1d2224e11904e2aa0cc7cee0b4a101ae468"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1465,
+        "sha256": "f1515af6e4b94164bec757dbd45fa1f6dcb9f9824bff29dc34a8ee484e739bca"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5199,
+        "sha256": "12a1d9afa918d9e292609737336fae3c38176120280912ca9aa6e42a487c17e6"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "392908124b1f11c3c30c5724ddfd5dfa93c21e426837d95cc7c0794f560b7cc1"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "9a5db9e8fe98d638a1cb7f2c2715452a545bbe7d12c295c27973da2634ee7f4a"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 75,
+        "sha256": "bd4efe8aa3357f22874bbdbae3999d12ea98f039bb092225ed212909f9b1ca1e"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 833,
+        "sha256": "0b92d1270066b5f38b434b24051b2af0145084b4384cc0eb0bdc91b7dafdec1e"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2453,
+        "sha256": "34038e39ca354d869598df6422c05468e503e352d4cd24ddb31ec08313474728"
+      },
+      "keyframes.json": {
+        "bytes": 2182,
+        "sha256": "3373e6ab6559306a8cd06a7d1795c5883f41012aae04172c5214a2a981ffda0c"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 657,
+        "sha256": "7f87a5b79839a6e569c7146ec880579cbb58486e5f717150fa77a0bd29535674"
+      },
+      "native/events.out.tfevents.1795442053.jupyter-yd6gks8uzfbxzdb4.9536.0": {
+        "bytes": 3611,
+        "sha256": "5e8686c480901fbafad03f1d875ccbf1c9e241a9c7f06e684225ba63bc833c73"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "f1874dcb092891bd2984d91f4816e4b2103de4c2d32962aa1d5e19f112cdb25c"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35527,
+        "sha256": "6555d5e6bf3651a344663bbd2d10b5e3c469f7b5452b48e5d5e224b32962fe01"
+      },
+      "native/video.npz": {
+        "bytes": 551794814,
+        "sha256": "d11e360ed66ac238dd2283870727e3297997cc8efbc64dec6a2cc54ee0ceface"
+      },
+      "native_camera_stream.json": {
+        "bytes": 46,
+        "sha256": "3d947aaea3e08c3519811c796e72b4ae9dc33cb2ae5d76e0a35bad5676080e8f"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "6528c38aaa34f2f593a1812d52b6e085f6611b035aac7e16d954129db4b757ec"
+      },
+      "native_rerun.rrd": {
+        "bytes": 42040293,
+        "sha256": "09794042ddf65085e555e2f3b6358b41825ed51acd501df0d8b4f6a30d285144"
+      },
+      "observer.jsonl": {
+        "bytes": 58942844,
+        "sha256": "e54452ff57cf464f209579393e1383b6339d308e2c42158313f7c616edd76652"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099"
+      },
+      "process.stderr.txt": {
+        "bytes": 86746,
+        "sha256": "573f366ec368305ea916758200a71d18d96d7de3f50002a55a7a959165835683"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "f401fbade3e3c9ec3613f0dcb5f49d0d918877817e4c83862894770b1f4f0482"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "cea35bd4d70118727d959a1bb3c900bf4fc1240efc55c4386711302a51b26bc6"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 2743982,
+        "sha256": "527f64bd11228fc3cbef4b1f5e3af53a0d7af14058a7883009c6e85097adbbab"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 29013,
+        "sha256": "fac8be1426c87d5e743d14aebc9e56e2efd3028f4ff98e12ce932621e9ce7c02"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "47fc15865bd97639b6886adccda12b66e9a87e77755d9bee4c18df5eaea02100"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 559,
+        "sha256": "56e38fa663670950cba6bc06d33cc15fee55a1857ec61b39d40a4195d4b9e402"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 693,
+        "sha256": "82c8de05a365139c79b699b0113a44d39a4e39cb0a5e86c4b800c3c4e0e5cdd3"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "e429850bb633113285bf7ff46122aa16e4d4d852dcd04f67fb3f684143ad39d9"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 258,
+        "sha256": "468eb44fcf15d38891952509a9096c1802bd77f7ab0beb9cd5c3bfbd1dff24c8"
+      },
+      "trajectory.npz": {
+        "bytes": 26257,
+        "sha256": "73a935e0ea2ffb9e493613ee6400180376266d430e881338483768d910fd6d92"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 126.65151639999931,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E4",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E4_attempt_001_e2da2c891181.zip",
+    "bytes": 870964677,
+    "sha256": "77f00084f667dfdfa8d1858f5ea025e4c7756b19d9fba97a594fdb853d62b2e4",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "cfe778837f6c557ae9c4b4599f83e6b8366ae2433812242f8daf0dd5cad8cbb2"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1466,
+        "sha256": "9c389e04bab86656167e17bf471c48bfb966125abaf634dc372b7a9a16f7667e"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5201,
+        "sha256": "d4cb66cbfcf82e56c258d3632b2149d0c92b0f47f62b9236907c3ce0479d6c75"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 244,
+        "sha256": "3d4e6552ae14c439857ca5527dacda93db1f6c6a717e63e65ee1ad21d123e116"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 324,
+        "sha256": "87cf62e4c6206aa414f71fab081d791b0b24049938289464ee2f912f09aa1c09"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 76,
+        "sha256": "bdef25c70d22d053a37ce03fecbedca610ca74c7bec6293467539a5e757be9d6"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 834,
+        "sha256": "a7a281a2ac885d963b2ccc7e574f411aeb3b53dba140d5d1ed9454e5063b4140"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2454,
+        "sha256": "a207a07b3287ceccff10e206194aea6f5d6632f2cde660ff7c179f62604cc816"
+      },
+      "keyframes.json": {
+        "bytes": 2882,
+        "sha256": "40ee1aea3a13236b0fdfc8f4bb8ff2b9541a4cb29a502dd106e43c6c372e69b7"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 659,
+        "sha256": "a212f3e3a8367688bdabdd3e3e9bf7ff5925f33de65781758d71d990b5cd5820"
+      },
+      "native/events.out.tfevents.1795442286.jupyter-yd6gks8uzfbxzdb4.10158.0": {
+        "bytes": 3611,
+        "sha256": "ae1fc57ac182584fb813d52f6749f66b83f64cb6413b178bf6a827e04588cdce"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "c3d3a59548496b198c5cb02d0b3f3362086d7eb7df26671a5bfd46fcc37773fa"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35342,
+        "sha256": "e9474fdbe5992fb73738736495f608024be314ddeeb56eac4137a081037f1518"
+      },
+      "native/video.npz": {
+        "bytes": 737271294,
+        "sha256": "39c97d0ef6e340b9ed32f3c0ad9f4d9ffdd84ae44da4e741a0cd06f3e7cf62ba"
+      },
+      "native_camera_stream.json": {
+        "bytes": 47,
+        "sha256": "09b99a5fd3edfc5e88c7a8af35395c9d7c75d5018764d52b0d2c4bddb1138da7"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "c4736c245e5b69c8c7b389dda728e6001d36af4ebf17d8efe9665581c3158cab"
+      },
+      "native_rerun.rrd": {
+        "bytes": 661140837,
+        "sha256": "1352fa3528d0ae15f5928a47c3903548080d8197e4e5f61ffb333da18615ee58"
+      },
+      "observer.jsonl": {
+        "bytes": 73573954,
+        "sha256": "ad8a968a897c39123c98a4b5a2a4fc3b16b8013764a49194a058df1431b76feb"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "55ba54a86e3938158fb4910532b65c26b1fb0919b84ce253819470560d6b4d8e"
+      },
+      "process.stderr.txt": {
+        "bytes": 87060,
+        "sha256": "650c50bcbf6a5d3a27052ecf18d792b30768d2809dd5a8e207cffef4ebd9cf8f"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "26b5ee1b8988f537d498089485e6001560eb8d957eead4dd8a59602f8075089e"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "f83ef176d6803902e0f1d60df4aa8eee1fae915afab6c4fbe4c7e054db7969a4"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3217503,
+        "sha256": "2c85055f2390114fe172ba09afca0cde6ec0e0d9ec1a0caeb6a4ff00629184a6"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 33218,
+        "sha256": "48f6c10e0e336e169aa4cdb29e8af04b413d7ea51d6f2c188df504628c189f4c"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "8920d713efce78b44d6e912300067023b08cc21080df080eababaf802535e8f0"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 560,
+        "sha256": "72526874af74dabca432d81ccb4c11b3d20a84417ee583517e37b2379e1c32f1"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 695,
+        "sha256": "b4f0d98e42bed0525e72702db00bec5c53755e8e533c1874d357d13b646851d9"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "f14aa707934e01a79172fd9e4ad8a02fb7527a1747f06300700968781d0f7e31"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 259,
+        "sha256": "bb19b123a1dab1721572658cc760b7c491786e1bd24bf36c071942bd50a1c0ad"
+      },
+      "trajectory.npz": {
+        "bytes": 26405,
+        "sha256": "b9dca56cc74bfda08b00439181185d81ef49670802638937747b760be8fd155a"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 380.01563350000015,
+    "remote_deleted": false
+  },
+  {
+    "seed": 45,
+    "arm": "E3",
+    "archive": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\raw_archives\\seed45_E3_attempt_001_ed134c959bca.zip",
+    "bytes": 265782766,
+    "sha256": "f630e4d2963cd8dbc32a03844becbba57ea59dfbf51850beab29bc0e61cf7872",
+    "crc": "PASS",
+    "internal_sha256_matches": 36,
+    "files": {
+      "LAUNCH_INTENT.json": {
+        "bytes": 839,
+        "sha256": "d5cf7538f60eade2f4dccafa12b4c08dfe84351b9c4c404e4a823b536ceaeb34"
+      },
+      "LAUNCH_RECEIPT.json": {
+        "bytes": 1466,
+        "sha256": "38fb18e21a55f6f0bf56b05689e50d8f1c3338f90bd0723d1c7aeaf9efd4372a"
+      },
+      "OUTPUT_INTEGRITY.json": {
+        "bytes": 5200,
+        "sha256": "f518758c08f362f3a63a83aeecf7e4692d70888bf03666244ccbd4695025779e"
+      },
+      "PROCESS_RECEIPT.json": {
+        "bytes": 245,
+        "sha256": "1da57d7e28b903d93873b63e210a1f20285e5538168127cbea724f680754d411"
+      },
+      "RERUN_RECORDING_VALIDATION.json": {
+        "bytes": 323,
+        "sha256": "59dba3cab6e226b57ca44dee4c89345b8bb779d10572c92477109bf07e161105"
+      },
+      "RERUN_SERVICE_CLEANUP.json": {
+        "bytes": 76,
+        "sha256": "e4fcaa99e52142802c7b59ed1db38ce636097aeef4a11ebe4e3f2175a6904117"
+      },
+      "RERUN_SERVICE_RECEIPT.json": {
+        "bytes": 834,
+        "sha256": "1b0135d11fdacdef396109faeaccb438cf4420a7c6dd9282aa353587cfd5db33"
+      },
+      "RUNTIME_LAUNCH_CONFIG.json": {
+        "bytes": 2454,
+        "sha256": "ff41dcb93d993e0492f8d3451546d4d02691896f271d806b7680c48b0f0ffbc2"
+      },
+      "keyframes.json": {
+        "bytes": 1930,
+        "sha256": "812f72f2437f4ccf99ed74925bf538bb4a085833668316f8ed8252e4c7ee9564"
+      },
+      "model_input.json": {
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb"
+      },
+      "model_result.json": {
+        "bytes": 659,
+        "sha256": "887bf60061cf30c9c41a98a7ec1404e101ff4ff01415fcd748da398140f06583"
+      },
+      "native/events.out.tfevents.1795442587.jupyter-yd6gks8uzfbxzdb4.10810.0": {
+        "bytes": 3611,
+        "sha256": "2320f81b190721a1670e71275e07ecb1364a4ec5d438e997aa05087383316532"
+      },
+      "native/timer_summary.csv": {
+        "bytes": 316,
+        "sha256": "c04129e1c2bc2b06766678ebb68e9a6e7997425598ddf54a75c2e28bb273cb40"
+      },
+      "native/traj/est_poses_full.txt": {
+        "bytes": 35442,
+        "sha256": "2b015a1ad0cc5a6f2c063b711f1e4afd7a7fef975c1bcb35135c7707b029b4ac"
+      },
+      "native/video.npz": {
+        "bytes": 486878046,
+        "sha256": "6451e4a3428ffad93de7e3c8445577d18545c6b9a5716fbb526e51b1290cb5a5"
+      },
+      "native_camera_stream.json": {
+        "bytes": 47,
+        "sha256": "df9d815d843715cc87f9b274dc8160051041a8aeb1f3e57d8d4d7dd56fc65eea"
+      },
+      "native_config.yaml": {
+        "bytes": 3387,
+        "sha256": "c09d53e39cd1a8dbfaebe3c24eda6cd430cc24c7e02c77eefb67618ced9047dc"
+      },
+      "native_rerun.rrd": {
+        "bytes": 52644259,
+        "sha256": "2d4c2d6b2a8448681488967be337397cff0aec5f965b2c3495db50d5b310e17d"
+      },
+      "observer.jsonl": {
+        "bytes": 54108357,
+        "sha256": "e534d2676d76ad07d24a3a934df350ff6f6beba875b8e66c3369291c3cdab296"
+      },
+      "policy.json": {
+        "bytes": 247,
+        "sha256": "d91c5a0c6a702f86f3d81e8623088ac7dd787df6efa5a70acb4e4156a9e2a4ca"
+      },
+      "process.stderr.txt": {
+        "bytes": 86926,
+        "sha256": "4e0d6d65c0142689589ddaf2ca771d7612f81e2a9d7985bcd8a090b1e71f89d5"
+      },
+      "process.stdout.txt": {
+        "bytes": 1351,
+        "sha256": "c2bd1a079cfb755b80aef52abf790d3c084893e30781a48d00736a754bf4d7f3"
+      },
+      "progress.json": {
+        "bytes": 108,
+        "sha256": "98458df96a86b1d301211b3aa9309fca910673a1b09a01d1583169060e56c415"
+      },
+      "rerun_recording_print.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_recording_print.txt": {
+        "bytes": 3224381,
+        "sha256": "6b721c5688726853301797dae6a9d97c2d16fcf8b1ec1cb0df554c3eabd15059"
+      },
+      "rerun_service.stderr.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rerun_service.stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resource.jsonl": {
+        "bytes": 28997,
+        "sha256": "d491ee9d7a1b85ce889acb44dd5b0b2daebe0e2eafc011b62f795c846a031185"
+      },
+      "runtime_cache/YAPF/0.43.0/Grammar-py3.10.20.final.0.pickle": {
+        "bytes": 16743,
+        "sha256": "bcb8b64a7c8e6335b1b81fa4c6a874f62c87a1e9525ba89260c332d175f00306"
+      },
+      "runtime_cache/YAPF/0.43.0/PatternGrammar-py3.10.20.final.0.pickle": {
+        "bytes": 1243,
+        "sha256": "235c044c74d8ebc6d2a564d9f089503d337eecfda251d21b000055899bd62382"
+      },
+      "runtime_cache/matplotlib/fontlist-v390.json": {
+        "bytes": 26026,
+        "sha256": "853e89248b3c1a6539d464b9e779ab653772e5ae331a7e64e69ad5d281249e4a"
+      },
+      "seed_receipt_main.json": {
+        "bytes": 560,
+        "sha256": "3cc0e1520cb2ad9de144280512096aec6cd3529b9d8dc5ee69a420335a63aef0"
+      },
+      "seed_receipt_tracking_spawn_entry.json": {
+        "bytes": 694,
+        "sha256": "689669e96c7477db311dbab3ab09622aae18c60e75e29a933b44cd6c26af7f7e"
+      },
+      "task004_policy_receipt.json": {
+        "bytes": 195,
+        "sha256": "89f28f80d94dc117af7820ff6dde4570b9cbdbd0e40b03ad7bcc64b68ee8187a"
+      },
+      "tracking_child_ok.json": {
+        "bytes": 259,
+        "sha256": "fb3f20c26c4f31560b8fa0f255794f39e29e79e567ac902e4d985a9d275fac46"
+      },
+      "trajectory.npz": {
+        "bytes": 26136,
+        "sha256": "6be4cf92857b5836d9788b308a2ed6fa27ec38edc153cd5a09e03b0874695b0c"
+      }
+    },
+    "archive_only_members": [
+      "native/video.npz",
+      "native_rerun.rrd",
+      "rerun_recording_print.txt"
+    ],
+    "elapsed_s": 39.86436959999992,
+    "remote_deleted": false
+  }
+]

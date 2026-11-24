@@ -1,0 +1,18 @@
+INFO: 0 images got!
+[33m[INFO] [0mLoad droid pretrained checkpoint from /root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth![0m
+[Rerun] Web server on http://127.0.0.1:9876
+[34m[TRACKER] [0mTracking Triggered![0m
+[34m[TRACKER] [0mTracking Done![0m
+[34m[TRACKER] [0mFinal Global BA Triggered![0m
+[34m[TRACKER] [0mFinal Global BA Done![0m
+[33m[INFO] [0mSaved final depth video: /root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E3/attempt_001_ed134c959bca/native/video.npz[0m
+[33m[INFO] [0mFilling full trajectory ...[0m
+[Timer] Summary (auto) – per decorated function:
+  - Tracking: count=487, total=119.852126s, avg=0.246103s, min=0.006754s, max=1.415282s, fps=4.06
+  - Metric Depth Estimation: count=215, total=33.224248s, avg=0.154531s, min=0.145037s, max=0.355981s, fps=6.47
+  - Full Trajectory Filling: count=1, total=27.767600s, avg=27.767600s, min=27.767600s, max=27.767600s, fps=0.04
+  - Final Global BA: count=1, total=16.751990s, avg=16.751990s, min=16.751990s, max=16.751990s, fps=0.06
+  - DINO Feature Extraction: count=215, total=9.009144s, avg=0.041903s, min=0.018980s, max=0.095461s, fps=23.86
+[Timer] Overall: count=487, total=206.605108s, avg=0.424240s, fps=2.36
+[35m[EVALUATION] [0mMetrics Evaluation Done![0m
+Final clean, exiting...

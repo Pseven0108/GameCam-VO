@@ -1,0 +1,25 @@
+{
+  "mode": "CPU_MOCK_ONLY",
+  "id": "mock-afaa22fc05844325880a506a71d32ca7",
+  "status": "STOPPED",
+  "order": [
+    "E3",
+    "E4",
+    "E7",
+    "E0",
+    "E8",
+    "E6",
+    "E1",
+    "E2"
+  ],
+  "started": [
+    "E3"
+  ],
+  "completed": [],
+  "failed_arm": "E3",
+  "failure": "ValueError: receiving ZIP SHA-256 mismatch (injected)",
+  "failure_archive_error": null,
+  "gpu_runs": 0,
+  "retried": false,
+  "cleanup_authorized": false
+}

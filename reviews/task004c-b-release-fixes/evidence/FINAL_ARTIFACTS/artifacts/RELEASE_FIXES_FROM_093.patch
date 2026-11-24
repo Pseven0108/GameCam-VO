@@ -1,0 +1,1722 @@
+diff --git a/configs/B1.yaml b/configs/B1.yaml
+new file mode 100644
+index 0000000..fcc8231
+--- /dev/null
++++ b/configs/B1.yaml
+@@ -0,0 +1,24 @@
++schema: GAMECAM_CROSSOVER_CONFIG_V1
++experiment: B1
++D: 1
++W: 1
++U: 1
++init_D: 0
++schedule: S1
++schedule_mode: record
++c0_ref: artifacts/C0
++schedule_ref: artifacts/S1.jsonl
++baseline_commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
++r2_yaml_sha256: a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc
++extension_sha256: 6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e
++input_manifest_sha256: 5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537
++sequence: val_007
++frames: 487
++width: 640
++height: 360
++stride: 1
++buffer: 500
++seed: 43
++intervention_scope: frontend_mainloop_local_ba
++final_ba: native_unchanged
++filler: native_unchanged
+diff --git a/configs/B2.yaml b/configs/B2.yaml
+new file mode 100644
+index 0000000..50d7c58
+--- /dev/null
++++ b/configs/B2.yaml
+@@ -0,0 +1,24 @@
++schema: GAMECAM_CROSSOVER_CONFIG_V1
++experiment: B2
++D: 0
++W: 1
++U: 1
++init_D: 0
++schedule: S1
++schedule_mode: replay
++c0_ref: artifacts/C0
++schedule_ref: artifacts/S1.jsonl
++baseline_commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
++r2_yaml_sha256: a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc
++extension_sha256: 6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e
++input_manifest_sha256: 5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537
++sequence: val_007
++frames: 487
++width: 640
++height: 360
++stride: 1
++buffer: 500
++seed: 43
++intervention_scope: frontend_mainloop_local_ba
++final_ba: native_unchanged
++filler: native_unchanged
+diff --git a/configs/B3.yaml b/configs/B3.yaml
+new file mode 100644
+index 0000000..1faf655
+--- /dev/null
++++ b/configs/B3.yaml
+@@ -0,0 +1,24 @@
++schema: GAMECAM_CROSSOVER_CONFIG_V1
++experiment: B3
++D: 1
++W: 1
++U: 1
++init_D: 0
++schedule: S0
++schedule_mode: replay
++c0_ref: artifacts/C0
++schedule_ref: artifacts/S0.jsonl
++baseline_commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
++r2_yaml_sha256: a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc
++extension_sha256: 6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e
++input_manifest_sha256: 5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537
++sequence: val_007
++frames: 487
++width: 640
++height: 360
++stride: 1
++buffer: 500
++seed: 43
++intervention_scope: frontend_mainloop_local_ba
++final_ba: native_unchanged
++filler: native_unchanged
+diff --git a/configs/B4.yaml b/configs/B4.yaml
+new file mode 100644
+index 0000000..4fd92a3
+--- /dev/null
++++ b/configs/B4.yaml
+@@ -0,0 +1,24 @@
++schema: GAMECAM_CROSSOVER_CONFIG_V1
++experiment: B4
++D: 0
++W: 1
++U: 1
++init_D: 0
++schedule: S0
++schedule_mode: record
++c0_ref: artifacts/C0
++schedule_ref: artifacts/S0.jsonl
++baseline_commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
++r2_yaml_sha256: a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc
++extension_sha256: 6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e
++input_manifest_sha256: 5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537
++sequence: val_007
++frames: 487
++width: 640
++height: 360
++stride: 1
++buffer: 500
++seed: 43
++intervention_scope: frontend_mainloop_local_ba
++final_ba: native_unchanged
++filler: native_unchanged
+diff --git a/configs/identity_lock.json b/configs/identity_lock.json
+new file mode 100644
+index 0000000..e4d81b7
+--- /dev/null
++++ b/configs/identity_lock.json
+@@ -0,0 +1,46 @@
++{
++  "schema": "GAMECAM_MINIMAL_CONTROL_LOCK_V1",
++  "baseline_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
++  "r2_yaml_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
++  "extension_sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
++  "input_manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
++  "weight_pins": {
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d"
++  },
++  "remote_pins": {
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/droid_backends.cpython-310-x86_64-linux-gnu.so": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/dinov2_reg_small_finetuned.pth": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
++    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub/models--timm--vit_small_patch14_reg4_dinov2.lvd142m/snapshots/c04b5193082a8d5b0c4856c7937384a48136c5de/model.safetensors": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d"
++  },
++  "source_reference_lock": "evidence/SOURCE_REFERENCE_LOCK.json",
++  "fixed": {
++    "sequence": "val_007",
++    "frames": 487,
++    "width": 640,
++    "height": 360,
++    "stride": 1,
++    "buffer": 500,
++    "seed": 43
++  },
++  "c0_ref": "artifacts/C0",
++  "c0_state_sha256": null,
++  "native_integration_validated": false,
++  "formal_runs_authorized": false,
++  "execution_source_pins": {
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/depth_video.py": "78b0b4dc783a70c24ea2d65d5e478bb2393e5d079de71a1456a2c447a17cc6cc",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/factor_graph.py": "80a8614d856516a7de4aa8224671046d1111cdaf52c5a3be2733f6889ecace0c",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/frontend.py": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/tracker.py": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/slam.py": "46026d7b05e188ac91a2659af5de80c9a8e5ccef59ddd35dc71ddb6a650dd38a",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/motion_filter.py": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/backend.py": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
++    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/source/src/trajectory_filler.py": "e5d96dd9f815a5bfd558f0fcb80874cf9de8c1ef8a2c4f1fe9f6d38b0987c3c3"
++  },
++  "remote_git_head_status": "NOT_A_GIT_CHECKOUT_USE_FROZEN_TREE_AND_EXECUTION_FILE_HASHES"
++}
+\ No newline at end of file
+diff --git a/native_control/admission.py b/native_control/admission.py
+index 44a2cc5..f5dca62 100644
+--- a/native_control/admission.py
++++ b/native_control/admission.py
+@@ -1,5 +1,5 @@
+ """Stdlib-only pre-model admission. No CUDA context, framework or model import."""
+-import hashlib,json,os,pathlib,shutil,subprocess,time
++import hashlib,importlib.metadata,json,os,pathlib,shutil,subprocess,time
+ 
+ GIB=1024**3
+ MODES=('capture','restore_check','record_S1','record_S0','replay_D0_S1','replay_D1_S0')
+@@ -17,7 +17,30 @@ def command(args):
+         return {'args':args,'exit_code':q.returncode,'stdout':q.stdout,'stderr':q.stderr}
+     except Exception as e:return {'args':args,'exit_code':None,'error':repr(e)}
+ 
+-def preflight(root,lock,*,cpu_report):
++def cpu_storage_admission(root,*,backend='native_shm',validation=None):
++    root=pathlib.Path(root);issues=[];candidate_bytes=2246400000
++    result={'backend':backend,'native_large_CPU_storage_bytes':candidate_bytes,'extra_data_disk_reservation_bytes':0,
++            'required_shm_bytes':candidate_bytes,'validation_passed':False,'issues':issues}
++    if backend=='native_shm':return result
++    if backend!='owned_file_mmap':
++        issues.append('UNKNOWN_CPU_STORAGE_BACKEND');return result
++    result['required_shm_bytes']=64*1024**2
++    result['extra_data_disk_reservation_bytes']=candidate_bytes+16*1024**2
++    # 64MiB is an explicit residual IPC envelope, not a measured native minimum.
++    result['residual_shm_is_static_envelope_not_native_measurement']=True
++    if validation is None or not pathlib.Path(validation).is_file():
++        issues.append('FILE_BACKED_CPU_VALIDATION_MISSING');return result
++    doc=json.loads(pathlib.Path(validation).read_text())
++    if not (doc.get('PASS') is True and doc.get('total_tensor_bytes')==candidate_bytes
++            and doc.get('shm_delta_bytes',candidate_bytes)<1024**2
++            and doc.get('file_backed_module_sha256')==sha(root/'native_control/file_backed.py')
++            and doc.get('torch_distribution_version')==importlib.metadata.version('torch')):
++        issues.append('FILE_BACKED_CPU_VALIDATION_MISMATCH');return result
++    result['validation_passed']=True
++    result['native_Tracker_Rerun_GPU_validation_passed']=False
++    return result
++
++def preflight(root,lock,*,cpu_report,cpu_storage_backend='native_shm',storage_validation=None):
+     root=pathlib.Path(root);issues=[]
+     report=json.loads(pathlib.Path(cpu_report).read_text())
+     if report['total']!=report['passed'] or report['failures'] or report['errors'] or report.get('cuda_initialized'):
+@@ -39,12 +62,13 @@ def preflight(root,lock,*,cpu_report):
+     # Native spawn exports the full CPU image store as well as explicit DINO
+     # shared memory. This is a scoped byte budget, not the withdrawn 8GiB rule.
+     shared_candidate=500*3*360*640*4 + 500*25*45*384*4
+-    if shm['free']<shared_candidate:issues.append('SHM_BELOW_FULL_NATIVE_SPAWN_STORAGE_CANDIDATE')
++    storage=cpu_storage_admission(root,backend=cpu_storage_backend,validation=storage_validation);issues.extend(storage['issues'])
++    if shm['free']<storage['required_shm_bytes']:issues.append('SHM_BELOW_SELECTED_BACKEND_RESERVATION')
+     # Static minimum excludes correlations and models; the live closure gate
+     # computes the exact complete storage budget before writing one real C0.
+-    if disk['free']<10*GIB+7468230540+512*1024**2:issues.append('DATA_DISK_BELOW_C0_MINIMUM_AND_SAFETY_FLOOR')
++    if disk['free']<10*GIB+7468230540+512*1024**2+storage['extra_data_disk_reservation_bytes']:issues.append('DATA_DISK_BELOW_C0_MINIMUM_AND_SAFETY_FLOOR')
+     result={'time_unix':time.time(),'issues':issues,'admitted':not issues,'models_imported':False,'cuda_context_initialized':False,
+-        'gpu':nvidia,'compute_apps':apps,'data_disk':disk,'shared_memory':shm,'shared_storage_candidate_bytes':shared_candidate,
++        'gpu':nvidia,'compute_apps':apps,'data_disk':disk,'shared_memory':shm,'shared_storage_candidate_bytes':shared_candidate,'cpu_storage_admission':storage,
+         'complete_C0_bytes':None,'C0_exact_live_inventory_still_required':True,'protected_pins':verified,
+         'native_C0_captured':False,'formal_B_runs_authorized':False,'max_rgb':80,'retry_allowed':False}
+     return result
+diff --git a/native_control/binding.py b/native_control/binding.py
+index d413789..4e2782f 100644
+--- a/native_control/binding.py
++++ b/native_control/binding.py
+@@ -6,7 +6,7 @@ from pathlib import Path
+ import torch
+ from control_common import ControlError, file_sha, require_space, digest
+ from checkpoint.rng_state import capture_rng_state, restore_rng_state
+-from native_control.snapshot import save_state,load_state,state_inventory,ObjectEncoder
++from native_control.snapshot import save_state,load_state,state_inventory,ObjectEncoder,prepare_state,save_prepared_state
+ 
+ CURSOR_FIELDS={'next_input_index','prev_kf_idx','curr_kf_idx','prev_ba_idx','intrinsic'}
+ 
+@@ -59,12 +59,19 @@ def capture_c0(path,tracker,stream,values,controller,filler,barrier,identity_loc
+                     'baseline_commit':identity_lock['baseline_commit'],'identity_lock_sha256':digest(identity_lock),
+                     'initialization_D':0,'W':1,'U':1,'source_pid':os.getpid(),'actual_boundary_rgb':controller.rgb,
+                     'next_input':bundle['next_input'],'inventory':inventory}
+-        manifest=save_state(bundle,path,provenance=provenance,services=services)
+-        return manifest
++        prepared=prepare_state(bundle,provenance=provenance,services=services,destination_parent=Path(path).parent)
++        budget_file=Path(path).parent/'C0_EXACT_BUDGET_BEFORE_SAVE.json'
++        with budget_file.open('x') as f:json.dump(prepared['budget'],f,indent=2)
++        return save_prepared_state(prepared,path)
+ 
+ 
+ def restore_c0(path,*,services,expected_sha,allow_cuda=False):
+-    bundle,manifest=load_state(path,services=services,expected_sha=expected_sha,allow_cuda=allow_cuda)
++    factory=None
++    arena_root=os.environ.get('GAMECAM_FILE_BACKED_CPU_ROOT')
++    if arena_root:
++        from native_control.file_backed import FileArena
++        arena=FileArena(Path(arena_root));factory=arena.restore_storage
++    bundle,manifest=load_state(path,services=services,expected_sha=expected_sha,allow_cuda=allow_cuda,cpu_storage_factory=factory)
+     if manifest['provenance']['artifact_kind']!='NATIVE_C0':raise ControlError('A synthetic state cannot restore a real C0')
+     if bundle['process_environment']!={'PYTHONHASHSEED':os.environ.get('PYTHONHASHSEED'),
+             'torch_version':str(torch.__version__),'cuda_version':torch.version.cuda}:
+diff --git a/native_control/file_backed.py b/native_control/file_backed.py
+new file mode 100644
+index 0000000..74468f7
+--- /dev/null
++++ b/native_control/file_backed.py
+@@ -0,0 +1,123 @@
++"""Owned MAP_SHARED CPU storages with explicit spawn reconstruction by path.
++
++Only registered storages use this reducer. Unregistered CPU storage and CUDA
++Tensor reduction retain the installed Torch implementation.
++"""
++from multiprocessing.reduction import ForkingPickler
++import math,os,pathlib,stat,uuid
++import torch
++import torch.multiprocessing.reductions as reductions
++from control_common import ControlError,require_space
++
++SCHEMA='GAMECAM_OWNED_FILE_STORAGE_V1'
++_original_reducer=reductions.reduce_storage
++_installed=False
++_owned={}
++_cache={}
++_arenas={}
++_FIELDS={'schema','root','path','byte_size','st_dev','st_ino','mode'}
++
++def install_reducer():
++    global _installed
++    if not _installed:
++        ForkingPickler.register(torch.UntypedStorage,reduce_owned_storage)
++        _installed=True
++
++def descriptor_for(storage):
++    entry=_owned.get(int(storage._cdata))
++    return dict(entry['descriptor']) if entry is not None else None
++
++def validate_descriptor(desc):
++    if type(desc) is not dict or set(desc)!=_FIELDS or desc['schema']!=SCHEMA:
++        raise ControlError('Invalid file-backed storage descriptor')
++    root,path=pathlib.Path(desc['root']),pathlib.Path(desc['path'])
++    if not root.is_absolute() or not path.is_absolute() or root.is_symlink() or path.is_symlink():
++        raise ControlError('File storage requires an absolute, unlinked owned path')
++    if path.resolve().parent!=root.resolve() or path.name!=str(desc['st_ino'])+'.bin':
++        raise ControlError('File storage path escaped its namespace or identity')
++    if type(desc['byte_size']) is not int or desc['byte_size']<=0:raise ControlError('Invalid file storage byte count')
++    s=path.stat()
++    if not stat.S_ISREG(s.st_mode) or s.st_dev!=desc['st_dev'] or s.st_ino!=desc['st_ino'] or s.st_size!=desc['byte_size']:
++        raise ControlError('Backing file identity or byte length changed')
++    if stat.S_IMODE(s.st_mode)!=desc['mode'] or desc['mode']!=0o600:
++        raise ControlError('Backing file permissions changed')
++    return path
++
++def rebuild_owned_storage(desc):
++    path=validate_descriptor(desc);key=(os.getpid(),desc['st_dev'],desc['st_ino'],desc['byte_size'])
++    if key not in _cache:
++        raw=torch.from_file(str(path),shared=True,size=desc['byte_size'],dtype=torch.uint8)
++        if not raw.is_shared() or raw.untyped_storage().nbytes()!=desc['byte_size']:
++            raise ControlError('Installed Torch did not provide the requested shared file storage')
++        _cache[key]=raw
++        _owned[int(raw.untyped_storage()._cdata)]={'descriptor':dict(desc),'raw':raw}
++    install_reducer()
++    return _cache[key].untyped_storage()
++
++def reduce_owned_storage(storage):
++    desc=descriptor_for(storage)
++    if desc is None:return _original_reducer(storage)
++    if storage.device.type!='cpu' or storage.nbytes()!=desc['byte_size']:
++        raise ControlError('Registered file storage device/size mismatch')
++    validate_descriptor(desc)
++    return rebuild_owned_storage,(desc,)
++
++class FileArena:
++    def __init__(self,root,*,floor_bytes=10*1024**3):
++        self.root=pathlib.Path(root)
++        if not self.root.is_absolute():raise ControlError('File arena root must be absolute')
++        self.root.mkdir(mode=0o700,parents=True,exist_ok=False)
++        if self.root.resolve()!=self.root or self.root.is_symlink():raise ControlError('Linked file arena root')
++        self.floor_bytes=floor_bytes;self.descriptors=[]
++        install_reducer()
++
++    def raw_storage(self,byte_size):
++        if type(byte_size) is not int or byte_size<=0:raise ControlError('File storage must have a positive byte length')
++        require_space(self.root,byte_size+65536,self.floor_bytes)
++        temp=self.root/('.allocate-'+uuid.uuid4().hex)
++        fd=os.open(temp,os.O_RDWR|os.O_CREAT|os.O_EXCL,0o600)
++        try:
++            # Real disk reservation: a sparse logical file alone is not capacity proof.
++            os.posix_fallocate(fd,0,byte_size);s=os.fstat(fd);os.fsync(fd)
++            path=self.root/(str(s.st_ino)+'.bin')
++            os.rename(temp,path)
++        finally:os.close(fd)
++        desc={'schema':SCHEMA,'root':str(self.root),'path':str(path),'byte_size':byte_size,
++              'st_dev':s.st_dev,'st_ino':s.st_ino,'mode':0o600}
++        storage=rebuild_owned_storage(desc);self.descriptors.append(desc)
++        return torch.empty(0,dtype=torch.uint8).set_(storage,0,(byte_size,),(1,))
++
++    def zeros(self,shape,*,dtype=torch.float32):
++        shape=tuple(shape)
++        if any(type(x) is not int or x<0 for x in shape):raise ControlError('Invalid mapped tensor shape')
++        elements=math.prod(shape);el=torch.empty(0,dtype=dtype).element_size()
++        if elements==0:return torch.zeros(shape,dtype=dtype)
++        raw=self.raw_storage(elements*el)
++        value=torch.empty(0,dtype=dtype).set_(raw.untyped_storage(),0,shape)
++        value.zero_()
++        return value
++
++    def restore_storage(self,sid,raw,metadata):
++        if raw.device.type!='cpu' or raw.dtype!=torch.uint8 or raw.ndim!=1 or raw.numel()!=metadata['byte_size']:
++            raise ControlError('Invalid CPU restore storage request')
++        if raw.numel()==0:
++            value=raw.clone()
++            if metadata.get('cpu_shared'):value.share_memory_()
++            return value
++        value=self.raw_storage(raw.numel());value.copy_(raw)
++        return value
++
++def cpu_zeros(name,shape,*,dtype,native_share=False):
++    """Allocation-only seam; no optimization values or formulas are altered."""
++    root=os.environ.get('GAMECAM_FILE_BACKED_CPU_ROOT')
++    if not root:
++        tensor=torch.zeros(shape,dtype=dtype,device='cpu')
++        return tensor.share_memory_() if native_share else tensor
++    key=(os.getpid(),root)
++    if key not in _arenas:_arenas[key]=FileArena(pathlib.Path(root))
++    return _arenas[key].zeros(shape,dtype=dtype)
++
++def mapped_storage_summary():
++    entries=[dict(x['descriptor']) for x in _owned.values()]
++    return {'schema':SCHEMA,'storages':entries,'registered_bytes':sum(x['byte_size'] for x in entries),
++            'reducer_installed':_installed,'pid':os.getpid()}
+diff --git a/native_control/install.py b/native_control/install.py
+index 60a26b2..9073c3c 100644
+--- a/native_control/install.py
++++ b/native_control/install.py
+@@ -9,10 +9,25 @@ from native_control.runtime import active
+ def selected_flags(original,phase,stage,video,motion_only,update_u,use_u):
+     ctrl=active()
+     if not ctrl.enabled:return original(phase,stage,video,motion_only,update_u,use_u)
+-    if phase is not None and (phase!=stage or phase not in ('frontend_local_predecision','frontend_local_retained') or motion_only):
++    local_phases=('frontend_local_predecision','frontend_local_retained')
++    init_phases=('frontend_init_neighborhood','frontend_init_proximity','frontend_init_second')
++    if phase is None:
++        if stage in local_phases:
++            raise ControlError('Observed local BA is missing its explicit Task 004 marker')
++        if stage in init_phases:
++            if motion_only:raise ControlError('INIT_D intervention is invalid for motion-only BA')
++            return False,use_u,update_u
++        # Same non-local pass-through as frozen task004_controls.local_flags.
++        return video.metric_depth_reg,use_u,update_u
++    if phase not in local_phases or phase!=stage or motion_only:
+         raise ControlError('Native intervention escaped the frozen local-BA scope')
+-    if not video.uncertainty_aware or not video.enable_affine_transform or video.enable_bidirectional_uncer:
+-        raise ControlError('Native W/U baseline contract changed')
++    # Keep every vanilla local-BA precondition from the frozen local_flags().
++    # The controller supplies only D after validation; W/U retain native values.
++    if not (video.metric_depth_reg and use_u and update_u and video.uncertainty_aware
++            and video.enable_affine_transform and not video.enable_bidirectional_uncer
++            and video.cfg['tracking']['uncertainty_params']['gamma_depth']==0.01
++            and not video.cfg['tracking']['frontend']['enable_loop']):
++        raise ControlError('Task 004 vanilla local-BA contract mismatch')
+     # The native initialization template intentionally has UBA=False during
+     # its first 8 updates. W=1 means retain this template, not rewrite it.
+     return ctrl.depth_flag(stage,bool(video.metric_depth_reg)),use_u,update_u
+diff --git a/native_control/snapshot.py b/native_control/snapshot.py
+index 569a835..95d2816 100644
+--- a/native_control/snapshot.py
++++ b/native_control/snapshot.py
+@@ -141,46 +141,82 @@ def _resolve(key):
+     return obj
+ 
+ 
+-def save_state(bundle, path, *, provenance, services=None, floor_bytes=10*1024**3, allowed_prefixes=None):
+-    dest=Path(path)
+-    if dest.exists(): raise ControlError('Immutable native checkpoint already exists')
++def prepare_state(bundle, *, provenance, services=None, floor_bytes=10*1024**3, allowed_prefixes=None, destination_parent=None):
++    import copy
++    from native_control.storage_budget import CountingHashWriter,make_budget,block_size
+     if provenance.get('artifact_kind') not in ('CPU_NATIVE_INTERFACE_FIXTURE','NATIVE_C0'):
+         raise ControlError('Missing snapshot provenance')
+     if provenance['artifact_kind']=='NATIVE_C0' and not provenance.get('writer_barrier_and_closure_passed'):
+         raise ControlError('NATIVE_C0 requires live writer barrier and closure audit')
+-    if torch.cuda.is_initialized(): torch.cuda.synchronize()
++    if torch.cuda.is_initialized():torch.cuda.synchronize()
+     encoder=ObjectEncoder(services=services,**({'allowed_prefixes':allowed_prefixes} if allowed_prefixes else {}))
+-    tree=encoder.encode(bundle)
+-    estimate=sum(x['raw'].numel() for x in encoder.storages.values())+4*1024**2
+-    require_space(dest.parent,estimate,floor_bytes)
++    tree=encoder.encode(bundle);files={};storage_meta={}
++    for sid,record in encoder.storages.items():
++        raw=record['raw'].detach().cpu().clone()
++        count=CountingHashWriter();torch.save(raw,count)
++        name=sid+'.pt'
++        files[name]={'sha256':count.hash.hexdigest(),'bytes':count.bytes}
++        storage_meta[sid]={'file':name,'byte_size':raw.numel(),'raw_sha256':byte_sha(raw),
++                           'device':record['device'],'cpu_shared':record['shared']}
++        del raw
++    manifest={'schema':FORMAT,'provenance':copy.deepcopy(provenance),'endianness':sys.byteorder,
++              'root':tree,'nodes':encoder.nodes,'classes':encoder.classes,'storages':storage_meta,'files':files}
++    manifest['state_sha256']=digest(manifest)
++    manifest_raw=canonical(manifest)
++    complete_raw=canonical({'manifest_sha256':hashlib.sha256(manifest_raw).hexdigest()})
++    budget=make_budget(files,len(manifest_raw),len(complete_raw),
++                       block_size=block_size(destination_parent) if destination_parent is not None else 4096,
++                       floor_bytes=floor_bytes)
++    budget['unique_runtime_storage_bytes']=sum(x['byte_size'] for x in storage_meta.values())
++    return {'encoder':encoder,'manifest':manifest,'manifest_raw':manifest_raw,'complete_raw':complete_raw,'budget':budget}
++
++
++def save_prepared_state(prepared,path):
++    from native_control.storage_budget import check_budget
++    dest=Path(path)
++    if dest.exists():raise ControlError('Immutable native checkpoint already exists')
++    m=prepared['manifest'];budget=prepared['budget']
++    if canonical(m)!=prepared['manifest_raw'] or digest({k:v for k,v in m.items() if k!='state_sha256'})!=m['state_sha256']:
++        raise ControlError('Prepared checkpoint plan was modified')
++    # Keep the legacy require_space seam as well as the exact remaining-file guard.
++    require_space(dest.parent,budget['minimum_free_before_save_bytes']-budget['safety_floor_bytes'],budget['safety_floor_bytes'])
++    check_budget(dest.parent,budget)
++    remaining=[x['bytes'] for x in m['files'].values()]+[len(prepared['manifest_raw']),len(prepared['complete_raw'])]
+     dest.parent.mkdir(parents=True,exist_ok=True)
+     stage=dest.parent/('.'+dest.name+'.staging-'+uuid.uuid4().hex);stage.mkdir()
+-    files={}; storage_meta={}
+     try:
+-        for sid,record in encoder.storages.items():
++        for sid,record in prepared['encoder'].storages.items():
++            meta=m['storages'][sid];expected=m['files'][meta['file']]
+             raw=record['raw'].detach().cpu().clone()
+-            p=stage/(sid+'.pt')
+-            require_space(dest.parent,raw.numel()+65536,floor_bytes)
+-            with p.open('xb') as f:
++            if byte_sha(raw)!=meta['raw_sha256']:raise ControlError('Runtime storage changed after exact budget planning: '+sid)
++            check_budget(dest.parent,budget,remaining_files=remaining)
++            file=stage/meta['file']
++            with file.open('xb') as f:
++                os.posix_fallocate(f.fileno(),0,expected['bytes'])
+                 torch.save(raw,f);f.flush();os.fsync(f.fileno())
+-            files[p.name]={'sha256':file_sha(p),'bytes':p.stat().st_size}
+-            storage_meta[sid]={'file':p.name,'byte_size':raw.numel(),'raw_sha256':byte_sha(raw),
+-                               'device':record['device'],'cpu_shared':record['shared']}
+-            del raw
+-        manifest={'schema':FORMAT,'provenance':provenance,'endianness':sys.byteorder,
+-                  'root':tree,'nodes':encoder.nodes,'classes':encoder.classes,'storages':storage_meta,'files':files}
+-        manifest['state_sha256']=digest(manifest)
+-        require_space(dest.parent,len(canonical(manifest))+65536,floor_bytes)
+-        with (stage/'manifest.json').open('xb') as f:f.write(canonical(manifest));f.flush();os.fsync(f.fileno())
+-        with (stage/'COMPLETE.json').open('xb') as f:f.write(canonical({'manifest_sha256':file_sha(stage/'manifest.json')}));f.flush();os.fsync(f.fileno())
+-        if dest.exists(): raise ControlError('Checkpoint destination appeared during capture')
++            if file.stat().st_size!=expected['bytes'] or file_sha(file)!=expected['sha256']:
++                raise ControlError('Actual tensor archive does not match exact size/SHA plan')
++            remaining.pop(0);del raw
++        for name,raw in [('manifest.json',prepared['manifest_raw']),('COMPLETE.json',prepared['complete_raw'])]:
++            check_budget(dest.parent,budget,remaining_files=remaining)
++            with (stage/name).open('xb') as f:f.write(raw);f.flush();os.fsync(f.fileno())
++            remaining.pop(0)
++        check_budget(dest.parent,budget,remaining_files=[])
++        if dest.exists():raise ControlError('Checkpoint destination appeared during capture')
+         os.rename(stage,dest)
+-        return manifest
++        return m
+     except BaseException as e:
+-        with (stage/'FAILED.json').open('x') as f:json.dump({'error':type(e).__name__,'reason':str(e)},f)
++        with (stage/'FAILED.json').open('x') as f:json.dump({'error':type(e).__name__,'reason':str(e),'storage_budget':budget},f)
+         raise
+ 
+ 
++def save_state(bundle,path,*,provenance,services=None,floor_bytes=10*1024**3,allowed_prefixes=None):
++    if Path(path).exists():raise ControlError('Immutable native checkpoint already exists')
++    prepared=prepare_state(bundle,provenance=provenance,services=services,floor_bytes=floor_bytes,
++                           allowed_prefixes=allowed_prefixes,destination_parent=Path(path).parent)
++    return save_prepared_state(prepared,path)
++
++
+ def read_manifest(path, expected_sha=None):
+     p=Path(path)
+     if p.is_symlink():raise ControlError('Linked checkpoint root')
+@@ -199,7 +235,7 @@ def read_manifest(path, expected_sha=None):
+     return m
+ 
+ 
+-def load_state(path, *, services=None, expected_sha=None, allow_cuda=False):
++def load_state(path, *, services=None, expected_sha=None, allow_cuda=False, cpu_storage_factory=None):
+     root=Path(path);m=read_manifest(root,expected_sha)
+     if any(s['device'].startswith('cuda') for s in m['storages'].values()):
+         if not allow_cuda or not torch.cuda.is_initialized():
+@@ -216,8 +252,13 @@ def load_state(path, *, services=None, expected_sha=None, allow_cuda=False):
+         if not isinstance(raw,torch.Tensor) or raw.dtype!=torch.uint8 or raw.ndim!=1 or not raw.is_contiguous() or raw.numel()!=s['byte_size'] or byte_sha(raw)!=s['raw_sha256']:
+             raise ControlError('Invalid tensor-only storage payload')
+         # Each original storage is moved once. Per-view .to() would break aliasing.
+-        raw=raw.clone() if s['device']=='cpu' else raw.to(s['device'])
+-        if s['cpu_shared']:raw.share_memory_()
++        if s['device']=='cpu' and s['cpu_shared'] and cpu_storage_factory is not None:
++            raw=cpu_storage_factory(sid,raw,s)
++            if raw.dtype!=torch.uint8 or raw.device.type!='cpu' or raw.numel()!=s['byte_size'] or not raw.is_shared() or byte_sha(raw)!=s['raw_sha256']:
++                raise ControlError('File-backed restore changed storage content or sharing semantics')
++        else:
++            raw=raw.clone() if s['device']=='cpu' else raw.to(s['device'])
++            if s['cpu_shared']:raw.share_memory_()
+         storages[sid]=raw.untyped_storage()
+     objects={}; constructing=set();services=services or {}
+     def decode(x):
+diff --git a/native_control/storage_budget.py b/native_control/storage_budget.py
+new file mode 100644
+index 0000000..366243f
+--- /dev/null
++++ b/native_control/storage_budget.py
+@@ -0,0 +1,40 @@
++"""Exact serialized byte accounting plus explicit filesystem safety reserves."""
++import hashlib,math,os,pathlib,shutil
++from control_common import ControlError
++
++class CountingHashWriter:
++    def __init__(self):self.bytes=0;self.hash=hashlib.sha256();self.closed=False
++    def write(self,data):
++        if self.closed:raise ValueError('Closed counting writer')
++        view=memoryview(data);self.bytes+=len(view);self.hash.update(view);return len(view)
++    def flush(self):pass
++    def tell(self):return self.bytes
++    def writable(self):return True
++
++def round_bytes(size,block):return ((size+block-1)//block)*block
++
++def make_budget(files,manifest_bytes,complete_bytes,*,block_size=4096,
++                floor_bytes=10*1024**3,retained_scratch_bytes=512*1024**2,metadata_reserve_bytes=16*1024**2):
++    values=[row['bytes'] for row in files.values()]+[manifest_bytes,complete_bytes]
++    if any(type(x) is not int or x<0 for x in values) or block_size<=0:raise ControlError('Invalid storage budget')
++    logical=sum(values);rounded=sum(round_bytes(x,block_size) for x in values)
++    return {'schema':'GAMECAM_EXACT_SERIALIZED_BUDGET_V1','serialized_tensor_files_bytes':sum(row['bytes'] for row in files.values()),
++            'manifest_bytes':manifest_bytes,'complete_bytes':complete_bytes,'exact_checkpoint_logical_bytes':logical,
++            'file_count':len(values),'filesystem_block_bytes':block_size,'rounded_file_data_reservation_bytes':rounded,
++            'filesystem_metadata_reserve_bytes':metadata_reserve_bytes,'retained_scratch_reserve_bytes':retained_scratch_bytes,
++            'safety_floor_bytes':floor_bytes,'minimum_free_before_save_bytes':rounded+metadata_reserve_bytes+retained_scratch_bytes+floor_bytes,
++            'physical_filesystem_overhead_is_exact':False,'logical_serialization_bytes_are_exact':True}
++
++def check_budget(path,budget,*,remaining_files=None,free_bytes=None):
++    p=pathlib.Path(path)
++    while not p.exists():p=p.parent
++    free=shutil.disk_usage(p).free if free_bytes is None else free_bytes
++    remaining=budget['rounded_file_data_reservation_bytes'] if remaining_files is None else sum(round_bytes(x,budget['filesystem_block_bytes']) for x in remaining_files)
++    required=remaining+budget['filesystem_metadata_reserve_bytes']+budget['retained_scratch_reserve_bytes']+budget['safety_floor_bytes']
++    if free<required:raise ControlError('STORAGE_BLOCKED: exact remaining checkpoint reservation=%d free=%d'%(required,free))
++    return {'free_bytes':free,'required_free_bytes':required,'remaining_file_reservation_bytes':remaining}
++
++def block_size(path):
++    p=pathlib.Path(path)
++    while not p.exists():p=p.parent
++    return os.statvfs(p).f_frsize
+diff --git a/runner/run_experiment.py b/runner/run_experiment.py
+index 870564a..5149fa1 100644
+--- a/runner/run_experiment.py
++++ b/runner/run_experiment.py
+@@ -1,6 +1,6 @@
+ """Safe planning/validation CLI; no real model dispatcher in this release."""
+-import argparse,json,pathlib,sys,uuid
+-ROOT=pathlib.Path(__file__).resolve().parents[1]
++import argparse,json,os,pathlib,sys,uuid
++ROOT=pathlib.Path(os.environ.get('GAMECAM_NATIVE_WORKSPACE',pathlib.Path(__file__).absolute().parents[1]))
+ sys.path.insert(0,str(ROOT))
+ from control_common import ControlError,require_space,verify_pins,exclusive_json
+ from runner.config_validation import load_and_validate
+diff --git a/runner/run_native_smoke.py b/runner/run_native_smoke.py
+index db7373d..84d5d6b 100644
+--- a/runner/run_native_smoke.py
++++ b/runner/run_native_smoke.py
+@@ -1,6 +1,6 @@
+ """Bounded native validation CLI; the formal experiment runner stays locked."""
+ import argparse,hashlib,json,os,pathlib,subprocess,sys,time
+-ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++ROOT=pathlib.Path(os.environ.get('GAMECAM_NATIVE_WORKSPACE',pathlib.Path(__file__).absolute().parents[1]));sys.path.insert(0,str(ROOT))
+ from native_control.admission import MODES,preflight,sha,validate_mode
+ 
+ def main(argv=None):
+@@ -32,7 +32,7 @@ def main(argv=None):
+                     '/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/release/candidates/r2_sealed_config.yaml',lock)
+         else:restore_and_continue(ROOT,out,a.mode,lock)
+         return 0
+-    admission=preflight(ROOT,lock,cpu_report=a.cpu_report)
++    admission=preflight(ROOT,lock,cpu_report=a.cpu_report,cpu_storage_backend='owned_file_mmap',storage_validation=ROOT/'evidence/FILE_BACKED_CPU_VALIDATION.json')
+     target=ROOT/'artifacts'/('GPU_ADMISSION_'+a.mode+'.json')
+     with target.open('x') as f:json.dump(admission,f,indent=2)
+     if not admission['admitted']:
+@@ -45,7 +45,7 @@ def main(argv=None):
+     data='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data'
+     env=dict(os.environ,PYTHONPATH=str(ROOT)+':'+str(ROOT/'source_candidate'),PYTHONHASHSEED='43',
+          PYTHONDONTWRITEBYTECODE='1',OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',
+-         CUDA_VISIBLE_DEVICES='0',TORCH_HOME=data+'/torch_hub',HF_HOME=data+'/huggingface',HF_HUB_OFFLINE='1',
++         CUDA_VISIBLE_DEVICES='0',GAMECAM_NATIVE_WORKSPACE=str(ROOT),GAMECAM_FILE_BACKED_CPU_ROOT=str(out/'shared_cpu'),TORCH_HOME=data+'/torch_hub',HF_HOME=data+'/huggingface',HF_HUB_OFFLINE='1',
+          HF_HUB_DISABLE_TELEMETRY='1',MPLBACKEND='Agg',RERUN_NO_ANALYTICS='1',GAMECAM_NATIVE_CONTROL_BOUNDED='1',
+          GAMECAM_NATIVE_INTERNAL_CHILD=token_value,GAMECAM_NATIVE_ATTEMPT=str(out),GAMECAM_NATIVE_LOCK=str(ROOT/'configs/identity_lock.json'),
+          GAMECAM_TASK003_OBSERVER_JSONL=str(out/'observer.jsonl'))
+diff --git a/src/depth_video.py b/src/depth_video.py
+index 06d8ec5..c6eee9a 100644
+--- a/src/depth_video.py
++++ b/src/depth_video.py
+@@ -1,5 +1,6 @@
+ from task004_controls import local_flags as task004_local_flags
+ from native_control.install import selected_flags
++from native_control.file_backed import cpu_zeros
+ from task003_observer import recorder as task003
+ import numpy as np
+ import torch
+@@ -49,7 +50,7 @@ class DepthVideo:
+         ### state attributes ###
+         self.timestamp = torch.zeros(buffer, device=self.device, dtype=torch.float).share_memory_()
+         # To save gpu ram, we put images to cpu as it is never used
+-        self.images = torch.zeros(buffer, 3, ht, wd, device='cpu', dtype=torch.float32)
++        self.images = cpu_zeros('images', (buffer, 3, ht, wd), dtype=torch.float32)
+ 
+         # whether the valid_depth_mask is calculated/updated, if dirty, not updated, otherwise, updated
+         self.dirty = torch.zeros(buffer, device=self.device, dtype=torch.bool).share_memory_() 
+@@ -90,7 +91,7 @@ class DepthVideo:
+                 self.feature_downsample_factor = 14
+             
+             # The followings are in cpu to save memory
+-            self.dino_feats = torch.zeros(buffer, ht//self.feature_downsample_factor, wd//self.feature_downsample_factor, n_features, device='cpu', dtype=torch.float).share_memory_()
++            self.dino_feats = cpu_zeros('dino_feats', (buffer, ht//self.feature_downsample_factor, wd//self.feature_downsample_factor, n_features), dtype=torch.float, native_share=True)
+             self.dino_feats_resize = torch.zeros(buffer, n_features, ht//self.down_scale, wd//self.down_scale, device=self.device, dtype=torch.float).share_memory_()
+             self.uncertainties = torch.ones(buffer, ht//self.down_scale, wd//self.down_scale, device=self.device, dtype=torch.float).share_memory_()
+             # use kaiming normal initialization to initialize the affine weights
+diff --git a/tests/__init__.py b/tests/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/tests/file_support.py b/tests/file_support.py
+new file mode 100644
+index 0000000..892e53f
+--- /dev/null
++++ b/tests/file_support.py
+@@ -0,0 +1,47 @@
++"""CPU readers, not real Tracker/Rerun processes or neural models."""
++import os
++os.environ['CUDA_VISIBLE_DEVICES']=''
++import hashlib,json,pathlib,shutil,traceback
++import torch
++from native_control.file_backed import descriptor_for
++
++def tensor_sha(t):
++    view=memoryview(t.detach().contiguous().reshape(-1).view(torch.uint8).numpy())
++    h=hashlib.sha256()
++    for pos in range(0,len(view),8*1024**2):h.update(view[pos:pos+8*1024**2])
++    return h.hexdigest()
++
++def info(t):
++    return {'dtype':str(t.dtype),'shape':list(t.shape),'stride':list(t.stride()),'offset':t.storage_offset(),
++            'is_shared':t.is_shared(),'sha256':tensor_sha(t),'descriptor':descriptor_for(t.untyped_storage())}
++
++def reader(pipe,payload,role='CPU_READER',write=False):
++    torch.cuda._lazy_init=lambda *a,**k:(_ for _ in ()).throw(RuntimeError('CUDA forbidden in CPU shared storage test'))
++    try:
++        base=payload['base'];before=info(base)
++        aliases=payload.get('view',base).untyped_storage()._cdata==base.untyped_storage()._cdata
++        repeated=payload.get('same',base) is payload.get('view',base)
++        if write:base.reshape(-1)[0]=91
++        pipe.send({'role':role,'pid':os.getpid(),'before':before,'after':info(base),'alias':aliases,'repeated_object':repeated,
++                   'view':info(payload['view']) if 'view' in payload else None,'shm_used':shutil.disk_usage('/dev/shm').used,
++                   'cuda_initialized':torch.cuda.is_initialized(),'exit_code':0})
++    except BaseException:pipe.send({'error':traceback.format_exc(),'exit_code':1});raise
++    finally:pipe.close()
++
++def full_reader(pipe,images,dino,role,start,write_allowed,finish):
++    torch.set_num_threads(2)
++    torch.cuda._lazy_init=lambda *a,**k:(_ for _ in ()).throw(RuntimeError('CUDA forbidden'))
++    try:
++        start.wait(30)
++        pipe.send({'stage':'initial','role':role,'pid':os.getpid(),'images':info(images),'dino':info(dino),
++                   'shm_used':shutil.disk_usage('/dev/shm').used,'cuda_initialized':torch.cuda.is_initialized()})
++        if role=='TRACKER_CPU_STANDIN':
++            if not write_allowed.wait(45):raise TimeoutError('Initial read barrier not released')
++            images[499,2,359,639]=73.25;dino[499,24,44,383]=-18.5;finish.set()
++        else:
++            if not finish.wait(45):raise TimeoutError('Writer did not publish')
++        pipe.send({'stage':'after','role':role,'pid':os.getpid(),'images':info(images),'dino':info(dino),
++                   'last_values':[float(images[-1,-1,-1,-1]),float(dino[-1,-1,-1,-1])],
++                   'shm_used':shutil.disk_usage('/dev/shm').used,'cuda_initialized':torch.cuda.is_initialized()})
++    except BaseException:pipe.send({'error':traceback.format_exc(),'exit_code':1});raise
++    finally:pipe.close()
+diff --git a/tests/fixtures.py b/tests/fixtures.py
+new file mode 100644
+index 0000000..bc2281f
+--- /dev/null
++++ b/tests/fixtures.py
+@@ -0,0 +1,69 @@
++import copy,torch
++from checkpoint.state_schema import VIDEO,GRAPH,MOTION,FRONTEND
++from checkpoint.rng_state import capture_rng_state
++from control_common import digest
++
++def state_fixture():
++    cap=4;n=2
++    v={k:torch.arange(cap*2,dtype=torch.float32).reshape(cap,2) for k in VIDEO}
++    v['affine_weights']=torch.ones(3)
++    g={k:torch.ones(2) for k in GRAPH}
++    for suf in ('','_inac','_bad'):
++        g['ii'+suf]=torch.tensor([0],dtype=torch.int64);g['jj'+suf]=torch.tensor([1],dtype=torch.int64)
++    g['age']=torch.tensor([0],dtype=torch.int64);g['corr_pyramid']=[torch.ones(1,2,2)/(i+1) for i in range(4)]
++    return {'video':v,'graph':g,'motion_filter':{k:torch.zeros(2) for k in MOTION},
++        'frontend':{k:torch.zeros(2) for k in FRONTEND},'cursor':{'last_input_index':17,'next_input_index':18},'rng':capture_rng_state(),
++        'runtime':{'capacity':cap,'counter':n,'first_mainloop_seen':False,'second_initialization_complete':True,'init_D':0,'keyframe_ids':[11,12]},
++        'model_buffers':{'CPU_SYNTHETIC_BUFFER':torch.zeros(2)},'model_modes':{'CPU_SYNTHETIC_MODULE':False},'observer':{'ba_counter':24}}
++
++def provenance():return {'artifact_kind':'CPU_SYNTHETIC_STATE','baseline_commit':'synthetic-no-baseline-run','fixture_version':1}
++def header(schedule='S1'):
++    return {'schema':'GAMECAM_SCHEDULE_V1','artifact_kind':'CPU_SYNTHETIC_SCHEDULE','schedule':schedule,'producer_D':1 if schedule=='S1' else 0,
++        'init_D':0,'W':1,'U':1,'c0_sha256':digest({'synthetic':True}),'source_sha256':digest('synthetic-source'),'input_sha256':digest('no-rgb')}
++
++def control_sequence():
++    edge={'edge_id':'g:0:1','graph_id':'g','source':0,'target':2,'state':'active'}
++    return [(18,'initialization_phase',{'phase':'frontend_init_second','update_index':23,'init_D':0,'enable_udba':True,'enable_update_uncer':True}),
++      (19,'frame_begin',{'input_index':18,'rgb_id':19,'timestamp_token':'19'}),
++      (19,'motion_filter_decision',{'admitted':True,'force_flag':False,'rejection_reason':None}),
++      (19,'candidate_insert',{'keyframe_id':19,'slot':2,'generation':0,'insertion_order':2}),
++      (19,'edge_add_request',{'graph_id':'g','source_indices':[0],'target_indices':[2],'remove':False}),
++      (19,'edge_insert',{'graph_id':'g','edges':[edge]}),
++      (19,'ba_begin',{'phase':'frontend_local_predecision','call_id':24,'t0':0,'t1':3,'outer_iteration':0,'iterations':2,'motion_only':False,'use_inactive':True,'enable_update_uncer':True,'enable_udba':True}),
++      (19,'ba_end',{'call_id':24}),
++      (19,'keyframe_decision',{'retained':True,'rejection_reason':None,'force_flag':False}),
++      (19,'keyframe_commit',{'keyframe_id':19,'slot':2,'insertion_order':2}),
++      (19,'edge_age_advance',{'graph_id':'g','edge_ids':['g:0:1'],'increment':1}),
++      (19,'edge_remove',{'graph_id':'g','edge_ids':['g:0:1'],'store':False,'reason':'synthetic_age_cap'}),
++      (19,'keyframe_remove',{'keyframe_id':19,'slot':2,'slot_map_after':[{'slot':0,'keyframe_id':11,'generation':0},{'slot':1,'keyframe_id':12,'generation':0}]}),
++      (19,'frame_end',{'next_input_index':19}),
++      (19,'final_ba_begin',{'stage':1,'steps':7,'metric_depth_reg':False}),
++      (19,'final_graph_build',{'graph_id':'f','edges':[],'nonempty':False}),
++      (19,'final_ba_end',{'stage':1,'metric_depth_reg_restored':True}),
++      (19,'filler_batch_begin',{'batch_id':0,'rgb_ids':[19],'slots':[2],'anchor_left':[0],'anchor_right':[1]}),
++      (19,'filler_graph_build',{'graph_id':'fill','edges':[]}),
++      (19,'filler_update',{'call_id':25,'iteration':0,'t0':2,'t1':3,'iterations':2,'motion_only':True}),
++      (19,'filler_batch_end',{'batch_id':0,'counter_after':2}),
++      (19,'export_complete',{'pose_count':2,'rgb_ids':[11,12]})]
++class ToyRuntime:
++    """Discrete toy only. No geometry, native optimizer, dataset or model."""
++    def __init__(self,D):
++        self.D=D;self.continuous=0.0
++        self.state={'active_keyframe_ids':[11,12],'slot_map':[{'slot':0,'keyframe_id':11,'generation':0},{'slot':1,'keyframe_id':12,'generation':0}],'ordered_edges':[]}
++    def context(self):return copy.deepcopy(self.state)
++    def apply(self,kind,p):
++        s=self.state
++        if kind=='candidate_insert':
++            s['active_keyframe_ids'].append(p['keyframe_id']);s['slot_map'].append({k:p[k] for k in ('slot','keyframe_id','generation')})
++        elif kind=='edge_insert':s['ordered_edges']+=copy.deepcopy(p['edges'])
++        elif kind=='edge_remove':s['ordered_edges']=[e for e in s['ordered_edges'] if e['edge_id'] not in p['edge_ids']]
++        elif kind=='keyframe_remove':
++            s['active_keyframe_ids'].remove(p['keyframe_id']);s['slot_map']=copy.deepcopy(p['slot_map_after'])
++        elif kind in ('final_graph_build','filler_graph_build'):s['ordered_edges']+=copy.deepcopy(p['edges'])
++        if kind in ('ba_begin','filler_update'):self.continuous+=(1+self.D)*0.123
++
++def events_fixture(D=1):
++    toy=ToyRuntime(D);out=[]
++    for frame,kind,p in control_sequence():
++        before=toy.context();toy.apply(kind,p);out.append((frame,kind,p,before,toy.context()))
++    return out,toy
+diff --git a/tests/run_cpu_tests.py b/tests/run_cpu_tests.py
+new file mode 100644
+index 0000000..b6fcda3
+--- /dev/null
++++ b/tests/run_cpu_tests.py
+@@ -0,0 +1,37 @@
++"""One CPU-only suite, with per-test output, exit status, and byte hashes."""
++import os
++os.environ['CUDA_VISIBLE_DEVICES']=''
++os.environ['PYTHONDONTWRITEBYTECODE']='1'
++import contextlib,hashlib,io,json,pathlib,sys,time,traceback,unittest
++ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++import torch
++assert not torch.cuda.is_initialized()
++def forbidden(*args,**kwargs):raise RuntimeError('CUDA_INIT_FORBIDDEN_IN_CPU_SYNTHETIC_TESTS')
++torch.cuda._lazy_init=forbidden
++from control_common import file_sha,require_space
++from tests import test_control
++class RecordedResult(unittest.TextTestResult):
++    def startTest(self,test):
++        self.start=time.perf_counter();self.capture_out=io.StringIO();self.capture_err=io.StringIO();self.out_cm=contextlib.redirect_stdout(self.capture_out);self.err_cm=contextlib.redirect_stderr(self.capture_err);self.out_cm.__enter__();self.err_cm.__enter__();self.outcome='PASS';self.detail=''
++        super().startTest(test)
++    def addFailure(self,t,err):self.outcome='FAIL';self.detail=self._exc_info_to_string(err,t);super().addFailure(t,err)
++    def addError(self,t,err):self.outcome='ERROR';self.detail=self._exc_info_to_string(err,t);super().addError(t,err)
++    def stopTest(self,test):
++        self.err_cm.__exit__(None,None,None);self.out_cm.__exit__(None,None,None)
++        ident=test.id();stdout=self.capture_out.getvalue();stderr=self.capture_err.getvalue()+self.detail
++        evidence={'test_id':ident,'seed':43,'input':'small CPU synthetic state / toy events / frozen config only',
++            'expected':'assertions pass or specified invalid input rejected','actual':self.outcome,'exit_code':0 if self.outcome=='PASS' else 1,
++            'duration_seconds':time.perf_counter()-self.start,'stdout':stdout,'stderr':stderr,
++            'stdout_sha256':hashlib.sha256(stdout.encode()).hexdigest(),'stderr_sha256':hashlib.sha256(stderr.encode()).hexdigest(),
++            'cuda_initialized':torch.cuda.is_initialized()}
++        rows.append(evidence);super().stopTest(test)
++rows=[]
++if __name__=='__main__':
++    out=ROOT/'artifacts/cpu_test_results';out.mkdir(parents=True,exist_ok=False);require_space(out,16*1024**2)
++    suite=unittest.defaultTestLoader.loadTestsFromModule(test_control);start=time.time()
++    with (out/'unittest.stderr.txt').open('w') as log:
++        result=unittest.TextTestRunner(stream=log,verbosity=2,resultclass=RecordedResult).run(suite)
++    report={'scope':'CPU_SYNTHETIC_ONLY_NOT_NATIVE_DROID','total':result.testsRun,'passed':sum(r['actual']=='PASS' for r in rows),'failures':len(result.failures),'errors':len(result.errors),'duration_seconds':time.time()-start,'cuda_initialized':torch.cuda.is_initialized(),'tests':rows}
++    (out/'CPU_TEST_REPORT.json').write_text(json.dumps(report,indent=2));print(json.dumps({k:v for k,v in report.items() if k!='tests'}))
++    (out/'OUTPUT_SHA256.json').write_text(json.dumps({p.name:file_sha(p) for p in out.iterdir() if p.is_file()},indent=2))
++    sys.exit(0 if result.wasSuccessful() else 1)
+diff --git a/tests/run_native_cpu_tests.py b/tests/run_native_cpu_tests.py
+new file mode 100644
+index 0000000..2d07732
+--- /dev/null
++++ b/tests/run_native_cpu_tests.py
+@@ -0,0 +1,45 @@
++"""Original 54 tests plus native interface fixtures; never claim GPU success."""
++import os
++os.environ['CUDA_VISIBLE_DEVICES']=''
++os.environ['PYTHONDONTWRITEBYTECODE']='1'
++import contextlib,hashlib,io,json,pathlib,sys,time,unittest
++ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++import torch
++assert not torch.cuda.is_initialized()
++def forbidden(*a,**k):raise RuntimeError('CUDA_INITIALIZATION_FORBIDDEN_IN_CPU_INTERFACE_TESTS')
++torch.cuda._lazy_init=forbidden
++from tests import test_control,test_native
++rows=[]
++class RecordedResult(unittest.TextTestResult):
++    def startTest(self,test):
++        self.started=time.perf_counter();self.o=io.StringIO();self.e=io.StringIO()
++        self.oc=contextlib.redirect_stdout(self.o);self.ec=contextlib.redirect_stderr(self.e);self.oc.__enter__();self.ec.__enter__()
++        self.actual='PASS';self.detail='';super().startTest(test)
++    def addFailure(self,test,err):self.actual='FAIL';self.detail=self._exc_info_to_string(err,test);super().addFailure(test,err)
++    def addError(self,test,err):self.actual='ERROR';self.detail=self._exc_info_to_string(err,test);super().addError(test,err)
++    def stopTest(self,test):
++        self.ec.__exit__(None,None,None);self.oc.__exit__(None,None,None)
++        stdout=self.o.getvalue();stderr=self.e.getvalue()+self.detail
++        rows.append({'test_id':test.id(),'seed':43,'input':'CPU fixtures; actual native Python bodies where indicated; no pretrained model',
++                     'expected':'assertions pass, invalid state fails closed','actual':self.actual,'exit_code':0 if self.actual=='PASS' else 1,
++                     'seconds':time.perf_counter()-self.started,'stdout':stdout,'stderr':stderr,
++                     'stdout_sha256':hashlib.sha256(stdout.encode()).hexdigest(),'stderr_sha256':hashlib.sha256(stderr.encode()).hexdigest(),
++                     'cuda_initialized':torch.cuda.is_initialized()})
++        super().stopTest(test)
++
++def main():
++    label=sys.argv[1] if len(sys.argv)>1 else 'initial'
++    out=ROOT/'artifacts'/('CPU_SUITE_'+label);out.mkdir(parents=True,exist_ok=False)
++    suite=unittest.TestSuite([unittest.defaultTestLoader.loadTestsFromModule(test_control),unittest.defaultTestLoader.loadTestsFromModule(test_native)])
++    started=time.time()
++    with (out/'unittest.stderr.txt').open('x') as f:
++        result=unittest.TextTestRunner(stream=f,verbosity=2,resultclass=RecordedResult).run(suite)
++    report={'scope':'CPU_NATIVE_INTERFACE_AND_SYNTHETIC_REGRESSION_NOT_GPU','total':result.testsRun,'passed':sum(x['actual']=='PASS' for x in rows),
++        'failures':len(result.failures),'errors':len(result.errors),'seconds':time.time()-started,'cuda_initialized':torch.cuda.is_initialized(),
++        'pretrained_model_constructed':False,'synthetic_nn_fixture_constructed':True,'native_gpu_runs':0,'tests':rows}
++    (out/'CPU_TEST_REPORT.json').write_text(json.dumps(report,indent=2))
++    print(json.dumps({k:v for k,v in report.items() if k!='tests'}))
++    for x in rows:
++        if x['actual']!='PASS':print(x['test_id']+'\n'+x['stderr'])
++    return 0 if result.wasSuccessful() else 1
++if __name__=='__main__':raise SystemExit(main())
+diff --git a/tests/run_release_cpu_tests.py b/tests/run_release_cpu_tests.py
+new file mode 100644
+index 0000000..5ba53c7
+--- /dev/null
++++ b/tests/run_release_cpu_tests.py
+@@ -0,0 +1,30 @@
++"""Retain 118 legacy test identities and add release-fix CPU tests."""
++import os
++os.environ['CUDA_VISIBLE_DEVICES']='';os.environ['PYTHONDONTWRITEBYTECODE']='1'
++import json,pathlib,sys,time,unittest
++ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++from tests import run_native_cpu_tests as original
++from tests import test_release_fixes
++import torch
++def main():
++    label=sys.argv[1] if len(sys.argv)>1 else 'initial'
++    out=ROOT/'artifacts'/('RELEASE_CPU_'+label);out.mkdir(exist_ok=False)
++    suite=unittest.TestSuite([unittest.defaultTestLoader.loadTestsFromModule(original.test_control),
++                             unittest.defaultTestLoader.loadTestsFromModule(original.test_native),
++                             unittest.defaultTestLoader.loadTestsFromModule(test_release_fixes)])
++    started=time.time()
++    with (out/'unittest.stderr.txt').open('x') as log:
++        r=unittest.TextTestRunner(stream=log,verbosity=2,resultclass=original.RecordedResult).run(suite)
++    rows=original.rows
++    report={'scope':'CPU_ONLY_RELEASE_FIXES_NO_NATIVE_C0_OR_MODELS','total':r.testsRun,'passed':sum(x['actual']=='PASS' for x in rows),
++            'legacy_118_cases':sum(not x['test_id'].startswith('tests.test_release_fixes.') for x in rows),
++            'new_cases':sum(x['test_id'].startswith('tests.test_release_fixes.') for x in rows),
++            'failures':len(r.failures),'errors':len(r.errors),'seconds':time.time()-started,
++            'cuda_initialized':torch.cuda.is_initialized(),'pretrained_model_constructed':False,'real_RGB_inputs':0,
++            'native_C0_created':False,'tests':rows}
++    (out/'CPU_TEST_REPORT.json').write_text(json.dumps(report,indent=2))
++    print(json.dumps({k:v for k,v in report.items() if k!='tests'}))
++    for row in rows:
++        if row['actual']!='PASS':print(row['test_id']+'\n'+row['stderr'])
++    return 0 if r.wasSuccessful() else 1
++if __name__=='__main__':raise SystemExit(main())
+diff --git a/tests/test_control.py b/tests/test_control.py
+new file mode 100644
+index 0000000..9f8edaa
+--- /dev/null
++++ b/tests/test_control.py
+@@ -0,0 +1,206 @@
++import copy,io,json,os,pathlib,random,shutil,subprocess,sys,tempfile,types,unittest
++import numpy as np
++import torch
++from control_common import ControlError,digest,file_sha,require_space,GIB,verify_pins
++from checkpoint.checkpoint_adapter import save_checkpoint,load_checkpoint,validate_checkpoint,compare_checkpoint_hashes
++from checkpoint.rng_state import capture_rng_state,restore_rng_state
++from checkpoint.state_schema import validate_runtime_state,ExplicitBindings
++from schedule.recorder import record_schedule,ScheduleRecorder
++from schedule.replay import load_schedule,replay_schedule,validate_schedule,ScheduleReplayer
++from schedule.schema import FIELDS,validate_payload,validate_context
++from runner.config_validation import load_and_validate
++from runner.run_experiment import plan,require_approved_runtime
++from runner.native_hooks import ControlHooks,common_init_depth_regularization
++from runner.validate_run import validate_run
++from tests.fixtures import state_fixture,provenance,header,events_fixture,ToyRuntime
++ROOT=pathlib.Path(__file__).resolve().parents[1]
++class Base(unittest.TestCase):
++    def setUp(self):
++        random.seed(43);np.random.seed(43);torch.random.default_generator.manual_seed(43)
++        self.tmp=tempfile.TemporaryDirectory(prefix='cpu-synthetic-',dir=ROOT/'artifacts');self.d=pathlib.Path(self.tmp.name)
++    def tearDown(self):
++        self.assertFalse(torch.cuda.is_initialized());self.tmp.cleanup()
++    def save(self,state=None,name='cp'):
++        p=self.d/name;save_checkpoint(state if state is not None else state_fixture(),p,provenance=provenance());return p
++    def schedule(self,name='s.jsonl'):
++        events,toy=events_fixture();p=self.d/name;record_schedule(p,header(),events);return p,toy
++class CheckpointTests(Base):
++    def test_roundtrip_source_inventory(self):
++        p=self.save();state=load_checkpoint(p);self.assertTrue(validate_runtime_state(state)['valid']);self.assertTrue(validate_checkpoint(p)['valid'])
++    def test_storage_alias_stride_offset_object_identity(self):
++        x=torch.arange(24,dtype=torch.float32).reshape(4,6);v=x[1:,1:5];state={'base':x,'transpose':x.T,'view':v,'same_view_object':v}
++        out=load_checkpoint(self.save(state));self.assertEqual(out['view'].stride(),v.stride());self.assertEqual(out['view'].storage_offset(),v.storage_offset())
++        self.assertIs(out['view'],out['same_view_object']);self.assertEqual(out['base'].untyped_storage().data_ptr(),out['transpose'].untyped_storage().data_ptr())
++        out['view'][0,0]=99;self.assertEqual(out['base'][1,1],99);self.assertNotEqual(x[1,1],99)
++    def test_empty_scalar_bool_half_and_bytes(self):
++        d={'empty':torch.zeros(0),'scalar':torch.tensor(3.),'bool':torch.tensor([True]),'half':torch.ones(2,dtype=torch.float16),'bfloat':torch.ones(2,dtype=torch.bfloat16),'bytes':b'abc','tuple':(1,2)}
++        out=load_checkpoint(self.save(d));self.assertEqual(out['scalar'].item(),3);self.assertEqual(out['bytes'],b'abc');self.assertEqual(out['tuple'],(1,2))
++    def test_hashes_independent_saves(self):
++        s=state_fixture();a=self.save(s,'a');b=self.save(s,'b');self.assertTrue(compare_checkpoint_hashes(a,b)['same_state']);self.assertTrue(compare_checkpoint_hashes(a,b)['same_tensor_values'])
++    def test_two_loads_independent(self):
++        p=self.save();a=load_checkpoint(p);b=load_checkpoint(p);a['video']['disps'].zero_();self.assertFalse(torch.equal(a['video']['disps'],b['video']['disps']))
++    def test_existing_snapshot_immutable(self):
++        p=self.save();before=file_sha(p/'manifest.json')
++        with self.assertRaises(ControlError):save_checkpoint({},p,provenance=provenance())
++        self.assertEqual(file_sha(p/'manifest.json'),before)
++    def test_corrupt_storage_rejected(self):
++        p=self.save();f=next(p.glob('*.pt'));data=f.read_bytes();f.write_bytes(data[:-1]+bytes([data[-1]^1]))
++        with self.assertRaises(ControlError):load_checkpoint(p)
++    def test_missing_complete_rejected(self):
++        p=self.save();(p/'COMPLETE.json').unlink()
++        with self.assertRaises(ControlError):load_checkpoint(p)
++    def test_unknown_python_object_rejected(self):
++        with self.assertRaises(ControlError):self.save({'opaque':object()})
++    def test_identity_mismatch_rejected(self):
++        p=self.save()
++        with self.assertRaises(ControlError):load_checkpoint(p,expected_identity={'baseline_commit':'wrong'})
++    def test_native_capture_is_not_authorized(self):
++        with self.assertRaises(ControlError):save_checkpoint({},self.d/'real',provenance={'artifact_kind':'NATIVE_C0'})
++    def test_graph_bounds_rejected(self):
++        s=state_fixture();s['graph']['ii'][0]=4
++        with self.assertRaises(ControlError):validate_runtime_state(s)
++    def test_missing_state_rejected(self):
++        s=state_fixture();del s['motion_filter']['net']
++        with self.assertRaises(ControlError):validate_runtime_state(s)
++    def test_full_capacity_required(self):
++        s=state_fixture();s['video']['images']=s['video']['images'][:2]
++        with self.assertRaises(ControlError):validate_runtime_state(s)
++    def test_binding_unknown_attribute_stops(self):
++        o=types.SimpleNamespace(x=torch.zeros(2),unregistered=1)
++        with self.assertRaises(ControlError):ExplicitBindings(o,['x']).capture()
++    def test_cpu_binding_restore(self):
++        o=types.SimpleNamespace(x=torch.zeros(2),counter=0);b=ExplicitBindings(o,['x','counter']);b.restore_cpu_in_place({'x':torch.ones(2),'counter':2});self.assertTrue(torch.equal(o.x,torch.ones(2)));self.assertEqual(o.counter,2)
++    def test_rng_roundtrip(self):
++        s=capture_rng_state();p=self.save(s);expected=(random.random(),np.random.normal(0,1,4),torch.rand(4));restore_rng_state(load_checkpoint(p))
++        self.assertEqual(random.random(),expected[0]);np.testing.assert_array_equal(np.random.normal(0,1,4),expected[1]);self.assertTrue(torch.equal(torch.rand(4),expected[2]))
++    def test_rng_context_flag_mismatch_stops(self):
++        s=capture_rng_state();s['flags']['grad_enabled']=not s['flags']['grad_enabled']
++        with self.assertRaises(ControlError):restore_rng_state(s)
++    def test_disk_safety_floor_blocks_before_write(self):
++        with self.assertRaises(ControlError):save_checkpoint({},self.d/'blocked',provenance=provenance(),free_bytes=10*GIB-1)
++        self.assertFalse((self.d/'blocked').exists());self.assertFalse(list(self.d.glob('*.staging-*')))
++    def test_space_boundary(self):
++        self.assertEqual(require_space(self.d,1024,free_bytes=10*GIB+1024),10*GIB+1024)
++        with self.assertRaises(ControlError):require_space(self.d,1025,free_bytes=10*GIB+1024)
++class ScheduleTests(Base):
++    def test_record_all_22_kinds(self):
++        p,toy=self.schedule();s=load_schedule(p);self.assertEqual({e['event_type'] for e in s['events']},set(FIELDS));self.assertEqual(validate_schedule(p)['events'],22)
++    def test_cross_D_toy_replay_keeps_own_continuous_state(self):
++        p,natural=self.schedule();other=ToyRuntime(0);r=replay_schedule(p,other);self.assertTrue(r.finish());self.assertEqual(other.context(),natural.context());self.assertNotEqual(other.continuous,natural.continuous)
++    def test_event_order_tamper_rejected(self):
++        p,_=self.schedule();rows=p.read_text().splitlines();rows[2],rows[3]=rows[3],rows[2];p.write_text('\n'.join(rows)+'\n')
++        with self.assertRaises(ControlError):load_schedule(p)
++    def test_unsealed_schedule_rejected(self):
++        p=self.d/'incomplete';r=ScheduleRecorder(p,header());r.abort()
++        with self.assertRaises(ControlError):load_schedule(p)
++    def test_precontext_mismatch_stops_and_latches(self):
++        p,_=self.schedule();r=ScheduleReplayer(load_schedule(p));ctx=ToyRuntime(0).context();ctx['active_keyframe_ids'].append(99)
++        with self.assertRaises(ControlError):r.select('initialization_phase',18,ctx)
++        self.assertTrue(r.failed);self.assertEqual(r.index,0)
++        with self.assertRaises(ControlError):r.select('initialization_phase',18,ToyRuntime(0).context())
++    def test_postcontext_mismatch_stops(self):
++        p,_=self.schedule();r=ScheduleReplayer(load_schedule(p));ctx=ToyRuntime(0).context();r.select('initialization_phase',18,ctx);ctx['active_keyframe_ids'].append(99)
++        with self.assertRaises(ControlError):r.confirm(ctx)
++        self.assertTrue(r.failed)
++    def test_incomplete_event_consumption_rejected(self):
++        p,_=self.schedule();r=ScheduleReplayer(load_schedule(p))
++        with self.assertRaises(ControlError):r.finish()
++    def test_wrong_C0_schedule_rejected(self):
++        p,_=self.schedule()
++        with self.assertRaises(ControlError):load_schedule(p,{'c0_sha256':'wrong'})
++    def test_continuous_payload_forbidden(self):
++        p={'call_id':0,'poses':[1,2,3]}
++        with self.assertRaises(ControlError):validate_payload('ba_end',p)
++    def test_invalid_graph_context_rejected(self):
++        c=ToyRuntime(0).context();c['ordered_edges']=[{'edge_id':'bad','graph_id':'g','source':0,'target':99,'state':'active'}]
++        with self.assertRaises(ControlError):validate_context(c)
++    def test_hook_pairing_and_replay(self):
++        p,_=self.schedule();toy=ToyRuntime(0);h=ControlHooks('replay',replayer=ScheduleReplayer(load_schedule(p)))
++        for frame,kind,proposed,before,after in events_fixture()[0]:
++            actual=h.before(kind,frame,proposed,toy.context());toy.apply(kind,actual);h.after(actual,toy.context())
++        self.assertTrue(h.replayer.finish())
++    def test_no_nested_double_consumption(self):
++        p,_=self.schedule();r=ScheduleReplayer(load_schedule(p));h=ControlHooks('replay',replayer=r);ctx=ToyRuntime(0).context();h.before('initialization_phase',18,{},ctx)
++        with self.assertRaises(ControlError):h.before('initialization_phase',18,{},ctx)
++    def test_common_init_selector_scoped(self):
++        self.assertFalse(common_init_depth_regularization('frontend_init_second',True));self.assertTrue(common_init_depth_regularization('frontend_local_predecision',True))
++class RunnerTests(Base):
++    def test_exact_four_yaml(self):
++        lock=json.loads((ROOT/'configs/identity_lock.json').read_text());cs=[load_and_validate(ROOT/'configs'/f'{b}.yaml',lock) for b in ('B1','B2','B3','B4')]
++        self.assertEqual({c['c0_ref'] for c in cs},{'artifacts/C0'});self.assertEqual([c['D'] for c in cs],[1,0,1,0])
++    def test_mutated_non_target_parameter_rejected(self):
++        p=self.d/'bad.yaml';p.write_text((ROOT/'configs/B1.yaml').read_text().replace('buffer: 500','buffer: 256'))
++        with self.assertRaises(ControlError):load_and_validate(p,json.loads((ROOT/'configs/identity_lock.json').read_text()))
++    def test_dry_run_four_arms(self):
++        for b in ('B1','B2','B3','B4'):
++            q=subprocess.run([sys.executable,'-B',str(ROOT/'runner/run_experiment.py'),'--experiment',b,'--dry-run'],capture_output=True,timeout=15)
++            self.assertEqual(q.returncode,0,q.stderr.decode());d=json.loads(q.stdout);self.assertTrue(d['plan_valid']);self.assertFalse(d['formal_execution_ready'])
++    def test_no_implicit_experiment(self):
++        q=subprocess.run([sys.executable,'-B',str(ROOT/'runner/run_experiment.py'),'--dry-run'],capture_output=True,timeout=15);self.assertNotEqual(q.returncode,0)
++    def test_formal_execution_guard_retained(self):
++        with self.assertRaises(ControlError):require_approved_runtime({})
++        with self.assertRaises(ControlError):require_approved_runtime({'formal_runs_authorized':True,'native_integration_validated':True})
++    def test_real_run_cli_remains_blocked(self):
++        q=subprocess.run([sys.executable,'-B',str(ROOT/'runner/run_experiment.py'),'--experiment','B1','--output-root',str(self.d/'receipts')],capture_output=True,timeout=15)
++        self.assertEqual(q.returncode,2);self.assertFalse(json.loads(q.stdout)['formal_run_started'])
++    def test_pin_mismatch_rejected(self):
++        p=self.d/'pin';p.write_text('x')
++        with self.assertRaises(ControlError):verify_pins({str(p):'0'*64})
++    def test_validate_run_rejects_486_poses(self):
++        p=self.d/'poses.npy';a=np.zeros((486,7));a[:,6]=1;np.save(p,a)
++        r={'exit_code':0,'formal_run_started':True,'input_rgb_ids':list(range(1,488)),'policy_sha256':'p','c0_state_sha256':'c','pose_file_sha256':file_sha(p),'schedule_complete':True,'native_calls_verified':True,'status':'COMPLETE'}
++        with self.assertRaises(ControlError):validate_run(r,p,r['input_rgb_ids'],expected_policy_sha='p',expected_c0_sha='c')
++    def test_validate_run_accepts_only_full_matching_pose_array(self):
++        p=self.d/'poses.npy';a=np.zeros((487,7));a[:,6]=1;np.save(p,a)
++        r={'exit_code':0,'formal_run_started':True,'input_rgb_ids':list(range(1,488)),'policy_sha256':'p','c0_state_sha256':'c','pose_file_sha256':file_sha(p),'schedule_complete':True,'native_calls_verified':True,'status':'COMPLETE'}
++        v=validate_run(r,p,r['input_rgb_ids'],expected_policy_sha='p',expected_c0_sha='c');self.assertTrue(v['valid']);self.assertFalse(v['direct_keyframe_pose_claim'])
++
++class AdditionalBoundaryTests(Base):
++    def test_real_shared_cpu_storage_roundtrip(self):
++        t=torch.arange(8,dtype=torch.float32).share_memory_();p=self.save({'t':t,'view':t[2:]});out=load_checkpoint(p)
++        self.assertTrue(out['t'].is_shared());self.assertTrue(out['view'].is_shared());self.assertEqual(out['view'].storage_offset(),2)
++    def test_atomic_manifest_failure_retains_partial_not_sealed(self):
++        from unittest.mock import patch
++        good=self.save(name='good');before=file_sha(good/'manifest.json')
++        with patch('checkpoint.checkpoint_adapter.exclusive_json',side_effect=OSError('synthetic disk write failure')):
++            with self.assertRaises(OSError):self.save(name='broken')
++        self.assertFalse((self.d/'broken').exists());self.assertEqual(file_sha(good/'manifest.json'),before)
++        partials=list(self.d.glob('.broken.staging-*'));self.assertEqual(len(partials),1)
++        with self.assertRaises(ControlError):load_checkpoint(partials[0])
++    def test_snapshot_tail_bytes_preserved(self):
++        base=torch.arange(100,dtype=torch.float32);view=base[:3];p=self.save({'view':view});out=load_checkpoint(p)
++        self.assertEqual(out['view'].untyped_storage().nbytes(),400);self.assertTrue(torch.equal(out['view'],view))
++    def test_duplicate_yaml_key_rejected(self):
++        p=self.d/'dup.yaml';p.write_text((ROOT/'configs/B1.yaml').read_text()+'D: 1\n')
++        with self.assertRaises(ControlError):load_and_validate(p,json.loads((ROOT/'configs/identity_lock.json').read_text()))
++    def test_unpaired_ba_event_rejected(self):
++        from schedule.schema import EventLifecycle
++        life=EventLifecycle()
++        with self.assertRaises(ControlError):life.accept(19,'ba_end',{'call_id':999})
++    def test_unpaired_final_ba_rejected(self):
++        from schedule.schema import EventLifecycle
++        with self.assertRaises(ControlError):EventLifecycle().accept(19,'final_ba_end',{'stage':1,'metric_depth_reg_restored':True})
++    def test_filler_over_capacity_rejected(self):
++        from schedule.schema import EventLifecycle
++        with self.assertRaises(ControlError):EventLifecycle().accept(19,'filler_batch_begin',{'batch_id':0,'rgb_ids':[19],'slots':[500],'anchor_left':[0],'anchor_right':[1]})
++    def test_events_after_export_rejected(self):
++        from schedule.schema import EventLifecycle
++        life=EventLifecycle();life.accept(1,'export_complete',{'pose_count':0,'rgb_ids':[]})
++        with self.assertRaises(ControlError):life.accept(2,'frame_begin',{'input_index':1,'rgb_id':2,'timestamp_token':'2'})
++    def test_recorder_disconnected_context_stops(self):
++        p=self.d/'badrecord';r=ScheduleRecorder(p,header());e=events_fixture()[0][0];r.append(*e);bad=copy.deepcopy(e);bad[3]['active_keyframe_ids'].append(99)
++        with self.assertRaises(ControlError):r.append(*bad)
++        self.assertTrue(r.closed)
++        with self.assertRaises(ControlError):load_schedule(p)
++    def test_recorder_missing_export_not_sealed(self):
++        p=self.d/'noexport';r=ScheduleRecorder(p,header());r.append(*events_fixture()[0][0])
++        with self.assertRaises(ControlError):r.seal()
++        with self.assertRaises(ControlError):load_schedule(p)
++    def test_hook_payload_failure_latches(self):
++        p,_=self.schedule();r=ScheduleReplayer(load_schedule(p));h=ControlHooks('replay',replayer=r);ctx=ToyRuntime(0).context();p=h.before('initialization_phase',18,{},ctx);p['init_D']=1
++        with self.assertRaises(ControlError):h.after(p,ctx)
++        self.assertTrue(h.failed);self.assertTrue(r.failed)
++    def test_duplicate_native_call_id_rejected(self):
++        from schedule.schema import EventLifecycle
++        life=EventLifecycle();p=events_fixture()[0][6][2];life.accept(19,'ba_begin',p);life.accept(19,'ba_end',{'call_id':24})
++        with self.assertRaises(ControlError):life.accept(19,'ba_begin',p)
+diff --git a/tests/test_native.py b/tests/test_native.py
+new file mode 100644
+index 0000000..5eb3e03
+--- /dev/null
++++ b/tests/test_native.py
+@@ -0,0 +1,351 @@
++import ast, copy, dataclasses, hashlib, io, json, multiprocessing, os, pathlib, random, subprocess, sys, tempfile, threading, time, types, unittest
++from unittest.mock import patch
++import numpy as np
++import torch
++from control_common import ControlError,digest,file_sha
++from native_control.snapshot import save_state,load_state,read_manifest,state_inventory,ObjectEncoder
++from native_control.cpu_fixtures import FixtureObject,NoConstructorFixture,fixture_bundle
++from native_control.runtime import NativeControl,NativeJournal,PrefixComplete,read_schedule,set_active,active
++from native_control.barrier import WriterBarrier
++from native_control.install import install_factor_graph,install_depth_video,selected_flags
++from native_control.cpu_native_bodies import load_class,FakeVideo,fake_update
++from native_control.admission import validate_mode
++from checkpoint.rng_state import capture_rng_state,restore_rng_state
++ROOT=pathlib.Path(__file__).resolve().parents[1]
++P={'artifact_kind':'CPU_NATIVE_INTERFACE_FIXTURE','original_data_used':False}
++
++class Base(unittest.TestCase):
++    def setUp(self):
++        self.t=tempfile.TemporaryDirectory(dir=ROOT/'artifacts',prefix='native-cpu-');self.d=pathlib.Path(self.t.name)
++        random.seed(43);np.random.seed(43);torch.random.default_generator.manual_seed(43)
++    def tearDown(self):
++        set_active(None);self.assertFalse(torch.cuda.is_initialized());self.t.cleanup()
++    def save(self,bundle=None,**kw):
++        path=self.d/'state';m=save_state(fixture_bundle() if bundle is None else bundle,path,provenance=P,**kw);return path,m
++    def ctrl(self,D=1,**kw):return NativeControl(D,self.d,**kw)
++
++class SnapshotTests(Base):
++    def test_restore_cannot_execute_custom_constructor(self):
++        x=object.__new__(NoConstructorFixture);x.cache=torch.arange(3.)
++        p,m=self.save({'x':x});dst,_=load_state(p);self.assertTrue(torch.equal(dst['x'].cache,x.cache))
++    def test_global_RNG_roundtrip_python_numpy_and_torch(self):
++        bundle={'rng':capture_rng_state()};p,m=self.save(bundle)
++        expected=(random.random(),np.random.rand(),torch.rand(5))
++        loaded,_=load_state(p);restore_rng_state(loaded['rng']);actual=(random.random(),np.random.rand(),torch.rand(5))
++        self.assertEqual(expected[0],actual[0]);self.assertEqual(expected[1],actual[1]);self.assertTrue(torch.equal(expected[2],actual[2]))
++    def test_wrong_C0_state_SHA_rejected(self):
++        p,m=self.save()
++        with self.assertRaises(ControlError):load_state(p,expected_sha='0'*64)
++    def test_roundtrip_entire_object_fields(self):
++        p,m=self.save();a,_=load_state(p);self.assertIs(a['tracker'],a['same_tracker']);self.assertIs(a['tracker'].self_reference,a['tracker'])
++        self.assertEqual(set(vars(a['tracker'])),set(vars(FixtureObject())))
++    def test_model_buffers_modes_and_custom_cache(self):
++        src=fixture_bundle();p,m=self.save(src);dst,_=load_state(p)
++        self.assertFalse(dst['tracker'].model.training);self.assertTrue(dst['tracker'].model.layer.training)
++        self.assertTrue(torch.equal(src['tracker'].model.scratch,dst['tracker'].model.scratch))
++        self.assertTrue(torch.equal(src['tracker'].model.custom_cache['position'],dst['tracker'].model.custom_cache['position']))
++        self.assertTrue(torch.equal(src['tracker'].model(src['input']),dst['tracker'].model(dst['input'])))
++    def test_storage_alias_offset_stride_and_object_alias(self):
++        p,m=self.save();a=load_state(p)[0]['tracker'];self.assertIs(a.view,a.same_view)
++        self.assertEqual(a.view.storage_offset(),7);self.assertEqual(a.transpose.stride(),(1,6))
++        a.view[0,0]=99;self.assertEqual(a.cache[1,1],99);self.assertEqual(a.corr_pyramid[0][1,1],99)
++    def test_bound_method_is_rebound_to_restored_owner(self):
++        p,_=self.save();a=load_state(p)[0]['tracker'];self.assertIs(a.update_op.__self__,a.model)
++    def test_explicit_generator_next_draw_matches(self):
++        src=fixture_bundle();p,_=self.save(src);dst=load_state(p)[0]
++        self.assertTrue(torch.equal(torch.rand(7,generator=src['tracker'].generator),torch.rand(7,generator=dst['tracker'].generator)))
++    def test_reencoding_matches_manifest_nodes(self):
++        p,m=self.save();a,_=load_state(p);enc=ObjectEncoder();tree=enc.encode(a)
++        self.assertEqual(tree,m['root']);self.assertEqual(enc.nodes,m['nodes'])
++    def test_independent_process_exit_and_restore(self):
++        # Capture process exits before the separate restore process starts.
++        capture="from native_control.snapshot import save_state;from native_control.cpu_fixtures import fixture_bundle;import pathlib,json,os; m=save_state(fixture_bundle(),pathlib.Path(__import__('sys').argv[1]),provenance="+repr(P)+");print(json.dumps({'pid':os.getpid(),'sha':m['state_sha256']}))"
++        restore="from native_control.snapshot import load_state;import json,os,sys; x,m=load_state(sys.argv[1],expected_sha=sys.argv[2]); print(json.dumps({'pid':os.getpid(),'sha':m['state_sha256'],'next':x['tracker'].loop_cursor['next_input_index'],'alias':x['tracker'].view is x['tracker'].same_view}))"
++        env=dict(os.environ,CUDA_VISIBLE_DEVICES='',PYTHONDONTWRITEBYTECODE='1',PYTHONPATH=str(ROOT))
++        p=subprocess.run([sys.executable,'-B','-c',capture,str(self.d/'cross')],cwd=ROOT,env=env,capture_output=True,text=True,timeout=60)
++        self.assertEqual(p.returncode,0,p.stderr);first=json.loads(p.stdout)
++        q=subprocess.run([sys.executable,'-B','-c',restore,str(self.d/'cross'),first['sha']],cwd=ROOT,env=env,capture_output=True,text=True,timeout=60)
++        self.assertEqual(q.returncode,0,q.stderr);second=json.loads(q.stdout)
++        self.assertNotEqual(first['pid'],second['pid']);self.assertEqual(second['next'],18);self.assertTrue(second['alias'])
++    def test_new_unknown_attribute_is_not_silently_omitted(self):
++        b=fixture_bundle();b['tracker'].new_native_cache=object()
++        with self.assertRaises(ControlError):self.save(b)
++        self.assertFalse((self.d/'state').exists())
++    def test_service_must_be_explicitly_rebound(self):
++        service=object();b=fixture_bundle();b['tracker'].service=service;p,m=self.save(b,services={'printer':service})
++        with self.assertRaises(ControlError):load_state(p)
++        replacement=object();dst,_=load_state(p,services={'printer':replacement});self.assertIs(dst['tracker'].service,replacement)
++    def test_corrupt_payload_fails_before_load(self):
++        p,m=self.save();f=next(p.glob('*.pt'));f.write_bytes(f.read_bytes()[:-1]+b'!')
++        with self.assertRaises(ControlError):load_state(p)
++    def test_manifest_corruption_fails(self):
++        p,_=self.save();m=json.loads((p/'manifest.json').read_bytes());m['root']={};(p/'manifest.json').write_text(json.dumps(m))
++        with self.assertRaises(ControlError):load_state(p)
++    def test_existing_C0_is_immutable(self):
++        p,m=self.save();before=file_sha(p/'manifest.json')
++        with self.assertRaises(ControlError):save_state({},p,provenance=P)
++        self.assertEqual(before,file_sha(p/'manifest.json'))
++    def test_unsealed_checkpoint_is_rejected(self):
++        p,_=self.save();(p/'COMPLETE.json').unlink()
++        with self.assertRaises(ControlError):load_state(p)
++    def test_native_provenance_cannot_bypass_live_barrier(self):
++        with self.assertRaises(ControlError):save_state({},self.d/'real',provenance={'artifact_kind':'NATIVE_C0'})
++    def test_disk_insufficient_rejected_before_creating_checkpoint(self):
++        with patch('native_control.snapshot.require_space',side_effect=ControlError('DISK')):
++            with self.assertRaises(ControlError):self.save()
++        self.assertFalse((self.d/'state').exists())
++    def test_cpu_shared_storage_is_preserved(self):
++        x=torch.arange(12).share_memory_();p,m=self.save({'x':x,'v':x[3:]});y=load_state(p)[0]
++        self.assertTrue(y['x'].is_shared());self.assertTrue(y['v'].is_shared());self.assertEqual(y['v'].storage_offset(),3)
++    def test_empty_scalar_half_bool_and_nonfinite_values(self):
++        b={'empty':torch.empty(0),'scalar':torch.tensor(3.),'half':torch.ones(3,dtype=torch.float16),'bool':torch.tensor([True]),'nan':float('nan'),'inf':float('inf'),'slice':slice(3,None,8)}
++        p,_=self.save(b);dst=load_state(p)[0];self.assertEqual(dst['scalar'].item(),3);self.assertTrue(np.isnan(dst['nan']));self.assertEqual(dst['slice'],slice(3,None,8))
++    def test_numpy_and_non_string_dictionary_keys(self):
++        b={'n':np.arange(12,dtype=np.float64).reshape(3,4).copy(),'dict':{(1,2):np.float32(3)}};p,m=self.save(b);dst=load_state(p)[0]
++        np.testing.assert_array_equal(b['n'],dst['n']);self.assertEqual(dst['dict'][(1,2)].dtype,np.dtype('float32'))
++    def test_numpy_view_fails_instead_of_losing_alias(self):
++        with self.assertRaises(ControlError):self.save({'view':np.arange(12)[::2]})
++    def test_nonempty_forward_hook_fails_closed(self):
++        b=fixture_bundle();b['tracker'].model.register_forward_hook(lambda *a:None)
++        with self.assertRaises(ControlError):self.save(b)
++    def test_all_full_capacity_storage_is_counted(self):
++        b={'video':torch.zeros(500,4,8),'visible_view':torch.ones(20)};inv=state_inventory(b)
++        self.assertEqual(inv['storage_bytes'],500*4*8*4+20*4)
++
++def header(schedule='S1'):
++    return {'c0_sha256':'c'*64,'init_D':0,'W':1,'U':1,'max_rgb':80,'schedule':schedule,'producer_D':1 if schedule=='S1' else 0}
++
++class JournalTests(Base):
++    def make(self):
++        p=self.d/'s1.jsonl';j=NativeJournal(p,header())
++        for rgb in range(19,81):
++            j.point('frame.begin',rgb,{'k':[1,8,18]},{'index':rgb-1})
++            if rgb==19:j.point('decision',19,{'k':[1,8,18]},{'admit':True},select=True)
++            j.point('frame.end',rgb,{'k':[1,8,18]},{'next_input_index':rgb})
++        j.seal();return p
++    def test_prefix_schedule_seals_without_fabricated_export(self):
++        p=self.make();s=read_schedule(p);self.assertEqual(s['footer']['termination'],'PREFIX_RGB080');self.assertEqual(len(s['events']),125)
++    def test_cross_D_can_select_same_decision_from_new_natural_proposal(self):
++        p=self.make();j=NativeJournal(self.d/'replay.jsonl',header(),mode='replay',source=p)
++        j.point('frame.begin',19,{'k':[1,8,18]},{'index':18})
++        self.assertTrue(j.point('decision',19,{'k':[1,8,18]},{'admit':False},select=True)['admit'])
++        for e in j.source['events'][2:]:j.point(e['kind'],e['rgb'],e['context'],e['payload'])
++        j.seal()
++    def test_graph_mismatch_latches_stop(self):
++        p=self.make();j=NativeJournal(self.d/'replay',header(),mode='replay',source=p)
++        with self.assertRaises(ControlError):j.point('frame.begin',19,{'k':[1,7,18]},{'index':18})
++        with self.assertRaises(ControlError):j.point('frame.begin',19,{'k':[1,8,18]},{'index':18})
++        j.abort()
++    def test_mismatched_BA_order_fails(self):
++        p=self.make();j=NativeJournal(self.d/'replay',header(),mode='replay',source=p)
++        with self.assertRaises(ControlError):j.point('ba.begin',19,{'k':[1,8,18]},{'index':18})
++        j.abort()
++    def test_partial_journal_is_not_a_schedule(self):
++        p=self.d/'partial';j=NativeJournal(p,header());j.abort()
++        with self.assertRaises(ControlError):read_schedule(p)
++    def test_event_tamper_fails_hash(self):
++        p=self.make();raw=p.read_text().replace('"admit":true','"admit":false');p.write_text(raw)
++        with self.assertRaises(ControlError):read_schedule(p)
++    def test_no_RGB081_is_admitted(self):
++        j=NativeJournal(self.d/'bad',header())
++        with self.assertRaises(ControlError):j.point('frame.begin',81,{},{});
++        j.abort()
++    def test_unconsumed_events_cannot_seal(self):
++        p=self.make();j=NativeJournal(self.d/'replay',header(),mode='replay',source=p)
++        with self.assertRaises(ControlError):j.seal()
++        j.abort()
++    def test_wrong_common_C0_rejected(self):
++        p=self.make();h=header();h['c0_sha256']='d'*64
++        with self.assertRaises(ControlError):NativeJournal(self.d/'replay',h,mode='replay',source=p)
++
++class ControlBoundaryTests(Base):
++    def test_native_video_slot_map_mismatch_fails_before_capture(self):
++        c=self.ctrl();c.rgb=19;c.nodes=['kf:001','kf:018']
++        t=types.SimpleNamespace(video=types.SimpleNamespace(counter=types.SimpleNamespace(value=2),timestamp=torch.tensor([0.,16.])))
++        with self.assertRaises(ControlError):c.frame_end(t,None,{'next_input_index':19})
++    def test_no_capture_before_24_updates(self):
++        c=self.ctrl();f=types.SimpleNamespace(is_initialized=True,t1=12,warmup=12)
++        with self.assertRaises(ControlError):c.initialization_done(f)
++    def test_actual_initialization_boundary_recorded(self):
++        c=self.ctrl();c.rgb=18;c.init_counts=dict.fromkeys(('frontend_init_neighborhood','frontend_init_proximity','frontend_init_second'),8)
++        c.initialization_done(types.SimpleNamespace(is_initialized=True,t1=12,warmup=12));self.assertTrue(c.initialized)
++    def test_capture_only_at_frame_tail_before_next_read(self):
++        calls=[];c=self.ctrl(capture_callback=lambda *x:calls.append(x[2]['next_input_index']));c.initialized=True;c.rgb=18
++        with self.assertRaises(PrefixComplete):c.frame_end(None,None,{'next_input_index':18})
++        self.assertEqual(calls,[18])
++    def test_prefix_ends_at_80_without_final_BA(self):
++        c=self.ctrl();c.rgb=80
++        with self.assertRaises(PrefixComplete):c.frame_end(None,None,{'next_input_index':80})
++    def test_frame_order_mismatch_stops(self):
++        c=self.ctrl()
++        with self.assertRaises(ControlError):c.frame_begin(18,19)
++    def test_depth_only_in_scoped_native_phases(self):
++        c=self.ctrl(D=0);self.assertFalse(c.depth_flag('frontend_init_second',True));self.assertFalse(c.depth_flag('frontend_local_predecision',True));self.assertTrue(c.depth_flag('filler_pose_only',True))
++        c.D=1;self.assertTrue(c.depth_flag('frontend_local_predecision',True));self.assertFalse(c.depth_flag('frontend_init_neighborhood',True))
++    def test_initialization_retains_native_UBA_template(self):
++        c=self.ctrl();set_active(c);v=types.SimpleNamespace(metric_depth_reg=True,uncertainty_aware=True,enable_affine_transform=True,enable_bidirectional_uncer=False)
++        self.assertEqual(selected_flags(None,None,'frontend_init_neighborhood',v,False,True,False),(False,False,True))
++    def test_local_W_and_U_are_not_redefined(self):
++        c=self.ctrl(D=0);set_active(c);v=types.SimpleNamespace(metric_depth_reg=True,uncertainty_aware=True,enable_affine_transform=True,enable_bidirectional_uncer=False,cfg={'tracking':{'uncertainty_params':{'gamma_depth':0.01},'frontend':{'enable_loop':False}}})
++        self.assertEqual(selected_flags(None,'frontend_local_predecision','frontend_local_predecision',v,False,True,True),(False,True,True))
++    def test_mismatched_stage_cannot_apply_D(self):
++        c=self.ctrl();set_active(c);v=types.SimpleNamespace(metric_depth_reg=True)
++        with self.assertRaises(ControlError):selected_flags(None,'frontend_local_retained','final_global',v,False,True,True)
++    def test_pending_operation_cannot_checkpoint(self):
++        c=self.ctrl();c.begin('native.ba',{})
++        with self.assertRaises(ControlError):c.snapshot_discrete()
++
++class BarrierTests(Base):
++    def test_writer_acknowledges_after_sync_and_resumes(self):
++        barrier=WriterBarrier(multiprocessing.get_context('spawn'));calls=[];stop=threading.Event()
++        def writer():
++            while not stop.is_set():barrier.pause_point(lambda:calls.append('synced'));time.sleep(.001)
++        t=threading.Thread(target=writer);t.start()
++        try:
++            with barrier.quiesce(timeout=2):self.assertTrue(barrier.acknowledged.is_set());self.assertEqual(calls,['synced'])
++        finally:stop.set();barrier.request.clear();t.join(timeout=3)
++        self.assertFalse(t.is_alive())
++    def test_missing_writer_times_out_before_snapshot(self):
++        barrier=WriterBarrier(multiprocessing.get_context('spawn'))
++        with self.assertRaises(ControlError):
++            with barrier.quiesce(timeout=.01):self.fail('No writer must not admit capture')
++
++class NativePythonBodyTests(Base):
++    def setUp(self):
++        super().setUp()
++        self.mock_observer=types.SimpleNamespace(stage='frontend_local_predecision')
++        self.module_patch=patch.dict(sys.modules,{'task003_observer':types.SimpleNamespace(recorder=lambda:self.mock_observer)})
++        self.module_patch.start()
++    def tearDown(self):
++        self.module_patch.stop();super().tearDown()
++    def graph(self,D=1,controller=None):
++        c=controller or self.ctrl(D=D);set_active(c)
++        c.nodes=['kf:001','kf:008','kf:018']
++        cls=load_class(ROOT/'source_candidate','src/factor_graph.py','FactorGraph')
++        install_factor_graph(cls);v=FakeVideo(D);g=cls(v,fake_update,device='cpu',max_factors=40)
++        return c,g,v
++    def test_native_graph_add_has_stable_RGB_edge_identity(self):
++        c,g,v=self.graph();g.add_factors([0,1],[1,2]);ctx=c.context()
++        rows=ctx['graphs'][0]['edges'];self.assertEqual(rows[0]['source'],'kf:001');self.assertEqual(rows[1]['target'],'kf:018')
++        self.assertEqual(len({r['edge_id'] for r in rows}),2)
++    def test_native_rm_factors_moves_same_edge_to_inactive(self):
++        c,g,v=self.graph();g.add_factors([0,1],[1,2]);eid=c.context()['graphs'][0]['edges'][0]['edge_id']
++        g.rm_factors(torch.tensor([True,False]),store=True)
++        rows=c.context()['graphs'][0]['edges'];inactive=[x for x in rows if x['state']=='inactive']
++        self.assertEqual(inactive[0]['edge_id'],eid);self.assertEqual(len(g.ii),1)
++    def test_native_graph_update_recomputes_continuous_state(self):
++        c,g,v=self.graph(D=0);g.add_factors([0,1],[1,2]);before=v.disps.clone();g.update(1,3,use_inactive=True)
++        self.assertFalse(torch.equal(before,v.disps));self.assertEqual(g.age.tolist(),[1,1]);self.assertEqual(c.operation_stack,[])
++    def test_unrecorded_graph_mutation_is_rejected(self):
++        c,g,v=self.graph();g.add_factors([0],[1]);g.ii=torch.tensor([2])
++        with self.assertRaises(ControlError):c.context()
++    def test_unrecorded_edge_age_change_is_rejected(self):
++        c,g,v=self.graph();g.add_factors([0],[1]);g.age+=1
++        with self.assertRaises(ControlError):c.context()
++    def test_native_graph_clear_is_recorded(self):
++        c,g,v=self.graph();g.add_factors([0],[1]);g.clear_edges();self.assertEqual(c.context()['graphs'][0]['edges'],[])
++    def test_native_tail_keyframe_removal_keeps_stable_remaining_ids(self):
++        c,g,v=self.graph();g.add_factors([0,1],[1,2]);g.rm_keyframe(2)
++        self.assertEqual(c.nodes,['kf:001','kf:008']);self.assertEqual(g.ii.tolist(),[0]);self.assertEqual(g.jj.tolist(),[1])
++        self.assertEqual(c.context()['graphs'][0]['edges'][0]['target'],'kf:008')
++    def test_unaudited_non_tail_removal_stops_before_mutation(self):
++        c,g,v=self.graph();g.add_factors([0],[1]);before=c.context()
++        with self.assertRaises(ControlError):g.rm_keyframe(0)
++        self.assertEqual(c.context(),before)
++    def test_impossible_native_edge_cannot_be_scheduled(self):
++        c,g,v=self.graph()
++        with self.assertRaises(ControlError):g.add_factors([0],[7])
++    def test_native_cross_D_forces_graph_events_but_not_depth(self):
++        # Both arms execute actual FactorGraph Python bodies. Extension and CNN
++        # math is a declared CPU fixture, and not evidence of real GPU replay.
++        a=self.d/'record';b=self.d/'replay';a.mkdir();b.mkdir()
++        def run(D,out,source=None,schedule='S1'):
++            c=NativeControl(D,out);set_active(c);c.nodes=['kf:001','kf:008','kf:018']
++            cls=load_class(ROOT/'source_candidate','src/factor_graph.py','FactorGraph');install_factor_graph(cls)
++            v=FakeVideo(D);g=cls(v,fake_update,device='cpu',max_factors=40)
++            # The graph exists in the common synthetic C0, before journaling.
++            journal=NativeJournal(out/'schedule.jsonl',header(schedule),mode='replay' if source else 'record',source=source);c.journal=journal
++            for rgb in range(19,81):
++                c.frame_begin(rgb-1,rgb-1)
++                if rgb==19:
++                    g.add_factors([0,1] if D else [1,2],[1,2] if D else [2,0])
++                    g.update(1,3,use_inactive=True)
++                    g.rm_factors(torch.tensor([True,False]) if D else torch.tensor([False,True]),store=True)
++                try:c.frame_end(None,None,{'next_input_index':rgb})
++                except PrefixComplete:
++                    if rgb!=80:raise
++            set_active(None);return c,g,v
++        c,g,v=run(1,a);d,h,w=run(0,b,a/'schedule.jsonl')
++        self.assertEqual(c.context(),d.context());self.assertFalse(torch.equal(v.disps,w.disps))
++        self.assertEqual(g.ii.tolist(),h.ii.tolist());self.assertEqual(g.ii_inac.tolist(),h.ii_inac.tolist())
++        a0=self.d/'record_S0';b1=self.d/'replay_S0';a0.mkdir();b1.mkdir()
++        c0,g0,v0=run(0,a0,schedule='S0');c1,g1,v1=run(1,b1,a0/'schedule.jsonl',schedule='S0')
++        self.assertEqual(c0.context(),c1.context());self.assertFalse(torch.equal(v0.disps,v1.disps))
++        self.assertEqual(g0.ii.tolist(),g1.ii.tolist());self.assertEqual(g0.ii_inac.tolist(),g1.ii_inac.tolist())
++    def test_native_CUDA_BA_call_arguments_preserved_static(self):
++        def calls(path):
++            return [ast.dump(n,include_attributes=False) for n in ast.walk(ast.parse(path.read_text())) if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and isinstance(n.func.value,ast.Name) and n.func.value.id=='droid_backends']
++        self.assertEqual(calls(ROOT/'source_before/src/depth_video.py'),calls(ROOT/'source_candidate/src/depth_video.py'))
++    def test_tracker_frame_end_hook_after_all_original_frame_work(self):
++        s=(ROOT/'source_candidate/src/tracker.py').read_text();self.assertLess(s.index('self.frontend.initialize_second_stage'),s.index('task004c().frame_end('))
++        self.assertLess(s.index('self.printer.update_pbar()'),s.index('task004c().frame_end('));self.assertIn('native_resume["next_input_index"]',s)
++    def test_native_Final_BA_call_path_keeps_7_then_12_and_restores_D(self):
++        c=self.ctrl();set_active(c);calls=[]
++        observer=types.SimpleNamespace(boundary=lambda *a:None)
++        class MockBA:
++            def __init__(self,net,video,cfg):self.video=video
++            def dense_ba(self,steps,**kw):calls.append((steps,self.video.metric_depth_reg,kw['enable_udba']))
++        timer=types.SimpleNamespace(section=lambda *a:(lambda f:f))
++        cls=load_class(ROOT/'source_candidate','src/slam.py','SLAM',{'BaseDataset':object,'timer':timer,
++             'task003':lambda:observer,'task004_policy':lambda:types.SimpleNamespace(final_phases=2),
++             'Backend':MockBA,'FontColor':types.SimpleNamespace(TRACKER='x')})
++        slam=cls.__new__(cls);slam.video=types.SimpleNamespace(metric_depth_reg=True);slam.droid_net=None
++        slam.cfg={'tracking':{'frontend':{'enable_opt_dyn_mask':True}}};slam.printer=types.SimpleNamespace(print=lambda *a:None)
++        with patch.object(torch.cuda,'empty_cache',lambda:None):slam.backend()
++        self.assertEqual(calls,[(7,False,True),(12,False,True)]);self.assertTrue(slam.video.metric_depth_reg)
++    def test_native_Filler_body_keeps_12_motion_only_updates_and_returns_counter(self):
++        c=self.ctrl();set_active(c);calls=[]
++        class SE3:
++            def __init__(self,data):self.data=data
++            def __getitem__(self,x):return SE3(self.data[x])
++            def __mul__(self,x):return SE3(self.data+x.data)
++            def inv(self):return SE3(-self.data)
++            def log(self):return self.data
++            @staticmethod
++            def exp(w):return SE3(w)
++        class G:
++            corr_impl='volume';max_factors=75
++            def __init__(self,video,update):self.video=video
++            def add_factors(self,a,b):calls.append(('edge',a.tolist(),b.tolist()))
++            def update(self,a,b,**kw):calls.append(('update',a,b,kw))
++        class V:
++            def __init__(self):
++                self.counter=types.SimpleNamespace(value=3);self.timestamp=torch.tensor([0.,8.,17.,0.,0.,0.]);self.poses=torch.zeros(6,7);self.uncertainties=torch.ones(6,4,4)
++            def __setitem__(self,index,item):self.timestamp[index]=item[0];self.poses[index]=item[2]
++        observer=types.SimpleNamespace(context=lambda *a:None,filler_begin=lambda *a:None,filler_step=lambda *a:None,filler_end=lambda *a:None)
++        # No graphs are created in the numerical fixture. The actual Filler
++        # hook still verifies batch, anchors, capacity and counter lifecycle.
++        main=types.SimpleNamespace(corr_impl='volume',max_factors=75,ii=None,jj=None,ii_inac=None,jj_inac=None,ii_bad=None,jj_bad=None)
++        c.graph_created(main);c.tracker=types.SimpleNamespace(frontend=types.SimpleNamespace(graph=main))
++        cls=load_class(ROOT/'source_candidate','src/trajectory_filler.py','PoseTrajectoryFiller',{'SE3':SE3,'FactorGraph':G,'BaseDataset':object,'task003':lambda:observer})
++        filler=cls.__new__(cls);filler.video=V();filler.device='cpu';filler.uncertainty_aware=True;filler.update=None
++        filler.MEAN=torch.zeros(3,1,1);filler.STDV=torch.ones(3,1,1)
++        filler._PoseTrajectoryFiller__feature_encoder=lambda x:torch.zeros(len(x),1,128,4,4)
++        c.nodes=['kf:001','kf:009','kf:018']
++        with patch.object(torch.Tensor,'cuda',lambda x,*a,**k:x):
++            result=filler._PoseTrajectoryFiller__fill([1,2],[torch.ones(1,3,32,32),torch.ones(1,3,32,32)],None,[torch.ones(4),torch.ones(4)],None)
++        self.assertEqual(len([r for r in calls if r[0]=='update']),12)
++        self.assertTrue(all(r[3]['motion_only'] and not r[3]['enable_update_uncer'] for r in calls if r[0]=='update'))
++        self.assertEqual(filler.video.counter.value,3);self.assertEqual(len(c.nodes),3);self.assertEqual(result[0].data.shape,(2,7))
++
++class BoundedRunnerTests(Base):
++    def test_no_mode_can_request_487(self):
++        with self.assertRaises(ValueError):validate_mode('record_S1',487)
++    def test_formal_B1_is_not_a_smoke_mode(self):
++        with self.assertRaises(ValueError):validate_mode('B1',80)
++    def test_smoke_plan_does_not_import_torch_or_models(self):
++        code="import sys;from runner.run_native_smoke import main;main(['--mode','capture','--cpu-report','unused']);print('TORCH_IMPORTED', 'torch' in sys.modules)"
++        q=subprocess.run([sys.executable,'-B','-c',code],cwd=ROOT,capture_output=True,text=True,timeout=30,env=dict(os.environ,CUDA_VISIBLE_DEVICES=''))
++        self.assertEqual(q.returncode,0,q.stderr);self.assertIn('TORCH_IMPORTED False',q.stdout)
++    def test_all_modes_are_bounded_and_named(self):
++        for mode in ('capture','restore_check','record_S1','record_S0','replay_D0_S1','replay_D1_S0'):self.assertTrue(validate_mode(mode,80))
+diff --git a/tests/test_release_fixes.py b/tests/test_release_fixes.py
+new file mode 100644
+index 0000000..8dbdce7
+--- /dev/null
++++ b/tests/test_release_fixes.py
+@@ -0,0 +1,200 @@
++import importlib.util,json,os,pathlib,random,shutil,sys,tempfile,types,unittest
++import importlib.metadata
++from unittest.mock import patch
++import numpy as np
++import torch
++import torch.multiprocessing as mp
++from control_common import ControlError
++from native_control.runtime import NativeControl,set_active
++from native_control.install import selected_flags
++from native_control.file_backed import FileArena,descriptor_for,validate_descriptor,cpu_zeros
++from native_control.snapshot import save_state,load_state,prepare_state,save_prepared_state
++from native_control.storage_budget import make_budget,check_budget
++from native_control.admission import cpu_storage_admission
++from tests.file_support import reader,info,tensor_sha
++
++ROOT=pathlib.Path(__file__).resolve().parents[1]
++P={'artifact_kind':'CPU_NATIVE_INTERFACE_FIXTURE','seed':43,'not_native_C0':True}
++
++def video():return types.SimpleNamespace(metric_depth_reg=True,uncertainty_aware=True,enable_affine_transform=True,
++    enable_bidirectional_uncer=False,cfg={'tracking':{'uncertainty_params':{'gamma_depth':.01},'frontend':{'enable_loop':False}}})
++
++class Base(unittest.TestCase):
++    def setUp(self):
++        self.tmp=tempfile.TemporaryDirectory(dir=ROOT/'artifacts',prefix='release-cpu-');self.d=pathlib.Path(self.tmp.name)
++        random.seed(43);np.random.seed(43);torch.random.default_generator.manual_seed(43);self.strategy=mp.get_sharing_strategy()
++    def tearDown(self):
++        set_active(None);mp.set_sharing_strategy(self.strategy);self.assertFalse(torch.cuda.is_initialized());self.tmp.cleanup()
++    def ctrl(self,D=0):
++        c=NativeControl(D,self.d);set_active(c);return c
++    def child(self,payload,write=False):
++        ctx=mp.get_context('spawn');recv,send=ctx.Pipe(False);p=ctx.Process(target=reader,args=(send,payload,'CPU_SHARED_READER',write));p.start();send.close()
++        self.assertTrue(recv.poll(45),'Child did not reply');r=recv.recv();p.join(timeout=20)
++        self.assertFalse(p.is_alive());self.assertEqual(p.exitcode,0,r);self.assertEqual(r.get('exit_code'),0,r)
++        self.assertFalse(r['cuda_initialized']);return r
++
++class ScopeGuardTests(Base):
++    def test_missing_phase_marker_stops_both_local_stages(self):
++        self.ctrl()
++        for stage in ('frontend_local_predecision','frontend_local_retained'):
++            with self.subTest(stage=stage),self.assertRaises(ControlError):selected_flags(None,None,stage,video(),False,True,True)
++    def test_incorrect_phase_marker_stops(self):
++        self.ctrl()
++        for phase,stage in [('frontend_local_predecision','frontend_local_retained'),('frontend_local_retained','final_global'),('bad','bad')]:
++            with self.subTest(phase=phase,stage=stage),self.assertRaises(ControlError):selected_flags(None,phase,stage,video(),False,True,True)
++    def test_invalid_motion_only_local_stops(self):
++        self.ctrl()
++        with self.assertRaises(ControlError):selected_flags(None,'frontend_local_predecision','frontend_local_predecision',video(),True,True,True)
++    def test_motion_only_initialization_cannot_change_D(self):
++        self.ctrl()
++        for stage in ('frontend_init_neighborhood','frontend_init_proximity','frontend_init_second'):
++            with self.subTest(stage=stage),self.assertRaises(ControlError):selected_flags(None,None,stage,video(),True,True,True)
++    def test_valid_initialization_D_zero_all_three_stages(self):
++        self.ctrl(D=1)
++        for stage in ('frontend_init_neighborhood','frontend_init_proximity','frontend_init_second'):
++            self.assertEqual(selected_flags(None,None,stage,video(),False,True,False),(False,False,True))
++    def test_valid_local_D_toggle_W_U_unchanged(self):
++        c=self.ctrl(D=0)
++        for d in (0,1):
++            c.D=d
++            for stage in ('frontend_local_predecision','frontend_local_retained'):
++                self.assertEqual(selected_flags(None,stage,stage,video(),False,True,True),(bool(d),True,True))
++    def test_nonlocal_pass_through_does_not_use_controller_D(self):
++        self.ctrl(D=0);v=video()
++        for stage in ('final_global','filler_pose_only','unknown_stage'):
++            self.assertEqual(selected_flags(None,None,stage,v,True,False,False),(True,False,False))
++    def test_all_original_vanilla_contract_failures_remain_rejected(self):
++        self.ctrl()
++        for field,value in [('metric_depth_reg',False),('uncertainty_aware',False),('enable_affine_transform',False),('enable_bidirectional_uncer',True)]:
++            v=video();setattr(v,field,value)
++            with self.subTest(field=field),self.assertRaises(ControlError):selected_flags(None,'frontend_local_predecision','frontend_local_predecision',v,False,True,True)
++        for u,w in [(False,True),(True,False)]:
++            with self.subTest(u=u,w=w),self.assertRaises(ControlError):selected_flags(None,'frontend_local_predecision','frontend_local_predecision',video(),False,u,w)
++        for gamma,loop in [(.02,False),(.01,True)]:
++            v=video();v.cfg['tracking']['uncertainty_params']['gamma_depth']=gamma;v.cfg['tracking']['frontend']['enable_loop']=loop
++            with self.subTest(gamma=gamma,loop=loop),self.assertRaises(ControlError):selected_flags(None,'frontend_local_predecision','frontend_local_predecision',v,False,True,True)
++    def test_rejection_equivalence_to_frozen_original_local_flags(self):
++        path=ROOT/'source_candidate/task004_controls.py';spec=importlib.util.spec_from_file_location('frozen_local_flags',path);m=importlib.util.module_from_spec(spec);sys.modules[spec.name]=m;spec.loader.exec_module(m)
++        m.policy=lambda:types.SimpleNamespace(local_dwu=(1,1,1));self.ctrl()
++        for phase,stage,motion in [(None,'frontend_local_predecision',False),('x','x',False),('frontend_local_predecision','frontend_local_retained',False),('frontend_local_predecision','frontend_local_predecision',True)]:
++            with self.assertRaises(ValueError):m.local_flags(phase,stage,video(),motion,True,True)
++            with self.assertRaises(ControlError):selected_flags(m.local_flags,phase,stage,video(),motion,True,True)
++    def test_disabled_controller_delegates_original_unchanged(self):
++        calls=[]
++        def original(*args):calls.append(args);return ('original',False,False)
++        self.assertEqual(selected_flags(original,None,'other',video(),True,False,False),('original',False,False));self.assertEqual(len(calls),1)
++
++class FileSharingTests(Base):
++    def test_spawn_file_backing_values_and_aliases_preserved(self):
++        arena=FileArena(self.d/'arena',floor_bytes=0);x=arena.zeros((4,6));x.copy_(torch.arange(24).reshape(4,6));v=x[1:,1:5]
++        before=info(x);r=self.child({'base':x,'view':v,'same':v},write=True)
++        self.assertTrue(r['alias']);self.assertTrue(r['repeated_object']);self.assertEqual(r['view']['stride'],list(v.stride()));self.assertEqual(r['view']['offset'],v.storage_offset())
++        self.assertEqual(r['before']['sha256'],before['sha256']);self.assertEqual(x[0,0],91)
++        self.assertEqual(r['before']['descriptor']['st_ino'],before['descriptor']['st_ino'])
++        raw=torch.from_file(before['descriptor']['path'],shared=True,size=24,dtype=torch.float32);self.assertEqual(raw[0],91)
++    def test_two_distinct_spawn_readers_share_the_same_file(self):
++        arena=FileArena(self.d/'arena',floor_bytes=0);x=arena.zeros((8,));x.copy_(torch.arange(8))
++        a=self.child({'base':x},write=True);b=self.child({'base':x})
++        self.assertNotEqual(a['pid'],b['pid']);self.assertEqual(a['after']['sha256'],b['before']['sha256']);self.assertEqual(b['before']['descriptor']['st_ino'],a['before']['descriptor']['st_ino'])
++    def test_global_file_system_strategy_does_not_move_owned_storage_to_shm(self):
++        mp.set_sharing_strategy('file_system');a=FileArena(self.d/'arena',floor_bytes=0);x=a.zeros((64,));r=self.child({'base':x})
++        self.assertIsNotNone(r['before']['descriptor']);self.assertEqual(r['before']['descriptor']['path'],descriptor_for(x.untyped_storage())['path'])
++    def test_all_core_dtypes_and_transposed_strides(self):
++        arena=FileArena(self.d/'arena',floor_bytes=0)
++        for dtype in (torch.float32,torch.float16,torch.bfloat16,torch.float64,torch.int64,torch.uint8,torch.bool):
++            with self.subTest(dtype=str(dtype)):
++                x=arena.zeros((2,3),dtype=dtype);x.fill_(1);r=self.child({'base':x.T})
++                self.assertEqual(r['before']['dtype'],str(dtype));self.assertEqual(r['before']['stride'],[1,3]);self.assertEqual(r['before']['sha256'],tensor_sha(x.T))
++    def test_unregistered_normal_CPU_tensor_retains_Torch_sharing(self):
++        x=torch.arange(4.);self.assertIsNone(descriptor_for(x.untyped_storage()));r=self.child({'base':x},write=True)
++        self.assertEqual(x[0],91);self.assertIsNone(r['before']['descriptor'])
++    def test_descriptor_size_change_is_rejected(self):
++        a=FileArena(self.d/'arena',floor_bytes=0);x=a.zeros((16,));d=descriptor_for(x.untyped_storage());d['byte_size']+=4
++        with self.assertRaises(ControlError):validate_descriptor(d)
++    def test_descriptor_cannot_escape_owner_root(self):
++        a=FileArena(self.d/'arena',floor_bytes=0);x=a.zeros((16,));d=descriptor_for(x.untyped_storage());d['path']=str(self.d/'outside.bin')
++        with self.assertRaises(ControlError):validate_descriptor(d)
++    def test_file_allocation_has_expected_physical_reservation(self):
++        a=FileArena(self.d/'arena',floor_bytes=0);x=a.zeros((1024*1024,));s=pathlib.Path(descriptor_for(x.untyped_storage())['path']).stat()
++        self.assertEqual(s.st_size,4*1024**2);self.assertGreaterEqual(s.st_blocks*512,s.st_size)
++    def test_snapshot_restore_uses_file_backing_and_preserves_alias(self):
++        a=FileArena(self.d/'a',floor_bytes=0);x=a.zeros((4,6));x.copy_(torch.arange(24).reshape(4,6));v=x[1:,1:5]
++        p=self.d/'fixture';m=save_state({'x':x,'view':v,'same':v},p,provenance=P)
++        restore=FileArena(self.d/'restored',floor_bytes=0);r,_=load_state(p,expected_sha=m['state_sha256'],cpu_storage_factory=restore.restore_storage)
++        self.assertEqual(tensor_sha(x),tensor_sha(r['x']));self.assertIs(r['view'],r['same']);self.assertEqual(r['view'].storage_offset(),7)
++        child=self.child({'base':r['x'],'view':r['view'],'same':r['same']});self.assertTrue(child['alias']);self.assertTrue(child['repeated_object'])
++    def test_native_allocator_fallback_is_unchanged_without_option(self):
++        with patch.dict(os.environ,{},clear=False):
++            os.environ.pop('GAMECAM_FILE_BACKED_CPU_ROOT',None)
++            plain=cpu_zeros('images',(2,3),dtype=torch.float32);shared=cpu_zeros('dino',(2,3),dtype=torch.float32,native_share=True)
++        self.assertFalse(plain.is_shared());self.assertTrue(shared.is_shared());self.assertTrue(torch.equal(plain,shared))
++    def test_native_allocator_uses_disk_when_option_enabled(self):
++        with patch.dict(os.environ,{'GAMECAM_FILE_BACKED_CPU_ROOT':str(self.d/'native')}):
++            x=cpu_zeros('images',(2,3),dtype=torch.float32);y=cpu_zeros('dino',(2,3),dtype=torch.float32,native_share=True)
++        self.assertIsNotNone(descriptor_for(x.untyped_storage()));self.assertIsNotNone(descriptor_for(y.untyped_storage()));self.assertTrue(x.is_shared())
++
++class ExactBudgetTests(Base):
++    def test_exact_archive_size_SHA_and_checkpoint_total(self):
++        bundle={'base':torch.arange(256),'view':torch.arange(33,dtype=torch.float16),'empty':torch.empty(0),'bool':torch.tensor([True])}
++        plan=prepare_state(bundle,provenance=P,destination_parent=self.d);path=self.d/'checkpoint';save_prepared_state(plan,path)
++        actual=sum(p.stat().st_size for p in path.iterdir())
++        self.assertEqual(actual,plan['budget']['exact_checkpoint_logical_bytes'])
++        for name,row in plan['manifest']['files'].items():
++            self.assertEqual(row['bytes'],(path/name).stat().st_size)
++    def test_zip_padding_boundary_sizes_are_counted_exactly(self):
++        for size in (0,1,63,64,65,4095,4096,65537):
++            with self.subTest(size=size):
++                plan=prepare_state({'x':torch.zeros(size,dtype=torch.uint8)},provenance=P,destination_parent=self.d)
++                path=self.d/('state'+str(size));save_prepared_state(plan,path)
++                self.assertEqual(sum(p.stat().st_size for p in path.iterdir()),plan['budget']['exact_checkpoint_logical_bytes'])
++    def test_full_storage_and_alias_dedup_not_only_visible_values(self):
++        x=torch.arange(1024);plan=prepare_state({'a':x[:1],'b':x[5:8]},provenance=P,destination_parent=self.d)
++        self.assertEqual(plan['budget']['unique_runtime_storage_bytes'],8192);self.assertEqual(len(plan['manifest']['storages']),1)
++    def test_safety_floor_boundary(self):
++        b=make_budget({'a':{'bytes':1025}},700,90,block_size=4096,floor_bytes=1000,retained_scratch_bytes=20,metadata_reserve_bytes=30)
++        n=b['minimum_free_before_save_bytes']
++        with self.assertRaises(ControlError):check_budget(self.d,b,free_bytes=n-1)
++        self.assertEqual(check_budget(self.d,b,free_bytes=n)['required_free_bytes'],n)
++    def test_changed_storage_after_plan_is_rejected(self):
++        x=torch.ones(8);p=prepare_state({'x':x},provenance=P,destination_parent=self.d);x[0]=99
++        with self.assertRaises(ControlError):save_prepared_state(p,self.d/'bad')
++        self.assertFalse((self.d/'bad').exists());self.assertTrue(list(self.d.glob('.bad.staging-*/FAILED.json')))
++    def test_disk_is_rechecked_for_each_write(self):
++        import native_control.storage_budget as mod
++        plan=prepare_state({'a':torch.ones(2),'b':torch.ones(3)},provenance=P,destination_parent=self.d)
++        with patch.object(mod,'check_budget',wraps=mod.check_budget) as check:save_prepared_state(plan,self.d/'state')
++        self.assertGreaterEqual(check.call_count,len(plan['manifest']['files'])+4)
++    def test_mid_save_disk_loss_preserves_failure_without_sealing(self):
++        import native_control.storage_budget as mod
++        original=mod.check_budget;plan=prepare_state({'a':torch.ones(2),'b':torch.ones(3)},provenance=P,destination_parent=self.d)
++        def fail(path,budget,**kw):
++            if kw.get('remaining_files') is not None and len(kw['remaining_files'])==2:raise ControlError('Simulated external disk use')
++            return original(path,budget,**kw)
++        with patch.object(mod,'check_budget',side_effect=fail):
++            with self.assertRaises(ControlError):save_prepared_state(plan,self.d/'bad')
++        self.assertFalse((self.d/'bad').exists());self.assertTrue(list(self.d.glob('.bad.staging-*/FAILED.json')))
++    def test_budget_preparation_does_not_advance_RNG(self):
++        before=torch.get_rng_state().clone();prepare_state({'x':torch.ones(2)},provenance=P,destination_parent=self.d)
++        self.assertTrue(torch.equal(before,torch.get_rng_state()))
++    def test_modified_prepared_manifest_is_rejected_before_write(self):
++        plan=prepare_state({'x':torch.ones(2)},provenance=P,destination_parent=self.d);plan['manifest']['root']={}
++        with self.assertRaises(ControlError):save_prepared_state(plan,self.d/'bad')
++        self.assertFalse((self.d/'bad').exists())
++
++class StorageAdmissionTests(Base):
++    def test_unvalidated_file_backend_is_not_admitted(self):
++        r=cpu_storage_admission(ROOT,backend='owned_file_mmap');self.assertFalse(r['validation_passed']);self.assertIn('FILE_BACKED_CPU_VALIDATION_MISSING',r['issues'])
++    def test_validated_backend_has_small_explicit_shm_and_disk_charge(self):
++        import hashlib
++        sha=hashlib.sha256((ROOT/'native_control/file_backed.py').read_bytes()).hexdigest()
++        proof=self.d/'proof.json';proof.write_text(json.dumps({'PASS':True,'total_tensor_bytes':2246400000,'shm_delta_bytes':61440,
++              'file_backed_module_sha256':sha,'torch_distribution_version':importlib.metadata.version('torch')}))
++        r=cpu_storage_admission(ROOT,backend='owned_file_mmap',validation=proof)
++        self.assertTrue(r['validation_passed']);self.assertEqual(r['required_shm_bytes'],64*1024**2);self.assertGreater(r['extra_data_disk_reservation_bytes'],2246400000)
++    def test_stale_module_proof_does_not_lower_shm_gate_silently(self):
++        proof=self.d/'bad.json';proof.write_text(json.dumps({'PASS':True,'total_tensor_bytes':2246400000,'shm_delta_bytes':0,
++              'file_backed_module_sha256':'0'*64,'torch_distribution_version':importlib.metadata.version('torch')}))
++        r=cpu_storage_admission(ROOT,backend='owned_file_mmap',validation=proof)
++        self.assertFalse(r['validation_passed']);self.assertIn('FILE_BACKED_CPU_VALIDATION_MISMATCH',r['issues'])
++    def test_original_shm_backend_keeps_original_byte_requirement(self):
++        r=cpu_storage_admission(ROOT,backend='native_shm');self.assertEqual(r['required_shm_bytes'],2246400000)

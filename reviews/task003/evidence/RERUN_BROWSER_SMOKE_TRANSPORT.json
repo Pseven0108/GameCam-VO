@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:20636/?url=ws%3A%2F%2F127.0.0.1%3A20637",
+  "utc": "2026-11-22T18:58:07.734Z",
+  "sockets": [
+    {
+      "url": "ws://127.0.0.1:20637/",
+      "n": 6,
+      "bytes": 7630,
+      "closed": false,
+      "errors": []
+    }
+  ],
+  "errors": [
+    "using deprecated parameters for the initialization function; pass a single object instead",
+    "found 0 values for \"notebook\" query. Expected one or none. Defaulting to \"false\".",
+    "found 0 values for \"persist\" query. Expected one or none. Defaulting to \"true\".",
+    "No available adapters.",
+    "[re_renderer::context] re_renderer/src/context.rs:534: Software rasterizer detected - expect poor performance. See: https://www.rerun.io/docs/getting-started/troubleshooting#graphics-issues",
+    "[eframe::web::app_runner] eframe-0.31.0/src/web/app_runner.rs:256: Unhandled egui viewport command: RequestUserAttention(Informational) - not implemented in web backend",
+    "[eframe::web::app_runner] eframe-0.31.0/src/web/app_runner.rs:256: Unhandled egui viewport command: RequestUserAttention(Informational) - not implemented in web backend"
+  ],
+  "http": 200,
+  "canvas": 1
+}

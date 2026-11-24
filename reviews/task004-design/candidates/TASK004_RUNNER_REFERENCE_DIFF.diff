@@ -1,0 +1,54 @@
+--- a/task003_run_segment.py
++++ b/task003_run_segment.py
+@@ -1,4 +1,10 @@
+-"""DROID-W RGB-only VIPER adapter. Upstream tracking, BA and filler are unchanged."""
++"""Task 004 runner candidate, based on the sealed Task 003 adapter."""
++
++from task004_controls import policy as task004_policy, require_approved_runtime
++
++require_approved_runtime()
++
++from task003_observer import recorder as task003
+ 
+ import argparse
+ import hashlib
+@@ -104,6 +110,12 @@
+         x,y=remap_for(src,k)
+         color=cv2.remap(image,x,y,cv2.INTER_LINEAR,borderMode=cv2.BORDER_CONSTANT)
+         return (torch.from_numpy(color).float().permute(2,0,1)[[2,1,0]]/255.).unsqueeze(0)
++
++    def task004_begin_filler(self):
++        if self.phase is not None or self.seen != len(self) or self.fill_seen != 0:
++            raise ValueError('unexpected Filler entry or incomplete tracking')
++        self.phase = 'filler'
++        progress(self.out,'filler',done=0,n=len(self),keyframes=self.video.counter.value)
+ 
+     def __getitem__(self,index):
+         if index>=self.n_img:
+@@ -165,10 +177,11 @@
+ 
+     def backend(self):
+         progress(self.stream.out,'final_ba',done=self.stream.seen,n=len(self.stream),keyframes=self.video.counter.value)
+-        result=super().backend()
+-        self.stream.phase='filler'
+-        progress(self.stream.out,'filler',done=0,n=len(self.stream),keyframes=self.video.counter.value)
+-        return result
++        if task004_policy().final_phases == 0:
++            task003().boundary('final_pre', self.video)
++            task003().boundary('final_ba_skipped', self.video)
++            return None
++        return super().backend()
+ 
+ 
+ def main():
+@@ -195,6 +208,10 @@
+     if trace.parent.resolve()!=args.out.resolve() or trace.exists():
+         raise ValueError('observation output must be new and belong to this attempt')
+     cfg['data'].update(output=str(args.out),input_folder=str(args.manifest.parent))
++    active = task004_policy()
++    dump(args.out/'task004_policy_receipt.json', dict(arm=active.arm, campaign=active.campaign,
++         local_dwu=list(active.local_dwu), final_phases=active.final_phases,
++         policy_sha256=os.environ['GAMECAM_TASK004_POLICY_SHA256']))
+     setup_seed(cfg['setup_seed'])
+     stream=ViperRGB(cfg,args.manifest,args.out)
+     np.testing.assert_allclose(stream.get_intrinsic().numpy(),doc['output_k'],rtol=0,atol=1.3e-4)

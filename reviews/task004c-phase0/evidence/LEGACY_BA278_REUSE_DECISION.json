@@ -1,0 +1,15 @@
+{
+  "actual_call": 278,
+  "historical_label": "BA280",
+  "trigger_rgb_id": 341,
+  "video_buffer": 154,
+  "edge_count": 133,
+  "stride": 4,
+  "input_frames": 122,
+  "original_frames": 487,
+  "gamma_depth": 0.001,
+  "pre_state_sha256": "82f934017f26ba054e241122343851e111f304488bcddccddc1bbd35fc322886",
+  "remote_sha_matches": true,
+  "eligible_for_current_A": false,
+  "reason": "Different stride=4, buffer=154, RGB341, gamma_depth=0.001; Task004C requires stride=1, buffer=500, RGB328, gamma_depth=0.01. Not one of Seed43 E0/E1 states. No substitution executed."
+}

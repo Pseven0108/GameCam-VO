@@ -1,0 +1,32 @@
+{
+  "synthetic_only": true,
+  "checks": [
+    {
+      "name": "analytic_90deg_rotation_scale3_translation_recovered",
+      "status": "PASS"
+    },
+    {
+      "name": "SE3_alignment_does_not_rescale",
+      "status": "PASS"
+    },
+    {
+      "name": "known_16unit_endpoint_ratio100_rpe0",
+      "status": "PASS"
+    },
+    {
+      "name": "missing_real_keyframe_is_not_interpolated",
+      "status": "PASS"
+    },
+    {
+      "name": "factorial_analytic_main_effect6_interaction10",
+      "status": "PASS"
+    },
+    {
+      "name": "unit_xyzw_quaternion_identity",
+      "status": "PASS"
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "utc": "2026-11-23T09:05:02.496372+00:00"
+}

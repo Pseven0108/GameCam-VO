@@ -1,0 +1,594 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Discrete schedule event payloads; integrity/lifecycle also checked by Python",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "frame_begin"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "input_index",
+            "rgb_id",
+            "timestamp_token"
+          ],
+          "properties": {
+            "input_index": {},
+            "rgb_id": {},
+            "timestamp_token": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "motion_filter_decision"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "admitted",
+            "force_flag",
+            "rejection_reason"
+          ],
+          "properties": {
+            "admitted": {},
+            "force_flag": {},
+            "rejection_reason": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "candidate_insert"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "keyframe_id",
+            "slot",
+            "generation",
+            "insertion_order"
+          ],
+          "properties": {
+            "keyframe_id": {},
+            "slot": {},
+            "generation": {},
+            "insertion_order": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "edge_add_request"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "source_indices",
+            "target_indices",
+            "remove"
+          ],
+          "properties": {
+            "graph_id": {},
+            "source_indices": {},
+            "target_indices": {},
+            "remove": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "edge_insert"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "edges"
+          ],
+          "properties": {
+            "graph_id": {},
+            "edges": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "edge_remove"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "edge_ids",
+            "store",
+            "reason"
+          ],
+          "properties": {
+            "graph_id": {},
+            "edge_ids": {},
+            "store": {},
+            "reason": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "edge_age_advance"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "edge_ids",
+            "increment"
+          ],
+          "properties": {
+            "graph_id": {},
+            "edge_ids": {},
+            "increment": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "ba_begin"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "phase",
+            "call_id",
+            "t0",
+            "t1",
+            "outer_iteration",
+            "iterations",
+            "motion_only",
+            "use_inactive",
+            "enable_update_uncer",
+            "enable_udba"
+          ],
+          "properties": {
+            "phase": {},
+            "call_id": {},
+            "t0": {},
+            "t1": {},
+            "outer_iteration": {},
+            "iterations": {},
+            "motion_only": {},
+            "use_inactive": {},
+            "enable_update_uncer": {},
+            "enable_udba": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "ba_end"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "call_id"
+          ],
+          "properties": {
+            "call_id": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "keyframe_decision"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "retained",
+            "rejection_reason",
+            "force_flag"
+          ],
+          "properties": {
+            "retained": {},
+            "rejection_reason": {},
+            "force_flag": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "keyframe_remove"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "keyframe_id",
+            "slot",
+            "slot_map_after"
+          ],
+          "properties": {
+            "keyframe_id": {},
+            "slot": {},
+            "slot_map_after": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "keyframe_commit"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "keyframe_id",
+            "slot",
+            "insertion_order"
+          ],
+          "properties": {
+            "keyframe_id": {},
+            "slot": {},
+            "insertion_order": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "initialization_phase"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "phase",
+            "update_index",
+            "init_D",
+            "enable_udba",
+            "enable_update_uncer"
+          ],
+          "properties": {
+            "phase": {},
+            "update_index": {},
+            "init_D": {},
+            "enable_udba": {},
+            "enable_update_uncer": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "frame_end"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "next_input_index"
+          ],
+          "properties": {
+            "next_input_index": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "final_ba_begin"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stage",
+            "steps",
+            "metric_depth_reg"
+          ],
+          "properties": {
+            "stage": {},
+            "steps": {},
+            "metric_depth_reg": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "final_graph_build"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "edges",
+            "nonempty"
+          ],
+          "properties": {
+            "graph_id": {},
+            "edges": {},
+            "nonempty": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "final_ba_end"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stage",
+            "metric_depth_reg_restored"
+          ],
+          "properties": {
+            "stage": {},
+            "metric_depth_reg_restored": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "filler_batch_begin"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "batch_id",
+            "rgb_ids",
+            "slots",
+            "anchor_left",
+            "anchor_right"
+          ],
+          "properties": {
+            "batch_id": {},
+            "rgb_ids": {},
+            "slots": {},
+            "anchor_left": {},
+            "anchor_right": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "filler_graph_build"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "graph_id",
+            "edges"
+          ],
+          "properties": {
+            "graph_id": {},
+            "edges": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "filler_update"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "call_id",
+            "iteration",
+            "t0",
+            "t1",
+            "iterations",
+            "motion_only"
+          ],
+          "properties": {
+            "call_id": {},
+            "iteration": {},
+            "t0": {},
+            "t1": {},
+            "iterations": {},
+            "motion_only": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "filler_batch_end"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "batch_id",
+            "counter_after"
+          ],
+          "properties": {
+            "batch_id": {},
+            "counter_after": {}
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "event_type",
+        "payload"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "export_complete"
+        },
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pose_count",
+            "rgb_ids"
+          ],
+          "properties": {
+            "pose_count": {},
+            "rgb_ids": {}
+          }
+        }
+      }
+    }
+  ]
+}

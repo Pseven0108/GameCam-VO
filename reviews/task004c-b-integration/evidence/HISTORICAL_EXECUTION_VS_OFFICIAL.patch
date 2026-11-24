@@ -1,0 +1,67 @@
+--- official/src/motion_filter.py
++++ historical_execution/src/motion_filter.py
+@@ -1,3 +1,4 @@
++from task003_observer import recorder as task003
+ import torch
+ import lietorch
+ 
+@@ -78,6 +79,7 @@
+                     # If mapping needs dino features, we predict here and store the value in local disk
+                     _ = predict_img_features(self.feat_extractor,tstamp,image,self.cfg,self.device,save_feat=True)
+             self.video.append(tstamp, image[0], Id, 1.0, mono_depth, intrinsics / float(self.video.down_scale), gmap, net[0,0], inp[0,0], dino_features)
++            task003().inserted(self.video, mono_depth, "EXPLICIT_IDENTITY_AND_UNIT_DISPARITY")
+         ### only add new frame if there is enough motion ###
+         else:                
+             # index correlation volume
+@@ -94,6 +96,7 @@
+ 
+ 
+             # check motion magnitue / add new frame to video
++            task003().motion_score(delta, self.thresh, force_to_add_keyframe)
+             if delta.norm(dim=-1).mean().item() > self.thresh or force_to_add_keyframe:
+                 self.count = 0
+                 net, inp = self.__context_encoder(inputs[:,[0]])
+@@ -108,6 +111,7 @@
+                         _ = predict_img_features(self.feat_extractor,tstamp,image,self.cfg,self.device,save_feat=True)
+                 # add new frame to video, all params
+                 self.video.append(tstamp, image[0], None, None, mono_depth, intrinsics / float(self.video.down_scale), gmap, net[0], inp[0], dino_features)     # video.counter += 1
++                task003().inserted(self.video, mono_depth, "EXISTING_BUFFER_SLOT")
+                 # gmap: torch.Size([1, 128, 45, 80]) net[0]: [128, 45, 80] inp: [1, 128, 45, 80], dino_features: [25, 45, 384]
+             else:
+                 self.count += 1
+--- official/src/trajectory_filler.py
++++ historical_execution/src/trajectory_filler.py
+@@ -1,3 +1,4 @@
++from task003_observer import recorder as task003
+ import torch
+ import lietorch
+ from lietorch import SE3
+@@ -76,6 +77,7 @@
+         # temporally put the non-keyframe at the end of keyframe queue
+         self.video.counter.value += M
+         self.video[N:N+M] = (tt, images[:, 0], Gs.data, 1, depths, intrinsics / 8.0, fmap, None, None, dino_features)
++        task003().filler_begin(self.video, N, M, t0, t1)
+ 
+         if self.uncertainty_aware:
+             # interpolate the uncertainty mask
+@@ -89,9 +91,12 @@
+         graph.add_factors(t1.cuda(), torch.arange(N, N+M).cuda())
+ 
+         for _ in range(12):
++            task003().context("filler_pose_only", _+1)
+             graph.update(N, N+M, motion_only=True, enable_update_uncer=False, enable_udba=True)
++            task003().filler_step(self.video, N, M, _)
+ 
+         Gs = SE3(self.video.poses[N:N+M].clone())
++        task003().filler_end(self.video, N, M)
+         self.video.counter.value -= M
+ 
+         return [Gs]
+@@ -113,6 +118,7 @@
+ 
+         self.printer.print("Filling full trajectory ...",FontColor.INFO)
+         intrinsic = image_stream.get_intrinsic()
++        image_stream.task004_begin_filler()
+         for (timestamp, image, _ , _)  in tqdm(image_stream):
+             timestamps.append(timestamp)
+             images.append(image)

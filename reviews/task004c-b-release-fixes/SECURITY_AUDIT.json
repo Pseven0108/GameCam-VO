@@ -1,0 +1,49 @@
+{
+  "scope": "CPU_ONLY_RELEASE_FIXES",
+  "base_commit": "0931141cf88247dc8fb0c7628c1d91b6531fea90",
+  "candidate_commit": "668a88c74c7f7a88a572679d2bd8e86c0a05514b",
+  "forbidden_text_reference_commit_used": false,
+  "gpu_requested": false,
+  "gpu_used": false,
+  "gpu_queried": false,
+  "instance_restarted": false,
+  "instance_shutdown": false,
+  "cuda_context_initialized": false,
+  "cuda_tensor_created": false,
+  "pretrained_checkpoint_deserialized": false,
+  "model_initialized": false,
+  "model_forward_executed": false,
+  "real_C0_created": false,
+  "RGB_prefix_executed": false,
+  "B1_B2_B3_B4_executed": false,
+  "BA_math_modified": false,
+  "CUDA_extension_recompiled": false,
+  "buffer_changed": false,
+  "R2_YAML_modified": false,
+  "weights_modified": false,
+  "original_093_directory_modified": false,
+  "historical_data_deleted": false,
+  "SSH_pinned_identity_verified": true,
+  "StrictHostKeyChecking_disabled": false,
+  "dependencies_installed": false,
+  "github_push_performed": false,
+  "torch_imported_for_CPU_tensors": true,
+  "synthetic_tensor_fixture_deserialized": true,
+  "synthetic_temporary_payload_files_removed": [
+    {
+      "file": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989025.bin",
+      "inode": 4989025,
+      "bytes": 1382400000,
+      "sha256": "a8dfb679d15a7c9f633de2514bc8c8f4964298150ee5316a88356f3101399b37"
+    },
+    {
+      "file": "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/FULL_BUFFER_CPU_PROOF/backing/4989026.bin",
+      "inode": 4989026,
+      "bytes": 864000000,
+      "sha256": "6f076cad73179bc6dd2549244e494106ac2b5d5cb8812e8fd3cfdb9a9281c9e0"
+    }
+  ],
+  "deletion_scope": "Only two new deterministic CPU pressure-test backing files after no maps and SHA verification; no historical files",
+  "evidence": "evidence/FINAL_RELEASE_AUDIT.json",
+  "final_status": "STOPPED_FOR_USER_REVIEW"
+}

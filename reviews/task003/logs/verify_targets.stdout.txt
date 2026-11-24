@@ -1,0 +1,5 @@
+PASS: 16 interval rows independently verified; 230 local BA returns for 312 to 328.
+First shared local BA, first call below 20% on this descriptive curve, last local BA:
+{'event': 2601, 'stage': 'frontend_local_predecision', 'trigger_rgb_id': 328, 'ba_id': 552, 'landmarks_image_ids': [312, 328], 'length_ratio': 0.6904877592963571, 'world_vector_error_game_units': 8.279827387414759, 'sampled_disparity_negative': 2, 'sampled_disparity_total': 17040, 'sampled_uncertainty_median': 0.5796563923358917}
+{'event': 2708, 'stage': 'frontend_local_predecision', 'trigger_rgb_id': 345, 'ba_id': 573, 'landmarks_image_ids': [312, 328], 'length_ratio': 0.15597611133583325, 'world_vector_error_game_units': 29.619100725797825, 'sampled_disparity_negative': 4, 'sampled_disparity_total': 17520, 'sampled_uncertainty_median': 0.5800643265247345}
+{'event': 3737, 'stage': 'frontend_local_retained', 'trigger_rgb_id': 487, 'ba_id': 781, 'landmarks_image_ids': [312, 328], 'length_ratio': 0.11739432064510684, 'world_vector_error_game_units': 29.023449383899692, 'sampled_disparity_negative': 9, 'sampled_disparity_total': 20640, 'sampled_uncertainty_median': 0.6170602142810822}

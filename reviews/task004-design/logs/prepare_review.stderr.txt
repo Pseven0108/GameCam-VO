@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 359, in <module>
+    main()
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 332, in main
+    write(patch, ''.join(diff(base[rel], out[rel], rel) for rel in sorted(changed)) +
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 55, in write
+    check(path.read_bytes() == data, f'Existing output differs: {path}')
+  File "D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\tools\prepare_candidates.py", line 35, in check
+    raise ValueError(reason)
+ValueError: Existing output differs: D:\aaa\GameCam-VO\experiments\DROID_W_TASK004_CAUSAL_ABLATION\candidates\TASK004_ON_TASK003.diff

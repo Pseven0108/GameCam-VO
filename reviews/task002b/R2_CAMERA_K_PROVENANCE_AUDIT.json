@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "camera_archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_PRIMARY_ADMISSION_R0\\02_samples\\val_camera.download",
+  "camera_archive_bytes": 12039423,
+  "camera_archive_sha256": "19f8e1d36ac8066b21f9d8b6a6d75394cf7fcfbfd4c4914ea9e30ba0fdcb5dc9",
+  "camera_provenance_sha256": "545ef9f2415b046d374064b1e30547fa31846d9760ca395785b438b3fcbd6ad4",
+  "raw_camera_member_crc_and_sha256_verified": 47,
+  "sealed_calibration_arrays_verified": 47,
+  "raw_K_exactly_reconstructed_rows": 49815,
+  "verified_fixed_segments": 82,
+  "verified_virtual_segments": 10,
+  "verified_per_frame_virtual_source_K_rows": 6403,
+  "max_nominal_K_reconstruction_error_px": 5.684341886080802e-14,
+  "max_runtime_K_minus_nominal_error_px": 4.052651024721854e-05,
+  "minimum_virtual_remap_source_margin_px": 1.499073125848554,
+  "camera_id_mapping": "RGB_ID-1",
+  "camera_physical_clock_verified": false
+}

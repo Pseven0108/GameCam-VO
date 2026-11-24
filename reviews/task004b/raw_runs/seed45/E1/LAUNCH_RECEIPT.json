@@ -1,0 +1,26 @@
+{
+  "arm": "E1",
+  "seed": 45,
+  "attempt_id": "attempt_001_ad8473f37f40",
+  "mode": "REAL_GPU_CONFIRMATORY",
+  "authorization_sha256": "ce286e8a61947d6ee295341da39d46b227d0160709eaeaa0d6d391b3dc34217c",
+  "policy_sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640",
+  "config_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "input_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+  "output_dir": "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E1/attempt_001_ad8473f37f40",
+  "input_dir": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487",
+  "created_utc": "2026-11-23T13:35:02.513641+00:00",
+  "recording_namespace": "seed45_E1_attempt_001_ad8473f37f40",
+  "max_runs": 1,
+  "pid": 6720,
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/pipeline/task004_run_segment.py",
+    "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/inputs/val_007_full_00001-00487/INPUT.json",
+    "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z/results/seed45/E1/attempt_001_ad8473f37f40",
+    "--weights",
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth"
+  ],
+  "launched_utc": "2026-11-23T13:35:02.636299+00:00"
+}

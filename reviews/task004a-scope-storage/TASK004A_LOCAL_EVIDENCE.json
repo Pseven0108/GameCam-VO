@@ -1,0 +1,465 @@
+{
+  "captured_utc": "2026-11-22T22:40:49.360052+00:00",
+  "previous_release": {
+    "status": "PASS",
+    "zip": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\GAMECAM_TASK004A_RELEASE_READINESS_REVIEW.zip",
+    "bytes": 555128,
+    "zip_sha256": "49a6f95b91f8b8a6957d99c5486acf845129a00f036f41538cf7575459cd2bf6",
+    "zip_crc": "PASS",
+    "members": 175,
+    "sha256_verified_payload_files": 174
+  },
+  "unchanged_samples": {
+    "tools/scheduler.py": {
+      "bytes": 12838,
+      "sha256": "21f8bfe6979c0f7fab8860cee510c1242f9da1191cec159f4633589ed5806086"
+    },
+    "tools/trace_audit.py": {
+      "bytes": 16169,
+      "sha256": "98fbec7adae2c40c51a28a94a6e5db3cc33c3f8e7843e027e2c65dfe9d4dd5da"
+    },
+    "assets/candidates/task004_controls.py": {
+      "bytes": 3323,
+      "sha256": "acea04ebaee3f9b6356c57eb88909dcc9abbd5ebdd15effcf9bd54178d0100b8"
+    },
+    "assets/candidates/task004_run_segment.py": {
+      "bytes": 11685,
+      "sha256": "f7b7111ea75358921740a57e9dbce0c884cfc7a3850e00e4136a6e84d67220ac"
+    },
+    "assets/candidates/preview/src/frontend.py": {
+      "bytes": 11522,
+      "sha256": "bfbf44e865a917f59b46022ca15dceb33a5b7acb94531e2e8fa075640f68114d"
+    },
+    "_local_probe/probe_05/browser_after.png": {
+      "bytes": 349962,
+      "sha256": "4793290d1bc1867cc44648d5862a4d4ad99e520522b04d942f0e90b993ae9630"
+    }
+  },
+  "historical_task003_capture": {
+    "capture_root": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\remote\\capture",
+    "capture_files": [
+      {
+        "path": "remote/capture/attempt.json",
+        "bytes": 1277,
+        "sha256": "d8fec03796156aa5d6a718f4877ebdf3632885eb5195d105efb52becd3c04914",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 677
+      },
+      {
+        "path": "remote/capture/est_poses_full.txt",
+        "bytes": 33843,
+        "sha256": "38f4884034d753497a9cc5d92b8bbb081a6d52204d884bd892b345cdb64d8f01",
+        "type": "trajectory",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 14691
+      },
+      {
+        "path": "remote/capture/keyframes.json",
+        "bytes": 1592,
+        "sha256": "f42b86dc530047c6d90f99739e04051256ee621ab2c3d5a87bbcb4dc8b943099",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 429
+      },
+      {
+        "path": "remote/capture/LAUNCH_RECEIPT.json",
+        "bytes": 270,
+        "sha256": "26c2734ce23e100433fb2c0aa5bca1943eda31067476beb65addf37ed2466d2c",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 188
+      },
+      {
+        "path": "remote/capture/model_input.json",
+        "bytes": 4619,
+        "sha256": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 1231
+      },
+      {
+        "path": "remote/capture/model_result.json",
+        "bytes": 655,
+        "sha256": "61e15771c0be36c9fa0070fb0dd41e54b805125e04e034ab2991a291d2dfb2ab",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 356
+      },
+      {
+        "path": "remote/capture/native_camera_stream.json",
+        "bytes": 46,
+        "sha256": "769fc530574e691c6e39648d50a4e82c504b014401d51b82d1727d3a23daed85",
+        "type": "rerun_logs",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 44
+      },
+      {
+        "path": "remote/capture/native_config.yaml",
+        "bytes": 3377,
+        "sha256": "2a3b02ee11cc8a57b592fc19f0601eedee3f8d952b309f3490d868a4b7a660a6",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 1415
+      },
+      {
+        "path": "remote/capture/observer.jsonl",
+        "bytes": 44365711,
+        "sha256": "62d385b24f5c83f7ae09033e7ef2c5ae1a146d49c412f1f5d4a40dc250ff3e10",
+        "type": "observation",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 3869426
+      },
+      {
+        "path": "remote/capture/ONE_RUN_CLAIM",
+        "bytes": 99,
+        "sha256": "0ad82cbd341228a38a20b739c770d0e70fbff0539c22962ce6a6a2bb2494a5a4",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 82
+      },
+      {
+        "path": "remote/capture/progress.json",
+        "bytes": 107,
+        "sha256": "fc4c263a6e80a0d2a670ab5595543f2330ff51becd5062e3ce189ae5373019f7",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 87
+      },
+      {
+        "path": "remote/capture/RERUN_RUNTIME.log",
+        "bytes": 949,
+        "sha256": "aee07cfd2fb3b9adb6b19db76144898e3b77f8b7d47d845d7a920f50ab53b75f",
+        "type": "rerun_logs",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 526
+      },
+      {
+        "path": "remote/capture/resource_samples.csv",
+        "bytes": 12585,
+        "sha256": "892df608953aa32f63fd2efd351551fd3b99a9b3fa693db0f655f5578e4ca444",
+        "type": "observation",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 4191
+      },
+      {
+        "path": "remote/capture/run.log",
+        "bytes": 88584,
+        "sha256": "0d5e8d20f6836a51dd9eeb82085ac5acc1444931b080a90ef45c8e72cb5cd93f",
+        "type": "observation",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 8938
+      },
+      {
+        "path": "remote/capture/runtime_command.json",
+        "bytes": 1860,
+        "sha256": "64105903d8a21d4d8686ceb9ce318bee2d3f89b4d95cc6eb3e4ee85d699d9e30",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 616
+      },
+      {
+        "path": "remote/capture/timer_summary.csv",
+        "bytes": 316,
+        "sha256": "226dc9ea0882a2482330720404719eca20e6bb158fb171d00492274ad6647d3b",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 227
+      },
+      {
+        "path": "remote/capture/tracking_child_ok.json",
+        "bytes": 258,
+        "sha256": "318f15e6f0ee66193d8fc11fea522d63f5acb4fa04dab3b6cb8141cdfeeb975b",
+        "type": "other",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 171
+      },
+      {
+        "path": "remote/capture/trajectory.npz",
+        "bytes": 26214,
+        "sha256": "0c6fac9f4754fa2003a9dc13cffaf960a4cea9325d0a3a4fe4fc2bc0f49a28a8",
+        "type": "trajectory",
+        "review_zip_member": true,
+        "review_zip_compressed_bytes": 25951
+      }
+    ],
+    "capture_totals": {
+      "other": 14430,
+      "trajectory": 60057,
+      "rerun_logs": 995,
+      "observation": 44466880
+    },
+    "capture_bytes": 44542362,
+    "capture_file_count": 18,
+    "manifest_matches": 18,
+    "local_rrd_files": 0,
+    "historical_review_zip": {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\GAMECAM_TASK003_VAL007_OBSERVATION_REVIEW.zip",
+      "bytes": 11245448,
+      "sha256": "7b665e1b909d852ea8949856cf41cc4f80d7364ae98f286e06e713a102fed344",
+      "members": 95,
+      "payload_uncompressed_bytes": 97521351,
+      "capture_members": 18,
+      "complete_native_attempt": false
+    },
+    "native_video": {
+      "path_recorded": "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1/results/val_007_full_00001-00487/attempt_001/native/video.npz",
+      "bytes": 398776718,
+      "sha256_recorded": "0e666099e82da5ac547688d880b65d5e60ff6c48f6fc22b9b7c16984b6220ce3",
+      "status": "HISTORICAL_REMOTE_IDENTITY_ONLY_NO_LOCAL_PAYLOAD_READ",
+      "evidence_file": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1\\evidence\\REMOTE_NATIVE_VIDEO_IDENTITY.txt"
+    },
+    "resource_samples": {
+      "n": 106,
+      "first_utc": "2026-11-22T19:07:13.872439+00:00",
+      "last_utc": "2026-11-22T19:10:53.691959+00:00",
+      "ranges": {
+        "disk_free_bytes": {
+          "first": 14510026752,
+          "last": 14066569216,
+          "min": 14066569216,
+          "max": 14510026752
+        },
+        "shm_free_bytes": {
+          "first": 25769803776,
+          "last": 25769709568,
+          "min": 23523246080,
+          "max": 25769803776
+        },
+        "cgroup_memory_bytes": {
+          "first": 2730291200,
+          "last": 4804874240,
+          "min": 2730291200,
+          "max": 10082914304
+        },
+        "gpu_used_mib": {
+          "first": 17,
+          "last": 5342,
+          "min": 17,
+          "max": 16752
+        },
+        "trace_bytes": {
+          "first": 0,
+          "last": 44365711,
+          "min": 0,
+          "max": 44365711
+        }
+      }
+    },
+    "historical_full_remote_attempt_directory_bytes": null,
+    "historical_full_remote_attempt_directory_status": "UNVERIFIED_NO_COMPLETE_DU_OR_OUTPUT_INVENTORY"
+  },
+  "historical_task003_trace": {
+    "ref": "HISTORICAL_TASK003_NOT_E0",
+    "raw_trace_events": 5353,
+    "counters": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1172,
+      "ba_after_native": 1172,
+      "ba_after_clamp": 1172,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "local_calls_by_phase": {
+      "frontend_local_predecision": 609,
+      "frontend_local_retained": 148
+    },
+    "predecision_pct": 80.44914134742405,
+    "local_calls_for_rejected_candidates": 387,
+    "decisions": {
+      "RETAINED_WARMUP_PENDING": 11,
+      "MOTION_FILTER_REJECTED": 272,
+      "RETAINED": 75,
+      "LOCAL_BA_REJECTED": 129
+    },
+    "local_accepted": 74,
+    "local_rejected": 129,
+    "local_dwu_by_phase": {
+      "frontend_local_predecision": {
+        "111": 609
+      },
+      "frontend_local_retained": {
+        "111": 148
+      }
+    },
+    "native_distance": {
+      "thresholds": [
+        3.0
+      ],
+      "all": {
+        "n": 203,
+        "min": 0.39069032669067383,
+        "p05": 0.833930116891861,
+        "p50": 2.311056613922119,
+        "p95": 5.309119844436645,
+        "max": 7.3095855712890625
+      },
+      "retained": {
+        "n": 74,
+        "min": 0.8678573966026306,
+        "p05": 2.3129776597023013,
+        "p50": 3.9854623079299927,
+        "p95": 6.307360553741453,
+        "max": 7.3095855712890625
+      },
+      "rejected": {
+        "n": 129,
+        "min": 0.39069032669067383,
+        "p05": 0.7172596216201782,
+        "p50": 1.9712870121002197,
+        "p95": 2.862793731689453,
+        "max": 2.995922803878784
+      }
+    },
+    "final_keyframe_rgb_ids": [
+      1,
+      4,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      23,
+      34,
+      51,
+      54,
+      59,
+      73,
+      89,
+      99,
+      102,
+      114,
+      117,
+      125,
+      130,
+      141,
+      143,
+      156,
+      163,
+      164,
+      181,
+      193,
+      196,
+      206,
+      213,
+      215,
+      221,
+      223,
+      225,
+      228,
+      230,
+      233,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      244,
+      245,
+      246,
+      247,
+      248,
+      251,
+      254,
+      256,
+      259,
+      261,
+      270,
+      273,
+      277,
+      283,
+      288,
+      294,
+      299,
+      302,
+      305,
+      312,
+      328,
+      332,
+      353,
+      364,
+      372,
+      376,
+      379,
+      385,
+      401,
+      410,
+      416,
+      434,
+      451,
+      462,
+      475,
+      487
+    ],
+    "final_keyframes": 86,
+    "final_export_poses": 487,
+    "first_common_312_328": {
+      "phase": "frontend_local_predecision",
+      "ba_id": 552,
+      "events": [
+        2600,
+        2601,
+        2602
+      ]
+    }
+  },
+  "simulation_inputs": {
+    "starts": {
+      "TASK003_EARLIER_PREFLIGHT": 14654005248,
+      "TASK003_FINAL_PREFLIGHT": 14510059520
+    },
+    "known_output_proxy": {
+      "raw_bytes": 443319080,
+      "zip_allowance_bytes": 448878670,
+      "file_count": 19
+    },
+    "source_gate_bytes": 13958643712,
+    "floor_bytes": 10737418240,
+    "budget_bytes": 3221225472,
+    "full_budget_example": {
+      "raw_bytes": 1610612736,
+      "zip_bytes": 1610612736
+    },
+    "forecast": "SIMULATION_ONLY_NO_CURRENT_REMOTE_DISK_MEASUREMENT"
+  },
+  "local_receiver": {
+    "checked_utc": "2026-11-22T22:40:48.5481675Z",
+    "candidate_receiver": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_SCOPE_STORAGE_RECHECK\\receive_candidate",
+    "previous_mock_receiver": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_receiver_03",
+    "volume": {
+      "DriveLetter": "D",
+      "DriveType": "Fixed",
+      "FileSystem": "NTFS",
+      "Size": 677746774016,
+      "SizeRemaining": 26554470400,
+      "AllocationUnitSize": 4096
+    },
+    "partition": {
+      "DiskNumber": 0,
+      "PartitionNumber": 4,
+      "DriveLetter": "D"
+    },
+    "reparse_components": [],
+    "state": "LOCAL_CANDIDATE_NOT_BOUND_TO_NATIVE_RUN"
+  },
+  "arm_rows": 16,
+  "simulation_rows": 64,
+  "formal_runs": 0,
+  "remote_connections": 0
+}

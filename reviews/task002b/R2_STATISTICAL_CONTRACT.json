@@ -1,0 +1,31 @@
+{
+  "sequence_count": 47,
+  "segment_count": 92,
+  "scope": "full per segment, no cross-segment pose pairing",
+  "maximum_sequence_metric_drift_from_original": 1.2909125999271964e-06,
+  "statistic": "Arithmetic mean of sequence-level paired RMSE differences",
+  "sequence_rmse": "sqrt(sum(per-segment RMSE^2 * eligible motion pairs) / sum(eligible motion pairs))",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261122,
+  "confidence_interval": "percentile 95%, sequence resampled with replacement",
+  "model_ci": "marginal per-model mean intervals; pair-comparison CI resamples matching sequences together",
+  "p90_p95": "across sequence-level RMSEs; not a motion-pair distribution",
+  "std": "sample standard deviation, ddof=1",
+  "n_lt_5": "descriptive, unstable",
+  "n_eq_1": "no CI",
+  "compression_screen": {
+    "relative_gt_step_floor": "0.5× median nonzero GT displacement in the same segment and offset",
+    "minimum_nonzero_gt_game_units": 1e-06,
+    "wild_displacement_ratio_lt": 0.5,
+    "slam_displacement_ratio_between": [
+      0.8,
+      1.2
+    ],
+    "consecutive_start_ids_minimum": 5,
+    "exact_case_offsets": [
+      16,
+      52
+    ],
+    "interpretation": "descriptive recurrence screen, overlapping starts not independent"
+  }
+}

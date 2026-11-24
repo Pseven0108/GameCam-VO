@@ -1,0 +1,110 @@
+{
+  "state_id": "E1_E1_NEW_PREFIX_RGB328",
+  "D": 0,
+  "W": 1,
+  "U": 1,
+  "native_ba_calls": 1,
+  "native_inner_iterations": 2,
+  "native_seconds": 0.15147782199346693,
+  "negative_disparities_native_active": 5918,
+  "clamp_affected_active": 5937,
+  "nonfinite_active": 0,
+  "arrays": {
+    "poses_native": {
+      "file": "poses_native.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        7
+      ],
+      "data_sha256": "5b5e46ce60bc290a6c3e7d3f8272c4b75bf608b66efd39897b3db0b72c8b5652",
+      "file_sha256": "1295b2bc1d3ebfbc0f859d67e34d8e7682170d67a02a0c0f2ab6833248d83cbb",
+      "bytes": 14128
+    },
+    "disps_native": {
+      "file": "disps_native.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "7aaa853e6607ff50917be43a5c2bb3c9c20c1cfd4083742700775f8162398aad",
+      "file_sha256": "94d50ecc93298c11bd89df47ad5e69802f09ccd47adce673257ab39c5c848cc5",
+      "bytes": 7200128
+    },
+    "U_native": {
+      "file": "U_native.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "1cdf8c0c2507e094f010b8f1b5bda29a48b351e60f851f9ad46e4a3e6fed42d7",
+      "file_sha256": "41b61dcd2181190836558932cd3ccdf8e28c157531e239ab006ca8a43fdc6ab1",
+      "bytes": 7200128
+    },
+    "temp_y_cdot_native": {
+      "file": "temp_y_cdot_native.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "7be3df681f48329a02f1dff255016f67d26d4bf5a04e62b6b3be95882f934a08",
+      "file_sha256": "8aa7109e078425a32fcc49453b9eb69fe9d8a35d67c85e1e56cf25d563d32868",
+      "bytes": 7200128
+    },
+    "affine_native": {
+      "file": "affine_native.npy",
+      "dtype": "<f4",
+      "shape": [
+        385
+      ],
+      "data_sha256": "1d59c476c637127ae3631d2152dd9e48c99c157a8988452b2b8607edb03d7209",
+      "file_sha256": "c50bea9ad0cba346f3af8db744439ca6ac3c202100ee0bcb1552104355e3c10c",
+      "bytes": 1668
+    },
+    "dx_last_inner": {
+      "file": "dx_last_inner.npy",
+      "dtype": "<f4",
+      "shape": [
+        12,
+        6
+      ],
+      "data_sha256": "b23c1fffc5bc3ab84fc292768953b77efb909945e3fd0adfbda23a50bc7dca4f",
+      "file_sha256": "62c687863edc30fe2c2914ebc1fbd512e276634ae8ba7c1813a597cb3aa0a402",
+      "bytes": 416
+    },
+    "dz_last_inner": {
+      "file": "dz_last_inner.npy",
+      "dtype": "<f4",
+      "shape": [
+        15,
+        3600
+      ],
+      "data_sha256": "30bef851bf9a14a2d67f37b9535f462dd7f60b7ade44087b6c6cce303d59422e",
+      "file_sha256": "8aa5527cb1d7e9d69684695fb3ffadb9cc4e2b2a396afe8b7d5259ac74824eac",
+      "bytes": 216128
+    },
+    "disps_clamp": {
+      "file": "disps_clamp.npy",
+      "dtype": "<f4",
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "data_sha256": "5a0723e748d0148550960e79d20b3e832b8e07ca65f2699ec549744e09941f40",
+      "file_sha256": "f0f655f5a322c28776ed6f388d57360c4cbf82d137e321d9dcf88a6d79525448",
+      "bytes": 7200128
+    }
+  },
+  "all_immutable_inputs_unchanged": true,
+  "model_constructed": false,
+  "network_forward": false,
+  "peak_allocated_bytes": 2835333632,
+  "peak_reserved_bytes": 2854223872
+}

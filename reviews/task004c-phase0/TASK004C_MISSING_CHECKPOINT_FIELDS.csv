@@ -1,0 +1,33 @@
+﻿arm,field,status,reason
+E0,poses,PARTIAL,All active pose rows are recorded at ba_before; unused buffer bytes/strides and complete restart state are absent.
+E0,intrinsics,KERNEL_K_AVAILABLE,backend_k is recorded exactly as four scalar float values; no complete per-slot input tensor hash.
+E0,ii_jj,AVAILABLE,Ordered edge_slots provides the full native-call ii/jj list.
+E0,t0_t1_and_scalar_parameters,AVAILABLE,"Window, requested iterations, damping and D/W/U flags are present."
+E0,disparities,MISSING_AT_TARGET_TIME,Only target-time subsample summary statistics and full-grid counts exist; final NPZ is a later state.
+E0,target,MISSING_DENSE_TENSOR,Geometry summaries do not preserve full E x 2 x 45 x 80 predicted targets.
+E0,weight,MISSING_DENSE_TENSOR,Raw/effective weight statistics do not preserve full per-edge/pixel values.
+E0,eta,MISSING_DENSE_TENSOR,"eta_sample stores statistics of a decimated tensor, not exact damping data."
+E0,uncertainties,MISSING_AT_TARGET_TIME,Only target-time summary statistics; final uncertainties are after subsequent optimization.
+E0,temp_y_cdot,MISSING,Mutable affine-U intermediate not saved in final video or observer.
+E0,dino_feats_resize,MISSING,No raw feature tensor cache in archived outputs; needed by native U update.
+E0,affine_weights,MISSING,Full learned affine weights at target call are not recorded.
+E0,mono_disps_prior,PARTIAL_REUSE_ONLY,"E0 final cache retains 70/70 target rows; E1 124/125, missing RGB328. Full-resolution cache is not exact target-time lowres checkpoint."
+E0,correlation_context_hidden,MISSING_FOR_FRONTEND_RESTART,Not arguments to a single native BA once target/weight/eta are fixed; necessary to resume/update the full frontend.
+E0,common_initialization,MISSING_COMMON_CHECKPOINT,Two original runs have different initialization poses; cannot be combined into one identical starting state.
+E0,graph_mutation_schedule,PARTIAL,BA boundary edges/window and decisions are recorded; full active/inactive/bad graph/cache mutation state is absent.
+E1,poses,PARTIAL,All active pose rows are recorded at ba_before; unused buffer bytes/strides and complete restart state are absent.
+E1,intrinsics,KERNEL_K_AVAILABLE,backend_k is recorded exactly as four scalar float values; no complete per-slot input tensor hash.
+E1,ii_jj,AVAILABLE,Ordered edge_slots provides the full native-call ii/jj list.
+E1,t0_t1_and_scalar_parameters,AVAILABLE,"Window, requested iterations, damping and D/W/U flags are present."
+E1,disparities,MISSING_AT_TARGET_TIME,Only target-time subsample summary statistics and full-grid counts exist; final NPZ is a later state.
+E1,target,MISSING_DENSE_TENSOR,Geometry summaries do not preserve full E x 2 x 45 x 80 predicted targets.
+E1,weight,MISSING_DENSE_TENSOR,Raw/effective weight statistics do not preserve full per-edge/pixel values.
+E1,eta,MISSING_DENSE_TENSOR,"eta_sample stores statistics of a decimated tensor, not exact damping data."
+E1,uncertainties,MISSING_AT_TARGET_TIME,Only target-time summary statistics; final uncertainties are after subsequent optimization.
+E1,temp_y_cdot,MISSING,Mutable affine-U intermediate not saved in final video or observer.
+E1,dino_feats_resize,MISSING,No raw feature tensor cache in archived outputs; needed by native U update.
+E1,affine_weights,MISSING,Full learned affine weights at target call are not recorded.
+E1,mono_disps_prior,PARTIAL_REUSE_ONLY,"E0 final cache retains 70/70 target rows; E1 124/125, missing RGB328. Full-resolution cache is not exact target-time lowres checkpoint."
+E1,correlation_context_hidden,MISSING_FOR_FRONTEND_RESTART,Not arguments to a single native BA once target/weight/eta are fixed; necessary to resume/update the full frontend.
+E1,common_initialization,MISSING_COMMON_CHECKPOINT,Two original runs have different initialization poses; cannot be combined into one identical starting state.
+E1,graph_mutation_schedule,PARTIAL,BA boundary edges/window and decisions are recorded; full active/inactive/bad graph/cache mutation state is absent.

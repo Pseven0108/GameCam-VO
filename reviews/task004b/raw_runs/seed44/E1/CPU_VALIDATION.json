@@ -1,0 +1,86 @@
+{
+  "utc": "2026-11-23T13:29:27.589597+00:00",
+  "trace": {
+    "sha256": "8a9699e3f9ceb63c51012fa0e7e5cba017895f518dadf62101652394654776bd",
+    "bytes": 74666824,
+    "pid_event_counts": {
+      "4918": 5803
+    },
+    "events": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1322,
+      "ba_after_native": 1322,
+      "ba_after_clamp": 1322,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "calls": 1322,
+    "calls_by_stage": {
+      "frontend_init_neighborhood": 8,
+      "frontend_init_proximity": 8,
+      "frontend_init_second": 8,
+      "frontend_local_predecision": 609,
+      "frontend_local_retained": 298,
+      "final_ba_phase_1": 7,
+      "final_ba_phase_2": 12,
+      "filler_pose_only": 372
+    },
+    "local_returned": 907,
+    "local_returned_rejected": 162,
+    "local_joint_snapshot_calls": 3,
+    "local_both_in_pose_window": 3,
+    "local_both_in_pose_window_and_observed": 3,
+    "unfinished": [],
+    "keyframe_decisions": 487,
+    "filler_batch_output_frames": 487,
+    "export_event": 5802
+  },
+  "gt_sha256": "91fb149c066bb488ac6071602a4b50fe1540243f2db3369a3706f63b705d7008",
+  "trajectory_sha256": "024d9dc6dd51a94fb650cc2ca96fb43a09ae7df552dad55ff26e6d1cffc9bb4f",
+  "policy_sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640",
+  "source_attempt": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\results\\seed44\\E1\\attempt_001_4e95393624b0",
+  "seed_receipts": {
+    "main": {
+      "scope": "main",
+      "pid": 4790,
+      "configured_seed": 44,
+      "torch_initial_seed": 44,
+      "python_state_sha256": "63d97fad78bb5929a08c87dfbf96966aef000554695c2330482a698d8dbbfb64",
+      "numpy_state_sha256": "11cb952f8b8d36344946bf8907abc7edfc7ed74f9516f70f66b1ae4f55f359a8",
+      "torch_cpu_state_sha256": "b2f36a18038683e72466b1567b29e951c85c1e7f9e2a9ea57d0cf3e2b9642867",
+      "cuda_initialized": false,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "extra_rng_draws": 0,
+      "seeding_scope": "NATIVE_MAIN_SETUP_ONLY_SPAWN_CHILD_NOT_EXTRA_RESEEDED"
+    },
+    "tracking_spawn_entry": {
+      "scope": "tracking_spawn_entry",
+      "pid": 4918,
+      "configured_seed": 44,
+      "torch_initial_seed": 14984029196345905174,
+      "python_state_sha256": "1b3f5fa49382e747505845c232f1e62a20cbf067fd5321f2789f46d0d5d0af98",
+      "numpy_state_sha256": "f1d943f8ab2e83c999500ae9ea9b598d03ef1bf2e38234e7442945f07e18b9bd",
+      "torch_cpu_state_sha256": "8ad8d1bdabf5efc1a4999d44ae22d1ec51fdaaf63b12e7a706ec7b02ff1622dd",
+      "cuda_initialized": true,
+      "cudnn_deterministic": false,
+      "cudnn_benchmark": false,
+      "extra_rng_draws": 0,
+      "seeding_scope": "NATIVE_MAIN_SETUP_ONLY_SPAWN_CHILD_NOT_EXTRA_RESEEDED",
+      "cuda_state_sha256": [
+        "818abdd253264e13fa965cc918edc0dca569c932a4c95380eed78b47ab0e77ae"
+      ]
+    }
+  },
+  "original_math_module_sha256": "63d809f55e363451d4a9c0b961ba8476767ac749152fed235f6cb49b47f3fb6f",
+  "archive_proof": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\evidence\\LOCAL_ARCHIVE_seed44_E1.json",
+  "torch_imported": false
+}

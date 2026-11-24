@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-23T15:07:35.660715+00:00",
+  "checks": [
+    {
+      "check": "E0_archive_identity",
+      "passed": true
+    },
+    {
+      "check": "E0_member_crc_and_sha",
+      "passed": true,
+      "payloads": 26
+    },
+    {
+      "check": "E0_487_decisions",
+      "passed": true
+    },
+    {
+      "check": "E0_three_target_BA_triplets",
+      "passed": true
+    },
+    {
+      "check": "E1_archive_identity",
+      "passed": true
+    },
+    {
+      "check": "E1_member_crc_and_sha",
+      "passed": true,
+      "payloads": 26
+    },
+    {
+      "check": "E1_487_decisions",
+      "passed": true
+    },
+    {
+      "check": "E1_three_target_BA_triplets",
+      "passed": true
+    }
+  ],
+  "all_checks_pass": true,
+  "elapsed_seconds": 9.329144700001052,
+  "parser_note": "type is event category; event is ordinal, not category. Supersedes initial exploratory grouping."
+}

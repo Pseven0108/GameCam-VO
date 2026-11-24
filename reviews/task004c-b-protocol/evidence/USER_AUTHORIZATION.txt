@@ -1,0 +1,534 @@
+批准后，这一阶段正式进入 **Task004C-B-PROTOCOL：共同初始化与关键帧调度协议设计**。
+
+这一步的核心不是马上跑四组实验，而是先解决一个科学问题：
+
+**如何保证四组实验从完全相同的初始状态出发，并且只改变我们想研究的因素？**
+
+我建议采用下面的方案。
+
+# **一、先确定实验设计**
+
+之前 E0 和 E1 虽然使用相同视频，但初始化位姿已经有细微差异，RGB21 开始出现关键帧决策分歧。
+
+因此，这次不能再分别初始化两次。
+
+必须只生成一份共同初始化快照 C0，然后复制给四个实验分支。
+
+## **共同初始化 C0**
+
+**VIPER Night val_007**
+
+完成共同初始化，预期在 RGB018 后建立检查点
+
+**保存唯一初始化快照 C0**
+
+位姿、视差、网络状态、图结构、缓存、随机状态全部保存
+
+**自然调度 S1**
+
+D=1
+
+记录原生关键帧决策。
+
+**自然调度 S0**
+
+D=0
+
+记录原生关键帧决策。
+
+两条分支都从 C0 的独立副本启动，W=1、U=1。
+
+这里有一个重要细节：RGB018 是根据历史记录确定的候选检查点。Codex 必须检查源码，确认它确实位于初始化结束、RGB019 主循环开始之前。如果 D 在初始化阶段已经参与优化，则需要明确采用共同的 D=0 初始化，并将研究范围限定为初始化之后的 D 效应。
+
+# **二、四组交叉实验怎么安排？**
+
+我们可以把产生 S1、S0 的两次自然运行直接作为四组实验中的两组。
+
+这样不用额外跑六次完整实验，只需要四次。
+
+| 实验 | D | 关键帧调度 | 作用         |
+| -- | - | ----- | ---------- |
+| B1 | 1 | S1    | 自然基准       |
+| B2 | 0 | S1    | 固定 S1，切换 D |
+| B3 | 1 | S0    | 固定 S0，切换 D |
+| B4 | 0 | S0    | 自然基准       |
+
+这样可以回答：
+
+- B1 对 B2：在相同关键帧调度下，D 是否仍然影响结果？
+- B3 对 B4：换一套关键帧调度，D 的影响是否仍然存在？
+- B1 对 B3：D 开启时，关键帧调度变化有什么影响？
+- B2 对 B4：D 关闭时，关键帧调度变化有什么影响？
+
+这就是我们需要的交叉实验。
+
+# **三、必须保存哪些数据？**
+
+这是本阶段最重要的技术要求。
+
+**共同初始化快照不能只有摄像机位置和关键帧 ID。**
+
+必须尽可能完整地保存：
+
+| 数据类别 | 必须保存的内容                            |
+| ---- | ---------------------------------- |
+| 相机状态 | poses、intrinsics                   |
+| 深度状态 | disparities、mono_disps             |
+| 网络状态 | context、hidden state               |
+| 图像特征 | DINO features、correlation features |
+| 不确定性 | U、UBA weights                      |
+| 优化变量 | target、weight、eta、affine weights   |
+| 图结构  | source/target indices、edge状态       |
+| 关键帧  | ID、插入顺序、活动窗口                       |
+| 运行状态 | frame index、buffer slot、计数器        |
+| 随机状态 | Python、NumPy、PyTorch、CUDA RNG      |
+| 环境信息 | 源码、权重、配置、CUDA版本及哈希                 |
+
+还要保存每个张量的 shape、dtype、stride 和 SHA256。
+
+如果有任何关键变量无法恢复，不能把快照标记为完整。
+
+# **四、关键帧调度必须怎样记录？**
+
+不能只记录最终保留了多少帧。
+
+例如：
+
+- S1 最终保留112个关键帧；
+- S0 最终保留160个关键帧。
+
+这还不够。
+
+我们需要记录每一帧发生了什么：
+
+1. 是否通过 Motion Filter。
+2. 是否进入候选 BA。
+3. BA 是否接受。
+4. 是否成为关键帧。
+5. 是否删除旧关键帧。
+6. 新增了哪些图优化边。
+7. 删除了哪些图优化边。
+8. BA 调用了几次。
+9. 每次 BA 使用了哪些 source/target。
+10. 当时的图结构和活动窗口是什么。
+
+在交叉实验中，固定的是关键帧事件流、图结构拓扑和 BA 调度；图像残差、位姿、视差及动态计算出的权重仍然由各自分支正常更新。
+
+否则就不是我们要研究的实验了。
+
+# **五、现在交给 Codex 的正式任务书**
+
+本轮只批准协议设计、源码只读审计和可行性评估，不批准实际四组 GPU 运行。
+
+# GAMECAM-VO TASK004C-B-PROTOCOL
+
+# COMMON INITIALIZATION & KEYFRAME SCHEDULE DESIGN
+
+## 1. 用户授权范围
+
+用户批准：
+
+- 共同初始化协议设计。
+- 完整前端状态快照设计。
+- 自然关键帧调度记录协议设计。
+- 四组固定关键帧交叉实验协议设计。
+- 源码只读审计。
+- 资源预算和执行可行性分析。
+
+明确禁止：
+
+- 修改DROID-W算法。
+- 修改BA数学公式。
+- 修改原始R2配置。
+- 重新运行原生DROID-SLAM。
+- 启动四组正式GPU交叉实验。
+- 自动进行完整487帧采集。
+- 删除任何历史实验数据。
+
+当前RTX 3090实例保持在线，不释放、不重启、不切换无卡模式。
+
+本阶段不需要初始化CUDA或占用GPU计算资源。
+
+## 2. Existing Evidence
+
+研究对象：
+
+VIPER Validation Night val_007。
+
+- RGB 001–487
+- 640×360
+- stride=1
+- DROID-W commit: c3414af6047d06bafc1a6645d09f23247f3b2cdc
+
+历史实验发现：
+
+- E0和E1初始化关键帧身份相同。
+- 初始化pose最大分量差约0.002861。
+- 最大平移行差约0.002947。
+- RGB021开始出现关键帧接受/拒绝分歧。
+- 历史日志缺少完整图结构和部分缓存状态。
+
+因此，历史E0/E1不能直接作为严格共同初始化交叉实验。
+
+## 3. PHASE A: SOURCE AUDIT
+
+只读检查：
+
+1. DROID-W初始化函数及完整调用顺序。
+2. 初始化结束的精确代码位置。
+3. 第一帧main-loop调用的位置。
+4. D开关首次实际参与计算的位置。
+5. Motion Filter决策位置。
+6. Local BA调用位置。
+7. Keyframe insert/remove位置。
+8. Graph edge insert/remove位置。
+9. Final BA和Filler位置。
+10. 所有相关缓存和运行时状态的生命周期。
+
+RGB018是候选checkpoint位置，不得只凭日志认定。
+
+必须确认共同初始化快照位于：
+
+- 初始化完整结束之后。
+- 第一次分叉关键帧决策之前。
+- 第一项待研究的D效应之前。
+
+如果D已经影响初始化，设计共同D=0初始化，然后在初始化完成后分叉D=1和D=0。
+
+明确报告这种设计仅研究初始化后的D效应。
+
+输出：
+
+TASK004C_B_PROTOCOL_SOURCE_AUDIT.md
+
+## 4. PHASE B: COMMON CHECKPOINT SCHEMA
+
+设计唯一初始化快照C0。
+
+至少包含：
+
+### Camera state
+
+- poses
+- intrinsics
+- frame index
+- buffer slot mapping
+
+### Depth state
+
+- disparities
+- mono_disps
+- depth prior cache
+
+### Neural network state
+
+- context
+- hidden state
+- correlation features
+- DINO features
+- relevant recurrent states
+
+### Optimization state
+
+- target
+- weight
+- eta
+- affine_weights
+- U
+- UBA weights
+- solver configuration
+
+### Graph state
+
+- ii
+- jj
+- edge IDs
+- edge age
+- bad/inactive edge state
+- graph topology
+- active window
+
+### Keyframe state
+
+- accepted IDs
+- insertion order
+- eviction state
+- Motion Filter state
+
+### Reproducibility state
+
+- Python RNG
+- NumPy RNG
+- PyTorch CPU RNG
+- CUDA RNG
+- deterministic flags
+- model weights SHA256
+- source SHA256
+- YAML SHA256
+- runtime environment
+
+每个tensor必须保存：
+
+- name
+- dtype
+- shape
+- stride
+- layout
+- device
+- contiguous status
+- SHA256
+
+设计原子保存、恢复校验和失败回滚机制。
+
+不得仅依赖observer日志恢复完整状态。
+
+输出：
+
+TASK004C_B_COMMON_CHECKPOINT_SCHEMA.md
+
+TASK004C_B_COMMON_CHECKPOINT_MANIFEST.json
+
+## 5. PHASE C: NATURAL SCHEDULE RECORDING
+
+从同一C0的两个独立副本生成：
+
+S1:
+
+- D=1
+- W=1
+- U=1
+
+S0:
+
+- D=0
+- W=1
+- U=1
+
+记录完整自然调度。
+
+Schedule manifest必须包含：
+
+- RGB frame ID
+- Motion Filter decision
+- BA candidate decision
+- accept/reject result
+- rejection reason
+- keyframe insertion
+- keyframe removal
+- active keyframe IDs
+- graph edge insertion/removal
+- source/target indices
+- edge type and age
+- BA invocation order
+- BA window
+- iteration count
+- graph topology hash
+
+不能只保存最终keyframe IDs。
+
+不能仅根据历史E0/E1日志补造缺失的调度信息。
+
+输出：
+
+TASK004C_B_S1_SCHEDULE_SCHEMA.json
+
+TASK004C_B_S0_SCHEDULE_SCHEMA.json
+
+TASK004C_B_SCHEDULE_RECORDING_PROTOCOL.md
+
+## 6. PHASE D: CROSSOVER MATRIX
+
+正式实验采用：
+
+B1: D=1, S1\
+B2: D=0, S1\
+B3: D=1, S0\
+B4: D=0, S0
+
+W=1,U=1。
+
+四组全部从同一个C0独立恢复。
+
+自然调度生成的两次运行同时作为：
+
+B1和B4。
+
+交叉回放只需要额外两次：
+
+B2和B3。
+
+因此目标为四次完整运行，而不是六次。
+
+同一Schedule下：
+
+- keyframe accept/reject事件必须一致。
+- keyframe IDs和插入顺序必须一致。
+- graph topology必须一致。
+- edge insert/remove必须一致。
+- BA调用顺序必须一致。
+- BA window必须一致。
+- iteration count必须一致。
+
+允许各分支重新计算自己的图像匹配残差、位姿、视差和动态权重。
+
+不允许强制冻结动态优化结果。
+
+## 7. PHASE E: REPLAY VALIDATION
+
+设计以下验证：
+
+1. C0恢复后逐tensor哈希核对。
+2. 同一C0独立恢复两次，检查状态一致性。
+3. 相同D、相同Schedule的重复运行检查数值可重复性。
+4. 不同D但相同Schedule，检查事件流一致性。
+5. 检查所有source/target引用有效。
+6. 检查所有被强制调度的keyframe在对应时刻可用。
+7. 检查图结构哈希。
+8. 检查是否存在未记录的自动边插入或删除。
+9. 检查CUDA非确定性操作。
+
+如果CUDA无法保证完全确定性，定义可接受的数值容差并报告。
+
+## 8. ANALYSIS PLAN
+
+主要比较：
+
+Direct D effect:
+
+- B1 vs B2
+- B3 vs B4
+
+Schedule effect:
+
+- B1 vs B3
+- B2 vs B4
+
+Interaction:
+
+- D × Schedule
+
+指标：
+
+- fixed-scale displacement ratio
+- translation direction error
+- rotation error
+- translation RPE
+- rotation RPE
+- Sim3 ATE
+- SE3 ATE
+- local BA residual
+- final BA residual
+- keyframe count
+- graph edge count
+- local BA reject count
+- Filler contribution
+
+保存Local BA、Final BA、Filler三个阶段的独立结果。
+
+不得将Sim3 ATE和绝对尺度误差混为一谈。
+
+不得把受控调度效应直接称为自然因果中介效应。
+
+## 9. RESOURCE ESTIMATION
+
+在不启动GPU实验的前提下，估算：
+
+- C0 checkpoint大小。
+- S1/S0 schedule文件大小。
+- 四组运行输出空间。
+- GPU显存峰值。
+- 预计运行时间。
+- 临时缓存需求。
+- 当前数据盘安全余量。
+
+当前数据盘可用空间约13.3 GiB，实际执行前重新核验。
+
+至少保留10 GiB安全空间，除非用户另行批准。
+
+## 10. DELIVERABLES
+
+提交：
+
+TASK004C_B_PROTOCOL_SOURCE_AUDIT.md
+
+TASK004C_B_COMMON_CHECKPOINT_SCHEMA.md
+
+TASK004C_B_COMMON_CHECKPOINT_MANIFEST.json
+
+TASK004C_B_SCHEDULE_RECORDING_PROTOCOL.md
+
+TASK004C_B_S1_SCHEDULE_SCHEMA.json
+
+TASK004C_B_S0_SCHEDULE_SCHEMA.json
+
+TASK004C_B_CROSSOVER_MATRIX.md
+
+TASK004C_B_REPLAY_VALIDATION.md
+
+TASK004C_B_RESOURCE_ESTIMATE.md
+
+TASK004C_B_PROTOCOL_FINAL_REVIEW\.md
+
+最终报告明确回答：
+
+1. 是否能够建立真正共同初始化C0？
+2. D是否在初始化阶段已经参与？
+3. 是否能够完整恢复所有运行时状态？
+4. 能否完整记录S1/S0？
+5. 能否在另一D分支中强制重放调度？
+6. 是否存在图结构不兼容？
+7. 四组实验需要多少GPU时间和磁盘？
+8. 正式实验是否具备执行条件？
+
+## 11. STOP CONDITIONS
+
+出现以下任意情况立即停止：
+
+- 无法确认共同初始化边界。
+- 存在无法恢复的关键状态。
+- 随机状态不完整。
+- Schedule记录不完整。
+- 图结构无法重放。
+- 强制调度会改变BA数学行为。
+- 磁盘安全空间不足。
+- 需要修改算法才能实现协议。
+
+不得擅自修改算法或启动正式交叉实验。
+
+## 12. FINAL AUTHORIZATION BOUNDARY
+
+本阶段只完成协议设计和只读审计。
+
+正式B1/B2/B3/B4运行必须等待用户再次批准。
+
+不运行原生DROID-SLAM。
+
+不启动Task004D。
+
+END OF TASK004C-B-PROTOCOL
+
+# **六、这一阶段的验收标准**
+
+Codex 返回后，我会重点审核五件事：
+
+| 验收项目  | 通过条件              |
+| ----- | ----------------- |
+| 共同初始化 | 四组真正使用同一份 C0      |
+| 状态完整性 | 关键张量全部能够保存和恢复     |
+| 调度完整性 | S1、S0 包含完整事件流和图结构 |
+| 交叉兼容性 | 两套调度都能在两个 D 分支中重放 |
+| 资源可行性 | GPU时间、磁盘和显存有明确预算  |
+
+**当前执行状态**
+
+已批准协议设计
+
+- RTX 3090：保持在线。
+- 原始 DROID-W：不修改。
+- 原生 DROID-SLAM：不重复运行。
+- GPU正式实验：暂不启动。
+- Task004C-B：等待协议审查。
+
+**我希望这一步完成后，我们不再依靠两次独立运行的日志去猜测关键帧变化，而是拥有一套真正可以复现、可以交叉控制的实验协议。**
+
+这会直接决定后续论文的机制解释是否站得住脚。

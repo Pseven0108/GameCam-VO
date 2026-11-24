@@ -1,0 +1,196 @@
+{
+  "torch": "2.1.0+cu118",
+  "results": [
+    {
+      "strategy": "file_descriptor",
+      "transport": "raw_tensor",
+      "before": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b5d830000-7f6b5e830000 rw-s 00000000 fd:6a 4989000                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_tensor.bin",
+        "value2": 5.0,
+        "pid": 780,
+        "shm_used": 0,
+        "cuda_initialized": false
+      },
+      "parent_after": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b5d830000-7f6b5e830000 rw-s 00000000 fd:6a 4989000                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_tensor.bin",
+        "value2": 5.0,
+        "pid": 780,
+        "shm_used": 0,
+        "cuda_initialized": false
+      },
+      "child_exit_code": null,
+      "start_error": "OSError(9, 'Bad file descriptor')",
+      "file_backing_preserved": false
+    },
+    {
+      "strategy": "file_system",
+      "transport": "raw_tensor",
+      "before": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b5c02f000-7f6b5d02f000 rw-s 00000000 fd:6a 4989001                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_system_tensor.bin",
+        "value2": 5.0,
+        "pid": 780,
+        "shm_used": 0,
+        "cuda_initialized": false
+      },
+      "parent_after": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b56fff000-7f6b58000000 rw-s 00000000 00:18d 243                       /dev/shm/torch_780_2427319383_0",
+        "value2": 77.0,
+        "pid": 780,
+        "shm_used": 16781312,
+        "cuda_initialized": false
+      },
+      "child": {
+        "before": {
+          "dtype": "torch.float32",
+          "shape": [
+            4194304
+          ],
+          "stride": [
+            1
+          ],
+          "offset": 0,
+          "is_shared": true,
+          "mapping": "7f4c6052f000-7f4c61530000 rw-s 00000000 00:18d 243                       /dev/shm/torch_780_2427319383_0",
+          "value2": 5.0,
+          "pid": 785,
+          "shm_used": 16781312,
+          "cuda_initialized": false
+        },
+        "after": {
+          "dtype": "torch.float32",
+          "shape": [
+            4194304
+          ],
+          "stride": [
+            1
+          ],
+          "offset": 0,
+          "is_shared": true,
+          "mapping": "7f4c6052f000-7f4c61530000 rw-s 00000000 00:18d 243                       /dev/shm/torch_780_2427319383_0",
+          "value2": 77.0,
+          "pid": 785,
+          "shm_used": 16781312,
+          "cuda_initialized": false
+        },
+        "exit_code": 0
+      },
+      "child_exit_code": 0,
+      "fresh_file_value2": 5.0,
+      "seconds": 3.690410614013672,
+      "file_backing_preserved": false
+    },
+    {
+      "strategy": "file_descriptor",
+      "transport": "path_descriptor",
+      "before": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b5c02f000-7f6b5d02f000 rw-s 00000000 fd:6a 4989002                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_descriptor.bin",
+        "value2": 5.0,
+        "pid": 780,
+        "shm_used": 0,
+        "cuda_initialized": false
+      },
+      "parent_after": {
+        "dtype": "torch.float32",
+        "shape": [
+          4194304
+        ],
+        "stride": [
+          1
+        ],
+        "offset": 0,
+        "is_shared": true,
+        "mapping": "7f6b5c02f000-7f6b5d02f000 rw-s 00000000 fd:6a 4989002                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_descriptor.bin",
+        "value2": 77.0,
+        "pid": 780,
+        "shm_used": 0,
+        "cuda_initialized": false
+      },
+      "child": {
+        "before": {
+          "dtype": "torch.float32",
+          "shape": [
+            4194304
+          ],
+          "stride": [
+            1
+          ],
+          "offset": 0,
+          "is_shared": true,
+          "mapping": "7fd8b8d30000-7fd8b9d30000 rw-s 00000000 fd:6a 4989002                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_descriptor.bin",
+          "value2": 5.0,
+          "pid": 787,
+          "shm_used": 0,
+          "cuda_initialized": false
+        },
+        "after": {
+          "dtype": "torch.float32",
+          "shape": [
+            4194304
+          ],
+          "stride": [
+            1
+          ],
+          "offset": 0,
+          "is_shared": true,
+          "mapping": "7fd8b8d30000-7fd8b9d30000 rw-s 00000000 fd:6a 4989002                    /root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1/artifacts/API_SHARING_PROBE_v2/file_descriptor_descriptor.bin",
+          "value2": 77.0,
+          "pid": 787,
+          "shm_used": 0,
+          "cuda_initialized": false
+        },
+        "exit_code": 0
+      },
+      "child_exit_code": 0,
+      "fresh_file_value2": 77.0,
+      "seconds": 3.206759214401245,
+      "file_backing_preserved": true
+    }
+  ],
+  "cuda_initialized": false,
+  "installed_reducer_source_sha256": "845a456f582af081b0cf544da4db354025936a9825f3ce9276beb370dffe27dc"
+}

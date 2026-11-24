@@ -1,0 +1,1004 @@
+﻿module,role,original_path,droid_w_path,symbol,status,original_lines,droid_w_lines,original_signature,droid_w_signature,parameter_change
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/evaluate_droidw.py,align_traj,ADDED,,20-106,,"ref_traj_path, est_traj_path, plot_name='traj_error', plot_parent_dir='plots'",True
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/evaluate_droidw.py,main,ADDED,,108-144,,base_dir: str,True
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/summarize_rmse.py,extract_rmse_from_line,ADDED,,41-48,,line: str,True
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/summarize_rmse.py,find_metrics_files,ADDED,,51-53,,base_dir: str,True
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/summarize_rmse.py,main,ADDED,,70-258,,,False
+DATA_TRAIN_EVAL,not_relevant,,scripts_eval/summarize_rmse.py,read_ninth_line,ADDED,,56-67,,filepath: str,True
+CONFIG,core,,src/config.py,load_config,ADDED,,18-49,,"path, default_path=None",True
+CONFIG,core,,src/config.py,save_config,ADDED,,51-53,,"cfg, path",True
+CONFIG,core,,src/config.py,update_recursive,ADDED,,56-72,,"dict1, dict2",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase,ADDED,,35-61,,,False
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.__init__,ADDED,,36-37,,self,True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.draw,ADDED,,57-58,,self,True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.set_render_mod,ADDED,,48-49,,"self, mod: int",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.set_render_reso,ADDED,,60-61,,"self, w, h",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.set_scale_modifier,ADDED,,45-46,,"self, modifier: float",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.sort_and_update,ADDED,,42-43,,self,True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.update_camera_intrin,ADDED,,54-55,,"self, camera: util.Camera",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.update_camera_pose,ADDED,,51-52,,"self, camera: util.Camera",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,GaussianRenderBase.update_gaussian_data,ADDED,,39-40,,"self, gaus: util_gau.GaussianData",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer,ADDED,,64-137,,GaussianRenderBase,True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.__init__,ADDED,,65-90,,"self, w, h",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.draw,ADDED,,127-137,,self,True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.set_render_mod,ADDED,,111-112,,"self, mod: int",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.set_render_reso,ADDED,,114-115,,"self, w, h",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.set_scale_modifier,ADDED,,108-109,,"self, modifier",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.sort_and_update,ADDED,,102-106,,"self, camera: util.Camera",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.update_camera_intrin,ADDED,,122-125,,"self, camera: util.Camera",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.update_camera_pose,ADDED,,117-120,,"self, camera: util.Camera",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,OpenGLRenderer.update_gaussian_data,ADDED,,92-100,,"self, gaus: util_gau.GaussianData",True
+VIEWER,engineering,,src/gui/gl_render/render_ogl.py,_sort_gaussian_torch,ADDED,,13-25,,"gaus, view_mat",True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera,ADDED,,7-82,,,False
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.__init__,ADDED,,8-36,,"self, h, w",True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera._global_rot_mat,ADDED,,38-43,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.flip_ground,ADDED,,70-72,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.get_focal,ADDED,,67-68,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.get_htanfovxy_focal,ADDED,,61-65,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.get_project_matrix,ADDED,,49-59,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.get_view_matrix,ADDED,,45-47,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.update_resolution,ADDED,,79-82,,"self, height, width",True
+VIEWER,engineering,,src/gui/gl_render/util.py,Camera.update_target_distance,ADDED,,74-77,,self,True
+VIEWER,engineering,,src/gui/gl_render/util.py,compile_shaders,ADDED,,96-101,,"vertex_shader, fragment_shader",True
+VIEWER,engineering,,src/gui/gl_render/util.py,load_shaders,ADDED,,85-93,,"vs, fs",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_attribute,ADDED,,127-142,,"program, key, value, vao=None, buffer_id=None",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_attribute_instanced,ADDED,,145-163,,"program, key, value, instance_stride=1, vao=None, buffer_id=None",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_attributes,ADDED,,104-124,,"program, keys, values, vao=None, buffer_ids=None",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_faces_tovao,ADDED,,184-190,,"vao, faces: np.ndarray",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_gl_bindings,ADDED,,193-207,,"vertices, faces",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_storage_buffer_data,ADDED,,166-181,,"program, key, value: np.ndarray, bind_idx, vao=None, buffer_id=None",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_texture2d,ADDED,,256-269,,"img, texid=None",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_1f,ADDED,,221-226,,"shader, content, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_1int,ADDED,,229-231,,"shader, content, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_mat4,ADDED,,210-218,,"shader, content, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_v1f,ADDED,,246-248,,"shader, contents, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_v2,ADDED,,251-253,,"shader, contents, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_v3,ADDED,,239-243,,"shader, contents, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,set_uniform_v3f,ADDED,,234-236,,"shader, contents, name",True
+VIEWER,engineering,,src/gui/gl_render/util.py,update_texture2d,ADDED,,272-276,,"img, texid, offset",True
+VIEWER,engineering,,src/gui/gl_render/util_gau.py,GaussianData,ADDED,,7-25,,,False
+VIEWER,engineering,,src/gui/gl_render/util_gau.py,GaussianData.__len__,ADDED,,20-21,,self,True
+VIEWER,engineering,,src/gui/gl_render/util_gau.py,GaussianData.flat,ADDED,,14-18,,self,True
+VIEWER,engineering,,src/gui/gl_render/util_gau.py,GaussianData.sh_dim,ADDED,,24-25,,self,True
+VIEWER,engineering,,src/gui/gui_utils.py,Frustum,ADDED,,24-57,,,False
+VIEWER,engineering,,src/gui/gui_utils.py,Frustum.__init__,ADDED,,25-29,,"self, line_set, view_dir=None, view_dir_behind=None, size=None",True
+VIEWER,engineering,,src/gui/gui_utils.py,Frustum.update_pose,ADDED,,31-57,,"self, pose",True
+VIEWER,engineering,,src/gui/gui_utils.py,GaussianPacket,ADDED,,86-156,,,False
+VIEWER,engineering,,src/gui/gui_utils.py,GaussianPacket.__init__,ADDED,,87-128,,"self, gaussians=None, keyframe=None, current_frame=None, gtcolor=None, gtdepth=None, uncertainty=None, keyframes=None, finish=False, kf_window=None, keyframe_colors=None, full_traj=None, full_traj_gt=None",True
+VIEWER,engineering,,src/gui/gui_utils.py,GaussianPacket.build_covariance_from_scaling_rotation,ADDED,,150-156,,"self, scaling, scaling_modifier, rotation",True
+VIEWER,engineering,,src/gui/gui_utils.py,GaussianPacket.get_covariance,ADDED,,145-148,,"self, scaling_modifier=1",True
+VIEWER,engineering,,src/gui/gui_utils.py,GaussianPacket.resize_img,ADDED,,130-143,,"self, img, width",True
+VIEWER,engineering,,src/gui/gui_utils.py,Packet_vis2main,ADDED,,173-174,,,False
+VIEWER,engineering,,src/gui/gui_utils.py,ParamsGUI,ADDED,,177-190,,,False
+VIEWER,engineering,,src/gui/gui_utils.py,ParamsGUI.__init__,ADDED,,178-190,,"self, pipe=None, background=None, gaussians=None, q_main2vis=None, q_vis2main=None",True
+VIEWER,engineering,,src/gui/gui_utils.py,create_frustum,ADDED,,60-83,,"pose, frusutum_color=[0, 1, 0], size=0.02",True
+VIEWER,engineering,,src/gui/gui_utils.py,get_latest_queue,ADDED,,159-170,,q,True
+VIEWER,engineering,,src/gui/slam_gui.py,Log,ADDED,,51-53,,"*args, tag='MonoGS'",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI,ADDED,,58-772,,,False
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.__init__,ADDED,,59-101,,"self, params_gui=None",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_axis_chbox,ADDED,,334-340,,"self, is_checked",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_button,ADDED,,369-372,,"self, is_on",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_cameras_chbox,ADDED,,329-332,,"self, is_checked, name=None",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_close,ADDED,,315-317,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_combo_kf,ADDED,,323-327,,"self, new_val, new_idx",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_combo_model,ADDED,,319-321,,"self, new_val, new_idx",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_kf_window_chbox,ADDED,,342-367,,"self, is_checked",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_layout,ADDED,,299-313,,"self, layout_context",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_render_btn,ADDED,,378-381,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_screenshot_btn,ADDED,,383-399,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._on_slider,ADDED,,374-376,,"self, value",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._update_thread,ADDED,,756-772,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI._update_thread.update,ADDED,,765-770,,,False
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.add_camera,ADDED,,279-297,,"self, camera, name, color=[0, 1, 0], gt=False, size=0.2",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.add_ids,ADDED,,406-415,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.depth_to_normal,ADDED,,552-592,,"points, k=3, d_min=0.001, d_max=10.0",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.get_current_cam,ADDED,,601-629,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.init_glfw,ADDED,,252-268,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.init_widget,ADDED,,103-250,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.rasterise,ADDED,,631-662,,"self, current_cam",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.receive_data,ADDED,,417-549,,"self, q",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.render_gui,ADDED,,742-750,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.render_o3d_image,ADDED,,664-740,,"self, results, current_cam",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.resize_img,ADDED,,402-404,,"img, width",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.scene_update,ADDED,,752-754,,self,True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.update_activated_renderer_state,ADDED,,270-277,,"self, gaus",True
+VIEWER,engineering,,src/gui/slam_gui.py,SLAM_GUI.vfov_to_hfov,ADDED,,595-599,,"vfov_deg, height, width",True
+VIEWER,engineering,,src/gui/slam_gui.py,get_style,ADDED,,46-49,,tag,True
+VIEWER,engineering,,src/gui/slam_gui.py,main,ADDED,,782-786,,,False
+VIEWER,engineering,,src/gui/slam_gui.py,run,ADDED,,775-779,,params_gui=None,True
+MAPPING,not_relevant,,src/mapper.py,Mapper,ADDED,,52-1547,,object,True
+MAPPING,not_relevant,,src/mapper.py,Mapper.__init__,ADDED,,58-136,,"self, slam, pipe: Connection, q_main2vis: Optional[mp.Queue]=None, q_vis2main: Optional[mp.Queue]=None",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._add_to_window,ADDED,,712-770,,"self, cur_frame_idx, cur_frame_visibility_filter, occ_aware_visibility, window",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._get_uncertainty_ssim_loss_vis,ADDED,,1250-1296,,"self, gt_image: torch.Tensor, rendered_img: torch.Tensor, opacity: torch.Tensor",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._get_video_uncertainty_mask,ADDED,,689-710,,"self, kf_idx: int, target_shape: tuple",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._get_viewpoint,ADDED,,346-404,,"self, video_idx: int, frame_idx: int",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._map_frame,ADDED,,206-311,,"self, frame_info",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._send_to_gui,ADDED,,772-793,,"self, video_idx",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._set_hyperparams,ADDED,,317-344,,self,True
+MAPPING,not_relevant,,src/mapper.py,Mapper._update_keyframes_from_frontend,ADDED,,406-470,,self,True
+MAPPING,not_relevant,,src/mapper.py,Mapper._update_mapping_points,ADDED,,472-599,,"self, frame_idx, w2c, w2c_old, depth, depth_old, method=None",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._update_occ_aware_visibility,ADDED,,601-613,,"self, current_window",True
+MAPPING,not_relevant,,src/mapper.py,Mapper._vis_uncertainty_mask_all,ADDED,,1477-1547,,"self, n_rows=8, n_cols=8, is_final=False",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.final_refine,ADDED,,1146-1243,,"self, iters=26000",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.get_viewpoint_uncertainty_no_grad,ADDED,,1299-1307,,"self, viewpoint: Camera",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.get_w2c_and_depth,ADDED,,615-687,,"self, video_idx, idx, mono_depth, print_info=False",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.initialize_map_opt,ADDED,,894-1000,,self,True
+MAPPING,not_relevant,,src/mapper.py,Mapper.initialize_mapper,ADDED,,796-889,,"self, cur_video_idx",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.map_opt_online,ADDED,,1002-1144,,"self, current_window, iters=1",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.run,ADDED,,138-204,,self,True
+MAPPING,not_relevant,,src/mapper.py,Mapper.save_all_kf_figs,ADDED,,1448-1474,,"self, save_dir: str, iteration: Union[str, float]='after_refine'",True
+MAPPING,not_relevant,,src/mapper.py,Mapper.save_fig_everything,ADDED,,1310-1446,,"self, keyframe_idx: int, plot_dir: str, suffix: str='', depth_max: float=10.0",True
+TRACKER,core,,src/tracker.py,Tracker,ADDED,,15-144,,,False
+TRACKER,core,,src/tracker.py,Tracker.__init__,ADDED,,16-42,,"self, slam, pipe: Connection, event_writer: SummaryWriter",True
+TRACKER,core,,src/tracker.py,Tracker.run,ADDED,,44-144,,"self, stream: BaseDataset",True
+SUPPORT,not_relevant,,src/utils/Printer.py,FontColor,ADDED,,9-16,,object,True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer,ADDED,,44-94,,TrivialPrinter,True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.__init__,ADDED,,45-50,,"self, total_img_num",True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.pbar_ready,ADDED,,60-62,,self,True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.print,ADDED,,51-55,,"self, msg: str, color=None",True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.printer_process,ADDED,,64-90,,"self, total_img_num",True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.terminate,ADDED,,93-94,,self,True
+SUPPORT,not_relevant,,src/utils/Printer.py,Printer.update_pbar,ADDED,,56-59,,self,True
+SUPPORT,not_relevant,,src/utils/Printer.py,TrivialPrinter,ADDED,,38-42,,object,True
+SUPPORT,not_relevant,,src/utils/Printer.py,TrivialPrinter.print,ADDED,,39-42,,"self, msg: str, color=None",True
+SUPPORT,not_relevant,,src/utils/Printer.py,get_msg_prefix,ADDED,,19-36,,color,True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera,ADDED,,23-191,,nn.Module,True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.__init__,ADDED,,24-85,,"self, uid, color, depth, gt_T, projection_matrix, fx, fy, cx, cy, fovx, fovy, image_height, image_width, features=None, device='cuda:0'",True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.camera_center,ADDED,,150-151,,self,True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.clean,ADDED,,182-191,,self,True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.compute_grad_mask,ADDED,,157-180,,"self, config",True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.full_proj_transform,ADDED,,142-147,,self,True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.init_from_dataset,ADDED,,88-126,,"dataset, data, projection_matrix, full_resol=False",True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.init_from_gui,ADDED,,129-135,,"uid, T, FoVx, FoVy, fx, fy, cx, cy, H, W",True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.update_RT,ADDED,,153-155,,"self, R, t",True
+UTILITIES,mixed,,src/utils/camera_utils.py,Camera.world_view_transform,ADDED,,138-139,,self,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,Image,ADDED,,47-50,,BaseImage,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,Image.qvec2rotmat,ADDED,,49-50,,self,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,main,ADDED,,345-354,,,False
+UTILITIES,mixed,,src/utils/colmap_read_model.py,qvec2rotmat,ADDED,,307-324,,qvec,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_cameras_binary,ADDED,,109-139,,path_to_model_file,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_cameras_text,ADDED,,83-106,,path,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_images_binary,ADDED,,179-222,,path_to_model_file,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_images_text,ADDED,,142-176,,path,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_model,ADDED,,295-304,,"path, ext",True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_next_bytes,ADDED,,71-80,,"fid, num_bytes, format_char_sequence, endian_character='<'",True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_points3D_text,ADDED,,225-254,,path,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,read_points3d_binary,ADDED,,257-292,,path_to_model_file,True
+UTILITIES,mixed,,src/utils/colmap_read_model.py,rotmat2qvec,ADDED,,327-342,,R,True
+UTILITIES,mixed,,src/utils/common.py,align_scale_and_shift,ADDED,,57-93,,"prediction, target, weights",True
+UTILITIES,mixed,,src/utils/common.py,as_intrinsics_matrix,ADDED,,19-29,,intrinsics,True
+UTILITIES,mixed,,src/utils/common.py,setup_seed,ADDED,,10-16,,seed,True
+UTILITIES,mixed,,src/utils/common.py,update_cam,ADDED,,32-53,,cfg,True
+STREAM,core,,src/utils/datasets.py,BaseDataset,ADDED,,69-243,,Dataset,True
+STREAM,core,,src/utils/datasets.py,BaseDataset.__getitem__,ADDED,,202-229,,"self, index",True
+STREAM,core,,src/utils/datasets.py,BaseDataset.__init__,ADDED,,70-112,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,BaseDataset.__len__,ADDED,,115-116,,self,True
+STREAM,core,,src/utils/datasets.py,BaseDataset.depthloader,ADDED,,118-132,,"self, index, depth_paths, depth_scale",True
+STREAM,core,,src/utils/datasets.py,BaseDataset.get_color,ADDED,,134-155,,"self, index",True
+STREAM,core,,src/utils/datasets.py,BaseDataset.get_color_full_resol,ADDED,,178-199,,"self, index",True
+STREAM,core,,src/utils/datasets.py,BaseDataset.get_intrinsic,ADDED,,157-168,,self,True
+STREAM,core,,src/utils/datasets.py,BaseDataset.get_intrinsic_full_resol,ADDED,,170-176,,self,True
+STREAM,core,,src/utils/datasets.py,BaseDataset.save_gt_poses,ADDED,,231-243,,"self, path, poses",True
+STREAM,core,,src/utils/datasets.py,Dycheck,ADDED,,485-588,,BaseDataset,True
+STREAM,core,,src/utils/datasets.py,Dycheck.__init__,ADDED,,487-511,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,Dycheck.load_colmap_data,ADDED,,536-588,,"self, realdir",True
+STREAM,core,,src/utils/datasets.py,Dycheck.load_poses,ADDED,,527-534,,"self, path",True
+STREAM,core,,src/utils/datasets.py,Dycheck.save_gt_poses,ADDED,,513-525,,"self, path, poses",True
+STREAM,core,,src/utils/datasets.py,RGB_NoPose,ADDED,,453-483,,BaseDataset,True
+STREAM,core,,src/utils/datasets.py,RGB_NoPose.__init__,ADDED,,454-483,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,Replica,ADDED,,246-279,,BaseDataset,True
+STREAM,core,,src/utils/datasets.py,Replica.__init__,ADDED,,248-267,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,Replica.load_poses,ADDED,,270-279,,"self, path",True
+STREAM,core,,src/utils/datasets.py,ScanNet,ADDED,,282-315,,BaseDataset,True
+STREAM,core,,src/utils/datasets.py,ScanNet.__init__,ADDED,,284-301,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,ScanNet.load_poses,ADDED,,303-315,,"self, path",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD,ADDED,,318-451,,BaseDataset,True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.__init__,ADDED,,319-338,,"self, cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.associate_frames,ADDED,,346-363,,"self, tstamp_image, tstamp_depth, tstamp_pose, max_dt=0.08",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.correct_gt_pose_bonn,ADDED,,417-429,,"self, T",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.loadtum,ADDED,,365-415,,"self, datapath, frame_rate=-1, pose_correct_bonn=False",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.parse_list,ADDED,,340-344,,"self, filepath, skiprows=0",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.pose_matrix_from_quaternion,ADDED,,431-437,,"self, pvec",True
+STREAM,core,,src/utils/datasets.py,TUM_RGBD.save_gt_poses,ADDED,,439-451,,"self, path, poses",True
+STREAM,core,,src/utils/datasets.py,get_dataset,ADDED,,65-66,,"cfg, device='cuda:0'",True
+STREAM,core,,src/utils/datasets.py,load_img_feature,ADDED,,56-62,,"idx, path, suffix=''",True
+STREAM,core,,src/utils/datasets.py,load_metric_depth,ADDED,,48-54,,"idx, path",True
+STREAM,core,,src/utils/datasets.py,readEXR_onlydepth,ADDED,,14-46,,filename,True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,_ensure_tensor,ADDED,,204-206,,"buffer: Union[torch.Tensor, List[torch.Tensor]]",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,_ssim,ADDED,,124-202,,"img1: torch.Tensor, img2: torch.Tensor, window: torch.Tensor, window_size: int, num_channels: int, eps: float=EPSILON",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,compute_bias_factor,ADDED,,45-57,,"x: float, s: float",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,compute_ssim_components,ADDED,,99-121,,"img1: torch.Tensor, img2: torch.Tensor, window_size: int=11",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,create_2d_gaussian_window,ADDED,,80-96,,"window_size: int, num_channels: int",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,generate_gaussian_kernel,ADDED,,60-77,,"window_size: int, sigma: float",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/mapping_utils.py,resample_tensor_to_shape,ADDED,,10-31,,"tensor: torch.Tensor, target_shape: Tuple[int, int], interpolation_mode: str='bilinear'",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/median_filter.py,MedianPool2d,ADDED,,9-53,,nn.Module,True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/median_filter.py,MedianPool2d.__init__,ADDED,,20-25,,"self, kernel_size=3, stride=1, padding=0, same=False",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/median_filter.py,MedianPool2d._padding,ADDED,,27-45,,"self, x",True
+MAPPING,not_relevant,,src/utils/dyn_uncertainty/median_filter.py,MedianPool2d.forward,ADDED,,47-53,,"self, x",True
+EXPORT,output,,src/utils/eval_traj.py,align_full_traj,ADDED,,55-78,,"traj_est_full, stream, printer",True
+EXPORT,output,,src/utils/eval_traj.py,align_kf_traj,ADDED,,18-53,,"npz_path, stream, return_full_est_traj=False, printer=None",True
+EXPORT,output,,src/utils/eval_traj.py,full_traj_eval,ADDED,,154-183,,"traj_est, stream, printer, logger, plot_parent_dir, plot_name",True
+EXPORT,output,,src/utils/eval_traj.py,full_traj_fill,ADDED,,143-151,,"traj_filler, mapper, stream, fast_mode=False",True
+EXPORT,output,,src/utils/eval_traj.py,kf_traj_eval,ADDED,,113-140,,"npz_path, plot_parent_dir, plot_name, stream, logger, printer",True
+EXPORT,output,,src/utils/eval_traj.py,save_traj,ADDED,,185-197,,"traj_est, output_file",True
+EXPORT,output,,src/utils/eval_traj.py,traj_eval_and_plot,ADDED,,81-110,,"traj_est, traj_ref, plot_parent_dir, plot_name, printer",True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,Fit3DModels,ADDED,,16-60,,torch.nn.Module,True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,Fit3DModels.__init__,ADDED,,17-19,,"self, extractor_model, device",True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,Fit3DModels.get_intermediate_layers,ADDED,,21-60,,"self, x: torch.Tensor, n=1, reshape: bool=False, return_prefix_tokens: bool=False, return_class_token: bool=False, norm: bool=True",True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,_save_features,ADDED,,179-192,,"features: torch.Tensor, cfg: Dict, idx: int, suffix: str",True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,get_feature_extractor,ADDED,,68-85,,cfg: Dict,True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,predict_img_features,ADDED,,90-154,,"model: nn.Module, idx: int, input_tensor: torch.Tensor, cfg: Dict, device: str, save_feat: bool=True, suffix: str=''",True
+FEATURE_PRIOR,core,,src/utils/mono_priors/img_feature_extractors.py,process_image,ADDED,,157-176,,"image: torch.Tensor, stride: int, transforms: nn.Module, device: str='cuda'",True
+METRIC3D,core,,src/utils/mono_priors/metric_depth_estimators.py,_create_dpt2_model,ADDED,,38-71,,depth_model: str,True
+METRIC3D,core,,src/utils/mono_priors/metric_depth_estimators.py,_predict_metric3d_depth,ADDED,,118-156,,"model: torch.nn.Module, input_tensor: torch.Tensor, cfg: Dict, device: str",True
+METRIC3D,core,,src/utils/mono_priors/metric_depth_estimators.py,_save_depth_map,ADDED,,159-163,,"depth_map: torch.Tensor, cfg: Dict, idx: int",True
+METRIC3D,core,,src/utils/mono_priors/metric_depth_estimators.py,get_metric_depth_estimator,ADDED,,14-35,,cfg: Dict,True
+METRIC3D,core,,src/utils/mono_priors/metric_depth_estimators.py,predict_metric_depth,ADDED,,76-115,,"model: torch.nn.Module, idx: int, input_tensor: torch.Tensor, cfg: Dict, device: str, save_depth: bool=True",True
+SUPPORT,not_relevant,,src/utils/plot_utils.py,create_gif_from_directory,ADDED,,6-46,,"directory_path, output_filename, duration=200, online=True",True
+SUPPORT,not_relevant,,src/utils/plot_utils.py,create_gif_from_directory.extract_number,ADDED,,15-21,,filename,True
+UTILITIES,mixed,,src/utils/pose_utils.py,SE3_exp,ADDED,,66-78,,tau,True
+UTILITIES,mixed,,src/utils/pose_utils.py,SO3_exp,ADDED,,30-45,,theta,True
+UTILITIES,mixed,,src/utils/pose_utils.py,V,ADDED,,48-63,,theta,True
+UTILITIES,mixed,,src/utils/pose_utils.py,rt2mato,ADDED,,10-14,,"R, T",True
+UTILITIES,mixed,,src/utils/pose_utils.py,skew_sym_mat,ADDED,,17-27,,x,True
+UTILITIES,mixed,,src/utils/pose_utils.py,update_pose,ADDED,,81-98,,"camera, converged_threshold=0.0001",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_mapping,ADDED,,107-113,,"config, image, depth, viewpoint, initialization=False",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_mapping_rgbd,ADDED,,116-143,,"config, image, depth, viewpoint",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_mapping_uncertainty,ADDED,,145-241,,"config: Dict, rendered_img: Tensor, rendered_depth: Tensor, viewpoint, uncertainty_mask: Tensor, initialization: bool=False",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_tracking,ADDED,,47-52,,"config, image, depth, opacity, viewpoint, monocular=True, uncertainty=None",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_tracking_rgb,ADDED,,55-87,,"config, image, opacity, viewpoint, uncertainty=None",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_loss_tracking_rgbd,ADDED,,90-104,,"config, image, depth, opacity, viewpoint, uncertainty=None",True
+UTILITIES,mixed,,src/utils/slam_utils.py,get_median_depth,ADDED,,244-255,,"depth, opacity=None, mask=None, return_std=False",True
+UTILITIES,mixed,,src/utils/slam_utils.py,image_gradient,ADDED,,10-27,,image,True
+UTILITIES,mixed,,src/utils/slam_utils.py,image_gradient_mask,ADDED,,30-44,,"image, eps=0.01",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer,ADDED,,8-157,,,False
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.__call__,ADDED,,17-21,,"self, func=None, *, name=None",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.__init__,ADDED,,9-15,,"self, auto_report=False, report_fn=print",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer._report_summary,ADDED,,95-115,,"self, save_dir=None",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer._wrap,ADDED,,23-37,,"self, func, name",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer._wrap.wrapper,ADDED,,27-35,,"*args, **kwargs",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer._write_csv,ADDED,,117-157,,"self, save_dir, stats, total_time, total_count",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.get_function_stats,ADDED,,49-64,,self,True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.get_max_time,ADDED,,43-44,,self,True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.get_min_time,ADDED,,46-47,,self,True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.get_total_time,ADDED,,40-41,,self,True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.section,ADDED,,68-76,,"self, name",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.start,ADDED,,78-82,,"self, name",True
+SUPPORT,not_relevant,,src/utils/sys_timer.py,Timer.stop,ADDED,,84-93,,"self, name",True
+VIEWER,engineering,,src/utils/visualization.py,create_camera_actor,ADDED,,36-44,,"g, scale=0.05",True
+VIEWER,engineering,,src/utils/visualization.py,create_point_actor,ADDED,,46-51,,"points, colors",True
+VIEWER,engineering,,src/utils/visualization.py,droid_visualization,ADDED,,53-160,,"video, device='cuda:0'",True
+VIEWER,engineering,,src/utils/visualization.py,droid_visualization.animation_callback,ADDED,,77-148,,vis,True
+VIEWER,engineering,,src/utils/visualization.py,droid_visualization.decrease_filter,ADDED,,72-75,,vis,True
+VIEWER,engineering,,src/utils/visualization.py,droid_visualization.increase_filter,ADDED,,67-70,,vis,True
+VIEWER,engineering,,src/utils/visualization.py,white_balance,ADDED,,26-34,,img,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/app.py,on_submit,ADDED,,60-79,,image,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/app.py,predict_depth,ADDED,,43-44,,image,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,BlockChunk,ADDED,,37-41,,nn.ModuleList,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,BlockChunk.forward,ADDED,,38-41,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DINOv2,ADDED,,398-415,,model_name,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer,ADDED,,44-328,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.__init__,ADDED,,45-170,,"self, img_size=224, patch_size=16, in_chans=3, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4.0, qkv_bias=True, ffn_bias=True, proj_bias=True, drop_path_rate=0.0, drop_path_uniform=False, init_values=None, embed_layer=PatchEmbed, act_layer=nn.GELU, block_fn=Block, ffn_layer='mlp', block_chunks=1, num_register_tokens=0, interpolate_antialias=False, interpolate_offset=0.1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.__init__.f,ADDED,,130-131,,"*args, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer._get_intermediate_layers_chunked,ADDED,,283-295,,"self, x, n=1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer._get_intermediate_layers_not_chunked,ADDED,,271-281,,"self, x, n=1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward,ADDED,,323-328,,"self, *args, is_training=False, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward_features,ADDED,,253-269,,"self, x, masks=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward_features_list,ADDED,,233-251,,"self, x_list, masks_list",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.get_intermediate_layers,ADDED,,297-321,,"self, x: torch.Tensor, n: Union[int, Sequence]=1, reshape: bool=False, return_class_token: bool=False, norm=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.init_weights,ADDED,,172-177,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.interpolate_pos_encoding,ADDED,,179-210,,"self, x, w, h",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,DinoVisionTransformer.prepare_tokens_with_masks,ADDED,,212-231,,"self, x, masks=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,init_weights_vit_timm,ADDED,,331-336,,"module: nn.Module, name: str=''",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,named_apply,ADDED,,26-34,,"fn: Callable, module: nn.Module, name='', depth_first=True, include_root=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,vit_base,ADDED,,353-364,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,vit_giant2,ADDED,,381-395,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,vit_large,ADDED,,367-378,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py,vit_small,ADDED,,339-350,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py,Attention,ADDED,,29-62,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py,Attention.__init__,ADDED,,30-47,,"self, dim: int, num_heads: int=8, qkv_bias: bool=False, proj_bias: bool=True, attn_drop: float=0.0, proj_drop: float=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py,Attention.forward,ADDED,,49-62,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py,MemEffAttention,ADDED,,65-81,,Attention,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py,MemEffAttention.forward,ADDED,,66-81,,"self, x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,Block,ADDED,,36-107,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,Block.__init__,ADDED,,37-80,,"self, dim: int, num_heads: int, mlp_ratio: float=4.0, qkv_bias: bool=False, proj_bias: bool=True, ffn_bias: bool=True, drop: float=0.0, attn_drop: float=0.0, init_values=None, drop_path: float=0.0, act_layer: Callable[..., nn.Module]=nn.GELU, norm_layer: Callable[..., nn.Module]=nn.LayerNorm, attn_class: Callable[..., nn.Module]=Attention, ffn_layer: Callable[..., nn.Module]=Mlp",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,Block.forward,ADDED,,82-107,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,Block.forward.attn_residual_func,ADDED,,83-84,,x: Tensor,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,Block.forward.ffn_residual_func,ADDED,,86-87,,x: Tensor,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock,ADDED,,204-252,,Block,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward,ADDED,,245-252,,"self, x_or_x_list",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested,ADDED,,205-243,,"self, x_list: List[Tensor]",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.attn_residual_func,ADDED,,213-214,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.attn_residual_func@234,ADDED,,234-235,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.ffn_residual_func,ADDED,,216-217,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.ffn_residual_func@237,ADDED,,237-238,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,add_residual,ADDED,,142-151,,"x, brange, residual, residual_scale_factor, scaling_vector=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,drop_add_residual_stochastic_depth,ADDED,,110-131,,"x: Tensor, residual_func: Callable[[Tensor], Tensor], sample_drop_ratio: float=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,drop_add_residual_stochastic_depth_list,ADDED,,181-201,,"x_list: List[Tensor], residual_func: Callable[[Tensor, Any], Tensor], sample_drop_ratio: float=0.0, scaling_vector=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,get_attn_bias_and_cat,ADDED,,157-178,,"x_list, branges=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py,get_branges_scales,ADDED,,134-139,,"x, sample_drop_ratio=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py,DropPath,ADDED,,27-35,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py,DropPath.__init__,ADDED,,30-32,,"self, drop_prob=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py,DropPath.forward,ADDED,,34-35,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py,drop_path,ADDED,,15-24,,"x, drop_prob: float=0.0, training: bool=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale,ADDED,,16-28,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale.__init__,ADDED,,17-25,,"self, dim: int, init_values: Union[float, Tensor]=1e-05, inplace: bool=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale.forward,ADDED,,27-28,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py,Mlp,ADDED,,17-41,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py,Mlp.__init__,ADDED,,18-33,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=nn.GELU, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py,Mlp.forward,ADDED,,35-41,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed,ADDED,,26-89,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.__init__,ADDED,,38-67,,"self, img_size: Union[int, Tuple[int, int]]=224, patch_size: Union[int, Tuple[int, int]]=16, in_chans: int=3, embed_dim: int=768, norm_layer: Optional[Callable]=None, flatten_embedding: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.flops,ADDED,,84-89,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.forward,ADDED,,69-82,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py,make_2tuple,ADDED,,17-23,,x,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN,ADDED,,13-33,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN.__init__,ADDED,,14-27,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=None, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN.forward,ADDED,,29-33,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFNFused,ADDED,,45-63,,SwiGLU,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFNFused.__init__,ADDED,,46-63,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=None, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,ConvBlock,ADDED,,24-35,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,ConvBlock.__init__,ADDED,,25-32,,"self, in_feature, out_feature",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,ConvBlock.forward,ADDED,,34-35,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DPTHead,ADDED,,38-150,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DPTHead.__init__,ADDED,,39-115,,"self, in_channels, features=256, use_bn=False, out_channels=[256, 512, 1024, 1024], use_clstoken=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DPTHead.forward,ADDED,,117-150,,"self, out_features, patch_h, patch_w",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DepthAnythingV2,ADDED,,153-221,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DepthAnythingV2.__init__,ADDED,,154-174,,"self, encoder='vitl', features=256, out_channels=[256, 512, 1024, 1024], use_bn=False, use_clstoken=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DepthAnythingV2.forward,ADDED,,176-184,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DepthAnythingV2.image2tensor,ADDED,,196-221,,"self, raw_image, input_size=518",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,DepthAnythingV2.infer_image,ADDED,,187-194,,"self, raw_image, input_size=518",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/dpt.py,_make_fusion_block,ADDED,,12-21,,"features, use_bn, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,FeatureFusionBlock,ADDED,,83-148,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,FeatureFusionBlock.__init__,ADDED,,87-121,,"self, features, activation, deconv=False, bn=False, expand=False, align_corners=True, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,FeatureFusionBlock.forward,ADDED,,123-148,,"self, *xs, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,ResidualConvUnit,ADDED,,29-80,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,ResidualConvUnit.__init__,ADDED,,33-55,,"self, features, activation, bn",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,ResidualConvUnit.forward,ADDED,,57-80,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py,_make_scratch,ADDED,,4-26,,"in_shape, out_shape, groups=1, expand=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,NormalizeImage,ADDED,,125-136,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,NormalizeImage.__call__,ADDED,,133-136,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,NormalizeImage.__init__,ADDED,,129-131,,"self, mean, std",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,PrepareForNet,ADDED,,139-158,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,PrepareForNet.__call__,ADDED,,146-158,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,PrepareForNet.__init__,ADDED,,143-144,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,Resize,ADDED,,5-122,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,Resize.__call__,ADDED,,109-122,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,Resize.__init__,ADDED,,9-49,,"self, width, height, resize_target=True, keep_aspect_ratio=False, ensure_multiple_of=1, resize_method='lower_bound', image_interpolation_method=cv2.INTER_AREA",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,Resize.constrain_to_multiple_of,ADDED,,51-60,,"self, x, min_val=0, max_val=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py,Resize.get_size,ADDED,,62-107,,"self, width, height",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py,Hypersim,ADDED,,26-74,,Dataset,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py,Hypersim.__getitem__,ADDED,,50-71,,"self, item",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py,Hypersim.__init__,ADDED,,27-48,,"self, filelist_path, mode, size=(518, 518)",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py,Hypersim.__len__,ADDED,,73-74,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py,hypersim_distance_to_depth,ADDED,,11-23,,npyDistance,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py,KITTI,ADDED,,9-57,,Dataset,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py,KITTI.__getitem__,ADDED,,35-54,,"self, item",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py,KITTI.__init__,ADDED,,10-33,,"self, filelist_path, mode, size=(518, 518)",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py,KITTI.__len__,ADDED,,56-57,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Crop,ADDED,,247-277,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Crop.__call__,ADDED,,257-277,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Crop.__init__,ADDED,,251-255,,"self, size",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,NormalizeImage,ADDED,,207-218,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,NormalizeImage.__call__,ADDED,,215-218,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,NormalizeImage.__init__,ADDED,,211-213,,"self, mean, std",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,PrepareForNet,ADDED,,221-244,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,PrepareForNet.__call__,ADDED,,228-244,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,PrepareForNet.__init__,ADDED,,225-226,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Resize,ADDED,,50-204,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Resize.__call__,ADDED,,164-204,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Resize.__init__,ADDED,,54-94,,"self, width, height, resize_target=True, keep_aspect_ratio=False, ensure_multiple_of=1, resize_method='lower_bound', image_interpolation_method=cv2.INTER_AREA",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Resize.constrain_to_multiple_of,ADDED,,96-105,,"self, x, min_val=0, max_val=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,Resize.get_size,ADDED,,107-162,,"self, width, height",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/transform.py,apply_min_size,ADDED,,8-47,,"sample, size, image_interpolation_method=cv2.INTER_AREA",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py,VKITTI2,ADDED,,9-54,,Dataset,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py,VKITTI2.__getitem__,ADDED,,33-51,,"self, item",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py,VKITTI2.__init__,ADDED,,10-31,,"self, filelist_path, mode, size=(518, 518)",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py,VKITTI2.__len__,ADDED,,53-54,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,BlockChunk,ADDED,,37-41,,nn.ModuleList,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,BlockChunk.forward,ADDED,,38-41,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DINOv2,ADDED,,398-415,,model_name,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer,ADDED,,44-328,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.__init__,ADDED,,45-170,,"self, img_size=224, patch_size=16, in_chans=3, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4.0, qkv_bias=True, ffn_bias=True, proj_bias=True, drop_path_rate=0.0, drop_path_uniform=False, init_values=None, embed_layer=PatchEmbed, act_layer=nn.GELU, block_fn=Block, ffn_layer='mlp', block_chunks=1, num_register_tokens=0, interpolate_antialias=False, interpolate_offset=0.1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.__init__.f,ADDED,,130-131,,"*args, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer._get_intermediate_layers_chunked,ADDED,,283-295,,"self, x, n=1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer._get_intermediate_layers_not_chunked,ADDED,,271-281,,"self, x, n=1",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward,ADDED,,323-328,,"self, *args, is_training=False, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward_features,ADDED,,253-269,,"self, x, masks=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.forward_features_list,ADDED,,233-251,,"self, x_list, masks_list",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.get_intermediate_layers,ADDED,,297-321,,"self, x: torch.Tensor, n: Union[int, Sequence]=1, reshape: bool=False, return_class_token: bool=False, norm=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.init_weights,ADDED,,172-177,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.interpolate_pos_encoding,ADDED,,179-210,,"self, x, w, h",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,DinoVisionTransformer.prepare_tokens_with_masks,ADDED,,212-231,,"self, x, masks=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,init_weights_vit_timm,ADDED,,331-336,,"module: nn.Module, name: str=''",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,named_apply,ADDED,,26-34,,"fn: Callable, module: nn.Module, name='', depth_first=True, include_root=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,vit_base,ADDED,,353-364,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,vit_giant2,ADDED,,381-395,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,vit_large,ADDED,,367-378,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py,vit_small,ADDED,,339-350,,"patch_size=16, num_register_tokens=0, **kwargs",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py,Attention,ADDED,,29-62,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py,Attention.__init__,ADDED,,30-47,,"self, dim: int, num_heads: int=8, qkv_bias: bool=False, proj_bias: bool=True, attn_drop: float=0.0, proj_drop: float=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py,Attention.forward,ADDED,,49-62,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py,MemEffAttention,ADDED,,65-81,,Attention,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py,MemEffAttention.forward,ADDED,,66-81,,"self, x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,Block,ADDED,,36-107,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,Block.__init__,ADDED,,37-80,,"self, dim: int, num_heads: int, mlp_ratio: float=4.0, qkv_bias: bool=False, proj_bias: bool=True, ffn_bias: bool=True, drop: float=0.0, attn_drop: float=0.0, init_values=None, drop_path: float=0.0, act_layer: Callable[..., nn.Module]=nn.GELU, norm_layer: Callable[..., nn.Module]=nn.LayerNorm, attn_class: Callable[..., nn.Module]=Attention, ffn_layer: Callable[..., nn.Module]=Mlp",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,Block.forward,ADDED,,82-107,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,Block.forward.attn_residual_func,ADDED,,83-84,,x: Tensor,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,Block.forward.ffn_residual_func,ADDED,,86-87,,x: Tensor,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock,ADDED,,204-252,,Block,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward,ADDED,,245-252,,"self, x_or_x_list",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested,ADDED,,205-243,,"self, x_list: List[Tensor]",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.attn_residual_func,ADDED,,213-214,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.attn_residual_func@234,ADDED,,234-235,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.ffn_residual_func,ADDED,,216-217,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,NestedTensorBlock.forward_nested.ffn_residual_func@237,ADDED,,237-238,,"x: Tensor, attn_bias=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,add_residual,ADDED,,142-151,,"x, brange, residual, residual_scale_factor, scaling_vector=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,drop_add_residual_stochastic_depth,ADDED,,110-131,,"x: Tensor, residual_func: Callable[[Tensor], Tensor], sample_drop_ratio: float=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,drop_add_residual_stochastic_depth_list,ADDED,,181-201,,"x_list: List[Tensor], residual_func: Callable[[Tensor, Any], Tensor], sample_drop_ratio: float=0.0, scaling_vector=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,get_attn_bias_and_cat,ADDED,,157-178,,"x_list, branges=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py,get_branges_scales,ADDED,,134-139,,"x, sample_drop_ratio=0.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py,DropPath,ADDED,,27-35,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py,DropPath.__init__,ADDED,,30-32,,"self, drop_prob=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py,DropPath.forward,ADDED,,34-35,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py,drop_path,ADDED,,15-24,,"x, drop_prob: float=0.0, training: bool=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale,ADDED,,16-28,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale.__init__,ADDED,,17-25,,"self, dim: int, init_values: Union[float, Tensor]=1e-05, inplace: bool=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py,LayerScale.forward,ADDED,,27-28,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py,Mlp,ADDED,,17-41,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py,Mlp.__init__,ADDED,,18-33,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=nn.GELU, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py,Mlp.forward,ADDED,,35-41,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed,ADDED,,26-89,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.__init__,ADDED,,38-67,,"self, img_size: Union[int, Tuple[int, int]]=224, patch_size: Union[int, Tuple[int, int]]=16, in_chans: int=3, embed_dim: int=768, norm_layer: Optional[Callable]=None, flatten_embedding: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.flops,ADDED,,84-89,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py,PatchEmbed.forward,ADDED,,69-82,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py,make_2tuple,ADDED,,17-23,,x,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN,ADDED,,13-33,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN.__init__,ADDED,,14-27,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=None, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFN.forward,ADDED,,29-33,,"self, x: Tensor",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFNFused,ADDED,,45-63,,SwiGLU,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py,SwiGLUFFNFused.__init__,ADDED,,46-63,,"self, in_features: int, hidden_features: Optional[int]=None, out_features: Optional[int]=None, act_layer: Callable[..., nn.Module]=None, drop: float=0.0, bias: bool=True",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,ConvBlock,ADDED,,24-35,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,ConvBlock.__init__,ADDED,,25-32,,"self, in_feature, out_feature",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,ConvBlock.forward,ADDED,,34-35,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DPTHead,ADDED,,38-149,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DPTHead.__init__,ADDED,,39-114,,"self, in_channels, features=256, use_bn=False, out_channels=[256, 512, 1024, 1024], use_clstoken=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DPTHead.forward,ADDED,,116-149,,"self, out_features, patch_h, patch_w",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DepthAnythingV2,ADDED,,152-222,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DepthAnythingV2.__init__,ADDED,,153-176,,"self, encoder='vitl', features=256, out_channels=[256, 512, 1024, 1024], use_bn=False, use_clstoken=False, max_depth=20.0",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DepthAnythingV2.forward,ADDED,,178-185,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DepthAnythingV2.image2tensor,ADDED,,197-222,,"self, raw_image, input_size=518",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,DepthAnythingV2.infer_image,ADDED,,188-195,,"self, raw_image, input_size=518",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py,_make_fusion_block,ADDED,,12-21,,"features, use_bn, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,FeatureFusionBlock,ADDED,,83-148,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,FeatureFusionBlock.__init__,ADDED,,87-121,,"self, features, activation, deconv=False, bn=False, expand=False, align_corners=True, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,FeatureFusionBlock.forward,ADDED,,123-148,,"self, *xs, size=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,ResidualConvUnit,ADDED,,29-80,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,ResidualConvUnit.__init__,ADDED,,33-55,,"self, features, activation, bn",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,ResidualConvUnit.forward,ADDED,,57-80,,"self, x",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py,_make_scratch,ADDED,,4-26,,"in_shape, out_shape, groups=1, expand=False",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,NormalizeImage,ADDED,,125-136,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,NormalizeImage.__call__,ADDED,,133-136,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,NormalizeImage.__init__,ADDED,,129-131,,"self, mean, std",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,PrepareForNet,ADDED,,139-158,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,PrepareForNet.__call__,ADDED,,146-158,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,PrepareForNet.__init__,ADDED,,143-144,,self,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,Resize,ADDED,,5-122,,object,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,Resize.__call__,ADDED,,109-122,,"self, sample",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,Resize.__init__,ADDED,,9-49,,"self, width, height, resize_target=True, keep_aspect_ratio=False, ensure_multiple_of=1, resize_method='lower_bound', image_interpolation_method=cv2.INTER_AREA",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,Resize.constrain_to_multiple_of,ADDED,,51-60,,"self, x, min_val=0, max_val=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py,Resize.get_size,ADDED,,62-107,,"self, width, height",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/depth_to_pointcloud.py,main,ADDED,,34-110,,,False
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/train.py,main,ADDED,,43-208,,,False
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/dist_helper.py,setup_distributed,ADDED,,8-41,,"backend='nccl', port=None",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/loss.py,SiLogLoss,ADDED,,5-16,,nn.Module,True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/loss.py,SiLogLoss.__init__,ADDED,,6-8,,"self, lambd=0.5",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/loss.py,SiLogLoss.forward,ADDED,,10-16,,"self, pred, target, valid_mask",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/metric.py,eval_depth,ADDED,,4-26,,"pred, target",True
+DEPTH_ALTERNATIVE,not_relevant,,thirdparty/depth_anything_v2/metric_depth/util/utils.py,init_log,ADDED,,9-26,,"name, level=logging.INFO",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/gaussian_renderer/__init__.py,render,ADDED,,24-153,,"viewpoint_camera, pc: GaussianModel, pipe, bg_color: torch.Tensor, scaling_modifier=1.0, override_color=None, mask=None",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel,ADDED,,35-749,,,False
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.__init__,ADDED,,36-67,,"self, sh_degree: int, config=None",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel._prune_optimizer,ADDED,,526-546,,"self, mask",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.add_densification_stats,ADDED,,745-749,,"self, viewspace_point_tensor, update_filter",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.build_covariance_from_scaling_rotation,ADDED,,69-75,,"self, scaling, scaling_modifier, rotation",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.cat_tensors_to_optimizer,ADDED,,566-600,,"self, tensors_dict",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.construct_list_of_attributes,ADDED,,338-350,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.create_pcd_from_image,ADDED,,108-136,,"self, cam_info, init=False, scale=2.0, depthmap=None",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.create_pcd_from_image_and_depth,ADDED,,138-226,,"self, cam, rgb, depth, init=False",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.densification_postfix,ADDED,,602-644,,"self, new_xyz, new_features_dc, new_features_rest, new_opacities, new_scaling, new_rotation, new_kf_ids=None, new_n_obs=None",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.densify_and_clone,ADDED,,697-726,,"self, grads, grad_threshold, scene_extent",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.densify_and_prune,ADDED,,728-743,,"self, max_grad, min_opacity, extent, max_screen_size",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.densify_and_split,ADDED,,646-695,,"self, grads, grad_threshold, scene_extent, N=2",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.extend_from_pcd,ADDED,,231-259,,"self, fused_point_cloud, features, scales, rots, opacities, kf_id",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.extend_from_pcd_seq,ADDED,,261-269,,"self, cam_info, kf_id=-1, init=False, scale=2.0, depthmap=None",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_covariance,ADDED,,99-102,,"self, scaling_modifier=1",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_features,ADDED,,90-93,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_opacity,ADDED,,96-97,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_rotation,ADDED,,82-83,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_scaling,ADDED,,78-79,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.get_xyz,ADDED,,86-87,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.init_lr,ADDED,,228-229,,"self, spatial_lr_scale",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.load_ply,ADDED,,404-493,,"self, path",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.load_ply.fetchPly_nocolor,ADDED,,407-413,,path,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.oneupSHdegree,ADDED,,104-106,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.prune_points,ADDED,,548-564,,"self, mask",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.replace_tensor_to_optimizer,ADDED,,495-508,,"self, tensor, name",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.replace_tensor_to_optimizer_rot,ADDED,,510-523,,"self, tensor, name",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.reset_opacity,ADDED,,389-392,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.reset_opacity_nonvisible,ADDED,,394-402,,"self, visibility_filters",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.save_ply,ADDED,,352-387,,"self, path",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.training_setup,ADDED,,271-320,,"self, training_args",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/scene/gaussian_model.py,GaussianModel.update_learning_rate,ADDED,,322-336,,"self, iteration",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,PILtoTorch,ADDED,,24-30,,"pil_image, resolution",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,PILtoTorch2,ADDED,,33-39,,pil_image,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,build_rotation,ADDED,,113-136,,r,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,build_scaling_rotation,ADDED,,177-186,,"s, r",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,get_expon_lr_func,ADDED,,42-74,,"lr_init, lr_final, lr_delay_steps=0, lr_delay_mult=1.0, max_steps=1000000",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,helper,ADDED,,79-94,,"step, lr_init, lr_final, lr_delay_steps=0, lr_delay_mult=1.0, max_steps=1000000",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,inverse_sigmoid,ADDED,,20-21,,x,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,quaternion_multiply,ADDED,,164-175,,"q1, q2",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,rotation_matrix_to_quaternion,ADDED,,138-162,,R,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,safe_state,ADDED,,189-218,,silent,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,safe_state.F,ADDED,,192-211,,,False
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,safe_state.F.__init__,ADDED,,193-194,,"self, silent",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,safe_state.F.flush,ADDED,,210-211,,self,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,safe_state.F.write,ADDED,,196-208,,"self, x",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,strip_lowerdiag,ADDED,,97-106,,L,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/general_utils.py,strip_symmetric,ADDED,,109-110,,sym,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,BasicPointCloud,ADDED,,19-22,,NamedTuple,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,focal2fov,ADDED,,100-101,,"focal, pixels",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,fov2focal,ADDED,,96-97,,"fov, pixels",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,getProjectionMatrix,ADDED,,49-69,,"znear, zfar, fovX, fovY",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,getProjectionMatrix2,ADDED,,72-93,,"znear, zfar, cx, cy, fx, fy, W, H",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,getWorld2View,ADDED,,25-30,,"R, t",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/graphics_utils.py,getWorld2View2,ADDED,,33-46,,"R, t, translate=torch.tensor([0.0, 0.0, 0.0]), scale=1.0",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/image_utils.py,mse,ADDED,,15-16,,"img1, img2",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/image_utils.py,psnr,ADDED,,19-21,,"img1, img2",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,_ssim,ADDED,,72-101,,"img1, img2, window, window_size, channel, size_average=True",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,create_window,ADDED,,52-58,,"window_size, channel",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,gaussian,ADDED,,42-49,,"window_size, sigma",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,l1_loss,ADDED,,21-22,,"network_output, gt",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,l1_loss_weight,ADDED,,25-35,,"network_output, gt",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,l2_loss,ADDED,,38-39,,"network_output, gt",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/loss_utils.py,ssim,ADDED,,61-69,,"img1, img2, window_size=11, size_average=True",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/sh_utils.py,RGB2SH,ADDED,,121-122,,rgb,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/sh_utils.py,SH2RGB,ADDED,,125-126,,sh,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/sh_utils.py,eval_sh,ADDED,,55-118,,"deg, sh, dirs",True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/system_utils.py,mkdir_p,ADDED,,17-25,,folder_path,True
+MAPPING,not_relevant,,thirdparty/gaussian_splatting/utils/system_utils.py,searchForMaxIteration,ADDED,,28-30,,folder,True
+ENTRY,not_relevant,demo.py,run.py,image_stream,REMOVED,26-57,,"imagedir, calib, stride",,True
+ENTRY,not_relevant,demo.py,run.py,save_reconstruction,REMOVED,60-76,,"droid, save_path",,True
+ENTRY,not_relevant,demo.py,run.py,setup_seed,ADDED,,14-19,,seed,True
+ENTRY,not_relevant,demo.py,run.py,show_image,REMOVED,21-24,,image,,True
+SUPPORT,not_relevant,droid_slam/align.py,,align_pose_fragements,REMOVED,3-24,,"pose0, pose1",,True
+SUPPORT,not_relevant,droid_slam/cuda_timer.py,src/utils/cuda_timer.py,CudaTimer,RAW_IDENTICAL,3-23,3-23,,,False
+SUPPORT,not_relevant,droid_slam/cuda_timer.py,src/utils/cuda_timer.py,CudaTimer.__enter__,RAW_IDENTICAL,12-14,12-14,self,self,False
+SUPPORT,not_relevant,droid_slam/cuda_timer.py,src/utils/cuda_timer.py,CudaTimer.__exit__,RAW_IDENTICAL,16-23,16-23,"self, type, value, traceback","self, type, value, traceback",False
+SUPPORT,not_relevant,droid_slam/cuda_timer.py,src/utils/cuda_timer.py,CudaTimer.__init__,RAW_IDENTICAL,4-10,4-10,"self, name, enabled=True","self, name, enabled=True",False
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/augmentation.py,,RGBDAugmentor,REMOVED,7-58,,,,False
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/augmentation.py,,RGBDAugmentor.__call__,REMOVED,56-58,,"self, images, poses, depths, intrinsics",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/augmentation.py,,RGBDAugmentor.__init__,REMOVED,10-18,,"self, crop_size",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/augmentation.py,,RGBDAugmentor.color_transform,REMOVED,49-54,,"self, images",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/augmentation.py,,RGBDAugmentor.spatial_transform,REMOVED,20-47,,"self, images, depths, poses, intrinsics",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset,REMOVED,19-157,,data.Dataset,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.__getitem__,REMOVED,94-150,,"self, index",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.__imul__,REMOVED,155-157,,"self, x",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.__init__,REMOVED,20-48,,"self, name, datapath, n_frames=4, crop_size=[384, 512], fmin=8.0, fmax=75.0, do_aug=True",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.__len__,REMOVED,152-153,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset._build_dataset_index,REMOVED,50-59,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.build_frame_graph,REMOVED,69-92,,"self, poses, depths, intrinsics, f=16, max_flow=256",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.build_frame_graph.read_disp,REMOVED,71-74,,fn,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.depth_read,REMOVED,66-67,,depth_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/base.py,,RGBDDataset.image_read,REMOVED,62-63,,image_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/factory.py,,create_datastream,REMOVED,34-59,,"dataset_path, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/factory.py,,create_imagestream,REMOVED,62-67,,"dataset_path, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/factory.py,,create_rgbdstream,REMOVED,76-81,,"dataset_path, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/factory.py,,create_stereostream,REMOVED,69-74,,"dataset_path, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/factory.py,,dataset_factory,REMOVED,17-31,,"dataset_list, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,all_pairs_distance_matrix,REMOVED,91-98,,"poses, beta=2.5",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,associate_frames,REMOVED,16-33,,"tstamp_image, tstamp_depth, tstamp_pose, max_dt=1.0",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,compute_distance_matrix_flow,REMOVED,105-142,,"poses, disps, intrinsics",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,compute_distance_matrix_flow2,REMOVED,145-190,,"poses, disps, intrinsics, beta=0.4",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,loadtum,REMOVED,35-88,,"datapath, frame_rate=-1",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,parse_list,REMOVED,11-14,,"filepath, skiprows=0",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/rgbd_utils.py,,pose_matrix_to_quaternion,REMOVED,100-103,,pose,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,ImageStream,REMOVED,75-123,,data.Dataset,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,ImageStream.__getitem__,REMOVED,100-123,,"self, index",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,ImageStream.__init__,REMOVED,76-91,,"self, datapath, intrinsics, rate=1, image_size=[384, 512]",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,ImageStream.__len__,REMOVED,93-94,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,ImageStream.image_read,REMOVED,97-98,,imfile,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream,REMOVED,18-72,,data.Dataset,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream.__getitem__,REMOVED,37-72,,"self, index",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream.__init__,REMOVED,19-24,,"self, datapath, frame_rate=-1, image_size=[384, 512], crop_size=[0, 0]",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream.__len__,REMOVED,34-35,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream.depth_read,REMOVED,31-32,,depth_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,RGBDStream.image_read,REMOVED,27-28,,image_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,StereoStream,REMOVED,127-183,,data.Dataset,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,StereoStream.__getitem__,REMOVED,160-183,,"self, index",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,StereoStream.__init__,REMOVED,128-148,,"self, datapath, intrinsics, rate=1, image_size=[384, 512], map_left=None, map_right=None, left_root='image_left', right_root='image_right'",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,StereoStream.__len__,REMOVED,150-151,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/stream.py,,StereoStream.image_read,REMOVED,154-158,,"imfile, imap=None",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir,REMOVED,18-70,,RGBDDataset,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir.__init__,REMOVED,23-26,,"self, mode='training', **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir._build_dataset,REMOVED,33-55,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir.calib_read,REMOVED,58-59,,,,False
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir.depth_read,REMOVED,66-70,,depth_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir.image_read,REMOVED,62-63,,image_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAir.is_test_scene,REMOVED,29-31,,scene,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirStream,REMOVED,73-105,,RGBDStream,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirStream.__init__,REMOVED,74-75,,"self, datapath, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirStream._build_dataset_index,REMOVED,77-97,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirStream.calib_read,REMOVED,100-101,,datapath,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirStream.image_read,REMOVED,104-105,,image_file,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirTestStream,REMOVED,108-138,,RGBDStream,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirTestStream.__init__,REMOVED,109-110,,"self, datapath, **kwargs",,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirTestStream._build_dataset_index,REMOVED,112-130,,self,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirTestStream.calib_read,REMOVED,133-134,,datapath,,True
+DATA_TRAIN_EVAL,not_relevant,droid_slam/data_readers/tartan.py,,TartanAirTestStream.image_read,REMOVED,137-138,,image_file,,True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo,CHANGED,12-225,24-886,,,False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.__del__,REMOVED,60-73,,self,,True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.__getitem__,RAW_IDENTICAL,115-131,180-196,"self, index","self, index",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.__init__,CHANGED,13-41,27-105,"self, image_size=[480, 640], buffer=1024, stereo=False, device='cuda:0'","self, cfg, printer",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.__item_setter,CHANGED,78-109,110-174,"self, index, item","self, index, item",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.__setitem__,RAW_IDENTICAL,111-113,176-178,"self, index, item","self, index, item",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.append,RAW_IDENTICAL,133-135,198-200,"self, *item","self, *item",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.ba,CHANGED,213-225,332-378,"self, target, weight, eta, ii, jj, t0=1, t1=None, itrs=2, lm=0.0001, ep=0.1, motion_only=False","self, target, weight, eta, ii, jj, t0=1, t1=None, iters=2, lm=0.0001, ep=0.1, gamma=0.02, tao=0.1, lr=0.01, weight_decay=0.0002, motion_only=False, enable_update_uncer=False, enable_udba=False, visualization_stage=False",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.distance,STRUCTURAL_EQUAL,181-211,256-286,"self, ii=None, jj=None, beta=0.3, bidirectional=True","self, ii=None, jj=None, beta=0.3, bidirectional=True",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.eval_depth_l1,ADDED,,837-886,,"self, npz_path, stream, global_scale=None",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.format_indicies,RAW_IDENTICAL,141-153,210-222,"ii, jj","ii, jj",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.get_depth_and_pose,ADDED,,743-755,,"self, index, device",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.get_depth_scale_and_shift,ADDED,,726-736,,"self, index, mono_depth: torch.Tensor, est_depth: torch.Tensor, weights: torch.Tensor",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.get_lock,RAW_IDENTICAL,75-76,107-108,self,self,False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.get_pose,ADDED,,738-741,,"self, index, device",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.init_w_mono_disp,ADDED,,202-205,,"self, start_idx, end_idx",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.normalize,CHANGED,161-168,236-243,self,self,False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.project_images_with_mask,ADDED,,288-330,,"self, images, pixel_positions, masks=None",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.reproject,RAW_IDENTICAL,171-179,246-254,"self, ii, jj","self, ii, jj",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.save_poses,ADDED,,824-835,,"self, path: str",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.save_video,ADDED,,798-822,,"self, path: str",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.set_dirty,ADDED,,794-796,,"self, index_start, index_end",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.to,REMOVED,43-58,,"self, device='cuda'",,True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.update_valid_depth_mask,ADDED,,758-792,,"self, up=True",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.upsample,RAW_IDENTICAL,155-159,224-228,"self, ix, mask","self, ix, mask",False
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.upsample_weight,ADDED,,230-234,,"self, weight",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.visualize_all_opt_params,ADDED,,609-724,,"self, out_directory=None, iteration='final'",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.visualize_all_opt_params.color_map,ADDED,,699-700,,"tensor, cmap='jet', vmin=0, vmax=1",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.visualize_uncertainty,ADDED,,381-606,,"self, target, weight, ii, jj, frame_choice='nearest', mode='Before'",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.visualize_uncertainty._pca_to_rgb_single,ADDED,,515-532,,"feature, scale_each=False",True
+VIDEO_STATE,core,droid_slam/depth_video.py,src/depth_video.py,DepthVideo.visualize_uncertainty.visualize_dino_feature_pca,ADDED,,483-512,,"features, save_path=None, scale_each=False",True
+ENTRY,not_relevant,droid_slam/droid.py,,Droid,REMOVED,16-85,,,,False
+ENTRY,not_relevant,droid_slam/droid.py,,Droid.__init__,REMOVED,17-42,,"self, args",,True
+ENTRY,not_relevant,droid_slam/droid.py,,Droid.load_weights,REMOVED,45-59,,"self, weights",,True
+ENTRY,not_relevant,droid_slam/droid.py,,Droid.terminate,REMOVED,71-85,,"self, stream=None",,True
+ENTRY,not_relevant,droid_slam/droid.py,,Droid.track,REMOVED,61-69,,"self, tstamp, image, depth=None, intrinsics=None",,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,DroidAsync,REMOVED,133-215,,,,False
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,DroidAsync.__init__,REMOVED,134-188,,"self, args",,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,DroidAsync.terminate,REMOVED,200-215,,"self, stream=None",,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,DroidAsync.track,REMOVED,190-198,,"self, tstamp, image, depth=None, intrinsics=None",,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM,ADDED,,26-347,,,False
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.__init__,ADDED,,27-69,,"self, cfg, stream: BaseDataset",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM._eval_depth_all,ADDED,,233-276,,"self, ate_statistics, global_scale, r_a, t_a",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.backend,ADDED,,128-143,,self,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.load_pretrained,ADDED,,71-87,,"self, cfg",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.mapping,ADDED,,112-125,,"self, pipe, q_main2vis, q_vis2main",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.run,ADDED,,278-347,,self,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.terminate,ADDED,,145-231,,self,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,SLAM.tracking,ADDED,,89-110,,"self, pipe",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,backend_process,REMOVED,37-130,,"args, depth_video1, depth_video2, device='cuda'",,True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,gen_pose_matrix,ADDED,,349-353,,"R, T",True
+ORCHESTRATION,core,droid_slam/droid_async.py,src/slam.py,load_network,REMOVED,19-34,,"weights, device='cuda:0'",,True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,Backend,ADDED,,19-120,,,False
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,Backend.__init__,ADDED,,20-39,,"self, net, video, cfg",True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,Backend.backend_ba,ADDED,,42-67,,"self, t_start, t_end, steps, graph, nms, radius, thresh, max_factors, t_start_loop=None, loop=False, motion_only=False, enable_wq=True, enable_update_uncer=False, enable_udba=False, visualization_stage=False, save_edges_weights=False",True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,Backend.dense_ba,ADDED,,70-91,,"self, steps=6, enable_wq=True, enable_update_uncer=False, enable_udba=False, save_edges_weights=False",True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,Backend.loop_ba,ADDED,,96-120,,"self, t_start, t_end, steps=6, motion_only=False, local_graph=None, enable_wq=True",True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidAsyncBackend,REMOVED,45-88,,,,False
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidAsyncBackend.__call__,REMOVED,70-88,,"self, steps=12, normalize=True",,True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidAsyncBackend.__init__,REMOVED,46-67,,"self, net, video, args, max_age=7",,True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidBackend,REMOVED,9-42,,,,False
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidBackend.__call__,REMOVED,25-42,,"self, steps=12, normalize=True",,True
+BACKEND,core,droid_slam/droid_backend.py,src/backend.py,DroidBackend.__init__,REMOVED,10-22,,"self, net, video, args",,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend,REMOVED,13-164,,,,False
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend.__call__,REMOVED,153-164,,self,,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend.__init__,REMOVED,14-47,,"self, net, video, args",,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend._init_next_state,REMOVED,49-63,,self,,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend._initialize,REMOVED,119-151,,self,,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,DroidFrontend._update,REMOVED,65-117,,self,,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend,ADDED,,6-225,,,False
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend.__call__,ADDED,,214-225,,"self, force_to_add_keyframe, event_writer: SummaryWriter",True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend.__init__,ADDED,,8-54,,"self, net, video, cfg",True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend.__initialize,ADDED,,127-171,,self,True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend.__update,ADDED,,56-125,,"self, force_to_add_keyframe, event_writer: SummaryWriter",True
+FRONTEND,core,droid_slam/droid_frontend.py,src/frontend.py,Frontend.initialize_second_stage,ADDED,,173-212,,"self, event_writer: SummaryWriter",True
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,DroidNet,CHANGED,146-222,156-161,nn.Module,nn.Module,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,DroidNet.__init__,CHANGED,147-151,157-161,self,self,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,DroidNet.extract_features,REMOVED,154-169,,"self, images",,True
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,DroidNet.forward,REMOVED,172-222,,"self, Gs, images, disps, intrinsics, graph=None, num_steps=12, fixedp=2",,True
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,GraphAgg,CHANGED,44-75,48-80,nn.Module,nn.Module,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,GraphAgg.__init__,CHANGED,45-57,49-63,self,self,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,GraphAgg.forward,CHANGED,59-75,65-80,"self, net, ii","self, net, ii",False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,UpdateModule,CHANGED,78-143,83-153,nn.Module,nn.Module,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,UpdateModule.__init__,CHANGED,79-109,84-118,self,self,False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,UpdateModule.forward,CHANGED,111-143,120-153,"self, net, inp, corr, flow=None, ii=None, jj=None","self, net, inp, corr, flow=None, ii=None, jj=None",False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,cvx_upsample,CHANGED,21-35,23-37,"data, mask","data, mask",False
+LEARNED_UPDATE,core,droid_slam/droid_net.py,src/modules/droid_net/droid_net.py,upsample_disp,STRUCTURAL_EQUAL,37-41,40-45,"disp, mask","disp, mask",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph,CHANGED,19-412,9-566,,,False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.__filter_repeated_edges,CHANGED,52-68,42-69,"self, ii, jj","self, ii, jj",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.__init__,CHANGED,20-50,11-40,"self, video, update_op, device='cuda', corr_impl='volume', max_factors=-1, upsample=False","self, video, update_op, device='cuda:0', corr_impl='volume', max_factors=-1",True
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.add_backend_proximity_factors,ADDED,,489-566,,"self, t_start, t_end, nms, radius, thresh, max_factors, beta, t_start_loop=None, loop=False",True
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.add_factors,CHANGED,99-150,113-159,"self, ii, jj, remove=False","self, ii, jj, remove=False",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.add_neighborhood_factors,CHANGED,332-344,345-353,"self, t0, t1, r=3","self, t0, t1, r=3",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.add_proximity_factors,CHANGED,346-412,426-486,"self, t0=0, t1=0, rad=2, nms=2, beta=0.25, thresh=16.0, remove=False","self, t0=0, t1=0, rad=2, nms=2, beta=0.25, thresh=16.0, remove=False",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.clear_edges,CHANGED,93-96,94-109,self,self,False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.filter_edges,RAW_IDENTICAL,84-91,85-92,self,self,False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.nms_invalidate_,ADDED,,357-413,,"self, d, ii, jj, t0, t1, t, nms",True
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.precompute_offsets,ADDED,,416-423,,"self, nms",True
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.print_edges,RAW_IDENTICAL,70-82,71-83,self,self,False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.rm_factors,RAW_IDENTICAL,154-178,162-186,"self, mask, store=False","self, mask, store=False",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.rm_keyframe,CHANGED,182-212,190-231,"self, ix","self, ix",False
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.update,CHANGED,215-263,236-284,"self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-07, motion_only=False","self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-07, motion_only=False, enable_update_uncer=True, enable_udba=True, visualization_stage=False",True
+FACTOR_GRAPH,core,droid_slam/factor_graph.py,src/factor_graph.py,FactorGraph.update_lowmem,CHANGED,267-330,289-342,"self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-07, steps=8","self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-07, steps=8, enable_wq=True, enable_update_uncer=True, enable_udba=True, visualization_stage=False, save_edges_weights=False",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,BA,CHANGED,31-106,48-135,"target, weight, eta, poses, disps, intrinsics, ii, jj, fixedp=1, rig=1","target, weight, eta, poses, disps, intrinsics, ii, jj, sensor_disps=None, lm=0.0001, ep=0.1, alpha=0.05, fixedp=1, rig=1",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,BA_with_scale_shift,ADDED,,142-230,,"target, weight, eta, poses, disps, intrinsics, ii, jj, mono_disps, scales=None, shifts=None, valid_depth_mask=None, ignore_frames=0, lm=0.0001, ep=0.1, alpha=1.0, fixedp=1, rig=1",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,MoBA,RAW_IDENTICAL,109-157,237-285,"target, weight, eta, poses, disps, intrinsics, ii, jj, fixedp=1, rig=1","target, weight, eta, poses, disps, intrinsics, ii, jj, fixedp=1, rig=1",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,disp_retr,RAW_IDENTICAL,21-23,34-36,"disps, dz, ii","disps, dz, ii",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,pose_retr,RAW_IDENTICAL,26-28,43-45,"poses, dx, ii","poses, dx, ii",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,safe_scatter_add_mat,RAW_IDENTICAL,12-14,25-27,"A, ii, jj, n, m","A, ii, jj, n, m",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,safe_scatter_add_vec,RAW_IDENTICAL,16-18,29-31,"b, ii, n","b, ii, n",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/ba.py,src/geom/ba.py,wq_retr,ADDED,,38-40,,"wqs, dwq, ii",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,CholeskySolver,CHANGED,5-30,20-56,torch.autograd.Function,,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,CholeskySolver.__call__,ADDED,,33-45,,"ctx, H, b",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,CholeskySolver.apply,ADDED,,23-31,,"H, b",True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,CholeskySolver.backward,RAW_IDENTICAL,22-30,48-56,"ctx, grad_x","ctx, grad_x",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,CholeskySolver.forward,REMOVED,7-19,,"ctx, H, b",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,block_solve,RAW_IDENTICAL,32-43,58-69,"H, b, ep=0.1, lm=0.0001","H, b, ep=0.1, lm=0.0001",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/chol.py,src/geom/chol.py,schur_solve,RAW_IDENTICAL,46-73,72-99,"H, E, C, v, w, ep=0.1, lm=0.0001, sless=False","H, E, C, v, w, ep=0.1, lm=0.0001, sless=False",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,build_frame_graph,REMOVED,37-68,,"poses, disps, intrinsics, num=16, thresh=24.0, r=2",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,build_frame_graph_v2,REMOVED,72-112,,"poses, disps, intrinsics, num=16, thresh=24.0, r=2",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,graph_to_edge_list,REMOVED,10-21,,graph,,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,keyframe_indicies,REMOVED,23-24,,graph,,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,meshgrid,REMOVED,26-28,,"m, n, device='cuda'",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/graph_utils.py,,neighbourhood_graph,REMOVED,30-34,,"n, r",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/losses.py,,fit_scale,REMOVED,21-27,,"Ps, Gs",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/losses.py,,flow_loss,REMOVED,89-118,,"Ps, disps, poses_est, disps_est, intrinsics, graph, gamma=0.9",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/losses.py,,geodesic_loss,REMOVED,30-74,,"Ps, Gs, graph, gamma=0.9, do_scale=True",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/losses.py,,pose_metrics,REMOVED,9-18,,dE,,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/geom/losses.py,,residual_loss,REMOVED,77-86,,"residuals, gamma=0.9",,True
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,actp,CHANGED,85-162,81-108,"Gij, X0, jacobian=False","Gij, X0, jacobian=False",False
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,coords_grid,CHANGED,13-20,25-30,"ht, wd, **kwargs","ht, wd, device",True
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,extract_intrinsics,STRUCTURAL_EQUAL,9-10,22-23,intrinsics,intrinsics,False
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,induced_flow,CHANGED,201-214,141-152,"poses, disps, intrinsics, ii, jj","poses, disps, intrinsics, ii, jj",False
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,iproj,CHANGED,23-44,32-51,"disps, intrinsics, jacobian=False","disps, intrinsics, jacobian=False",False
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,proj,CHANGED,47-82,53-79,"Xs, intrinsics, jacobian=False, return_depth=False","Xs, intrinsics, jacobian=False, return_depth=False",False
+PROJECTION,core,droid_slam/geom/projective_ops.py,src/geom/projective_ops.py,projective_transform,CHANGED,165-198,110-139,"poses, depths, intrinsics, ii, jj, jacobian=False, return_depth=False","poses, depths, intrinsics, ii, jj, jacobian=False, return_depth=False",False
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger,REMOVED,8-53,,,,False
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger.__init__,REMOVED,9-14,,"self, name, scheduler",,True
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger._print_training_status,REMOVED,16-32,,self,,True
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger.close,REMOVED,52-53,,self,,True
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger.push,REMOVED,34-46,,"self, metrics",,True
+SUPPORT,not_relevant,droid_slam/logger.py,,Logger.write_dict,REMOVED,48-50,,"self, results",,True
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradClip,STRUCTURAL_EQUAL,7-17,21-32,torch.autograd.Function,torch.autograd.Function,False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradClip.backward,STRUCTURAL_EQUAL,13-17,27-32,"ctx, grad_x","ctx, grad_x",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradClip.forward,RAW_IDENTICAL,9-10,23-24,"ctx, x","ctx, x",False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradientClip,RAW_IDENTICAL,19-24,35-40,nn.Module,nn.Module,False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradientClip.__init__,RAW_IDENTICAL,20-21,36-37,self,self,False
+GEOM_AND_NET_HELPERS,mixed,droid_slam/modules/clipping.py,src/modules/droid_net/clipping.py,GradientClip.forward,RAW_IDENTICAL,23-24,39-40,"self, x","self, x",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,AltCorrBlock,CHANGED,89-117,111-159,,,False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,AltCorrBlock.__call__,CHANGED,104-117,147-159,"self, coords, ii, jj","self, coords, ii, jj",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,AltCorrBlock.__init__,CHANGED,90-101,112-124,"self, fmaps, num_levels=4, radius=3","self, fmaps, num_levels=4, radius=3",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,AltCorrBlock.corr_fn,ADDED,,126-145,,"self, coords, ii, jj",True
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock,CHANGED,23-71,39-90,,,False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock.__call__,STRUCTURAL_EQUAL,40-50,57-67,"self, coords","self, coords",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock.__getitem__,STRUCTURAL_EQUAL,57-60,75-79,"self, index","self, index",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock.__init__,CHANGED,24-38,40-55,"self, fmap1, fmap2, num_levels=4, radius=3","self, fmap1, fmap2, num_levels=4, radius=3",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock.cat,CHANGED,52-55,69-73,"self, other","self, other",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrBlock.corr,STRUCTURAL_EQUAL,64-71,82-90,"fmap1, fmap2","fmap1, fmap2",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrLayer,CHANGED,74-87,93-108,torch.autograd.Function,torch.autograd.Function,False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrLayer.backward,CHANGED,83-87,102-108,"ctx, grad_corr","ctx, grad_corr",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrLayer.forward,CHANGED,76-80,95-99,"ctx, fmap1, fmap2, coords, ii, jj, r","ctx, fmap1, fmap2, coords, r",True
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrSampler,STRUCTURAL_EQUAL,6-20,21-36,torch.autograd.Function,torch.autograd.Function,False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrSampler.backward,STRUCTURAL_EQUAL,16-20,31-36,"ctx, grad_output","ctx, grad_output",False
+CORRELATION,core,droid_slam/modules/corr.py,src/modules/droid_net/corr.py,CorrSampler.forward,STRUCTURAL_EQUAL,9-13,23-28,"ctx, volume, coords, radius","ctx, volume, coords, radius",False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BasicEncoder,CHANGED,118-198,75-141,nn.Module,nn.Module,False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BasicEncoder.__init__,CHANGED,119-173,76-113,"self, output_dim=128, norm_fn='batch', dropout=0.0, multidim=False","self, out_dim, norm_fn='batch'",True
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BasicEncoder._make_layer,CHANGED,175-181,115-122,"self, dim, stride=1","self, dim, stride=1",False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BasicEncoder.forward,CHANGED,183-198,124-141,"self, x","self, x",False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BottleneckBlock,REMOVED,58-113,,nn.Module,,True
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BottleneckBlock.__init__,REMOVED,59-102,,"self, in_planes, planes, norm_fn='group', stride=1",,True
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,BottleneckBlock.forward,REMOVED,104-113,,"self, x",,True
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,ResidualBlock,CHANGED,6-55,18-69,nn.Module,nn.Module,False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,ResidualBlock.__init__,CHANGED,7-45,19-59,"self, in_planes, planes, norm_fn='group', stride=1","self, in_planes, planes, norm_fn='group', stride=1",False
+ENCODER,core,droid_slam/modules/extractor.py,src/modules/droid_net/extractor.py,ResidualBlock.forward,RAW_IDENTICAL,47-55,61-69,"self, x","self, x",False
+RECURRENCE,core,droid_slam/modules/gru.py,src/modules/droid_net/gru.py,ConvGRU,CHANGED,5-32,19-48,nn.Module,nn.Module,False
+RECURRENCE,core,droid_slam/modules/gru.py,src/modules/droid_net/gru.py,ConvGRU.__init__,CHANGED,6-17,20-32,"self, h_planes=128, i_planes=128","self, h_planes=128, i_planes=128",False
+RECURRENCE,core,droid_slam/modules/gru.py,src/modules/droid_net/gru.py,ConvGRU.forward,CHANGED,19-32,34-48,"self, net, *inputs","self, net, *inputs",False
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter,CHANGED,19-91,10-120,,,False
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter.__context_encoder,RAW_IDENTICAL,40-43,40-43,"self, image","self, image",False
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter.__feature_encoder,RAW_IDENTICAL,46-48,46-48,"self, image","self, image",False
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter.__init__,CHANGED,22-37,15-37,"self, net, video, thresh=2.5, device='cuda'","self, net, video, cfg, thresh=2.5, device='cuda:0'",True
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter.get_img_feature,ADDED,,118-120,,"self, tstamp, image, suffix=''",True
+MOTION_FILTER,core,droid_slam/motion_filter.py,src/motion_filter.py,MotionFilter.track,CHANGED,52-91,52-115,"self, tstamp, image, depth=None, intrinsics=None","self, tstamp, image, intrinsics=None",True
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller,CHANGED,19-110,10-142,,,False
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller.__call__,CHANGED,87-110,100-142,"self, image_stream","self, image_stream: BaseDataset",True
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller.__feature_encoder,RAW_IDENTICAL,38-40,38-40,"self, image","self, image",False
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller.__fill,CHANGED,42-84,42-97,"self, tstamps, images, intrinsics","self, timestamps, images, depths, intrinsics, dino_features",True
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller.__init__,CHANGED,22-35,14-31,"self, net, video, device='cuda'","self, cfg, net, video, printer, device='cuda:0'",True
+FILLER,core,droid_slam/trajectory_filler.py,src/trajectory_filler.py,PoseTrajectoryFiller.setup_feature_extractor,ADDED,,33-35,,self,True
+VIEWER,engineering,droid_slam/visualization.py,,create_camera_actor,REMOVED,36-44,,"g, scale=0.05",,True
+VIEWER,engineering,droid_slam/visualization.py,,create_point_actor,REMOVED,46-51,,"points, colors",,True
+VIEWER,engineering,droid_slam/visualization.py,,droid_visualization,REMOVED,53-160,,"video, device='cuda:0'",,True
+VIEWER,engineering,droid_slam/visualization.py,,droid_visualization.animation_callback,REMOVED,77-148,,vis,,True
+VIEWER,engineering,droid_slam/visualization.py,,droid_visualization.decrease_filter,REMOVED,72-75,,vis,,True
+VIEWER,engineering,droid_slam/visualization.py,,droid_visualization.increase_filter,REMOVED,67-70,,vis,,True
+VIEWER,engineering,droid_slam/visualization.py,,white_balance,REMOVED,26-34,,img,,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera,REMOVED,11-76,,Camera,,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.__init__,REMOVED,12-31,,"self, target: Union[glm.vec3, tuple[float, float, float]]=(0.0, 0.0, 0.0), radius: float=2.0, angles: tuple[float, float]=(60.0, -100.0), **kwargs: Any",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.matrix,REMOVED,52-59,,self,,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.pan_sensitivity,REMOVED,34-35,,self,,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.pan_sensitivity@38,REMOVED,38-39,,"self, value: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.pan_state,REMOVED,61-76,,"self, dx: float, dy: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.rot_state,REMOVED,41-45,,"self, dx: float, dy: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitCamera.zoom_state,REMOVED,48-49,,"self, y_offset: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow,REMOVED,80-108,,moderngl_window.WindowConfig,,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow.__init__,REMOVED,86-88,,"self, **kwargs",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow.on_key_event,REMOVED,90-95,,"self, key, action, modifiers",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow.on_mouse_drag_event,REMOVED,97-102,,"self, x: int, y: int, dx: float, dy: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow.on_mouse_scroll_event,REMOVED,104-105,,"self, x_offset: float, y_offset: float",,True
+VIEWER,engineering,droid_slam/visualizer/camera.py,,OrbitDragCameraWindow.on_resize,REMOVED,107-108,,"self, width: int, height: int",,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,DroidVisualizer,REMOVED,70-243,,OrbitDragCameraWindow,,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,DroidVisualizer.__init__,REMOVED,79-188,,"self, **kwargs",,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,DroidVisualizer.on_render,REMOVED,190-243,,"self, time: float, frame_time: float",,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,_camera_lines,ADDED,,32-34,,scale=0.05,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,_rr_init,ADDED,,43-58,,app_id: str,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,_to_rr_transform,ADDED,,36-41,,mat4,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,droid_visualization_rerun,ADDED,,60-196,,"video, device='cuda:0', app_id='droid_viz', web_port=9876, record_path=None, warmup=8, filter_thresh=0.005, scale=1.0, exit_event=None",True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,merge_depths_and_poses,REMOVED,41-67,,"depth_video1, depth_video2",,True
+VIEWER,engineering,droid_slam/visualizer/droid_visualizer.py,src/utils/droid_visualization_rerun.py,visualization_fn,REMOVED,246-252,,"depth_video1, depth_video2",,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/parse_results.py,,extract_rmse_from_file,REMOVED,5-20,,filepath,,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_eth3d.py,,image_stream,REMOVED,26-57,,"datapath, use_depth=False, stride=1",,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_eth3d.py,,show_image,REMOVED,21-24,,image,,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_euroc.py,,image_stream,REMOVED,28-81,,"datapath, image_size=[320, 512], stereo=False, stride=1",,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_euroc.py,,show_image,REMOVED,23-26,,image,,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_tartanair.py,,image_stream,REMOVED,28-55,,"datapath, image_size=[384, 512], intrinsics_vec=[320.0, 320.0, 320.0, 240.0], stereo=False",,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_tum.py,,image_stream,REMOVED,24-56,,datapath,,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/test_tum.py,,show_image,REMOVED,19-22,,image,,True
+DATA_TRAIN_EVAL,not_relevant,evaluation_scripts/validate_tartanair.py,,image_stream,REMOVED,18-37,,"datapath, image_size=[384, 512], intrinsics_vec=[320.0, 320.0, 320.0, 240.0], stereo=False",,True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,altcorr_backward_kernel,ADDED,,164-297,,"const torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap1, const torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap2, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> coords, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr_grad, torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap1_grad, torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap2_grad, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> coords_grad, int r",True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,altcorr_cuda_backward,CHANGED,175-225,332-367,"torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor ii, torch::Tensor jj, torch::Tensor grad, int radius","torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor corr_grad, int radius",True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,altcorr_cuda_forward,CHANGED,132-172,301-330,"torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor ii, torch::Tensor jj, int radius","torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, int radius",True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,altcorr_forward_kernel,ADDED,,39-160,,"const torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap1, const torch::PackedTensorAccessor32<scalar_t,4,torch::RestrictPtrTraits> fmap2, const torch::PackedTensorAccessor32<float,5,torch::RestrictPtrTraits> coords, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr, int r",True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,corr_backward_kernel,REMOVED,79-129,,"int R, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap1, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap2, const torch::PackedTensorAccessor32<float,5,torch::RestrictPtrTraits> coords, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> us, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> vs, const torch::PackedTensorAccessor32<float,6,torch::RestrictPtrTraits> corr_grad, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap1_grad, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap2_grad",,True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,corr_forward_kernel,REMOVED,25-75,,"int R, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap1, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> fmap2, const torch::PackedTensorAccessor32<float,5,torch::RestrictPtrTraits> coords, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> us, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> vs, torch::PackedTensorAccessor32<scalar_t,6,torch::RestrictPtrTraits> corr",,True
+CORRELATION_CUDA,core,src/altcorr_kernel.cu,src/lib/altcorr_kernel.cu,within_bounds,RAW_IDENTICAL,19-21,34-36,"int h, int w, int H, int W","int h, int w, int H, int W",False
+CORRELATION_CUDA,core,src/correlation_kernels.cu,src/lib/correlation_kernels.cu,corr_index_backward_kernel,RAW_IDENTICAL,75-125,85-135,"const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr_grad, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> volume_grad, int r","const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr_grad, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> volume_grad, int r",False
+CORRELATION_CUDA,core,src/correlation_kernels.cu,src/lib/correlation_kernels.cu,corr_index_cuda_backward,CHANGED,158-186,168-196,"torch::Tensor volume, torch::Tensor coords, torch::Tensor corr_grad, int radius","torch::Tensor volume, torch::Tensor coords, torch::Tensor corr_grad, int radius",False
+CORRELATION_CUDA,core,src/correlation_kernels.cu,src/lib/correlation_kernels.cu,corr_index_cuda_forward,CHANGED,127-156,137-166,"torch::Tensor volume, torch::Tensor coords, int radius","torch::Tensor volume, torch::Tensor coords, int radius",False
+CORRELATION_CUDA,core,src/correlation_kernels.cu,src/lib/correlation_kernels.cu,corr_index_forward_kernel,RAW_IDENTICAL,21-71,31-81,"const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> volume, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr, int r","const torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> volume, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, torch::PackedTensorAccessor32<scalar_t,5,torch::RestrictPtrTraits> corr, int r",False
+CORRELATION_CUDA,core,src/correlation_kernels.cu,src/lib/correlation_kernels.cu,within_bounds,RAW_IDENTICAL,16-18,26-28,"int h, int w, int H, int W","int h, int w, int H, int W",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,PYBIND11_MODULE,RAW_IDENTICAL,246-259,287-300,"TORCH_EXTENSION_NAME, m","TORCH_EXTENSION_NAME, m",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,altcorr_backward,CHANGED,212-226,255-267,"torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor corr_grad, torch::Tensor ii, torch::Tensor jj, int radius","torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor corr_grad, int radius",True
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,altcorr_forward,CHANGED,198-210,243-253,"torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, torch::Tensor ii, torch::Tensor jj, int radius","torch::Tensor fmap1, torch::Tensor fmap2, torch::Tensor coords, int radius",True
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,ba,CHANGED,93-122,118-167,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor disps_sens, torch::Tensor targets, torch::Tensor weights, torch::Tensor eta, torch::Tensor ii, torch::Tensor jj, const int t0, const int t1, const int iterations, const float lm, const float ep, const bool motion_only","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor disps_sens, torch::Tensor targets, torch::Tensor weights, torch::Tensor uncertainties, torch::Tensor temp_y_cdot, torch::Tensor dino_feats, torch::Tensor affine_weights, torch::Tensor eta, torch::Tensor ii, torch::Tensor jj, const int t0, const int t1, const int iterations, const float lm, const float ep, const float gamma_data, const float gamma_prior, const float gamma_depth, const float lr, const float weight_decay, const bool motion_only, const bool depth_only, const bool enable_update_uncer, const bool enable_udba, const bool enable_affine_transform, const bool enable_bidirectional_uncer, const bool debug",True
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,corr_index_backward,RAW_IDENTICAL,185-196,230-241,"torch::Tensor volume, torch::Tensor coords, torch::Tensor corr_grad, int radius","torch::Tensor volume, torch::Tensor coords, torch::Tensor corr_grad, int radius",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,corr_index_forward,RAW_IDENTICAL,175-183,220-228,"torch::Tensor volume, torch::Tensor coords, int radius","torch::Tensor volume, torch::Tensor coords, int radius",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,depth_filter,RAW_IDENTICAL,228-242,270-284,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ix, torch::Tensor thresh","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ix, torch::Tensor thresh",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,frame_distance,RAW_IDENTICAL,125-141,170-186,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj, const float beta","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj, const float beta",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,iproj,RAW_IDENTICAL,162-171,207-216,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics",False
+BA_BINDING,core,src/droid.cpp,src/lib/droid.cpp,projmap,RAW_IDENTICAL,144-159,189-204,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,EEt6x6_kernel,CHANGED,1010-1065,1098-1153,"const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Q, const torch::PackedTensorAccessor32<LongType,2,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> S","const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Q, const torch::PackedTensorAccessor32<long,2,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> S",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,Ev6x1_kernel,CHANGED,1068-1102,1156-1190,"const torch::PackedTensorAccessor32<float, 3, torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float, 2,torch::RestrictPtrTraits> Q, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> w, const torch::PackedTensorAccessor32<LongType,2,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> v","const torch::PackedTensorAccessor32<float, 3, torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float, 2,torch::RestrictPtrTraits> Q, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> w, const torch::PackedTensorAccessor32<long,2,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> v",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,EvT6x1_kernel,CHANGED,1104-1124,1192-1212,"const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> x, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> w","const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> E, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> x, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> idx, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> w",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP,CHANGED,290-387,295-435,"k, ht*wd","k, ht*wd",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@1548,ADDED,,1548-1660,,"k, ht*wd",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@1708,ADDED,,1708-1721,,"k, ht*wd",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@1742,ADDED,,1742-1756,,"k, ht*wd",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@1758,ADDED,,1758-1760,,"i, dim_feat + 1",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@498,REMOVED,498-524,,"k, ht*wd",,True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@546,ADDED,,546-572,,"k, ht*wd",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@595,REMOVED,595-646,,"k, ht*wd",,True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,GPU_1D_KERNEL_LOOP@643,ADDED,,643-694,,"k, ht*wd",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,SparseBlock,RAW_IDENTICAL,1132-1135,1220-1223,"int N, int M","int N, int M",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,SparseBlock@1137,REMOVED,1137-1138,,"Eigen::SparseMatrix<double> const& A, Eigen::VectorX<double> const& b, int N, int M",,True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,SparseBlock@1225,ADDED,,1225-1226,,"Eigen::SparseMatrix<double> const& A, Eigen::VectorX<double> const& b, int N, int M",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,accum_cuda,CHANGED,957-1007,1045-1095,"torch::Tensor data, torch::Tensor ix, torch::Tensor jx","torch::Tensor data, torch::Tensor ix, torch::Tensor jx",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,accum_kernel,CHANGED,863-883,911-931,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> inps, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> ptrs, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> idxs, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> outs","const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> inps, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> ptrs, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> idxs, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> outs",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,actSE3,RAW_IDENTICAL,80-86,82-88,"const float *t, const float *q, const float *X, float *Y","const float *t, const float *q, const float *X, float *Y",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,actSO3,RAW_IDENTICAL,68-77,70-79,"const float *q, const float *X, float *Y","const float *q, const float *X, float *Y",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,adjSE3,RAW_IDENTICAL,89-103,91-105,"const float *t, const float *q, const float *X, float *Y","const float *t, const float *q, const float *X, float *Y",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,ba_cuda,CHANGED,1323-1443,1763-1998,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor disps_sens, torch::Tensor targets, torch::Tensor weights, torch::Tensor eta, torch::Tensor ii, torch::Tensor jj, const int t0, const int t1, const int iterations, const float lm, const float ep, const bool motion_only","torch::Tensor poses, // [buffer, 7] torch::Tensor disps, // [buffer, height, width] torch::Tensor intrinsics, torch::Tensor disps_sens, torch::Tensor targets, torch::Tensor weights, torch::Tensor uncertainties, torch::Tensor temp_y_cdot, torch::Tensor dino_feats, torch::Tensor affine_weights, torch::Tensor eta, // used for ragularizing of estimated disparity torch::Tensor ii, torch::Tensor jj, const int t0, const int t1, const int iterations, const float lm, // Levenberg-Marquardt damping factor const float ep, // const float gamma_data, const float gamma_prior, const float gamma_depth, const float lr, const float weight_decay, const bool motion_only, const bool depth_only, const bool enable_update_uncer, const bool enable_udba, const bool enable_affine_transform, const bool enable_bidirectional_uncer, const bool debug",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,bilinear_at,ADDED,,1411-1443,,"const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits>& feat, // [N,C,H,W] int b, int c, float u, float v",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,blockReduce,RAW_IDENTICAL,54-64,56-66,volatile float *sdata,volatile float *sdata,False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,crossInplace,RAW_IDENTICAL,144-154,146-156,"const float* a, float *b","const float* a, float *b",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,depth_filter_cuda,CHANGED,1500-1524,2055-2079,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ix, torch::Tensor thresh","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ix, torch::Tensor thresh",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,depth_filter_kernel,CHANGED,670-784,718-832,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> inds, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> thresh, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> counter","const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> inds, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> thresh, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> counter",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,dino_feats_projective_transform_kernel,ADDED,,1446-1663,,"const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> target, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> dino_feats, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Jii_data, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Jjj_data, torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> kf_count, torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> loss_data, const bool debug",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,dino_feats_similarity_kernel,ADDED,,1665-1686,,"const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> dino_feats, const int idx1, const int idx2, const int i, const int j",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,disp_retr_kernel,CHANGED,942-955,990-1003,"torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> dz, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> inds","torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> dz, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> inds",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,expSE3,RAW_IDENTICAL,157-184,159-186,"const float *xi, float* t, float* q","const float *xi, float* t, float* q",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,expSO3,RAW_IDENTICAL,120-141,122-143,"const float *phi, float* q","const float *phi, float* q",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,frame_distance_cuda,CHANGED,1447-1469,2002-2024,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj, const float beta","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj, const float beta",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,frame_distance_kernel,CHANGED,527-666,575-714,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> dist, const float beta","const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> dist, const float beta",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,iproj_cuda,RAW_IDENTICAL,1527-1550,2082-2105,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,iproj_kernel,RAW_IDENTICAL,788-859,836-907,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> points","const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> points",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,linear_transform_kernel,ADDED,,1725-1761,,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> J_total, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> J_linear, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> dino_feats, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> temp_y_cdot, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> kx",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,operator-,RAW_IDENTICAL,1184-1186,1272-1274,const SparseBlock& S,const SparseBlock& S,False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,pose_retr_kernel,RAW_IDENTICAL,907-940,955-988,"torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> dx, const int t0, const int t1","torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> dx, const int t0, const int t1",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,prior_regularization_kernel,ADDED,,1688-1723,,"const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> J_prior, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> kx, torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> loss_prior, const bool debug",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,projective_transform_kernel,CHANGED,185-433,187-481,"const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> target, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> weight, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> Hs, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> vs, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> Eii, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> Eij, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Cii, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> bz","const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> target, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> weight, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> Hs, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> vs, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> Eii, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> Eij, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> Cii, torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> bz, const bool enable_udba, const bool enable_bidirectional_uncer",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,projmap_cuda,CHANGED,1472-1497,2027-2052,"torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj","torch::Tensor poses, torch::Tensor disps, torch::Tensor intrinsics, torch::Tensor ii, torch::Tensor jj",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,projmap_kernel,CHANGED,436-525,484-573,"const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<LongType,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> valid","const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> poses, const torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> disps, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> intrinsics, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> ii, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> jj, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> coords, torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> valid",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,relSE3,RAW_IDENTICAL,106-116,108-118,"const float *ti, const float *qi, const float *tj, const float *qj, float *tij, float *qij","const float *ti, const float *qi, const float *tj, const float *qj, float *tij, float *qij",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,retrSE3,RAW_IDENTICAL,887-904,935-952,"const float *xi, const float* t, const float* q, float* t1, float* q1","const float *xi, const float* t, const float* q, float* t1, float* q1",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,schur_block,CHANGED,1231-1320,1319-1408,"torch::Tensor E, torch::Tensor Q, torch::Tensor w, torch::Tensor ii, torch::Tensor jj, torch::Tensor kk, const int t0, const int t1","torch::Tensor E, torch::Tensor Q, torch::Tensor w, torch::Tensor ii, torch::Tensor jj, torch::Tensor kk, const int t0, const int t1",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,solve,RAW_IDENTICAL,1201-1222,1289-1310,"const float lm=0.0001, const float ep=0.1","const float lm=0.0001, const float ep=0.1",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,uncertainty_retr_kernel,ADDED,,1005-1020,,"torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, const torch::PackedTensorAccessor32<float,2,torch::RestrictPtrTraits> du, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> inds",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,uncertainty_update_kernel,ADDED,,1022-1043,,"torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> uncertainties, torch::PackedTensorAccessor32<float,3,torch::RestrictPtrTraits> temp_y_cdot, const torch::PackedTensorAccessor32<float,4,torch::RestrictPtrTraits> dino_feats, const torch::PackedTensorAccessor32<float,1,torch::RestrictPtrTraits> affine_weights, const torch::PackedTensorAccessor32<long,1,torch::RestrictPtrTraits> inds",True
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,update_lhs,CHANGED,1140-1165,1228-1253,"torch::Tensor As, torch::Tensor ii, torch::Tensor jj","torch::Tensor As, torch::Tensor ii, torch::Tensor jj",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,update_rhs,CHANGED,1167-1182,1255-1270,"torch::Tensor bs, torch::Tensor ii","torch::Tensor bs, torch::Tensor ii",False
+BA_NATIVE,core,src/droid_kernels.cu,src/lib/droid_kernels.cu,warpReduce,RAW_IDENTICAL,45-52,47-54,"volatile float *sdata, unsigned int tid","volatile float *sdata, unsigned int tid",False
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/download_training.py,,_help,REMOVED,48-50,,,,False
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/download_training.py,,get_args,REMOVED,5-47,,,,False
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_ate_scale.py,,align,REMOVED,49-100,,"model, data, calc_scale=False",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_ate_scale.py,,plot_traj,REMOVED,102-131,,"ax, stamps, traj, style, color, label",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,calculate_ave_errors,REMOVED,86-103,,"errors, lengths=[10, 20, 30, 40, 50, 60, 70, 80]",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,calculate_sequence_error,REMOVED,45-84,,"poses_gt, poses_result, lengths=[10, 20, 30, 40, 50, 60, 70, 80]",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,evaluate,REMOVED,105-109,,"gt, data, rescale_=False",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,last_frame_from_segment_length,REMOVED,19-23,,"dist, first_frame, length",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,main,REMOVED,111-118,,,,False
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,rotation_error,REMOVED,25-31,,pose_error,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,trajectory_distances,REMOVED,9-17,,poses,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_kitti.py,,translation_error,REMOVED,33-37,,pose_error,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_rpe.py,,compute_angle,REMOVED,63-68,,transform,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_rpe.py,,compute_distance,REMOVED,57-61,,transform,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_rpe.py,,distances_along_trajectory,REMOVED,70-80,,traj,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_rpe.py,,evaluate_trajectory,REMOVED,83-136,,"traj_gt, traj_est, param_max_pairs=10000, param_fixed_delta=False, param_delta=1.0",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluate_rpe.py,,ominus,REMOVED,44-55,,"a, b",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,ATEEvaluator,REMOVED,28-55,,object,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,ATEEvaluator.__init__,REMOVED,29-30,,self,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,ATEEvaluator.evaluate,REMOVED,33-55,,"self, gt_traj, est_traj, scale",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,KittiEvaluator,REMOVED,83-91,,object,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,KittiEvaluator.__init__,REMOVED,84-85,,self,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,KittiEvaluator.evaluate,REMOVED,88-91,,"self, gt_SEs, est_SEs",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,RPEEvaluator,REMOVED,61-77,,object,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,RPEEvaluator.__init__,REMOVED,62-63,,self,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,RPEEvaluator.evaluate,REMOVED,66-77,,"self, gt_SEs, est_SEs",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,quats2SEs,REMOVED,20-23,,"gt_traj, est_traj",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/evaluator_base.py,,transform_trajs,REMOVED,11-18,,"gt_traj, est_traj, cal_scale",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/tartanair_evaluator.py,,TartanAirEvaluator,REMOVED,40-72,,,,False
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/tartanair_evaluator.py,,TartanAirEvaluator.__init__,REMOVED,41-44,,"self, scale=False, round=1",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/tartanair_evaluator.py,,TartanAirEvaluator.evaluate_one_trajectory,REMOVED,46-72,,"self, gt_traj, est_traj, scale=False, title=''",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/tartanair_evaluator.py,,plot_traj,REMOVED,12-35,,"gtposes, estposes, vis=False, savefigname=None, title=''",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,cam2ned,REMOVED,39-55,,traj,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,ned2cam,REMOVED,21-37,,traj,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,pose2trans,REMOVED,88-95,,pose_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,rescale,REMOVED,98-116,,"poses_gt, poses",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,rescale_bk,REMOVED,71-86,,"poses_gt, poses",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,shift0,REMOVED,7-19,,traj,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,timestamp_associate,REMOVED,123-162,,"first_list, second_list, max_difference",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,trajectory_scale,REMOVED,118-121,,"traj, scale",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/trajectory_transform.py,,trajectory_transform,REMOVED,58-69,,"gt_traj, est_traj",,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,SE2pos_quat,REMOVED,160-164,,SE_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,SE2se,REMOVED,32-36,,SE_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,SEs2ses,REMOVED,82-89,,motion_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,SO2quat,REMOVED,123-125,,SO_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,SO2so,REMOVED,38-39,,SO_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,line2mat,REMOVED,8-11,,line_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,motion2pose,REMOVED,13-21,,data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,pos_quat2SE,REMOVED,131-137,,quat_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,pos_quats2SE_matrices,REMOVED,149-158,,quat_datas,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,pos_quats2SEs,REMOVED,140-146,,quat_datas,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,pose2motion,REMOVED,23-30,,data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,quat2SO,REMOVED,127-128,,quat_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,quat2so,REMOVED,100-107,,quat_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,se2SE,REMOVED,44-48,,se_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,se_mean,REMOVED,50-58,,se_datas,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,ses2poses,REMOVED,69-80,,data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,ses_mean,REMOVED,60-67,,se_datas,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,so2SO,REMOVED,41-42,,so_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,so2quat,REMOVED,91-98,,so_data,,True
+DATA_TRAIN_EVAL,not_relevant,thirdparty/tartanair_tools/evaluation/transformation.py,,sos2quats,REMOVED,111-121,,"so_datas, mean_std=[[1], [1]]",,True
+DATA_TRAIN_EVAL,not_relevant,train.py,,setup_ddp,REMOVED,28-36,,"gpu, args",,True
+DATA_TRAIN_EVAL,not_relevant,train.py,,show_image,REMOVED,38-41,,image,,True
+DATA_TRAIN_EVAL,not_relevant,train.py,,train,REMOVED,43-142,,"gpu, args",,True
+VIEWER,engineering,view_reconstruction.py,,view_reconstruction,REMOVED,16-59,,"filename: str, filter_thresh=0.005, filter_count=2",,True

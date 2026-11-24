@@ -1,0 +1,245 @@
+{
+  "file_hashes": [
+    {
+      "path": "src/tracker.py",
+      "before_sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "after_sha256": "c43c1e81dcf3420e53f4efb3d6ceb1c90b8b20e96639ae198d2c678f180cddc3"
+    },
+    {
+      "path": "src/motion_filter.py",
+      "before_sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "after_sha256": "431dc5614d67e705c2b3889738f5760bd82fd0a7b21aa8102f296878f7922bd4"
+    },
+    {
+      "path": "src/frontend.py",
+      "before_sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "after_sha256": "85a38ab85896c65adeb09dc3274e18c7ebcd8dc9f887afb8a8bbdf42e4e1d1da"
+    },
+    {
+      "path": "src/slam.py",
+      "before_sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "after_sha256": "2b158db4ac2d40a3a51a8f39d0509b7e5b6ced4ab6b3aa29763ec9fee81fc0a6"
+    },
+    {
+      "path": "src/factor_graph.py",
+      "before_sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "after_sha256": "6eeb1a7e2ee98c2e7558f535de2034492f0c1e8affe5da1d383fd96bfb9d3b3e"
+    },
+    {
+      "path": "src/depth_video.py",
+      "before_sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "after_sha256": "79dd220b5b4d4f8c2c9b84baf930a3287b78638689f7ba9d2b960ba2a8a84ed2"
+    },
+    {
+      "path": "src/trajectory_filler.py",
+      "before_sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "after_sha256": "b8c8aa9648f7e1882cd0949ff197284cddc6f054ab0a0985afad15b5d5e28e42"
+    },
+    {
+      "path": "src/utils/eval_traj.py",
+      "before_sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "after_sha256": "93eb4030435eaa0af0865c8d188d06881fafdb4ca077bcf7320e8a1b9da150a2"
+    },
+    {
+      "path": "task003_observer.py",
+      "before_sha256": null,
+      "after_sha256": "7b34c8f34370e7a1e0663d32709f421cfd1be8c476b6f95c0ee1e75804e41804"
+    }
+  ],
+  "hash_binding": "Task 001 verified upstream blob ledger",
+  "source_hooks": [
+    {
+      "file": "src/tracker.py",
+      "previous_line": 58,
+      "position": "after",
+      "capture": "task003().start_tracking(self.video)"
+    },
+    {
+      "file": "src/tracker.py",
+      "previous_line": 67,
+      "position": "before",
+      "capture": "task003().input_frame(timestamp)"
+    },
+    {
+      "file": "src/tracker.py",
+      "previous_line": 69,
+      "position": "after",
+      "capture": "task003().decision(self.video, starting_count, self.frontend.is_initialized)"
+    },
+    {
+      "file": "src/tracker.py",
+      "previous_line": 121,
+      "position": "after",
+      "capture": "    task003().boundary(\"online_global_ba\", self.video)"
+    },
+    {
+      "file": "src/motion_filter.py",
+      "previous_line": 80,
+      "position": "after",
+      "capture": "task003().inserted(self.video, mono_depth, \"EXPLICIT_IDENTITY_AND_UNIT_DISPARITY\")"
+    },
+    {
+      "file": "src/motion_filter.py",
+      "previous_line": 97,
+      "position": "before",
+      "capture": "task003().motion_score(delta, self.thresh, force_to_add_keyframe)"
+    },
+    {
+      "file": "src/motion_filter.py",
+      "previous_line": 110,
+      "position": "after",
+      "capture": "task003().inserted(self.video, mono_depth, \"EXISTING_BUFFER_SLOT\")"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 71,
+      "position": "before",
+      "capture": "task003().context(\"frontend_local_predecision\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 77,
+      "position": "after",
+      "capture": "task003().distance(self.video, d, self.keyframe_thresh)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 95,
+      "position": "before",
+      "capture": "task003().context(\"frontend_local_loop_fallback\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 107,
+      "position": "before",
+      "capture": "task003().context(\"frontend_local_retained\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 130,
+      "position": "after",
+      "capture": "task003().boundary(\"frontend_init_begin\", self.video)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 138,
+      "position": "before",
+      "capture": "task003().context(\"frontend_init_neighborhood\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 145,
+      "position": "before",
+      "capture": "task003().context(\"frontend_init_proximity\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 171,
+      "position": "after",
+      "capture": "task003().boundary(\"frontend_init_first_done\", self.video)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 175,
+      "position": "after",
+      "capture": "task003().boundary(\"frontend_init_second_begin\", self.video)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 184,
+      "position": "before",
+      "capture": "task003().context(\"frontend_init_second\", itr+1)"
+    },
+    {
+      "file": "src/frontend.py",
+      "previous_line": 212,
+      "position": "after",
+      "capture": "task003().boundary(\"frontend_init_second_done\", self.video)"
+    },
+    {
+      "file": "src/slam.py",
+      "previous_line": 131,
+      "position": "before",
+      "capture": "task003().boundary(\"final_pre\", self.video)"
+    },
+    {
+      "file": "src/slam.py",
+      "previous_line": 137,
+      "position": "before",
+      "capture": "task003().boundary(\"final_ba_phase_1\", self.video)"
+    },
+    {
+      "file": "src/slam.py",
+      "previous_line": 137,
+      "position": "after",
+      "capture": "task003().boundary(\"final_phase_1_done\", self.video)"
+    },
+    {
+      "file": "src/slam.py",
+      "previous_line": 139,
+      "position": "before",
+      "capture": "task003().boundary(\"final_ba_phase_2\", self.video)"
+    },
+    {
+      "file": "src/slam.py",
+      "previous_line": 139,
+      "position": "after",
+      "capture": "task003().boundary(\"final_phase_2_done\", self.video)"
+    },
+    {
+      "file": "src/factor_graph.py",
+      "previous_line": 331,
+      "position": "before",
+      "capture": "task003().context(task003().stage, step+1)"
+    },
+    {
+      "file": "src/depth_video.py",
+      "previous_line": 347,
+      "position": "before",
+      "capture": "task003().ba_before(self, target, weight, eta, ii, jj, t0, t1, iters, lm, ep, lr, weight_decay, motion_only, enable_update_uncer, enable_udba)"
+    },
+    {
+      "file": "src/depth_video.py",
+      "previous_line": 378,
+      "position": "before",
+      "capture": "task003().ba_after(self)"
+    },
+    {
+      "file": "src/depth_video.py",
+      "previous_line": 378,
+      "position": "after",
+      "capture": "task003().ba_after(self, clamped=True)"
+    },
+    {
+      "file": "src/trajectory_filler.py",
+      "previous_line": 78,
+      "position": "after",
+      "capture": "task003().filler_begin(self.video, N, M, t0, t1)"
+    },
+    {
+      "file": "src/trajectory_filler.py",
+      "previous_line": 92,
+      "position": "before",
+      "capture": "task003().context(\"filler_pose_only\", _+1)"
+    },
+    {
+      "file": "src/trajectory_filler.py",
+      "previous_line": 92,
+      "position": "after",
+      "capture": "task003().filler_step(self.video, N, M, _)"
+    },
+    {
+      "file": "src/trajectory_filler.py",
+      "previous_line": 95,
+      "position": "before",
+      "capture": "task003().filler_end(self.video, N, M)"
+    },
+    {
+      "file": "src/utils/eval_traj.py",
+      "previous_line": 150,
+      "position": "after",
+      "capture": "task003().export(traj_est, kf_timestamps)"
+    }
+  ],
+  "ast_behavior": "Only observer import and direct observation calls added; original AST identical after stripping them."
+}

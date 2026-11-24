@@ -1,0 +1,64 @@
+{
+  "source_files": 18,
+  "mutable_attribute_assignments": 303,
+  "historical_archives": 24,
+  "historical_24_runs": 24,
+  "resource": {
+    "full_video_logical_bytes": 7468230540,
+    "video_cpu_logical_bytes": 2246400000,
+    "video_cuda_logical_bytes": 5221830540,
+    "illustrative_13_slot_bytes": 194175494,
+    "corr_bytes_per_edge_fp16": 34200000,
+    "corr_bytes_per_edge_fp32": 68400000,
+    "max_historical_uncompressed_output_bytes": 1505684695,
+    "max_historical_archive_bytes": 884529802,
+    "historical_headroom_above_floor_bytes": 3519848448,
+    "four_raw_plus_single_archive_historical_bound_bytes": 6907268582
+  },
+  "historical_numeric_ranges": {
+    "keyframes": {
+      "min": 87.0,
+      "max": 166.0,
+      "mean": 135.70833333333334,
+      "count": 24
+    },
+    "model_elapsed_s": {
+      "min": 205.5873370469999,
+      "max": 244.98365955800546,
+      "mean": 222.42884004791708,
+      "count": 24
+    },
+    "peak_gpu_used_mib": {
+      "min": 16151.0,
+      "max": 17497.0,
+      "mean": 16795.75,
+      "count": 24
+    },
+    "peak_shm_used_bytes": {
+      "min": 2246557696.0,
+      "max": 2247786496.0,
+      "mean": 2247172096.0,
+      "count": 16
+    },
+    "ba_calls": {
+      "min": 1174.0,
+      "max": 1332.0,
+      "mean": 1271.4166666666667,
+      "count": 24
+    },
+    "predecision_ba_calls": {
+      "min": 609.0,
+      "max": 609.0,
+      "mean": 609.0,
+      "count": 24
+    },
+    "retained_ba_calls": {
+      "min": 150.0,
+      "max": 308.0,
+      "mean": 247.41666666666666,
+      "count": 24
+    }
+  },
+  "gpu_or_model_imports_performed": false,
+  "remote_operations": 0
+}

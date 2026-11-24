@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-23T13:07:05.917564+00:00",
+  "trace": {
+    "sha256": "9e667e6a2c4f8efe1c9e3dad6f99abf58f930586a8b2a04ebf047ba1e5ce13d0",
+    "bytes": 73693624,
+    "pid_event_counts": {
+      "4209": 5779
+    },
+    "events": {
+      "tracking_start": 1,
+      "keyframe_candidate_inserted": 215,
+      "keyframe_decision": 487,
+      "motion_filter_score": 486,
+      "stage_boundary": 9,
+      "ba_before": 1314,
+      "ba_after_native": 1314,
+      "ba_after_clamp": 1314,
+      "frontend_distance": 203,
+      "filler_interpolated": 31,
+      "filler_pose_update": 372,
+      "filler_batch_result": 31,
+      "export_matrix": 1,
+      "observer_overhead": 1
+    },
+    "calls": 1314,
+    "calls_by_stage": {
+      "frontend_init_neighborhood": 8,
+      "frontend_init_proximity": 8,
+      "frontend_init_second": 8,
+      "frontend_local_predecision": 609,
+      "frontend_local_retained": 290,
+      "final_ba_phase_1": 7,
+      "final_ba_phase_2": 12,
+      "filler_pose_only": 372
+    },
+    "local_returned": 899,
+    "local_returned_rejected": 174,
+    "local_joint_snapshot_calls": 3,
+    "local_both_in_pose_window": 3,
+    "local_both_in_pose_window_and_observed": 3,
+    "unfinished": [],
+    "keyframe_decisions": 487,
+    "filler_batch_output_frames": 487,
+    "export_event": 5778
+  },
+  "gt_sha256": "91fb149c066bb488ac6071602a4b50fe1540243f2db3369a3706f63b705d7008",
+  "trajectory_sha256": "d485a577412826015d7bb9a182ef43a5c4f52d3f244647dd58fb1f52ed5eb225",
+  "policy_sha256": "fbc8a69b5480b2c2984829f05180b8006504e1744b91c99a9993539fea918640",
+  "source_attempt": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z\\results\\E1\\attempt_001_21d6b33f8f65",
+  "seed_receipts": {},
+  "original_math_module_sha256": "63d809f55e363451d4a9c0b961ba8476767ac749152fed235f6cb49b47f3fb6f",
+  "archive_proof": "TASK004A_PREVIOUS_COMPLETE_VALIDATED_ARCHIVE",
+  "torch_imported": false
+}

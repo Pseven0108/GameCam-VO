@@ -1,0 +1,14 @@
+{
+  "schema": "TASK004B_STORAGE_PLAN_V2",
+  "remote_required": 35643019157,
+  "remote_free": 48108425216,
+  "local_required": 9984887813,
+  "local_free": 18144681984,
+  "local_mode": "ALL_RAW_ZIPS_RETAINED_ONE_AT_A_TIME_STREAMING_ANALYSIS_NO_SIMULTANEOUS_FULL_EXTRACTION",
+  "remote_mode": "ALL_RAW_AND_COMPRESSED_ARTIFACTS_RETAINED_NO_DELETION",
+  "remote_minimum_free": 10737418240,
+  "local_safety_free": 2147483648,
+  "previous_preflight": "V1 assumed simultaneous expanded local copies and local 10GiB floor; V2 avoids redundant expanded storage, preserves complete raw archives",
+  "remote_ready": true,
+  "local_ready": true
+}

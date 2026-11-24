@@ -1,0 +1,7 @@
+# 直接与间接效应：当前证据边界
+
+Task004B仍只支持同一序列、三种configuration-seed区组的TOTAL_FRONTEND_EFFECT。当前Task004C没有任何新GPU对照结果，不能把Task004B因子效应、旧BA278 frozen-disparity结果、或最终video.npz读取当作D直接作用证据。
+
+A完整快照缺失，固定状态直接D效应UNAVAILABLE。B共同初始化和完整可执行调度缺失，controlled schedule intervention效应UNAVAILABLE。即便未来B成功，也不自动等于自然因果中介效应。
+
+现有确证：6个候选BA窗口有两个直接端点和双向边；E0/E1图结构和关键帧决策不同；初始化已非逐位相同；原始完整原生输入未保存。上述可支持如何设计下一步，不支持直接效应的符号或大小。没有用Filler、插值、最终位姿代替原生目标时刻状态。

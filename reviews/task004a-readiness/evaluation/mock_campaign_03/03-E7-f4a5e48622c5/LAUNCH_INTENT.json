@@ -1,0 +1,25 @@
+{
+  "mode": "CPU_MOCK_ONLY",
+  "campaign": "mock-47bf292829f74825880e69d2fea39217",
+  "arm": "E7",
+  "slot": 3,
+  "attempt_id": "03-E7-f4a5e48622c5",
+  "policy_sha256": "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099",
+  "config_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "input_dir": "CPU_MOCK_NO_IMAGES",
+  "output_dir": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_campaign_03\\03-E7-f4a5e48622c5",
+  "argv": [
+    "C:\\Users\\Administrator\\.conda\\envs\\gamecam-vo\\python.exe",
+    "-B",
+    "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\fixtures\\mock_child.py",
+    "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\evaluation\\mock_campaign_03\\03-E7-f4a5e48622c5",
+    "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\assets\\candidates\\r2_sealed_config.yaml",
+    "E7",
+    "b969b0207f0d458dcfd351d3ee8b0fd217c051986c87ab2b03b895b53ea71099"
+  ],
+  "cwd": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004A_RELEASE_READINESS\\fixtures",
+  "started_utc": "2026-11-22T22:08:30.675101+00:00",
+  "cuda_visible_devices": "",
+  "data_disk_free_before_bytes": 26624012288,
+  "previous": "E4"
+}

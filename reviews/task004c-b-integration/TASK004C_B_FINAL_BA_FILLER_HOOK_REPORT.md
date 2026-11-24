@@ -1,0 +1,7 @@
+# Final BA和Filler调用路径
+
+保留原生流程：最终Backend临时关闭深度正则，先7步再12步dense_ba，之后恢复metric_depth_reg。没有使用F0，没有删掉任一最终阶段。CPU合成调用实际执行候选SLAM.backend方法体并验证顺序和恢复状态。
+
+Filler保留临时槽、相邻关键帧锚点、最多16帧批次、12轮motion_only更新和counter回退。CPU合成调用执行原Filler方法体，SE3/CNN/extension计算是声明的mock。记录最终导出中直接关键帧与Filler Pose来源，避免混淆。
+
+有限GPU driver在RGB080抛出前缀完成信号，不调用SLAM.terminate；Final BA和Filler的真实记录应由将来获批的正式实验产生。目前这两个阶段只有静态与CPU证据。

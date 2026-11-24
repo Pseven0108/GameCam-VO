@@ -1,0 +1,1096 @@
+{
+  "status": "VERIFIED_READ_ONLY",
+  "checked_utc": "2026-11-22T22:07:14.008165+00:00",
+  "task004_archive": {
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004_CAUSAL_ABLATION\\GAMECAM_TASK004_CAUSAL_ABLATION_REVIEW.zip",
+    "archive_sha256": "b1456d04398a628fdbc50743d6f0a0be87e3cd79e32d39d1c4ac3a78ad2f1684",
+    "members": 80,
+    "payload_matches": 79,
+    "crc": "PASS"
+  },
+  "source": {
+    "commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+    "snapshot": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W",
+    "evidence_tree_sha256": "7674586985f09f9e61c9d31817a636e90c56d30f122f5abf512d70773db13d2f",
+    "ledger_sha256": "2852f95c9241093bd6dae477a3162cb2fe79ba94f101f68f0aa74530d9fedee6",
+    "checked": {
+      "blob": 208,
+      "gitlink": 3
+    },
+    "entries": {
+      ".gitignore": {
+        "bytes": 135,
+        "git_blob_sha1": "1c8c3ff90031033435207cd615ee299c22a69eb4",
+        "sha256": "295398039e6dd901bef940b15c5ff794d5fdc483b24d1d3b907accedde46ff99"
+      },
+      ".gitmodules": {
+        "bytes": 798,
+        "git_blob_sha1": "9f0c46e461c9d3b6b8d677c8feec1d303b24c9c4",
+        "sha256": "9635f13bec24cf273f78150ff47ffa5999948aca304efb0ff37d62b2757a7233"
+      },
+      "CONTRIBUTING.md": {
+        "bytes": 1128,
+        "git_blob_sha1": "bc23aaed4bebbd0c9ca0b82a1059b9c8a15aa9c9",
+        "sha256": "014f427fae68d07fae69d1bd63ab4bfc152e3a2dd5ab5706c5cdfc0de8b35559"
+      },
+      "LICENSE": {
+        "bytes": 11357,
+        "git_blob_sha1": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+      },
+      "README.md": {
+        "bytes": 7270,
+        "git_blob_sha1": "35828686b3ec726ccef4569b058abe48c6796a06",
+        "sha256": "faa1d9bee14611155c783f43bbed57b622abc51f329b3cf342c6a6dd0b97fb45"
+      },
+      "configs/Dynamic/Bonn/bonn_balloon.yaml": {
+        "bytes": 139,
+        "git_blob_sha1": "652035845fa487e05ccc5c03fcb9c4d48dac2655",
+        "sha256": "8622a7896a6fe7b4e51d0f04d272067d52679a63c38e97bb6fe9f131b9673389"
+      },
+      "configs/Dynamic/Bonn/bonn_balloon2.yaml": {
+        "bytes": 141,
+        "git_blob_sha1": "36f2a05bc7fabb51c1894636f21585765697fa7e",
+        "sha256": "93bf556c291dd6810a204398f8e290ba9502eb1098b7fc6f09033dcc4de951c9"
+      },
+      "configs/Dynamic/Bonn/bonn_crowd.yaml": {
+        "bytes": 135,
+        "git_blob_sha1": "a1ae70f48ef340ab58638461dcd07df42861dae1",
+        "sha256": "1337422c8350668cbbfbe9934e1e6ef317cbcbd169899a3c2518e1614e539794"
+      },
+      "configs/Dynamic/Bonn/bonn_crowd2.yaml": {
+        "bytes": 137,
+        "git_blob_sha1": "908f60957722053bd4bfab427143ceadd5ccaa4c",
+        "sha256": "106cbec11ea7aaebe0352a915461ebc78d1d99840020028d52f410edb6110a7d"
+      },
+      "configs/Dynamic/Bonn/bonn_dynamic.yaml": {
+        "bytes": 390,
+        "git_blob_sha1": "e14057ab0a167175dc8986e700906609a7a3ce00",
+        "sha256": "a54b6a1c95458901c772dfb0e736bfb3362a6efb9f40a283eb77795705e8ef5a"
+      },
+      "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box.yaml": {
+        "bytes": 176,
+        "git_blob_sha1": "04719d402caff5d9a0292a29a28bab0ea6b9e2e4",
+        "sha256": "2f0a39d3862dc936b127d17d8412cf0700abc2fd490b3e9222f5141e385c40ed"
+      },
+      "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box2.yaml": {
+        "bytes": 177,
+        "git_blob_sha1": "747f3ff86cf9ead8cbd8a003ec44e7f2c0bc9ff0",
+        "sha256": "cbb557953a0279ab6155c0ce69e403ef1454271ba92557c0e2af1a22be3967fd"
+      },
+      "configs/Dynamic/Bonn/bonn_person_tracking.yaml": {
+        "bytes": 156,
+        "git_blob_sha1": "3076a52f681a35d60b95889e8810889a360d4f84",
+        "sha256": "a9b6aafdd9ba51ba926854b2d06dee0ebf73a37899b46841f9b045f3a32113c4"
+      },
+      "configs/Dynamic/Bonn/bonn_person_tracking2.yaml": {
+        "bytes": 157,
+        "git_blob_sha1": "e6a56c8e2f35332b733fb1a325467325e722a355",
+        "sha256": "27d63a3055e28b39da3308ca459aad240b61dcd800d9ac1d194864fc8a20e6ee"
+      },
+      "configs/Dynamic/DROIDW/downtown1.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "bee1b028e7ac421056264ce4fa23e895f830405d",
+        "sha256": "6f82f4a1c311bef25d20fc53c739c5c51069918b3518bef76040def7bf306098"
+      },
+      "configs/Dynamic/DROIDW/downtown2.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "839d443a98c517a13022300a1a058a6b359dc08b",
+        "sha256": "5e5094457f96e525a2374bb3d8e8c0764a2de1d137a607686c568a18f9563f10"
+      },
+      "configs/Dynamic/DROIDW/downtown3.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "06ee49aa3618247d9f02b9acdbe44cc48048b4d4",
+        "sha256": "4c35be4fe9bd33271498bbe5dc322e63714e03fd04821bd5b257d3332fae7bb7"
+      },
+      "configs/Dynamic/DROIDW/downtown4.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "5d0f6d9ab53de2e8cad7ea732657e7157dd7a32d",
+        "sha256": "752e34a8bf83e51c2c98d1efb9b101bcc5f3b4c0819f3b7058efdf4f41fa32b2"
+      },
+      "configs/Dynamic/DROIDW/downtown5.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "19ee5157acd63ce89369931ea8b981b3674a4175",
+        "sha256": "77bf54a05f781f95c3eb27ed1736d6bbf58b4fafa90471ea78428167ab353479"
+      },
+      "configs/Dynamic/DROIDW/downtown6.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "a523fdc88432208ca44adcf3b82052e61d13fd2c",
+        "sha256": "490a8394aac758dd655f9217d30fa72715973ffb97ac87cd758c769340258861"
+      },
+      "configs/Dynamic/DROIDW/downtown7.yaml": {
+        "bytes": 124,
+        "git_blob_sha1": "785d590e4cffe337a717d1d15ff7f0bb9f470d3f",
+        "sha256": "48f7aff3c47f105f4515a3d5ad28158946401272995896ff0c2f6852722a383b"
+      },
+      "configs/Dynamic/DROIDW/droidw.yaml": {
+        "bytes": 536,
+        "git_blob_sha1": "8b17c849fa47b8252d323cc9ce62d7d0472bf997",
+        "sha256": "d382b598c8e66d958f127210b6f459053bfd252d86e64043927f4c1953644dcc"
+      },
+      "configs/Dynamic/DyCheck/apple.yaml": {
+        "bytes": 258,
+        "git_blob_sha1": "d501c46b29c29fcdac272cdc74aabf1e1296d6ae",
+        "sha256": "93740f9a5c7b884e97cc4741cc2399b83c9dc423ca451937693a53ae32e931cd"
+      },
+      "configs/Dynamic/DyCheck/backpack.yaml": {
+        "bytes": 264,
+        "git_blob_sha1": "bad897063e9cd244f165402aac2675fe0f29c7eb",
+        "sha256": "9c7a998073fc7940e9ec4e5b4aa61751f28d93a5492a1e010dc7f3ddd9534993"
+      },
+      "configs/Dynamic/DyCheck/block.yaml": {
+        "bytes": 258,
+        "git_blob_sha1": "1c5628c9bc171966ac53bc8efa089f5f0b134313",
+        "sha256": "3e8b7c132bf27fec3d844096f28f004fa61893dd3198993424f049d1b372c4be"
+      },
+      "configs/Dynamic/DyCheck/creeper.yaml": {
+        "bytes": 262,
+        "git_blob_sha1": "51d221c1c18c92b1bf4af4ed80337e5968ed0e18",
+        "sha256": "ef0d1797f76b0eb8b78bf49598931d4840a20e847d38c734bcf88dc8948d110c"
+      },
+      "configs/Dynamic/DyCheck/dycheck.yaml": {
+        "bytes": 362,
+        "git_blob_sha1": "7e3553d578a9a60a5e001cada2d7827c726a8c38",
+        "sha256": "78527e64f33d52f2617f46194dd2840b30af2c5176b79ba03e6bc2db131ec0c6"
+      },
+      "configs/Dynamic/DyCheck/handwavy.yaml": {
+        "bytes": 264,
+        "git_blob_sha1": "4e1e02bf16d04f1e00e6792f5df0a341ed35cd39",
+        "sha256": "b858da263eb0aeff143363e267fe1f78bc1f5c33b68ceaeff137f2b28aa98b38"
+      },
+      "configs/Dynamic/DyCheck/haru-sit.yaml": {
+        "bytes": 264,
+        "git_blob_sha1": "ed8881cf2d50383a3df9b53f0aceccd184189f8e",
+        "sha256": "2f5d0ec6ea85c760d6fc76049fb5f26ef4ce02098b5a0c6c980ffe676ba61078"
+      },
+      "configs/Dynamic/DyCheck/mochi-high-five.yaml": {
+        "bytes": 278,
+        "git_blob_sha1": "ecd68d7909bbcfc14544184735deacca148a4a01",
+        "sha256": "c6dcc86170ab5657c5f043c34d9aa6dba3b2bcc2179964153983f53228db5df1"
+      },
+      "configs/Dynamic/DyCheck/paper-windmill.yaml": {
+        "bytes": 276,
+        "git_blob_sha1": "2e8301277ccd1b3796fa3a6e4a86c0d496c4cfb6",
+        "sha256": "dca08071720dbd0aad26c854ff2ec6729ac756fddd5068dcf2fb60cc4d8cf00d"
+      },
+      "configs/Dynamic/DyCheck/pillow.yaml": {
+        "bytes": 260,
+        "git_blob_sha1": "e1cad8bbae48eb68aa8fa20bf997de8bcec51563",
+        "sha256": "43fd2826169480cf0e085460c3895567ad4666989f7ceaf3d99fd97d195bfc66"
+      },
+      "configs/Dynamic/DyCheck/spin.yaml": {
+        "bytes": 256,
+        "git_blob_sha1": "7802fac514005c2f606e1749b6b9b8879708216d",
+        "sha256": "264cd4855d2a265bc1b2d67d647e5014263fa39c983ea47fa3670a89b1dbaa7d"
+      },
+      "configs/Dynamic/DyCheck/sriracha-tree.yaml": {
+        "bytes": 274,
+        "git_blob_sha1": "27c9ea120d37364c3f5406266c918eea824cae7c",
+        "sha256": "9318aeccfe4a0d8736371e56b647d442db6356b9e3c47535d51aa47556c0f14d"
+      },
+      "configs/Dynamic/DyCheck/teddy.yaml": {
+        "bytes": 258,
+        "git_blob_sha1": "d96e64eb9bd9e0349f0650d1e61dbcd4354cd575",
+        "sha256": "5884681db5f700f850bcfa0aa34075e0e5c17e30ef274bb295e1a6423546d108"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg2_desk_with_person.yaml": {
+        "bytes": 513,
+        "git_blob_sha1": "ef6d9c4b70c604a10223cca0a71b518bb82eca32",
+        "sha256": "b041303a3b883960f17da8dede75e2959064e755dcc7ccf76515cb42e74646d5"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere.yaml": {
+        "bytes": 332,
+        "git_blob_sha1": "4b9eafb87852119be19f0bcfc043bba927136219",
+        "sha256": "0c20ae2a77f0e44c80468249502382ef06a6d13689685aeb6406cab0edb271bb"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere_static.yaml": {
+        "bytes": 324,
+        "git_blob_sha1": "987387fbf75d9e8b3369372a7040dba2c69fa564",
+        "sha256": "d62759a87080042e7038d45047f2b0ffdbfa066dafe67e4a75193006af920bc1"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_sitting_rpy.yaml": {
+        "bytes": 318,
+        "git_blob_sha1": "86e439f0e5b22b50adb7c36e16eaf6bdd98c1098",
+        "sha256": "0ecdd6ebb378c522a1651d7ee31693a316ddf94c176893f29c9c29a38e5eef8a"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_sitting_xyz.yaml": {
+        "bytes": 318,
+        "git_blob_sha1": "b12934d4e454d047b4e521e00b67d911951417cd",
+        "sha256": "56f65b46cdd0d776a1d642d02ffbf7c17c847ed40325b2c57afe89c86ef206ff"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere.yaml": {
+        "bytes": 332,
+        "git_blob_sha1": "99b1139d97df1db8030161e86fcabfb11e04b990",
+        "sha256": "22150447b5d8d263397d7471170fd1e19b193f278de49ca23a8b405cf908b7bd"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere_static.yaml": {
+        "bytes": 324,
+        "git_blob_sha1": "9618c1f66428e3f716f105ba06c0e937d9bee668",
+        "sha256": "6c0147fd6066551b24ecbb38ef74ee23514de78fa78a56c1a9d600e2342354f8"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_walking_rpy.yaml": {
+        "bytes": 318,
+        "git_blob_sha1": "4fd6e81b031497e5dce55772126fcd8259c127ee",
+        "sha256": "3e7b803a361170210176e6b28185b9fbe3a05adf2eec0765b182bc2089707bc6"
+      },
+      "configs/Dynamic/TUM_RGBD/freiburg3_walking_xyz.yaml": {
+        "bytes": 318,
+        "git_blob_sha1": "44fc94ef80fdc15e8a895c426d88abc0fb8bc092",
+        "sha256": "0f116e62f4ac580fc954440d12602493f5e5833c5096a59e00dc3a59f8c7cd18"
+      },
+      "configs/Dynamic/TUM_RGBD/tum_dynamic.yaml": {
+        "bytes": 662,
+        "git_blob_sha1": "164001e1d98139fa9c064ff4d0d0e9418da0b6ef",
+        "sha256": "44aca16c764c66fc4480a97b83b8fc8b2feb112a5eed85394850a59c41366e36"
+      },
+      "configs/Dynamic/YouTube/elephant_herd.yaml": {
+        "bytes": 307,
+        "git_blob_sha1": "08460a36d52694ca19d73da6717932664a075f65",
+        "sha256": "0ab16ff1a218f08ce6b6418b85fddf7978c1448da38486a16d97e20326d61296"
+      },
+      "configs/Dynamic/YouTube/giraffe.yaml": {
+        "bytes": 295,
+        "git_blob_sha1": "ae4fe67b2c9a54ab20743a8544cc88b7804ac70d",
+        "sha256": "91fdee27d37b3660554250669e2b4660024926b7be86faf81533111a6053386c"
+      },
+      "configs/Dynamic/YouTube/stmoritz_01.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "083cca7f69dbaf4831e5295a2949df89658e2b8c",
+        "sha256": "c0dad8ab41b1d3f51df730c094824a6f2de63989e9ec68b00cb69e74e8f7fd19"
+      },
+      "configs/Dynamic/YouTube/stmoritz_02.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "5b54c506efb268b1b58ae3decb47ee17334ef461",
+        "sha256": "a6f4a85bd2c7a2b3fcd8779ca0a133efb065609e14f4f3aa9ee355f4339e44ff"
+      },
+      "configs/Dynamic/YouTube/stmoritz_03.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "5c4a855bd707c0a9a3313db30ce65e837b7a0d0a",
+        "sha256": "b92d22bc475fe2c2d52ee1dfe5fddd2dfc23783141d37ba9c2cc8679cccd3b67"
+      },
+      "configs/Dynamic/YouTube/stmoritz_04.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "2dbdec47f441e7f619399b785ca2628c84b16f41",
+        "sha256": "f824559d6de7b0cc2d3941edc709db4929ba91d7b5a8a7e2ed99ee98ab47d96a"
+      },
+      "configs/Dynamic/YouTube/stmoritz_05.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "88c63f4e98b76da465a4b4a9f1b46db32d06d852",
+        "sha256": "ffa1791382d4b47036e8adc61e1f5c01e3325bc6b7ba86262214a40973618d17"
+      },
+      "configs/Dynamic/YouTube/stmoritz_06.yaml": {
+        "bytes": 314,
+        "git_blob_sha1": "f02848c6d8adfb75b91900de20ea238d69719f10",
+        "sha256": "2cbdd075677360080d9ae195a4e233a47225d7c2ba36e32857e9ef9231b01fa2"
+      },
+      "configs/Dynamic/YouTube/taylor_22.yaml": {
+        "bytes": 290,
+        "git_blob_sha1": "6c79a6d4653602875ba2e8911d62204587d2d532",
+        "sha256": "cc60feacbdc7970aeef5984bce54c3d21ef513c048f4f699088fd2f93efd79c8"
+      },
+      "configs/Dynamic/YouTube/tokyo_walking1.yaml": {
+        "bytes": 286,
+        "git_blob_sha1": "7dc02c681edbb426cd043db456970c14fc6edc3f",
+        "sha256": "e341bebda053e21cb38ae78a5b14c217f1ee4719edb2fce408cb3d1a60550f19"
+      },
+      "configs/Dynamic/YouTube/tokyo_walking2.yaml": {
+        "bytes": 288,
+        "git_blob_sha1": "4b1d7238ec3cdefa4b3cd7d34f54b75644d8cab6",
+        "sha256": "3633dd27f36e51a80b7c133074b4a358d9f69584f4efd87ac60825c75473c700"
+      },
+      "configs/Dynamic/YouTube/tokyo_walking3.yaml": {
+        "bytes": 288,
+        "git_blob_sha1": "ea2d22e3dd267e5d852a725fd22e48470bdaf1a8",
+        "sha256": "3dbf79bc8bde63fbea7420277368c95b78097a2d353f8c45083b2c254c927fbf"
+      },
+      "configs/Dynamic/YouTube/tomyum.yaml": {
+        "bytes": 304,
+        "git_blob_sha1": "3cd3caca1d83b15ad4e3ae763f31b3d3a58c7305",
+        "sha256": "d5c4d7ce8b22ff134e9524666a49d709577843ce7e18fa8b379ec488ae70be39"
+      },
+      "configs/Dynamic/YouTube/tomyum2.yaml": {
+        "bytes": 306,
+        "git_blob_sha1": "eeb8562ed1a7e2a68ece074ff02d150d0e547583",
+        "sha256": "461a2649091dea02ec152fbaf47bacbf66295a6d3a7be4f73eb1a6252ff2312c"
+      },
+      "configs/Dynamic/YouTube/youtube.yaml": {
+        "bytes": 603,
+        "git_blob_sha1": "1b37621fd243af4fbf89cc4223cb7efc1dea11cc",
+        "sha256": "191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88"
+      },
+      "configs/droid_w.yaml": {
+        "bytes": 6585,
+        "git_blob_sha1": "591e6d3680712bcf9c9e7e21245002e5c24c95be",
+        "sha256": "4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d"
+      },
+      "media/teaser.png": {
+        "bytes": 1680604,
+        "git_blob_sha1": "fe42c3d1108c7d034256d993704a9b47324f6d22",
+        "sha256": "7933d06cfc44498d147a849aed778772e9168e3fb2f7962e522f683f588f0368"
+      },
+      "misc/renderoption.json": {
+        "bytes": 1312,
+        "git_blob_sha1": "80d35c4b1ab67bae5197159fa3f0e1f8a72a3be8",
+        "sha256": "7e3b945be1e7b2129c26b86b6027ba61fe95e51562e0aeef6139f2a677d51cd7"
+      },
+      "requirements.txt": {
+        "bytes": 272,
+        "git_blob_sha1": "ce173b14cdee0109dd93fcf2d344fedd0f18ba7a",
+        "sha256": "fe8ccd856d00b54115d9d2691cc2ad4f5397e7f56621fe71f5295aaecae95a70"
+      },
+      "run.py": {
+        "bytes": 1847,
+        "git_blob_sha1": "a26a28f03777bbac213d2ece076da8b1bb6eef04",
+        "sha256": "d722dfe7b587beedd4f88f4749aefa55945af3d9bac47c1cb2e612a657945c63"
+      },
+      "scripts_downloading/download_bonn.sh": {
+        "bytes": 1125,
+        "git_blob_sha1": "8369dcb7c9b64c1697f53cf29700171406c1ffb4",
+        "sha256": "c75c6f7734aebbc26fb630a13d31d2b7fce95b050be2c71f45f9219a440224bf"
+      },
+      "scripts_downloading/download_droidw.sh": {
+        "bytes": 130,
+        "git_blob_sha1": "90d7855161281784cfbfe5a1c1dfebb68f5abae3",
+        "sha256": "2b25f52499a464233c2338c33f6601955c1dc56b76da7a494da10dcfb56e12f1"
+      },
+      "scripts_downloading/download_tum.sh": {
+        "bytes": 1775,
+        "git_blob_sha1": "95ebba6c3514c18868f0ab0df2cdceeb4bc6d79e",
+        "sha256": "d03bc1ed933a1ebad00e578bfbb0c3cd6415a568da54941a2e3ef8efb4d26e74"
+      },
+      "scripts_downloading/download_youtube.sh": {
+        "bytes": 130,
+        "git_blob_sha1": "63dbc81588f8cc08679799dd6169c106bd59e26d",
+        "sha256": "f43850d520c10618aa64f43fe3e48420d628806022a2384d1f86bdcc4deacae5"
+      },
+      "scripts_eval/evaluate_droidw.py": {
+        "bytes": 6509,
+        "git_blob_sha1": "38949e8e0d504f3f9e1b29208c7008c9144a0ea6",
+        "sha256": "c8ded8c1ee6e7716f53407b52ea0eb5884c210a35d9b25bdaa27cd67e816e4b1"
+      },
+      "scripts_eval/summarize_rmse.py": {
+        "bytes": 10677,
+        "git_blob_sha1": "ae4016aac9d3dd5e8cb2d32884f120877bff4297",
+        "sha256": "b12a5bac885f695bbd49352942688a5e4849006b22caf019cae255379c8ff219"
+      },
+      "setup.py": {
+        "bytes": 1080,
+        "git_blob_sha1": "8afd1be40987c61ea261b5eec806b0714f4091b1",
+        "sha256": "ac43c0c94239c42ca983ebf45a8a6c68db0ad6c1a75a059226fa16d96f4b7921"
+      },
+      "src/__init__.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "src/backend.py": {
+        "bytes": 5273,
+        "git_blob_sha1": "2a565ea49f42cf765a6c8d615f892496ae223f50",
+        "sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d"
+      },
+      "src/config.py": {
+        "bytes": 2124,
+        "git_blob_sha1": "0408d53c67baace6322209957d1d0530778c7c18",
+        "sha256": "0d0b18e572cc5b577d3ba41e1bee31c3c65da3fa7137df06504c477251d2086d"
+      },
+      "src/depth_video.py": {
+        "bytes": 45293,
+        "git_blob_sha1": "87f63043cd7c68a2d02278e6042336e0dc98a12e",
+        "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869"
+      },
+      "src/factor_graph.py": {
+        "bytes": 22050,
+        "git_blob_sha1": "0b208fa23c26fe267df2f6c85913fbd00268dae1",
+        "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec"
+      },
+      "src/frontend.py": {
+        "bytes": 10646,
+        "git_blob_sha1": "a12cfd36d4597846979fc5fd79e77bf0e795145b",
+        "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6"
+      },
+      "src/geom/__init__.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "src/geom/ba.py": {
+        "bytes": 10193,
+        "git_blob_sha1": "34340fc5b483a84ebb6a073e6fa9868728d56376",
+        "sha256": "2d0804ba6c79eb8c89941ff1569ac611ff6ce97a37ff0aa646cd1b759f288376"
+      },
+      "src/geom/chol.py": {
+        "bytes": 2673,
+        "git_blob_sha1": "207694274b665668d61ae11c616f44d45c53ca6d",
+        "sha256": "a56c479198666eae61cd82380d1ec5a04637df254e8dc9c98d516578990eab86"
+      },
+      "src/geom/projective_ops.py": {
+        "bytes": 4672,
+        "git_blob_sha1": "f2b036dd193710133153950d79d0c1adaa228ad2",
+        "sha256": "591576b0ab77475d61c8e39975b38820c6ca3a0585dd581e29858703d3fd8b07"
+      },
+      "src/gui/gl_render/LICENSE": {
+        "bytes": 1061,
+        "git_blob_sha1": "f111bb602b1eb6449008d75bdd8b673a1d429946",
+        "sha256": "4331743c111f51f2218797294dbac492e238a1b33350ee37b2059c21e63e44a8"
+      },
+      "src/gui/gl_render/__init__.py": {
+        "bytes": 41,
+        "git_blob_sha1": "1b173d1640349c7743796f52e14a7dd372f72b4d",
+        "sha256": "4b7fb7adf68ad14438dea52ba330df345e5e8ab8f5853b361bc38ad2df281c28"
+      },
+      "src/gui/gl_render/render_ogl.py": {
+        "bytes": 4506,
+        "git_blob_sha1": "1a87bbac9b30f4f3ddf272f89d1ba79bec57dc3b",
+        "sha256": "057e8825956ffc24d0262cd199442a4a92576ab855ef1d2acc9e1e282511de7b"
+      },
+      "src/gui/gl_render/shaders/gau_frag.glsl": {
+        "bytes": 932,
+        "git_blob_sha1": "ece77c3938545a77f43fcc6c6009902bd1150fcc",
+        "sha256": "eee1f7b85fef3f20b0640c44f69bd88d5e8c8fbd148c5861827eba2ba05e3daf"
+      },
+      "src/gui/gl_render/shaders/gau_vert.glsl": {
+        "bytes": 6404,
+        "git_blob_sha1": "21913232f7f29cabd7b2f8f1409cefda4d09191d",
+        "sha256": "57523d02f02fca824e08ecfb6e77e9c36d0b0240a7ca8dfde723c6f7e216207e"
+      },
+      "src/gui/gl_render/util.py": {
+        "bytes": 8693,
+        "git_blob_sha1": "47575672d495b843be9d6d93478a02fa40dc7753",
+        "sha256": "6d70f17046c7b01f45e7cd92564891ddcfd5a2b8ce9f6356ac56bf2abed3be55"
+      },
+      "src/gui/gl_render/util_gau.py": {
+        "bytes": 508,
+        "git_blob_sha1": "d47140086dd1f150badde3cc182a5644e6e4548a",
+        "sha256": "b69654cf773754d47dccebeff6800cb32335fb137830f65657648a8f3c8d044c"
+      },
+      "src/gui/gui_utils.py": {
+        "bytes": 6123,
+        "git_blob_sha1": "ad05b57190cdca8d20bb36bf5fbd53366eac388f",
+        "sha256": "12e45dfb8a6c246f68589ffab2fa24a2dad91e8f64b5baa1dba7ab3afd199419"
+      },
+      "src/gui/slam_gui.py": {
+        "bytes": 29486,
+        "git_blob_sha1": "24f642ae90a5992ba1a67000db8cebc19950a5a3",
+        "sha256": "8d07634168c0e7bda618c64d4f115d687fa03f53b4ca315d3f1dde6eb506baea"
+      },
+      "src/lib/altcorr_kernel.cu": {
+        "bytes": 11622,
+        "git_blob_sha1": "be2008f223c00dbb339f84db7d1a9f0789f63f5f",
+        "sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f"
+      },
+      "src/lib/correlation_kernels.cu": {
+        "bytes": 5531,
+        "git_blob_sha1": "b67d47e0ed11e66b23a2c23e2bc53952b7c94d1a",
+        "sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99"
+      },
+      "src/lib/droid.cpp": {
+        "bytes": 7635,
+        "git_blob_sha1": "0c3d91040527b8cbafa2b811e1d18152010a26fa",
+        "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87"
+      },
+      "src/lib/droid_kernels.cu": {
+        "bytes": 62996,
+        "git_blob_sha1": "9c171af1bfafc278e9776f2f89667054a66dc2bf",
+        "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7"
+      },
+      "src/mapper.py": {
+        "bytes": 65332,
+        "git_blob_sha1": "fe6d17e6dcf94a741e242ff48556eb6d1bce6df6",
+        "sha256": "0818a5e5b4f7392ff7f21a96087210a4e8f89484ad44ab391d7e763310060192"
+      },
+      "src/modules/droid_net/__init__.py": {
+        "bytes": 183,
+        "git_blob_sha1": "f44de2aa9fbda78a14d1e95f46edb248568ba5fa",
+        "sha256": "75352870a554717830f333c8c8c32f281beb1d2a2f5b912396221973a9f1986c"
+      },
+      "src/modules/droid_net/clipping.py": {
+        "bytes": 1141,
+        "git_blob_sha1": "c7e38d994c95b28fd79853e58a3c529517134cfd",
+        "sha256": "420b7ec6177b323630a21268cf29786d3fd9c5821b0095e0a01dd5738a5fe65b"
+      },
+      "src/modules/droid_net/corr.py": {
+        "bytes": 5380,
+        "git_blob_sha1": "2ef6466cc2c345aa544a91e67d3955f49f99b07a",
+        "sha256": "a3123d1f8f08ae196092fa2ce3831110959d71cec549ae90eef2c9848b5674e0"
+      },
+      "src/modules/droid_net/droid_net.py": {
+        "bytes": 5408,
+        "git_blob_sha1": "eeb6de0b241b1d2fb20949068c867616f7a3da3d",
+        "sha256": "3d960a8f656770865a93719fc7e02fd8efc34ba708f9e0395f31400d564a0012"
+      },
+      "src/modules/droid_net/extractor.py": {
+        "bytes": 4519,
+        "git_blob_sha1": "babd1f7da6279e4728456624c6c677ff5f0c521f",
+        "sha256": "7a4209643412b035fd81e4472b8e1632fde00d94cd7ec93cc43abbb7e0a15170"
+      },
+      "src/modules/droid_net/gru.py": {
+        "bytes": 1989,
+        "git_blob_sha1": "9bab24ab863295a8fb9db17c6cfbab5ea0c9f1cc",
+        "sha256": "376165d58ab254c1b7169bf5783b24d9611e2973ec3ccc389d58cd10f9cd4505"
+      },
+      "src/motion_filter.py": {
+        "bytes": 6223,
+        "git_blob_sha1": "c46b3b0b5ef403d2463d43df09d8cba737eff667",
+        "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff"
+      },
+      "src/slam.py": {
+        "bytes": 13630,
+        "git_blob_sha1": "3f50eaea5b8080696c20634ab355c5ba502c012e",
+        "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c"
+      },
+      "src/tracker.py": {
+        "bytes": 8158,
+        "git_blob_sha1": "26ef06e8d8519f9f51f2e723471ac741ac242075",
+        "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698"
+      },
+      "src/trajectory_filler.py": {
+        "bytes": 5510,
+        "git_blob_sha1": "c7cd884166e48b55347c4efb0aa417ff16d35021",
+        "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3"
+      },
+      "src/utils/Printer.py": {
+        "bytes": 3205,
+        "git_blob_sha1": "d59744c8707fc0529cbf72c4927765627dfc5d19",
+        "sha256": "6ee8d870e607098d44a97e22cbb62a80b3005d7a47962e582bac999eef54bf6b"
+      },
+      "src/utils/camera_utils.py": {
+        "bytes": 5847,
+        "git_blob_sha1": "7c6dbf1d8628d544f9cbcc224bb4c2cbef4cc339",
+        "sha256": "969837112ec288d683d6998a6e9383f6063e6b03a5b8ecb91e3bd30ce52acce6"
+      },
+      "src/utils/colmap_read_model.py": {
+        "bytes": 11742,
+        "git_blob_sha1": "b0b91977e7ff075c9c417b7dadfa9dcb2710296f",
+        "sha256": "0cf3a39ea930b57b5d232185afb5786c1ff6637047a358e099862c143cccc535"
+      },
+      "src/utils/common.py": {
+        "bytes": 2839,
+        "git_blob_sha1": "e241e323a73ec533a4144fd1316b6953852e2157",
+        "sha256": "cb6d9f3942089e02cd89ca4bfca58cb804d52455853b13e87b27dbe1d742a905"
+      },
+      "src/utils/cuda_timer.py": {
+        "bytes": 631,
+        "git_blob_sha1": "5159836cd1b3defacb158b8213a4c82633aaa3ac",
+        "sha256": "60158a1c4602269d1725ab995b15ffa337df8d5eff18770846ced0d56f30436f"
+      },
+      "src/utils/datasets.py": {
+        "bytes": 23476,
+        "git_blob_sha1": "b02f8968ae9aded9944c17f4481838bddfe46336",
+        "sha256": "aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287"
+      },
+      "src/utils/droid_visualization_rerun.py": {
+        "bytes": 7036,
+        "git_blob_sha1": "5ec22e6a05840333526ddfaa92a46df7a55669d3",
+        "sha256": "722d108c680dfade2b7f3854b19726446c3c31c4918c152e3edf3941af99c408"
+      },
+      "src/utils/dyn_uncertainty/__init__.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "src/utils/dyn_uncertainty/mapping_utils.py": {
+        "bytes": 5890,
+        "git_blob_sha1": "f43ef34191db53e1e253730eb265e019bbabb166",
+        "sha256": "f386990a428c2149747ec4cc7d50d132c7309653a80de378ea229669278b826e"
+      },
+      "src/utils/dyn_uncertainty/median_filter.py": {
+        "bytes": 1964,
+        "git_blob_sha1": "fb973794751d9cb97902c9ec7e3b38cff831f044",
+        "sha256": "fa2f8fd57ab7fd30dd6787b9aa9f387d794702fbb19512031f767ba0e046168c"
+      },
+      "src/utils/eval_traj.py": {
+        "bytes": 7372,
+        "git_blob_sha1": "4d7b9b937af0cd588c6601995e1ea0ed29596fec",
+        "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346"
+      },
+      "src/utils/eval_utils.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "src/utils/mono_priors/img_feature_extractors.py": {
+        "bytes": 6521,
+        "git_blob_sha1": "9ce349057d1a2f052a92383a9c3bdbf2f82ae487",
+        "sha256": "f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346"
+      },
+      "src/utils/mono_priors/metric_depth_estimators.py": {
+        "bytes": 5426,
+        "git_blob_sha1": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc",
+        "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487"
+      },
+      "src/utils/plot_utils.py": {
+        "bytes": 1719,
+        "git_blob_sha1": "0455bcdd4e78c398bc195b77d2c9484bb068134a",
+        "sha256": "484e1c9bff3952155d88f4ae7ca4bc441bed597a64d64d7cc78d6b3933230561"
+      },
+      "src/utils/pose_utils.py": {
+        "bytes": 2180,
+        "git_blob_sha1": "346746faa22f25b889506adaf847ea65e5110a91",
+        "sha256": "761143bb7ec2b2480718c52e2aa78343db7799298781b79bfcc27cf8345e55fd"
+      },
+      "src/utils/slam_utils.py": {
+        "bytes": 10116,
+        "git_blob_sha1": "73d534c5a9a439c0496fc0351c4225ac1aabd306",
+        "sha256": "5ea8c210687f3da69e4a6ec92aff01d747d14fcf8611f4c0a5547bee04e58cab"
+      },
+      "src/utils/sys_timer.py": {
+        "bytes": 5981,
+        "git_blob_sha1": "612223fdcada9a1db01f4f085e108958e21e42c1",
+        "sha256": "d9f87d8a11174f2df18cf2145c9d36d852b1a42082dc7a913206a80ca8db23c3"
+      },
+      "src/utils/visualization.py": {
+        "bytes": 5892,
+        "git_blob_sha1": "a576bdd2b9577225f64b65481fd55e8b5efc22bc",
+        "sha256": "e2d12c453ef55b8c1ef7470f3e935f3be21c5617d1365d9b0476595e634d2c07"
+      },
+      "thirdparty/__init__.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "thirdparty/depth_anything_v2/DA-2K.md": {
+        "bytes": 1948,
+        "git_blob_sha1": "70290bc96c0201aa68e4e69f1c78c928dd61e497",
+        "sha256": "1ad263ca142391da0bc91925a5123487ee867e3ec8237e6be7201fdf59a02a7e"
+      },
+      "thirdparty/depth_anything_v2/LICENSE": {
+        "bytes": 11357,
+        "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      "thirdparty/depth_anything_v2/README.md": {
+        "bytes": 9534,
+        "git_blob_sha1": "e1c80e894c4d163e38b9b0c4c03413d1313dc261",
+        "sha256": "9ff935d0b65dc0750cb4b535bee6c8df9f3112f25aa471b91249700d4a81e3f8"
+      },
+      "thirdparty/depth_anything_v2/app.py": {
+        "bytes": 3250,
+        "git_blob_sha1": "41399be3b316f38af653692fc9895d32b06e09f1",
+        "sha256": "52fe296af84ccb9a784e5e7c8a204b817fe150eefbdea81e07010c3415acf4f4"
+      },
+      "thirdparty/depth_anything_v2/assets/DA-2K.png": {
+        "bytes": 1180754,
+        "git_blob_sha1": "cdd5384cfd922cc9880495f7db47f03d40d6be0f",
+        "sha256": "e5aa376424bfc2dfdfa140773690d85b22b51200dc0b02324beb050de9b51d69"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo01.jpg": {
+        "bytes": 488150,
+        "git_blob_sha1": "a09c257c8b3c0d7ebea88255420bb3dbd2910cfb",
+        "sha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo02.jpg": {
+        "bytes": 510806,
+        "git_blob_sha1": "dad10f5bcc50100613a3bb9687226776efa4a4ce",
+        "sha256": "c1f116034aa5abd5b5470226be2bb03bd938c8affe90389c52d10fe8b1ac7e21"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo03.jpg": {
+        "bytes": 464937,
+        "git_blob_sha1": "75108a5a26d27f07053cae47055af6a84f070416",
+        "sha256": "764dffd4d97bbacd620bc005fa86837018393ccb5ffd1059c2245a3cacff7782"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo04.jpg": {
+        "bytes": 299824,
+        "git_blob_sha1": "5fb82ebe0b39fb837dbcbc57bf8be23f21c701ae",
+        "sha256": "3a301f4e0361fe75ca4d256a35062f87eecc3f7655d747c9def3259c86e26a45"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo05.jpg": {
+        "bytes": 353184,
+        "git_blob_sha1": "c9249ea7294634b82dc11f6661cf0239003bc1a3",
+        "sha256": "50e7e2f057c5a2d27bb09b0b3e814147966e30139ddaf54362c72746a5320339"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo06.jpg": {
+        "bytes": 782780,
+        "git_blob_sha1": "7f41c0817aa230dfb1e56c671085f3abae0eac91",
+        "sha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo07.jpg": {
+        "bytes": 400463,
+        "git_blob_sha1": "637d32325b25bf02d66dc00c3d9d8b040f61820d",
+        "sha256": "345bec735adc4c238bf14ddf1d182c4881f8ba08814c4f4074c1d79e9e4adc52"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo08.jpg": {
+        "bytes": 102825,
+        "git_blob_sha1": "3e775aba407a2d853cb646bcee8daeedac0c2435",
+        "sha256": "d32b480349013be5f84521b0df1d6590139163aef8457f051076ed03c7371e6f"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo09.jpg": {
+        "bytes": 410224,
+        "git_blob_sha1": "6a76c1b45480856a1d27779adc21fb3444b54a19",
+        "sha256": "6a64033ba69bb408c092dbff811abfbcb0196f1f87541902d03d2a909a0b8ea9"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo10.jpg": {
+        "bytes": 486825,
+        "git_blob_sha1": "131f8fb0f4ffa08bdc5237a941c6d5165391db38",
+        "sha256": "bc77f215081f58de8d079e821e2808f6ee2727dfa729c10a5921c186a32c7638"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo11.jpg": {
+        "bytes": 243712,
+        "git_blob_sha1": "720e5fd67c922f8b60313e9dea984ab2d412033f",
+        "sha256": "150ef98e997ee6ff705bd06105c343f76a8f181ef93ff9ceebbd62a3ab6b592b"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo12.jpg": {
+        "bytes": 263007,
+        "git_blob_sha1": "1fc2fb1095940d09701da9c692c848e6a8d6a091",
+        "sha256": "264458adcf5af6e3733dfda7ef4628c4a1dc49ed249aa8896256d9534a8377c4"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo13.jpg": {
+        "bytes": 421112,
+        "git_blob_sha1": "bed68777f4b216ccca2239609ce4faa90d46a5c8",
+        "sha256": "9168fc752a002d50138a56621e8de5fab7fed125a978dd293319d28d30993564"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo14.jpg": {
+        "bytes": 642925,
+        "git_blob_sha1": "2c9cba8a8cfab3c61d02fc5cb1be96e338b4eb27",
+        "sha256": "01480d952bc950332f0eea31da0777f66d5f285d8edfe2a5f47508f4b260a99f"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo15.jpg": {
+        "bytes": 768703,
+        "git_blob_sha1": "eca61c1452bd0fe54b2ba0cef0a872aed4b8c13d",
+        "sha256": "bf60ce3879f627e8886280cc61442174c91908894a5b059681341fed600f7db3"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo16.jpg": {
+        "bytes": 377831,
+        "git_blob_sha1": "11d212b747e24437b9b060229bd7796accf1b39f",
+        "sha256": "a92e51732b38ad8b21b5cbbc6883374bd5ab56bb4907d6c4f1e13307970480ee"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo17.jpg": {
+        "bytes": 152591,
+        "git_blob_sha1": "5dfa8e84d16436de1e141f69e7868850cf53592a",
+        "sha256": "7174dcfbbb95a2e581ebf1e14cfbb4bef7a1295ae9cece405c87145223dcb32d"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo18.jpg": {
+        "bytes": 178905,
+        "git_blob_sha1": "997e4e7fe8e3ea5ccd294dfa9db66792f1a5f254",
+        "sha256": "4deeb16dbee40108f194bd87c8621416110427c8ab5fc5ad6a1d9002b2b620c2"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo19.jpg": {
+        "bytes": 1004211,
+        "git_blob_sha1": "949791d08cd25ef6a200cf78febc297cffa7d249",
+        "sha256": "7cdb09c34eb0b4d2ac5f6070aec47c8f983a0b1b2c9ee1fc30decafb64f1bd98"
+      },
+      "thirdparty/depth_anything_v2/assets/examples/demo20.jpg": {
+        "bytes": 498212,
+        "git_blob_sha1": "873d1f676c3bbe0b9bcbfa2f55bbd147db9cc971",
+        "sha256": "2958fd1b7018e40b68ccc8d74ff8e50bf143f5046711d57c54eec2a479550ace"
+      },
+      "thirdparty/depth_anything_v2/assets/teaser.png": {
+        "bytes": 12818034,
+        "git_blob_sha1": "11c2b4d408452727b295fb4b15aefdf234e2cdc0",
+        "sha256": "d5609203ee36b8745303051e474ea02d452595b85698a33d643c5800797402e1"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py": {
+        "bytes": 15178,
+        "git_blob_sha1": "83d250818c721c6df3b30d3f4352945527701615",
+        "sha256": "d22df8d0da44c8525ebed898fd9c33b3acfcda919a84d577cc2a08bfd3d50ac1"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/__init__.py": {
+        "bytes": 382,
+        "git_blob_sha1": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+        "sha256": "e3c28c7b775165b6844000eb69f44d104d6c3803ac7da5d59f6ac3ecfb46d9d8"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py": {
+        "bytes": 2343,
+        "git_blob_sha1": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+        "sha256": "0d2410ce8b8b4499a6b0cdab939ae2bceab8971efd8660d999b0f3088f28cbf7"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py": {
+        "bytes": 9332,
+        "git_blob_sha1": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+        "sha256": "093266ea08084c7cce7b8ddd779ecfaaa13055735faa8a7d68b5924f385b395b"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py": {
+        "bytes": 1160,
+        "git_blob_sha1": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+        "sha256": "949100aac4d9c19c9d65319dbd362886c5d46a72d7586ba4fd500e9f1d51570c"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py": {
+        "bytes": 823,
+        "git_blob_sha1": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+        "sha256": "356817b5d1390737128cbcc03a5333fd3060b73beae478772282ccb851d0ef85"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py": {
+        "bytes": 1272,
+        "git_blob_sha1": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+        "sha256": "c18c5b3f021408597a473bb710070ec3fb3b39f5a2e42e88ae83ced425a608b5"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py": {
+        "bytes": 2832,
+        "git_blob_sha1": "574abe41175568d700a389b8b96d1ba554914779",
+        "sha256": "b3f82e19926c9cfb63f10136aca5e8a723bde1ad62dae1d04f90d405f9439baf"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py": {
+        "bytes": 1859,
+        "git_blob_sha1": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+        "sha256": "df81d9901240214edc1831ce1b77558dcd6227b29a2f000fc5f546df55d2d09a"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/dpt.py": {
+        "bytes": 7391,
+        "git_blob_sha1": "18d3e6f8b5c973aea5d4927ef783d43053ba6429",
+        "sha256": "7cc9a29b41d31e1628e5c8b8705e25ae95bc6490f779dbb695297ce2341566f5"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py": {
+        "bytes": 3987,
+        "git_blob_sha1": "382ea183a40264056142afffc201c992a2b01d37",
+        "sha256": "351aa24b8af4bef923ebe3bed5e5e8503b08e39bf06ee045d6444a485a2036a8"
+      },
+      "thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py": {
+        "bytes": 6075,
+        "git_blob_sha1": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+        "sha256": "a97df1dbb687457a40c387fdc3482edee7ddc5c142c7d2735ca6235a8ae2885f"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/README.md": {
+        "bytes": 4621,
+        "git_blob_sha1": "fc84a2f050a63219dd1193b12b0651bd0ab0ced5",
+        "sha256": "659b050b538d5832899c093b83b5fb48e50c3431cf84f1f05bbdc8152b81c9d2"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/assets/compare_zoedepth.png": {
+        "bytes": 9187108,
+        "git_blob_sha1": "f3ba0fa4cb320413f59cbb4244cb1081e85aa79c",
+        "sha256": "8044e39ef6cb4aaabea9a81333fa1ff2d3e07448e7f9f43f77f471aba72a12e0"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py": {
+        "bytes": 2719,
+        "git_blob_sha1": "4d8dd3e0873ed736c1888fe1f639cc4439b5ab09",
+        "sha256": "4b0d8a02bf824c44333db2ffc5325040d9225431d0c277765fd67b6ca7447617"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py": {
+        "bytes": 1864,
+        "git_blob_sha1": "4be6828ad52720c64e3296fa81bb262e95ec1bbe",
+        "sha256": "30794974e677419313d6f0e29f9e8467e059a03e6d68eb1a17123b1c5476bc11"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/train.txt": {
+        "bytes": 13694890,
+        "git_blob_sha1": "82a1fd92a73ae1b435d16873a3fd36a7f4eebd50",
+        "sha256": "47beb7c615a54d08dfa2f053787897455e845ad1b54d268194a6b431b01a04d0"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/val.txt": {
+        "bytes": 1698780,
+        "git_blob_sha1": "1013e1945057b3e5daa8647b23b965e6826fadc9",
+        "sha256": "201a95ae5409cf5a5fe75b45049812c6804f6521a5d11c2df25601e6aee255be"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/splits/kitti/val.txt": {
+        "bytes": 145074,
+        "git_blob_sha1": "726529b53f60b342ea1be94a85845a584db00ff7",
+        "sha256": "ff4404a257bab8dbe5949f680033731b57b5f1ebe19a13b0d6fb294e0835df2f"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/splits/vkitti2/train.txt": {
+        "bytes": 3594932,
+        "git_blob_sha1": "69dc40f8b58baa5aa537f97f5d12ef5eac70f8ee",
+        "sha256": "337d29f26a73361a0e50fef1e6601bdbc553fcaca947843dc91dbff88a9ea81c"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/transform.py": {
+        "bytes": 9563,
+        "git_blob_sha1": "41fd0dc9b270081b1c7bdfe3434777e4170ca4a3",
+        "sha256": "684a884faf897d0be24b18fb215140d0226dd62b8b27cb8aab740f9066715965"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py": {
+        "bytes": 1807,
+        "git_blob_sha1": "48cb03112b8861fe7862cce3b25158a0b0a5ff25",
+        "sha256": "e6951506752e4bbedc683c25f3197aeafe02fda191fb63a496f3d5a027ddfc40"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py": {
+        "bytes": 15177,
+        "git_blob_sha1": "ec4499a18330523aa3564b16be70e813de000c94",
+        "sha256": "0ceeaecd4e8026f8218694014642515fb7a0943c1833b75edc91ae7a79ac9690"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/__init__.py": {
+        "bytes": 382,
+        "git_blob_sha1": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+        "sha256": "e3c28c7b775165b6844000eb69f44d104d6c3803ac7da5d59f6ac3ecfb46d9d8"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py": {
+        "bytes": 2343,
+        "git_blob_sha1": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+        "sha256": "0d2410ce8b8b4499a6b0cdab939ae2bceab8971efd8660d999b0f3088f28cbf7"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py": {
+        "bytes": 9332,
+        "git_blob_sha1": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+        "sha256": "093266ea08084c7cce7b8ddd779ecfaaa13055735faa8a7d68b5924f385b395b"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py": {
+        "bytes": 1160,
+        "git_blob_sha1": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+        "sha256": "949100aac4d9c19c9d65319dbd362886c5d46a72d7586ba4fd500e9f1d51570c"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py": {
+        "bytes": 823,
+        "git_blob_sha1": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+        "sha256": "356817b5d1390737128cbcc03a5333fd3060b73beae478772282ccb851d0ef85"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py": {
+        "bytes": 1272,
+        "git_blob_sha1": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+        "sha256": "c18c5b3f021408597a473bb710070ec3fb3b39f5a2e42e88ae83ced425a608b5"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py": {
+        "bytes": 2832,
+        "git_blob_sha1": "574abe41175568d700a389b8b96d1ba554914779",
+        "sha256": "b3f82e19926c9cfb63f10136aca5e8a723bde1ad62dae1d04f90d405f9439baf"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py": {
+        "bytes": 1859,
+        "git_blob_sha1": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+        "sha256": "df81d9901240214edc1831ce1b77558dcd6227b29a2f000fc5f546df55d2d09a"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py": {
+        "bytes": 7417,
+        "git_blob_sha1": "65413046b5fb4f65b90978bcdc9cc94bf8cdcae9",
+        "sha256": "120698fd0ad9a4d169b4b9ef26035ad0cb11eed4089af53e07e38f5717024b1d"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py": {
+        "bytes": 3987,
+        "git_blob_sha1": "382ea183a40264056142afffc201c992a2b01d37",
+        "sha256": "351aa24b8af4bef923ebe3bed5e5e8503b08e39bf06ee045d6444a485a2036a8"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py": {
+        "bytes": 6075,
+        "git_blob_sha1": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+        "sha256": "a97df1dbb687457a40c387fdc3482edee7ddc5c142c7d2735ca6235a8ae2885f"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/depth_to_pointcloud.py": {
+        "bytes": 5031,
+        "git_blob_sha1": "770fe60698724327f1071c66d685b4a3d8ce7ca8",
+        "sha256": "d4d30d0ce76c2fdbf539cd97bed01948d7506acd8fe75481ab4b32c4170310d7"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/dist_train.sh": {
+        "bytes": 730,
+        "git_blob_sha1": "afa750ad3c3e05fca741bcd66a5f6fea1dab46ac",
+        "sha256": "1daaa9092a51cc1e972219fd04902baf09e290bb7a2221e9e6287895f565fef1"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/requirements.txt": {
+        "bytes": 50,
+        "git_blob_sha1": "082330f721c6e704a360cd7706b968d5a93b312f",
+        "sha256": "e46b77335e73e73884ca465deac9c63f572e71e19ceeb1396d138415d3ec4771"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/run.py": {
+        "bytes": 3518,
+        "git_blob_sha1": "63d46f54099d2039f80379fec694a717e2965bed",
+        "sha256": "ce2ecbb342933ff442f6fefab14ef5f5b7aea42c7987325f6f3166c9c73f84cb"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/train.py": {
+        "bytes": 9401,
+        "git_blob_sha1": "9b304275c5bd22f63fa19e54c427b3da6a730ea9",
+        "sha256": "1461b9a4ffc880085b3a1d193d052da5ce416a999421c65b792267e65fccfb10"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/util/dist_helper.py": {
+        "bytes": 1343,
+        "git_blob_sha1": "7b6eb432b4988638ac9549a82fbaebf968fe9c61",
+        "sha256": "97eb1d0eaa639c2599813c3b5578cb39d9d415efe99aea1ff7cf6eab1ea8e9c8"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/util/loss.py": {
+        "bytes": 472,
+        "git_blob_sha1": "2ae5b304effd46661e93ea23127d1115c36b5265",
+        "sha256": "4acc0c1c805bc16dba34e7bd0ee9ffb9ba50d374868412cf96dffff087023a2b"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/util/metric.py": {
+        "bytes": 1010,
+        "git_blob_sha1": "8638cf25875c753cb62c3977af1417c221237dce",
+        "sha256": "595ae2f0c8bda88f6588d35b199b5ec9d4ba7ad531f58bd593d5ef4d28263794"
+      },
+      "thirdparty/depth_anything_v2/metric_depth/util/utils.py": {
+        "bytes": 647,
+        "git_blob_sha1": "e89b994538c5123075605fb6130022867f37c99b",
+        "sha256": "e69aa66e267e9b251826dbb0386b6f47fdd5fc4a4e2bfd1c98405f4bb1be526b"
+      },
+      "thirdparty/depth_anything_v2/requirements.txt": {
+        "bytes": 77,
+        "git_blob_sha1": "8698f1bc9fd4f6e98147c042d6c978e343b0f494",
+        "sha256": "017b7b1ae65f7a8980ab82cdc7f0402d038fd2f9dfde8b701c37331851b22cd3"
+      },
+      "thirdparty/depth_anything_v2/run.py": {
+        "bytes": 3043,
+        "git_blob_sha1": "14810ff39a17e60354e2199d62708b197e97d750",
+        "sha256": "b8beab6341314bc864cfc0283e0e303f55571af4e2e456c3d3afbc4aae67249a"
+      },
+      "thirdparty/depth_anything_v2/run_video.py": {
+        "bytes": 3750,
+        "git_blob_sha1": "cc3c5b6a33585396d91aaaa4301110a6179f452d",
+        "sha256": "208c173e383c0515a3a23d35b2a4cde816560f1c01af19913fc4dedc4b1cf32c"
+      },
+      "thirdparty/diff-gaussian-rasterization-w-pose": {
+        "gitlink": "43e21bff91cd24986ee3dd52fe0bb06952e50ec7",
+        "scope": "POINTER_ONLY"
+      },
+      "thirdparty/gaussian_splatting/LICENSE.md": {
+        "bytes": 4662,
+        "git_blob_sha1": "18445c6d34aedbf1ab9d282223f8f10ce38cd79a",
+        "sha256": "c5ba70a2194af2aefe85dfe3da68608dcb3abd21a3aa53b55aa297c2f0b60eb3"
+      },
+      "thirdparty/gaussian_splatting/__init__.py": {
+        "bytes": 0,
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "thirdparty/gaussian_splatting/gaussian_renderer/__init__.py": {
+        "bytes": 5036,
+        "git_blob_sha1": "3e73f1308d0f81dd62350b6199d3edc8b4450646",
+        "sha256": "67b9527bc3dcb4d641640444097cdd89ac75e457bc1f1c02a3f961086a10b4bc"
+      },
+      "thirdparty/gaussian_splatting/scene/gaussian_model.py": {
+        "bytes": 29911,
+        "git_blob_sha1": "33ceda1d82fe2bf5f381200b2345fff25db63a5d",
+        "sha256": "8a84c37e344e07e299eb7080f45b475d69a417914fe272dd02031a092125ddf5"
+      },
+      "thirdparty/gaussian_splatting/utils/general_utils.py": {
+        "bytes": 6835,
+        "git_blob_sha1": "30a19cc614e396526e1375aaed47858eebe6440d",
+        "sha256": "ea298eeac0995b3695335b88ff8c95edca16cfc870bd248b354b1f541851f3ef"
+      },
+      "thirdparty/gaussian_splatting/utils/graphics_utils.py": {
+        "bytes": 2502,
+        "git_blob_sha1": "0434e41559f697082a89b62070b01a7f2c4a1eb2",
+        "sha256": "cf76d337a527cbb4c0c0a9c88712428843d930a7195b0d1f0544675a39f628bc"
+      },
+      "thirdparty/gaussian_splatting/utils/image_utils.py": {
+        "bytes": 551,
+        "git_blob_sha1": "77a4d8f481a202c35d06f5b5867cfbff40b505c3",
+        "sha256": "6ab8928540df890e7eabaac71504fff041a12d011335ff34f33d0ff5893cd8f0"
+      },
+      "thirdparty/gaussian_splatting/utils/loss_utils.py": {
+        "bytes": 2936,
+        "git_blob_sha1": "6308786cc0d37060e201d22f394010d7eb7b12c8",
+        "sha256": "9ba844d711ab8eb9110129639bc6ffd8ce79aa4f38deca460c8f2ef0971175af"
+      },
+      "thirdparty/gaussian_splatting/utils/sh_utils.py": {
+        "bytes": 4496,
+        "git_blob_sha1": "fa0f104a9d6876e9cef04fbc5e0f19c8bb64cc67",
+        "sha256": "7db79c605c1fe474a4bf964233d3afb4c9c35186dc1f2f90fe9ba1bcdbafd72b"
+      },
+      "thirdparty/gaussian_splatting/utils/system_utils.py": {
+        "bytes": 787,
+        "git_blob_sha1": "a89fac10a92f3150d7ff9a3abcbff62a463800a3",
+        "sha256": "8b906d4fe5d7a8dea3ec1b86ab3b512c645ef9ff483c3990612549b0443c3c42"
+      },
+      "thirdparty/lietorch": {
+        "gitlink": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6",
+        "scope": "POINTER_ONLY"
+      },
+      "thirdparty/simple-knn": {
+        "gitlink": "da5f991fb5b4146531b3912d8084162cf1485701",
+        "scope": "POINTER_ONLY"
+      }
+    }
+  },
+  "task003": {
+    "root": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK003_VAL007_OBSERVATION_R1",
+    "files_sha256": {
+      "remote/incoming/native_config.yaml": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "remote/incoming/INPUT.json": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+      "remote/capture/observer.jsonl": "62d385b24f5c83f7ae09033e7ef2c5ae1a146d49c412f1f5d4a40dc250ff3e10",
+      "remote/capture/keyframes.json": "f42b86dc530047c6d90f99739e04051256ee621ab2c3d5a87bbcb4dc8b943099",
+      "remote/capture/trajectory.npz": "0c6fac9f4754fa2003a9dc13cffaf960a4cea9325d0a3a4fe4fc2bc0f49a28a8",
+      "remote/capture/est_poses_full.txt": "38f4884034d753497a9cc5d92b8bbb081a6d52204d884bd892b345cdb64d8f01",
+      "remote/capture/model_input.json": "730883c3012a16746aaeda228bd7b62741296734c821a7a554c5f88c20d3cbdb",
+      "remote/capture/model_result.json": "61e15771c0be36c9fa0070fb0dd41e54b805125e04e034ab2991a291d2dfb2ab",
+      "TASK003_VAL007_INTERVAL_ANALYSIS.csv": "bb0ace3931a802bff57b7d2f2163c29397ce228025a930f3625f8f80b39cb1aa",
+      "TASK003_312_328_LOCAL_BA_TIMELINE.csv": "ea5c6594e1a285d7579ada3574e90584f6ba01200d478dae66ed68096e4332e3"
+    }
+  },
+  "offline_gt": {
+    "path": "D:\\aaa\\GameCam-VO\\experiments\\DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1\\offline_gt\\val_007.npz",
+    "sha256": "91fb149c066bb488ac6071602a4b50fe1540243f2db3369a3706f63b705d7008",
+    "inference_inputs": 0
+  },
+  "note": "Gitlink pointer identity only; current remote deployment and historical weights not reopened."
+}

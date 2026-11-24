@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\DROID_SLAM_DROID_W_TASK001_STATIC_AUDIT\verify_static_sources.py", line 260, in <module>
+    main()
+    ~~~~^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_SLAM_DROID_W_TASK001_STATIC_AUDIT\verify_static_sources.py", line 244, in main
+    exports, fingerprints, matched = verify_receipts()
+                                     ~~~~~~~~~~~~~~~^^
+  File "D:\aaa\GameCam-VO\experiments\DROID_SLAM_DROID_W_TASK001_STATIC_AUDIT\verify_static_sources.py", line 187, in verify_receipts
+    check(digest == manifest[rel]['sha256'] and size == int(manifest[rel]['bytes']), f'historical digest {rel}')
+                    ~~~~~~~~^^^^^
+KeyError: 'evidence/OFFICIAL_TEXT_DIFF.patch'

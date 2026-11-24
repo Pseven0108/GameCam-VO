@@ -1,0 +1,1997 @@
+{
+  "sha": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c8c3ff90031033435207cd615ee299c22a69eb4",
+      "size": 135,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1c8c3ff90031033435207cd615ee299c22a69eb4"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f0c46e461c9d3b6b8d677c8feec1d303b24c9c4",
+      "size": 798,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9f0c46e461c9d3b6b8d677c8feec1d303b24c9c4"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc23aaed4bebbd0c9ca0b82a1059b9c8a15aa9c9",
+      "size": 1128,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/bc23aaed4bebbd0c9ca0b82a1059b9c8a15aa9c9"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7a4a3ea2424c09fbe48d455aed1eaa94d9124835"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35828686b3ec726ccef4569b058abe48c6796a06",
+      "size": 7270,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/35828686b3ec726ccef4569b058abe48c6796a06"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bf6fb1aaa8264f4883b6c7bbd6d98c9120dafa3",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/4bf6fb1aaa8264f4883b6c7bbd6d98c9120dafa3"
+    },
+    {
+      "path": "configs/Dynamic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2056813b0cf45016f9a333725d858543b06d5b18",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/2056813b0cf45016f9a333725d858543b06d5b18"
+    },
+    {
+      "path": "configs/Dynamic/Bonn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ec32e5b6e41af9e31120b3a9587544c989dd2b2",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/1ec32e5b6e41af9e31120b3a9587544c989dd2b2"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "652035845fa487e05ccc5c03fcb9c4d48dac2655",
+      "size": 139,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/652035845fa487e05ccc5c03fcb9c4d48dac2655"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon2.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "36f2a05bc7fabb51c1894636f21585765697fa7e",
+      "size": 141,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/36f2a05bc7fabb51c1894636f21585765697fa7e"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a1ae70f48ef340ab58638461dcd07df42861dae1",
+      "size": 135,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a1ae70f48ef340ab58638461dcd07df42861dae1"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd2.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "908f60957722053bd4bfab427143ceadd5ccaa4c",
+      "size": 137,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/908f60957722053bd4bfab427143ceadd5ccaa4c"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_dynamic.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e14057ab0a167175dc8986e700906609a7a3ce00",
+      "size": 390,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e14057ab0a167175dc8986e700906609a7a3ce00"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "04719d402caff5d9a0292a29a28bab0ea6b9e2e4",
+      "size": 176,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/04719d402caff5d9a0292a29a28bab0ea6b9e2e4"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box2.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "747f3ff86cf9ead8cbd8a003ec44e7f2c0bc9ff0",
+      "size": 177,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/747f3ff86cf9ead8cbd8a003ec44e7f2c0bc9ff0"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3076a52f681a35d60b95889e8810889a360d4f84",
+      "size": 156,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/3076a52f681a35d60b95889e8810889a360d4f84"
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking2.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e6a56c8e2f35332b733fb1a325467325e722a355",
+      "size": 157,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e6a56c8e2f35332b733fb1a325467325e722a355"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "454fc0d57c20dda4c4340140d9795808e2608fd3",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/454fc0d57c20dda4c4340140d9795808e2608fd3"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown1.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bee1b028e7ac421056264ce4fa23e895f830405d",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/bee1b028e7ac421056264ce4fa23e895f830405d"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown2.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "839d443a98c517a13022300a1a058a6b359dc08b",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/839d443a98c517a13022300a1a058a6b359dc08b"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown3.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "06ee49aa3618247d9f02b9acdbe44cc48048b4d4",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/06ee49aa3618247d9f02b9acdbe44cc48048b4d4"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown4.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5d0f6d9ab53de2e8cad7ea732657e7157dd7a32d",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5d0f6d9ab53de2e8cad7ea732657e7157dd7a32d"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown5.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "19ee5157acd63ce89369931ea8b981b3674a4175",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/19ee5157acd63ce89369931ea8b981b3674a4175"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown6.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a523fdc88432208ca44adcf3b82052e61d13fd2c",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a523fdc88432208ca44adcf3b82052e61d13fd2c"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown7.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "785d590e4cffe337a717d1d15ff7f0bb9f470d3f",
+      "size": 124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/785d590e4cffe337a717d1d15ff7f0bb9f470d3f"
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/droidw.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b17c849fa47b8252d323cc9ce62d7d0472bf997",
+      "size": 536,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8b17c849fa47b8252d323cc9ce62d7d0472bf997"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b7a9f8eefadc767ef7babd0c38096ffc75e3a85",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/1b7a9f8eefadc767ef7babd0c38096ffc75e3a85"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/apple.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d501c46b29c29fcdac272cdc74aabf1e1296d6ae",
+      "size": 258,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/d501c46b29c29fcdac272cdc74aabf1e1296d6ae"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/backpack.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bad897063e9cd244f165402aac2675fe0f29c7eb",
+      "size": 264,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/bad897063e9cd244f165402aac2675fe0f29c7eb"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/block.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c5628c9bc171966ac53bc8efa089f5f0b134313",
+      "size": 258,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1c5628c9bc171966ac53bc8efa089f5f0b134313"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/creeper.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51d221c1c18c92b1bf4af4ed80337e5968ed0e18",
+      "size": 262,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/51d221c1c18c92b1bf4af4ed80337e5968ed0e18"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/dycheck.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7e3553d578a9a60a5e001cada2d7827c726a8c38",
+      "size": 362,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7e3553d578a9a60a5e001cada2d7827c726a8c38"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/handwavy.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e1e02bf16d04f1e00e6792f5df0a341ed35cd39",
+      "size": 264,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4e1e02bf16d04f1e00e6792f5df0a341ed35cd39"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/haru-sit.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed8881cf2d50383a3df9b53f0aceccd184189f8e",
+      "size": 264,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ed8881cf2d50383a3df9b53f0aceccd184189f8e"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/mochi-high-five.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd68d7909bbcfc14544184735deacca148a4a01",
+      "size": 278,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ecd68d7909bbcfc14544184735deacca148a4a01"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/paper-windmill.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e8301277ccd1b3796fa3a6e4a86c0d496c4cfb6",
+      "size": 276,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2e8301277ccd1b3796fa3a6e4a86c0d496c4cfb6"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/pillow.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1cad8bbae48eb68aa8fa20bf997de8bcec51563",
+      "size": 260,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e1cad8bbae48eb68aa8fa20bf997de8bcec51563"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/spin.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7802fac514005c2f606e1749b6b9b8879708216d",
+      "size": 256,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7802fac514005c2f606e1749b6b9b8879708216d"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/sriracha-tree.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27c9ea120d37364c3f5406266c918eea824cae7c",
+      "size": 274,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/27c9ea120d37364c3f5406266c918eea824cae7c"
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/teddy.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96e64eb9bd9e0349f0650d1e61dbcd4354cd575",
+      "size": 258,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/d96e64eb9bd9e0349f0650d1e61dbcd4354cd575"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd752bad9a6cd28fb34a7508ab0d6cd16b868a00",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/cd752bad9a6cd28fb34a7508ab0d6cd16b868a00"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg2_desk_with_person.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ef6d9c4b70c604a10223cca0a71b518bb82eca32",
+      "size": 513,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ef6d9c4b70c604a10223cca0a71b518bb82eca32"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4b9eafb87852119be19f0bcfc043bba927136219",
+      "size": 332,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4b9eafb87852119be19f0bcfc043bba927136219"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere_static.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "987387fbf75d9e8b3369372a7040dba2c69fa564",
+      "size": 324,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/987387fbf75d9e8b3369372a7040dba2c69fa564"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_rpy.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "86e439f0e5b22b50adb7c36e16eaf6bdd98c1098",
+      "size": 318,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/86e439f0e5b22b50adb7c36e16eaf6bdd98c1098"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_xyz.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b12934d4e454d047b4e521e00b67d911951417cd",
+      "size": 318,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b12934d4e454d047b4e521e00b67d911951417cd"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "99b1139d97df1db8030161e86fcabfb11e04b990",
+      "size": 332,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/99b1139d97df1db8030161e86fcabfb11e04b990"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere_static.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9618c1f66428e3f716f105ba06c0e937d9bee668",
+      "size": 324,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9618c1f66428e3f716f105ba06c0e937d9bee668"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_rpy.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4fd6e81b031497e5dce55772126fcd8259c127ee",
+      "size": 318,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4fd6e81b031497e5dce55772126fcd8259c127ee"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_xyz.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "44fc94ef80fdc15e8a895c426d88abc0fb8bc092",
+      "size": 318,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/44fc94ef80fdc15e8a895c426d88abc0fb8bc092"
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/tum_dynamic.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "164001e1d98139fa9c064ff4d0d0e9418da0b6ef",
+      "size": 662,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/164001e1d98139fa9c064ff4d0d0e9418da0b6ef"
+    },
+    {
+      "path": "configs/Dynamic/YouTube",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c137a443d80238b20ad9dfb32c0fd825c5937db1",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/c137a443d80238b20ad9dfb32c0fd825c5937db1"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/elephant_herd.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08460a36d52694ca19d73da6717932664a075f65",
+      "size": 307,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/08460a36d52694ca19d73da6717932664a075f65"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/giraffe.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae4fe67b2c9a54ab20743a8544cc88b7804ac70d",
+      "size": 295,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ae4fe67b2c9a54ab20743a8544cc88b7804ac70d"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_01.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083cca7f69dbaf4831e5295a2949df89658e2b8c",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/083cca7f69dbaf4831e5295a2949df89658e2b8c"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_02.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b54c506efb268b1b58ae3decb47ee17334ef461",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5b54c506efb268b1b58ae3decb47ee17334ef461"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_03.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c4a855bd707c0a9a3313db30ce65e837b7a0d0a",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5c4a855bd707c0a9a3313db30ce65e837b7a0d0a"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_04.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dbdec47f441e7f619399b785ca2628c84b16f41",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2dbdec47f441e7f619399b785ca2628c84b16f41"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_05.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88c63f4e98b76da465a4b4a9f1b46db32d06d852",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/88c63f4e98b76da465a4b4a9f1b46db32d06d852"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_06.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f02848c6d8adfb75b91900de20ea238d69719f10",
+      "size": 314,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f02848c6d8adfb75b91900de20ea238d69719f10"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/taylor_22.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c79a6d4653602875ba2e8911d62204587d2d532",
+      "size": 290,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/6c79a6d4653602875ba2e8911d62204587d2d532"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dc02c681edbb426cd043db456970c14fc6edc3f",
+      "size": 286,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7dc02c681edbb426cd043db456970c14fc6edc3f"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking2.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b1d7238ec3cdefa4b3cd7d34f54b75644d8cab6",
+      "size": 288,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4b1d7238ec3cdefa4b3cd7d34f54b75644d8cab6"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking3.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2d22e3dd267e5d852a725fd22e48470bdaf1a8",
+      "size": 288,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ea2d22e3dd267e5d852a725fd22e48470bdaf1a8"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd3caca1d83b15ad4e3ae763f31b3d3a58c7305",
+      "size": 304,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/3cd3caca1d83b15ad4e3ae763f31b3d3a58c7305"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum2.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeb8562ed1a7e2a68ece074ff02d150d0e547583",
+      "size": 306,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/eeb8562ed1a7e2a68ece074ff02d150d0e547583"
+    },
+    {
+      "path": "configs/Dynamic/YouTube/youtube.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1b37621fd243af4fbf89cc4223cb7efc1dea11cc",
+      "size": 603,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1b37621fd243af4fbf89cc4223cb7efc1dea11cc"
+    },
+    {
+      "path": "configs/droid_w.yaml",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "591e6d3680712bcf9c9e7e21245002e5c24c95be",
+      "size": 6585,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/591e6d3680712bcf9c9e7e21245002e5c24c95be"
+    },
+    {
+      "path": "media",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c79293d6d55183e8f5deabd7b6c5449af4fed082",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/c79293d6d55183e8f5deabd7b6c5449af4fed082"
+    },
+    {
+      "path": "media/teaser.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe42c3d1108c7d034256d993704a9b47324f6d22",
+      "size": 1680604,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/fe42c3d1108c7d034256d993704a9b47324f6d22"
+    },
+    {
+      "path": "misc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0c890b9eb26b69782b31700841507dcf6d03622",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/e0c890b9eb26b69782b31700841507dcf6d03622"
+    },
+    {
+      "path": "misc/renderoption.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d35c4b1ab67bae5197159fa3f0e1f8a72a3be8",
+      "size": 1312,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/80d35c4b1ab67bae5197159fa3f0e1f8a72a3be8"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce173b14cdee0109dd93fcf2d344fedd0f18ba7a",
+      "size": 272,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ce173b14cdee0109dd93fcf2d344fedd0f18ba7a"
+    },
+    {
+      "path": "run.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a26a28f03777bbac213d2ece076da8b1bb6eef04",
+      "size": 1847,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a26a28f03777bbac213d2ece076da8b1bb6eef04"
+    },
+    {
+      "path": "scripts_downloading",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57e43290d7d43cf88603e8c829fa64f92e19e3c7",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/57e43290d7d43cf88603e8c829fa64f92e19e3c7"
+    },
+    {
+      "path": "scripts_downloading/download_bonn.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8369dcb7c9b64c1697f53cf29700171406c1ffb4",
+      "size": 1125,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8369dcb7c9b64c1697f53cf29700171406c1ffb4"
+    },
+    {
+      "path": "scripts_downloading/download_droidw.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d7855161281784cfbfe5a1c1dfebb68f5abae3",
+      "size": 130,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/90d7855161281784cfbfe5a1c1dfebb68f5abae3"
+    },
+    {
+      "path": "scripts_downloading/download_tum.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "95ebba6c3514c18868f0ab0df2cdceeb4bc6d79e",
+      "size": 1775,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/95ebba6c3514c18868f0ab0df2cdceeb4bc6d79e"
+    },
+    {
+      "path": "scripts_downloading/download_youtube.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63dbc81588f8cc08679799dd6169c106bd59e26d",
+      "size": 130,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/63dbc81588f8cc08679799dd6169c106bd59e26d"
+    },
+    {
+      "path": "scripts_eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0dfa03f5d0832a6ebd4833fea8421156397cb1fb",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/0dfa03f5d0832a6ebd4833fea8421156397cb1fb"
+    },
+    {
+      "path": "scripts_eval/evaluate_droidw.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38949e8e0d504f3f9e1b29208c7008c9144a0ea6",
+      "size": 6509,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/38949e8e0d504f3f9e1b29208c7008c9144a0ea6"
+    },
+    {
+      "path": "scripts_eval/summarize_rmse.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae4016aac9d3dd5e8cb2d32884f120877bff4297",
+      "size": 10677,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ae4016aac9d3dd5e8cb2d32884f120877bff4297"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8afd1be40987c61ea261b5eec806b0714f4091b1",
+      "size": 1080,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8afd1be40987c61ea261b5eec806b0714f4091b1"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1f6f5d4edf48c2ce22e540d18285a40a10dcc16",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/f1f6f5d4edf48c2ce22e540d18285a40a10dcc16"
+    },
+    {
+      "path": "src/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/backend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a565ea49f42cf765a6c8d615f892496ae223f50",
+      "size": 5273,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2a565ea49f42cf765a6c8d615f892496ae223f50"
+    },
+    {
+      "path": "src/config.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0408d53c67baace6322209957d1d0530778c7c18",
+      "size": 2124,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/0408d53c67baace6322209957d1d0530778c7c18"
+    },
+    {
+      "path": "src/depth_video.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87f63043cd7c68a2d02278e6042336e0dc98a12e",
+      "size": 45293,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/87f63043cd7c68a2d02278e6042336e0dc98a12e"
+    },
+    {
+      "path": "src/factor_graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b208fa23c26fe267df2f6c85913fbd00268dae1",
+      "size": 22050,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/0b208fa23c26fe267df2f6c85913fbd00268dae1"
+    },
+    {
+      "path": "src/frontend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12cfd36d4597846979fc5fd79e77bf0e795145b",
+      "size": 10646,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a12cfd36d4597846979fc5fd79e77bf0e795145b"
+    },
+    {
+      "path": "src/geom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b4f64efc6ab3ea0107092ee612de8236ef2c9c4",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/9b4f64efc6ab3ea0107092ee612de8236ef2c9c4"
+    },
+    {
+      "path": "src/geom/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/geom/ba.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34340fc5b483a84ebb6a073e6fa9868728d56376",
+      "size": 10193,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/34340fc5b483a84ebb6a073e6fa9868728d56376"
+    },
+    {
+      "path": "src/geom/chol.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "207694274b665668d61ae11c616f44d45c53ca6d",
+      "size": 2673,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/207694274b665668d61ae11c616f44d45c53ca6d"
+    },
+    {
+      "path": "src/geom/projective_ops.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b036dd193710133153950d79d0c1adaa228ad2",
+      "size": 4672,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f2b036dd193710133153950d79d0c1adaa228ad2"
+    },
+    {
+      "path": "src/gui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb89a40ee0958d1fd6bb1517aa9da3cf7ef9688c",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/bb89a40ee0958d1fd6bb1517aa9da3cf7ef9688c"
+    },
+    {
+      "path": "src/gui/gl_render",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4dc706ee93edd5e497098c1381afaf5f61703dbd",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/4dc706ee93edd5e497098c1381afaf5f61703dbd"
+    },
+    {
+      "path": "src/gui/gl_render/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f111bb602b1eb6449008d75bdd8b673a1d429946",
+      "size": 1061,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f111bb602b1eb6449008d75bdd8b673a1d429946"
+    },
+    {
+      "path": "src/gui/gl_render/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b173d1640349c7743796f52e14a7dd372f72b4d",
+      "size": 41,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1b173d1640349c7743796f52e14a7dd372f72b4d"
+    },
+    {
+      "path": "src/gui/gl_render/render_ogl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a87bbac9b30f4f3ddf272f89d1ba79bec57dc3b",
+      "size": 4506,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1a87bbac9b30f4f3ddf272f89d1ba79bec57dc3b"
+    },
+    {
+      "path": "src/gui/gl_render/shaders",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f02f4e8283dc9721ba3dd4c1648ea13f600068a1",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/f02f4e8283dc9721ba3dd4c1648ea13f600068a1"
+    },
+    {
+      "path": "src/gui/gl_render/shaders/gau_frag.glsl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ece77c3938545a77f43fcc6c6009902bd1150fcc",
+      "size": 932,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ece77c3938545a77f43fcc6c6009902bd1150fcc"
+    },
+    {
+      "path": "src/gui/gl_render/shaders/gau_vert.glsl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21913232f7f29cabd7b2f8f1409cefda4d09191d",
+      "size": 6404,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/21913232f7f29cabd7b2f8f1409cefda4d09191d"
+    },
+    {
+      "path": "src/gui/gl_render/util.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47575672d495b843be9d6d93478a02fa40dc7753",
+      "size": 8693,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/47575672d495b843be9d6d93478a02fa40dc7753"
+    },
+    {
+      "path": "src/gui/gl_render/util_gau.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d47140086dd1f150badde3cc182a5644e6e4548a",
+      "size": 508,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/d47140086dd1f150badde3cc182a5644e6e4548a"
+    },
+    {
+      "path": "src/gui/gui_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad05b57190cdca8d20bb36bf5fbd53366eac388f",
+      "size": 6123,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ad05b57190cdca8d20bb36bf5fbd53366eac388f"
+    },
+    {
+      "path": "src/gui/slam_gui.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f642ae90a5992ba1a67000db8cebc19950a5a3",
+      "size": 29486,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/24f642ae90a5992ba1a67000db8cebc19950a5a3"
+    },
+    {
+      "path": "src/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67d48b066946a380e9534b523296c89448e505ca",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/67d48b066946a380e9534b523296c89448e505ca"
+    },
+    {
+      "path": "src/lib/altcorr_kernel.cu",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "be2008f223c00dbb339f84db7d1a9f0789f63f5f",
+      "size": 11622,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/be2008f223c00dbb339f84db7d1a9f0789f63f5f"
+    },
+    {
+      "path": "src/lib/correlation_kernels.cu",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b67d47e0ed11e66b23a2c23e2bc53952b7c94d1a",
+      "size": 5531,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b67d47e0ed11e66b23a2c23e2bc53952b7c94d1a"
+    },
+    {
+      "path": "src/lib/droid.cpp",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0c3d91040527b8cbafa2b811e1d18152010a26fa",
+      "size": 7635,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/0c3d91040527b8cbafa2b811e1d18152010a26fa"
+    },
+    {
+      "path": "src/lib/droid_kernels.cu",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9c171af1bfafc278e9776f2f89667054a66dc2bf",
+      "size": 62996,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9c171af1bfafc278e9776f2f89667054a66dc2bf"
+    },
+    {
+      "path": "src/mapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe6d17e6dcf94a741e242ff48556eb6d1bce6df6",
+      "size": 65332,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/fe6d17e6dcf94a741e242ff48556eb6d1bce6df6"
+    },
+    {
+      "path": "src/modules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2543dda16593a686865a2b18246da42af3a09371",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/2543dda16593a686865a2b18246da42af3a09371"
+    },
+    {
+      "path": "src/modules/droid_net",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe0d675ec2ef52da4125f8a669fa0e18ca9ec003",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/fe0d675ec2ef52da4125f8a669fa0e18ca9ec003"
+    },
+    {
+      "path": "src/modules/droid_net/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f44de2aa9fbda78a14d1e95f46edb248568ba5fa",
+      "size": 183,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f44de2aa9fbda78a14d1e95f46edb248568ba5fa"
+    },
+    {
+      "path": "src/modules/droid_net/clipping.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c7e38d994c95b28fd79853e58a3c529517134cfd",
+      "size": 1141,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/c7e38d994c95b28fd79853e58a3c529517134cfd"
+    },
+    {
+      "path": "src/modules/droid_net/corr.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2ef6466cc2c345aa544a91e67d3955f49f99b07a",
+      "size": 5380,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2ef6466cc2c345aa544a91e67d3955f49f99b07a"
+    },
+    {
+      "path": "src/modules/droid_net/droid_net.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eeb6de0b241b1d2fb20949068c867616f7a3da3d",
+      "size": 5408,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/eeb6de0b241b1d2fb20949068c867616f7a3da3d"
+    },
+    {
+      "path": "src/modules/droid_net/extractor.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "babd1f7da6279e4728456624c6c677ff5f0c521f",
+      "size": 4519,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/babd1f7da6279e4728456624c6c677ff5f0c521f"
+    },
+    {
+      "path": "src/modules/droid_net/gru.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9bab24ab863295a8fb9db17c6cfbab5ea0c9f1cc",
+      "size": 1989,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9bab24ab863295a8fb9db17c6cfbab5ea0c9f1cc"
+    },
+    {
+      "path": "src/motion_filter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c46b3b0b5ef403d2463d43df09d8cba737eff667",
+      "size": 6223,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/c46b3b0b5ef403d2463d43df09d8cba737eff667"
+    },
+    {
+      "path": "src/slam.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3f50eaea5b8080696c20634ab355c5ba502c012e",
+      "size": 13630,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/3f50eaea5b8080696c20634ab355c5ba502c012e"
+    },
+    {
+      "path": "src/tracker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26ef06e8d8519f9f51f2e723471ac741ac242075",
+      "size": 8158,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/26ef06e8d8519f9f51f2e723471ac741ac242075"
+    },
+    {
+      "path": "src/trajectory_filler.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7cd884166e48b55347c4efb0aa417ff16d35021",
+      "size": 5510,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/c7cd884166e48b55347c4efb0aa417ff16d35021"
+    },
+    {
+      "path": "src/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd647e91ebc580c0c6ab592f12d5d97f515903b7",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/dd647e91ebc580c0c6ab592f12d5d97f515903b7"
+    },
+    {
+      "path": "src/utils/Printer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d59744c8707fc0529cbf72c4927765627dfc5d19",
+      "size": 3205,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/d59744c8707fc0529cbf72c4927765627dfc5d19"
+    },
+    {
+      "path": "src/utils/camera_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c6dbf1d8628d544f9cbcc224bb4c2cbef4cc339",
+      "size": 5847,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7c6dbf1d8628d544f9cbcc224bb4c2cbef4cc339"
+    },
+    {
+      "path": "src/utils/colmap_read_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0b91977e7ff075c9c417b7dadfa9dcb2710296f",
+      "size": 11742,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b0b91977e7ff075c9c417b7dadfa9dcb2710296f"
+    },
+    {
+      "path": "src/utils/common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e241e323a73ec533a4144fd1316b6953852e2157",
+      "size": 2839,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e241e323a73ec533a4144fd1316b6953852e2157"
+    },
+    {
+      "path": "src/utils/cuda_timer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5159836cd1b3defacb158b8213a4c82633aaa3ac",
+      "size": 631,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5159836cd1b3defacb158b8213a4c82633aaa3ac"
+    },
+    {
+      "path": "src/utils/datasets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b02f8968ae9aded9944c17f4481838bddfe46336",
+      "size": 23476,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b02f8968ae9aded9944c17f4481838bddfe46336"
+    },
+    {
+      "path": "src/utils/droid_visualization_rerun.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ec22e6a05840333526ddfaa92a46df7a55669d3",
+      "size": 7036,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5ec22e6a05840333526ddfaa92a46df7a55669d3"
+    },
+    {
+      "path": "src/utils/dyn_uncertainty",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d190acfdd16f5523145866b53331619724ae1589",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/d190acfdd16f5523145866b53331619724ae1589"
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/mapping_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43ef34191db53e1e253730eb265e019bbabb166",
+      "size": 5890,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f43ef34191db53e1e253730eb265e019bbabb166"
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/median_filter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb973794751d9cb97902c9ec7e3b38cff831f044",
+      "size": 1964,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/fb973794751d9cb97902c9ec7e3b38cff831f044"
+    },
+    {
+      "path": "src/utils/eval_traj.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d7b9b937af0cd588c6601995e1ea0ed29596fec",
+      "size": 7372,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4d7b9b937af0cd588c6601995e1ea0ed29596fec"
+    },
+    {
+      "path": "src/utils/eval_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/utils/mono_priors",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84eeb44eec04cd7ea35470ccbb696febdf4a8251",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/84eeb44eec04cd7ea35470ccbb696febdf4a8251"
+    },
+    {
+      "path": "src/utils/mono_priors/img_feature_extractors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ce349057d1a2f052a92383a9c3bdbf2f82ae487",
+      "size": 6521,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9ce349057d1a2f052a92383a9c3bdbf2f82ae487"
+    },
+    {
+      "path": "src/utils/mono_priors/metric_depth_estimators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc",
+      "size": 5426,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc"
+    },
+    {
+      "path": "src/utils/plot_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0455bcdd4e78c398bc195b77d2c9484bb068134a",
+      "size": 1719,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/0455bcdd4e78c398bc195b77d2c9484bb068134a"
+    },
+    {
+      "path": "src/utils/pose_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "346746faa22f25b889506adaf847ea65e5110a91",
+      "size": 2180,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/346746faa22f25b889506adaf847ea65e5110a91"
+    },
+    {
+      "path": "src/utils/slam_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73d534c5a9a439c0496fc0351c4225ac1aabd306",
+      "size": 10116,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/73d534c5a9a439c0496fc0351c4225ac1aabd306"
+    },
+    {
+      "path": "src/utils/sys_timer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "612223fdcada9a1db01f4f085e108958e21e42c1",
+      "size": 5981,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/612223fdcada9a1db01f4f085e108958e21e42c1"
+    },
+    {
+      "path": "src/utils/visualization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a576bdd2b9577225f64b65481fd55e8b5efc22bc",
+      "size": 5892,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a576bdd2b9577225f64b65481fd55e8b5efc22bc"
+    },
+    {
+      "path": "thirdparty",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54f2e1fc9e3207e87e52cde6894d1619344a6163",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/54f2e1fc9e3207e87e52cde6894d1619344a6163"
+    },
+    {
+      "path": "thirdparty/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73d69ffebb4476365e916e7850725dde71af6d07",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/73d69ffebb4476365e916e7850725dde71af6d07"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/DA-2K.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70290bc96c0201aa68e4e69f1c78c928dd61e497",
+      "size": 1948,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/70290bc96c0201aa68e4e69f1c78c928dd61e497"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1c80e894c4d163e38b9b0c4c03413d1313dc261",
+      "size": 9534,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e1c80e894c4d163e38b9b0c4c03413d1313dc261"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41399be3b316f38af653692fc9895d32b06e09f1",
+      "size": 3250,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/41399be3b316f38af653692fc9895d32b06e09f1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b1b4bb8df7068e37ca9a410f8a9aafdf15f49cd",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/6b1b4bb8df7068e37ca9a410f8a9aafdf15f49cd"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/DA-2K.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd5384cfd922cc9880495f7db47f03d40d6be0f",
+      "size": 1180754,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/cdd5384cfd922cc9880495f7db47f03d40d6be0f"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "909c4faefc23ccf5b8de667c638487abe6fd98c8",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/909c4faefc23ccf5b8de667c638487abe6fd98c8"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo01.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a09c257c8b3c0d7ebea88255420bb3dbd2910cfb",
+      "size": 488150,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a09c257c8b3c0d7ebea88255420bb3dbd2910cfb"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo02.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dad10f5bcc50100613a3bb9687226776efa4a4ce",
+      "size": 510806,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/dad10f5bcc50100613a3bb9687226776efa4a4ce"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo03.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75108a5a26d27f07053cae47055af6a84f070416",
+      "size": 464937,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/75108a5a26d27f07053cae47055af6a84f070416"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo04.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fb82ebe0b39fb837dbcbc57bf8be23f21c701ae",
+      "size": 299824,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5fb82ebe0b39fb837dbcbc57bf8be23f21c701ae"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo05.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9249ea7294634b82dc11f6661cf0239003bc1a3",
+      "size": 353184,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/c9249ea7294634b82dc11f6661cf0239003bc1a3"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo06.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f41c0817aa230dfb1e56c671085f3abae0eac91",
+      "size": 782780,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7f41c0817aa230dfb1e56c671085f3abae0eac91"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo07.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "637d32325b25bf02d66dc00c3d9d8b040f61820d",
+      "size": 400463,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/637d32325b25bf02d66dc00c3d9d8b040f61820d"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo08.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e775aba407a2d853cb646bcee8daeedac0c2435",
+      "size": 102825,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/3e775aba407a2d853cb646bcee8daeedac0c2435"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo09.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a76c1b45480856a1d27779adc21fb3444b54a19",
+      "size": 410224,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/6a76c1b45480856a1d27779adc21fb3444b54a19"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo10.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "131f8fb0f4ffa08bdc5237a941c6d5165391db38",
+      "size": 486825,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/131f8fb0f4ffa08bdc5237a941c6d5165391db38"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo11.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "720e5fd67c922f8b60313e9dea984ab2d412033f",
+      "size": 243712,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/720e5fd67c922f8b60313e9dea984ab2d412033f"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo12.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc2fb1095940d09701da9c692c848e6a8d6a091",
+      "size": 263007,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1fc2fb1095940d09701da9c692c848e6a8d6a091"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo13.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bed68777f4b216ccca2239609ce4faa90d46a5c8",
+      "size": 421112,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/bed68777f4b216ccca2239609ce4faa90d46a5c8"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo14.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9cba8a8cfab3c61d02fc5cb1be96e338b4eb27",
+      "size": 642925,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2c9cba8a8cfab3c61d02fc5cb1be96e338b4eb27"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo15.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eca61c1452bd0fe54b2ba0cef0a872aed4b8c13d",
+      "size": 768703,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/eca61c1452bd0fe54b2ba0cef0a872aed4b8c13d"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo16.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11d212b747e24437b9b060229bd7796accf1b39f",
+      "size": 377831,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/11d212b747e24437b9b060229bd7796accf1b39f"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo17.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dfa8e84d16436de1e141f69e7868850cf53592a",
+      "size": 152591,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5dfa8e84d16436de1e141f69e7868850cf53592a"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo18.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "997e4e7fe8e3ea5ccd294dfa9db66792f1a5f254",
+      "size": 178905,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/997e4e7fe8e3ea5ccd294dfa9db66792f1a5f254"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo19.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "949791d08cd25ef6a200cf78febc297cffa7d249",
+      "size": 1004211,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/949791d08cd25ef6a200cf78febc297cffa7d249"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo20.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "873d1f676c3bbe0b9bcbfa2f55bbd147db9cc971",
+      "size": 498212,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/873d1f676c3bbe0b9bcbfa2f55bbd147db9cc971"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/teaser.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11c2b4d408452727b295fb4b15aefdf234e2cdc0",
+      "size": 12818034,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/11c2b4d408452727b295fb4b15aefdf234e2cdc0"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01a34f1ddd91ab3fdfaac67833d1bb53ea3cf10d",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/01a34f1ddd91ab3fdfaac67833d1bb53ea3cf10d"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d250818c721c6df3b30d3f4352945527701615",
+      "size": 15178,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/83d250818c721c6df3b30d3f4352945527701615"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fe494a95a0f6bf6fb28f9b8507b95e0e35a2971",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/8fe494a95a0f6bf6fb28f9b8507b95e0e35a2971"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+      "size": 382,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8120f4bc83066cb3f825ce32daa3b437f88486f1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+      "size": 2343,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/815a2bf53dbec496f6a184ed7d03bcecb7124262"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+      "size": 9332,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/25488f57cc0ad3c692f86b62555f6668e2a66db1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+      "size": 1160,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/af05625984dd14682cc96a63bf0c97bab1f123b1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+      "size": 823,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+      "size": 1272,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5e4b315f972f9a9f54aef1e4ef4e81b52976f018"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574abe41175568d700a389b8b96d1ba554914779",
+      "size": 2832,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/574abe41175568d700a389b8b96d1ba554914779"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+      "size": 1859,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dpt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18d3e6f8b5c973aea5d4927ef783d43053ba6429",
+      "size": 7391,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/18d3e6f8b5c973aea5d4927ef783d43053ba6429"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cc168af31b1c7cd9d035a1f8da00196c12518fe",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/3cc168af31b1c7cd9d035a1f8da00196c12518fe"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "382ea183a40264056142afffc201c992a2b01d37",
+      "size": 3987,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/382ea183a40264056142afffc201c992a2b01d37"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+      "size": 6075,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b14aacd44ea086b01725a9ca68bb49eadcf37d73"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a529f14537119567d989cae704f9c9e2729d4cb",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/0a529f14537119567d989cae704f9c9e2729d4cb"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc84a2f050a63219dd1193b12b0651bd0ab0ced5",
+      "size": 4621,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/fc84a2f050a63219dd1193b12b0651bd0ab0ced5"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7a2e7900dedb311da03c477d84c423825a43ef8",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/b7a2e7900dedb311da03c477d84c423825a43ef8"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/assets/compare_zoedepth.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3ba0fa4cb320413f59cbb4244cb1081e85aa79c",
+      "size": 9187108,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/f3ba0fa4cb320413f59cbb4244cb1081e85aa79c"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87f04795d573c0ea93ae601fef5c60aeef1ab8aa",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/87f04795d573c0ea93ae601fef5c60aeef1ab8aa"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d8dd3e0873ed736c1888fe1f639cc4439b5ab09",
+      "size": 2719,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4d8dd3e0873ed736c1888fe1f639cc4439b5ab09"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be6828ad52720c64e3296fa81bb262e95ec1bbe",
+      "size": 1864,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/4be6828ad52720c64e3296fa81bb262e95ec1bbe"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71d5e7e686206b3a48d30d3d9be1222d22a93686",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/71d5e7e686206b3a48d30d3d9be1222d22a93686"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab67194a2997d152c3c0c1022dbec912c80c261f",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/ab67194a2997d152c3c0c1022dbec912c80c261f"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/train.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82a1fd92a73ae1b435d16873a3fd36a7f4eebd50",
+      "size": 13694890,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/82a1fd92a73ae1b435d16873a3fd36a7f4eebd50"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/val.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1013e1945057b3e5daa8647b23b965e6826fadc9",
+      "size": 1698780,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/1013e1945057b3e5daa8647b23b965e6826fadc9"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/kitti",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a1b7394c9010e6a2fdf8789ea67c512b2d25981",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/9a1b7394c9010e6a2fdf8789ea67c512b2d25981"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/kitti/val.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726529b53f60b342ea1be94a85845a584db00ff7",
+      "size": 145074,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/726529b53f60b342ea1be94a85845a584db00ff7"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/vkitti2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d5f8909b4ae987ee64fc46a5df74e9d86e9c513",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/7d5f8909b4ae987ee64fc46a5df74e9d86e9c513"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/vkitti2/train.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69dc40f8b58baa5aa537f97f5d12ef5eac70f8ee",
+      "size": 3594932,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/69dc40f8b58baa5aa537f97f5d12ef5eac70f8ee"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41fd0dc9b270081b1c7bdfe3434777e4170ca4a3",
+      "size": 9563,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/41fd0dc9b270081b1c7bdfe3434777e4170ca4a3"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48cb03112b8861fe7862cce3b25158a0b0a5ff25",
+      "size": 1807,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/48cb03112b8861fe7862cce3b25158a0b0a5ff25"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a93e2d2d247ff6d4c971868c6ec0f3efff7f10cd",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/a93e2d2d247ff6d4c971868c6ec0f3efff7f10cd"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec4499a18330523aa3564b16be70e813de000c94",
+      "size": 15177,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ec4499a18330523aa3564b16be70e813de000c94"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fe494a95a0f6bf6fb28f9b8507b95e0e35a2971",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/8fe494a95a0f6bf6fb28f9b8507b95e0e35a2971"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+      "size": 382,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8120f4bc83066cb3f825ce32daa3b437f88486f1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+      "size": 2343,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/815a2bf53dbec496f6a184ed7d03bcecb7124262"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+      "size": 9332,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/25488f57cc0ad3c692f86b62555f6668e2a66db1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+      "size": 1160,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/af05625984dd14682cc96a63bf0c97bab1f123b1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+      "size": 823,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+      "size": 1272,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/5e4b315f972f9a9f54aef1e4ef4e81b52976f018"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574abe41175568d700a389b8b96d1ba554914779",
+      "size": 2832,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/574abe41175568d700a389b8b96d1ba554914779"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+      "size": 1859,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65413046b5fb4f65b90978bcdc9cc94bf8cdcae9",
+      "size": 7417,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/65413046b5fb4f65b90978bcdc9cc94bf8cdcae9"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cc168af31b1c7cd9d035a1f8da00196c12518fe",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/3cc168af31b1c7cd9d035a1f8da00196c12518fe"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "382ea183a40264056142afffc201c992a2b01d37",
+      "size": 3987,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/382ea183a40264056142afffc201c992a2b01d37"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+      "size": 6075,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/b14aacd44ea086b01725a9ca68bb49eadcf37d73"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_to_pointcloud.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "770fe60698724327f1071c66d685b4a3d8ce7ca8",
+      "size": 5031,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/770fe60698724327f1071c66d685b4a3d8ce7ca8"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dist_train.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afa750ad3c3e05fca741bcd66a5f6fea1dab46ac",
+      "size": 730,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/afa750ad3c3e05fca741bcd66a5f6fea1dab46ac"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "082330f721c6e704a360cd7706b968d5a93b312f",
+      "size": 50,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/082330f721c6e704a360cd7706b968d5a93b312f"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63d46f54099d2039f80379fec694a717e2965bed",
+      "size": 3518,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/63d46f54099d2039f80379fec694a717e2965bed"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b304275c5bd22f63fa19e54c427b3da6a730ea9",
+      "size": 9401,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/9b304275c5bd22f63fa19e54c427b3da6a730ea9"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d773e3d2968cba96a561ccbf55a030dbb9b5bf8",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/7d773e3d2968cba96a561ccbf55a030dbb9b5bf8"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/dist_helper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6eb432b4988638ac9549a82fbaebf968fe9c61",
+      "size": 1343,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/7b6eb432b4988638ac9549a82fbaebf968fe9c61"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/loss.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ae5b304effd46661e93ea23127d1115c36b5265",
+      "size": 472,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/2ae5b304effd46661e93ea23127d1115c36b5265"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/metric.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8638cf25875c753cb62c3977af1417c221237dce",
+      "size": 1010,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8638cf25875c753cb62c3977af1417c221237dce"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e89b994538c5123075605fb6130022867f37c99b",
+      "size": 647,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e89b994538c5123075605fb6130022867f37c99b"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8698f1bc9fd4f6e98147c042d6c978e343b0f494",
+      "size": 77,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/8698f1bc9fd4f6e98147c042d6c978e343b0f494"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14810ff39a17e60354e2199d62708b197e97d750",
+      "size": 3043,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/14810ff39a17e60354e2199d62708b197e97d750"
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/run_video.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc3c5b6a33585396d91aaaa4301110a6179f452d",
+      "size": 3750,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/cc3c5b6a33585396d91aaaa4301110a6179f452d"
+    },
+    {
+      "path": "thirdparty/diff-gaussian-rasterization-w-pose",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "43e21bff91cd24986ee3dd52fe0bb06952e50ec7"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d9d01c67202aae72ffa09f9b9c58354af721142",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/4d9d01c67202aae72ffa09f9b9c58354af721142"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18445c6d34aedbf1ab9d282223f8f10ce38cd79a",
+      "size": 4662,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/18445c6d34aedbf1ab9d282223f8f10ce38cd79a"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/gaussian_renderer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1b9dc1bd38461645cfdca6832e7b84c32806121",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/c1b9dc1bd38461645cfdca6832e7b84c32806121"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/gaussian_renderer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e73f1308d0f81dd62350b6199d3edc8b4450646",
+      "size": 5036,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/3e73f1308d0f81dd62350b6199d3edc8b4450646"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/scene",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "873b9fbc99ff738ca076c9ce423e1aa8f5c711d6",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/873b9fbc99ff738ca076c9ce423e1aa8f5c711d6"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/scene/gaussian_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ceda1d82fe2bf5f381200b2345fff25db63a5d",
+      "size": 29911,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/33ceda1d82fe2bf5f381200b2345fff25db63a5d"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ab764209ea1bd31097caba148590bc971fefaae",
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/trees/9ab764209ea1bd31097caba148590bc971fefaae"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/general_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30a19cc614e396526e1375aaed47858eebe6440d",
+      "size": 6835,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/30a19cc614e396526e1375aaed47858eebe6440d"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/graphics_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0434e41559f697082a89b62070b01a7f2c4a1eb2",
+      "size": 2502,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/0434e41559f697082a89b62070b01a7f2c4a1eb2"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/image_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77a4d8f481a202c35d06f5b5867cfbff40b505c3",
+      "size": 551,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/77a4d8f481a202c35d06f5b5867cfbff40b505c3"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/loss_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6308786cc0d37060e201d22f394010d7eb7b12c8",
+      "size": 2936,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/6308786cc0d37060e201d22f394010d7eb7b12c8"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/sh_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa0f104a9d6876e9cef04fbc5e0f19c8bb64cc67",
+      "size": 4496,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/fa0f104a9d6876e9cef04fbc5e0f19c8bb64cc67"
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/system_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a89fac10a92f3150d7ff9a3abcbff62a463800a3",
+      "size": 787,
+      "url": "https://api.github.com/repos/MoyangLi00/DROID-W/git/blobs/a89fac10a92f3150d7ff9a3abcbff62a463800a3"
+    },
+    {
+      "path": "thirdparty/lietorch",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6"
+    },
+    {
+      "path": "thirdparty/simple-knn",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "da5f991fb5b4146531b3912d8084162cf1485701"
+    }
+  ],
+  "truncated": false
+}

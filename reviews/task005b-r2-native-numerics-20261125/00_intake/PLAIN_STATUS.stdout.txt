@@ -1,0 +1,14 @@
+{
+  "disk_free": 13153984512,
+  "phases": {
+    "plain": {
+      "stdout.txt": "{\"event\": \"CALL_START\", \"tag\": \"original_1\"}\n{\"event\": \"CALL_COMPLETE\", \"tag\": \"original_1\", \"seconds\": 0.4528226852416992, \"output_bytes\": 2689214}\n{\"event\": \"CALL_START\", \"tag\": \"original_2\"}\n{\"event\": \"CALL_COMPLETE\", \"tag\": \"original_2\", \"seconds\": 0.3319103717803955, \"output_bytes\": 2689268}\n{\"event\": \"CALL_START\", \"tag\": \"reference_1\"}\n{\"event\": \"CALL_COMPLETE\", \"tag\": \"reference_1\", \"seconds\": 0.3198511600494385, \"output_bytes\": 2689161}\n",
+      "stderr.txt": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n"
+    }
+  },
+  "calls": [
+    "original_1.receipt.json",
+    "reference_1.receipt.json",
+    "original_2.receipt.json"
+  ]
+}

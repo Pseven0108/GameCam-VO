@@ -1,3 +1,9 @@
+# TASK005B-R2 latest review
+
+[Expanded review](reviews/task005b-r2-native-numerics-20261125/FINAL_REVIEW.md) · [Entire evidence ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-r2-native-numerics-20261125/GAMECAM_TASK005B_R2_REVIEW.zip)
+
+---
+
 # Latest GPU partial-results review
 
 [task005b-gpu-mechanism-20261125](reviews/task005b-gpu-mechanism-20261125/FINAL_REVIEW.md) · [ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-gpu-mechanism-20261125/GAMECAM_TASK005B_GPU_MECHANISM_REVIEW_20261125.zip) · [all native data assets](https://github.com/Pseven0108/GameCam-VO/releases/tag/task005b-gpu-mechanism-20261125).

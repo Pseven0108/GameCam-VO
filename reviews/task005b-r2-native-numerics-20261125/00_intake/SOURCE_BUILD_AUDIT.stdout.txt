@@ -1,0 +1,83 @@
+{
+  "files": {
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/lib/droid_kernels.cu": {
+      "bytes": 62996,
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "text": null
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/lib/droid.cpp": {
+      "bytes": 7635,
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "text": null
+    },
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/setup.py": {
+      "bytes": 1080,
+      "sha256": "ac43c0c94239c42ca983ebf45a8a6c68db0ad6c1a75a059226fa16d96f4b7921",
+      "text": "from setuptools import setup\nfrom torch.utils.cpp_extension import BuildExtension, CUDAExtension\n\nimport os.path as osp\nROOT = osp.dirname(osp.abspath(__file__))\n\nsetup(\n    name='droid_backends',\n    ext_modules=[\n        CUDAExtension('droid_backends',\n            include_dirs=[osp.join(ROOT, 'thirdparty/lietorch/eigen')],\n            sources=[\n                'src/lib/droid.cpp',\n                'src/lib/droid_kernels.cu',\n                'src/lib/correlation_kernels.cu',\n                'src/lib/altcorr_kernel.cu',\n            ],\n            extra_compile_args={\n                'cxx': ['-O3'],\n                'nvcc': ['-O3',\n                    '-gencode=arch=compute_60,code=sm_60',\n                    '-gencode=arch=compute_61,code=sm_61',\n                    '-gencode=arch=compute_70,code=sm_70',\n                    '-gencode=arch=compute_75,code=sm_75',\n                    '-gencode=arch=compute_80,code=sm_80',\n                    '-gencode=arch=compute_86,code=sm_86',\n                ]\n            }),\n    ],\n    cmdclass={ 'build_ext' : BuildExtension }\n)\n"
+    },
+    "/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1/candidate/task005b_kernels.cu": {
+      "bytes": 75820,
+      "sha256": "b597d6b28a79c1d9fd500a8cc6cdbe6d050911b53658e14546c799c158356fa9",
+      "text": null
+    },
+    "/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1/candidate/task005b_bindings.cpp": {
+      "bytes": 2304,
+      "sha256": "b069b32d62003db549954ef80afc8bc6dd02e191b06ee1d10caf2d2f33669810",
+      "text": null
+    },
+    "/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1/build_attempt02/build.ninja": {
+      "bytes": 3226,
+      "sha256": "ca0d5c707ba3332161cd6eeca559ce86f80decc39ceaa9e5d202281816c1f2f8",
+      "text": "ninja_required_version = 1.3\ncxx = c++\nnvcc = /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/bin/nvcc\n\ncflags = -DTORCH_EXTENSION_NAME=gamecam_task005b_depth_paths -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3\npost_cflags = \ncuda_cflags = -DTORCH_EXTENSION_NAME=gamecam_task005b_depth_paths -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -O3 -std=c++17\ncuda_post_cflags = \ncuda_dlink_post_cflags = \nldflags = -shared -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/lib -lcudart\n\nrule compile\n  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags\n  depfile = $out.d\n  deps = gcc\n\nrule cuda_compile\n  depfile = $out.d\n  deps = gcc\n  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags\n\n\n\nrule link\n  command = $cxx $in $ldflags -o $out\n\nbuild task005b_bindings.o: compile /root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1/candidate/task005b_bindings.cpp\nbuild task005b_kernels.cuda.o: cuda_compile /root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1/candidate/task005b_kernels.cu\n\n\n\nbuild gamecam_task005b_depth_paths.so: link task005b_bindings.o task005b_kernels.cuda.o\n\ndefault gamecam_task005b_depth_paths.so\n"
+    },
+    "/root/rivermind-data/GAMECAM_TASK005B_R2_NUMERICAL_EQUIVALENCE_20261125_R1/build/build.ninja": {
+      "bytes": 3266,
+      "sha256": "2466fe9c3d392f5af851e7aab8fb47930389d1c2b02f7e4ceb05359171cb00ab",
+      "text": "ninja_required_version = 1.3\ncxx = c++\nnvcc = /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/bin/nvcc\n\ncflags = -DTORCH_EXTENSION_NAME=gamecam_task005b_r2_observer -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3\npost_cflags = \ncuda_cflags = -DTORCH_EXTENSION_NAME=gamecam_task005b_r2_observer -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\\\"_gcc\\\" -DPYBIND11_STDLIB=\\\"_libstdcpp\\\" -DPYBIND11_BUILD_ABI=\\\"_cxxabi1011\\\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -O3 -std=c++17\ncuda_post_cflags = \ncuda_dlink_post_cflags = \nldflags = -shared -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/lib -lcudart\n\nrule compile\n  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags\n  depfile = $out.d\n  deps = gcc\n\nrule cuda_compile\n  depfile = $out.d\n  deps = gcc\n  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags\n\n\n\nrule link\n  command = $cxx $in $ldflags -o $out\n\nbuild task005b_r2_bindings.o: compile /root/rivermind-data/GAMECAM_TASK005B_R2_NUMERICAL_EQUIVALENCE_20261125_R1/candidate/task005b_r2_bindings.cpp\nbuild task005b_r2_kernels.cuda.o: cuda_compile /root/rivermind-data/GAMECAM_TASK005B_R2_NUMERICAL_EQUIVALENCE_20261125_R1/candidate/task005b_r2_kernels.cu\n\n\n\nbuild gamecam_task005b_r2_observer.so: link task005b_r2_bindings.o task005b_r2_kernels.cuda.o\n\ndefault gamecam_task005b_r2_observer.so\n"
+    }
+  },
+  "commands": {
+    "native_head": {
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /root)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n"
+    },
+    "native_status": {
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /root)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n"
+    },
+    "g++": {
+      "exit_code": 0,
+      "stdout": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    "nvcc": {
+      "exit_code": 0,
+      "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2022 NVIDIA Corporation\nBuilt on Wed_Sep_21_10:33:58_PDT_2022\nCuda compilation tools, release 11.8, V11.8.89\nBuild cuda_11.8.r11.8/compiler.31833905_0\n",
+      "stderr": ""
+    }
+  },
+  "function_comparison": {
+    "std::vector<torch::Tensor> ba_cuda(": {
+      "text_identical": true,
+      "native_SHA": "5e19902bec4f68c94295d6dd8a2b3e9424b398fcbbafaf122353015f75e88c80",
+      "candidate_SHA": "5e19902bec4f68c94295d6dd8a2b3e9424b398fcbbafaf122353015f75e88c80"
+    },
+    "__global__ void linear_transform_kernel(": {
+      "text_identical": true,
+      "native_SHA": "b075bbb8a44f45949a341cb112589d6a13919b0b30a1c853af477f877f9b30b5",
+      "candidate_SHA": "b075bbb8a44f45949a341cb112589d6a13919b0b30a1c853af477f877f9b30b5"
+    },
+    "__global__ void uncertainty_update_kernel(": {
+      "text_identical": true,
+      "native_SHA": "edb11ee449412b7c48cc0d2480e854c7bce1b46945add0c5ac4ee992f778f582",
+      "candidate_SHA": "edb11ee449412b7c48cc0d2480e854c7bce1b46945add0c5ac4ee992f778f582"
+    },
+    "__global__ void dino_feats_projective_transform_kernel(": {
+      "text_identical": true,
+      "native_SHA": "948520722958172da8bb0ac7d65aa5799fb72c9526f4d93701d5500645d8f802",
+      "candidate_SHA": "948520722958172da8bb0ac7d65aa5799fb72c9526f4d93701d5500645d8f802"
+    }
+  }
+}

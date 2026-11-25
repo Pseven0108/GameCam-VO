@@ -1,0 +1,128 @@
+{
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "pairs": [
+    {
+      "left": "original_1",
+      "right": "original_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dx_last"
+    },
+    {
+      "left": "original_1",
+      "right": "paths_1",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dz_last"
+    },
+    {
+      "left": "original_1",
+      "right": "paths_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dz_last"
+    },
+    {
+      "left": "original_1",
+      "right": "reference_1",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "original_1",
+      "right": "reference_2",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "original_2",
+      "right": "paths_1",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dx_last"
+    },
+    {
+      "left": "original_2",
+      "right": "paths_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dx_last"
+    },
+    {
+      "left": "original_2",
+      "right": "reference_1",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dx_last"
+    },
+    {
+      "left": "original_2",
+      "right": "reference_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": "dx_last"
+    },
+    {
+      "left": "paths_1",
+      "right": "paths_2",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "paths_1",
+      "right": "reference_1",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "paths_1",
+      "right": "reference_2",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "paths_2",
+      "right": "reference_1",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "paths_2",
+      "right": "reference_2",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    },
+    {
+      "left": "reference_1",
+      "right": "reference_2",
+      "PASS": true,
+      "bitwise_identical": false,
+      "first_numerical_difference": "dx_last",
+      "first_tolerance_violation": null
+    }
+  ],
+  "passing_pairs": 8,
+  "total_pairs": 15
+}

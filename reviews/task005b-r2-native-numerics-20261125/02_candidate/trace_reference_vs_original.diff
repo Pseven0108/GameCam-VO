@@ -1,0 +1,132 @@
+--- R1/original_ba_cuda
++++ R2/observed_reference
+@@ -1,4 +1,4 @@
+-std::vector<torch::Tensor> ba_cuda(
++std::vector<torch::Tensor> ba_trace_reference_cuda(
+     torch::Tensor poses,        // [buffer, 7]
+     torch::Tensor disps,        // [buffer, height, width]
+     torch::Tensor intrinsics,
+@@ -30,6 +30,8 @@
+     const bool enable_bidirectional_uncer,
+     const bool debug)
+ {
++  std::vector<torch::Tensor> trace;
++  TORCH_CHECK(iterations == 2 && !motion_only && !depth_only && enable_update_uncer && enable_affine_transform && !debug, "R2 bounded trace contract");
+   auto opts = poses.options();
+   const int num = ii.size(0);
+   const int ht = disps.size(1);
+@@ -72,6 +74,12 @@
+   torch::Tensor loss_total = torch::zeros({num_kf}, opts);
+ 
+   for (int itr=0; itr<iterations; itr++) {
++    trace.push_back(poses.detach().cpu().clone()); // R2_OBSERVE poses_before
++    trace.push_back(disps.detach().cpu().clone()); // R2_OBSERVE disps_before
++    trace.push_back(uncertainties.detach().cpu().clone()); // R2_OBSERVE U_before
++    trace.push_back(temp_y_cdot.detach().cpu().clone()); // R2_OBSERVE temp_before
++    trace.push_back(affine_weights.detach().cpu().clone()); // R2_OBSERVE affine_before
++
+ 
+     projective_transform_kernel<<<num, THREADS>>>(
+       targets.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+@@ -90,6 +98,11 @@
+       wi.packed_accessor32<float,2,torch::RestrictPtrTraits>(),
+       enable_udba,
+       enable_bidirectional_uncer);
++    trace.push_back(Cii.detach().cpu().clone()); // R2_OBSERVE Cii_geometry
++    trace.push_back(wi.detach().cpu().clone()); // R2_OBSERVE wi_geometry
++    trace.push_back(Hs.detach().cpu().clone()); // R2_OBSERVE Hs_geometry
++    trace.push_back(vs.detach().cpu().clone()); // R2_OBSERVE vs_geometry
++
+ 
+ 
+     // pose x pose block
+@@ -118,12 +131,19 @@
+       torch::Tensor C = accum_cuda(Cii, ii, kx) + m * alpha + (1 - m) * eta.view({-1, ht*wd});
+       torch::Tensor w = accum_cuda(wi, ii, kx) - m * alpha * (disps.index({kx, "..."}) - disps_sens.index({kx, "..."})).view({-1, ht*wd});
+       torch::Tensor Q = 1.0 / C;
++    trace.push_back(C.detach().cpu().clone()); // R2_OBSERVE C
++    trace.push_back(w.detach().cpu().clone()); // R2_OBSERVE w
++    trace.push_back(Q.detach().cpu().clone()); // R2_OBSERVE Q
++    trace.push_back(kx.detach().cpu().clone()); // R2_OBSERVE kx
++
+ 
+       torch::Tensor Ei = accum_cuda(Eii.view({num, 6*ht*wd}), ii, ts).view({t1-t0, 6, ht*wd});
+       torch::Tensor E = torch::cat({Ei, Eij}, 0);
+ 
+       SparseBlock S = schur_block(E, Q, w, ii_exp, jj_exp, kk_exp, t0, t1);   // simulataneouly construct the lhs and rhs of the linear system
+       dx = (A - S).solve(lm, ep);     // compute delta_pose
++    trace.push_back(dx.detach().cpu().clone()); // R2_OBSERVE dx
++
+ 
+       torch::Tensor ix = jj_exp - t0;
+       torch::Tensor dw = torch::zeros({ix.size(0), ht*wd}, opts);
+@@ -135,6 +155,8 @@
+         dw.packed_accessor32<float,2,torch::RestrictPtrTraits>());
+ 
+       dz = Q * (w - accum_cuda(dw, ii_exp, kx));      // compute delta_d
++    trace.push_back(dz.detach().cpu().clone()); // R2_OBSERVE dz
++
+ 
+       if (!depth_only){
+         // update poses
+@@ -150,6 +172,8 @@
+         kx.packed_accessor32<long,1,torch::RestrictPtrTraits>());         // index of the keyframes
+     }
+ 
++    trace.push_back(poses.detach().cpu().clone()); // R2_OBSERVE poses_after_geometry
++    trace.push_back(disps.detach().cpu().clone()); // R2_OBSERVE disps_after_geometry
+     if (enable_update_uncer)
+     {
+       dino_feats_projective_transform_kernel<<<num, THREADS>>>(
+@@ -177,6 +201,16 @@
+         debug);
+ 
+       torch::Tensor J_total = coeff_data.unsqueeze(1) * (accum_cuda(Jii_data, ii, kx) + accum_cuda(Jjj_data, jj, kx)) + gamma_prior * J_prior;
++    trace.push_back(Jii_data.detach().cpu().clone()); // R2_OBSERVE Jii_data
++    trace.push_back(Jjj_data.detach().cpu().clone()); // R2_OBSERVE Jjj_data
++    trace.push_back(kf_count.detach().cpu().clone()); // R2_OBSERVE kf_count
++    trace.push_back(J_prior.detach().cpu().clone()); // R2_OBSERVE J_prior
++    trace.push_back(J_total.detach().cpu().clone()); // R2_OBSERVE J_total
++    trace.push_back(J_linear.detach().cpu().clone()); // R2_OBSERVE J_linear_before
++    trace.push_back(uncertainties.detach().cpu().clone()); // R2_OBSERVE U_before_linear
++    trace.push_back(temp_y_cdot.detach().cpu().clone()); // R2_OBSERVE temp_before_linear
++    trace.push_back(affine_weights.detach().cpu().clone()); // R2_OBSERVE affine_before_linear
++
+       if (enable_affine_transform) {
+         linear_transform_kernel<<<kx.size(0), THREADS>>>(
+           J_total.packed_accessor32<float,2,torch::RestrictPtrTraits>(),
+@@ -185,9 +219,14 @@
+           uncertainties.packed_accessor32<float,3,torch::RestrictPtrTraits>(),
+           temp_y_cdot.packed_accessor32<float,3,torch::RestrictPtrTraits>(),
+           kx.packed_accessor32<long,1,torch::RestrictPtrTraits>());
++    trace.push_back(J_linear.detach().cpu().clone()); // R2_OBSERVE J_linear
+         // get the mean of J_linear for the dimension of 0
+         torch::Tensor du = - lr * J_linear.mean(0);
++    trace.push_back(du.detach().cpu().clone()); // R2_OBSERVE affine_du
++
+         affine_weights += (du - weight_decay * affine_weights);  // L2 regularization
++    trace.push_back(affine_weights.detach().cpu().clone()); // R2_OBSERVE affine_after
++
+ 
+         uncertainty_update_kernel<<<kx.size(0), THREADS>>>(
+           uncertainties.packed_accessor32<float,3,torch::RestrictPtrTraits>(),
+@@ -195,7 +234,9 @@
+           dino_feats.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+           affine_weights.packed_accessor32<float,1,torch::RestrictPtrTraits>(),
+           kx.packed_accessor32<long,1,torch::RestrictPtrTraits>());
+-        
++    trace.push_back(uncertainties.detach().cpu().clone()); // R2_OBSERVE U_after
++    trace.push_back(temp_y_cdot.detach().cpu().clone()); // R2_OBSERVE temp_after
++
+         if (debug) {
+           for (int k=0; k<num; k++) {
+             int ix = ii.index({k}).item<int>();
+@@ -232,5 +273,7 @@
+     }
+   }
+ 
+-  return {dx, dz};
++  std::vector<torch::Tensor> result{dx, dz};
++  result.insert(result.end(), trace.begin(), trace.end());
++  return result;
+ }

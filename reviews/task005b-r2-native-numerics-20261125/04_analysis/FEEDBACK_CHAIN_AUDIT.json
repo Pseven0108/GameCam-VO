@@ -1,0 +1,103 @@
+{
+  "source": {
+    "snapshot_state_sha256": "90f436de0f6139dc013fd545aeb047fe0ed28b649a6d2e811f8e15fbfa35b791",
+    "storage_raw_sha256": "5797aeaeceaeefb67c9c6be270ce7bc3c9015a26f0421ee50fe5676599092ab6",
+    "selected_slot_ids": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "selected_feature_bytes": 82944000,
+    "temporary_full_zip_not_retained": true
+  },
+  "reconstruction_rows": 40,
+  "all_reconstruction_original_tolerance_pass": true,
+  "cross_pair_chain": [
+    {
+      "left": "trace_paths_1",
+      "right": "trace_paths_2",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 32,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": true
+    },
+    {
+      "left": "trace_paths_1",
+      "right": "trace_reference_1",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 33,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": false
+    },
+    {
+      "left": "trace_paths_1",
+      "right": "trace_reference_2",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 27,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": false
+    },
+    {
+      "left": "trace_paths_2",
+      "right": "trace_reference_1",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 28,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": false
+    },
+    {
+      "left": "trace_paths_2",
+      "right": "trace_reference_2",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 20,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": true
+    },
+    {
+      "left": "trace_reference_1",
+      "right": "trace_reference_2",
+      "first_iteration_before_Jjj_all_bitwise_equal": true,
+      "first_diff_is_Jjj": true,
+      "first_iter_J_linear_bitwise_equal": false,
+      "first_iter_affine_changed": 28,
+      "second_iteration_pose_input_identical": true,
+      "second_iteration_disp_input_identical": true,
+      "feedback_seam_in_call_bitwise_equal": true,
+      "final_endpoints_PASS": false
+    }
+  ],
+  "trace_final_endpoints_all_pass": false,
+  "formula_note": "FP64 sums are independent reference values, not a bitwise model of CUDA FMA and float atomic addition. No evidence was substituted."
+}

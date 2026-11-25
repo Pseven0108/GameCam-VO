@@ -1,0 +1,81 @@
+{
+  "archive": "C:\\Users\\Administrator\\Documents\\GameCam-TASK005B-R2-20261125-R1\\final_evidence.tar",
+  "bytes": 163840,
+  "sha256": "86c081adf4ef006a7eab7f73269324f9bb2ffc1695ccc380ae11d4dbb2ed457f",
+  "members": {
+    "build/BUILD_COMPLETE.json": {
+      "bytes": 309,
+      "sha256": "8e470247412aaca566a6ea9f6c938e0775df68201fb6541f0fb7679d08a1e434"
+    },
+    "build/build.ninja": {
+      "bytes": 3266,
+      "sha256": "2466fe9c3d392f5af851e7aab8fb47930389d1c2b02f7e4ceb05359171cb00ab"
+    },
+    "candidate/task005b_r2_bindings.cpp": {
+      "bytes": 4501,
+      "sha256": "fbbe1af89cdd2a59fed4b126a11e35dc5ff39ec3a132e3f178a0a6ace93d13ba"
+    },
+    "candidate/generate_observer.py": {
+      "bytes": 6200,
+      "sha256": "e6afa340023a80fe54ef3c0ac3b7c340992e975c12b476f8a6e8825c036fc02f"
+    },
+    "candidate/build_observer.py": {
+      "bytes": 1589,
+      "sha256": "d7de177c61458c6f40831d8dbeae7b61a57d4a0bc4d7251ca2d2007cb1ac29c2"
+    },
+    "candidate/task005b_r2_kernels.cu": {
+      "bytes": 102299,
+      "sha256": "8a7b3979157d7bf30cc0a547737de2883d7ce84302d40c1952a0ff71c6219018"
+    },
+    "candidate/trace_paths_vs_trace_reference.diff": {
+      "bytes": 1798,
+      "sha256": "0153d0a1a0dd135794c8e6965d6dfa5470c3f7fa35f54768e852bb018a75777c"
+    },
+    "candidate/trace_reference_vs_original.diff": {
+      "bytes": 6368,
+      "sha256": "4c1d1489f45428d2dbbcfc4f2dd34779362ee1735037c3ad50b0e727101dd8fb"
+    },
+    "candidate/GENERATION_AUDIT.json": {
+      "bytes": 1001,
+      "sha256": "e34b71db0204901e2dd20d045947166741a359d76d659856cccdbc5c1375eb0f"
+    },
+    "candidate/TRACE_SCHEMA.json": {
+      "bytes": 524,
+      "sha256": "844da6e0d158893de5508fcd7ff4b21d6046c6a85df1d89137c5ee02e6369b49"
+    },
+    "PROTOCOL.md": {
+      "bytes": 1434,
+      "sha256": "aaf358e9b92328e978245b61662b6f444be2801eafe1312ea4f69d6b0a248a4f"
+    },
+    "plain_wrapper.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build_wrapper.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trace_wrapper.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "PLAIN_PID.json": {
+      "bytes": 28,
+      "sha256": "f8281c5bcb0bf793550a6b4ba674f98a72d053aa10bc47c4596743ed01bdb6af"
+    },
+    "BUILD_PID.json": {
+      "bytes": 28,
+      "sha256": "943fd6c09c4ab661ba45171bcfd9fc78729f003ae264294c3492199231cda9a0"
+    },
+    "TRACE_PID.json": {
+      "bytes": 28,
+      "sha256": "c7e73be71eed1f898e1f93b004e2f867c03265668b20be42ee68205dc79b0e92"
+    }
+  },
+  "all_member_SHA_verified": true,
+  "seconds": 0.9129319190979004,
+  "SSH_trust": {
+    "server_host_key_matches_pin": true,
+    "publickey_authentication": true
+  }
+}

@@ -1,7 +1,9 @@
-# GameCam-VO · TASK005B GPU partial results
+# GameCam-VO · TASK005B-R2 numerical diagnostics
 
-TASK005B stopped at the preregistered native endpoint-equivalence guard. Two of four prefixes completed; six real inputs captured; four replay contexts complete and one partial. Executed 58/144 two-iteration native BA calls. D0_S1_RGB233 / NATIVE_UPDATE_D failed at the original dx/dz tolerance. No numerical retry or tolerance change was made. S0 was not run; the S1/S0 reversal is not explained.
+Completed 10 same-state, two-iteration native BA calls on D0_S1_RGB233 only. The installed original extension itself exceeds the unchanged dx/dz endpoint tolerance across its two repeats. Four observed replays first diverge in iteration-1 Jjj_data, before J_linear; affine/U feedback carries differences into iteration 2. Strict U Native candidate admission remains NOT PASSED. No S0, RGB prefix, full-sequence rerun or next-stage expansion.
 
-Task004C-B, Task005A and the CPU preparation reviews remain sealed. No Task005C/006 and no instance shutdown.
+[Final review](reviews/task005b-r2-native-numerics-20261125/FINAL_REVIEW.md) · [Feedback trace](reviews/task005b-r2-native-numerics-20261125/R2_FEEDBACK_TRACE.md) · [Readiness decision](reviews/task005b-r2-native-numerics-20261125/R2_CANDIDATE_READINESS.md) · [Complete review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-r2-native-numerics-20261125/GAMECAM_TASK005B_R2_REVIEW.zip)
 
-[Final review](reviews/task005b-gpu-mechanism-20261125/FINAL_REVIEW.md) · [Decision](reviews/task005b-gpu-mechanism-20261125/TASK005B_DECISION.json) · [Review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-gpu-mechanism-20261125/GAMECAM_TASK005B_GPU_MECHANISM_REVIEW_20261125.zip) · [Complete raw native arrays and run logs](https://github.com/Pseven0108/GameCam-VO/releases/tag/task005b-gpu-mechanism-20261125)
+The complete ZIP (511,367,382 bytes) contains the exact full input snapshot, all 10 output arrays, per-iteration traces, complete scientific logs and the independent observer binary. CRC and all 153 internal SHA-256 entries verified. Reports and CSV files are expanded in this repository for direct review.
+
+Task004C-B, Task005A and TASK005B-R1 remain sealed. No instance shutdown.

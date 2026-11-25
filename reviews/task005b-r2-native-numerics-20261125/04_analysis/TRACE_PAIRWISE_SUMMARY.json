@@ -1,0 +1,56 @@
+{
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "pairs": [
+    {
+      "left": "trace_paths_1",
+      "right": "trace_paths_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Hs_geometry"
+    },
+    {
+      "left": "trace_paths_1",
+      "right": "trace_reference_1",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Hs_geometry"
+    },
+    {
+      "left": "trace_paths_1",
+      "right": "trace_reference_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Hs_geometry"
+    },
+    {
+      "left": "trace_paths_2",
+      "right": "trace_reference_1",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Hs_geometry"
+    },
+    {
+      "left": "trace_paths_2",
+      "right": "trace_reference_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Jii_data"
+    },
+    {
+      "left": "trace_reference_1",
+      "right": "trace_reference_2",
+      "PASS": false,
+      "bitwise_identical": false,
+      "first_numerical_difference": "iter1_Jjj_data",
+      "first_tolerance_violation": "iter2_Hs_geometry"
+    }
+  ],
+  "passing_pairs": 0,
+  "total_pairs": 6
+}

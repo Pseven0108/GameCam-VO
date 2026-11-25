@@ -1,0 +1,656 @@
+{
+  "task": "TASK006A-R1",
+  "source_directory": "D:\\aaa\\GameCam-VO\\experiments\\GAMECAM_TASK006A_R1_CADP_CPU_PROTOTYPE_20261126",
+  "slug": "task006a-r1-cadp-cpu-20261126",
+  "base_commit": "1b54d9074a5fbf051f3e74b9c315cc474515da5c",
+  "original_zip_sha256": "880e8d4cf2e3cf1237e413fcb94c601ae0f3f4b27e09aa3af0f72ff968613f9b",
+  "ZIP_CRC": "PASS",
+  "original_payload_SHA_verified": 99,
+  "original_artifacts_changed": false,
+  "omitted_source_files": [],
+  "scope": "Full expanded R1 directory plus complete original ZIP; separate publication metadata only",
+  "files": [
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/AUDIT_DECISION.json",
+      "bytes": 1516,
+      "sha256": "8949a2162fa97e395960f20b0cdfff2af7fac0a922a5e000260ce49f6eb7cf37",
+      "git_blob_sha": "aec93fd8432d956a68de81abba43d65d6b3e14c9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/CPU_TEST_AND_EXPERIMENT_REPORT.md",
+      "bytes": 2447,
+      "sha256": "45cdddf5689f737e54189f35530d6740200a1ce76c5b8676f089a0dd99706220",
+      "git_blob_sha": "1eeeb88b4caae9250a9eee82bcab7f337f0c30c1"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/deliveries/DELIVERY_SHA256_MANIFEST.json",
+      "bytes": 840,
+      "sha256": "6e46f6c56fc90f07f338c2ba51146120dd5605ef55bd35e86ffe9a8ae3fc90de",
+      "git_blob_sha": "0752e5b15d6a028f8f5e8272f9054cc07a898370"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/deliveries/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip",
+      "bytes": 249578,
+      "sha256": "880e8d4cf2e3cf1237e413fcb94c601ae0f3f4b27e09aa3af0f72ff968613f9b",
+      "git_blob_sha": "75d7e7392bf6336785bcce5dd3e03801e979522a"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/deliveries/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip.sha256",
+      "bytes": 107,
+      "sha256": "011165a9bacafea8841638d2de06a892708695d6608785f5c9100d024fdf1d72",
+      "git_blob_sha": "2ead3e291b202b654dc3cdf187990544d79f62e9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/deliveries/ZIP_VALIDATION.json",
+      "bytes": 481,
+      "sha256": "127ee17ed8adfd72e155f5f36c1ead25065ce9313c4eb497cdd6cf69ff31c641",
+      "git_blob_sha": "bfba07d4ff55fb3633544974aac5bdfd76c63a12"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/ENVIRONMENT.json",
+      "bytes": 373,
+      "sha256": "baa8fb7776bd6f15701e8f7da7c9cd113c87a6799300a54a45043ccea4ae6a65",
+      "git_blob_sha": "50a4a574349653de140419b69887c4ba17f872f9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/FORMAL_PROGRESS_AFTER.md",
+      "bytes": 3298,
+      "sha256": "aa2c995bdb327c88ce44499d0e030ebecdf57ab4dc3860535d67116414cbed2b",
+      "git_blob_sha": "338efe24981ee59f4940645c21cbe849c6918308"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/FORMAL_PROGRESS_BEFORE.md",
+      "bytes": 2343,
+      "sha256": "4a16e5507ba7412b844feb4d57e5701759c7c0abdf4da77382c67e2bcf98979e",
+      "git_blob_sha": "1e4c15079f6ac5d7a99215c7a9f0931bbde11953"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/INTAKE_VERIFICATION.json",
+      "bytes": 5402,
+      "sha256": "4aa078b00ba0eb5b558d2c69ad1f732fb8a5b4e60ed98663eaaeaa389ac38dad",
+      "git_blob_sha": "ee5f6ad7992d9aa00f8044029a06dfc12df6a351"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/PRESERVATION_AFTER.json",
+      "bytes": 50323,
+      "sha256": "7b61283c9ce3207239cb75a2f6b88d857e68b47682f04130ab5b3f174bfa26ef",
+      "git_blob_sha": "5c2474a3aad9729b4feb254b6ec4eeda6a79d2c5"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/PRESERVATION_BEFORE.json",
+      "bytes": 46738,
+      "sha256": "8d99277f82019080db8a75d36bd789bdcde7515fc2f9dea9c218cd4898c997d1",
+      "git_blob_sha": "a8f72416f66c1dedd012c5523513d0ee881e72f4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/AUDIT_DECISION.json",
+      "bytes": 1008,
+      "sha256": "43b8b807f27bbf20bc79dd5d732827077beab751d3200a0dda3be893374e4ff3",
+      "git_blob_sha": "13f0f91cbbc4eed8eda05bbbb498be9a18d27f07"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/configs/r2_sealed_config.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "git_blob_sha": "dddd31c2165d86630858405d5743af2c5a3de11d"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/GAMMA_DEPTH_EVIDENCE.json",
+      "bytes": 3374,
+      "sha256": "d04d4ebe33d221606b88cee35bfb97e5307b389569debbef306dae738327cb61",
+      "git_blob_sha": "6ea1bec52d8f99427d8bc8cc54c182d336928579"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/PI3MOS_SOURCE_RECEIPTS.json",
+      "bytes": 1726,
+      "sha256": "eb15393237c915c9bd592b1f470ff59477003c2be8d9dd81c6a4709e5ff56856",
+      "git_blob_sha": "7d29b72bfd216fbc934e8a84ad286e95ba4721fc"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/sources/DROID-W-official/LICENSE",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "git_blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/sources/DROID-W-official/src/lib/droid.cpp",
+      "bytes": 7635,
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "git_blob_sha": "0c3d91040527b8cbafa2b811e1d18152010a26fa"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/sources/DROID-W-official/src/lib/droid_kernels.cu",
+      "bytes": 62996,
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "git_blob_sha": "9c171af1bfafc278e9776f2f89667054a66dc2bf"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/sources/Pi3MOS-1b81d729c4259a5a775eb4aae41f959eea38ae14/dpvo/config.py",
+      "bytes": 1544,
+      "sha256": "9b9325d4dc7796292d14a08bba1754e6c00c4e354808c8c3dfb5c8cc463dc877",
+      "git_blob_sha": "47a20e3967e23c420fde082fa4d5c9b993a3ee29"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/evidence/sources/Pi3MOS-1b81d729c4259a5a775eb4aae41f959eea38ae14/dpvo/fastba/ba_cuda.cu",
+      "bytes": 22941,
+      "sha256": "dae4fc5c4cabe12c9845610d8f7e9fd734c5000fcd3397f7962e8a67050312de",
+      "git_blob_sha": "05e042ed3386b7202e6f3f354a56f19060ecc184"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/FINAL_REVIEW.md",
+      "bytes": 3068,
+      "sha256": "e0e2feb1a190d837dcbce77ff38c5883760d758a86981538885ee903746737e6",
+      "git_blob_sha": "4731273e742ef4be452a740e9d99b1f47844713f"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/TASK006A_R0_CONFIG_RECONCILIATION.md",
+      "bytes": 2153,
+      "sha256": "8220c2b9f9a003159446adecdf752b7858ce141ea419a40717c4b6f369a74256",
+      "git_blob_sha": "9453b95f31666545207c9b49c30cd846d5cbddd0"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/TASK006A_R0_COVARIANCE_TENSOR_LIFECYCLE.md",
+      "bytes": 5007,
+      "sha256": "c9c22201048be20c2a40c130a22e0681550f6bb9a3fd678b531bdd8301017ae0",
+      "git_blob_sha": "9445c3e4232d2e486d708599ffa9058db8637036"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/TASK006A_R0_MATHEMATICAL_ENDPOINT_AUDIT.md",
+      "bytes": 4276,
+      "sha256": "61a1f24b98a1c028aecc30b0b1d8034418f9711a2fda767cab6f6c0d850a51c5",
+      "git_blob_sha": "19f87bd162082d764bf8065ce57186a3117071e4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/R0/TASK006A_R0_REFERENCE_TRANSFER_AUDIT.md",
+      "bytes": 2360,
+      "sha256": "6b5e58991182d3497401454e661e2ec2a41a1b90e631e95354540cfcfbba0579",
+      "git_blob_sha": "dd7014ab8d03ac13711839dca733eaa7db9fe798"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/evidence/RELEASE_VALIDATION.json",
+      "bytes": 2698,
+      "sha256": "0f3bd4064b5e647ead1afcf54b834c29ccbf981407ff1b4a7ff45d7f1f61d016",
+      "git_blob_sha": "aab5710f62482bb6c92b3d9f757aa620f13bf9fc"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/EXECUTION_LOG.md",
+      "bytes": 1430,
+      "sha256": "cf520f3846ca1f81edd4480f194f8030ba43a57303fd46cc5447e64b52f9e43f",
+      "git_blob_sha": "38255c52d84e95ce156ad5302f0639dacb53a29b"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/FILE_SHA256_MANIFEST.json",
+      "bytes": 18276,
+      "sha256": "3d30430ee149e43b1e6bf0e070fc7a9cf1ad935725234dbae07be0c51a9bca41",
+      "git_blob_sha": "296a60b7dfc81f4da8456e33c47b8b9eaf45ce55"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/FINAL_REVIEW.md",
+      "bytes": 2979,
+      "sha256": "281b32f1f33559d965ebf77156c1cf4da208239563a5d44f68475cc6518eb462",
+      "git_blob_sha": "6df24cf44770c624997ff041759a4e6ce5923e0d"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/IMPLEMENTATION_AND_REPRODUCIBILITY.md",
+      "bytes": 4757,
+      "sha256": "248e4da9756b12cdc38edca3150ea7de9aa95b36d525890f08162d59881d8b87",
+      "git_blob_sha": "e1b724dd7422758df83fc9ec2fd7cf3e8369117d"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_001.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_001.stdout.txt",
+      "bytes": 1667,
+      "sha256": "6a9bb19a387076f356da2f1c70f1a9d1da7fd3bd0106b7cce5a82ed8c3241057",
+      "git_blob_sha": "4ee086fe0c74b86ada2768c5f1b93ced0bcb20f5"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_002.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_002.stdout.txt",
+      "bytes": 2057,
+      "sha256": "cc4bcc8b8fcd0028910b275d38b26dd7a919b5389c0286aa7d8f023eb27dc271",
+      "git_blob_sha": "c9578547ce8ecaba42446485a73aa4d1b4a88083"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_003.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/research_003.stdout.txt",
+      "bytes": 2188,
+      "sha256": "f4a12817ce02906b8e9bcc4d2680015cecbcbd52f827d1195bd1dc058ff90b7a",
+      "git_blob_sha": "1479efcc03a2cbb5d6fe802f54e31d909eae0499"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/RESEARCH_EXECUTION_RECEIPT.json",
+      "bytes": 398,
+      "sha256": "71c16784f777e5556752b935ee8473263d8c93d6cbed928c54ea5e1df0a9b7d8",
+      "git_blob_sha": "0830fb96c5a8177ff79dd2698642d31d24a483a0"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/RESEARCH_EXECUTION_RECEIPT_002.json",
+      "bytes": 398,
+      "sha256": "5760b5457ad17a470bf13722ae1f56e1ed48a59535444ccefc1a284ca32d6cbc",
+      "git_blob_sha": "c505d2d29695045dd4d9cd3e12d11e3b8ac745de"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/logs/RESEARCH_EXECUTION_RECEIPT_003.json",
+      "bytes": 398,
+      "sha256": "9b1cd860f617b238465ff334e7546720e79a820f672d10a6142e25dc280242bc",
+      "git_blob_sha": "3fad6a042b1cb78d0dcf8baa37361eb396aecf00"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/MATHEMATICAL_DERIVATION.md",
+      "bytes": 6864,
+      "sha256": "d020d6ab92dfa2ded5c6febfa3117eb8e1bd44eb0614115b285073d671cd97d9",
+      "git_blob_sha": "3e35dbca5694975a37bc7d798ae784654b752d66"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/NEXT_STAGE_OPEN_ITEMS.md",
+      "bytes": 1338,
+      "sha256": "13ca7d14a1b805fb03e01cd4c15361df805c7ad097b88fe8271ea18dccb64b14",
+      "git_blob_sha": "64cddfad7ff9a7174322fb14207e68b617b5d142"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/NUMERICAL_STABILITY_AND_LIMITATIONS.md",
+      "bytes": 4064,
+      "sha256": "d13085c178c678f1d7a6c9b8b353860edbf44d6c650a56dc373713c506af8fda",
+      "git_blob_sha": "1d156e535640fbc0349847ee97f04897030f7f75"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/PROJECT_PROGRESS_UPDATE.md",
+      "bytes": 916,
+      "sha256": "51b186700d7b4f3d01661d5807893fc20d9748c2eaabdc3a671d310335e49667",
+      "git_blob_sha": "e0f469d177d821992879e1ad38755dcc4813e78a"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/README_请先读.md",
+      "bytes": 1217,
+      "sha256": "c9555e162fac75084b56f90e577b62f6ebb52bbbc54d1472161153777f82e7a7",
+      "git_blob_sha": "061c405620434f53191e7698efd10e74ef29045c"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/REPRODUCIBILITY_MANIFEST.json",
+      "bytes": 988,
+      "sha256": "3fc0fafefd146320b5531d96a2a2c5754cc8667de260a5edfc7c0abbe7aaa2d2",
+      "git_blob_sha": "15e0e16ca2f47a31b12bf1ab1a7aee167c0f4230"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/cpu_validation_001/UNIT_TEST_REPORT.json",
+      "bytes": 16565,
+      "sha256": "8b12357b1dda4ad7cd8841dcb7d149dae4f3fd8e972a6d04e335b86f1af0e21c",
+      "git_blob_sha": "1092d24a0d432826732e552e5ed7edc511144543"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/cpu_validation_001/unit_tests.stdout.txt",
+      "bytes": 6268,
+      "sha256": "c5a2bb5dc9f7178bc83dd465b65cba33a0e870825c62567a33d790a601f35156",
+      "git_blob_sha": "accde2affad879807836925b5cd4d9f9512b22e9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/COVARIANCE_ORACLE_COMPARISON.csv",
+      "bytes": 21519,
+      "sha256": "89010da939f1df30b6f0e1290555a2379089992d866d3b977b286f52ff4a14fd",
+      "git_blob_sha": "aebdfaa05b68fc00a8f86a046495bd832a3110ae"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/DIMENSION_MATCHED_INPUT_RECEIPT.json",
+      "bytes": 926,
+      "sha256": "1fa82b527b2585baeec0999e705f63480ea916643a7b76c4f83512bd4c70e0eb",
+      "git_blob_sha": "1b2b08794d16f2994996aa317a8f77632795bf18"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/DIMENSION_MATCHED_SYNTHETIC_BLOCKS.csv",
+      "bytes": 691,
+      "sha256": "10df97cfbf4f85173e00361b2b20121f3412750bda77228defe9a76e8c87474f",
+      "git_blob_sha": "b2ef4d4732efb362aabf9af9fcc0471283bfb5c9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/DIMENSION_MATCHED_SYNTHETIC_FRAME_STATS.csv",
+      "bytes": 1287,
+      "sha256": "9bd9cd8dce05fa7d55182370f6369d563816c68ee950d9c9c56e4dcf363f2eef",
+      "git_blob_sha": "be11d2786c42d3b2628545a8c6ee0a57f8023440"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/ENDPOINT_AND_CONTINUOUS_RHO_COMPARISON.csv",
+      "bytes": 10162,
+      "sha256": "659f134bb6fdf228a5f5fac542ee83f1459f6fa903a6442571f453e554f61d55",
+      "git_blob_sha": "9133631426d105dced79f49a9f7aa6b18013d0a5"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/GEOMETRY_TO_FRAME_RHO.csv",
+      "bytes": 4865,
+      "sha256": "ad141302bb911432a98725558cd129deaa4532d869a51fd4c1651630e0f634cb",
+      "git_blob_sha": "23d45bab8a01b1e2d9469a73b44557f999134375"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/MASK_AND_MEDIAN_COUNTEREXAMPLE.json",
+      "bytes": 599,
+      "sha256": "31b3ad4a6e552b04e0878da1e06c29d04aa402446fd129d428595a69c99254db",
+      "git_blob_sha": "c75f805d3c9328be58950434695a0e489eb15fb4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/NUMERICAL_STABILITY_CASES.csv",
+      "bytes": 2527,
+      "sha256": "fabd85d628a32730b1cf4e01074541a39bf65a3f402fe3a66c0a8d7381258dcc",
+      "git_blob_sha": "9fcbfac16bbe53e6adad69b21f18c063ccf11ced"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/RESEARCH_RESULTS.json",
+      "bytes": 1554,
+      "sha256": "72d60113e381214da43b911bdac067d3fdb03e5c5aeb79f499bc25f99eda01d5",
+      "git_blob_sha": "7423b1deb96376e655bc77593c69fffff2a3c48e"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/RUN_EXIT.json",
+      "bytes": 94,
+      "sha256": "3dee22007e992ebfe6d3e0353b23fa55fe952ff7b166d5c0e45df2290907a7b0",
+      "git_blob_sha": "503f48a2bec06c97821c86ce8b157384eb2febec"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/RUN_START.json",
+      "bytes": 399,
+      "sha256": "85b18706f44d96c61b279884f39f57eec0117133c88cbb3b7ef24ff5ffb79661",
+      "git_blob_sha": "2b1e0488aeab6d36ac9eb997c3123858757c426a"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/SYNTHETIC_SMALL_INPUTS_AND_ORACLES.npz",
+      "bytes": 28042,
+      "sha256": "5dd4952a92541e75b14a2e8941129ab99daa541e1a487396ce702ba3395ec2a7",
+      "git_blob_sha": "ccedb81f3bacbe3c68546a2997b31a479934d7c2"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/UNCALIBRATED_SIGMOID_SENSITIVITY.csv",
+      "bytes": 3343,
+      "sha256": "93cd8fe1b04170d81e4ae2eb4e184fa92b760b29028d6c5d0ce5dc4994b417c4",
+      "git_blob_sha": "a3485d0c7a26adf3b144bd056b54ed4d04449ec8"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/UNIT_TEST_REPORT.json",
+      "bytes": 16556,
+      "sha256": "4edaa01159db690853e6f8fb03f650c4c28ccaa3a0c2ea5ef3ad758427dcaefb",
+      "git_blob_sha": "ab45143bd8fcfe8551344840070bce8458763c34"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_001/unit_tests.stdout.txt",
+      "bytes": 6268,
+      "sha256": "73c958638f887aa9d0e46d2033d76e9509ec0df26c99a4a1810017067ccadea6",
+      "git_blob_sha": "0765b5b482e130893484e6cf775685a9406c33d4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/COVARIANCE_ORACLE_COMPARISON.csv",
+      "bytes": 21519,
+      "sha256": "89010da939f1df30b6f0e1290555a2379089992d866d3b977b286f52ff4a14fd",
+      "git_blob_sha": "aebdfaa05b68fc00a8f86a046495bd832a3110ae"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/DIMENSION_MATCHED_INPUT_RECEIPT.json",
+      "bytes": 937,
+      "sha256": "6431ab5d84233749086165183c442c9b2c3b2ece9a0ac72fc534e2ba3d2970d0",
+      "git_blob_sha": "9f5384d35f9305e3a9227cfcba9eb24a5f282065"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/DIMENSION_MATCHED_SYNTHETIC_BLOCKS.csv",
+      "bytes": 692,
+      "sha256": "ffee3e1cb93d2f4e1cd2aa23d97f38e0a735e9f123f8b215d4cc0a816317ed54",
+      "git_blob_sha": "518db4afef9f6a37801173250bae17515dc9cb35"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/DIMENSION_MATCHED_SYNTHETIC_FRAME_STATS.csv",
+      "bytes": 1287,
+      "sha256": "9bd9cd8dce05fa7d55182370f6369d563816c68ee950d9c9c56e4dcf363f2eef",
+      "git_blob_sha": "be11d2786c42d3b2628545a8c6ee0a57f8023440"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/ENDPOINT_AND_CONTINUOUS_RHO_COMPARISON.csv",
+      "bytes": 10308,
+      "sha256": "bf5a072e95576f64f37d0bbc6376bececd3a605b4021272fceb1c5e40c2d3c3f",
+      "git_blob_sha": "b62f8f85a2db3919e577f57ef32c1068acc241c7"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/GEOMETRY_TO_FRAME_RHO.csv",
+      "bytes": 4865,
+      "sha256": "ad141302bb911432a98725558cd129deaa4532d869a51fd4c1651630e0f634cb",
+      "git_blob_sha": "23d45bab8a01b1e2d9469a73b44557f999134375"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/INACCURATE_PRIOR_COUNTEREXAMPLE.csv",
+      "bytes": 1243,
+      "sha256": "8484337d7903df7bbbae49edd9e84fa15192913f475957ed5a779a854fc168e0",
+      "git_blob_sha": "943f8b51be01af03dcfc85bc60c64f7de459b7c8"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/MASK_AND_MEDIAN_COUNTEREXAMPLE.json",
+      "bytes": 599,
+      "sha256": "31b3ad4a6e552b04e0878da1e06c29d04aa402446fd129d428595a69c99254db",
+      "git_blob_sha": "c75f805d3c9328be58950434695a0e489eb15fb4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/NUMERICAL_STABILITY_CASES.csv",
+      "bytes": 2527,
+      "sha256": "fabd85d628a32730b1cf4e01074541a39bf65a3f402fe3a66c0a8d7381258dcc",
+      "git_blob_sha": "9fcbfac16bbe53e6adad69b21f18c063ccf11ced"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/RESEARCH_RESULTS.json",
+      "bytes": 1903,
+      "sha256": "78647ad4ba3872333aeb6ab939b17e95dd8c2d12e5f78410157079b9ed9a9c42",
+      "git_blob_sha": "cecd77d34c1c4de33bfe38cf74acee23c6ba1854"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/RUN_EXIT.json",
+      "bytes": 85,
+      "sha256": "bcd28d18f089469a2a28eeecde9b391646f22a8b97b29762c9eee5da56398434",
+      "git_blob_sha": "d77a1f5715ed8ae373d42cc900d3fa20e9f36614"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/RUN_START.json",
+      "bytes": 399,
+      "sha256": "c18bc318d5e1f0f2a3ca74c0cbcd560db058dff1f25907cbfde170c9d6cb8bca",
+      "git_blob_sha": "00c06ce75e086c078a8240ebe36c373e0ad9663d"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/SYNTHETIC_SMALL_INPUTS_AND_ORACLES.npz",
+      "bytes": 28042,
+      "sha256": "5dd4952a92541e75b14a2e8941129ab99daa541e1a487396ce702ba3395ec2a7",
+      "git_blob_sha": "ccedb81f3bacbe3c68546a2997b31a479934d7c2"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/UNCALIBRATED_SIGMOID_SENSITIVITY.csv",
+      "bytes": 3343,
+      "sha256": "93cd8fe1b04170d81e4ae2eb4e184fa92b760b29028d6c5d0ce5dc4994b417c4",
+      "git_blob_sha": "a3485d0c7a26adf3b144bd056b54ed4d04449ec8"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/UNIT_TEST_REPORT.json",
+      "bytes": 17771,
+      "sha256": "1be1c79639211934f22df05361e35365b8cce0501c10e1cbcb1a4087ca8485f2",
+      "git_blob_sha": "9a1c3a99db1ad5a778909af5a249c9d75cbd38d9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_002/unit_tests.stdout.txt",
+      "bytes": 6777,
+      "sha256": "cf98a6da4efaa013020dfa65cb8684f17e5bb4ccb65b745f3b0f1308c7759fb8",
+      "git_blob_sha": "0ed439dc9ca2074bb02ebac6e0adb629958d5810"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/ADAPTIVE_PIPELINE_COMPARISON.csv",
+      "bytes": 2036,
+      "sha256": "36cdaccfa667bdf1bd5c49faa3fb1b989bc23a8dcbf5ba7fdb671346ec3e2d6a",
+      "git_blob_sha": "0f719231e8c49fcffbf9e2ea018f5bc06b902296"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/COVARIANCE_ORACLE_COMPARISON.csv",
+      "bytes": 21519,
+      "sha256": "89010da939f1df30b6f0e1290555a2379089992d866d3b977b286f52ff4a14fd",
+      "git_blob_sha": "aebdfaa05b68fc00a8f86a046495bd832a3110ae"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/DIMENSION_MATCHED_INPUT_RECEIPT.json",
+      "bytes": 936,
+      "sha256": "b84305f26d6e17c9e55098433d55a59dbe184ca7e687c17f35e73d0d7bfdd999",
+      "git_blob_sha": "7804d1d086b3e75d718ebd1a412f812d3b5b4d43"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/DIMENSION_MATCHED_SYNTHETIC_BLOCKS.csv",
+      "bytes": 691,
+      "sha256": "21795c3d0ff68365542f9a194ee056c09e2c365e8f1e25db80bab74a5c727ee0",
+      "git_blob_sha": "91b86f2036e97b4c12d57f05c18e65e78485c010"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/DIMENSION_MATCHED_SYNTHETIC_FRAME_STATS.csv",
+      "bytes": 1287,
+      "sha256": "9bd9cd8dce05fa7d55182370f6369d563816c68ee950d9c9c56e4dcf363f2eef",
+      "git_blob_sha": "be11d2786c42d3b2628545a8c6ee0a57f8023440"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/ENDPOINT_AND_CONTINUOUS_RHO_COMPARISON.csv",
+      "bytes": 10308,
+      "sha256": "bf5a072e95576f64f37d0bbc6376bececd3a605b4021272fceb1c5e40c2d3c3f",
+      "git_blob_sha": "b62f8f85a2db3919e577f57ef32c1068acc241c7"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/GEOMETRY_TO_FRAME_RHO.csv",
+      "bytes": 4865,
+      "sha256": "ad141302bb911432a98725558cd129deaa4532d869a51fd4c1651630e0f634cb",
+      "git_blob_sha": "23d45bab8a01b1e2d9469a73b44557f999134375"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/INACCURATE_PRIOR_COUNTEREXAMPLE.csv",
+      "bytes": 1243,
+      "sha256": "8484337d7903df7bbbae49edd9e84fa15192913f475957ed5a779a854fc168e0",
+      "git_blob_sha": "943f8b51be01af03dcfc85bc60c64f7de459b7c8"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/MASK_AND_MEDIAN_COUNTEREXAMPLE.json",
+      "bytes": 599,
+      "sha256": "31b3ad4a6e552b04e0878da1e06c29d04aa402446fd129d428595a69c99254db",
+      "git_blob_sha": "c75f805d3c9328be58950434695a0e489eb15fb4"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/NUMERICAL_STABILITY_CASES.csv",
+      "bytes": 2527,
+      "sha256": "fabd85d628a32730b1cf4e01074541a39bf65a3f402fe3a66c0a8d7381258dcc",
+      "git_blob_sha": "9fcbfac16bbe53e6adad69b21f18c063ccf11ced"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/RESEARCH_RESULTS.json",
+      "bytes": 2007,
+      "sha256": "68c17fd71925c947ec3cf2dac25cf405b52c937148ff11ab83ec4cf198f5453a",
+      "git_blob_sha": "599812b88d5be11f06313874fb687c198d56ad4f"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/RUN_EXIT.json",
+      "bytes": 94,
+      "sha256": "1f3cf9015b846ccd5129af165bcb83449bb60be83fce819da6167026ee5f4281",
+      "git_blob_sha": "3d136c088f5943a6cf7447c31b534951349f374f"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/RUN_START.json",
+      "bytes": 399,
+      "sha256": "91d048dcc155a3850f78e9b856712d6e24c0fb7b6ddbd54908a6509d05759744",
+      "git_blob_sha": "95824f43a32536d5e4176b7eb341e80e4a420d6f"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/SYNTHETIC_SMALL_INPUTS_AND_ORACLES.npz",
+      "bytes": 28042,
+      "sha256": "5dd4952a92541e75b14a2e8941129ab99daa541e1a487396ce702ba3395ec2a7",
+      "git_blob_sha": "ccedb81f3bacbe3c68546a2997b31a479934d7c2"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/UNCALIBRATED_SIGMOID_SENSITIVITY.csv",
+      "bytes": 3343,
+      "sha256": "93cd8fe1b04170d81e4ae2eb4e184fa92b760b29028d6c5d0ce5dc4994b417c4",
+      "git_blob_sha": "a3485d0c7a26adf3b144bd056b54ed4d04449ec8"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/UNIT_TEST_REPORT.json",
+      "bytes": 18581,
+      "sha256": "cfbdd0b1299d3182e0f43044f59d0d7b0156e3a218a1b997765224084393b230",
+      "git_blob_sha": "459816f6c2b595dbc4af839f2fd2469eb588d57f"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/results/research_003/unit_tests.stdout.txt",
+      "bytes": 7103,
+      "sha256": "7983e38306093389c4211783b6929f2813807589f9d469205408d9f4a1fc1929",
+      "git_blob_sha": "d0a83a00e172421f93af3ef049e215090ae8f368"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/SECURITY_AUDIT.json",
+      "bytes": 1095,
+      "sha256": "b86d609a711d02ffca56f1567fa533732c12410be570e81d05fc06f81d92e790",
+      "git_blob_sha": "0a9c0e42535927c33db709968fe08fd3b810a70d"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/src/cadp_cpu.py",
+      "bytes": 16664,
+      "sha256": "062707bec8ace62c6dfd4597a43f39718d491d029fd431045a4af593532f2d8f",
+      "git_blob_sha": "9255b924eced95c0b3a5681339ad2a9a0a0ead71"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/src/synthetic.py",
+      "bytes": 2054,
+      "sha256": "50018fd0ba3ef838ae9e1f05263d920d807d6e67c80c9f1656adfb0ddb77dc3b",
+      "git_blob_sha": "6c811bd6abf24260bcbe8ddd4adc1b69fa74a898"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/tests/test_cadp.py",
+      "bytes": 22936,
+      "sha256": "953319d92a2b2370fe5708d1ed16b7436bd0ef926afd3cbdd0b1091f34b462a7",
+      "git_blob_sha": "893a87c6aa0e6009e0bc69d28b80107f6b0057cc"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/tools/package_review.py",
+      "bytes": 6746,
+      "sha256": "baf826a30dfc69254231719272338416c731b3b6cfc739ab93ca5070daf0b52c",
+      "git_blob_sha": "93a2302e60c1621df87f4cf2819b27a96edd5316"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/tools/prepare_evidence.py",
+      "bytes": 4593,
+      "sha256": "f805132cb63b4d0d8bbcdb0671692562684561d38f9d58f86943645529f9d31e",
+      "git_blob_sha": "6e96434b201c25ad06561567a18273f108a2c141"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/tools/run_research.py",
+      "bytes": 19383,
+      "sha256": "6f47f68efd6e8b125c6facba8d3a1c2d9e5dab955f8ac614231ed4fb5bb094a0",
+      "git_blob_sha": "0f168c34d5e2ce0df5a75b7cd323f7452ccc599e"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/tools/write_reports.py",
+      "bytes": 15881,
+      "sha256": "390a63f917de4c21f249d765bfd0efcd0e359a7f0c315e34e479cc0462a679a8",
+      "git_blob_sha": "f7f398c7c886ea856bb880465eac0e12c0376cda"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip",
+      "bytes": 249578,
+      "sha256": "880e8d4cf2e3cf1237e413fcb94c601ae0f3f4b27e09aa3af0f72ff968613f9b",
+      "git_blob_sha": "75d7e7392bf6336785bcce5dd3e03801e979522a"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip.sha256",
+      "bytes": 107,
+      "sha256": "011165a9bacafea8841638d2de06a892708695d6608785f5c9100d024fdf1d72",
+      "git_blob_sha": "2ead3e291b202b654dc3cdf187990544d79f62e9"
+    },
+    {
+      "path": "reviews/task006a-r1-cadp-cpu-20261126/PUBLICATION_NOTES.md",
+      "bytes": 1387,
+      "sha256": "f855a76e7f9553ff09c10407025a33e5b9998dcaf63caaa9bfb5022596724e67",
+      "git_blob_sha": "f54a09089aa59f35d9fedcb2ef33994601e1450e"
+    }
+  ]
+}

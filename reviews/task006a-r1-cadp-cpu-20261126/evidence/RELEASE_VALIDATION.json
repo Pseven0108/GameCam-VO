@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "source_AST_files": 7,
+  "parsed_files": [
+    {
+      "path": "src\\cadp_cpu.py",
+      "sha256": "062707bec8ace62c6dfd4597a43f39718d491d029fd431045a4af593532f2d8f",
+      "imports": [
+        "dataclasses",
+        "numpy",
+        "scipy.linalg",
+        "typing"
+      ]
+    },
+    {
+      "path": "src\\synthetic.py",
+      "sha256": "50018fd0ba3ef838ae9e1f05263d920d807d6e67c80c9f1656adfb0ddb77dc3b",
+      "imports": [
+        "cadp_cpu",
+        "dataclasses",
+        "numpy"
+      ]
+    },
+    {
+      "path": "tests\\test_cadp.py",
+      "sha256": "953319d92a2b2370fe5708d1ed16b7436bd0ef926afd3cbdd0b1091f34b462a7",
+      "imports": [
+        "cadp_cpu",
+        "contextlib",
+        "dataclasses",
+        "hashlib",
+        "inspect",
+        "io",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "scipy.sparse",
+        "scipy.sparse.linalg",
+        "synthetic",
+        "sys",
+        "time",
+        "traceback",
+        "unittest"
+      ]
+    },
+    {
+      "path": "tools\\package_review.py",
+      "sha256": "baf826a30dfc69254231719272338416c731b3b6cfc739ab93ca5070daf0b52c",
+      "imports": [
+        "ast",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "sys",
+        "zipfile"
+      ]
+    },
+    {
+      "path": "tools\\prepare_evidence.py",
+      "sha256": "f805132cb63b4d0d8bbcdb0671692562684561d38f9d58f86943645529f9d31e",
+      "imports": [
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "scipy",
+        "shutil",
+        "sys",
+        "zipfile"
+      ]
+    },
+    {
+      "path": "tools\\run_research.py",
+      "sha256": "6f47f68efd6e8b125c6facba8d3a1c2d9e5dab955f8ac614231ed4fb5bb094a0",
+      "imports": [
+        "argparse",
+        "cadp_cpu",
+        "csv",
+        "dataclasses",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "scipy",
+        "scipy.sparse",
+        "scipy.sparse.linalg",
+        "synthetic",
+        "sys",
+        "test_cadp",
+        "time",
+        "traceback"
+      ]
+    },
+    {
+      "path": "tools\\write_reports.py",
+      "sha256": "390a63f917de4c21f249d765bfd0efcd0e359a7f0c315e34e479cc0462a679a8",
+      "imports": [
+        "datetime",
+        "hashlib",
+        "json",
+        "pathlib"
+      ]
+    }
+  ],
+  "unit_tests_passed": 97,
+  "research_exit_code": 0,
+  "execution_output_sha_pass": true,
+  "protected_scientific_files_unchanged": 147,
+  "metadata_updates": 1,
+  "GPU_or_native_equivalence_certified": false
+}

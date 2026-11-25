@@ -1,0 +1,533 @@
+{
+  "tests_run": 87,
+  "passed": 87,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "records": [
+    {
+      "id": "test_cadp.CovarianceTests.test_conditional_only_is_not_marginal",
+      "status": "PASS",
+      "elapsed_seconds": 0.007060899999999926,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_disparity_reparameterization_with_consistent_units",
+      "status": "PASS",
+      "elapsed_seconds": 0.0009649000000000463,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_empty_depth_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 7.62999999999181e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_gauge_regularization_is_not_identifiability",
+      "status": "PASS",
+      "elapsed_seconds": 0.00043130000000002333,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.009915000000000007,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.006461600000000067,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.006357100000000004,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.011751899999999926,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.01171549999999999,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.011810199999999993,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.0011086000000000151,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010105000000000253,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.001027499999999959,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.015745600000000026,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.015437799999999946,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.015301799999999921,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.0019613000000000547,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.0018540999999999697,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.00183180000000005,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.004300399999999982,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.004060100000000011,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.0041319999999999135,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_native_depth_backsub_index_zero_is_distinct_operator",
+      "status": "PASS",
+      "elapsed_seconds": 0.001403500000000002,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_near_singular_guard",
+      "status": "PASS",
+      "elapsed_seconds": 0.00017910000000009862,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_one_dimensional_analytic",
+      "status": "PASS",
+      "elapsed_seconds": 0.00019499999999994522,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_post_schur_damping_not_pre_schur",
+      "status": "PASS",
+      "elapsed_seconds": 0.0003939000000000581,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_prior_off_api_has_no_mono_or_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006197000000000008,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_pseudoinverse_not_silently_used",
+      "status": "PASS",
+      "elapsed_seconds": 0.00017970000000000486,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_selected_covariance_block_preserves_cross_frame_terms",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006747999999999754,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_weight_and_eta_units_affect_uncertainty",
+      "status": "PASS",
+      "elapsed_seconds": 0.0005485000000000628,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_coupling_diagonal",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002771000000000301,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_depth_curvature_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 9.119999999995798e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_pose_has_exact_conditional_variance",
+      "status": "PASS",
+      "elapsed_seconds": 0.00019730000000006687,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_curvature_can_decrease_with_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.00023109999999992858,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.001157100000000022,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0011402000000000356,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010204000000000324,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010042000000000106,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0009987999999999664,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0009921000000000513,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010021000000000058,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0009991000000000305,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010056999999999983,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010120999999999603,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010025999999999646,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0009979999999999434,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_eta_is_replaced_not_added",
+      "status": "PASS",
+      "elapsed_seconds": 0.00017780000000000573,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_frame_weights_broadcast_only_by_actual_frame_ID",
+      "status": "PASS",
+      "elapsed_seconds": 0.0012045000000000528,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_gamma_zero_is_not_D0",
+      "status": "PASS",
+      "elapsed_seconds": 0.00021799999999994046,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_intermediate_rho_not_linear_pose_interpolation",
+      "status": "PASS",
+      "elapsed_seconds": 0.0008321000000000023,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_zero_or_negative_mono_never_activates_prior",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002375000000000016,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_duplicate_rows_accumulate_and_K_not_P",
+      "status": "PASS",
+      "elapsed_seconds": 0.000121600000000055,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_exclusive_t1_is_fail_closed",
+      "status": "PASS",
+      "elapsed_seconds": 4.999999999999449e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_missing_source_ID_stops",
+      "status": "PASS",
+      "elapsed_seconds": 4.7100000000077635e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_no_E_reconstruction_from_pose_Schur",
+      "status": "PASS",
+      "elapsed_seconds": 0.000564299999999962,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013639999999992547,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00012719999999999398,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00012239999999996698,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001451000000000091,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014580000000008475,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00020729999999991033,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014320000000000999,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014020000000003474,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013839999999998298,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_asymmetric_A",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001358999999999666,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001438999999999746,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.000151200000000018,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.000144800000000056,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_inconsistent_indefinite_geometry",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013739999999995423,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_block_sizes",
+      "status": "PASS",
+      "elapsed_seconds": 0.00036239999999998496,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_covariance_indices",
+      "status": "PASS",
+      "elapsed_seconds": 0.00031999999999998696,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002657999999999827,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_sigmoid_parameters",
+      "status": "PASS",
+      "elapsed_seconds": 7.62999999999181e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_variance_not_clamped",
+      "status": "PASS",
+      "elapsed_seconds": 3.490000000005988e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_negative_eta",
+      "status": "PASS",
+      "elapsed_seconds": 0.00016090000000001936,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_nonfinite_prior_is_not_zero_times_nan_fixed",
+      "status": "PASS",
+      "elapsed_seconds": 0.000128000000000017,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_wrong_shape",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014259999999999273,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_disparity_sign_invalid_not_abs_repaired",
+      "status": "PASS",
+      "elapsed_seconds": 0.00016599999999999948,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_empty_frame_no_fallback",
+      "status": "PASS",
+      "elapsed_seconds": 9.680000000000799e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_even_median_is_explicit_midpoint",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013860000000009975,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_insufficient_support_returns_none",
+      "status": "PASS",
+      "elapsed_seconds": 8.260000000004375e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_no_prior_truth_claim_for_high_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006975000000000176,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_observed_zero_Cg_included",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013950000000007012,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_outlier_robustness_has_majority_limit",
+      "status": "PASS",
+      "elapsed_seconds": 0.00023660000000003123,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_sigmoid_monotonic_and_half_at_tau",
+      "status": "PASS",
+      "elapsed_seconds": 0.00010270000000001112,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_sigmoid_overflow_safe",
+      "status": "PASS",
+      "elapsed_seconds": 7.34999999999486e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_unobserved_count_is_reported",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013479999999999048,
+      "detail": null
+    }
+  ],
+  "seed_scope": "Synthetic RNG seeds 43/44/45; no training or model RNG",
+  "torch_imported": false
+}

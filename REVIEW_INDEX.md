@@ -1,3 +1,11 @@
+# 最新评审 · TASK006A-R1（2026-11-26）
+
+[最终评审](reviews/task006a-r1-cadp-cpu-20261126/FINAL_REVIEW.md) · [完整展开目录](reviews/task006a-r1-cadp-cpu-20261126) · [完整评审ZIP](review_packages/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip)
+
+所有R1原始文件与完整ZIP均已包含，无省略载荷。先读最终评审，再读数学推导、稳定性报告、代码及 `results/research_003`。历史R0来源随包提供。
+
+---
+
 # TASK005B-R3 latest review
 
 [Expanded review](reviews/task005b-r3-reduction-u-isolation-20261125/FINAL_REVIEW.md) · [Entire evidence ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-r3-reduction-u-isolation-20261125/GAMECAM_TASK005B_R3_REVIEW.zip)

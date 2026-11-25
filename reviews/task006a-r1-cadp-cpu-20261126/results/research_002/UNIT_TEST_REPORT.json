@@ -1,0 +1,569 @@
+{
+  "tests_run": 93,
+  "passed": 93,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "records": [
+    {
+      "id": "test_cadp.CovarianceTests.test_conditional_only_is_not_marginal",
+      "status": "PASS",
+      "elapsed_seconds": 0.0008657000000000248,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_depth_marginal_diagonal_not_identified_by_Schur_alone",
+      "status": "PASS",
+      "elapsed_seconds": 0.0006194999999999951,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_disparity_reparameterization_with_consistent_units",
+      "status": "PASS",
+      "elapsed_seconds": 0.0007924000000000264,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_empty_depth_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 8.719999999995398e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_full_covariance_cap_is_enforced",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002558000000000282,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_gauge_regularization_is_not_identifiability",
+      "status": "PASS",
+      "elapsed_seconds": 0.00031370000000002785,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.006719500000000045,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.006218400000000013,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p12_d37_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.006326900000000024,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.011642199999999991,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.011353599999999964,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p18_d72_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.011363699999999977,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010879000000000305,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010215000000000085,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p1_d1_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.001014800000000038,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.015497700000000003,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.015444299999999966,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p24_d96_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.015550700000000028,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.0019715999999999623,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.0018415999999999988,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p2_d7_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.0018173000000000217,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed43",
+      "status": "PASS",
+      "elapsed_seconds": 0.0040727999999999875,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed44",
+      "status": "PASS",
+      "elapsed_seconds": 0.004001699999999997,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_joint_inverse_oracle_p6_d24_seed45",
+      "status": "PASS",
+      "elapsed_seconds": 0.003969800000000023,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_native_depth_backsub_index_zero_is_distinct_operator",
+      "status": "PASS",
+      "elapsed_seconds": 0.0005218999999999641,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_near_singular_guard",
+      "status": "PASS",
+      "elapsed_seconds": 0.00017939999999994072,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_one_dimensional_analytic",
+      "status": "PASS",
+      "elapsed_seconds": 0.00019259999999998723,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_post_schur_damping_not_pre_schur",
+      "status": "PASS",
+      "elapsed_seconds": 0.0003906000000000187,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_prior_off_api_has_no_mono_or_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.000605600000000095,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_pseudoinverse_not_silently_used",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001782999999999646,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_selected_covariance_block_preserves_cross_frame_terms",
+      "status": "PASS",
+      "elapsed_seconds": 0.0004674000000000067,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_weight_and_eta_units_affect_uncertainty",
+      "status": "PASS",
+      "elapsed_seconds": 0.0005393000000000203,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_coupling_diagonal",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002452000000000565,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_depth_curvature_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 8.9600000000023e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.CovarianceTests.test_zero_pose_has_exact_conditional_variance",
+      "status": "PASS",
+      "elapsed_seconds": 0.00021079999999995547,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_curvature_can_decrease_with_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.00023399999999995647,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0011019999999999364,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.001035500000000078,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010339999999999794,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed43_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010280000000000289,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010310999999999515,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010208999999999913,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010432000000000219,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed44_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010539999999999994,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho0_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010495000000000365,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho0_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010358000000000311,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho1_eta0_001",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010558000000000511,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_endpoint_seed45_rho1_eta0_1",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010352000000000139,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_eta_is_replaced_not_added",
+      "status": "PASS",
+      "elapsed_seconds": 0.00017659999999997122,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_frame_weights_broadcast_only_by_actual_frame_ID",
+      "status": "PASS",
+      "elapsed_seconds": 0.0003486999999999796,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_gamma_zero_is_not_D0",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002078999999999276,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_intermediate_rho_not_linear_pose_interpolation",
+      "status": "PASS",
+      "elapsed_seconds": 0.0008310000000000262,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.EndpointTests.test_zero_or_negative_mono_never_activates_prior",
+      "status": "PASS",
+      "elapsed_seconds": 0.00023260000000002723,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_duplicate_rows_accumulate_and_K_not_P",
+      "status": "PASS",
+      "elapsed_seconds": 0.000132000000000021,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_exclusive_t1_is_fail_closed",
+      "status": "PASS",
+      "elapsed_seconds": 5.2900000000022374e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_missing_source_ID_stops",
+      "status": "PASS",
+      "elapsed_seconds": 4.7299999999972364e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_no_E_reconstruction_from_pose_Schur",
+      "status": "PASS",
+      "elapsed_seconds": 0.0005667999999999784,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_six_DOF_exclusive_boundary_with_realistic_ID_range",
+      "status": "PASS",
+      "elapsed_seconds": 9.559999999997348e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.IndexTests.test_six_DOF_repeated_ID_aggregation_and_permutation",
+      "status": "PASS",
+      "elapsed_seconds": 0.0010601000000000083,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00018689999999998985,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00015540000000002774,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_A_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014659999999999673,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001888000000001,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014630000000004362,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_Cg_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014259999999999273,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.000138400000000094,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00013759999999995998,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_E_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001887000000000416,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_asymmetric_A",
+      "status": "PASS",
+      "elapsed_seconds": 0.00015819999999999723,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_nan_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001567000000000096,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_ninf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.000152000000000041,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_eta_pinf_rejected",
+      "status": "PASS",
+      "elapsed_seconds": 0.00016819999999995172,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_inconsistent_indefinite_geometry",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014690000000006087,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_block_sizes",
+      "status": "PASS",
+      "elapsed_seconds": 0.00035200000000001896,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_covariance_indices",
+      "status": "PASS",
+      "elapsed_seconds": 0.00030520000000000547,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.0002910999999999886,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_sigmoid_parameters",
+      "status": "PASS",
+      "elapsed_seconds": 8.1600000000015e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_invalid_variance_not_clamped",
+      "status": "PASS",
+      "elapsed_seconds": 3.700000000006476e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_negative_eta",
+      "status": "PASS",
+      "elapsed_seconds": 0.00016680000000002249,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_nonfinite_prior_is_not_zero_times_nan_fixed",
+      "status": "PASS",
+      "elapsed_seconds": 0.0001295000000000046,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.InvalidInputTests.test_wrong_shape",
+      "status": "PASS",
+      "elapsed_seconds": 0.000145600000000079,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_disparity_sign_invalid_not_abs_repaired",
+      "status": "PASS",
+      "elapsed_seconds": 0.00016369999999998885,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_empty_frame_no_fallback",
+      "status": "PASS",
+      "elapsed_seconds": 0.000105600000000039,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_even_median_is_explicit_midpoint",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014260000000010375,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_high_uncertainty_can_weight_an_inaccurate_prior",
+      "status": "PASS",
+      "elapsed_seconds": 0.0007939999999999614,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_insufficient_support_returns_none",
+      "status": "PASS",
+      "elapsed_seconds": 9.430000000010264e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_no_prior_truth_claim_for_high_rho",
+      "status": "PASS",
+      "elapsed_seconds": 0.000700299999999987,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_observed_zero_Cg_included",
+      "status": "PASS",
+      "elapsed_seconds": 0.00015030000000004762,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_outlier_robustness_has_majority_limit",
+      "status": "PASS",
+      "elapsed_seconds": 0.00024210000000002285,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_sigmoid_monotonic_and_half_at_tau",
+      "status": "PASS",
+      "elapsed_seconds": 9.08000000000575e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_sigmoid_overflow_safe",
+      "status": "PASS",
+      "elapsed_seconds": 7.380000000001274e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_uncertainty_scalar_not_native_U_state",
+      "status": "PASS",
+      "elapsed_seconds": 7.16000000000605e-05,
+      "detail": null
+    },
+    {
+      "id": "test_cadp.UncertaintyTests.test_unobserved_count_is_reported",
+      "status": "PASS",
+      "elapsed_seconds": 0.00014060000000004624,
+      "detail": null
+    }
+  ],
+  "seed_scope": "Synthetic RNG seeds 43/44/45; no training or model RNG",
+  "torch_imported": false
+}

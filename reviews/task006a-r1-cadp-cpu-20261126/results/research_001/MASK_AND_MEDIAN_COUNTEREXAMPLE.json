@@ -1,0 +1,16 @@
+{
+  "all_observed_weak_pixels_retained": {
+    "frame_id": 0,
+    "valid_pixels": 5,
+    "total_pixels": 6,
+    "nonpositive_or_nonfinite_disparity": 1,
+    "unsupported_pixels": 0,
+    "weak_curvature_pixels_included": 3,
+    "uncertainty": 9999.99000001,
+    "rho": 1.0,
+    "status": "OK_SYNTHETIC_DOMAIN"
+  },
+  "incorrect_Cg_positive_only_median": 0.9999990000010001,
+  "conclusion": "Filtering by Cg>0 can hide a majority of weak observations; missing support must be reported",
+  "median_convention": "midpoint average on even sample count; differs from Torch lower median"
+}

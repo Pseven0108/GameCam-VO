@@ -1,0 +1,31 @@
+{
+  "final_result_directory": "results/research_003",
+  "final_test_count": 97,
+  "alpha": 0.01,
+  "lm": 0.0001,
+  "ep": 0.1,
+  "condition_limit_policy": 1000000000000.0,
+  "oracle_atol": 2e-11,
+  "oracle_rtol": 2e-11,
+  "demo_k": 2.0,
+  "demo_tau": 2.0,
+  "demo_epsilon": 1e-06,
+  "min_valid_demo": 1,
+  "median": "NumPy midpoint on even counts",
+  "rng": "NumPy default_rng PCG64",
+  "synth_seeds": [
+    43,
+    44,
+    45,
+    1729,
+    2026,
+    20261126
+  ],
+  "unit_test_report": "results/research_003/UNIT_TEST_REPORT.json",
+  "execution_receipt": "logs/RESEARCH_EXECUTION_RECEIPT_003.json",
+  "large_input_recipe": "src/synthetic.py::large_fixture(seed=20261126,npose=72,ndepth=54000)",
+  "large_array_hashes": "results/research_003/DIMENSION_MATCHED_INPUT_RECEIPT.json",
+  "real_data_used": false,
+  "all_new_research_artifacts_independent": true,
+  "metadata_exception": "docs/TASK006A_PROGRESS.md only; entire preimage and postimage included"
+}

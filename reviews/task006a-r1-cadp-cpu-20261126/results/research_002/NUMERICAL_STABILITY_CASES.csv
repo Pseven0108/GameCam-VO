@@ -1,0 +1,18 @@
+﻿case,expected,actual,pass,reason,condition,lm,ep,max_condition_policy,eta,median_variance,frame_id,valid_pixels,total_pixels,nonpositive_or_nonfinite_disparity,unsupported_pixels,weak_curvature_pixels_included,uncertainty,rho,status
+gauge_without_damping,REJECT,REJECT,True,Damped Schur is not SPD,,0.0,0.0,1000000000000.0,,,,,,,,,,,
+gauge_with_native_ep,ACCEPT,ACCEPT,True,finite SPD factor,1.0,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+condition_1e10,ACCEPT,ACCEPT,True,finite SPD factor,10000000000.0,0.0,0.0,1000000000000.0,,,,,,,,,,,
+condition_1e14,REJECT,REJECT,True,Damped Schur too ill-conditioned: 1e+14,,0.0,0.0,1000000000000.0,,,,,,,,,,,
+condition_regularized,ACCEPT,ACCEPT,True,finite SPD factor,11.0009999999989,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+indefinite_schur,REJECT,REJECT,True,Inconsistent geometry: undamped Schur is indefinite,,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+zero_depth_C,REJECT,REJECT,True,"Require C>0, lm/ep>=0, max_condition>=1",,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+negative_depth_C,REJECT,REJECT,True,"Require C>0, lm/ep>=0, max_condition>=1",,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+NaN_in_E,REJECT,REJECT,True,E: non-finite input,,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+Inf_in_A,REJECT,REJECT,True,A: non-finite input,,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+tiny_positive_C,ACCEPT,ACCEPT,True,finite SPD factor,1.0,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+reciprocal_overflow_C,REJECT,REJECT,True,Schur arithmetic overflow,,0.0001,0.1,1000000000000.0,,,,,,,,,,,
+zero_geometry_eta_sensitivity,ACCEPT,ACCEPT,True,"regularizer-dominated finite uncertainty, not observed metric certainty",,,,,1e-09,999999999.9999999,0,9,9,0,0,9,31622.744978938816,1.0,OK_SYNTHETIC_DOMAIN
+zero_geometry_eta_sensitivity,ACCEPT,ACCEPT,True,"regularizer-dominated finite uncertainty, not observed metric certainty",,,,,1e-06,1000000.0,0,9,9,0,0,9,999.9990000010001,1.0,OK_SYNTHETIC_DOMAIN
+zero_geometry_eta_sensitivity,ACCEPT,ACCEPT,True,"regularizer-dominated finite uncertainty, not observed metric certainty",,,,,0.001,1000.0,0,9,9,0,0,9,31.622744978938815,1.0,OK_SYNTHETIC_DOMAIN
+zero_geometry_eta_sensitivity,ACCEPT,ACCEPT,True,"regularizer-dominated finite uncertainty, not observed metric certainty",,,,,0.1,10.0,0,9,9,0,0,9,3.1622744978938817,0.9108898712551183,OK_SYNTHETIC_DOMAIN
+zero_geometry_eta_sensitivity,ACCEPT,ACCEPT,True,"regularizer-dominated finite uncertainty, not observed metric certainty",,,,,100.0,0.01,0,9,9,0,0,9,0.09999990000010002,0.021881266655638977,OK_SYNTHETIC_DOMAIN

@@ -1,0 +1,57 @@
+{
+  "unit_tests": {
+    "tests_run": 87,
+    "passed": 87,
+    "failures": 0,
+    "errors": 0,
+    "success": true,
+    "torch_imported": false
+  },
+  "covariance": {
+    "systems": 24,
+    "block_comparisons": 96,
+    "all_pass": true,
+    "max_abs_block_vs_joint_inverse": 7.105427357601002e-15,
+    "max_abs_full_vs_joint_inverse": 7.105427357601002e-15,
+    "max_abs_sparse_vs_joint_inverse": 3.552713678800501e-14
+  },
+  "endpoints": {
+    "rho_configurations": 45,
+    "endpoint_configurations": 18,
+    "all_CPU_endpoints_exact": true,
+    "joint_solve_all_pass": true,
+    "GPU_equivalence_tested": false
+  },
+  "uncertainty": {
+    "frame_records": 45,
+    "sensitivity_records": 36,
+    "geometry_ordering_checks": 9,
+    "all_ordering_pass": true,
+    "k_tau_calibrated": false,
+    "proves_Metric3D_accuracy": false
+  },
+  "stability": {
+    "cases": 17,
+    "all_expected_outcomes": true,
+    "no_jitter": true,
+    "no_pseudoinverse": true,
+    "condition_limit_is_prototype_policy": true
+  },
+  "dimension_matched_blocks": {
+    "block_comparisons": 4,
+    "all_pass": true,
+    "max_abs_error": 2.842170943040401e-14,
+    "CPU_seconds_by_block": {
+      "64": 0.03280530000000004,
+      "256": 0.025221200000000055,
+      "1024": 0.03815219999999986,
+      "4096": 0.04100519999999985
+    },
+    "real_time_integration_tested": false,
+    "online_overhead_tested": false
+  },
+  "success": true,
+  "elapsed_seconds": 0.773924,
+  "torch_imported": false,
+  "model_imported": false
+}

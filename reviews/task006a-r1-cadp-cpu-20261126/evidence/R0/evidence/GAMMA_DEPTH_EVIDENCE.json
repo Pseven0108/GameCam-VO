@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\configs\\droid_w.yaml",
+      "sha256": "4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d",
+      "gamma_depth_occurrences": [
+        "0.001 "
+      ],
+      "buffer_occurrences": [
+        "350     "
+      ],
+      "inherit_from": []
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\configs\\Dynamic\\YouTube\\youtube.yaml",
+      "sha256": "191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88",
+      "gamma_depth_occurrences": [
+        "0.01"
+      ],
+      "buffer_occurrences": [
+        "500     "
+      ],
+      "inherit_from": [
+        "./configs/droid_w.yaml"
+      ]
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_SLAM_TO_DROID_W_SOURCE_DIFF_EVIDENCE_MAPPING_R1\\sources\\DROID-W\\configs\\Dynamic\\DROIDW\\droidw.yaml",
+      "sha256": "d382b598c8e66d958f127210b6f459053bfd252d86e64043927f4c1953644dcc",
+      "gamma_depth_occurrences": [
+        "0.01"
+      ],
+      "buffer_occurrences": [
+        "560"
+      ],
+      "inherit_from": [
+        "./configs/droid_w.yaml"
+      ]
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\release\\candidates\\r2_sealed_config.yaml",
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "gamma_depth_occurrences": [
+        "0.01"
+      ],
+      "buffer_occurrences": [
+        "500"
+      ],
+      "inherit_from": [
+        "./configs/droid_w.yaml"
+      ]
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_MATCHED_DUAL_BASELINE_R2\\wild_reference\\val_007_full_00001-00487\\native_config.yaml",
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "gamma_depth_occurrences": [
+        "0.01"
+      ],
+      "buffer_occurrences": [
+        "500"
+      ],
+      "inherit_from": [
+        "./configs/droid_w.yaml"
+      ]
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\experiments\\DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z\\results\\seed44\\E0\\attempt_001_59b50d626d66\\native_config.yaml",
+      "sha256": "08bd82badd0d6f2a8ec876b8e5fba135c0a5f9fe1fe1f5991d9ee2e53023abf6",
+      "gamma_depth_occurrences": [
+        "0.01"
+      ],
+      "buffer_occurrences": [
+        "500"
+      ],
+      "inherit_from": [
+        "./configs/droid_w.yaml"
+      ]
+    }
+  ],
+  "R3_actual_call_gamma_depth": 0.01,
+  "R3_actual_scalars": {
+    "t0": 52,
+    "t1": 64,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "enable_update_uncer": true,
+    "enable_udba": true,
+    "enable_affine_transform": true,
+    "enable_bidirectional_uncer": false,
+    "debug": false
+  },
+  "sealed_config_hash_matches_runtime_lock": true,
+  "effective_gamma_depth": 0.01,
+  "public_base_default": 0.001,
+  "resolution": "Base default differs from inherited/explicit runtime configuration; keep sealed actual gamma=0.01."
+}

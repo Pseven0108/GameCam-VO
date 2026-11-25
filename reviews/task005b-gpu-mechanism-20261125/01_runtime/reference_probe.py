@@ -1,0 +1,4 @@
+import pathlib,json,subprocess
+r=pathlib.Path('/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE');names=['native_control/install.py','native_control/runtime.py','native_control/snapshot.py','native_control/binding.py','native_control/dataset.py','native_control/file_backed.py','native_control/stages.py','native_control/native_driver.py','src/depth_video.py','src/lib/droid_kernels.cu','src/tracker.py','src/factor_graph.py','task004_controls.py','task003_observer.py']
+out={'files':{n:(r/'source_candidate'/n).read_text() for n in names},'schedule_paths':[{'path':str(p),'bytes':p.stat().st_size,'symlink':p.is_symlink()} for p in r.rglob('*') if p.is_file() and ('schedule' in p.name.lower() or p.name.endswith('.tgz'))], 'env_dirs':[str(p) for p in pathlib.Path('/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin').glob('*nvcc*')]}
+print(json.dumps(out))

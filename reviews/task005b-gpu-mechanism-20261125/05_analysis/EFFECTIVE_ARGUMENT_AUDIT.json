@@ -1,0 +1,533 @@
+{
+  "states": [
+    {
+      "state": {
+        "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+        "D_origin": 0,
+        "arm": "D0_S1",
+        "artifact_kind": "TASK005B_REAL_BA_INPUT",
+        "freshly_recaptured": true,
+        "full_input_context_sha256": "0ef0579faa4c068076e66a406945d1b1d975961eb7699bd78c6947f0b18d4784",
+        "historical_bitwise_recovery_claimed": false,
+        "native_ba_id": 25,
+        "observer_stage": "frontend_local_predecision",
+        "rgb": 19,
+        "schedule": "S1",
+        "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+        "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+      },
+      "recorded_hashes_are_pre_override_clone_template": true,
+      "template_selected_prior_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+      "all_nonprior_tensor_clones_value_layout_alias_verified_in_runtime": true,
+      "effective_arguments_reconstructed_from_frozen_runner_and_input_bytes": [
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        }
+      ],
+      "original_D0_and_candidate_D_prior_arguments_byte_equal": false,
+      "endpoint_numerical_equivalence_validated_separately": true
+    },
+    {
+      "state": {
+        "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+        "D_origin": 1,
+        "arm": "D1_S1",
+        "artifact_kind": "TASK005B_REAL_BA_INPUT",
+        "freshly_recaptured": true,
+        "full_input_context_sha256": "0ef0579faa4c068076e66a406945d1b1d975961eb7699bd78c6947f0b18d4784",
+        "historical_bitwise_recovery_claimed": false,
+        "native_ba_id": 25,
+        "observer_stage": "frontend_local_predecision",
+        "rgb": 19,
+        "schedule": "S1",
+        "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+        "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+      },
+      "recorded_hashes_are_pre_override_clone_template": true,
+      "template_selected_prior_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+      "all_nonprior_tensor_clones_value_layout_alias_verified_in_runtime": true,
+      "effective_arguments_reconstructed_from_frozen_runner_and_input_bytes": [
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        }
+      ],
+      "original_D0_and_candidate_D_prior_arguments_byte_equal": false,
+      "endpoint_numerical_equivalence_validated_separately": true
+    },
+    {
+      "state": {
+        "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+        "D_origin": 1,
+        "arm": "D1_S1",
+        "artifact_kind": "TASK005B_REAL_BA_INPUT",
+        "freshly_recaptured": true,
+        "full_input_context_sha256": "d0727c1897eb9c3c3d67f780524d15265490d145c2991edd0e3351ca1ced1a13",
+        "historical_bitwise_recovery_claimed": false,
+        "native_ba_id": 394,
+        "observer_stage": "frontend_local_predecision",
+        "rgb": 233,
+        "schedule": "S1",
+        "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+        "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+      },
+      "recorded_hashes_are_pre_override_clone_template": true,
+      "template_selected_prior_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+      "all_nonprior_tensor_clones_value_layout_alias_verified_in_runtime": true,
+      "effective_arguments_reconstructed_from_frozen_runner_and_input_bytes": [
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        }
+      ],
+      "original_D0_and_candidate_D_prior_arguments_byte_equal": false,
+      "endpoint_numerical_equivalence_validated_separately": true
+    },
+    {
+      "state": {
+        "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+        "D_origin": 1,
+        "arm": "D1_S1",
+        "artifact_kind": "TASK005B_REAL_BA_INPUT",
+        "freshly_recaptured": true,
+        "full_input_context_sha256": "893b3a4d94e5ad6739eda3cd1e626242a573deeaaa2490c811fe58370b4edeb1",
+        "historical_bitwise_recovery_claimed": false,
+        "native_ba_id": 716,
+        "observer_stage": "frontend_local_predecision",
+        "rgb": 401,
+        "schedule": "S1",
+        "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+        "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+      },
+      "recorded_hashes_are_pre_override_clone_template": true,
+      "template_selected_prior_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+      "all_nonprior_tensor_clones_value_layout_alias_verified_in_runtime": true,
+      "effective_arguments_reconstructed_from_frozen_runner_and_input_bytes": [
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "FROZEN",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "FROZEN",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono"
+        },
+        {
+          "kind": "original_installed",
+          "U_mode": "NATIVE_UPDATE",
+          "D": 0,
+          "effective_prior_argument_sha256": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+          "effective_prior": "zeros_like_selected_prior"
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "A",
+          "C": 1,
+          "G": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "B",
+          "C": 1,
+          "G": 0,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "C",
+          "C": 0,
+          "G": 1,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": false
+        },
+        {
+          "kind": "independent_candidate",
+          "U_mode": "NATIVE_UPDATE",
+          "cell": "D",
+          "C": 0,
+          "G": 0,
+          "effective_prior_argument_sha256": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+          "effective_prior": "cached_mono",
+          "mask_disabled_internally": true
+        }
+      ],
+      "original_D0_and_candidate_D_prior_arguments_byte_equal": false,
+      "endpoint_numerical_equivalence_validated_separately": true
+    }
+  ],
+  "note": "Hash receipts certify clone templates. Prior override is intentional and is not hidden by calling all effective arguments identical."
+}

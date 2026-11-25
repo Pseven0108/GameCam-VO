@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\experiments\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\01_runtime\resume_serial02.py", line 78, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\aaa\GameCam-VO\experiments\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\01_runtime\resume_serial02.py", line 65, in main
+    c.wait_finish(arm,state)
+  File "D:\aaa\GameCam-VO\experiments\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\01_runtime\continue_serial.py", line 43, in wait_finish
+    if 'ENDPOINT_FAILURE.json' in s:raise RuntimeError('Native endpoint mismatch; STOP without numerical retry')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Native endpoint mismatch; STOP without numerical retry

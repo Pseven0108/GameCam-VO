@@ -1,0 +1,72 @@
+{
+  "state": "D1_S1_RGB233",
+  "state_sha256": "1152f539f85ca6204475403053656b9133513c354c59fd50df6c5798366fc42a",
+  "native_controls": 4,
+  "candidate_native_calls": 8,
+  "endpoint_checks": [
+    {
+      "tag": "FROZEN_A",
+      "PASS": true,
+      "max_abs": {
+        "poses": 0.0,
+        "disps": 0.0,
+        "uncertainties": 0.0,
+        "temp_y_cdot": 0.0,
+        "affine_weights": 0.0,
+        "dx_last": 0.0,
+        "dz_last": 0.0
+      },
+      "atol": 1e-06,
+      "rtol": 1e-05
+    },
+    {
+      "tag": "FROZEN_D",
+      "PASS": true,
+      "max_abs": {
+        "poses": 0.0,
+        "disps": 0.0,
+        "uncertainties": 0.0,
+        "temp_y_cdot": 0.0,
+        "affine_weights": 0.0,
+        "dx_last": 0.0,
+        "dz_last": 0.0
+      },
+      "atol": 1e-06,
+      "rtol": 1e-05
+    },
+    {
+      "tag": "NATIVE_UPDATE_A",
+      "PASS": true,
+      "max_abs": {
+        "poses": 1.862645149230957e-09,
+        "disps": 1.695007085800171e-07,
+        "uncertainties": 1.1920928955078125e-07,
+        "temp_y_cdot": 2.384185791015625e-07,
+        "affine_weights": 1.862645149230957e-09,
+        "dx_last": 7.450580596923828e-09,
+        "dz_last": 1.695007085800171e-07
+      },
+      "atol": 1e-06,
+      "rtol": 1e-05
+    },
+    {
+      "tag": "NATIVE_UPDATE_D",
+      "PASS": true,
+      "max_abs": {
+        "poses": 9.313225746154785e-10,
+        "disps": 1.7881393432617188e-07,
+        "uncertainties": 2.384185791015625e-07,
+        "temp_y_cdot": 1.1920928955078125e-07,
+        "affine_weights": 1.862645149230957e-09,
+        "dx_last": 2.9802322387695312e-08,
+        "dz_last": 2.0116567611694336e-07
+      },
+      "atol": 1e-06,
+      "rtol": 1e-05
+    }
+  ],
+  "total_native_calls": 12,
+  "inner_iterations_per_call": 2,
+  "prefix_or_SLAM_rerun": false,
+  "PASS": true
+}

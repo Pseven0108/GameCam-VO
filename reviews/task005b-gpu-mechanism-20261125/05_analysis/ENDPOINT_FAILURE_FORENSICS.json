@@ -1,0 +1,135 @@
+{
+  "state": "D0_S1_RGB233",
+  "tag": "NATIVE_UPDATE_D",
+  "failure_reproduced_on_CPU": true,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "fields": [
+    {
+      "field": "poses",
+      "elements": 3500,
+      "violations": 0,
+      "max_absolute_difference": 1.430511474609375e-06,
+      "max_error_to_allowed_tolerance": 0.24041924123135017,
+      "worst_index": [
+        62,
+        0
+      ],
+      "worst_candidate": -0.009239841252565384,
+      "worst_original": -0.009239578619599342,
+      "worst_absolute_difference": 2.6263296604156494e-07,
+      "worst_allowed_tolerance": 1.0923957861959933e-06,
+      "runtime_allclose_reproduced": true
+    },
+    {
+      "field": "disps",
+      "elements": 1800000,
+      "violations": 0,
+      "max_absolute_difference": 2.86102294921875e-06,
+      "max_error_to_allowed_tolerance": 0.6446921208307761,
+      "worst_index": [
+        62,
+        0,
+        50
+      ],
+      "worst_candidate": -0.010944604873657227,
+      "worst_original": -0.010945320129394531,
+      "worst_absolute_difference": 7.152557373046875e-07,
+      "worst_allowed_tolerance": 1.1094532012939453e-06,
+      "runtime_allclose_reproduced": true
+    },
+    {
+      "field": "uncertainties",
+      "elements": 1800000,
+      "violations": 0,
+      "max_absolute_difference": 2.384185791015625e-07,
+      "max_error_to_allowed_tolerance": 0.021922039833530166,
+      "worst_index": [
+        54,
+        13,
+        72
+      ],
+      "worst_candidate": 0.44378751516342163,
+      "worst_original": 0.4437873959541321,
+      "worst_absolute_difference": 1.1920928955078125e-07,
+      "worst_allowed_tolerance": 5.437873959541321e-06,
+      "runtime_allclose_reproduced": true
+    },
+    {
+      "field": "temp_y_cdot",
+      "elements": 1800000,
+      "violations": 0,
+      "max_absolute_difference": 2.384185791015625e-07,
+      "max_error_to_allowed_tolerance": 0.08845717466144572,
+      "worst_index": [
+        57,
+        36,
+        19
+      ],
+      "worst_candidate": -0.0013370339293032885,
+      "worst_original": -0.0013369442895054817,
+      "worst_absolute_difference": 8.963979780673981e-08,
+      "worst_allowed_tolerance": 1.0133694428950549e-06,
+      "runtime_allclose_reproduced": true
+    },
+    {
+      "field": "affine_weights",
+      "elements": 385,
+      "violations": 0,
+      "max_absolute_difference": 9.313225746154785e-10,
+      "max_error_to_allowed_tolerance": 0.0008556807085759146,
+      "worst_index": [
+        244
+      ],
+      "worst_candidate": 0.008839963003993034,
+      "worst_original": 0.008839963935315609,
+      "worst_absolute_difference": 9.313225746154785e-10,
+      "worst_allowed_tolerance": 1.088399639353156e-06,
+      "runtime_allclose_reproduced": true
+    },
+    {
+      "field": "dx_last",
+      "elements": 72,
+      "violations": 3,
+      "max_absolute_difference": 1.1934898793697357e-06,
+      "max_error_to_allowed_tolerance": 1.1207189682150624,
+      "worst_index": [
+        10,
+        2
+      ],
+      "worst_candidate": -0.006492041051387787,
+      "worst_original": -0.006493234541267157,
+      "worst_absolute_difference": 1.1934898793697357e-06,
+      "worst_allowed_tolerance": 1.0649323454126716e-06,
+      "runtime_allclose_reproduced": false
+    },
+    {
+      "field": "dz_last",
+      "elements": 54000,
+      "violations": 2657,
+      "max_absolute_difference": 3.032386302947998e-06,
+      "max_error_to_allowed_tolerance": 2.233049825437228,
+      "worst_index": [
+        6,
+        3548
+      ],
+      "worst_candidate": 0.03579876199364662,
+      "worst_original": 0.035795729607343674,
+      "worst_absolute_difference": 3.032386302947998e-06,
+      "worst_allowed_tolerance": 1.3579572960734368e-06,
+      "runtime_allclose_reproduced": false
+    }
+  ],
+  "total_elements": 5457957,
+  "total_violations": 2660,
+  "candidate_first_iteration_dx_equals_own_frozen_D": true,
+  "candidate_first_iteration_dx_difference_max": 0.0,
+  "all_saved_arrays_finite": true,
+  "partial_original_calls": 4,
+  "partial_candidate_calls_including_failed_endpoint": 6,
+  "partial_total_native_calls": 10,
+  "GPU_replays_for_forensics": 0,
+  "cause": "NOT_ESTABLISHED",
+  "floating_point_or_U_affine_feedback_hypothesis": "PLAUSIBLE_NOT_PROVEN",
+  "next_minimal_GPU_request_not_executed": "Repeat installed-original versus itself from the identical saved state, and compare candidate, to estimate native stochastic numerical variability before changing tolerances or code."
+}

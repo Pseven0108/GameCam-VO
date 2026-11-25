@@ -1,3 +1,9 @@
+# Latest GPU partial-results review
+
+[task005b-gpu-mechanism-20261125](reviews/task005b-gpu-mechanism-20261125/FINAL_REVIEW.md) · [ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-gpu-mechanism-20261125/GAMECAM_TASK005B_GPU_MECHANISM_REVIEW_20261125.zip) · [all native data assets](https://github.com/Pseven0108/GameCam-VO/releases/tag/task005b-gpu-mechanism-20261125).
+
+---
+
 # 最新准备评审
 
 [task005b-depth-path-preparation-20261125](reviews/task005b-depth-path-preparation-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-depth-path-preparation-20261125/GAMECAM_TASK005B_DEPTH_PATH_PREPARATION_REVIEW_20261125.zip)。

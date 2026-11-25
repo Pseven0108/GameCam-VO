@@ -1,0 +1,5 @@
+{
+  "error": "Native endpoint mismatch; STOP without numerical retry",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\aaa\\GameCam-VO\\experiments\\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\\01_runtime\\resume_serial02.py\", line 65, in main\n    c.wait_finish(arm,state)\n  File \"D:\\aaa\\GameCam-VO\\experiments\\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\\01_runtime\\continue_serial.py\", line 43, in wait_finish\n    if 'ENDPOINT_FAILURE.json' in s:raise RuntimeError('Native endpoint mismatch; STOP without numerical retry')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Native endpoint mismatch; STOP without numerical retry\n",
+  "no_next_run_started": true
+}

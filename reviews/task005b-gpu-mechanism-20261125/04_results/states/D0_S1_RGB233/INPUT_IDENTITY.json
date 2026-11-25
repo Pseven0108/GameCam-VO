@@ -1,0 +1,319 @@
+{
+  "state_sha256": "90f436de0f6139dc013fd545aeb047fe0ed28b649a6d2e811f8e15fbfa35b791",
+  "provenance": {
+    "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+    "D_origin": 0,
+    "arm": "D0_S1",
+    "artifact_kind": "TASK005B_REAL_BA_INPUT",
+    "freshly_recaptured": true,
+    "full_input_context_sha256": "d0727c1897eb9c3c3d67f780524d15265490d145c2991edd0e3351ca1ced1a13",
+    "historical_bitwise_recovery_claimed": false,
+    "native_ba_id": 394,
+    "observer_stage": "frontend_local_predecision",
+    "rgb": 233,
+    "schedule": "S1",
+    "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+  },
+  "tensor_value_sha256": {
+    "poses": "d4c29df95079c5ae1903416454e8f4301dcdebe932a1e723a99749ae78a4757a",
+    "disps": "ca435d0fb5797f73efcccddb9d7f450d5cf819befc47fcdd0d94eb0bb0d47ace",
+    "intrinsics": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+    "selected_prior": "4f8e006788058cdc3574f711d9adc4a35932d34b9fb3e2a567e6218caa000a8c",
+    "targets": "8a857e95db191c4961badaf14ea0c69a2b8ffd6878800802afc9ee425e6bfb70",
+    "weights": "024bac98f03019ed889779770a7c660eea3de3d73a8d6b92f3344654b946bf30",
+    "uncertainties": "685ec5fab70e32f4a38bdc211c724d6582fcfc9fad232aa8d05d9039d8ab482a",
+    "temp_y_cdot": "8c0f28af272eb0f6292ff7b7a3d779bcf3adc09af6404454085b328a972edef6",
+    "dino_feats_resize": "5797aeaeceaeefb67c9c6be270ce7bc3c9015a26f0421ee50fe5676599092ab6",
+    "affine_weights": "352c4709e24085445a11a45ae9dfa50574af7acc45c807ad90c55a0ad7cf6934",
+    "eta": "45fb9686bb35092db2e433da1a5e290938ff4c4d6a4278f337f939ceb049ce7d",
+    "ii": "d64884ee0acea4f2f2570801bbe6cea524643ac9a2df662378e6fbc88786dc26",
+    "jj": "c54dc8bdd603237212aabfbf8ecd08f2e0bd73960ef789fc55e1f1dc5571e09d",
+    "cached_mono": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e"
+  },
+  "tensor_metadata": {
+    "poses": {
+      "shape": [
+        500,
+        7
+      ],
+      "stride": [
+        7,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "disps": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "intrinsics": {
+      "shape": [
+        4
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "selected_prior": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "targets": {
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "weights": {
+      "shape": [
+        94,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "uncertainties": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "temp_y_cdot": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "dino_feats_resize": {
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "affine_weights": {
+      "shape": [
+        385
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "eta": {
+      "shape": [
+        15,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "ii": {
+      "shape": [
+        94
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "jj": {
+      "shape": [
+        94
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "cached_mono": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  "scalars": {
+    "t0": 52,
+    "t1": 64,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "enable_update_uncer": true,
+    "enable_udba": true,
+    "enable_affine_transform": true,
+    "enable_bidirectional_uncer": false,
+    "debug": false
+  },
+  "slot_rgb_tokens": [
+    "kf:001",
+    "kf:004",
+    "kf:006",
+    "kf:008",
+    "kf:010",
+    "kf:011",
+    "kf:012",
+    "kf:013",
+    "kf:014",
+    "kf:015",
+    "kf:016",
+    "kf:018",
+    "kf:019",
+    "kf:020",
+    "kf:023",
+    "kf:028",
+    "kf:032",
+    "kf:036",
+    "kf:039",
+    "kf:043",
+    "kf:048",
+    "kf:053",
+    "kf:056",
+    "kf:062",
+    "kf:070",
+    "kf:077",
+    "kf:082",
+    "kf:087",
+    "kf:093",
+    "kf:099",
+    "kf:102",
+    "kf:114",
+    "kf:117",
+    "kf:125",
+    "kf:130",
+    "kf:141",
+    "kf:142",
+    "kf:143",
+    "kf:145",
+    "kf:151",
+    "kf:156",
+    "kf:161",
+    "kf:163",
+    "kf:164",
+    "kf:166",
+    "kf:187",
+    "kf:190",
+    "kf:193",
+    "kf:194",
+    "kf:196",
+    "kf:199",
+    "kf:201",
+    "kf:205",
+    "kf:208",
+    "kf:213",
+    "kf:214",
+    "kf:215",
+    "kf:216",
+    "kf:221",
+    "kf:223",
+    "kf:225",
+    "kf:228",
+    "kf:230",
+    "kf:233"
+  ]
+}

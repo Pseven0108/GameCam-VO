@@ -1,0 +1,268 @@
+{
+  "state_sha256": "050706da83d7e8f9d5c8db138938fc6bc7875dcf31822852be6aaf4da0e94b33",
+  "provenance": {
+    "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+    "D_origin": 1,
+    "arm": "D1_S1",
+    "artifact_kind": "TASK005B_REAL_BA_INPUT",
+    "freshly_recaptured": true,
+    "full_input_context_sha256": "0ef0579faa4c068076e66a406945d1b1d975961eb7699bd78c6947f0b18d4784",
+    "historical_bitwise_recovery_claimed": false,
+    "native_ba_id": 25,
+    "observer_stage": "frontend_local_predecision",
+    "rgb": 19,
+    "schedule": "S1",
+    "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+  },
+  "tensor_value_sha256": {
+    "poses": "acee354ef34ed3f4e2ee1921705aabfe5708eb2a323d95fae5c4ffffebfa28e8",
+    "disps": "db8a7c83a92fd0e8cd4ac6b76e5064a857dad75915f08653b07d6b63b4f05b2b",
+    "intrinsics": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+    "selected_prior": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb",
+    "targets": "2fae16eff894affb1d76c131940c4bb95dce86969761cef5de5d77b6e1e85011",
+    "weights": "c04aed51f9b1de033cab634ab4125b85de963e4c7e446d3bdbc1385d987bbd3e",
+    "uncertainties": "e7ce4e5fe329c385fc98bbc0e7e17fbc328b107816f04fe1c03d15e82220aaab",
+    "temp_y_cdot": "33939146b2851d3adc1d605972278a545fbf71ca47b23a93edeed087b6729e12",
+    "dino_feats_resize": "3766f511a23886c6c7bb3eeb7a29b16806636dae44de102020f4af3bbab0693b",
+    "affine_weights": "f7c34e3d2dc26e8139d25a6abf23c617918284c8b400f578a86be0cbc6bf78c5",
+    "eta": "0bdbd4dabad983ff9d3b5ccce8ba2a05b9fd686b42a25fc71c90f029526a47dd",
+    "ii": "2f48eba04fcb6c367af7e4ccb8334c976585b50d08de9578231fdede2c87081c",
+    "jj": "f2b1588b8ba40e5fd28b8865c8be5c56b875dc104130a7b6bcf8df6b1b4a53b5",
+    "cached_mono": "18b6f6ac35d5cb50031b54ac77f8718ac4fc84244bb51f847eed0fff350cc8cb"
+  },
+  "tensor_metadata": {
+    "poses": {
+      "shape": [
+        500,
+        7
+      ],
+      "stride": [
+        7,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "disps": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "intrinsics": {
+      "shape": [
+        4
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "selected_prior": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "targets": {
+      "shape": [
+        43,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "weights": {
+      "shape": [
+        43,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "uncertainties": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "temp_y_cdot": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "dino_feats_resize": {
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "affine_weights": {
+      "shape": [
+        385
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "eta": {
+      "shape": [
+        8,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "ii": {
+      "shape": [
+        43
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "jj": {
+      "shape": [
+        43
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "cached_mono": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  "scalars": {
+    "t0": 8,
+    "t1": 13,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "enable_update_uncer": true,
+    "enable_udba": true,
+    "enable_affine_transform": true,
+    "enable_bidirectional_uncer": false,
+    "debug": false
+  },
+  "slot_rgb_tokens": [
+    "kf:001",
+    "kf:004",
+    "kf:006",
+    "kf:008",
+    "kf:010",
+    "kf:011",
+    "kf:012",
+    "kf:013",
+    "kf:014",
+    "kf:015",
+    "kf:016",
+    "kf:018",
+    "kf:019"
+  ]
+}

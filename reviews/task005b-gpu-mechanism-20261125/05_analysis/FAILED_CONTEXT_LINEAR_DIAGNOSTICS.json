@@ -1,0 +1,37 @@
+{
+  "state": "D0_S1_RGB233",
+  "candidate": "NATIVE_UPDATE_D_FAILED_ENDPOINT",
+  "GPU_calls": 0,
+  "two_native_internal_iterations_preserved": true,
+  "observations": [
+    {
+      "internal_iteration": 1,
+      "pose_system_size": 72,
+      "L_SPD": true,
+      "L_eigenvalue_min": 0.16420446805556288,
+      "L_eigenvalue_max": 43389.76728931504,
+      "L_condition_2": 264242.3059691377,
+      "native_dx_relative_linear_residual": 1.561647269761293e-08,
+      "native_vs_frozen_dx_norm": 0.0,
+      "native_vs_frozen_dz_norm": 0.0,
+      "native_vs_frozen_U_before_norm": 0.0,
+      "all_matrix_rhs_dx_finite": true
+    },
+    {
+      "internal_iteration": 2,
+      "pose_system_size": 72,
+      "L_SPD": true,
+      "L_eigenvalue_min": 0.16265977522420394,
+      "L_eigenvalue_max": 43379.572806517084,
+      "L_condition_2": 266689.00007235643,
+      "native_dx_relative_linear_residual": 1.0934004861692123e-07,
+      "native_vs_frozen_dx_norm": 0.0004412016292066198,
+      "native_vs_frozen_dz_norm": 0.2665433076998144,
+      "native_vs_frozen_U_before_norm": 0.5430458597107352,
+      "all_matrix_rhs_dx_finite": true
+    }
+  ],
+  "installed_reference_has_internal_system_trace": false,
+  "scope": "A well-conditioned or low-residual candidate system does not prove equivalence with the installed original. No original-vs-original replay was performed.",
+  "cause_established": false
+}

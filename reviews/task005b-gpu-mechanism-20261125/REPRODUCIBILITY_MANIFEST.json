@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "sealed_candidate_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+  "independent_extension_SHA256": "1edb9685e1569f2513a4dc895b2eddbe699e15d2d684079e4d9c2f77e9a4ad44",
+  "C0_digest": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+  "seed": 43,
+  "buffer": 500,
+  "resolution": [
+    640,
+    360
+  ],
+  "stride": 1,
+  "prefix_max_RGB": 401,
+  "native_internal_iterations": 2,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "CPU_numerical_analysis_tests": 10,
+  "CPU_native_algebra_tests": 6,
+  "CPU_static_contract_checks": 9,
+  "prior_CPU_preparation_tests_not_new": 38,
+  "executed_native_calls": 58,
+  "planned_native_calls": 144,
+  "postcall_clamp_executed_in_replays": false,
+  "prior_effective_argument_exception": "05_analysis/EFFECTIVE_ARGUMENT_AUDIT.json",
+  "no_full_completion_claim": true
+}

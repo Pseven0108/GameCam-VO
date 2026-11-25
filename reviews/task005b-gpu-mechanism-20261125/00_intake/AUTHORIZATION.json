@@ -1,0 +1,48 @@
+{
+  "task": "TASK005B_GPU_MECHANISM_ATTRIBUTION",
+  "date": "2026-11-25",
+  "endpoint": "sc01-ssh.gpuhome.cc:30601",
+  "approved": true,
+  "prefixes": [
+    "D1_S1",
+    "D0_S1",
+    "D1_S0",
+    "D0_S0"
+  ],
+  "C0_RGB": 18,
+  "stop_RGB": 401,
+  "capture_RGB": [
+    19,
+    233,
+    401
+  ],
+  "maximum_new_input_steps": 1532,
+  "native_inner_iterations": 2,
+  "U_modes": [
+    "FROZEN",
+    "NATIVE_UPDATE"
+  ],
+  "CG_cells": {
+    "A": [
+      1,
+      1
+    ],
+    "B": [
+      1,
+      0
+    ],
+    "C": [
+      0,
+      1
+    ],
+    "D": [
+      0,
+      0
+    ]
+  },
+  "maximum_native_replay_calls": 144,
+  "original_installed_extension_preserved": true,
+  "no_auto_retry": true,
+  "no_full487_run": true,
+  "no_TASK006": true
+}

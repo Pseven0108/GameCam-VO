@@ -1,0 +1,70 @@
+{
+  "states": [
+    {
+      "state": "D0_S1_RGB019",
+      "context_complete": true,
+      "native_trace_archive": "result_D0_S1_RGB019.tar",
+      "native_trace_bytes": 89282560,
+      "native_trace_sha256": "db033e81c896fd1cfd34f286c0a82e12b9041ddca5766f1b4d9d209306e6530f",
+      "release_asset": "result_D0_S1_RGB019.tar",
+      "reduced_systems": "05_analysis/reduced_native/D0_S1_RGB019_SYSTEMS.npz",
+      "reduced_systems_sha256": "6b5697d045835f5b2d965a9cf220afadc5fb81708ef4200b090563eb92e1bc19",
+      "contains_full_C0_or_DINO_features": false,
+      "failed_endpoint_arrays_included": false,
+      "reduced_only_not_full_native_trace": true
+    },
+    {
+      "state": "D1_S1_RGB019",
+      "context_complete": true,
+      "native_trace_archive": "result_D1_S1_RGB019.tar",
+      "native_trace_bytes": 89282560,
+      "native_trace_sha256": "59c2a76b06d04be4609eff878c1bc3caf32e01834b31108cc6fd8979e7d1c2dc",
+      "release_asset": "result_D1_S1_RGB019.tar",
+      "reduced_systems": "05_analysis/reduced_native/D1_S1_RGB019_SYSTEMS.npz",
+      "reduced_systems_sha256": "6329f0c3ca69b7e96bdd8c0adbac173dee09341e68b181a137d67ea2dc797f30",
+      "contains_full_C0_or_DINO_features": false,
+      "failed_endpoint_arrays_included": false,
+      "reduced_only_not_full_native_trace": true
+    },
+    {
+      "state": "D1_S1_RGB233",
+      "context_complete": true,
+      "native_trace_archive": "result_D1_S1_RGB233.tar",
+      "native_trace_bytes": 248391680,
+      "native_trace_sha256": "3cf0693f3515fc51c2063c3a765a42cb804dc4826343473223e3542e7aaff3f7",
+      "release_asset": "result_D1_S1_RGB233.tar",
+      "reduced_systems": "05_analysis/reduced_native/D1_S1_RGB233_SYSTEMS.npz",
+      "reduced_systems_sha256": "dbda1cb50a7c5fa2c05d78623353e3970c855bc0ec4a7c179b1052d6a4f44db5",
+      "contains_full_C0_or_DINO_features": false,
+      "failed_endpoint_arrays_included": false,
+      "reduced_only_not_full_native_trace": true
+    },
+    {
+      "state": "D1_S1_RGB401",
+      "context_complete": true,
+      "native_trace_archive": "result_D1_S1_RGB401.tar",
+      "native_trace_bytes": 288972800,
+      "native_trace_sha256": "39217f03c77a5f7c5e2de7fff79a6acb384ab4e3937c99d1bc57b9fd387bab56",
+      "release_asset": "result_D1_S1_RGB401.tar",
+      "reduced_systems": "05_analysis/reduced_native/D1_S1_RGB401_SYSTEMS.npz",
+      "reduced_systems_sha256": "9fc19c962ca41aff854224eb9fe0e5b58d63d9665f22aa9bc1a566e4326dcd0d",
+      "contains_full_C0_or_DINO_features": false,
+      "failed_endpoint_arrays_included": false,
+      "reduced_only_not_full_native_trace": true
+    },
+    {
+      "state": "D0_S1_RGB233",
+      "context_complete": false,
+      "native_trace_archive": "partial_D0_S1_RGB233.tar",
+      "native_trace_bytes": 175564800,
+      "native_trace_sha256": "0a5e635aa2f4bb57f57bb62ec34c00d6ec010a7cb6d2bc5e6788009503cbf16a",
+      "release_asset": "partial_D0_S1_RGB233.tar",
+      "reduced_systems": "05_analysis/reduced_native/D0_S1_RGB233_SYSTEMS.npz",
+      "reduced_systems_sha256": "83028716f0a39910837e15fd6d661fc5888e39b3769437dd65e4bd319be298e3",
+      "contains_full_C0_or_DINO_features": false,
+      "failed_endpoint_arrays_included": true,
+      "reduced_only_not_full_native_trace": true
+    }
+  ],
+  "scope": "Small candidate-native matrices, rhs and dx, including the failed endpoint without implying validation. Complete per-round arrays are separate immutable assets. COMMON_INPUTS exists only for complete contexts; the failed input snapshot is preserved locally."
+}

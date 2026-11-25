@@ -1,0 +1,366 @@
+{
+  "state_sha256": "a37675f25c4f0d9432cc1f1c55a7598dc4f87200efc3e690c26172cdaded2ff9",
+  "provenance": {
+    "C0_sha256": "18ab8ceff97339eded44af2e716cb6c43c8d5679a212a8183f84751fce9fad92",
+    "D_origin": 1,
+    "arm": "D1_S1",
+    "artifact_kind": "TASK005B_REAL_BA_INPUT",
+    "freshly_recaptured": true,
+    "full_input_context_sha256": "893b3a4d94e5ad6739eda3cd1e626242a573deeaaa2490c811fe58370b4edeb1",
+    "historical_bitwise_recovery_claimed": false,
+    "native_ba_id": 716,
+    "observer_stage": "frontend_local_predecision",
+    "rgb": 401,
+    "schedule": "S1",
+    "source_commit": "5d357c1d3079de134dd8b41a20a00632da37f0b0",
+    "source_schedule_sha256": "38ace9ee589b41ad9b581ea85a5dcc13858b30e0335ed6f0adaa29a680f110fc"
+  },
+  "tensor_value_sha256": {
+    "poses": "52a4b322daf6acaad6a4d20043ebacc5eb8e8a4907d7312a07a468b73cd2774a",
+    "disps": "1837dce5fe5ccdc0de311e89a22462aeaf60ca12b2df0a619a15eee988bc9799",
+    "intrinsics": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+    "selected_prior": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e",
+    "targets": "f5c08be397e3041a4a3277b52a2808bf9dfd971c8cba6a7f4bfd73e39b3ac58f",
+    "weights": "31d435c372750c3e5ac40dd56950f05322bdf4c5a54284ff89e180082bbf521e",
+    "uncertainties": "69a61ef096df8c7bdc3256a40089d051f962be869557039ffd886eae0c65b722",
+    "temp_y_cdot": "f4d16127097f20ea24ef64ec05b9288b0308c249232cdc689515fb173f708471",
+    "dino_feats_resize": "7531419dcc49ed4abdc0baa5f676e21f4657920034b11b06f1287d144021a3d0",
+    "affine_weights": "19d4e46d118b82fe03c6612fd9786a0173755f7605e9d2813c007d6092873522",
+    "eta": "86f5fe1c5eb32c3bb056aa58c9e3a462f266780610d228819461f21b35eec7b5",
+    "ii": "f7096770c98dca27f72e087b4e125beba0e58b81937aa00765cb34bd07e9864c",
+    "jj": "972d0652a4b57ee537275f1bb06079349f932f15479e134e98108cbf32146e75",
+    "cached_mono": "76ff19b3742d7ea78dd16fe5efe47337627c2686e174b620f7abca54eac6d87e"
+  },
+  "tensor_metadata": {
+    "poses": {
+      "shape": [
+        500,
+        7
+      ],
+      "stride": [
+        7,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "disps": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "intrinsics": {
+      "shape": [
+        4
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "selected_prior": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "targets": {
+      "shape": [
+        80,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "weights": {
+      "shape": [
+        80,
+        2,
+        45,
+        80
+      ],
+      "stride": [
+        7200,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "uncertainties": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "temp_y_cdot": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "dino_feats_resize": {
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "affine_weights": {
+      "shape": [
+        385
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "eta": {
+      "shape": [
+        15,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    "ii": {
+      "shape": [
+        80
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "jj": {
+      "shape": [
+        80
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    },
+    "cached_mono": {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  "scalars": {
+    "t0": 99,
+    "t1": 111,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "enable_update_uncer": true,
+    "enable_udba": true,
+    "enable_affine_transform": true,
+    "enable_bidirectional_uncer": false,
+    "debug": false
+  },
+  "slot_rgb_tokens": [
+    "kf:001",
+    "kf:004",
+    "kf:006",
+    "kf:008",
+    "kf:010",
+    "kf:011",
+    "kf:012",
+    "kf:013",
+    "kf:014",
+    "kf:015",
+    "kf:016",
+    "kf:018",
+    "kf:019",
+    "kf:020",
+    "kf:023",
+    "kf:028",
+    "kf:032",
+    "kf:036",
+    "kf:039",
+    "kf:043",
+    "kf:048",
+    "kf:053",
+    "kf:056",
+    "kf:062",
+    "kf:070",
+    "kf:077",
+    "kf:082",
+    "kf:087",
+    "kf:093",
+    "kf:099",
+    "kf:102",
+    "kf:114",
+    "kf:117",
+    "kf:125",
+    "kf:130",
+    "kf:141",
+    "kf:142",
+    "kf:143",
+    "kf:145",
+    "kf:151",
+    "kf:156",
+    "kf:161",
+    "kf:163",
+    "kf:164",
+    "kf:166",
+    "kf:187",
+    "kf:190",
+    "kf:193",
+    "kf:194",
+    "kf:196",
+    "kf:199",
+    "kf:201",
+    "kf:205",
+    "kf:208",
+    "kf:213",
+    "kf:214",
+    "kf:215",
+    "kf:216",
+    "kf:221",
+    "kf:223",
+    "kf:225",
+    "kf:228",
+    "kf:230",
+    "kf:233",
+    "kf:235",
+    "kf:236",
+    "kf:237",
+    "kf:238",
+    "kf:239",
+    "kf:240",
+    "kf:244",
+    "kf:245",
+    "kf:246",
+    "kf:247",
+    "kf:248",
+    "kf:251",
+    "kf:254",
+    "kf:256",
+    "kf:259",
+    "kf:260",
+    "kf:261",
+    "kf:263",
+    "kf:265",
+    "kf:270",
+    "kf:273",
+    "kf:275",
+    "kf:280",
+    "kf:286",
+    "kf:292",
+    "kf:299",
+    "kf:305",
+    "kf:312",
+    "kf:328",
+    "kf:332",
+    "kf:341",
+    "kf:348",
+    "kf:355",
+    "kf:363",
+    "kf:366",
+    "kf:372",
+    "kf:376",
+    "kf:379",
+    "kf:381",
+    "kf:383",
+    "kf:385",
+    "kf:387",
+    "kf:390",
+    "kf:393",
+    "kf:396",
+    "kf:399",
+    "kf:401"
+  ]
+}

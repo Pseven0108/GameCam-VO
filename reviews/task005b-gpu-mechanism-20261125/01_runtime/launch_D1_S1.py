@@ -1,0 +1,25 @@
+import pathlib,json,subprocess,os,time,hashlib,shutil
+r=pathlib.Path('/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1');hist=pathlib.Path('/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE')
+arm='D1_S1'
+assert json.loads((r/'evidence/CPU_CAPTURE_CONTRACT.json').read_text())['PASS']
+assert json.loads((r/'build_attempt02/BUILD_COMPLETE.json').read_text())['PASS']
+assert subprocess.check_output(['git','-C',str(hist/'source_candidate'),'rev-parse','HEAD'],text=True).strip()=='5d357c1d3079de134dd8b41a20a00632da37f0b0'
+assert not subprocess.check_output(['git','-C',str(hist/'source_candidate'),'status','--porcelain'],text=True).strip()
+gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,memory.free','--format=csv,noheader,nounits'],text=True).strip();assert 'RTX 3090' in gpu and int(gpu.split(',')[-1])>=23000
+assert not subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],text=True).strip()
+assert shutil.disk_usage(r).free>=11*1024**3 and shutil.disk_usage('/dev/shm').free>=13*1024**3
+lock=json.loads((hist/'configs/identity_lock.json').read_text());pins={}
+for name,expected in lock['remote_pins'].items():
+ p=pathlib.Path(name);h=hashlib.sha256()
+ with p.open('rb') as f:
+  for b in iter(lambda:f.read(8*1024**2),b''):h.update(b)
+ assert h.hexdigest()==expected,'Frozen asset changed: '+name
+ pins[name]=expected
+out=r/'attempts'/arm;out.mkdir(exist_ok=False)
+asset='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data'
+policy=json.loads((hist/'evidence/CPU_STAGE_RELEASE.json').read_text())
+env=dict(os.environ,CUDA_VISIBLE_DEVICES='0',PYTHONHASHSEED='43',PYTHONDONTWRITEBYTECODE='1',OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',PYTHONPATH=str(r/'tools')+':'+str(hist/'source_candidate'),TORCH_HOME=asset+'/torch_hub',HF_HOME=asset+'/huggingface',HF_HUB_OFFLINE='1',HF_HUB_DISABLE_TELEMETRY='1',MPLBACKEND='Agg',RERUN_NO_ANALYTICS='1',GAMECAM_FILE_BACKED_CPU_ROOT='/dev/shm/gamecam_task005b_20261125_R1/'+arm,GAMECAM_NATIVE_SOURCE_COMMIT='5d357c1d3079de134dd8b41a20a00632da37f0b0',GAMECAM_NATIVE_SOURCE_TREE='c018a65009aaf4f7457e2da5225a5f322a168b77',GAMECAM_TASK004_POLICY=policy['policy_path'],GAMECAM_TASK004_POLICY_SHA256=policy['policy_sha256'],GAMECAM_TASK003_OBSERVER_JSONL=str(out/'observer.jsonl'))
+py='/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python';cmd=[py,'-B','-u',str(r/'tools/process_wrapper.py'),'capture',arm]
+with (out/'stdout.txt').open('xb') as of,(out/'stderr.txt').open('xb') as ef:p=subprocess.Popen(cmd,env=env,cwd=hist/'source_candidate',stdout=of,stderr=ef,start_new_session=True)
+receipt={'wrapper_pid':p.pid,'arm':arm,'start_unix':time.time(),'gpu_at_launch':gpu,'protected_asset_pins':pins,'auto_retry':False,'max_RGB':401,'model_prefix_runs_started':1}
+(out/'LAUNCH_RECEIPT.json').write_text(json.dumps(receipt,indent=2));print(json.dumps({k:v for k,v in receipt.items() if k!='protected_asset_pins'}))

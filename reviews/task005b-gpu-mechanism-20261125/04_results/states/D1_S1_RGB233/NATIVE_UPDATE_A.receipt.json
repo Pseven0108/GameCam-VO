@@ -1,0 +1,62 @@
+{
+  "state": "D1_S1_RGB233",
+  "state_sha256": "1152f539f85ca6204475403053656b9133513c354c59fd50df6c5798366fc42a",
+  "cell": "A",
+  "C": 1,
+  "G": 1,
+  "U_native_update": true,
+  "inner_iterations": 2,
+  "one_native_call": true,
+  "seconds": 8.222956657409668,
+  "input_SHA_verified": true,
+  "input_tensor_hashes": {
+    "poses": "e8e18c9a4ddacf857bfaeaed68f2675c192f5e521597e402aaa4b7d8e3801dde",
+    "disps": "ba68e821cf50e348ed719f420f011b4a65b561dbeda94b61c5307c44d3b29217",
+    "intrinsics": "4f3d3e45746988fce5d40adf5f2107ca352d840f59b547b152e6c16cdce3e2f2",
+    "selected_prior": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e",
+    "targets": "ff546a4790de063131f3b5c6f9b7c1e5c9f23e60bdc32961c4538bdae38a47e7",
+    "weights": "e4fc0f9daafe37ac791fb9d815b0555e54fa77bd6eb9e3af5752ac43028b9e40",
+    "uncertainties": "179fd7a68b3555858fee19cc484b48fb1f0149adc6bab4af5cae0a0c78613267",
+    "temp_y_cdot": "4f3ee0e19dee8a02242150803f626a7d069453c450e9f42dabaf6b7820cd1df9",
+    "dino_feats_resize": "5797aeaeceaeefb67c9c6be270ce7bc3c9015a26f0421ee50fe5676599092ab6",
+    "affine_weights": "3a48165eead2b21a9ddab3123fddc034e908dc49a81de131fcc0815c7641e4ad",
+    "eta": "c9c6163107ca467dc02e62e1d4b81f3fe007057ba651887c99d162c5ccb4421a",
+    "ii": "d64884ee0acea4f2f2570801bbe6cea524643ac9a2df662378e6fbc88786dc26",
+    "jj": "c54dc8bdd603237212aabfbf8ecd08f2e0bd73960ef789fc55e1f1dc5571e09d",
+    "cached_mono": "3170e54de4994472c6f77a6e4004e0b66370af0383f391122e76ffacf4ac8f3e"
+  },
+  "scalars": {
+    "t0": 52,
+    "t1": 64,
+    "iterations": 2,
+    "lm": 0.0001,
+    "ep": 0.1,
+    "gamma_data": 0.1,
+    "gamma_prior": 0.05,
+    "gamma_depth": 0.01,
+    "lr": 0.1,
+    "weight_decay": 0.002,
+    "motion_only": false,
+    "depth_only": false,
+    "enable_update_uncer": true,
+    "enable_udba": true,
+    "enable_affine_transform": true,
+    "enable_bidirectional_uncer": false,
+    "debug": false
+  },
+  "endpoint_equivalence": {
+    "PASS": true,
+    "max_abs": {
+      "poses": 1.862645149230957e-09,
+      "disps": 1.695007085800171e-07,
+      "uncertainties": 1.1920928955078125e-07,
+      "temp_y_cdot": 2.384185791015625e-07,
+      "affine_weights": 1.862645149230957e-09,
+      "dx_last": 7.450580596923828e-09,
+      "dz_last": 1.695007085800171e-07
+    },
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "postcall_clamp_applied": false
+}

@@ -1,0 +1,15 @@
+{"unix": 1795586018.7849202, "event": "SUPERVISOR_ORCHESTRATION_RESUMED", "pid": 35332, "numerical_retry": false, "reason": "previous local tool process no longer exists; remote completed attempts preserved"}
+{"unix": 1795586021.0740035, "event": "PROCESS_COMPLETE", "arm": "D1_S1", "state": null, "receipt": {"exit_code": 0, "mode": "capture", "arm": "D1_S1", "seconds": 834.5813477039337, "wrapper_pid": 745, "automatic_retry": false, "success_exists": true}}
+{"unix": 1795586021.121023, "event": "ARCHIVE_ALREADY_VERIFIED", "state": "D1_S1_RGB019", "kind": "snapshot"}
+{"unix": 1795586022.5508108, "event": "PROCESS_COMPLETE", "arm": "D1_S1", "state": "D1_S1_RGB019", "receipt": {"exit_code": 0, "state": "D1_S1_RGB019", "seconds": 136.5696210861206, "automatic_retry": false, "success_exists": true}}
+{"unix": 1795586022.6019912, "event": "ARCHIVE_ALREADY_VERIFIED", "state": "D1_S1_RGB019", "kind": "result"}
+{"unix": 1795586022.6375117, "event": "NUMERICAL_HEALTH_CHECKED", "state": "D1_S1_RGB019", "rows": 16, "max_relative_residual": 1.2946927584341538e-06}
+{"unix": 1795586022.8183703, "event": "ARCHIVE_ALREADY_VERIFIED", "state": "D1_S1_RGB233", "kind": "snapshot"}
+{"unix": 1795586024.249936, "event": "PROCESS_COMPLETE", "arm": "D1_S1", "state": "D1_S1_RGB233", "receipt": {"exit_code": 0, "state": "D1_S1_RGB233", "seconds": 156.4828236103058, "automatic_retry": false, "success_exists": true}}
+{"unix": 1795586024.3881717, "event": "ARCHIVE_ALREADY_VERIFIED", "state": "D1_S1_RGB233", "kind": "result"}
+{"unix": 1795586024.4585528, "event": "NUMERICAL_HEALTH_CHECKED", "state": "D1_S1_RGB233", "rows": 16, "max_relative_residual": 1.459012223819571e-07}
+{"unix": 1795586024.7872572, "event": "ARCHIVE_ALREADY_VERIFIED", "state": "D1_S1_RGB401", "kind": "snapshot"}
+{"unix": 1795586026.2738876, "event": "PROCESS_COMPLETE", "arm": "D1_S1", "state": "D1_S1_RGB401", "receipt": {"exit_code": 0, "state": "D1_S1_RGB401", "seconds": 169.49885892868042, "automatic_retry": false, "success_exists": true}}
+{"unix": 1795586043.0144768, "event": "ARCHIVED", "state": "D1_S1_RGB401", "kind": "result", "bytes": 288972800, "sha256": "39217f03c77a5f7c5e2de7fff79a6acb384ab4e3937c99d1bc57b9fd387bab56"}
+{"unix": 1795586043.109074, "event": "NUMERICAL_HEALTH_CHECKED", "state": "D1_S1_RGB401", "rows": 16, "max_relative_residual": 3.655429070445663e-07}
+{"unix": 1795586043.9181726, "event": "STOPPED", "error": "Remote command failed D:\\aaa\\GameCam-VO\\experiments\\GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1\\00_intake\\AUTO_030_RETIRE_D1_S1.stdout.txt"}

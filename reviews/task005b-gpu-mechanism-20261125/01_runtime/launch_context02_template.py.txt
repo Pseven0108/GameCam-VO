@@ -1,0 +1,9 @@
+import pathlib,json,subprocess,time,os,shutil
+r=pathlib.Path('/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1');name=STATE
+assert not subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],text=True).strip()
+assert (r/'snapshots'/name/'COMPLETE.json').is_file()
+assert shutil.disk_usage(r).free>=11*1024**3
+log=r/'evidence'/('REPLAY_CONTEXT02_'+name);log.mkdir(exist_ok=False)
+py='/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python';env=dict(os.environ,CUDA_VISIBLE_DEVICES='0',PYTHONDONTWRITEBYTECODE='1',PYTHONHASHSEED='43',OMP_NUM_THREADS='2',MKL_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',PYTHONPATH=str(r/'tools')+':/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate')
+with (log/'stdout.txt').open('xb') as of,(log/'stderr.txt').open('xb') as ef:p=subprocess.Popen([py,'-B','-u',str(r/'tools/replay_context02_wrapper.py'),'--state',name],env=env,cwd=r,stdout=of,stderr=ef,start_new_session=True)
+receipt={'pid':p.pid,'state':name,'native_call_limit':12,'automatic_retry':False,'time':time.time()};(log/'LAUNCH_RECEIPT.json').write_text(json.dumps(receipt,indent=2));print(json.dumps(receipt))

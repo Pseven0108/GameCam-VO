@@ -1,0 +1,53 @@
+{
+  "papers": [
+    {
+      "paper": "Metric3D v2",
+      "source": "https://arxiv.org/html/2404.15506v4",
+      "read": [
+        "Method canonical transform/joint GRU",
+        "Supervision",
+        "Experiments",
+        "Conclusions"
+      ],
+      "code_scope": "actual 283-file identity; selected inference/decoder/config/loss bodies"
+    },
+    {
+      "paper": "Gradient-based Uncertainty for Monocular Depth Estimation",
+      "source": "https://arxiv.org/html/2208.02005v1",
+      "read": [
+        "Method",
+        "Experiments",
+        "Ablations",
+        "Conclusion"
+      ],
+      "code_scope": "official README and generate_maps.py entry workflow, not every module"
+    },
+    {
+      "paper": "Uncertainty from Motion for DNN Monocular Depth Estimation",
+      "source": "https://cdn.prod.website-files.com/5e91dee07859bc2d42686903/62228ef2ba88686c0d8bed65_2022_icra_ufm.pdf",
+      "read": [
+        "IV Method",
+        "V metrics",
+        "VI Experimental setup",
+        "VII Results",
+        "VIII Conclusion"
+      ],
+      "code_scope": "official README; corrected ensemble caveat",
+      "PDF_bytes": 1394379,
+      "PDF_sha256": "68c7f1eab757374b96e1bef7a139eae63dd29ecd0a3ad0b57becb8cddb8e6b08"
+    },
+    {
+      "paper": "Learning a Depth Covariance Function",
+      "source": "https://arxiv.org/html/2303.12157v2",
+      "read": [
+        "Method",
+        "Experimental calibration",
+        "BA/VO experiments",
+        "Conclusions"
+      ],
+      "code_scope": "official README, no training or full implementation audit"
+    }
+  ],
+  "fulltext_republication": false,
+  "author_reported_results_are_not_our_measurements": true
+}

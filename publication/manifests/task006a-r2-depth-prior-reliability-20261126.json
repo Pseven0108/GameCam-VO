@@ -1,0 +1,763 @@
+{
+  "task": "TASK006A-R2",
+  "status": "PARTIAL_WAITING_GPU_AND_GT_ADMISSION",
+  "base_commit": "b6e8b552aa1d5f57ada46fae4b809aedfbaaed94",
+  "branch": "codex/task006a-r2-depth-prior-reliability-20261126",
+  "visibility": "public",
+  "default_branch_changed": false,
+  "ZIP_bytes": 2249504,
+  "ZIP_sha256": "99b71271a53dd84292409be1e9b8dee65feeb54c8d338a777e3b4d3ebe4edb6f",
+  "ZIP_CRC": "PASS",
+  "sealed_archive_members": 116,
+  "internal_SHA256_verified": 115,
+  "original_ZIP_modified": false,
+  "full_expanded_review_members_published": true,
+  "research_outputs_omitted": false,
+  "support_asset_exclusions": "See review evidence/EXCLUDED_SUPPORT_ASSETS.json",
+  "files": [
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/LOCAL_GIT_STATE.json",
+      "bytes": 371,
+      "sha256": "51c1697f859ceca98c9b7c37cc71ebef45d4b22ed3e4d6a4f2f8d08c9421bad5",
+      "git_blob_sha": "d5225427d03becb69813a8c449705eb4ff2a6e76"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/R2_00_PROJECT_STATE_AUDIT.md",
+      "bytes": 3274,
+      "sha256": "7d5ae43de2a8a9143ac1b7307f246748d0b5d181e7aaad80f32b7af6f2d0c4ff",
+      "git_blob_sha": "148d72b63322a431769c8634e4d324e8aac2f20b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_FINAL_IDENTITY.receipt.json",
+      "bytes": 152,
+      "sha256": "904eeac82833eab560905902c7a818cf36b323ee9f790f8b4cac944553d3d4dc",
+      "git_blob_sha": "b1d7727978a5713a5cf83bd2f23ecd79f34dc447"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_FINAL_IDENTITY.stderr.txt",
+      "bytes": 3850,
+      "sha256": "3f795207fc4314c7a3c371e4e72073e9240c5aa57c47e0781addc62e531d9392",
+      "git_blob_sha": "162b23ea439343433507096afef4e71cb469d999"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_FINAL_IDENTITY.stdout.txt",
+      "bytes": 864,
+      "sha256": "84ebd10d42f71513506d32c87b6e57262e54b2b122616f253dfb000467f78646",
+      "git_blob_sha": "f4d8c3ed41c272aabfa691845ca14710feb99953"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_IDENTITY.receipt.json",
+      "bytes": 152,
+      "sha256": "bd774e414fb6236e77db363cefcf7269aa07d67e1e422a9fdb52a386f24042b4",
+      "git_blob_sha": "60620457dca31cf17ec5963e1a700001bfa37461"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_IDENTITY.stderr.txt",
+      "bytes": 3851,
+      "sha256": "e81ab32dfc8f9f75c89a16340efd5c6a724943f7031a26b7047ff7956b37ca63",
+      "git_blob_sha": "b428ebe64e421fdbf099468075c5a369da56f7bc"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_IDENTITY.stdout.txt",
+      "bytes": 81308,
+      "sha256": "68e9df437c206660615eb6f6dc3005a5be795c3d1617b17c837bf48ef4571c4e",
+      "git_blob_sha": "b76774e5d7e4c6dc3064b4118e46b369b747c660"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_PROBE.stderr.txt",
+      "bytes": 3851,
+      "sha256": "c927766443a2ce101dba8860c17c659626a6883027ff1e7ef64e5b38cf415187",
+      "git_blob_sha": "e61529712d4eddb78ae83902b6ef232c1efb9f6b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_PROBE.stdout.txt",
+      "bytes": 3880,
+      "sha256": "7047f3f5ad8ac29cc2370a11eb26c45db71cfa09fe983d105ab57a8f763e1732",
+      "git_blob_sha": "9d2d2c2cbb0e2f53e006e20a99e92ab04d181200"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_PROBE_RECEIPT.json",
+      "bytes": 319,
+      "sha256": "690ddf803c0d9575f398440d3260127fa11490c947c3f26b82bb7800e4bc20f0",
+      "git_blob_sha": "df29869ff052b21ab2cec7b77636a60678f86144"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_SOURCE.receipt.json",
+      "bytes": 153,
+      "sha256": "145f6a594620eb7b14d57dbe5ecc3f07266e6cc575c0ecd5c6e42af82760c84b",
+      "git_blob_sha": "bc72e8999b57ecfceafcbbf5c7a98786f31e1558"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_SOURCE.stderr.txt",
+      "bytes": 3854,
+      "sha256": "01c6b2a1bbf31e9b5a6857bb952025d008d72e2e3107178a5d843f3b22fd663b",
+      "git_blob_sha": "2bf118fae0cad010ab8e66c954881aa9d36dc72d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/00_project_audit/REMOTE_SOURCE.stdout.txt",
+      "bytes": 121664,
+      "sha256": "fc359c879a1e75c7b2ea9d79aa1b61e31fcb6569fe060ab54ef96f8628985b67",
+      "git_blob_sha": "e08f798a586115390052fdf78a13fd3d7bb8f484"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/01_source_audit/BASELINE_ENTRYPOINT_DIFF.patch",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/01_source_audit/R2_01_CONFIDENCE_NUMERICAL_AUDIT.csv",
+      "bytes": 884,
+      "sha256": "25315b05ac1256a6fd9eb76581d7365816d833355613f425d3b1cfd0acc051bc",
+      "git_blob_sha": "e1a683c205c42df9a1e472db4ef6645529b57990"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/01_source_audit/R2_01_METRIC3D_CONFIDENCE_SOURCE_AUDIT.md",
+      "bytes": 5305,
+      "sha256": "7cbc7e17f7c9044d45647d9356912d97425986e71c2dbf3f73e28f069c91b76e",
+      "git_blob_sha": "0fac7215c74f2a70fd2eb8fcbce87a2305ac7afb"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/01_source_audit/visualizations/NOT_EXECUTED.md",
+      "bytes": 286,
+      "sha256": "ce1b3b2dd1db36a9e05a1dc5a898496b16852dc0b424a7d659a1abf86edb24d0",
+      "git_blob_sha": "188d51fe59e695450931cf7f56b71ca8ed1bdce2"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/02_literature/PAPER_READING_LOG.json",
+      "bytes": 1668,
+      "sha256": "4fee4a70bc40e766f88214ebaeb3343a00aaf2cc9250c120655fb42bbddacd2c",
+      "git_blob_sha": "5b156337da7d9c5cebf88ca4ce3031ebfbc1713e"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/02_literature/R2_02_LITERATURE_REVIEW.md",
+      "bytes": 4275,
+      "sha256": "13d38eb4a54621e83e26cddb47521efc4b41dce92f2b7fbf2b5a57c929da230d",
+      "git_blob_sha": "608beba28dffc581b79f15587d89c511b893dcf2"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/02_literature/R2_02_METHOD_COMPARISON.csv",
+      "bytes": 1499,
+      "sha256": "b3e1f2468ed03cd223c990e5d4cfe9e399425ff6b7507f3de54c11a152df17f8",
+      "git_blob_sha": "16ad58c69207ffd3e0ac78a66664fc54cc9b0c41"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/02_literature/UFM_ALTERNATE_FULLTEXT_RECEIPT.json",
+      "bytes": 360,
+      "sha256": "337b0e2132a4df2d4588f5d2098e646e34bf1b3e59eb1fe4266629f5ec909e67",
+      "git_blob_sha": "1674f612137eda40a7fe435b1a258dde63736b60"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/02_literature/UFM_FULLTEXT_RECEIPT.json",
+      "bytes": 243,
+      "sha256": "f6d75e68d68c1bd19e7ee852cfa0289254463a583e736fdeb05b9ae10e03ee70",
+      "git_blob_sha": "51a1c1e00547711010eec5d1a97fa95cfba552c1"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/DATA_ADMISSION.json",
+      "bytes": 1481,
+      "sha256": "4ab12e4039b727209482f5c8898e2bc05894ddd47c22816548d2e6e4d9caf25f",
+      "git_blob_sha": "c20d164df17bad4672203f8873ec18cf1401a406"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/FIGURE_CONTRACT.json",
+      "bytes": 591,
+      "sha256": "0499c2c9ed5c982ea12018e87f768f1ac2501b018e745324d7d652c1544c2d00",
+      "git_blob_sha": "98cad444ac40ea9f2fa19342436f063101e9128f"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/MVS_GT_MULTIVIEW_ALIGNMENT.csv",
+      "bytes": 973,
+      "sha256": "1ed2f8d8d087faed55a18db34ac3b59aaf2badc05c55b3850b66163b92e35b0d",
+      "git_blob_sha": "09f2fb639f1fdb3b957ada6b2bf0cba8a11d6a24"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/MVS_PROVENANCE_OBSERVABILITY_ADDENDUM.json",
+      "bytes": 94941,
+      "sha256": "3e0a12323c62aa89168024cd4797f8793585448f39454395eb3637cca210b530",
+      "git_blob_sha": "99322c58720e4ef7d1f79d81fcec06e0f979913b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/R2_03_DATASET_AND_GT_AUDIT.md",
+      "bytes": 4467,
+      "sha256": "1e929c6cc4c8cbd6e7a4f7eb6e61a236ac1aa6ef17d1d021f7079f2330384423",
+      "git_blob_sha": "818995b48bc3c1f041bf4f995edb721f119f1458"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/R2_03_DATASET_MANIFEST.csv",
+      "bytes": 60663,
+      "sha256": "b5b092f10d62dc86e2d0206595ba0e536c2fce77f3b439d65fcca4cc08034537",
+      "git_blob_sha": "34933fcdb9752c3017a6bc492c0fac58980cd808"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/R2_03_DATA_ALIGNMENT_EVIDENCE.png",
+      "bytes": 1367313,
+      "sha256": "49ff723cbacb585c2bb5bcb0214c770efffe468f11af2c11fcef393d66fe60f7",
+      "git_blob_sha": "107a44811fed564b20f05bc3bfdd8aa6594b1a93"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/R2_03_DATA_ALIGNMENT_EVIDENCE.svg",
+      "bytes": 725890,
+      "sha256": "5dd9ea69b08ec26e31491fb757fa8e0892049653aa91b33555552135cdcb0f54",
+      "git_blob_sha": "b186af87c95fceddd7c8a31bf3e6b1b1301ffd4b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/03_dataset_audit/VIPER_LOCAL_ARCHIVE_MODALITIES.csv",
+      "bytes": 2586,
+      "sha256": "711dd6b880571455f68419bc20f13874f815c9b9d09787ae5f91557a4d564813",
+      "git_blob_sha": "19eb16ba157e41d5b5777869e1fb43bdb17be45b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/04_native_confidence/R2_04_CONFIDENCE_ERROR_VISUALIZATIONS/NOT_EXECUTED.md",
+      "bytes": 114,
+      "sha256": "af2d5267d29693b6c9ec948cd185938635704d643efcedcf0d3b3bc97328af3e",
+      "git_blob_sha": "eb0a93cea05073f350caa39cc7a9cc03e2b5b564"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/04_native_confidence/R2_04_NATIVE_CONFIDENCE_EVALUATION.md",
+      "bytes": 2123,
+      "sha256": "79b9a9f4545e7f4f9c839bc53a145e4595f2cea45060dbabdb96e677606926bd",
+      "git_blob_sha": "9f1ef185caf1eb9a4797d5246477cf4d0aba0dae"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/04_native_confidence/R2_04_NATIVE_CONFIDENCE_METRICS.csv",
+      "bytes": 1333,
+      "sha256": "f49183f9ad218484daeafc11232f2bd210afdf00f4960c6fd814191115f648a0",
+      "git_blob_sha": "5009d30bd9bc097fe6d28d8c2e89022b45bec03e"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/04_native_confidence/R2_04_RISK_COVERAGE/NOT_EXECUTED.md",
+      "bytes": 114,
+      "sha256": "af2d5267d29693b6c9ec948cd185938635704d643efcedcf0d3b3bc97328af3e",
+      "git_blob_sha": "eb0a93cea05073f350caa39cc7a9cc03e2b5b564"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/04_native_confidence/visualizations/NOT_EXECUTED.md",
+      "bytes": 114,
+      "sha256": "af2d5267d29693b6c9ec948cd185938635704d643efcedcf0d3b3bc97328af3e",
+      "git_blob_sha": "eb0a93cea05073f350caa39cc7a9cc03e2b5b564"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/05_tta/R2_05_TTA_EVALUATION.md",
+      "bytes": 1445,
+      "sha256": "210c56c7a4f999311cc19d89c7d55f9e54e676475655249c3924a3e114e4d15f",
+      "git_blob_sha": "a4558159d950d37e32a13ded0f5cb58ed934e21b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/05_tta/R2_05_TTA_METRICS.csv",
+      "bytes": 670,
+      "sha256": "21616d155ec7fd0cd8428d9a911ae68ac02bc71e0706eb7117eb4023666a9dd1",
+      "git_blob_sha": "f3456095592dd17af70582fce0e2660368202381"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/05_tta/visualizations/NOT_EXECUTED.md",
+      "bytes": 86,
+      "sha256": "5e0c118bda625aa4a53f2841cb51a405d5aff3d3d82280d3c27f1d06eedffe75",
+      "git_blob_sha": "47d9ae7de73c2a3d1590fed5d2a1d52c3618a50b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/06_depth_bin/R2_06_DEPTH_BIN_METRICS.csv",
+      "bytes": 522,
+      "sha256": "41e9433f224919cd3e79c2cb2779b83ea626f01c82c1a8456a2e46ebe0dec822",
+      "git_blob_sha": "00bf23c8568339d4ce4072838805487a66ac9970"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/06_depth_bin/R2_06_DEPTH_BIN_UNCERTAINTY.md",
+      "bytes": 1356,
+      "sha256": "78565c58c15c016dbdb0de9d4fe0ba699a57f1556894bad2ce71000297a2d976",
+      "git_blob_sha": "e2b81de3f6d4fc6527f83bb4e5d52bffd598e942"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/07_gradient_uncertainty/R2_07_GRADIENT_UNCERTAINTY_REVIEW.md",
+      "bytes": 786,
+      "sha256": "0e1499bf81ad3467320a0004d361db9c446338068b150f822eb08a76c00ede1b",
+      "git_blob_sha": "cce164f27ad12dfc5a7d50477ebfa5d5897b1b17"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/08_comparison/R2_08_METHOD_COMPARISON.md",
+      "bytes": 1085,
+      "sha256": "49e78b6ab5f81c9c3c139c40b172b256ccea092c5f741cdab1ee665a5020b9c1",
+      "git_blob_sha": "33248b3cfc4f10261029912c95407ebd82980021"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/09_final_design/R2_09_FINAL_RELIABILITY_DESIGN.md",
+      "bytes": 2059,
+      "sha256": "3ffbbfa5a9d99167b9fddb458bf63a30bf5992341db4b3c7b2be0c775906b646",
+      "git_blob_sha": "96c1e6c1ef3e5f324a87db4aaaaeaa50d0c2d8e6"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/09_final_design/R2_09_GO_NO_GO_DECISION.md",
+      "bytes": 1358,
+      "sha256": "2342a0fb02e57f7fa056b176e25b61791c1da5d8fd2ae0a54e98a70fd69ab5e5",
+      "git_blob_sha": "42dd13e801349426b67d60618d451d570e615d0d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/ACCEPTANCE_MATRIX.md",
+      "bytes": 1311,
+      "sha256": "fd99d14deb718c2d98f76ffc1f28c85ef946d3bf0ff03b27099bf4a3eb70aa6b",
+      "git_blob_sha": "add8fd3d573ee47a3a42fd55a2c62ada47ca59bd"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/DECISION.json",
+      "bytes": 730,
+      "sha256": "977270e973323d7efced8667fcc2457acb2ae81c0df44ebe73bc2f04763145f4",
+      "git_blob_sha": "b8932f0fae7592f160e6717388cf4805d1370383"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/EXECUTION_LOG.md",
+      "bytes": 1398,
+      "sha256": "5e376fc101724187c5d6af2816898a234997d37e91c9efdff58fc950f66a497a",
+      "git_blob_sha": "4965bfe81a7e5d65b4e3334a3f98152641e68df6"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/FILE_SHA256_MANIFEST.json",
+      "bytes": 21242,
+      "sha256": "6e98f1486a8b7dd0e549a6a6d1cf166dbae9db4f4c29bac330253482a1a85bfc",
+      "git_blob_sha": "833cbe18a426c5a3789e8ce4c5a1092795000f31"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/FINAL_REVIEW.md",
+      "bytes": 879,
+      "sha256": "a141df346a392f94aaaf2b7405f1128d04e10bf5bf521125c0a26d71069de892",
+      "git_blob_sha": "3a154e2630d8ca748908c922c094bb3e013ddafb"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/PACKAGE_CONTENTS.md",
+      "bytes": 1102,
+      "sha256": "619ba853c361480a4fdd78e0f568a429187f2e224bb8501252c717d404a7084d",
+      "git_blob_sha": "6c1147c0578bb2ad38d9cd41378e634f2666f95b"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/README.md",
+      "bytes": 1771,
+      "sha256": "b6d5a8d0e4c3a6e2cec2106e8db89586f6de48c1da6104a5f3a62e6c04a144c2",
+      "git_blob_sha": "7e7e36cf1f4388a79ed13b3b6abf951152fa5ccc"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/SECURITY_AUDIT.json",
+      "bytes": 1007,
+      "sha256": "985acecbe1e0f60450a0a5691580de8d823ca0e9d874496c77c73df014047046",
+      "git_blob_sha": "164f9e033f0ca2efc3f1233add8c319cca1a3ea3"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/SHA256_MANIFEST.csv",
+      "bytes": 13141,
+      "sha256": "85d93ea21bf2da9d05a60eb3393bfb3c505b4197f54acd11aebe2bea5d255200",
+      "git_blob_sha": "0a587a77cf3ff0d94435345b4f0313a233fb38d6"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_CODEX_HANDOFF.md",
+      "bytes": 3210,
+      "sha256": "6783b9a3abd9d1bc7f6951f9c2771add8a47d520c5982e99801e16bde336f775",
+      "git_blob_sha": "eb3053505598d92164bfc3f6ee91f7a5e5008240"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_FINAL_RESEARCH_REPORT.md",
+      "bytes": 6652,
+      "sha256": "4c27649e8601b05d23b708d8c9e42b75686abd8b9d738214b5f719cbf2afe6d2",
+      "git_blob_sha": "01d168c66114fac809f7cc51bd7a51fa49abd744"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/DATA_PROTECTION_BEFORE.json",
+      "bytes": 63316,
+      "sha256": "5596c20c3a8278e3d316e6c5cf839caf99ee02e3c5c0def2a51dee9a48e4731e",
+      "git_blob_sha": "6ac8b5e458d7faf1501f1f7cf97285da292fc01c"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/ENVIRONMENT.json",
+      "bytes": 670,
+      "sha256": "3d0b11fa7db85823441e76c6545fbdf78dcee927a5b2812fe4880945fa6a04d3",
+      "git_blob_sha": "c76129618ab0bc19104f4e98c190f9a4ac1637c4"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/EXCLUDED_SUPPORT_ASSETS.json",
+      "bytes": 37902,
+      "sha256": "b01112412f29f6c17cd89637e07727fe4b59af5f630c8230d8199a5314ccb6a5",
+      "git_blob_sha": "b263b1eff5f6449bb1c53aa3ce094707142ef945"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/FINAL_STATIC_QA.json",
+      "bytes": 2070,
+      "sha256": "cd047f2083196b216d2d214ee0319fb64d84daee1ee007e23ffb826acc69904e",
+      "git_blob_sha": "e446248dcaf128df78958efca5de06618559b094"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/MVS_PROVENANCE/DeepMVS_README.md",
+      "bytes": 4843,
+      "sha256": "4c77c4ac80c12c65318a69dd0550e55cbd6a3697a9d5a61bdf82489ba7310fe6",
+      "git_blob_sha": "97c9f40564306ecb02325787c5b1103a61235f77"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/MVS_PROVENANCE/generate_volume_train.py",
+      "bytes": 9013,
+      "sha256": "d67f7ce7266250cb1f7ad9784100258ed3edbee248e5ef575a8dec6647574453",
+      "git_blob_sha": "7def85dc0df9e1aff45c2ae1b07c85a7ccfd5fb0"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/MVS_PROVENANCE/mirror_official_crosscheck.json",
+      "bytes": 4019,
+      "sha256": "efe4027d0bde40bfc7ff7b8ac23e499c0182caebe4a4e5c705fe96870724d600",
+      "git_blob_sha": "e6451994772bfe9021e698544d26796a57b4f8e3"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/MVS_PROVENANCE/mirror_sequence_0000_tree.json",
+      "bytes": 91835,
+      "sha256": "b87f6f81576ce8913854d4e0eb691fb39e8d5e42a66496253b27d80dd0895327",
+      "git_blob_sha": "13432e683699916d56e93ab812cb182e70efbac9"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/OFFICIAL_SOURCE_VERIFICATION.json",
+      "bytes": 669,
+      "sha256": "92a266e721a95de8d1ca9372d4924d06c272158ebe10517b4dfe41e7f4a4482e",
+      "git_blob_sha": "118671addb7d17028b896046ff60d66a975a7a2d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/ORIGINAL_EVIDENCE_PRESERVATION.json",
+      "bytes": 108561,
+      "sha256": "2e812086faac4b25297ecfe2f333c5e055c773ad9cbd5220c6316736d1303a7a",
+      "git_blob_sha": "9fd474271c634dcefbdc9548ab06847e444abb95"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/PRESERVATION_BEFORE.json",
+      "bytes": 32690,
+      "sha256": "eac19dc7e614c7e5a77eeaa8a58f3eac1d2c81f0f60f240e90c24d6c3f783eda",
+      "git_blob_sha": "e4a6d71dd402b0cbd24106076b41f358cebc4474"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/R1/AUDIT_DECISION.json",
+      "bytes": 1516,
+      "sha256": "8949a2162fa97e395960f20b0cdfff2af7fac0a922a5e000260ce49f6eb7cf37",
+      "git_blob_sha": "aec93fd8432d956a68de81abba43d65d6b3e14c9"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/R1/FINAL_REVIEW.md",
+      "bytes": 2979,
+      "sha256": "281b32f1f33559d965ebf77156c1cf4da208239563a5d44f68475cc6518eb462",
+      "git_blob_sha": "6df24cf44770c624997ff041759a4e6ce5923e0d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/R1/MATHEMATICAL_DERIVATION.md",
+      "bytes": 6864,
+      "sha256": "d020d6ab92dfa2ded5c6febfa3117eb8e1bd44eb0614115b285073d671cd97d9",
+      "git_blob_sha": "3e35dbca5694975a37bc7d798ae784654b752d66"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/R1/NUMERICAL_STABILITY_AND_LIMITATIONS.md",
+      "bytes": 4064,
+      "sha256": "d13085c178c678f1d7a6c9b8b353860edbf44d6c650a56dc373713c506af8fda",
+      "git_blob_sha": "1d156e535640fbc0349847ee97f04897030f7f75"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/SOURCE_COPY_MANIFEST.json",
+      "bytes": 3388,
+      "sha256": "2d1d4613fc33e8dc60413daf1fbea9e548dd844ea020f3100196813ecb079337",
+      "git_blob_sha": "211c618858e8e956874be352da767990cfd69a89"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/USER_R2_AUTHORIZATION.txt",
+      "bytes": 30212,
+      "sha256": "f2228e471776e4e4980ca6c5a920f0b44d5bd8045012c8efc4409451accb7d72",
+      "git_blob_sha": "0276e5ea32cc4140ea433ae89d289670028673de"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/environment.txt",
+      "bytes": 670,
+      "sha256": "3d0b11fa7db85823441e76c6545fbdf78dcee927a5b2812fe4880945fa6a04d3",
+      "git_blob_sha": "c76129618ab0bc19104f4e98c190f9a4ac1637c4"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/r2_sealed_config.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+      "git_blob_sha": "dddd31c2165d86630858405d5743af2c5a3de11d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/source_references.md",
+      "bytes": 972,
+      "sha256": "9df01915052aaf60437ad024916a43f8983c3a2bcdd431a51792a8d015d8ec65",
+      "git_blob_sha": "e907111c37366c5eb0f38cade9a5aa22e6d9e657"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/DROID-W-runtime/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "git_blob_sha": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/LICENSE",
+      "bytes": 1306,
+      "sha256": "cb2dba18d598b6ad0b34f0f8b0ad01f9d495e657cae9bf0544786190cb26f9f9",
+      "git_blob_sha": "7341ee74f75bbda07163562ebad33de86be29bd9"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/hubconf.py",
+      "bytes": 8535,
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119",
+      "git_blob_sha": "a775f2cf135a62f4f9bb4f9578033a8d1180da5c"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "bytes": 704,
+      "sha256": "ac3d288e13f5330dcbf7ca6be037661ff1c25ff1cbd8785f2afcd2631db20811",
+      "git_blob_sha": "4febdcb2867513008496f394ce8dc513230fb480"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "bytes": 667,
+      "sha256": "451a56b64d803b2b3ba4e0a5e5df993bc3ab41e9b503b98372ce6c6041fbbc0f",
+      "git_blob_sha": "26ab6dc090e9cdb840d84fab10587becb536dbb8"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "bytes": 44427,
+      "sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "git_blob_sha": "9af89f9b4b1878a2e4bcfcd489075c2e97cd8d3d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/mono/model/model_pipelines/__base_model__.py",
+      "bytes": 619,
+      "sha256": "55936a9ff96bcc5459741979761bc7a0c0ad2e603e0cdeaf39b0a324143de738",
+      "git_blob_sha": "d599c418b3d9677a195fe87d45bb31bf1068fbce"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/mono/model/monodepth_model.py",
+      "bytes": 1150,
+      "sha256": "9f3cdea9a2f01cbfc54ee5049ff17eed22bb011d67158f83dd2efbbf7d3340d9",
+      "git_blob_sha": "0b58b7643ee43f84fd4e621e5b3b61b1f3f85564"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/training/mono/configs/RAFTDecoder/vit.raft5.large.py",
+      "bytes": 43625,
+      "sha256": "f79213783d1170c143a2cbf447ca8c9b8b4e5a1fe2432fed056252cdb34bf388",
+      "git_blob_sha": "645d24d76e2078bb3806b0bc9d68c0b4add814aa"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/evidence/sources/Metric3D-eb5b6fac/training/mono/model/losses/GRUSequenceLoss.py",
+      "bytes": 9103,
+      "sha256": "a635356d9df6d776606a041a39e36bd39703f91b89d8521ea94138da2fb45393",
+      "git_blob_sha": "7d829f2874dc007260be349955b7bea62debd8ae"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/configs/INFERENCE_PILOT_STATUS.json",
+      "bytes": 1074,
+      "sha256": "538178fba3a2f7ffc206a331ff61caa0766f92549c36ce618238e35b0fe607c1",
+      "git_blob_sha": "4be103d4bcfd2907efcaf30386a71157a7f51ebf"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/DATASET_AUDIT.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/DATASET_AUDIT.stdout.txt",
+      "bytes": 4024,
+      "sha256": "cdb12313b9f2c70300f4d5246373f5b9dde97a7f575876743b55b2c9e817bc3d",
+      "git_blob_sha": "89c060c61464f78b6d7c381ec315c7a2a609b6f4"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/OPENEXR_INSTALL.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/OPENEXR_INSTALL.stdout.txt",
+      "bytes": 313,
+      "sha256": "9fc4b9d673b27c2aa2850216bf0c75b1b466f861b0dc47f1898db36c7167141e",
+      "git_blob_sha": "be7a7032dc9bdff79daffaa2e82bcb27105dac64"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/PYPDF_INSTALL.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/PYPDF_INSTALL.stdout.txt",
+      "bytes": 212,
+      "sha256": "49a6a70271ca645c78e1860d415203ccf3327f1e68055e4e6ff1dac9a1a12ae4",
+      "git_blob_sha": "f346078fdde3959ba1cbc26c34d90d7c0c0ef048"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/UFM_ALTERNATE.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/UFM_ALTERNATE.stdout.txt",
+      "bytes": 52,
+      "sha256": "80a15196d140080e75b5edb14c179233ed79f09e6fc24a0f34ce1bbe091a739d",
+      "git_blob_sha": "219d67e2c3e7c78885d41fff866a1ad3943ef253"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/UFM_FULLTEXT.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/logs/UFM_FULLTEXT.stdout.txt",
+      "bytes": 228,
+      "sha256": "75f9868fd28d2977429d9f96f6b628f3f12c0800ee52db26838cfe93bf5c02c6",
+      "git_blob_sha": "73dc1e5213e8577e3891f796f40d2821acb5b40e"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/audit_datasets.py",
+      "bytes": 9459,
+      "sha256": "c6b8b27eef5f40a4501018f6f4fb63465462f3bae557ad534b0fb7d81aa76e65",
+      "git_blob_sha": "61de97dabf923703c0ac47292d29e7769d47c3ad"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/dataset_addendum.py",
+      "bytes": 3202,
+      "sha256": "217e3dc18187ff517e99e27f589b7537fe441068ecd9e69522caa0acaa6aec3f",
+      "git_blob_sha": "0ef687fe398572263e19ecbf39aab3ee9116b73d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/finalize_review.py",
+      "bytes": 10623,
+      "sha256": "6bcb901be5430b2236c96c1a5c26b61f608d8b5df216db2274055c0a0676002e",
+      "git_blob_sha": "038e09f86b0192beb9610df4a731b08d1d2b818e"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/local_intake.py",
+      "bytes": 3546,
+      "sha256": "c21dd4a86e5ba193e8bb1b9a82b4d941c52435696b8766c3a23f48440aa5ad32",
+      "git_blob_sha": "f285c032133a2cb69d25d927db5de845470baa91"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/metric3d_confidence_probe.py",
+      "bytes": 7345,
+      "sha256": "87cb437f7ef05661b379f093c7daefc67eeed036d4acef5cc5b3c562f95124be",
+      "git_blob_sha": "7b9a1c6087709ded31d51fd335c7c90641ecba87"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/read_ufm_paper.py",
+      "bytes": 1305,
+      "sha256": "4330ca0cc85efa75aa525201e6c1d70b254d97c93501ce31322f6b8df44f1f04",
+      "git_blob_sha": "9e4de0d24debcadbafc99f604e83a66eb6a0ff2d"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/reliability_metrics.py",
+      "bytes": 11098,
+      "sha256": "38da7b713492bacc82788cb36825dac34301d949f755f9129f3ac1026743aeea",
+      "git_blob_sha": "cfca0361625cf2e88f7ec3c6667bfb68613c48bc"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/remote_finalize_read.py",
+      "bytes": 1218,
+      "sha256": "548c4d6605921071ebea64659cf102a3e35482ba08eb1d31200ef771e88706aa",
+      "git_blob_sha": "154c80f5a821ad735f76ca9041f1c851485f030e"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/remote_identity_read.py",
+      "bytes": 1632,
+      "sha256": "1e40b3f89d7c4ca1223f5aa12adf59f488f35028190e11722fe6e57a88464e28",
+      "git_blob_sha": "4c11df3a11e73f7eac8ef0d0081d2b0eca08b242"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/remote_probe.py",
+      "bytes": 3990,
+      "sha256": "20a7c9e92173237913a8c62a3e783d87f29ce7691ee7523f3be4bfafd3ca6a76",
+      "git_blob_sha": "bb16df69eabd1facf75c1310963bc56260984519"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/remote_read.py",
+      "bytes": 1568,
+      "sha256": "b6449328ed58b80bb3914ecdd3a391306c8346876e34d7a33661ef9b93ede828",
+      "git_blob_sha": "ad6ca46e7d1c00ffbdf15613140f2e27829e5a2c"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/remote_source_read.py",
+      "bytes": 1060,
+      "sha256": "26424b4fe22ddfcdd1f9dc79595630856f482c12affffae3f4537c0eddfcc74a",
+      "git_blob_sha": "c6c9322393d5cb68889800258c94ad3160f5b85f"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/test_reliability.py",
+      "bytes": 10818,
+      "sha256": "32b559febab0fad0eada2fa0b6fa9cb5364ab3a41ea099b01ca8c1af16a616d4",
+      "git_blob_sha": "0f0b246c7e9637896bfd5892ad4ec50e3de55b35"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/scripts/write_reports.py",
+      "bytes": 55377,
+      "sha256": "396c20d4df5c7a8e06c286c57937deb22ae43bd8e172c4e0a6599eca7b0f09db",
+      "git_blob_sha": "988116a7bc42ec264a89b8d5be93e7f7abd6ac88"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/unit_tests_001/CPU_TEST_REPORT.json",
+      "bytes": 10706,
+      "sha256": "0fff5501500c4950ece718301819fbcbeed7322d38a8f513aeeb2151fd285559",
+      "git_blob_sha": "bdb6900248b72294d42d79fa2b57dd14248baecc"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/unit_tests_001/stdout.txt",
+      "bytes": 4265,
+      "sha256": "844565efde40c005b4c448d86a959e5170b96e1bd811e935d1ddfc126a7dae0d",
+      "git_blob_sha": "5fb0bc97f3f09a98c0a6e8c55ddad393c4278592"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/unit_tests_002/CPU_TEST_REPORT.json",
+      "bytes": 11517,
+      "sha256": "8f3d2000e9db1391871f812ff6b74f766cfcad11cffd80d11ac328e05bfb2325",
+      "git_blob_sha": "aa4fdd57fb792c11d1ae4631feb7598f3c750a05"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/experiments/unit_tests_002/stdout.txt",
+      "bytes": 4627,
+      "sha256": "78723a527b0009ee50b22be9e0e8ad8c2e7006fc869ee84e9884ba893c8bb99f",
+      "git_blob_sha": "8a5d1f06c0ac72fd4a8187964a19803de20d6a5c"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip",
+      "bytes": 2249504,
+      "sha256": "99b71271a53dd84292409be1e9b8dee65feeb54c8d338a777e3b4d3ebe4edb6f",
+      "git_blob_sha": "0aeba7114168b1024a5abe3cdfdf543dbe808eb8"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip.sha256",
+      "bytes": 122,
+      "sha256": "343a4941b033b47d12664a0df3b303d79c379f9c00e1c05b84d1732cc1fcfaeb",
+      "git_blob_sha": "eb2ccad525ae5f2a246e05e75066bc5529d6efca"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/deliveries/PACKAGE_VERIFICATION.json",
+      "bytes": 604,
+      "sha256": "19ae55c9ae3341f592583b893d5cb7442569d631a9001955a1ff15dc8fff8223",
+      "git_blob_sha": "ad08d053968ac77d7ce2327ff2d014a330066c30"
+    },
+    {
+      "path": "reviews/task006a-r2-depth-prior-reliability-20261126/PUBLICATION_NOTES.md",
+      "bytes": 1116,
+      "sha256": "68c8f101f9d88606f2c3e625554b32c3583de9fa5d780fbb25ca1479dc4734e3",
+      "git_blob_sha": "b05ac788156bb2269306a9ee9883028ccd65aa5e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4066,
+      "sha256": "fb6c3bebe49c07ae9758e91d9e6645821c1761d8607a7eb4e218e16acbffc03b",
+      "git_blob_sha": "9b73b6537a81cb60d0046516dac9a2add2775259"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 4066,
+      "sha256": "cf74cc8438e8ad010a6c5ab56d3590cba2dca44075119dba23ad49210ddf0075",
+      "git_blob_sha": "fd49b13a481d299afb238354d16900c2575cb26f"
+    },
+    {
+      "path": "REVIEW_INDEX.md",
+      "bytes": 4931,
+      "sha256": "fa3ac2251295682e1fad73380de0361366170e0c287a8051ed51e429705b35f5",
+      "git_blob_sha": "a1dbd3588d39051c148e12dc277ad229c1b49c28"
+    },
+    {
+      "path": "REVIEWING.md",
+      "bytes": 3209,
+      "sha256": "bbeea25ce27259131f93795bac7ce727b16be86f18d8ce0069a2f624ee792342",
+      "git_blob_sha": "b0bc880d06974696f716c830fbc5a2205456070d"
+    }
+  ]
+}

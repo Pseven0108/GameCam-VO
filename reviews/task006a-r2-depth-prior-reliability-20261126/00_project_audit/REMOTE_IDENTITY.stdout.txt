@@ -1,0 +1,1738 @@
+{
+  "root": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408",
+  "root_listing": [
+    "download_cache",
+    "evidence",
+    "logs",
+    "data",
+    "results",
+    "pipeline",
+    "display",
+    "source",
+    "exports",
+    "git_intake"
+  ],
+  "hub": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main",
+  "hub_exists": true,
+  "hub_git_exists": true,
+  "code_files": [
+    {
+      "rel": ".gitignore",
+      "bytes": 59,
+      "sha256": "b59c2aa643668eef75addcaa04c85745d923727f21a88d50daf0db8e3861ec16",
+      "git_blob_sha": "4c10ea34ca9d0d8f2b550f628e8726c269004624"
+    },
+    {
+      "rel": ".idea/.gitignore",
+      "bytes": 47,
+      "sha256": "a9e54fc4f08bc97d82c04bd86ff37d3af84ba9ef4ad87fcfcb438dab622e8aaa",
+      "git_blob_sha": "26d33521af10bcc7fd8cea344038eaaeb78d0ef5"
+    },
+    {
+      "rel": ".idea/Metric3D.iml",
+      "bytes": 441,
+      "sha256": "c344d6de8f6a11a62bd62611d63c18aa5501626dcacb182708ad4f0f4dd7bf04",
+      "git_blob_sha": "8b8c395472a5a6b3598af42086e590417ace9933"
+    },
+    {
+      "rel": ".idea/inspectionProfiles/profiles_settings.xml",
+      "bytes": 174,
+      "sha256": "6172c5997eeb3cd19c9ca2b5b97d6e2983cdd1fa60b2460d7bbb74055edcaa46",
+      "git_blob_sha": "105ce2da2d6447d11dfe32bfb846c3d5b199fc99"
+    },
+    {
+      "rel": ".idea/modules.xml",
+      "bytes": 268,
+      "sha256": "7da263149b0ca6c575130557bdeb1ad3fa1d86999d3ba3cab6daf315d14369e7",
+      "git_blob_sha": "dfbf7aee24c746941a49e64fe2c455e5899781b0"
+    },
+    {
+      "rel": ".idea/vcs.xml",
+      "bytes": 167,
+      "sha256": "6323e12648862a0a96fc0d7877672817d6cd91e2c2a3c3d78f1090db23c6e88e",
+      "git_blob_sha": "35eb1ddfbbc029bcab630581847471d7f238ec53"
+    },
+    {
+      "rel": "LICENSE",
+      "bytes": 1306,
+      "sha256": "cb2dba18d598b6ad0b34f0f8b0ad01f9d495e657cae9bf0544786190cb26f9f9",
+      "git_blob_sha": "7341ee74f75bbda07163562ebad33de86be29bd9"
+    },
+    {
+      "rel": "README.md",
+      "bytes": 24738,
+      "sha256": "e2ff64798e16a1c9236f9e4dd31a8e8087c01ad9d39ba607d57e416493cf0618",
+      "git_blob_sha": "8b8763c6674ba19078d66794983babbcca4d0830"
+    },
+    {
+      "rel": "data/gene_annos_kitti_demo.py",
+      "bytes": 1003,
+      "sha256": "15f54c5310e1cb59cf91ed8cc4f0489ee63bb1ae1679abd060044cd8b9c35610",
+      "git_blob_sha": "9edf1b4910c28593056dc03020d02674a70b522b"
+    },
+    {
+      "rel": "data/gene_annos_nyu_demo.py",
+      "bytes": 1051,
+      "sha256": "5cd38562854cf16d5fb761500f0158a664b09ade114bd6edda163ed431d032a4",
+      "git_blob_sha": "c4c1a4e815ed882d4d513c407d3c0b718d5ec6d7"
+    },
+    {
+      "rel": "data/kitti_demo/depth/0000000005.png",
+      "bytes": 191967,
+      "sha256": "eb0d83fc93bcf235384c690ae405e0b24b3bfc6a05e1220a4c902bed3b5ba113",
+      "git_blob_sha": "7343aea784f0b18e5e494e540c779db54497716b"
+    },
+    {
+      "rel": "data/kitti_demo/depth/0000000050.png",
+      "bytes": 200646,
+      "sha256": "3eef554b3b312829e7d1e76a1acd13e7261024eb3c4d6e176328be377ff9216e",
+      "git_blob_sha": "bf5c90aca02a878663e48b48374a7bab2c00d4b2"
+    },
+    {
+      "rel": "data/kitti_demo/depth/0000000100.png",
+      "bytes": 181743,
+      "sha256": "4b7e9c85e2b4f8131019fe93e0c1cf36f5058b30d040998a8199c4bb2d97e9b1",
+      "git_blob_sha": "b0b887f61639cdac2a0cfe251a35dbb2bdad880b"
+    },
+    {
+      "rel": "data/kitti_demo/rgb/0000000005.png",
+      "bytes": 872928,
+      "sha256": "a9754dcadc8b3ace31a368500af3e382e2c0763242a7b054d424650cec67646a",
+      "git_blob_sha": "82b058e1d849fbaec77f2fe5d1955443982a2861"
+    },
+    {
+      "rel": "data/kitti_demo/rgb/0000000050.png",
+      "bytes": 873924,
+      "sha256": "19e4f8f377521c8e28aca9addf2b695f9e374e5f44ee38d58970d12a21fbc4bf",
+      "git_blob_sha": "c1ff8e99ae1b0823526cfa116945cdc47ca738bd"
+    },
+    {
+      "rel": "data/kitti_demo/rgb/0000000100.png",
+      "bytes": 916166,
+      "sha256": "1f216c6fa51fb640c6cfb8a16cc91f60b20b1d2775def3d86c52c2bba1388365",
+      "git_blob_sha": "825969d50717900c4d208213f058ec0d5ac56f48"
+    },
+    {
+      "rel": "data/kitti_demo/test_annotations.json",
+      "bytes": 521,
+      "sha256": "7ef457a02d2ba4b5daab8738b4229ea1736c43858eec0eadbc0f705694e6dc71",
+      "git_blob_sha": "0153ec662a98b6c921eddbdb87132013d69111c9"
+    },
+    {
+      "rel": "data/nyu_demo/depth/sync_depth_00000.png",
+      "bytes": 166196,
+      "sha256": "043e9c8bee7af97afff01e451da3f5e9cd1591995f415944dd0dc91036a35b5a",
+      "git_blob_sha": "2ec1f4e6f4a029426fb8c5ac650c439755d9794b"
+    },
+    {
+      "rel": "data/nyu_demo/depth/sync_depth_00050.png",
+      "bytes": 182376,
+      "sha256": "53c764e869f61cf4240586395bc7374dcc02e65b8442801b53b74ffa563d30fe",
+      "git_blob_sha": "bdea59b0e728f73eb41921d2e1969c6123e657bc"
+    },
+    {
+      "rel": "data/nyu_demo/depth/sync_depth_00100.png",
+      "bytes": 141576,
+      "sha256": "dc0c16d56bfdcc958f37fa28bcf39b110a14c317bfe3c221b3c3bc6d73dec67d",
+      "git_blob_sha": "137673a33d48b84837e8e8849c57e1e8b9be5d15"
+    },
+    {
+      "rel": "data/nyu_demo/rgb/rgb_00000.jpg",
+      "bytes": 45937,
+      "sha256": "6744e744ac4702446d5be32ea13c8e3f884d004ccc288d3c6202484af0ccec1f",
+      "git_blob_sha": "af64697bccaf1d017d105e8eb407a1ff95b1ae4e"
+    },
+    {
+      "rel": "data/nyu_demo/rgb/rgb_00050.jpg",
+      "bytes": 51874,
+      "sha256": "b931aa5de8008a47c9764edd82ccb1226a53674bed4a8a69ce6e17a9c6974121",
+      "git_blob_sha": "0712c42a51187f5e1d34e74f4d98f1489ba9251f"
+    },
+    {
+      "rel": "data/nyu_demo/rgb/rgb_00100.jpg",
+      "bytes": 42259,
+      "sha256": "6295b189ce4e4b939f49451f9a6ff0562600eb9ec1d8ab910b0422d6203a4e75",
+      "git_blob_sha": "f5388677b4c9d2ad5e083b0753ae14193c7aaf48"
+    },
+    {
+      "rel": "data/nyu_demo/test_annotations.json",
+      "bytes": 536,
+      "sha256": "f0c46b8b774809059bd2cdc3a1a3c080c687ea6032bb0e02904ea1723bc5b52a",
+      "git_blob_sha": "806fe4635d30b0f810ae5df568365e76551dc7c9"
+    },
+    {
+      "rel": "data/wild_demo/david-kohler-VFRTXGw1VjU-unsplash.jpg",
+      "bytes": 127317,
+      "sha256": "78a2041d375f24e00cabbb88a6b0199230c4d07777a3722b4a04828babbf30f0",
+      "git_blob_sha": "4703e2931365f128562080f1857b6efeb07fc380"
+    },
+    {
+      "rel": "data/wild_demo/jonathan-borba-CnthDZXCdoY-unsplash.jpg",
+      "bytes": 179608,
+      "sha256": "bdb629d9a64804955adeab654b0b9a28298b73603d9eb2ae75c88dc3d106a412",
+      "git_blob_sha": "c7905c09e7334493622faec304dc04f338aee898"
+    },
+    {
+      "rel": "data/wild_demo/randy-fath-G1yhU1Ej-9A-unsplash.jpg",
+      "bytes": 100340,
+      "sha256": "95501e0df0690f6ba0423da026cf33b86952774e1727c5ef4e03ae3b4333c90f",
+      "git_blob_sha": "c39e76927455d8e972874c2af6781e3c836dc313"
+    },
+    {
+      "rel": "data_info/__init__.py",
+      "bytes": 63,
+      "sha256": "d7e9c7a71d16a179a790acb9b2e072562d0b30c41838e502432f91db0ace44a3",
+      "git_blob_sha": "ec8374be5bc1a77bc72386ebf46cb50154217684"
+    },
+    {
+      "rel": "data_info/pretrained_weight.py",
+      "bytes": 660,
+      "sha256": "6ab6f1981b400c4180eb0d7621cc1f03f32cb4c63d5d062a023439aed40239c5",
+      "git_blob_sha": "5e7226f02c486942e715f8f8b7d0287809bd451c"
+    },
+    {
+      "rel": "data_info/public_datasets.py",
+      "bytes": 169,
+      "sha256": "2914a524566f6c5e2ec7485c079b2262f0ae3425e7639925c4b462cb53e44430",
+      "git_blob_sha": "d6b67618fff864bfc42cbf5609e17ad2e041b05d"
+    },
+    {
+      "rel": "hubconf.py",
+      "bytes": 8535,
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119",
+      "git_blob_sha": "a775f2cf135a62f4f9bb4f9578033a8d1180da5c"
+    },
+    {
+      "rel": "media/gifs/demo_1.gif",
+      "bytes": 10693260,
+      "sha256": "f07ee050ca8b76991966f45bb74eae6e61e6b11eeb9466b524c6ab5164711d36",
+      "git_blob_sha": "915775741fd6480ccd12ce3745829ec77b4dfabd"
+    },
+    {
+      "rel": "media/gifs/demo_12.gif",
+      "bytes": 9414756,
+      "sha256": "c1886d6dff7714d015e6b7c004d88d3014057b1cefe1dc5544fa9bedb81383bc",
+      "git_blob_sha": "ebbb2e4464ea7849957575e505db9e1fdc7ede06"
+    },
+    {
+      "rel": "media/gifs/demo_2.gif",
+      "bytes": 9023151,
+      "sha256": "d11e3f9a11374166fc363a3fed17928957de546a548eccc4c7efa4d9317cf4c5",
+      "git_blob_sha": "8d60f1aec56c17beb81db80e0aa17ab804908e3c"
+    },
+    {
+      "rel": "media/gifs/demo_22.gif",
+      "bytes": 6390996,
+      "sha256": "c56b0785a5991126d02b349f8801980f31b2ef7b661cad07be4888ff42dc29d0",
+      "git_blob_sha": "852cedf15ce5e7759d139b848dc5069d0f770d41"
+    },
+    {
+      "rel": "media/screenshots/challenge.PNG",
+      "bytes": 138542,
+      "sha256": "cde4895922d3bd0b4ced1ef80352c2ad154e6225efc403335dff15d42c6974b2",
+      "git_blob_sha": "ccff81751639620f7e9c8ab4aabca53b4bb5e7b2"
+    },
+    {
+      "rel": "media/screenshots/depth_normal.jpg",
+      "bytes": 2994133,
+      "sha256": "b79635e71ff5409592302067bc7b6347db3447f99f62bd6393b674b2556cbac6",
+      "git_blob_sha": "019640da00f3556379b6908980ec540ed8e3015d"
+    },
+    {
+      "rel": "media/screenshots/metrology.jpg",
+      "bytes": 1244515,
+      "sha256": "09e1fb9d08df85528e10a30b147b939f704c712b7e4b823cb54325f4f3cdd8c4",
+      "git_blob_sha": "b2d5631ae20d1bb048b92bd5f40230d106d96e7f"
+    },
+    {
+      "rel": "media/screenshots/page2.png",
+      "bytes": 4347474,
+      "sha256": "c46a332e0f9f868c767f65f70c0fa11ec4f7da2dfe69d47046dff5c37964c171",
+      "git_blob_sha": "00be5bb3c1d6297b0daef043a3a709849105c700"
+    },
+    {
+      "rel": "media/screenshots/pipeline.png",
+      "bytes": 398892,
+      "sha256": "19a7b36e83761aae0ecd27e1215e31fded8c9ef3d308734e690456921703f662",
+      "git_blob_sha": "c88ad643b6bddb6623591284d38c6b216bea1bc5"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/convlarge.0.3_150.py",
+      "bytes": 521,
+      "sha256": "7ba170774f341f74fa77b1dc1e2ccd7ee27b4ae7ce117cf832f943d43d1fe56b",
+      "git_blob_sha": "37b91c80284d6db3df3017ec636f18198e42dc08"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/convtiny.0.3_150.py",
+      "bytes": 520,
+      "sha256": "d022748f8627ddc5d991863a407c5015d01715befa5c884730a49ffc8d790697",
+      "git_blob_sha": "87ae44b2b45b584910319928f0e670190353a3b2"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/test_kitti_convlarge.0.3_150.py",
+      "bytes": 521,
+      "sha256": "319f5212255d210438a71be4fbd2f2fa1c126fcf0e434a4b6ba7ec33578fbba7",
+      "git_blob_sha": "cdd9156b7f2f0921fb01b1adaf9a2a7447332d6e"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/test_nyu_convlarge.0.3_150.py",
+      "bytes": 521,
+      "sha256": "8355e48bbd0c1eff785c7756969b5c8d1f425ac0508f7e72d2b7313d2315d870",
+      "git_blob_sha": "6601f5cdfad07c5fad8b89fbf959e67039126dfa"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/vit.raft5.giant2.py",
+      "bytes": 705,
+      "sha256": "e7dbb20f4f844d0c287b629ad1b8ecca64bcc01f1abd0e76290235969a7897f7",
+      "git_blob_sha": "caf9eb2a8175ff7ec4a294194e582c3fea6b0cd7"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "bytes": 704,
+      "sha256": "ac3d288e13f5330dcbf7ca6be037661ff1c25ff1cbd8785f2afcd2631db20811",
+      "git_blob_sha": "4febdcb2867513008496f394ce8dc513230fb480"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/vit.raft5.small.py",
+      "bytes": 704,
+      "sha256": "7ad9a0605fa4057ac9e07ceda640359d72a99aea7775f99c67ef039555c77e4c",
+      "git_blob_sha": "25eb68cc151f090c7654b7ebbcaf9dfc6a478570"
+    },
+    {
+      "rel": "mono/configs/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "rel": "mono/configs/_base_/_data_base_.py",
+      "bytes": 346,
+      "sha256": "3b80a953883c5cdd9747d92c58aa44af826987ae37e5b38c8399a6139a9bd040",
+      "git_blob_sha": "35f3844f24191b6b9452e136ea3205b7622466d7"
+    },
+    {
+      "rel": "mono/configs/_base_/datasets/_data_base_.py",
+      "bytes": 295,
+      "sha256": "72f67d71f48a1fc65d3bd2635ff9c81ab2c76c7b83719166736a4c8816d0ab11",
+      "git_blob_sha": "b554444e9b75b4519b862e726890dcf7859be0ec"
+    },
+    {
+      "rel": "mono/configs/_base_/default_runtime.py",
+      "bytes": 145,
+      "sha256": "f41b0081fbb66b646e3dbcf4af68058068c48a4f0f2a7cbd126cc7bca486315b",
+      "git_blob_sha": "a690b491bf50aad5c2fd7e9ac387609123a4594a"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/convnext_large.py",
+      "bytes": 571,
+      "sha256": "4977058116697b67c383c5cf70b730a30c8e777e35344437881803f0a4d8359b",
+      "git_blob_sha": "5a22f7e1b53ca154bfae1672e6ee3b52028039b9"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/convnext_tiny.py",
+      "bytes": 502,
+      "sha256": "912048e37a8a506482483d97bf887aa75df37965962c3722332d2526df38b615",
+      "git_blob_sha": "f3068c178a1e9eace4e6bacabb83abadc25a460b"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/dino_vit_giant2_reg.py",
+      "bytes": 177,
+      "sha256": "7dd3481f056821aeda9c3b53924d19a49d9fa6b8cd51b232e1606d0cecda35a8",
+      "git_blob_sha": "3c1ebc96ceaa32ad9310d3b84d55d252be843c46"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/dino_vit_large.py",
+      "bytes": 172,
+      "sha256": "524e92cd2d5575dd891a92cd51c5ea6a67a38bc179fb076d39195e9bd46097ee",
+      "git_blob_sha": "843178ed6e61d74070b971f01148f87fdf2a62cf"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/dino_vit_large_reg.py",
+      "bytes": 176,
+      "sha256": "4f44dd08d0117aacc127948dba90bc075d6eda974fe29dc72d1bbc6f6b33ad53",
+      "git_blob_sha": "25e96747d459d42df299f8a6a1e14044a0e56164"
+    },
+    {
+      "rel": "mono/configs/_base_/models/backbones/dino_vit_small_reg.py",
+      "bytes": 172,
+      "sha256": "fdb13abcc753ad93b43dc6982c3567187f76b17becd923799e43a1e324ec5258",
+      "git_blob_sha": "0c8bd97dccb9cdee7517250f40e01bb3124144e6"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/convnext_large.hourglassdecoder.py",
+      "bytes": 282,
+      "sha256": "90bd8c11110a2206d9cc007e96606fb86dac8e6f592523278d5db681eff0ce56",
+      "git_blob_sha": "f262288c49e7ffccb6174b09b0daf80ff79dd684"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/convnext_tiny.hourglassdecoder.py",
+      "bytes": 277,
+      "sha256": "f7128131ef58fd676e889c2c025a1fb1abfee5b07b85cf18cd574cd70ef02dc9",
+      "git_blob_sha": "c94065133698d296eb422f5fd9717321174e7137"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/dino_vit_giant2_reg.dpt_raft.py",
+      "bytes": 668,
+      "sha256": "1ec07952d18ac5680764e850e86a0161238d3e5c1c33c1b692a6d3dba2d5f1d6",
+      "git_blob_sha": "73702d298c05979bcdf013e9c30ec56f4e36665b"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/dino_vit_large.dpt_raft.py",
+      "bytes": 679,
+      "sha256": "0e60ad842a04dfabb0b063c4db75b699fcb2f768a95b26673d962e8873987a6a",
+      "git_blob_sha": "bd69efefab2c03de435996c6b7b65ff941db1e5d"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "bytes": 667,
+      "sha256": "451a56b64d803b2b3ba4e0a5e5df993bc3ab41e9b503b98372ce6c6041fbbc0f",
+      "git_blob_sha": "26ab6dc090e9cdb840d84fab10587becb536dbb8"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/dino_vit_small_reg.dpt_raft.py",
+      "bytes": 648,
+      "sha256": "2ac99f9ca6212153d1e21c899a9baa5bd47de2f34ef2dbfe8d0ef111e1fb026b",
+      "git_blob_sha": "19466c191e9f2a83903e55ca4fc0827d9a11bcb9"
+    },
+    {
+      "rel": "mono/model/__init__.py",
+      "bytes": 130,
+      "sha256": "a4a236c672cedcbbd5aa8ff2a7717d933cf698d761f9cf23609fec6ccdf4e3f1",
+      "git_blob_sha": "9e1ea3d3e3b880e28ef880083b3c79e3b00cd119"
+    },
+    {
+      "rel": "mono/model/backbones/ConvNeXt.py",
+      "bytes": 12736,
+      "sha256": "28e70d41372757740b9ae52ce899aee9ab1a02af34aadffa5ee7d5327a02e3fd",
+      "git_blob_sha": "f1c4be0e6463ae2b0dda6d20fc273a300afa5ebf"
+    },
+    {
+      "rel": "mono/model/backbones/ViT_DINO.py",
+      "bytes": 54995,
+      "sha256": "b6e1053eb719d9ddcefb45fd79d9db9ab9c5c5107a466d670534ecdcf8eb7df7",
+      "git_blob_sha": "6ba2d39360674924303e6e0354dfb02742ea25c9"
+    },
+    {
+      "rel": "mono/model/backbones/ViT_DINO_reg.py",
+      "bytes": 47046,
+      "sha256": "70963202c3fca5f75e313bfd21223514251b273b132282cf100767f3942ea712",
+      "git_blob_sha": "3fc9fd650d516a90ccaa2a2de805665495cb8e29"
+    },
+    {
+      "rel": "mono/model/backbones/__init__.py",
+      "bytes": 446,
+      "sha256": "0829c3ea579ca5aec2644dc797322384244dc82997724e15b776d9b9e953dd96",
+      "git_blob_sha": "36204128dbb323426b0aa19e52674cbdc3a0f860"
+    },
+    {
+      "rel": "mono/model/decode_heads/HourGlassDecoder.py",
+      "bytes": 10515,
+      "sha256": "d36c01f24afeeca636d388a7679fc1a3271b782f436cd1fbee49c35b9356f0f3",
+      "git_blob_sha": "e084382601e21e6ce5144abbd6a65f563905b659"
+    },
+    {
+      "rel": "mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "bytes": 44427,
+      "sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "git_blob_sha": "9af89f9b4b1878a2e4bcfcd489075c2e97cd8d3d"
+    },
+    {
+      "rel": "mono/model/decode_heads/__init__.py",
+      "bytes": 160,
+      "sha256": "554b15c589b59e11b254d490ee0413dc667d813c77649b5043dc62575cd5334c",
+      "git_blob_sha": "92381a5fc3dad0ca8009c1ab0a153ce6b107c634"
+    },
+    {
+      "rel": "mono/model/model_pipelines/__base_model__.py",
+      "bytes": 619,
+      "sha256": "55936a9ff96bcc5459741979761bc7a0c0ad2e603e0cdeaf39b0a324143de738",
+      "git_blob_sha": "d599c418b3d9677a195fe87d45bb31bf1068fbce"
+    },
+    {
+      "rel": "mono/model/model_pipelines/__init__.py",
+      "bytes": 140,
+      "sha256": "65d89c926bc790bb1afd13602198fb32f57fb30875e1faf76ceed34621ecd4db",
+      "git_blob_sha": "b962a3f858573466e429219c4ad70951b545b637"
+    },
+    {
+      "rel": "mono/model/model_pipelines/dense_pipeline.py",
+      "bytes": 604,
+      "sha256": "574f9db164d3dbce07cb782ff793c609a68700dd0aa937f48439ac5c08de72d5",
+      "git_blob_sha": "1362a11b6b9d45e50795dd705906aa3f79ec4a9a"
+    },
+    {
+      "rel": "mono/model/monodepth_model.py",
+      "bytes": 1150,
+      "sha256": "9f3cdea9a2f01cbfc54ee5049ff17eed22bb011d67158f83dd2efbbf7d3340d9",
+      "git_blob_sha": "0b58b7643ee43f84fd4e621e5b3b61b1f3f85564"
+    },
+    {
+      "rel": "mono/tools/test_scale_cano.py",
+      "bytes": 6003,
+      "sha256": "c3ab64ff0eca1af657e604968ccb69a8d515686d21a2270c94ef445096b66aee",
+      "git_blob_sha": "03cceda05f4f85de26370e877cb8d0e19b65abde"
+    },
+    {
+      "rel": "mono/utils/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "rel": "mono/utils/avg_meter.py",
+      "bytes": 17026,
+      "sha256": "06fed64915985bf96db42f3e57482112c9e9f4dea161382897c7aad55ca6d1a8",
+      "git_blob_sha": "37ed9fffa7aa7be7eea094280102168993912f44"
+    },
+    {
+      "rel": "mono/utils/comm.py",
+      "bytes": 11123,
+      "sha256": "6b4e341d970c6741cfdccf0d302c35896319470db608fce830180eca9193d354",
+      "git_blob_sha": "939e4e175c14563d5d13e77e6b56fd1a34668ebf"
+    },
+    {
+      "rel": "mono/utils/custom_data.py",
+      "bytes": 1192,
+      "sha256": "14d10e68e4a63b885f52367cfa094e6f1774b91aef3cc25b50f72f6f339c19bb",
+      "git_blob_sha": "d9fab47478bc471c51b5454cc15550079ebec21b"
+    },
+    {
+      "rel": "mono/utils/do_test.py",
+      "bytes": 14885,
+      "sha256": "f07195811ca6bb3a4a440b44cf7fa9a1891e9828333d66b7a6a68a219ee31193",
+      "git_blob_sha": "1f0ced11599e3de301dbdd000097be94758a51dd"
+    },
+    {
+      "rel": "mono/utils/logger.py",
+      "bytes": 3794,
+      "sha256": "dbf059d0359b4bf61d32b28f10bc9514cc07467028555ab4f23b2e062b1bb8c1",
+      "git_blob_sha": "ca48c613b2fdc5352b13ccb7d0bfdc1df5e3b531"
+    },
+    {
+      "rel": "mono/utils/mldb.py",
+      "bytes": 1327,
+      "sha256": "c81ae4064da5a902ce6d7b662f22ff6f35f5bd5cd1a71f95120d8bec62c4fc9d",
+      "git_blob_sha": "d74ac53fd0302e2e954105bade52e6de4c18e2f6"
+    },
+    {
+      "rel": "mono/utils/pcd_filter.py",
+      "bytes": 985,
+      "sha256": "8ea9572e5a05b4af51cbe7f87e8b5ac40a7245090ad63798efe2233219e5e98a",
+      "git_blob_sha": "2d26314d806ea961f6bf09d1fb195bf5e364f181"
+    },
+    {
+      "rel": "mono/utils/running.py",
+      "bytes": 2649,
+      "sha256": "d9ecdcec5a65d0e492e8fe3cf557766228b7721fe6f4ec56fe67785dcd7309fd",
+      "git_blob_sha": "8a8b8d2c1f355717f46f784a28ac5f327c01dfc5"
+    },
+    {
+      "rel": "mono/utils/transform.py",
+      "bytes": 17477,
+      "sha256": "aff20c4be0236ec11512f7933cc6972e99619af529207cf19b95aa07d568dcc1",
+      "git_blob_sha": "2af94efe754d6f72325db6fdc170f30fbfb8c2fe"
+    },
+    {
+      "rel": "mono/utils/unproj_pcd.py",
+      "bytes": 2921,
+      "sha256": "3e4e79f0843f944b3e86744af8c03a7d90c57cdb99bec017febc1ddd4288d0a8",
+      "git_blob_sha": "a0986d482a2ec68be1dd65719adec662272b833c"
+    },
+    {
+      "rel": "mono/utils/visualization.py",
+      "bytes": 4826,
+      "sha256": "71b3fddbe453ed275f161c9b6b27e155269c6302df7a25dc8a955ea4cca268f2",
+      "git_blob_sha": "07275030c48aeea062c0041b11ba60d911c14a3f"
+    },
+    {
+      "rel": "onnx/metric3d_onnx_export.py",
+      "bytes": 3715,
+      "sha256": "8989f08350efd3e89501d4db0112ef0bea424e3e9f0e87943753313691577000",
+      "git_blob_sha": "d37ef4319014df2c86065765ba2ed692366149e8"
+    },
+    {
+      "rel": "onnx/test_onnx.py",
+      "bytes": 2880,
+      "sha256": "544f4a8762d69bbf492e6b93a2b17b9ae6a1356388de2da1c4436f31770a5807",
+      "git_blob_sha": "4422f8a2c1a58c97e3a46068565d8025c241b7fa"
+    },
+    {
+      "rel": "requirements_v1.txt",
+      "bytes": 138,
+      "sha256": "22180d2313f9fc3439b3df8ca709e31b4232fc4a69760de7b51afd641aad1119",
+      "git_blob_sha": "faf9a32bd1a19b92296b5c3f8eaab88b36ba425c"
+    },
+    {
+      "rel": "requirements_v2.txt",
+      "bytes": 187,
+      "sha256": "e2504d01b211471b42fd7e4c09b6ba899fe9edbacf6adec6a6b66938686d7a95",
+      "git_blob_sha": "7467132b4c1bf148c9cf96ea9accdfb26144bec5"
+    },
+    {
+      "rel": "test.sh",
+      "bytes": 601,
+      "sha256": "2aacb29857e50a42f53b07a3655d1dcccfe66506364d173f10c5256e004596d1",
+      "git_blob_sha": "f11160d4fca3cfe973c803522593b7f1ccaca68c"
+    },
+    {
+      "rel": "test_kitti.sh",
+      "bytes": 274,
+      "sha256": "b7467b05572d5acd73cc9d3cf5ad5d73577b002763fc26df21033502281cc310",
+      "git_blob_sha": "98c43e39aa2b308b727eb2baa195a96a1a499cf3"
+    },
+    {
+      "rel": "test_nyu.sh",
+      "bytes": 260,
+      "sha256": "6c4f630a4ce9a37cca8694570764bfc6674cf78ff164911cdcd93a72053eb48c",
+      "git_blob_sha": "a39f96398427f2e44c3ab227f62f9afc41d6145f"
+    },
+    {
+      "rel": "test_vit.sh",
+      "bytes": 214,
+      "sha256": "d269b37379c41f9acebb4f90ad626f8285c6a6f7af409cb828b554370fa0505c",
+      "git_blob_sha": "e75c3e93de0a50fe5c330ec9bf909097a6f08b22"
+    },
+    {
+      "rel": "training/README.md",
+      "bytes": 1377,
+      "sha256": "ebe8d816107c4323362e137a2968e17395479e7a907133ba51c709fe23758d51",
+      "git_blob_sha": "0a7b0bd3684ebb97f63b41471f3f238c2bd32f2b"
+    },
+    {
+      "rel": "training/data_server_info/__init__.py",
+      "bytes": 63,
+      "sha256": "d7e9c7a71d16a179a790acb9b2e072562d0b30c41838e502432f91db0ace44a3",
+      "git_blob_sha": "ec8374be5bc1a77bc72386ebf46cb50154217684"
+    },
+    {
+      "rel": "training/data_server_info/annos_test_matterport3d_example.json",
+      "bytes": 546,
+      "sha256": "e86d7cb141deaa4b9863dd2b7f8479655709d51f242bce03e6e99e6f4be277af",
+      "git_blob_sha": "af406d511362c8d83c858580bf12633749fb00c7"
+    },
+    {
+      "rel": "training/data_server_info/annos_test_normal_nyu_example.json",
+      "bytes": 1683,
+      "sha256": "cdd65f877b1abd78502bbd3b9774f1e86c73dc80ad9a7d2e788f8f775b7cc86d",
+      "git_blob_sha": "5e71142338f5cba3667b4fefbd7fffcaa298b676"
+    },
+    {
+      "rel": "training/data_server_info/pretrained_weight.py",
+      "bytes": 729,
+      "sha256": "1ead41da27dca6bc3c16be13087f93e7815663dd6acb62d7fb707b5fd736cacd",
+      "git_blob_sha": "2752bd7411cef60e23c8deedccb167803df72f37"
+    },
+    {
+      "rel": "training/data_server_info/public_datasets.py",
+      "bytes": 16133,
+      "sha256": "73e840a3633e309aa1b83e42735336f1f31f3b997d5bd6c6d15440d99977f2d7",
+      "git_blob_sha": "0e316d85883628cc48d7dcf8fda81e1b4e1202a1"
+    },
+    {
+      "rel": "training/kitti_json_files/eigen_test.json",
+      "bytes": 186882,
+      "sha256": "a467b94f862d1e13820c10c3dec5031d6a1b773a5976bb92e02732170a978dd1",
+      "git_blob_sha": "7559eb42e17e408309fb243233bda52f825a05d2"
+    },
+    {
+      "rel": "training/kitti_json_files/eigen_test.txt",
+      "bytes": 35546,
+      "sha256": "84f2bc3f87b6bc263e93930cd7ad374f8f9149edc40bf08b31b13b2f2db8321b",
+      "git_blob_sha": "182df59d693af490a771a9176e0d954d95233c45"
+    },
+    {
+      "rel": "training/kitti_json_files/eigen_train.json",
+      "bytes": 12796181,
+      "sha256": "bdcea908b033b307c33392ce158c604a0738078c9c887580c52a2699c2aa2b15",
+      "git_blob_sha": "e52e42675518b28036a86d82073a9b0bb0fb4cfd"
+    },
+    {
+      "rel": "training/kitti_json_files/eigen_train.txt",
+      "bytes": 1999161,
+      "sha256": "9a22a94741424246ef06b808fc56e4eb37e7c7e21032d9a1adf6c5ee0469fc9b",
+      "git_blob_sha": "29436090331412175bd89c309782768dc14ef564"
+    },
+    {
+      "rel": "training/kitti_json_files/eigen_val.txt",
+      "bytes": 78455,
+      "sha256": "3c9935dd5938c41ba3834cff12772b441783862c0534bfb26fcde729dafdb718",
+      "git_blob_sha": "26a8732a3a148dce7a9eef509f29c9bc2714ce1d"
+    },
+    {
+      "rel": "training/kitti_json_files/generate_json.py",
+      "bytes": 2440,
+      "sha256": "eca921497c15dc0e4a7c309637c640ba42fe8912b9289c18fb00de526ebaf6e7",
+      "git_blob_sha": "da28d91ea1feceef258c2265a9de23359049b703"
+    },
+    {
+      "rel": "training/mono/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.giant2.kitti.py",
+      "bytes": 4226,
+      "sha256": "91fe4cc10aa86df22a932406c9b0d9107be26102ab3174d37607f4e928987f16",
+      "git_blob_sha": "5b6a7202ddeb34e49ca742282bab357bba5dc26d"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.giant2.nyu.py",
+      "bytes": 4504,
+      "sha256": "e2b2c7afc2a646e84537440159c97f07b5032638ea936457c7a7bc53de955812",
+      "git_blob_sha": "c59676811aec1a05917adeca2c1f43a46e9bec88"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.giant2.py",
+      "bytes": 43640,
+      "sha256": "5d7ed548426cee2d8b57c82402a03264003737cf6e7f89b49fead8fc809d5a3f",
+      "git_blob_sha": "fef5d6177d199f8f2c5b03b254b74d47d6c34bc2"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.large.kitti.py",
+      "bytes": 4225,
+      "sha256": "f07bde18860d4ed7e2c309a932aaa36a46ce9da146979e478b62b6fb3a16b9ff",
+      "git_blob_sha": "7870c9760a79a2634542a188cccfe7fc0571bab1"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.large.py",
+      "bytes": 43625,
+      "sha256": "f79213783d1170c143a2cbf447ca8c9b8b4e5a1fe2432fed056252cdb34bf388",
+      "git_blob_sha": "645d24d76e2078bb3806b0bc9d68c0b4add814aa"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.small.py",
+      "bytes": 43625,
+      "sha256": "79cb4d844f08ad71be66a2499a308b4eb2f8ef0c68f3aee22f36e8a55eb36b59",
+      "git_blob_sha": "484e1df74f598faf4bd08c9698ab512f92ebb3f5"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.small.sanity_check.py",
+      "bytes": 42416,
+      "sha256": "5fd106288682ea6ee51738acf07f6f4a50ae1e4ee15b93e7dfd945efff1b0267",
+      "git_blob_sha": "a882418caeeb35a0778c526ed81a771306a775db"
+    },
+    {
+      "rel": "training/mono/configs/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/7scenes.py",
+      "bytes": 3583,
+      "sha256": "bb1b700768dec9d46b5f5740766575bedb95cb61581bf4e4c25f5181a1b63c4b",
+      "git_blob_sha": "2d2e42a9bdd2c9e8c2ffb8a6f637c617e978b875"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/_data_base_.py",
+      "bytes": 292,
+      "sha256": "3ce23f5bb8eff8166540beeb2e0c690dc061f23a7b4c1d2ee7b3cb16e622eceb",
+      "git_blob_sha": "7f1d339ad89ad1c9a0fec6c5bee928a2462b2eb1"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/argovers2.py",
+      "bytes": 3138,
+      "sha256": "73a1c2fb6319d57dbb56941388014d6394fd91a1b9d3eaf762522d6d602c1b53",
+      "git_blob_sha": "158841701fa3cf2ddbb8092f9d6992dc760d4735"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/blended_mvg.py",
+      "bytes": 3383,
+      "sha256": "335ad186f12f8e8bba3073138930f616766dd1777b9a7a91f67ba0be0e4e1449",
+      "git_blob_sha": "4ee6b8dce6c132dc9293dc7319517e56fe315f43"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/cityscapes.py",
+      "bytes": 3395,
+      "sha256": "d5b7fe5a02bb5966f3b0747f5467548f63dfef5e3113d178d0c44aa23e0a1415",
+      "git_blob_sha": "ff3721ce6751bf159cc929351902730adccedec0"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/ddad.py",
+      "bytes": 3444,
+      "sha256": "b36f5b8fea4582cb9b06f0ff52384f10d648057143a1d93faab8e5c8faf2acd8",
+      "git_blob_sha": "522dc563fb639d3254eb116f247aecdce0e79c7d"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/ddad_any.py",
+      "bytes": 3332,
+      "sha256": "687f886373fcca72187b73d8987a21ea5d87f11eb90b64f401de2658b07b14b1",
+      "git_blob_sha": "3dc24d84df26cd4b778f21ab65775abd453853d1"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/diml.py",
+      "bytes": 3304,
+      "sha256": "52296393258aeaea9699ca19d726acc8f6507843b071cd17d5a354d2d21c3452",
+      "git_blob_sha": "71fe2a7741f9a0871b184eb722f3906bd7860202"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/diml_indoor.py",
+      "bytes": 3214,
+      "sha256": "2e160b43801bcd160fcaa55074b651403f6126092978cf66d7f1574b75f5029b",
+      "git_blob_sha": "6c2721effc6317c402c289a803dfa591b440970e"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/diode.py",
+      "bytes": 3389,
+      "sha256": "22ec6d9b432d4333a0f363b2d071c6a475c83a0f2d8fbadb8ed21ad2c4f37455",
+      "git_blob_sha": "c6a8de74e6f3101e7d9a39721dbe6eb132c68eed"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/drivingstereo.py",
+      "bytes": 3409,
+      "sha256": "6dea6d57a3f2c08a2325c28f0454c5e9aa7209747f7025491363c218b33404ec",
+      "git_blob_sha": "2f770a7adb692a28dd621eb174361cd46e13d20a"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/dsec.py",
+      "bytes": 3373,
+      "sha256": "e635f69713235ac8aed62136d5e44973074f1a86659c5bcd180d62eeecf94ca1",
+      "git_blob_sha": "5d1bbcd05f6194f583d39d7b26193860f966faf8"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/eth3d.py",
+      "bytes": 3416,
+      "sha256": "40864aaf8566e300f0857dfb26353228af75bd6ce9f0a3284bac9edfc7f2e92e",
+      "git_blob_sha": "660db92b301cf48f800b1551ed268b7169dec64a"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/hm3d.py",
+      "bytes": 3293,
+      "sha256": "9c40f6962497f9a0138c380bc43175343f77c94b35d1f0e724cce83dc4d19278",
+      "git_blob_sha": "c800a616668066b1a8feeaeffdadd6a0e4cd2298"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/hypersim.py",
+      "bytes": 3005,
+      "sha256": "afc694b51a4f980e92b58cf509fcc8e19780abf2c48c0f566ad358a9f75fd444",
+      "git_blob_sha": "b6cf4e2ad272d110f2b4b275a31b0683cefc715e"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/ibims.py",
+      "bytes": 3372,
+      "sha256": "9771d7092d24881d31023dae71e3a3acb51c34350f025f0f4d5b474c97c61829",
+      "git_blob_sha": "0851029095748b90bf9d1b6c4b7cd03b17f2f345"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/kitti.py",
+      "bytes": 3371,
+      "sha256": "5d285ff19c438ab106cd9cc781167c1bb4769e741ca1fb6018f912c73c6b37c8",
+      "git_blob_sha": "8d68f806bea0333c6b6eecfb99c9384adfef2023"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/leddarpixset.py",
+      "bytes": 3491,
+      "sha256": "924487edefe9180ce94fca03ce3969cfc5c18e6fea75096044b690cd334a5423",
+      "git_blob_sha": "27eb3e6d04397792c9a5ed3e3afc9b6c5b827b00"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/lyft.py",
+      "bytes": 3396,
+      "sha256": "04bd5636540701c7bdd71089319db7a6bb25f1e6784bdb16ea4db9d2aef42d95",
+      "git_blob_sha": "5917ec9fb5e820834257615267360337c7530b4b"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/lyft_any.py",
+      "bytes": 3383,
+      "sha256": "1e58a27d42aa782c463a190a7e1f3c13e7764ef6d0033ad3bc6a14f536291c95",
+      "git_blob_sha": "5775563e8462922168257b240b0d2c2ce9d22214"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/mapillary_psd.py",
+      "bytes": 3429,
+      "sha256": "80e4c6690582d7868298c2f10d4ae21cf12d001a94c69aca5216e1c57963148a",
+      "git_blob_sha": "744e246d4e7832fd60eb9695d33dd873205cae5d"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/matterport3d.py",
+      "bytes": 3327,
+      "sha256": "71d7a58249e52c67816fb94bd7ad96fb2d122f2e62338fc97d0b6c7954421887",
+      "git_blob_sha": "c1d3b5a8da21720850b77705c9488a5adef5d741"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/nuscenes.py",
+      "bytes": 3393,
+      "sha256": "98c750a9e15da44470e051ec841f830f9bbc3113431c4b762311eb3a1e9600e7",
+      "git_blob_sha": "5d47b3937d501929c1efdba25030ef4e6744feb4"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/nuscenes_any.py",
+      "bytes": 3391,
+      "sha256": "020008228662e46cfc89580d415c32d5a2cc53cb8393e01ad12abd63af1f3047",
+      "git_blob_sha": "8b1af09a1eecd9a3db11bc9596a439cecc4e58fb"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/nyu.py",
+      "bytes": 3344,
+      "sha256": "6e45d2ff6d6c7aa7972ae87450016ac2e8120b307bb6989e728abe7110240177",
+      "git_blob_sha": "f5e81e07893e30daf05ba5ce644e3c9ab6000330"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/pandaset.py",
+      "bytes": 3371,
+      "sha256": "757dde95f80c836302c3f6774eb372e16a4a84203c9e5454322d3e1aad741339",
+      "git_blob_sha": "0e59ed9fc9a9676f42abe2e6665ce6a801e4f9d0"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/replica.py",
+      "bytes": 3300,
+      "sha256": "fa4a7a4de5f4f4e7a6dce972d804ba885be91c13028f410db025b78df15baaff",
+      "git_blob_sha": "2bd849813ea0894875aee1c51d36a9bd269ab3d6"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/scannet.py",
+      "bytes": 3372,
+      "sha256": "15d54467929a9830eea229c0595e6025a858ea4b6a3f1bd581900f062d527ed5",
+      "git_blob_sha": "7ce2390bb1e4444cf6c24d75f4a04ef1407fd1b1"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/scannet_all.py",
+      "bytes": 3383,
+      "sha256": "02af852b895ddc9d7b29ce8fb7b8e342760162c6e3a16f567f86c370d7397138",
+      "git_blob_sha": "fa1e025af160f18b617a1a6c8c02fd1c5f773655"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/taskonomy.py",
+      "bytes": 3308,
+      "sha256": "840bd301271fb6bf16c6541e4961c5b04178d46e9f7697dabf99a081adedac21",
+      "git_blob_sha": "b7ad3f1053ae4556905403b76a8d810c4d787afc"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/uasol.py",
+      "bytes": 3116,
+      "sha256": "780b0d6fd0d68127676dc52dcd229a07023f7ae12c8e604ba88f3282fafeea79",
+      "git_blob_sha": "b80efd1c60ccf252d92ce946728ba8c5fc0a83a9"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/vkitti.py",
+      "bytes": 3372,
+      "sha256": "322a9ccf9219d5177d6c6794f004834696c9589943471c993f17a063bec75039",
+      "git_blob_sha": "c2f7b5b39d0ab7237f0b64fecc4190fa8ac497d5"
+    },
+    {
+      "rel": "training/mono/configs/_base_/datasets/waymo.py",
+      "bytes": 3356,
+      "sha256": "295251b5bc8a535caceb73631f83d92e9a140ff366f064ddedc796af1df71d75",
+      "git_blob_sha": "1ac9d95fc15a9be431a044d0fad7d391b6d6ab10"
+    },
+    {
+      "rel": "training/mono/configs/_base_/default_runtime.py",
+      "bytes": 786,
+      "sha256": "40a821e8229d74c351be7962b44e6ce647d6a47cb7c6c8e7b3450eca6909ee30",
+      "git_blob_sha": "4815a5c0c6bce22f2b8a499f033de971f146aeda"
+    },
+    {
+      "rel": "training/mono/configs/_base_/losses/all_losses.py",
+      "bytes": 1086,
+      "sha256": "91cca1fe4e9953e66dd8c484f7eb30b3b40dff937e3a3295136e0a5433345701",
+      "git_blob_sha": "c0ad857e7b2f859e72f9bf4556a97e3d6bed6326"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/backbones/dino_vit_giant2_reg.py",
+      "bytes": 177,
+      "sha256": "7dd3481f056821aeda9c3b53924d19a49d9fa6b8cd51b232e1606d0cecda35a8",
+      "git_blob_sha": "3c1ebc96ceaa32ad9310d3b84d55d252be843c46"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/backbones/dino_vit_large_reg.py",
+      "bytes": 176,
+      "sha256": "4f44dd08d0117aacc127948dba90bc075d6eda974fe29dc72d1bbc6f6b33ad53",
+      "git_blob_sha": "25e96747d459d42df299f8a6a1e14044a0e56164"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/backbones/dino_vit_small_reg.py",
+      "bytes": 172,
+      "sha256": "fdb13abcc753ad93b43dc6982c3567187f76b17becd923799e43a1e324ec5258",
+      "git_blob_sha": "0c8bd97dccb9cdee7517250f40e01bb3124144e6"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/encoder_decoder/dino_vit_giant2_reg.dpt_raft.py",
+      "bytes": 668,
+      "sha256": "1ec07952d18ac5680764e850e86a0161238d3e5c1c33c1b692a6d3dba2d5f1d6",
+      "git_blob_sha": "73702d298c05979bcdf013e9c30ec56f4e36665b"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "bytes": 667,
+      "sha256": "451a56b64d803b2b3ba4e0a5e5df993bc3ab41e9b503b98372ce6c6041fbbc0f",
+      "git_blob_sha": "26ab6dc090e9cdb840d84fab10587becb536dbb8"
+    },
+    {
+      "rel": "training/mono/configs/_base_/models/encoder_decoder/dino_vit_small_reg.dpt_raft.py",
+      "bytes": 648,
+      "sha256": "2ac99f9ca6212153d1e21c899a9baa5bd47de2f34ef2dbfe8d0ef111e1fb026b",
+      "git_blob_sha": "19466c191e9f2a83903e55ca4fc0827d9a11bcb9"
+    },
+    {
+      "rel": "training/mono/configs/_base_/schedules/schedule_1m.py",
+      "bytes": 209,
+      "sha256": "a019a071ad6362c3bae5ae1d439ae2ccc8f13a68f4adb00775dbfd00cc1883df",
+      "git_blob_sha": "7b347f377bbe5751d8b24919d0e3eeb98b7d3900"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/ddad.vit.dpt.raft.py",
+      "bytes": 2825,
+      "sha256": "0e202218caa404f7314f6db2b2d0a33c23778785e12980be4a4a54a82a7ff25e",
+      "git_blob_sha": "8451071744d8f0cd0b1e7dcaaf4a7ce48f9157b0"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/diode.vit.dpt.raft.py",
+      "bytes": 1865,
+      "sha256": "41ddee4147f31edef85bd57fd9142c46b5b6011b4db5d94c668547a635e3e938",
+      "git_blob_sha": "88e40fac91d4c36f87dbfe9394cfbdbfaea4dbc1"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/eth3d.vit.dpt.raft.py",
+      "bytes": 2052,
+      "sha256": "7be369a68f0fc415b40eefd803c94052a146608838ff8bd1dc6bc3b9f67e0f19",
+      "git_blob_sha": "a65ee5d3c1320916f0200fe071cc6e586f128ae5"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/ibims.vit.dpt.raft.py",
+      "bytes": 2112,
+      "sha256": "8753907e4af69efe3f463457994e5af450a846b372a3754eca90f58d8c754d30",
+      "git_blob_sha": "411ed1b5777d272816c7846564f23256e7dca222"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/kitti.vit.dpt.raft.py",
+      "bytes": 2276,
+      "sha256": "2d6fabb760b379ec7098a18df12bfc04286bd1a277e7aff97a3ae534b490b47d",
+      "git_blob_sha": "da061756ccdad39dd5a5748a21d94ba97bef8b66"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/nuscenes.vit.dpt.raft.py",
+      "bytes": 2781,
+      "sha256": "b45c0afc007cb3785726fa120cd7d50040524b1641bd6b8cbf62797e225e5256",
+      "git_blob_sha": "c81aebc1da766c67db1fc3cda9421a3fe4f6ade3"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/nyu.vit.dpt.raft.py",
+      "bytes": 1689,
+      "sha256": "f418378fd675f1af6dc2a6763d993011493bff754f83d2ae73b05f7476ead116",
+      "git_blob_sha": "2ea74f5c4515c3db46fcba51c645aa4f847c7bcd"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/replica.vit.dpt.raft.py",
+      "bytes": 1792,
+      "sha256": "2ba283b457c8b49a6066b21ec293afaad80ed270ba3cc6c2f290ee07e638bea6",
+      "git_blob_sha": "6843c92ed9877e5e24b49b575f0780b81f1583b7"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit/scannet.vit.dpt.raft.py",
+      "bytes": 1808,
+      "sha256": "e431e93709d8b99b075b0c008074836c0048ceca238c222831ccdf4939705474",
+      "git_blob_sha": "6524815ef16402869c57a9df1423a8b442c7fb25"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/ddad.vit.dpt.raft.py",
+      "bytes": 2826,
+      "sha256": "1eb5301e1f1ed049244a3b9baed580e29ce21e1109db95df080ace5fd98c9ed0",
+      "git_blob_sha": "e10f34d62e9c26180cac7ecdc681f8f961a3a162"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/diode.vit.dpt.raft.py",
+      "bytes": 1795,
+      "sha256": "0ccf65da38e954a322775667f197217b5ea0778a5287617cc3359f02cc102f2b",
+      "git_blob_sha": "cf203976e9ac02fa32bd501e61908c876ec74b7c"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/dsec.vit.dpt.raft.py",
+      "bytes": 2827,
+      "sha256": "110237d922b5cc329865cef404bdb769f481a01c06452476bc6d20607eed64f4",
+      "git_blob_sha": "a12a59c3aea652bd85ae036c1991355c92bff757"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/eth3d.vit.dpt.raft.py",
+      "bytes": 2053,
+      "sha256": "9cafbead3be5d6fa228c68b4c2cd2d67ad5c180bc746e1c71bc95cca7dda4e30",
+      "git_blob_sha": "4fb27193e8e6a608a7a187866455150824b4fbf8"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/ibims.vit.dpt.raft.py",
+      "bytes": 2113,
+      "sha256": "35d1f1e0dde99aba5e7dde02a9fda6a507276126c568947b8677e6935d05f001",
+      "git_blob_sha": "4523fb35a715bfb7f4c63ca93e3ea4e934eb604c"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/kitti.vit.dpt.raft.py",
+      "bytes": 2278,
+      "sha256": "a55af08f41f1d3fdab37bb0f0749667d0f3fb6385331dd9f86529d6d2012c716",
+      "git_blob_sha": "4807c46ff1478c956991222a7389742b50f0560f"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/nuscenes.vit.dpt.raft.py",
+      "bytes": 2782,
+      "sha256": "3b5d26ab7b49fd60c56d6445f8102543c44137f4567d9eeca6d16f9d65e1f2aa",
+      "git_blob_sha": "d783a19447b03af1a62c92b0898d182c25fb641e"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/nyu.vit.dpt.raft.py",
+      "bytes": 1690,
+      "sha256": "4ffbec594093682c79a1b722c9655b2b7169ebe334b9e3ef8d23ccc4a2506b64",
+      "git_blob_sha": "80f75f8a6c6a009294e8818f9d8d780e54f1f277"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/scannet.vit.dpt.raft.py",
+      "bytes": 1809,
+      "sha256": "fac7e2c28a8eaa080bd2661c64627a38823ec9d5119ee7387b32fefbfd939631",
+      "git_blob_sha": "7c556d92cc21cb877251d378e66f1cc0475f0430"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_giant2/waymo.vit.dpt.raft.py",
+      "bytes": 2832,
+      "sha256": "219b314890203d52869f39ed88f5e2875bd05f9512d0b32ba0c66988b7d1d4b9",
+      "git_blob_sha": "a0a425d3f89f6215d51528a783e6a2b47f22480c"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/ddad.vit.dpt.raft.py",
+      "bytes": 2825,
+      "sha256": "837570a594a94ae45f0cb858151cd15a091ee6de2cf81096b63b8456c26afdd2",
+      "git_blob_sha": "ebf6bb7cc90136cfe0485d8c6171816f12d98e40"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/diode.vit.dpt.raft.py",
+      "bytes": 1880,
+      "sha256": "65bb7da3f83bb407eb3c70630955d71b1c4bc8e7c95dceceea99ec6ea49d5bba",
+      "git_blob_sha": "545911616d74712e121196d1893c383a3ec233da"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/eth3d.vit.dpt.raft.py",
+      "bytes": 2052,
+      "sha256": "445638bb940f6e19e378cffdf7b5107b259b676ed3a7489d7531086bfbfb3c00",
+      "git_blob_sha": "1a9c035bc3fcdfb64657a2ef459d193f2c8c530c"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/ibims.vit.dpt.raft.py",
+      "bytes": 2095,
+      "sha256": "9f10c659a78b87f845fd190fb5427a0e3607e42e5e8134d56d1cd19c885c497d",
+      "git_blob_sha": "e4732570df5f65bfed63f0459a50719d44efff77"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/kitti.vit.dpt.raft.py",
+      "bytes": 2259,
+      "sha256": "f60d06f09cdbe9903b0c132aa71ac91f9813cc70a45834cb8ec7506e70a9070d",
+      "git_blob_sha": "8966f5c7dcfcc791bbc192231337b8e36f509eb2"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/nuscenes.vit.dpt.raft.py",
+      "bytes": 2780,
+      "sha256": "8b212a135647d6417a205b9a6d335004c6af692757825a450ec5690c3a15361b",
+      "git_blob_sha": "25f9e065b05930e6512e373b7068e1bbf9ae9d8a"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/nyu.vit.dpt.raft.py",
+      "bytes": 1672,
+      "sha256": "ae8f5a324db88d44f08225dd60b306500b4cdcfdf37de113d57960ea993de05e",
+      "git_blob_sha": "c3f23c53a158d103bb479967c7981e81f8c9fd49"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/scannet.vit.dpt.raft.py",
+      "bytes": 1808,
+      "sha256": "5387ecd375919c0b1a45c7e2d58fb3a5684b72c13042b9b9cbeed30b0752c2ed",
+      "git_blob_sha": "dc5308680a13074702799c67a06160f1c007dca4"
+    },
+    {
+      "rel": "training/mono/configs/test_configs_vit_small/taskonomy.vit.dpt.raft.py",
+      "bytes": 2112,
+      "sha256": "9d9810f03e754246864c1922e84019cb9250dded092deb4747b9d327a0dde409",
+      "git_blob_sha": "638c945b32bc013f7d13cdf636587fe2643ece39"
+    },
+    {
+      "rel": "training/mono/datasets/__base_dataset__.py",
+      "bytes": 27032,
+      "sha256": "75d787f5fc6e5e4b76d420104a881303ec8c522348205d6fa35eaef142bc63d6",
+      "git_blob_sha": "a138759c4a022fe403a4b15fc80e436a71ed49b1"
+    },
+    {
+      "rel": "training/mono/datasets/__init__.py",
+      "bytes": 1699,
+      "sha256": "0c6313b71f06480bce3e0a4ec3a4e95add2e429ac6e3fdb048621d69e87fcb9e",
+      "git_blob_sha": "e3a5259334828e21090987a151d2ff83fc0d2fc3"
+    },
+    {
+      "rel": "training/mono/datasets/any_dataset.py",
+      "bytes": 7025,
+      "sha256": "c135aab4bcdea7e52219893dcd4981e1c56421b9cb4a7230ea0f09c37977f124",
+      "git_blob_sha": "63b3f82e48afb7fec3b4c2592df72bb24287de5f"
+    },
+    {
+      "rel": "training/mono/datasets/argovers2_dataset.py",
+      "bytes": 876,
+      "sha256": "9c88ff03649af705b8b4469f90fc2d05a82818ed90b34428bfde4b482cc64de9",
+      "git_blob_sha": "4963a07bb905a2d5df67ca95358bdcc8bbdd91be"
+    },
+    {
+      "rel": "training/mono/datasets/blendedmvg_omni_dataset.py",
+      "bytes": 905,
+      "sha256": "864b7f3c7c0f2ff4f02e29bb2f2fa6c37716cea10494b2202de62bbe0fbf9883",
+      "git_blob_sha": "b96d7fd9865f8940c5ecc410485bcd88e0436e45"
+    },
+    {
+      "rel": "training/mono/datasets/cityscapes_dataset.py",
+      "bytes": 865,
+      "sha256": "96fb1ff697ed539c0dd7ffb09130fffac698d3d397e8d4b42a72c24fe1e7b808",
+      "git_blob_sha": "61d1bddfe85708ad49f968d35767b41990a131ca"
+    },
+    {
+      "rel": "training/mono/datasets/ddad_dataset.py",
+      "bytes": 1013,
+      "sha256": "bc46eed5f28007a83613eab356d889d8d94bd55603980316e82bc257cc4136d3",
+      "git_blob_sha": "d913c034cb9d00aac295c68346e1a9ad3ad4117c"
+    },
+    {
+      "rel": "training/mono/datasets/diml_dataset.py",
+      "bytes": 1687,
+      "sha256": "c82739240481a09aebcdd3a0d8f30df6ae32bbacb9784f25ff1078a3e5b822f0",
+      "git_blob_sha": "098e7f4d5dfe3cce074ccac320f48ac8f72e9180"
+    },
+    {
+      "rel": "training/mono/datasets/diode_dataset.py",
+      "bytes": 13023,
+      "sha256": "426c1fbbf257e31031c4f1cf922e99a6f4125bdaeda9fc5fceae7389782fe8a9",
+      "git_blob_sha": "d18541b4029474b3e99b5ee5dcde89d040a5e806"
+    },
+    {
+      "rel": "training/mono/datasets/distributed_sampler.py",
+      "bytes": 13458,
+      "sha256": "beb6f00a0af0dd3d1d1eb934673c8fbbfee8c0f2b5d5dc248125e9c1f4a2f0c0",
+      "git_blob_sha": "da3639964f4391b7b5b308bec64ca1be1f2d45e4"
+    },
+    {
+      "rel": "training/mono/datasets/drivingstereo_dataset.py",
+      "bytes": 877,
+      "sha256": "81de18516809c5906e45343e00904d0dcf50ec8048b8c0cb495252a83a26f0b8",
+      "git_blob_sha": "ce6aa79bb3054a4909e87fe010ef22fe01736b71"
+    },
+    {
+      "rel": "training/mono/datasets/dsec_dataset.py",
+      "bytes": 859,
+      "sha256": "46bb5658a15b57955c6aa472e12a8cfb90aaa65908aa45998f53b58f0c5fe8aa",
+      "git_blob_sha": "1029c71c69c2af99a0c9c119332a4d7ee29dd366"
+    },
+    {
+      "rel": "training/mono/datasets/eth3d_dataset.py",
+      "bytes": 4128,
+      "sha256": "75434bf75389b2a41c8f768e81633170ba5813b3ad08d8b2a6f7a65d46bb7b00",
+      "git_blob_sha": "380e6fd6138ea05841efd886cbafd75d0f37adb7"
+    },
+    {
+      "rel": "training/mono/datasets/fisheye_dataset.py",
+      "bytes": 2594,
+      "sha256": "78dce2eaf6ac03331b952585d9aae2d0a742f7f4e4514daa0ea30c7264d31283",
+      "git_blob_sha": "a9c2d75851451ea3a6dbd5e5c79cc44a80fe7402"
+    },
+    {
+      "rel": "training/mono/datasets/hm3d_dataset.py",
+      "bytes": 1067,
+      "sha256": "e26ddcc4efdd03708155c8537855e0ed19eb0f0b05b4c6e59b620c5d083ac8fd",
+      "git_blob_sha": "d143453c9e16f19bfe778a1d358207e9bd2b8d57"
+    },
+    {
+      "rel": "training/mono/datasets/hypersim_dataset.py",
+      "bytes": 5693,
+      "sha256": "1894d8544249ba3fadae00f5d9c0cd8a9e019973ea1c2fec14350bd564e4ee1b",
+      "git_blob_sha": "d255fceb11f7e93edf910431f73942367ce0642c"
+    },
+    {
+      "rel": "training/mono/datasets/ibims_dataset.py",
+      "bytes": 3682,
+      "sha256": "15335d5b56bb564bdea13d79ccc18e6e87ec1c2c4e0ea9476fc38dccd29c5209",
+      "git_blob_sha": "50a5318ce7e75afa18df9ec19360bd50eada5fdf"
+    },
+    {
+      "rel": "training/mono/datasets/kitti_dataset.py",
+      "bytes": 8859,
+      "sha256": "1e64527776d3275057581213ceab2d514cf2a1514dc1230b1975a1e67a888aca",
+      "git_blob_sha": "2962f712ab348af8d2d3b46a2412b565a5446be2"
+    },
+    {
+      "rel": "training/mono/datasets/lyft_dataset.py",
+      "bytes": 871,
+      "sha256": "016ee63427685ba5b09d3ab5927eaccb0e9d7cbdcd09fc346be14645ceb2e48b",
+      "git_blob_sha": "e007d100917b0023291a07c9fb4a9427244c7cbe"
+    },
+    {
+      "rel": "training/mono/datasets/mapillary_psd_dataset.py",
+      "bytes": 1029,
+      "sha256": "7213f6cd8b15e01fc40a2e1325dcd6816e4becb8909b210f4b40c3b9bb86311a",
+      "git_blob_sha": "1f10899c7c7362d005ffeacf79aa2ce288fff1d4"
+    },
+    {
+      "rel": "training/mono/datasets/matterport3d_dataset.py",
+      "bytes": 1647,
+      "sha256": "f6353375cc482f66409bba5dd5222501119208616c91a92857342ef74a38a7c5",
+      "git_blob_sha": "27afefb74ed699ed9756f3ce3c3c5530a3dcb94b"
+    },
+    {
+      "rel": "training/mono/datasets/nuscenes_dataset.py",
+      "bytes": 879,
+      "sha256": "544bcb0625865432fd6b37ed4ff3bd4307f3c933f5d113e405b8294d4d793738",
+      "git_blob_sha": "b72e1c073bad9aeb8b237a1d8c33eec55fefe0be"
+    },
+    {
+      "rel": "training/mono/datasets/nyu_dataset.py",
+      "bytes": 9112,
+      "sha256": "7a12d190db02cb2a848433c3b83b312ea948480a01b4e9a06df5083337f7dd57",
+      "git_blob_sha": "3ad8a1a0b84a1abd1dd055f385db2322fa8d0cb9"
+    },
+    {
+      "rel": "training/mono/datasets/pandaset_dataset.py",
+      "bytes": 976,
+      "sha256": "84fa8d1622b145f6fcb5acb3d46c6ab2c241a1d2c53ebe779f37e65c83e9e063",
+      "git_blob_sha": "a6defd829967d97650f6131764da275828579a25"
+    },
+    {
+      "rel": "training/mono/datasets/replica_dataset.py",
+      "bytes": 1077,
+      "sha256": "a9f871c2466392ac9bcf62b6c897f9c7727f47757c2c7f67d5c824e7fe7a2637",
+      "git_blob_sha": "c8873ca896c49274195162050ae6c657480f2613"
+    },
+    {
+      "rel": "training/mono/datasets/scannet_dataset.py",
+      "bytes": 14013,
+      "sha256": "62a7ac59633faca46fb9e24b3d539ef95ba3d56dff547d7cafd45e8c00b45c5f",
+      "git_blob_sha": "8e51cd3fa686656c2d1c5d535358d0d9c471a35d"
+    },
+    {
+      "rel": "training/mono/datasets/taskonomy_dataset.py",
+      "bytes": 8949,
+      "sha256": "134b2ae70d8389ca8c31a717f7c72745d587159bde2a516bb6a66a77d89db714",
+      "git_blob_sha": "0f0982108f45fc77a72dcd05287841de5c89a9d4"
+    },
+    {
+      "rel": "training/mono/datasets/uasol_dataset.py",
+      "bytes": 1459,
+      "sha256": "824eff7f5e03da304f56385fa2b3cef510da7292bbb58ff8d046e5dc8f12c13f",
+      "git_blob_sha": "e1ccab0240a747bbf070f02d4da60f7703975dd3"
+    },
+    {
+      "rel": "training/mono/datasets/virtualkitti_dataset.py",
+      "bytes": 1795,
+      "sha256": "643820c099fa0d5faa354c4dd6e2dc87191658091de835b69a30be193f9bb9bd",
+      "git_blob_sha": "1ac6b76fc97cabfb46d8c814767af27cb062b6d6"
+    },
+    {
+      "rel": "training/mono/datasets/waymo_dataset.py",
+      "bytes": 848,
+      "sha256": "f0bcdcc1d809988ad7ac0842203397b910bf43fe55df5b6e5abe49b872514b49",
+      "git_blob_sha": "5611f5a3dbf2bdf266f506f3cbb762dc8d7e1025"
+    },
+    {
+      "rel": "training/mono/model/__base_model__.py",
+      "bytes": 11513,
+      "sha256": "1123d1cb5ad78438f543318ae350680ea3d28242559c6e086084f36394121e38",
+      "git_blob_sha": "f0b483c8cc179d2aeac9fafda68ec945123b6229"
+    },
+    {
+      "rel": "training/mono/model/__init__.py",
+      "bytes": 168,
+      "sha256": "7b8a62a027df5f6dd768bb7755c363d257df98b2ea7ec9310566f07e71b60ee2",
+      "git_blob_sha": "ca10dcd6c22af3f61832b621c0b05663d629e0b8"
+    },
+    {
+      "rel": "training/mono/model/backbones/ConvNeXt.py",
+      "bytes": 12739,
+      "sha256": "7c875e1140a994628872fb59b50b00bffbcec69c29250d3d0a14884b862fcc4c",
+      "git_blob_sha": "04d92cdad9c8cbbe9fd448c6c72ecf12e5ec7614"
+    },
+    {
+      "rel": "training/mono/model/backbones/ViT_DINO.py",
+      "bytes": 54995,
+      "sha256": "b6e1053eb719d9ddcefb45fd79d9db9ab9c5c5107a466d670534ecdcf8eb7df7",
+      "git_blob_sha": "6ba2d39360674924303e6e0354dfb02742ea25c9"
+    },
+    {
+      "rel": "training/mono/model/backbones/ViT_DINO_reg.py",
+      "bytes": 38435,
+      "sha256": "782f9b649bd11d24e4ed422af342e184317f6e368dce8b4adfee9aeac6ad3d53",
+      "git_blob_sha": "3c276241977df73493585078b4d0295a32dbfea2"
+    },
+    {
+      "rel": "training/mono/model/backbones/__init__.py",
+      "bytes": 184,
+      "sha256": "0c6bcf62f2d40825bfca23e0b0838a14a432f104ee44fcde65a426830f81905c",
+      "git_blob_sha": "51577dcd12c51c16191080c0c5954e0bcd3896c4"
+    },
+    {
+      "rel": "training/mono/model/criterion.py",
+      "bytes": 1851,
+      "sha256": "aee459835ca600b6271afe1c41413846dede9643cb19af09e04b4444077881e0",
+      "git_blob_sha": "4185dcc1912b249bd2bd3a77ff078103867e8501"
+    },
+    {
+      "rel": "training/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "bytes": 33067,
+      "sha256": "30c5d81f06b07b0b485b2ad4b106b10a887fc7bb4dbb5fbab96b084c81279c73",
+      "git_blob_sha": "06dee21536ef05194be5eff07c64d7ec5e3459f3"
+    },
+    {
+      "rel": "training/mono/model/decode_heads/__init__.py",
+      "bytes": 93,
+      "sha256": "8ceedea312d76594e775294f4a15964be03668db0e6b645be3ee55dbd163aebd",
+      "git_blob_sha": "2453f91e124ca62437be8b9d3b7e270ceae34384"
+    },
+    {
+      "rel": "training/mono/model/losses/AdabinsLoss.py",
+      "bytes": 4817,
+      "sha256": "e832d003ffa04bdc2f406161fcb1f09852a1d2bc5cb0a6f3e8703458199d779c",
+      "git_blob_sha": "9dbed8db40a1d8062c3d9872581fc83339f4bbef"
+    },
+    {
+      "rel": "training/mono/model/losses/ConfidenceGuideLoss.py",
+      "bytes": 2568,
+      "sha256": "f6be2d4d1a07ca07196f51704b7a8d7341bc42d1ff417c2d4985eca1c50ebf9c",
+      "git_blob_sha": "6c1d9cc4829e44423850826a3ef5bccfc7a49835"
+    },
+    {
+      "rel": "training/mono/model/losses/ConfidenceLoss.py",
+      "bytes": 926,
+      "sha256": "d5daebd1211d3311a1ae115fb621218136a8a1b000b66c2b7530df3904c73507",
+      "git_blob_sha": "c8ed6d7d7eadf0e1c1be009f88335a04a04e3d2d"
+    },
+    {
+      "rel": "training/mono/model/losses/GRUSequenceLoss.py",
+      "bytes": 9103,
+      "sha256": "a635356d9df6d776606a041a39e36bd39703f91b89d8521ea94138da2fb45393",
+      "git_blob_sha": "7d829f2874dc007260be349955b7bea62debd8ae"
+    },
+    {
+      "rel": "training/mono/model/losses/Gradient.py",
+      "bytes": 4292,
+      "sha256": "fcc8b28e7783629ee3df4f4f7db52f521d6e6fc006a63acfa367fedec306c7fe",
+      "git_blob_sha": "1b730917acc4dde1b74000b40e2a2aceb81d2aed"
+    },
+    {
+      "rel": "training/mono/model/losses/HDNL.py",
+      "bytes": 4124,
+      "sha256": "2a6cd32d902059cb9f4c711ce94c75b08bd7803fc83bd1633df4775ebf9a8e84",
+      "git_blob_sha": "db2e95caf1f87e836581d41517e1db21935eda08"
+    },
+    {
+      "rel": "training/mono/model/losses/HDNL_random.py",
+      "bytes": 4874,
+      "sha256": "f309df2fbb74f7a1a4129f94b5a4f5bb1a04e5a04fb2de80dddaa1cb922c5303",
+      "git_blob_sha": "d0b40eb0d0652ceb012ae89bf78db8f2d763720a"
+    },
+    {
+      "rel": "training/mono/model/losses/HDSNL.py",
+      "bytes": 3627,
+      "sha256": "3382dca100e503c9812a0df9c4eeabf237d914a135c569eee036e6d8520132c2",
+      "git_blob_sha": "250671b5ad52faf8f3d1e5bac41ad898ca3967a2"
+    },
+    {
+      "rel": "training/mono/model/losses/HDSNL_random.py",
+      "bytes": 10741,
+      "sha256": "d2db95f5742e2eb9f1795a9082d03c525516d37f6bf0f66c3692094583e85574",
+      "git_blob_sha": "28dde298f3e3c44a1980cc513a2f8e191d5de2bb"
+    },
+    {
+      "rel": "training/mono/model/losses/L1.py",
+      "bytes": 2647,
+      "sha256": "04221a488893bed0ca3bbb44229a59ccaa3ac5a6ec8f9663a9cfd879c0194c1a",
+      "git_blob_sha": "9646e85f313432153cfd10ff746dd61817347be0"
+    },
+    {
+      "rel": "training/mono/model/losses/NormalBranchLoss.py",
+      "bytes": 31938,
+      "sha256": "4f1884b93b152bf4b00c1f4417b644b8dacbfa557c2ff7f43bb5ddf51686b36f",
+      "git_blob_sha": "f4ecd2ec2ebb0ab10fc4305b80bb2e527b220c6d"
+    },
+    {
+      "rel": "training/mono/model/losses/NormalRegression.py",
+      "bytes": 15921,
+      "sha256": "2dfd312db0c6fcbdec385c8aa39c3a38fc22b3ba7b6534757acefd7cad720b9e",
+      "git_blob_sha": "00b7169de6f6c5753224d0cdd6ad57d5397505a6"
+    },
+    {
+      "rel": "training/mono/model/losses/PWN_Planes.py",
+      "bytes": 13104,
+      "sha256": "24f64843246c4cd5b1d630e5684cd1e5ccc60f9e17ab0631809fc4ed65ebcbda",
+      "git_blob_sha": "2151f677d0fb0a5a920c13a5b46eda4a0f768f92"
+    },
+    {
+      "rel": "training/mono/model/losses/Ranking.py",
+      "bytes": 15574,
+      "sha256": "10e951742f11c3152cb7cd0a9662ca6092ee4736a4f4a30ddbb917b524f9a3ba",
+      "git_blob_sha": "9cb1eecb2ea5fbfe3b73aa49afa54adf574cb02e"
+    },
+    {
+      "rel": "training/mono/model/losses/Regularization.py",
+      "bytes": 661,
+      "sha256": "a224bc43139bf581efcb0352a27f66439bdeadf4430b8e1fbde78e210e59fa68",
+      "git_blob_sha": "f493d1117e707b786e63a92482aabbaf8c79643b"
+    },
+    {
+      "rel": "training/mono/model/losses/SSIL.py",
+      "bytes": 1959,
+      "sha256": "cf6c99ca8e45abfda03577313530d9b8f50d7d3362ab36cf85894f2dc8386252",
+      "git_blob_sha": "38135d3a90481f209eaac22aa8cbe1cac8a80990"
+    },
+    {
+      "rel": "training/mono/model/losses/ScaleAlignLoss.py",
+      "bytes": 2315,
+      "sha256": "06d5774db0bb02618f65f77d4ca67228f9be5252f9aad17a6186971b5e0bb141",
+      "git_blob_sha": "ded0509e2d8f971a0093eca3819dbdb6b96f43e7"
+    },
+    {
+      "rel": "training/mono/model/losses/ScaleInvL1.py",
+      "bytes": 1520,
+      "sha256": "2ee663e4a8ac4e5dd8157274c56abe438e1883d2be641353de2beed95de613ae",
+      "git_blob_sha": "fad42d54015a6102c41ae5292141bb0f9d5d3f5e"
+    },
+    {
+      "rel": "training/mono/model/losses/SiLog.py",
+      "bytes": 1530,
+      "sha256": "3729276349c68c0fbc29cafc125c4db393cdd7da82913b27ca7806599db39559",
+      "git_blob_sha": "ce336f9f9a5aea56ad78b29861afb4ae3b0302e6"
+    },
+    {
+      "rel": "training/mono/model/losses/SkyRegularization.py",
+      "bytes": 3373,
+      "sha256": "da741022cd629b66358fafa31622dc1736719c3797c018cb95de9f9693903ab0",
+      "git_blob_sha": "a548fcc1aefae0cd201cb99956acfee3bb2bc1a7"
+    },
+    {
+      "rel": "training/mono/model/losses/VNL.py",
+      "bytes": 11644,
+      "sha256": "3fa8617c313e03693ed2a1cdd77d4dc1d98c963e7e52f966dfb1279c567e7d43",
+      "git_blob_sha": "111b1ae690709417b2d9d15e6d930bfa69d4465e"
+    },
+    {
+      "rel": "training/mono/model/losses/WCEL.py",
+      "bytes": 7234,
+      "sha256": "0198f92098d57cad871f65f787634b1cd18c7eeb2c29157278e36e34daf6beba",
+      "git_blob_sha": "a60c5e60a0f4500b42163645e60d3554d119adfa"
+    },
+    {
+      "rel": "training/mono/model/losses/__init__.py",
+      "bytes": 1561,
+      "sha256": "89e3872cc8e74dba9f8f93dbf6dfded015f60db66a9779441e01600feea490ef",
+      "git_blob_sha": "97df57e14af288adea69c2a2df237da7ae580787"
+    },
+    {
+      "rel": "training/mono/model/losses/depth_to_normal.py",
+      "bytes": 12323,
+      "sha256": "1c2687e251f3c402dc99f099a7233e0775dbbb348d0dabd5ddece08e5581dbe0",
+      "git_blob_sha": "c0b1892ad35a964673bd550e73c255ca530fc2dd"
+    },
+    {
+      "rel": "training/mono/model/losses/photometric_loss_functions.py",
+      "bytes": 10876,
+      "sha256": "5b867cb86e4711988bca12e8b716a1212b02522572afee46e66fe899763225af",
+      "git_blob_sha": "5f6d16723574e0d1e48ad4c3b398a3dbb8939ca1"
+    },
+    {
+      "rel": "training/mono/model/model_pipelines/__init__.py",
+      "bytes": 140,
+      "sha256": "7a567a63c6977cac4cfd70f7cfee0061f790ba95aa692cfd0e8340dc63e29aa1",
+      "git_blob_sha": "33a66928649795f129f58cdf8aec685d0a5bb77d"
+    },
+    {
+      "rel": "training/mono/model/model_pipelines/dense_pipeline.py",
+      "bytes": 966,
+      "sha256": "cec69a292267fc68924e23990d248248c256a5b90d4b723879f3b0d277fe8731",
+      "git_blob_sha": "6cf7d653e0f19ab30fded0d548a282c539861d7d"
+    },
+    {
+      "rel": "training/mono/model/model_pipelines/model_pipeline.py",
+      "bytes": 1138,
+      "sha256": "e61654f744b042480f0ae363cec742e8393b6fb80c66fa9f683c36ed84c00e2a",
+      "git_blob_sha": "8e294d9505db1bf0134adb106f239d0df2a59c76"
+    },
+    {
+      "rel": "training/mono/model/monodepth_model.py",
+      "bytes": 1293,
+      "sha256": "abfaf1448ec83beb96e5111d3f4eb69f46fe57fb14c054d04e603e0331afee6b",
+      "git_blob_sha": "4ffa0acb5d20fad5df78b33c818f0c30e290b235"
+    },
+    {
+      "rel": "training/mono/scripts/test_scripts/test_vit.sh",
+      "bytes": 158,
+      "sha256": "396a17fe7749ecab461862e363e2afc6030359a5a9b73c76f271cf90e1c58a57",
+      "git_blob_sha": "df29a45aa90b02d45be580030ab739cf11611381"
+    },
+    {
+      "rel": "training/mono/scripts/train_scripts/train.sh",
+      "bytes": 197,
+      "sha256": "c160a7379a9357af9d6b8de3913c4969f24987599caae56851974bc29ffd9ffe",
+      "git_blob_sha": "35d7552397944839584a0ca6928a12b8306c63f3"
+    },
+    {
+      "rel": "training/mono/scripts/train_scripts/train_kitti.sh",
+      "bytes": 235,
+      "sha256": "1029c48b9cc1d076e42da1013dd10f707d9525e366f0f2529b6a7b686c85c56e",
+      "git_blob_sha": "8c56d3d768b8b658d0a1b2fdc6bba6a0e4c8f75e"
+    },
+    {
+      "rel": "training/mono/tools/test.py",
+      "bytes": 6334,
+      "sha256": "37f59c0520dd8f41f213fddc5541a75652678599308bd921509cf154e860ca50",
+      "git_blob_sha": "688a2b3d00c33ebdeefd5e4ef4530c2a3d46bd2b"
+    },
+    {
+      "rel": "training/mono/tools/train.py",
+      "bytes": 9736,
+      "sha256": "7e32d2aeb4d51c6be680ac43e471a40b972128885d737e4bc01061af0e557481",
+      "git_blob_sha": "598bb79567e632dbea5dae593a8d5c74ad66668e"
+    },
+    {
+      "rel": "training/mono/utils/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "rel": "training/mono/utils/avg_meter.py",
+      "bytes": 20785,
+      "sha256": "d27ed83db34cd8aaf930e6a9d56bdf3175d8bfb377a034c92e08f0b006ab9c03",
+      "git_blob_sha": "d7321dd4e222dd0d02d84cc5aa31bdeab24007be"
+    },
+    {
+      "rel": "training/mono/utils/comm.py",
+      "bytes": 11914,
+      "sha256": "dbd3cbe1da528be9c5ebe1d558bdbde50dfc43b7e7d1a83722c86c0d1177a032",
+      "git_blob_sha": "11227f5c569c0839f9c1239a046b389a29272a65"
+    },
+    {
+      "rel": "training/mono/utils/db.py",
+      "bytes": 1352,
+      "sha256": "50bc45e714f58757719a7160def96a3587979a2f0afc9ed07da5b71fc0dacd60",
+      "git_blob_sha": "164d9acaccd9cab6b4b3def26bc78cc692acd0a5"
+    },
+    {
+      "rel": "training/mono/utils/do_test.py",
+      "bytes": 9126,
+      "sha256": "f3c9d807361f89f8aff08971841d8c680e33b227d12ffb7c4c5fa46c54f3b56a",
+      "git_blob_sha": "e34fc2daabf21bd3774fcdeb5f08a749a1f57823"
+    },
+    {
+      "rel": "training/mono/utils/do_train.py",
+      "bytes": 21414,
+      "sha256": "050d567a22184b0538baacb290852cda773fb04545970bc42a1fae162a34e584",
+      "git_blob_sha": "69bb1e009418d832ae27033f0a7532a003492e59"
+    },
+    {
+      "rel": "training/mono/utils/inverse_warp.py",
+      "bytes": 11890,
+      "sha256": "ec7b59447ef7c183eec769df50af089f495bb6bffae6be5905da09f889d5bc92",
+      "git_blob_sha": "9511b77e99988a9e9f7a2af766d5bedc47ce1aa7"
+    },
+    {
+      "rel": "training/mono/utils/logger.py",
+      "bytes": 3670,
+      "sha256": "d239e9136dc71adc0e2f17ef9b04eee403aacbc0a4521fa08a2b56c17c741b50",
+      "git_blob_sha": "2a15e3233680d964551e98d95db83e9194a943ed"
+    },
+    {
+      "rel": "training/mono/utils/logit_to_depth.py",
+      "bytes": 2334,
+      "sha256": "fce6ef5cbd078e4ff8eee180fbdd768da76ca8b63c632a61a619fdf034d8f78f",
+      "git_blob_sha": "30dea4ee2d5a1b2da715e0900c65ae8c309f6eb5"
+    },
+    {
+      "rel": "training/mono/utils/misc.py",
+      "bytes": 2417,
+      "sha256": "38a41f21d0b598563277da268fc037865ead23141d7aba861540c7644ad9bccb",
+      "git_blob_sha": "2947c2cd92cd91f8f5f8e1b692edd49f4bfad58f"
+    },
+    {
+      "rel": "training/mono/utils/pcd_utils.py",
+      "bytes": 2000,
+      "sha256": "4933fe1dccb952d856a9fe50f06c16ef7fe061c9429b42afb9b119ee64460122",
+      "git_blob_sha": "8d409764e35fda2a3fda2c771a4cfdc613e603da"
+    },
+    {
+      "rel": "training/mono/utils/raindropper/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "rel": "training/mono/utils/raindropper/config.py",
+      "bytes": 673,
+      "sha256": "f3a123f3bff9bc3d5d934cd70c522c09885221f4f72e820411aaecdc750a3c6d",
+      "git_blob_sha": "06b1f211dbcbe37699b96ac2e2bbf60e79c24dda"
+    },
+    {
+      "rel": "training/mono/utils/raindropper/dropgenerator.py",
+      "bytes": 16722,
+      "sha256": "702085d91c6c969536d6188c503b95bcb5a8325fe3577aff10dc4e7af11876dc",
+      "git_blob_sha": "39b72c787316520af784655a61962b08b039c6c1"
+    },
+    {
+      "rel": "training/mono/utils/raindropper/raindrop.py",
+      "bytes": 6873,
+      "sha256": "e59e20e107e58b198f9e096ea40533ae5b23b41c7bc7fa632d1ac514d65fc7b6",
+      "git_blob_sha": "ae7b66c1f5f1a6280b8898b06206131c8a6e289f"
+    },
+    {
+      "rel": "training/mono/utils/raindropper/raindrop_augmentor.py",
+      "bytes": 849,
+      "sha256": "a10f9a9893e835cc13f0dcd94cd863a4733eb55250cc8af987ab113e2062c344",
+      "git_blob_sha": "c160359cee94128cb644ee886231d3d45367fdb0"
+    },
+    {
+      "rel": "training/mono/utils/running.py",
+      "bytes": 14045,
+      "sha256": "ab2e10d69e22ff1d87257c956d8e38302d4573444e3a68b46d1585104538fbec",
+      "git_blob_sha": "df0efc0b29b8c72411fd27bb374c2782f513c51f"
+    },
+    {
+      "rel": "training/mono/utils/transform.py",
+      "bytes": 68583,
+      "sha256": "a4e419d02c5eea7a566a81817e2e5c82f4c59837e1ff39d0ce8b0a3bfccf58b4",
+      "git_blob_sha": "40f1956fb5505159367f8927e5f7d044c10f42d1"
+    },
+    {
+      "rel": "training/mono/utils/unproj_pcd.py",
+      "bytes": 2855,
+      "sha256": "9894cc3e7a3558ceb224a64bc6d0ba2020841ae87914cf714962639d20ab0a8a",
+      "git_blob_sha": "6f2b67167c138a12884b36bdb18cc86cbdca2de6"
+    },
+    {
+      "rel": "training/mono/utils/visualization.py",
+      "bytes": 7523,
+      "sha256": "29631ae8c1c1a71378c8ba08320c6dceb1e7ad040b17536d50784d76b76ebb90",
+      "git_blob_sha": "1ed4c734981b416396c111fa0615bc0f4a6e8a7d"
+    },
+    {
+      "rel": "training/mono/utils/weather_aug_utils.py",
+      "bytes": 31120,
+      "sha256": "087108398f99fd9485e036f2099b96971468e02879387a65cece72e0b5a1a7c7",
+      "git_blob_sha": "ec4aa31a666878782f75fed7868436a7b9c08332"
+    },
+    {
+      "rel": "weight/placeholder.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "rel": "weight/\u65b0\u5efa\u6587\u672c\u6587\u6863.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  ],
+  "weights": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "bytes": 1647972663,
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972"
+    }
+  ],
+  "model_deserialized": false,
+  "hub_HEAD": "eb5b6fac0dc155e4e52f576e304fbf11655ff339",
+  "baseline_entry": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487"
+    }
+  ],
+  "identity_text": {
+    "evidence/official-source-lock.json": "[\n  {\n    \"path\": \"source/DROID-SLAM\",\n    \"repository\": \"https://github.com/princeton-vl/DROID-SLAM\",\n    \"commit\": \"2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99\",\n    \"archive\": \"https://codeload.github.com/princeton-vl/DROID-SLAM/tar.gz/2dfd39f0dcad44012ca7bbb8aa70b55edbfa9c99\",\n    \"archive_sha256\": \"8a942b151558ef293cd5eff260eaeef0ae88f576128776c91397eb7b1d9bdecf\",\n    \"stale_gitmodule_entries\": []\n  },\n  {\n    \"path\": \"source/DROID-SLAM/thirdparty/lietorch\",\n    \"repository\": \"https://github.com/princeton-vl/lietorch.git\",\n    \"commit\": \"7f687644fcea81ab337831749445224503c1290d\",\n    \"archive\": \"https://codeload.github.com/princeton-vl/lietorch/tar.gz/7f687644fcea81ab337831749445224503c1290d\",\n    \"archive_sha256\": \"3278df158ff2749c47485cac19da2aeda1cc5efc08fa3af94ce7911ea6bb90ea\",\n    \"stale_gitmodule_entries\": []\n  },\n  {\n    \"path\": \"source/DROID-SLAM/thirdparty/lietorch/eigen\",\n    \"repository\": \"https://gitlab.com/libeigen/eigen.git\",\n    \"commit\": \"824272cde8ca2541e8b67b0887f5ded92b128d1f\",\n    \"archive\": \"https://gitlab.com/api/v4/projects/libeigen%2Feigen/repository/archive.tar.gz?sha=824272cde8ca2541e8b67b0887f5ded92b128d1f\",\n    \"archive_sha256\": \"d3d83bc94632d6c70b74e6dd15e6ee616ab22c0ef06196c418e09b1e37908006\"\n  },\n  {\n    \"path\": \"source/DROID-SLAM/thirdparty/pytorch_scatter\",\n    \"repository\": \"https://github.com/rusty1s/pytorch_scatter.git\",\n    \"commit\": \"6cf77c420f837a427b0d57965e414d68c1bd89ec\",\n    \"archive\": \"https://codeload.github.com/rusty1s/pytorch_scatter/tar.gz/6cf77c420f837a427b0d57965e414d68c1bd89ec\",\n    \"archive_sha256\": \"88e115b675a3226f70d6309f6b9814350a811b00ee3f3048f53b801c5ce64fac\"\n  },\n  {\n    \"path\": \"source/DROID-W\",\n    \"repository\": \"https://github.com/MoyangLi00/DROID-W\",\n    \"commit\": \"c3414af6047d06bafc1a6645d09f23247f3b2cdc\",\n    \"archive\": \"https://codeload.github.com/MoyangLi00/DROID-W/tar.gz/c3414af6047d06bafc1a6645d09f23247f3b2cdc\",\n    \"archive_sha256\": \"b5c9de72dd5a2cb7ad2c00274150cdf2b05bbabda7887b362a7abc234f11ee13\",\n    \"stale_gitmodule_entries\": [\n      \"thirdparty/eigen\",\n      \"thirdparty/evaluate_3d_reconstruction_lib\",\n      \"thirdparty/fit3d\"\n    ]\n  },\n  {\n    \"path\": \"source/DROID-W/thirdparty/diff-gaussian-rasterization-w-pose\",\n    \"repository\": \"https://github.com/rmurai0610/diff-gaussian-rasterization-w-pose.git\",\n    \"commit\": \"43e21bff91cd24986ee3dd52fe0bb06952e50ec7\",\n    \"archive\": \"https://codeload.github.com/rmurai0610/diff-gaussian-rasterization-w-pose/tar.gz/43e21bff91cd24986ee3dd52fe0bb06952e50ec7\",\n    \"archive_sha256\": \"5bf95a6be4169ac0f98785e50944e3c4d91795d0b30d4d64d56fd06e6c2af75e\",\n    \"stale_gitmodule_entries\": []\n  },\n  {\n    \"path\": \"source/DROID-W/thirdparty/diff-gaussian-rasterization-w-pose/third_party/glm\",\n    \"repository\": \"https://github.com/g-truc/glm.git\",\n    \"commit\": \"5c46b9c07008ae65cb81ab79cd677ecc1934b903\",\n    \"archive\": \"https://codeload.github.com/g-truc/glm/tar.gz/5c46b9c07008ae65cb81ab79cd677ecc1934b903\",\n    \"archive_sha256\": \"d93f55fe6bc9dd9159dfde2c6181c504e15ce2d220e20e3ca653012154e9696b\"\n  },\n  {\n    \"path\": \"source/DROID-W/thirdparty/lietorch\",\n    \"repository\": \"https://github.com/princeton-vl/lietorch.git\",\n    \"commit\": \"0fa9ce8ffca86d985eca9e189a99690d6f3d4df6\",\n    \"archive\": \"https://codeload.github.com/princeton-vl/lietorch/tar.gz/0fa9ce8ffca86d985eca9e189a99690d6f3d4df6\",\n    \"archive_sha256\": \"4d169d6b5ddc7e5c0975749575cf150ddcd646954a27bb0d66bcca6ecec2ab9f\",\n    \"stale_gitmodule_entries\": []\n  },\n  {\n    \"path\": \"source/DROID-W/thirdparty/lietorch/eigen\",\n    \"repository\": \"https://gitlab.com/libeigen/eigen.git\",\n    \"commit\": \"824272cde8ca2541e8b67b0887f5ded92b128d1f\",\n    \"archive\": \"https://gitlab.com/api/v4/projects/libeigen%2Feigen/repository/archive.tar.gz?sha=824272cde8ca2541e8b67b0887f5ded92b128d1f\",\n    \"archive_sha256\": \"d3d83bc94632d6c70b74e6dd15e6ee616ab22c0ef06196c418e09b1e37908006\"\n  },\n  {\n    \"path\": \"source/DROID-W/thirdparty/simple-knn\",\n    \"repository\": \"https://github.com/camenduru/simple-knn.git\",\n    \"commit\": \"da5f991fb5b4146531b3912d8084162cf1485701\",\n    \"archive\": \"https://codeload.github.com/camenduru/simple-knn/tar.gz/da5f991fb5b4146531b3912d8084162cf1485701\",\n    \"archive_sha256\": \"0c99384d390db03223fec97adf27b5ca382eca1b853ff7922873ec1f637b032f\"\n  }\n]\n",
+    "source/DROID-W/configs/droid_w.yaml": "verbose: True\ngui: False\nstride: 1            # use every X image from the dataset \nmax_frames: -1       # use the first X images from the dataset, -1 means using all\nsetup_seed: 43\nfast_mode: True\ndevice: \"cuda:0\"\nsave_gt_poses: True\ndroidvis: False\ndebug: False\n\ntraj_filler:\n  use_dino_features: False\n\nmapping:\n  enable: False\n  online_plotting: False # render and save images online\n  full_resolution: False # if using the full resolution for mapping, but we always keep downsampled size for tracking\n  final_refine_iters: 20000 # iterations of final refinement, it will be forced to be 3000 if fast_mode is on\n  eval_before_final_ba: True\n  deform_gaussians: True # apply transformation on Gaussians to account for loop closure and BA\n  pcd_downsample: 32 # downsamples the unprojected depth map --> point cloud\n  pcd_downsample_init: 16 # first frame downsampling factor is smaller\n  adaptive_pointsize: True\n  point_size: 0.05\n  Training:\n    ssim_loss: True # use SSIM in mapping (online and refinement)\n    alpha: 0.5 # weight (between 0 and 1) of the rgb loss compared to depth loss\n    init_itr_num: 500\n    init_gaussian_update: 100\n    init_gaussian_reset: 500\n    init_gaussian_th: 0.005\n    init_gaussian_extent: 30\n    mapping_itr_num: 50\n    gaussian_update_every: 1500 # we prune and densify once every 1500 iterations with an offset of 500.\n    gaussian_update_offset: 500\n    gaussian_th: 0.7 # used in densify and prune - minimum opacity to be kept\n    gaussian_extent: 1.0 # used in densify and prune. We prune points with larger 3d scale than 0.1 * gaussian_extent\n    gaussian_reset: 20001\n    size_threshold: 20 # used in densify and prune. We prune points that have a larger radius than 20 in screen space\n    window_size: 10\n    edge_threshold: 4\n    rgb_boundary_threshold: 0.01\n    spherical_harmonics: False # kept for reference, but not tested when True\n    lr:\n      cam_rot_delta: 0.003\n      cam_trans_delta: 0.001\n  opt_params:\n    position_lr_init: 0.00016\n    position_lr_final: 0.0000016\n    position_lr_delay_mult: 0.01\n    position_lr_max_steps: 30000\n    feature_lr: 0.0025\n    opacity_lr: 0.05\n    scaling_lr: 0.001\n    rotation_lr: 0.001\n    percent_dense: 0.01\n    lambda_dssim: 0.2\n    densify_grad_threshold: 0.0002\n\n  model_params:\n    sh_degree: 0\n    \n  pipeline_params:\n    convert_SHs_python: False\n    compute_cov3D_python: False\n\n  uncertainty_params:\n    activate: True\n    # If True, use precomputed uncertainties from depth_video (self.video.uncertainties)\n    # instead of the MLP network for GS mapping. activate can be False when this is True.\n    vis_uncertainty_online: False\n    mapping_loss_type: \"normalized_l1\"\n    train_frac_fix: 0.3 # in the range of 0-1\n    ssim_window_size: 7\n    ssim_median_filter_size: 5\n    reg_stride: 2\n    opacity_th_for_uncer_loss: 0.9\n    uncer_depth_mult: 0.2\n\ntracking:\n  pretrained: ./pretrained/droid.pth\n  buffer: 350     # maximum number of keyframes that can be stored\n  beta: 0.75      # beta * Distance(R|t) + (1-beta) * Distance(I|t), refer to droid_kernels.cu:frame_distance_kernel\n  warmup: 12       # use the first X keyframes for bootstrapping the tracker\n  max_age: 50     # remove edges in the graph if they have been updated more than X times\n  mono_thres: 0.1 # in DSPO, remove the edges if the average disp error of the aligned mono disp is larger than X*average_disp\n                  # it can be set to False for keeping all edges.\n  motion_filter:\n    thresh: 3.0     # add new frame as potential keyframe if avg flow >= X pixels\n  multiview_filter:\n    thresh: 0.01    # eta in eq(6) of the paper\n    visible_num: 2  # points need to be viewed by at least X cameras\n  frontend:\n    enable_loop: False      # whether to enable loop closure\n    enable_online_ba: False # whether to enable online bundle adjustment\n    keyframe_thresh: 3.0   # remove keyframe if it is too close to the last keyframe, i.e. avg flow < X pixels\n    thresh: 16.0           # only consider edge with avg flow < X pixels\n    window: 25             # local ba window size\n    radius: 2              # build edges within local window [i-radius, i]\n    nms: 1                 # r_local in GO-SLAM paper\n    max_factors: 75        # maximum number of edges in local ba\n    enable_opt_dyn_mask: True # whether to enable dynamic mask optimization\n  backend:\n    final_ba: True # whether to enable final global bundle adjustment in the end\n    ba_freq: 20    # do online bundle adjustment every X keyframes\n    thresh: 25.0   # only consider edge with avg flow < X pixels\n    radius: 1      # build edges within local window [i-radius, i]\n    nms: 5         # r_global in GO-SLAM paper\n    # used for loop detection\n    loop_window: 25    # N_local in GO-SLAM paper\n    loop_thresh: 25.0  # only consider edge with avg flow < X pixels\n    loop_radius: 1     # build edges within local window [i-radius, i]\n    loop_nms: 10       # r_loop in GO-SLAM paper\n    # Don't set {metric_depth_reg} to False unless you want to do some ablation study\n    # If it's False, the depth for mapping will be processed following how Splat-SLAM correct scale.\n    #                See \"get_w2c_and_depth\" in mapper.py for detail.\n    metric_depth_reg: True # whether to use metric depth to guide disparity in BA, always set to True\n    normalize: False    # whether to normalize disps after each BA iter\n  uncertainty_params:\n    feature_dim: 384\n    activate: True\n    visualize: True\n    gamma_data: 0.1\n    gamma_prior: 0.05\n    gamma_depth: 0.001 # default 0.001\n    lr: 0.1\n    weight_decay: 0.002\n    gba_lr: 0.1\n    gba_weight_decay: 0.002\n    enable_affine_transform: True\n    enable_bidirectional_uncer: False\n    \n  force_keyframe_every_n_frames: 9 # set to negative value if you don't want to force to insert keyframes\n  nb_ref_frame_metric_depth_filtering: 6 # number of reference frames for filtering high uncertainty metric depth points\n\ncam:\n  ### target/output camera settings, camera_size -> resize -> crop -> target_size\n  ### original camera parameters\n  H: 720\n  W: 1280\n  fx: 643.2550048828125\n  fy: 642.450927734375\n  cx: 651.057373046875\n  cy: 364.04974365234375\n  png_depth_scale: 5000 #for depth image in png format\n  ### target/output camera settings, camera_size -> resize -> crop -> target_size\n  H_edge: 0\n  W_edge: 0\n  H_out: 360\n  W_out: 640\n\nmono_prior:\n  depth: 'metric3d_vit_large'\n  save_depth: False\n  feature_extractor: 'dinov2_reg_small_fine' \n  save_feature: False\n\ndata:\n  output: ./output/wildgs_slam\n  input_folder: Please_specify_the_path_to_the_dataset\n\ndataset: 'tumrgbd'"
+  }
+}

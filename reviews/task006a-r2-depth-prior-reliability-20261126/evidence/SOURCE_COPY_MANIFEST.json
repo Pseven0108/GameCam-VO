@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "rel": "LICENSE",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/LICENSE",
+      "sha256": "cb2dba18d598b6ad0b34f0f8b0ad01f9d495e657cae9bf0544786190cb26f9f9"
+    },
+    {
+      "rel": "hubconf.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/hubconf.py",
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119"
+    },
+    {
+      "rel": "mono/model/monodepth_model.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/monodepth_model.py",
+      "sha256": "9f3cdea9a2f01cbfc54ee5049ff17eed22bb011d67158f83dd2efbbf7d3340d9"
+    },
+    {
+      "rel": "mono/model/model_pipelines/__base_model__.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/model_pipelines/__base_model__.py",
+      "sha256": "55936a9ff96bcc5459741979761bc7a0c0ad2e603e0cdeaf39b0a324143de738"
+    },
+    {
+      "rel": "mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951"
+    },
+    {
+      "rel": "mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "sha256": "ac3d288e13f5330dcbf7ca6be037661ff1c25ff1cbd8785f2afcd2631db20811"
+    },
+    {
+      "rel": "mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "sha256": "451a56b64d803b2b3ba4e0a5e5df993bc3ab41e9b503b98372ce6c6041fbbc0f"
+    },
+    {
+      "rel": "training/mono/configs/RAFTDecoder/vit.raft5.large.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/training/mono/configs/RAFTDecoder/vit.raft5.large.py",
+      "sha256": "f79213783d1170c143a2cbf447ca8c9b8b4e5a1fe2432fed056252cdb34bf388"
+    },
+    {
+      "rel": "training/mono/model/losses/GRUSequenceLoss.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/yvanyin_metric3d_main/training/mono/model/losses/GRUSequenceLoss.py",
+      "sha256": "a635356d9df6d776606a041a39e36bd39703f91b89d8521ea94138da2fb45393"
+    },
+    {
+      "rel": "DROID-W-runtime/metric_depth_estimators.py",
+      "source": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487"
+    }
+  ],
+  "actual_commit": "eb5b6fac0dc155e4e52f576e304fbf11655ff339"
+}

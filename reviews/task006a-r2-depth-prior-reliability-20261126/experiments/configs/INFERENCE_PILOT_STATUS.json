@@ -1,0 +1,19 @@
+{
+  "status": "PREPARED_NOT_GPU_SMOKE_TESTED",
+  "script": "experiments/scripts/metric3d_confidence_probe.py",
+  "scope": "Standalone Metric3D native/flip/bin inspection; no SLAM or BA",
+  "sample_limit": 16,
+  "actual_samples_inferred": 0,
+  "manifest_required": true,
+  "manifest_sample_fields": ["sequence_id", "frame_id", "rgb_path", "rgb_sha256", "fx"],
+  "manifest_path_namespace": "Verified remote paths, not unmodified Windows paths",
+  "required_model_commit": "eb5b6fac0dc155e4e52f576e304fbf11655ff339",
+  "required_checkpoint_sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+  "checkpoint_incompatible_keys_policy": "STOP before forward; no reviewed allow-list",
+  "depth_GT_as_input": false,
+  "accuracy_evaluation_admitted": false,
+  "stop_conditions": ["Untrusted host key", "No usable GPU", "Other GPU compute process", "Identity mismatch", "Missing or unexpected checkpoint keys", "Nonfinite output", "Storage failure"],
+  "no_retry": true,
+  "conservative_free_GPU_MiB_guard": 12000,
+  "guard_is_measured_model_minimum": false
+}

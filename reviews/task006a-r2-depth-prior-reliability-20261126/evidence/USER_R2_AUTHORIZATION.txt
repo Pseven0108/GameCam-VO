@@ -1,0 +1,1314 @@
+# TASK006A-R2：Metric3D 深度先验可信度研究与验证
+
+## 一、任务背景
+
+项目：GameCam-VO
+
+GitHub：https://github.com/Pseven0108/GameCam-VO
+
+研究主线：第三人称动态游戏场景下的视觉 SLAM 与相机运动估计。
+
+当前研究阶段：TASK006A-R1 CADP 已完成 CPU 研究阶段，开始进入 R2 深度先验可信度研究。
+
+本任务不是直接开发新的融合算法，而是研究、验证并确定 Metric3D 深度先验的可信度评估方法。
+
+### 1.1 当前技术背景
+
+现有系统使用：
+
+- DROID-W：视觉 SLAM 主干。
+- Metric3D V2：单目 Metric Depth Prior。
+- DINOv2：现有特征及不确定性相关模块。
+- VIPER：主要游戏场景测试数据集。
+
+现有 Metric3D 配置以 `metric3d_vit_large` 为主要研究对象。
+
+已经发现一个值得深入研究的问题：
+
+Metric3D V2 的推理接口返回：
+
+```python
+pred_depth, confidence, output_dict = model.inference(...)
+```
+
+但当前 GameCam-VO 的深度估计接口使用：
+
+```python
+pred_depth, _, _ = model.inference(...)
+```
+
+因此，Metric3D 原生 Confidence 被直接丢弃。
+
+相关源码：
+
+- GameCam-VO：
+  `source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py`
+- Metric3D：
+  `mono/model/monodepth_model.py`
+- Metric3D：
+  `mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py`
+- Metric3D：
+  `training/mono/model/losses/GRUSequenceLoss.py`
+
+Metric3D 训练代码中存在 Confidence 监督，但其输出不能直接等同于经过校准的概率或深度方差。
+
+因此，本任务需要回答：
+
+**Metric3D 原生 Confidence 能否在 GTA-V/VIPER 场景中识别错误深度先验？**
+
+如果不能，是否可以利用无需训练新网络的辅助方法提高可信度评估能力？
+
+### 1.2 研究目标
+
+最终形成一套独立于 R1 几何可信度的深度先验可信度评估方案。
+
+研究候选：
+
+A. Metric3D 原生 Confidence。
+
+B. Test-Time Augmentation（TTA）预测一致性。
+
+C. Metric3D Depth-bin 分布不确定性。
+
+D. 必要时研究 Gradient-based Uncertainty。
+
+不预设最终方案，不为了组合模块而组合模块。
+
+所有方法必须先独立验证。
+
+---
+
+## 二、任务执行原则
+
+### 2.1 自主执行授权
+
+你需要自主完成：
+
+1. 阅读项目现有源码和 R1 交付物。
+2. 检索和阅读相关论文。
+3. 追踪 Metric3D 官方源码。
+4. 审计数据集和 GT 可用性。
+5. 制定实验方案。
+6. 执行可行的验证实验。
+7. 分析实验数据。
+8. 根据结果决定是否开展下一阶段。
+9. 形成完整研究报告。
+
+不要只生成研究计划后就停止。
+
+在条件允许的情况下，应实际执行实验并产生可复核结果。
+
+不需要每完成一个小步骤都向用户询问是否继续。
+
+遇到明确阻塞条件时才停止并报告。
+
+### 2.2 严禁事项
+
+本任务禁止：
+
+- 修改 DROID-W 生产 Baseline 的核心算法。
+- 修改 CUDA Kernel。
+- 修改 RAFT、BA 或 SLAM 优化逻辑。
+- 将新 Confidence 接入 BA。
+- 将新 Confidence 接入 R1 CADP。
+- 训练新的深度网络。
+- 对 Metric3D 进行微调。
+- 为了取得好结果而修改现有模型权重。
+- 删除或覆盖已有实验结果。
+- 擅自修改已有数据集。
+- 将 R1 几何不确定性当作 R2 深度先验可信度的 GT。
+- 将实验性结论包装成已经验证的结论。
+
+所有实验代码、配置、日志和结果必须放在独立研究目录。
+
+允许使用现有 Metric3D 模型进行推理、TTA、Hook 读取和独立评价。
+
+允许使用 GPU 执行推理实验，但不得运行训练任务。
+
+### 2.3 环境保护
+
+首先检查：
+
+- Git 当前分支。
+- 当前 HEAD。
+- 工作区是否干净。
+- 现有实验进程。
+- GPU 使用情况。
+- CUDA、PyTorch 和 Metric3D 环境。
+- 模型权重和缓存位置。
+
+不得通过重置 Git、强制切换分支或覆盖文件来清理环境。
+
+不得杀死其他实验进程。
+
+不得在现有 GameCam-VO 环境中升级或替换 CUDA、PyTorch 等核心依赖。
+
+如需新依赖，优先使用独立研究环境。
+
+如果 GPU 被其他任务占用，不要强制抢占，先完成 CPU 研究工作。
+
+---
+
+## 三、阶段 R2-0：项目状态审计
+
+### 目标
+
+明确当前研究基线，避免重复实验和误读历史结果。
+
+### 工作内容
+
+1. 读取 GameCam-VO 当前 Git HEAD。
+2. 阅读 TASK006A-R1 完整交付物。
+3. 找出 R1 的：
+   - 研究问题。
+   - 数学定义。
+   - 参数配置。
+   - 实验限制。
+   - 已经验证的结论。
+   - 尚未解决的问题。
+4. 检查现有 Metric3D 配置。
+5. 检查当前深度推理入口。
+6. 检查现有深度缓存。
+7. 检查是否已有 Confidence、深度质量或 TTA 实验结果。
+
+重点阅读：
+
+`reviews/task006a-r1-cadp-cpu-20261126/`
+
+以及项目中与 TASK003、TASK004、TASK005 相关的历史研究资料。
+
+不要只看 README，应当追踪真实实现。
+
+### 交付物
+
+`R2_00_PROJECT_STATE_AUDIT.md`
+
+必须包含：
+
+- 当前 Git 状态。
+- 当前模型配置。
+- 现有数据流。
+- R1 已有结论。
+- 与 R2 直接相关的历史实验。
+- 当前研究缺口。
+- 后续实验是否存在重复。
+
+### 验收条件
+
+研究人员可以根据报告明确知道：
+
+当前系统实际使用什么模型、什么权重、什么代码，以及 Confidence 当前在哪里被丢弃。
+
+---
+
+## 四、阶段 R2-1：Metric3D 原生 Confidence 深度源码审计
+
+这是本任务的第一核心阶段。
+
+### 目标
+
+完整弄清 Metric3D Confidence 的生成机制、训练监督、数值含义及其局限。
+
+### 4.1 核实实际模型身份
+
+检查：
+
+- 模型名称。
+- 模型结构。
+- 官方仓库版本。
+- 实际加载的 Commit。
+- 权重文件 SHA-256。
+- 推理输入尺寸。
+- 图像 Resize 和 Padding。
+- 相机焦距尺度恢复。
+- 输出深度范围。
+- Confidence 输出形状。
+
+当前源码注释中引用过 Metric3D Commit：
+
+`34afafe58d9543f13c01b65222255dab53333838`
+
+但必须核实实际运行版本，不能把注释当成运行时版本证明。
+
+当前 `torch.hub.load` 是否锁定版本，需要单独检查。
+
+不得因为研究需要而直接修改生产加载逻辑。
+
+### 4.2 追踪 Confidence 的完整生成过程
+
+从输入图像开始追踪：
+
+RGB
+→ ViT Encoder
+→ DPT Decoder
+→ Depth/Normal Feature
+→ RAFT Iterative Update
+→ Confidence Output
+
+重点回答：
+
+1. Confidence 来自哪个网络分支？
+2. 是如何初始化的？
+3. 如何在 RAFT 迭代过程中更新？
+4. 最终输出的是第几次迭代的结果？
+5. 是否经过 Sigmoid、Softmax 或其他归一化？
+6. 输出是否有固定数值范围？
+7. 是否存在负数、极大值、NaN 或 Inf？
+8. Confidence 与最终深度预测之间是什么关系？
+9. Confidence 是否经过上采样？
+10. 原始 Confidence 与恢复到 RGB 分辨率后的 Confidence 如何对应？
+
+必须区分：
+
+- Depth Confidence。
+- Normal Confidence。
+- DINOv2 相关 U。
+- R1 几何不确定性。
+
+不得混为一谈。
+
+### 4.3 追踪训练监督
+
+重点研究：
+
+`training/mono/model/losses/GRUSequenceLoss.py`
+
+分析：
+
+- Confidence 的训练目标。
+- Confidence Loss。
+- 有效像素 Mask。
+- 误差计算方式。
+- 极端错误像素是否参与监督。
+- 不同数据集的训练监督差异。
+- 训练监督与最终测试环境之间的差异。
+
+尤其需要核实以下形式：
+
+\[
+c^*=1-\frac{|D-\hat D|}{\hat D}
+\]
+
+实际源码中还存在有效区域筛选，因此必须严格按照代码解释其适用范围。
+
+研究：
+
+**模型输出的 Confidence 究竟代表什么？**
+
+不能直接将其解释为：
+
+- 正确概率。
+- 深度方差。
+- 深度标准差。
+- 高斯分布的置信区间。
+
+### 4.4 输出数值审计
+
+使用少量现有 RGB 样本进行推理，读取原生 Confidence。
+
+至少记录：
+
+- Min。
+- Max。
+- Mean。
+- Median。
+- Standard Deviation。
+- P1、P5、P25、P75、P95、P99。
+- NaN 数量。
+- Inf 数量。
+- 不同场景下的分布变化。
+
+生成：
+
+- 原始 Confidence 热力图。
+- Depth Map。
+- RGB 对照图。
+- Confidence 直方图。
+- 不同环境分布对比图。
+
+### 交付物
+
+`R2_01_METRIC3D_CONFIDENCE_SOURCE_AUDIT.md`
+
+`R2_01_CONFIDENCE_NUMERICAL_AUDIT.csv`
+
+`R2_01_CONFIDENCE_VISUALIZATIONS/`
+
+必须提供具体源码位置、Commit 和关键代码引用。
+
+---
+
+## 五、阶段 R2-2：文献研究与候选方法论证
+
+### 目标
+
+形成合理的候选方法，不盲目增加模型或计算成本。
+
+### 必须研究的文献
+
+#### A. Metric3D V2
+
+论文：
+
+https://arxiv.org/abs/2404.15506
+
+研究重点：
+
+- Metric3D V2 架构。
+- Metric Depth Regression。
+- Depth Bin。
+- RAFT 迭代预测。
+- Confidence 输出。
+- 不同数据集泛化能力。
+
+#### B. Gradient-based Uncertainty for Monocular Depth Estimation
+
+论文：
+
+https://arxiv.org/abs/2208.02005
+
+源码：
+
+https://github.com/jhornauer/GrUMoDepth
+
+研究重点：
+
+- 后处理不确定性估计。
+- 特征梯度。
+- TTA。
+- 不同预测之间的差异。
+- 不重新训练模型的可行性。
+
+#### C. Uncertainty from Motion for DNN Monocular Depth Estimation
+
+研究重点：
+
+- 多帧深度不确定性。
+- 相同三维点的跨帧深度预测。
+- 运动条件下的深度融合。
+- 计算开销。
+
+该方法与 R1 几何信息可能存在耦合，当前仅作为理论参考。
+
+#### D. Learning a Depth Covariance Function
+
+CVPR 2023：
+
+https://openaccess.thecvf.com/content/CVPR2023/html/Dexheimer_Learning_a_Depth_Covariance_Function_CVPR_2023_paper.html
+
+研究重点：
+
+- 深度误差相关性。
+- 像素之间的协方差。
+- 深度先验与 Bundle Adjustment。
+- 结构化不确定性。
+
+当前不要求实现其训练网络。
+
+#### E. 其他深度不确定性方法
+
+可以自主扩展，但必须与当前研究目标直接相关。
+
+优先考虑：
+
+- Predictive Confidence。
+- Aleatoric Uncertainty。
+- Epistemic Uncertainty。
+- Test-Time Augmentation。
+- MC Dropout。
+- Ensemble。
+- Depth Distribution Entropy。
+- Calibration。
+
+### 文献质量要求
+
+每篇论文必须记录：
+
+- 论文标题。
+- 作者。
+- 年份。
+- 发表会议或期刊。
+- 官方论文链接。
+- 官方源码链接。
+- 方法原理。
+- 是否需要训练。
+- 是否需要额外前向推理。
+- 是否需要反向传播。
+- 计算开销。
+- 对 GameCam-VO 的适用性。
+- 实际限制。
+
+不能只复制摘要。
+
+必须阅读与本任务相关的 Method、Experiments 和 Limitations。
+
+### 交付物
+
+`R2_02_LITERATURE_REVIEW.md`
+
+`R2_02_METHOD_COMPARISON.csv`
+
+---
+
+## 六、阶段 R2-3：数据集和 GT 可用性审计
+
+### 目标
+
+建立真正独立于 R1 几何估计的深度先验评价标准。
+
+这是 R2 能否得到可信结论的关键。
+
+### 6.1 优先审计 VIPER
+
+检查现有 VIPER 数据：
+
+- RGB。
+- 相机内参。
+- 相机位姿。
+- 深度相关标注。
+- 语义标签。
+- Instance Segmentation。
+- 天气分类。
+- 图像尺寸。
+- 帧对应关系。
+
+不要假设 VIPER 当前下载版本包含 Dense Depth GT。
+
+必须检查实际文件。
+
+如果没有真实深度 GT，必须明确标注。
+
+不能利用 R1 几何输出生成伪 GT，再声称独立验证了 Metric3D Confidence。
+
+### 6.2 研究 MVS-Synth
+
+官方页面：
+
+https://phuang17.github.io/DeepMVS/mvs-synth.html
+
+检查：
+
+- 数据是否可访问。
+- 是否包含 GTA-V 场景。
+- 是否提供 RGB。
+- 是否提供 Dense Depth GT。
+- 是否提供相机内参和位姿。
+- 图像与深度是否严格对齐。
+- 深度坐标系及单位。
+- 数据许可。
+- 数据下载规模。
+
+优先使用现有数据。
+
+如需下载，先评估数据规模和磁盘空间，不要擅自进行大规模数据下载。
+
+### 6.3 数据质量验证
+
+正式评价之前，必须验证：
+
+1. RGB 和 GT Depth 是否对应同一帧。
+2. 图像尺寸是否一致。
+3. 深度单位是否一致。
+4. 相机坐标系是否一致。
+5. 是否存在无效深度。
+6. 是否存在遮挡边界误差。
+7. 是否需要有效像素 Mask。
+8. 深度图 Resize 是否影响边缘。
+9. Metric3D 输出和 GT 是否位于同一像素坐标系。
+
+必要时绘制 RGB、GT Depth、Predicted Depth 三联图。
+
+### 6.4 数据划分
+
+必须按序列划分训练/校准和测试数据。
+
+禁止随机拆分相邻帧，造成数据泄漏。
+
+如果进行后处理校准：
+
+- Calibration Split：用于拟合简单映射。
+- Test Split：只用于独立评价。
+
+不得使用测试集调参。
+
+### 交付物
+
+`R2_03_DATASET_AND_GT_AUDIT.md`
+
+`R2_03_DATASET_MANIFEST.csv`
+
+`R2_03_DATA_ALIGNMENT_EVIDENCE/`
+
+如果没有合格 GT，必须明确说明哪些结论可以做，哪些不能做。
+
+---
+
+## 七、阶段 R2-4：候选 A——Metric3D 原生 Confidence 验证
+
+这是第一优先实验。
+
+### 目标
+
+验证原生 Confidence 是否能够预测深度误差。
+
+### 7.1 实验设计
+
+在具有合格 Dense Depth GT 的样本上运行现有 Metric3D。
+
+每个像素记录：
+
+- RGB。
+- Predicted Depth。
+- Ground Truth Depth。
+- Native Confidence。
+- Valid Mask。
+- Absolute Relative Error。
+- Log Depth Error。
+
+误差：
+
+\[
+e_{\mathrm{rel}}(p)=
+\frac{|D_p-D_p^{GT}|}
+{D_p^{GT}+\epsilon}
+\]
+
+同时记录：
+
+\[
+e_{\log}(p)=
+|\log D_p-\log D_p^{GT}|
+\]
+
+必须使用合理的有效深度范围和 GT Mask。
+
+不能让无效深度参与统计。
+
+### 7.2 评价指标
+
+至少包括：
+
+**排序能力**
+
+- Spearman Rank Correlation。
+- Pearson Correlation（辅助）。
+
+**错误识别能力**
+
+- AUROC。
+- AUPRC。
+
+至少研究多个高误差阈值，例如：
+
+- Relative Error > 0.1。
+- Relative Error > 0.2。
+- Relative Error > 0.5。
+
+这些阈值用于敏感性分析，不允许只挑选对结果有利的一个。
+
+**不确定性排序评价**
+
+- AUSE。
+- AURG。
+- Risk-Coverage Curve。
+- Random Baseline。
+- Oracle Baseline。
+
+**校准评价**
+
+- Reliability Diagram。
+- 分桶误差统计。
+- ECE（仅在定义了概率事件或完成合法概率校准后使用）。
+
+特别注意：
+
+原始 Confidence 不一定是概率。
+
+先判断它的方向：
+
+- Confidence 越高，误差是否越低？
+- Confidence 越低，误差是否越高？
+
+如果方向相反，必须记录，不得通过不透明变换隐藏问题。
+
+### 7.3 分层评价
+
+至少按照以下维度分组：
+
+- 近距离。
+- 中距离。
+- 远距离。
+- 高纹理区域。
+- 低纹理区域。
+- 图像边缘。
+- 大面积平面。
+- 物体边界。
+
+如果 GT 支持，还要研究不同语义类别。
+
+所有统计需要考虑帧与序列之间的相关性。
+
+置信区间应优先采用按序列或帧分组的 Bootstrap，而不是将所有像素视为独立样本。
+
+### 7.4 环境评价
+
+优先关注：
+
+- Day。
+- Sunset。
+- Rain。
+- Snow。
+- Night。
+
+尤其关注 Night。
+
+如果 GT 数据不具备上述所有环境，不得虚构实验结果。
+
+可使用 VIPER 做无 GT 的分布分析，但必须与有 GT 的准确性验证分开。
+
+### 交付物
+
+`R2_04_NATIVE_CONFIDENCE_EVALUATION.md`
+
+`R2_04_NATIVE_CONFIDENCE_METRICS.csv`
+
+`R2_04_RISK_COVERAGE/`
+
+`R2_04_CONFIDENCE_ERROR_VISUALIZATIONS/`
+
+---
+
+## 八、阶段 R2-5：候选 B——Test-Time Augmentation 一致性
+
+### 目标
+
+研究原生 Confidence 以外，是否可以通过输入扰动后的预测差异发现错误深度。
+
+### 8.1 首选方案：水平翻转
+
+执行：
+
+1. 原始图像输入 Metric3D。
+2. 水平翻转图像。
+3. 再次输入 Metric3D。
+4. 将第二次深度结果恢复原方向。
+5. 将两张深度图对齐。
+6. 计算像素级预测差异。
+
+定义：
+
+\[
+u_{\mathrm{flip}}(p)=
+\frac{
+|D_1(p)-D_2(p)|
+}{
+|D_1(p)|+\epsilon
+}
+\]
+
+也可以研究：
+
+\[
+u_{\log}(p)=
+|\log(D_1(p)+\epsilon)
+-\log(D_2(p)+\epsilon)|
+\]
+
+两者都应记录。
+
+### 8.2 必须研究的问题
+
+- 翻转是否引入额外几何偏差？
+- 恢复图像方向是否正确？
+- 焦距尺度是否保持一致？
+- Padding 和 Resize 是否完全一致？
+- 原始图像与翻转图像的 Confidence 差异如何？
+- 翻转差异是否能识别 GT 中的高误差区域？
+- 翻转差异是否只集中在图像边缘？
+
+注意：
+
+TTA 不一致性只代表模型对输入扰动敏感。
+
+它不等于真实误差。
+
+模型可能在不同输入下保持一致，但始终预测错误。
+
+### 8.3 与原生 Confidence 对比
+
+分别评价：
+
+A. Native Confidence。
+
+B. Flip Disagreement。
+
+C. Native Confidence + Flip Disagreement（仅作为离线分析候选）。
+
+先单独评价，再研究简单组合。
+
+组合方法必须在 Calibration Split 上确定，不能在 Test Split 上选择最优参数。
+
+不得直接把两个信号相加就宣布获得了更好的可信度。
+
+### 8.4 性能开销
+
+记录：
+
+- 单帧前向时间。
+- 两次前向时间。
+- GPU 显存。
+- 峰值显存。
+- 额外计算成本。
+- 是否影响现有处理速度。
+
+### 交付物
+
+`R2_05_TTA_EVALUATION.md`
+
+`R2_05_TTA_METRICS.csv`
+
+`R2_05_TTA_VISUALIZATIONS/`
+
+---
+
+## 九、阶段 R2-6：候选 C——Depth-bin 分布不确定性
+
+### 目标
+
+研究 Metric3D 内部深度分布是否包含比最终 Confidence 更有用的可信度信息。
+
+### 9.1 源码研究
+
+重点检查：
+
+`mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py`
+
+追踪：
+
+- Depth Regressor。
+- Depth Anchor。
+- Bin Logits。
+- Softmax。
+- Depth Regression。
+- 初始深度。
+- RAFT 迭代深度。
+
+确认实际 Bin 数量，不允许直接假设是 256。
+
+### 9.2 候选统计量
+
+如果能够合法读取原始深度分布，研究：
+
+Entropy：
+
+\[
+H(p)=-\sum_k p_k\log(p_k+\epsilon)
+\]
+
+Variance：
+
+\[
+V(p)=\sum_k p_k(d_k-\bar d)^2
+\]
+
+Maximum Probability：
+
+\[
+P_{\max}=\max_k p_k
+\]
+
+Effective Number of Bins：
+
+\[
+N_{\mathrm{eff}}=\exp(H(p))
+\]
+
+其中 \(d_k\) 为实际深度 Anchor。
+
+### 9.3 重点限制
+
+Depth-bin 分布属于初始深度回归阶段。
+
+最终深度还会经过 RAFT 迭代修正。
+
+因此：
+
+不能直接认定初始分布熵代表最终深度误差。
+
+必须分别检验：
+
+- 初始 Depth Error。
+- 最终 Depth Error。
+- Bin Entropy。
+- 原生 Confidence。
+
+研究 Bin Entropy 是否能够预测最终深度错误。
+
+如果必须修改生产模型结构才能读取内部结果，不允许这样做。
+
+优先使用独立研究分支、Forward Hook 或只读调试方法。
+
+如果无法可靠获取，则记录技术限制，不要强行实现。
+
+### 交付物
+
+`R2_06_DEPTH_BIN_UNCERTAINTY.md`
+
+`R2_06_DEPTH_BIN_METRICS.csv`
+
+---
+
+## 十、阶段 R2-7：备用方法——Gradient-based Uncertainty
+
+只有当 A、B、C 的结果不足以形成可信度方案时，才进入此阶段。
+
+### 目标
+
+研究 GrUMoDepth 的梯度不确定性方法能否适用于现有 Metric3D。
+
+参考：
+
+https://github.com/jhornauer/GrUMoDepth
+
+https://arxiv.org/abs/2208.02005
+
+研究：
+
+- 梯度提取层。
+- 梯度归约方式。
+- 梯度热力图。
+- 不同层之间的梯度差异。
+- 对 Metric3D 前向与反向的开销。
+- 是否必须构建额外损失。
+- 能否在不训练模型的情况下完成。
+
+### 实验限制
+
+不得为此训练 Metric3D。
+
+不得修改生产模型。
+
+如果需要反向传播，只允许在独立实验脚本中执行。
+
+如果显存或运行成本过高，记录后停止。
+
+### 交付物
+
+`R2_07_GRADIENT_UNCERTAINTY_REVIEW.md`
+
+如果没有执行，明确标记为未执行，并说明原因。
+
+---
+
+## 十一、阶段 R2-8：候选方法综合评价
+
+### 目标
+
+在所有已执行实验完成后，进行客观比较。
+
+建立统一对照表：
+
+| 方法 | GT 排序能力 | 错误识别能力 | 校准能力 | 额外推理 | 实现复杂度 |
+|---|---|---|---|---|---|
+| Native Confidence | 实测 | 实测 | 实测 | 无 | 低 |
+| Flip TTA | 实测 | 实测 | 实测 | 一次额外推理 | 低 |
+| Depth-bin Entropy | 实测 | 实测 | 实测 | 视读取方式而定 | 中 |
+| Gradient Uncertainty | 实测/未执行 | 实测/未执行 | 实测/未执行 | 可能需要反向传播 | 高 |
+
+不得填入没有实验依据的数字。
+
+### 必须回答的问题
+
+1. Native Confidence 是否具有稳定的误差排序能力？
+2. 它是否能够识别高误差深度像素？
+3. 在夜间是否失效？
+4. 在低纹理区域是否失效？
+5. 远距离是否存在明显偏差？
+6. Flip TTA 是否带来独立增益？
+7. Depth-bin Entropy 是否有额外价值？
+8. 哪种方法计算成本最低？
+9. 是否需要简单后处理校准？
+10. 是否存在模型无法识别的系统性错误？
+
+### 重要原则
+
+如果某个方法效果不理想，也要保留完整结果。
+
+不得为了得出某个预设结论而删除失败实验。
+
+如果不同环境下结果不一致，必须如实说明。
+
+---
+
+## 十二、阶段 R2-9：最终可信度模块方案设计
+
+### 目标
+
+形成后续可以交给联合可信度控制器使用的独立先验质量评估模块。
+
+注意：
+
+本阶段只设计，不接入 DROID-W 优化。
+
+最终输出形式可以包含：
+
+1. Pixel-level Prior Reliability。
+2. Frame-level Prior Quality。
+3. Confidence Calibration Information。
+4. Error Risk Statistics。
+5. Environment-specific Reliability Statistics。
+
+必须明确：
+
+- 输入是什么。
+- 输出是什么。
+- 数据类型是什么。
+- 数值范围是什么。
+- 数值方向是什么。
+- 如何处理无效深度。
+- 如何处理无效 Confidence。
+- 是否需要额外推理。
+- 是否需要校准。
+- 适用环境。
+- 已知失效场景。
+
+不要在缺少证据时把 Confidence 变成一个看似精确的 0～1 概率。
+
+如果现有原生 Confidence 已经足够，不要为了创新而引入复杂模块。
+
+如果现有 Confidence 不可靠，应当明确给出否定结论和证据。
+
+### 最终决策分为三类
+
+**GO**
+
+已有方法具备足够的独立证据，可以进入后续联合设计。
+
+**CONDITIONAL GO**
+
+只在部分环境或条件下有效，需要限制使用范围。
+
+**NO-GO**
+
+目前证据不足，不应接入后续优化。
+
+### 交付物
+
+`R2_09_FINAL_RELIABILITY_DESIGN.md`
+
+`R2_09_GO_NO_GO_DECISION.md`
+
+---
+
+## 十三、实验规模与资源管理
+
+### 第一轮：小规模验证
+
+优先使用现有数据。
+
+选择能够覆盖不同环境和场景的代表性样本。
+
+先进行小规模推理，确认：
+
+- 模型能正常加载。
+- 输出正确。
+- Confidence 正常。
+- 深度图与 GT 对齐。
+- 指标计算正确。
+
+### 第二轮：扩展验证
+
+只有第一轮数据质量合格，且实验流程正确，才扩大样本量。
+
+优先按序列和环境分层。
+
+夜间场景需要单独分析。
+
+不要直接对整个 VIPER 数据集运行所有候选方法。
+
+### 第三轮：针对性实验
+
+根据前两轮结果选择有价值的补充实验。
+
+如果 Native Confidence 已经足够可靠，减少 TTA 和其他复杂方法的计算。
+
+如果 Native Confidence 不可靠，再增加候选方法。
+
+### 资源记录
+
+每项实验必须记录：
+
+- GPU 型号。
+- GPU 显存。
+- PyTorch 版本。
+- CUDA 版本。
+- Metric3D Commit。
+- Checkpoint SHA-256。
+- 输入分辨率。
+- 样本数量。
+- 推理时间。
+- 峰值显存。
+- 实验脚本版本。
+- 随机种子（适用时）。
+
+---
+
+## 十四、停止条件
+
+出现以下情况时，必须停止对应阶段。
+
+### 数据问题
+
+- GT 与 RGB 无法正确对齐。
+- GT 深度单位无法确定。
+- 数据损坏。
+- 有效 GT 样本数量不足以支持结论。
+
+此时不得继续给出真实准确性结论。
+
+### 模型问题
+
+- 无法确定实际 Metric3D 版本。
+- 无法确认权重来源。
+- Confidence 输出不稳定或存在异常。
+- 无法区分 Depth Confidence 和 Normal Confidence。
+
+此时优先完成源码审计，不得盲目进入融合设计。
+
+### 工程问题
+
+- GPU 被其他实验占用。
+- 显存不足。
+- 现有环境存在冲突。
+- 实验需要破坏生产 Baseline。
+- 实验需要修改 CUDA Kernel。
+
+必须停止对应操作，保留现有结果。
+
+### 研究问题
+
+如果原生 Confidence 已经表现出稳定的排序能力，且 TTA 和其他方法没有明确增益，不需要为了完整性强行执行所有实验。
+
+反之，如果原生 Confidence 明显失效，则需要继续研究备用方法。
+
+每次停止都必须记录：
+
+- 停止原因。
+- 已经完成的工作。
+- 尚未完成的工作。
+- 是否影响最终结论。
+- 下一步建议。
+
+---
+
+## 十五、最终目录与交付规范
+
+在项目中创建独立研究目录：
+
+`reviews/task006a-r2-depth-prior-reliability-20261126/`
+
+建议结构：
+
+```text
+task006a-r2-depth-prior-reliability-20261126/
+│
+├── README.md
+│
+├── 00_project_audit/
+│   └── R2_00_PROJECT_STATE_AUDIT.md
+│
+├── 01_source_audit/
+│   ├── R2_01_METRIC3D_CONFIDENCE_SOURCE_AUDIT.md
+│   ├── R2_01_CONFIDENCE_NUMERICAL_AUDIT.csv
+│   └── visualizations/
+│
+├── 02_literature/
+│   ├── R2_02_LITERATURE_REVIEW.md
+│   └── R2_02_METHOD_COMPARISON.csv
+│
+├── 03_dataset_audit/
+│   ├── R2_03_DATASET_AND_GT_AUDIT.md
+│   └── R2_03_DATASET_MANIFEST.csv
+│
+├── 04_native_confidence/
+│   ├── R2_04_NATIVE_CONFIDENCE_EVALUATION.md
+│   ├── R2_04_NATIVE_CONFIDENCE_METRICS.csv
+│   └── visualizations/
+│
+├── 05_tta/
+│   ├── R2_05_TTA_EVALUATION.md
+│   └── R2_05_TTA_METRICS.csv
+│
+├── 06_depth_bin/
+│   ├── R2_06_DEPTH_BIN_UNCERTAINTY.md
+│   └── R2_06_DEPTH_BIN_METRICS.csv
+│
+├── 07_gradient_uncertainty/
+│   └── R2_07_GRADIENT_UNCERTAINTY_REVIEW.md
+│
+├── 08_comparison/
+│   └── R2_08_METHOD_COMPARISON.md
+│
+├── 09_final_design/
+│   ├── R2_09_FINAL_RELIABILITY_DESIGN.md
+│   └── R2_09_GO_NO_GO_DECISION.md
+│
+├── experiments/
+│   ├── scripts/
+│   ├── configs/
+│   ├── manifests/
+│   └── logs/
+│
+└── evidence/
+    ├── source_references.md
+    ├── environment.txt
+    └── checksums.txt
+```
+
+可以根据实际情况调整目录，但必须保留上述阶段的可追溯性。
+
+不要将大量重复 RGB、深度图或模型权重复制进 Git 仓库。
+
+大型实验结果应放在合适的外部实验目录，研究目录保留索引、Manifest 和证据。
+
+---
+
+## 十六、最终验收标准
+
+任务完成时，必须同时满足：
+
+### A. 源码研究
+
+- [ ] Metric3D 实际版本已经核实。
+- [ ] 模型权重身份已经核实。
+- [ ] Confidence 生成路径已经追踪。
+- [ ] Confidence 训练监督已经分析。
+- [ ] 输出数值范围已经实测。
+- [ ] Confidence 与 Normal Confidence 已经区分。
+- [ ] 当前 Baseline 丢弃 Confidence 的原因已经确认。
+
+### B. 文献研究
+
+- [ ] 核心论文已经阅读。
+- [ ] 官方源码已经检查。
+- [ ] 方法优缺点已经比较。
+- [ ] 训练和推理成本已经分析。
+
+### C. 数据审计
+
+- [ ] VIPER GT 可用性已经确认。
+- [ ] MVS-Synth 可用性已经确认。
+- [ ] 数据对齐已经验证。
+- [ ] 数据划分不存在明显泄漏。
+- [ ] GT 无效区域处理明确。
+
+### D. 实验研究
+
+- [ ] Native Confidence 已经进行数值审计。
+- [ ] Native Confidence 与 GT 误差的关系已经验证（前提是存在合格 GT）。
+- [ ] TTA 已经独立评价，或明确记录不执行的原因。
+- [ ] Depth-bin 已经研究，或明确记录不执行的原因。
+- [ ] 主要实验结果有 CSV 和可复核证据。
+- [ ] 额外计算成本已经记录。
+
+### E. 最终决策
+
+- [ ] 已经确定原生 Confidence 是否值得使用。
+- [ ] 已经确定是否需要 TTA。
+- [ ] 已经确定是否需要 Depth-bin。
+- [ ] 已经分析环境差异。
+- [ ] 已经给出 GO / CONDITIONAL GO / NO-GO。
+- [ ] 已经提出下一阶段的明确建议。
+
+---
+
+## 十七、最终报告必须回答的核心问题
+
+请在最终报告首页明确回答：
+
+**问题1：Metric3D 原生 Confidence 是否能在 GTA-V/VIPER 场景中识别错误深度？**
+
+**问题2：它在 Night、Rain、Snow、低纹理和远距离场景下是否可靠？**
+
+**问题3：它是否需要后处理校准？**
+
+**问题4：Flip TTA 是否带来独立的可信度提升？**
+
+**问题5：Depth-bin Entropy 是否提供了额外信息？**
+
+**问题6：最终应该使用哪一种可信度信号？**
+
+**问题7：当前证据是否足以进入后续联合可信度控制器设计？**
+
+如果没有 GT，不允许用主观热力图代替准确性证明。
+
+如果结果不理想，必须如实报告。
+
+如果某个方法优于其他方法，必须提供独立测试集上的数据证据。
+
+---
+
+## 十八、任务最终交付
+
+最终请输出一份完整的：
+
+`TASK006A_R2_FINAL_RESEARCH_REPORT.md`
+
+要求：
+
+1. 研究背景。
+2. 相关论文。
+3. 源码审计。
+4. 数据审计。
+5. 实验设计。
+6. 实验结果。
+7. 失败案例。
+8. 方法对照。
+9. 资源开销。
+10. 研究结论。
+11. GO / CONDITIONAL GO / NO-GO 决策。
+12. 下一阶段建议。
+
+同时生成：
+
+`TASK006A_R2_CODEX_HANDOFF.md`
+
+用于后续 Codex 对话继续执行。
+
+必须明确区分：
+
+- 已经完成。
+- 已经验证。
+- 尚未验证。
+- 因条件限制未执行。
+- 仅有理论依据。
+- 最终推荐。
+
+不要把计划当作实验结果。
+
+---
+
+## 十九、执行指令
+
+现在开始执行 TASK006A-R2。
+
+先完成 R2-0 项目审计，再依次进入后续阶段。
+
+你拥有本研究任务范围内的自主决策权：
+
+- 可以自主选择合适的论文。
+- 可以自主选择合适的实验样本。
+- 可以自主调整实验规模。
+- 可以自主选择候选方法。
+- 可以根据实验结果决定是否继续某个阶段。
+- 可以放弃没有价值的候选方法。
+
+但不得突破本任务规定的生产环境保护边界。
+
+不要为了追求完成所有模块而制造没有研究价值的实验。
+
+**本任务的成功标准不是实现更多模块，而是用独立、可复现的证据确定 Metric3D 深度先验究竟有多可信，以及应该如何评估这种可信度。**
+
+请持续执行，直到达到最终验收条件，或者遇到明确的不可解决阻塞条件。
+
+完成后提交全部研究报告、实验结果、源码证据和下一阶段建议。

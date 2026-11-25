@@ -1,0 +1,89 @@
+{
+  "hostname": "jupyter-mati7sbgspbc9y0j",
+  "GPU": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,uuid,memory.total,memory.free",
+      "--format=csv,noheader"
+    ],
+    "error": "[Errno 8] Exec format error: 'nvidia-smi'"
+  },
+  "GPU_processes": {
+    "command": [
+      "nvidia-smi",
+      "--query-compute-apps=pid,process_name,used_gpu_memory",
+      "--format=csv,noheader"
+    ],
+    "error": "[Errno 8] Exec format error: 'nvidia-smi'"
+  },
+  "filesystems": {
+    "/root/rivermind-data": {
+      "total": 105089261568,
+      "free": 12522487808
+    },
+    "/dev/shm": {
+      "total": 2147483648,
+      "free": 2147483648
+    }
+  },
+  "paths": {
+    "/root/rivermind-data": [
+      "/root/rivermind-data/DROIDW_ORIGINAL_DOMAIN_REPRODUCTION_R1",
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1",
+      "/root/rivermind-data/DROID_W_TASK003_VAL007_OBSERVATION_R1",
+      "/root/rivermind-data/DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z",
+      "/root/rivermind-data/DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z",
+      "/root/rivermind-data/DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261124_R2_READY",
+      "/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE",
+      "/root/rivermind-data/DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T190546090836Z",
+      "/root/rivermind-data/DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T191710937946Z",
+      "/root/rivermind-data/DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T193605562762Z",
+      "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1",
+      "/root/rivermind-data/DROID_W_TASK004C_RECOVERY_20261123T152953805Z",
+      "/root/rivermind-data/GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1",
+      "/root/rivermind-data/GAMECAM_TASK005B_R2_NUMERICAL_EQUIVALENCE_20261125_R1",
+      "/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1",
+      "/root/rivermind-data/VIPER_FLOTS_TRANSFER_R1",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408",
+      "/root/rivermind-data/VIPER_MATCHED_DUAL_BASELINE_R2",
+      "/root/rivermind-data/VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1",
+      "/root/rivermind-data/VIPER_VAL007_STAGE_OBSERVABILITY_R2",
+      "/root/rivermind-data/lost+found"
+    ],
+    "/root/.cache/torch/hub": [],
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408": [
+      "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs"
+    ]
+  },
+  "models_loaded": false,
+  "CUDA_initialized": false,
+  "checkpoint_files": [],
+  "active_python_processes": {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,comm"
+    ],
+    "exit_code": 0,
+    "stdout": "    PID COMMAND\n      1 tini\n      7 bash\n     10 sshd\n     22 bash\n     23 tail\n     24 jupyter-lab\n     27 sshd\n     38 python3\n     41 ps\n",
+    "stderr": ""
+  },
+  "package_metadata": {
+    "command": [
+      "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+      "-B",
+      "-c",
+      "import json,importlib.metadata as m; print(json.dumps({x:m.version(x) for x in ['torch','torchvision','numpy','opencv-python','timm']},indent=2))"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"torch\": \"2.1.0+cu118\",\n  \"torchvision\": \"0.16.0+cu118\",\n  \"numpy\": \"1.26.4\",\n  \"opencv-python\": \"4.8.1.78\",\n  \"timm\": \"0.9.10\"\n}\n",
+    "stderr": ""
+  }
+}

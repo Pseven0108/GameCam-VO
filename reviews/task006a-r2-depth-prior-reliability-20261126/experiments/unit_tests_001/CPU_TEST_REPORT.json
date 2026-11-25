@@ -1,0 +1,350 @@
+{
+  "tests": 57,
+  "passed": 57,
+  "success": true,
+  "records": [
+    {
+      "test": "test_reliability.TestAdmission.test_alignment_unknown_stops",
+      "status": "PASS",
+      "seconds": 4.459999999983921e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_depth_convention_unknown_stops",
+      "status": "PASS",
+      "seconds": 2.049999999997887e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_independent_GT_required",
+      "status": "PASS",
+      "seconds": 1.6499999999863846e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_invalid_GT_excluded_and_logged_by_mask",
+      "status": "PASS",
+      "seconds": 0.0006433999999999607,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_invalid_pred_not_silently_dropped",
+      "status": "PASS",
+      "seconds": 4.870000000001262e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_no_valid_GT_stops",
+      "status": "PASS",
+      "seconds": 3.9699999999864843e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_raw_relative_and_log_error",
+      "status": "PASS",
+      "seconds": 0.00018260000000003274,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_shape_mismatch_stops",
+      "status": "PASS",
+      "seconds": 2.2399999999977993e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_units_unknown_stops",
+      "status": "PASS",
+      "seconds": 1.7900000000015126e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_bins_are_not_probability_claim",
+      "status": "PASS",
+      "seconds": 0.0004998000000000502,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_missing_calibration_stops",
+      "status": "PASS",
+      "seconds": 2.1800000000071762e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_perfect_event_probabilities_zero_ECE",
+      "status": "PASS",
+      "seconds": 0.00040669999999987105,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_probability_bounds_checked",
+      "status": "PASS",
+      "seconds": 7.099999999993223e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_probability_one_not_lost",
+      "status": "PASS",
+      "seconds": 0.00011229999999984308,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_raw_confidence_not_ECE",
+      "status": "PASS",
+      "seconds": 0.0028863000000001193,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_sequence_leakage_stops",
+      "status": "PASS",
+      "seconds": 2.3200000000000998e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_actual_anchor_count_required",
+      "status": "PASS",
+      "seconds": 2.8600000000045256e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_initial_distribution_does_not_determine_final_error",
+      "status": "PASS",
+      "seconds": 0.0002546999999999411,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_logit_shift_invariance",
+      "status": "PASS",
+      "seconds": 0.00015009999999993084,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_one_hot_limit",
+      "status": "PASS",
+      "seconds": 9.569999999992085e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_uniform_entropy_and_variance",
+      "status": "PASS",
+      "seconds": 0.000252800000000164,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_NaN_score_rejected",
+      "status": "PASS",
+      "seconds": 2.8799999999939985e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_all_ties_are_random_not_input_order",
+      "status": "PASS",
+      "seconds": 0.00018980000000001773,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_confidence_direction_is_explicit",
+      "status": "PASS",
+      "seconds": 0.003427300000000022,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_constant_correlation_not_zero_imputed",
+      "status": "PASS",
+      "seconds": 3.819999999987722e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_multiple_error_thresholds_retained",
+      "status": "PASS",
+      "seconds": 0.0027728000000000197,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_perfect_binary",
+      "status": "PASS",
+      "seconds": 0.00016769999999999285,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_reversed_binary",
+      "status": "PASS",
+      "seconds": 0.00015909999999985658,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_single_class_metrics_undefined",
+      "status": "PASS",
+      "seconds": 8.659999999993673e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_0",
+      "status": "PASS",
+      "seconds": 0.003060100000000121,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_1",
+      "status": "PASS",
+      "seconds": 0.001405099999999937,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_1729",
+      "status": "PASS",
+      "seconds": 0.0013061000000000877,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_2",
+      "status": "PASS",
+      "seconds": 0.0013043999999999834,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_20261126",
+      "status": "PASS",
+      "seconds": 0.0013033999999998436,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_3",
+      "status": "PASS",
+      "seconds": 0.0012956000000001744,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_43",
+      "status": "PASS",
+      "seconds": 0.001316600000000001,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_44",
+      "status": "PASS",
+      "seconds": 0.001324600000000009,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_45",
+      "status": "PASS",
+      "seconds": 0.0013571999999999473,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_7",
+      "status": "PASS",
+      "seconds": 0.0014686999999999895,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_wrong_direction_not_automatically_fixed",
+      "status": "PASS",
+      "seconds": 0.0027820999999998985,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_bad_ranking_negative_AURG",
+      "status": "PASS",
+      "seconds": 0.00015980000000004324,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_constant_score_AURG_zero",
+      "status": "PASS",
+      "seconds": 0.00012960000000017402,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_negative_error_rejected",
+      "status": "PASS",
+      "seconds": 3.529999999996036e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_oracle_AUSE_zero",
+      "status": "PASS",
+      "seconds": 0.00014139999999995823,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_tie_expected_prefix_matches_enumeration",
+      "status": "PASS",
+      "seconds": 0.0003078999999999166,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_tie_permutation_invariance",
+      "status": "PASS",
+      "seconds": 0.0002891000000000421,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_zero_error_returns_zero_areas",
+      "status": "PASS",
+      "seconds": 0.0001530999999999061,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_TTA_relative_and_log_scores",
+      "status": "PASS",
+      "seconds": 0.0001092000000000315,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_consistently_wrong_model_is_not_detected",
+      "status": "PASS",
+      "seconds": 5.9800000000054254e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_correct_inverse_flip",
+      "status": "PASS",
+      "seconds": 7.689999999982433e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_invalid_TTA_depth_stops",
+      "status": "PASS",
+      "seconds": 3.3300000000124896e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_odd_padding",
+      "status": "PASS",
+      "seconds": 2.8099999999975367e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_resize_padding_native_dimensions",
+      "status": "PASS",
+      "seconds": 1.7700000000120397e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_zero_bottom_padding_does_not_empty_map",
+      "status": "PASS",
+      "seconds": 6.210000000006488e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_correct_target_confidence",
+      "status": "PASS",
+      "seconds": 0.00012089999999997936,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_gross_errors_not_confidence_supervised",
+      "status": "PASS",
+      "seconds": 8.399999999997299e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_wrong_pixel_confidence_unconstrained_by_this_loss",
+      "status": "PASS",
+      "seconds": 6.970000000006138e-05,
+      "detail": null
+    }
+  ],
+  "scope": "Synthetic evaluator and source-mask contract tests; NOT Metric3D inference or confidence accuracy evidence"
+}

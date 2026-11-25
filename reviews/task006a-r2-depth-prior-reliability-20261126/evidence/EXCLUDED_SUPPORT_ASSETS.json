@@ -1,0 +1,775 @@
+{
+  "files": [
+    {
+      "path": "experiments/runtime_site/__pycache__/Imath.cpython-39.pyc",
+      "bytes": 9280,
+      "sha256": "e1276aa2d4e8d4094f14934c651b520ceccd6f5da388f6411b3590224d322f96",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/Imath.py",
+      "bytes": 7293,
+      "sha256": "326a663c1ba629eb14c78a07445bcb4a179d03fcba9c4a032f46cfe53946f16d",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/INSTALLER",
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/licenses/LICENSE.md",
+      "bytes": 1512,
+      "sha256": "a6bb3aa9870a687f078f1eb32623e1514dd223703fc7a1a564907b335a5cd0e7",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/METADATA",
+      "bytes": 10758,
+      "sha256": "1541599e89c08b793c549c4d8a6a86e56e1683a40262e23b0e0d30359439d395",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/RECORD",
+      "bytes": 662,
+      "sha256": "d537b2851d28365dca5f4bf3ead2fc816c5e038d443817164ecd566953f0186a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/REQUESTED",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/openexr-3.3.3.dist-info/WHEEL",
+      "bytes": 104,
+      "sha256": "b3e233b6db8fb8f269f330effa39becc6bd3382c5d142be35fd74843dcea9ccf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/OpenEXR.pyd",
+      "bytes": 1962496,
+      "sha256": "17b00f1cdd1961eb9237b48ea9583d1c93014a724c3134ecb91f3d28a17b0c58",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__init__.py",
+      "bytes": 1331,
+      "sha256": "16f7b97e0c8f56d9c4d05d07157014e27527eb46cd7a1a97af14133f859dd186",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 1432,
+      "sha256": "4ca7a06588c2e94a64a2a8e02ac08807da73a4a81f6b74850141cce7d5cb208f",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_cmap.cpython-39.pyc",
+      "bytes": 12098,
+      "sha256": "2b796e14bfee885be9d8fbfdb96f50620c1c1499c824f50e04705262c37196aa",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_doc_common.cpython-39.pyc",
+      "bytes": 40880,
+      "sha256": "bccdbc541aeade6ff48c14a90e187ddf6eace698c8b7226f018b3856569d3cbf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_encryption.cpython-39.pyc",
+      "bytes": 40178,
+      "sha256": "ff5829849491d1c4106ee12c85ec2ee634ca073feeb39b5759f103d9ccbcb267",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_merger.cpython-39.pyc",
+      "bytes": 650,
+      "sha256": "978daf18e7ea89d12d99638342574e93848acac5a350d83750f50220635d6346",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_page.cpython-39.pyc",
+      "bytes": 63468,
+      "sha256": "1305c0494f6c3d6850c937b34dc4f8446b0ab9da028b3353a0f0f9a91d8a96c9",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_page_labels.cpython-39.pyc",
+      "bytes": 7162,
+      "sha256": "ffdb97cbcd1a0ee92a40f46555f594db2d181b9cdfee31a0d69df0b9862dbbbb",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_protocols.cpython-39.pyc",
+      "bytes": 3953,
+      "sha256": "2abb921c54c9fd6c74a2a5c8f65db41cb46a258016a1133940b1dba1cd68ffb5",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_reader.cpython-39.pyc",
+      "bytes": 29284,
+      "sha256": "5dedfcef6e4ee9fbe628e488a59755a172f2cb78fc4211672f3d249e6a86665f",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_utils.cpython-39.pyc",
+      "bytes": 16122,
+      "sha256": "4efd81e31e354253504fda6b47ef08db97095f54def4af7960c37fe801843756",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_version.cpython-39.pyc",
+      "bytes": 202,
+      "sha256": "317a87c96f59baca094eab00943f69cf787fa422258628180c46b8494c238b1e",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_writer.cpython-39.pyc",
+      "bytes": 90084,
+      "sha256": "f7abb738a03ebca4258a3cba77bad97290c9d2016e5e89156227dc529a38dc54",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/_xobj_image_helpers.cpython-39.pyc",
+      "bytes": 9885,
+      "sha256": "798a1b33428c3d58cc2a2bf110e903b259a488918d2d66aa95472efb7962366c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/constants.cpython-39.pyc",
+      "bytes": 20148,
+      "sha256": "0cd686561a81db4e8af6163bb518f9c5e2b73640af3a8412f8d69acbc46e3669",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/errors.cpython-39.pyc",
+      "bytes": 3041,
+      "sha256": "ebb8e220525405a214ce3c0427e90c84e7047527853afb7f01bb7737e1a5df7a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/filters.cpython-39.pyc",
+      "bytes": 21775,
+      "sha256": "b735ddb7aa6c9b103f360b32e6c5da1bcde37c6ecb3d6c7c357d7df52f855792",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/pagerange.cpython-39.pyc",
+      "bytes": 7003,
+      "sha256": "e00f25e1bd82c4a3a6b4e66e26f0491a755ac483669bedabd2a79d241f4fa58a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/papersizes.cpython-39.pyc",
+      "bytes": 1037,
+      "sha256": "200993e46283cbb39f8bed7a9b87c334ffe30ee0895be964663208480532f76a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/types.cpython-39.pyc",
+      "bytes": 1581,
+      "sha256": "84bf3205af33aef3e9a5213474af24172ffbee8aee94cf815b79448a0fbe2bc6",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/__pycache__/xmp.cpython-39.pyc",
+      "bytes": 9806,
+      "sha256": "4f60406bbd4cc61c7cc97b0cb2ff54b2293823ad2c7dc520f5b4820433063bf2",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_cmap.py",
+      "bytes": 18938,
+      "sha256": "9add400d631f532ac0e19fe449d8a360e64cd400515f71fceb73ad6c8af4fa90",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__init__.py",
+      "bytes": 1676,
+      "sha256": "597324ce53020e5986e54ea2c5093c32b631690789c447e28390d368696494b9",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 1611,
+      "sha256": "5acbf8ca7a745992cc0f38781cd53fb5ac8d6ab5e08078d49762ae42632528a6",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/_codecs.cpython-39.pyc",
+      "bytes": 5975,
+      "sha256": "2a22a0aa3b154fa42af4ade8874cfd37206d68850b77820dafe22608c069b936",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/adobe_glyphs.cpython-39.pyc",
+      "bytes": 387095,
+      "sha256": "67e37159a7794fdec5d9d659cf8042187d10119b08652a99e2af93d3c7ff0078",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/pdfdoc.cpython-39.pyc",
+      "bytes": 1580,
+      "sha256": "4d8ddac4d75b76c7831ee20e4205a12e4fb5386455a5b18e8b3a9bd3ae7dde14",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/std.cpython-39.pyc",
+      "bytes": 1501,
+      "sha256": "c9a09bf4d8bd6f6804a3cef6b9bb2a035e8bc5a37f6ac9dda52f0f65e64e68e8",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/symbol.cpython-39.pyc",
+      "bytes": 1872,
+      "sha256": "7379734f064700e3a17945252b40fc16e647ddad2170497ca3dcd89771da48bc",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/__pycache__/zapfding.cpython-39.pyc",
+      "bytes": 2108,
+      "sha256": "07517cca0456424ab08727164821de45c600be66645bc712d86f6a9d6f704f1a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/_codecs.py",
+      "bytes": 10120,
+      "sha256": "a9164cad49135d44ed7390b14584ee6a4f8b9975e093ec8ba65d4616a843c770",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/adobe_glyphs.py",
+      "bytes": 447213,
+      "sha256": "b7770314f0eac08cf5c3d07481d5738dd73c7842bd02e4639397fb95a130fdf6",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/pdfdoc.py",
+      "bytes": 4269,
+      "sha256": "c5f4af30562cbf1b9a490d14bbdbd90ca681d16bbce61d6e0a20758bdac07145",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/std.py",
+      "bytes": 2630,
+      "sha256": "0f240cb84a40184a52f6ecb58d67f87278fe92a4a13ce0228f9b08ed0d580fc1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/symbol.py",
+      "bytes": 3734,
+      "sha256": "9c86864089615822623cc1ebc149661871fefdf397c842af82e466b8a5dc1809",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_codecs/zapfding.py",
+      "bytes": 3742,
+      "sha256": "3d0c63c510bad7a778d711777b15713f55bc9cce10ad97e33b7966b4bc6913fb",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__init__.py",
+      "bytes": 3054,
+      "sha256": "2b767a02e5e15d579780b7adf93ba4ab682df47eba3a076ea6cbf1212d429a42",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 976,
+      "sha256": "678ef09a63d9db474b5f9a68210b075dec9ad933208a85ff68a10f4703c15c39",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__pycache__/_base.cpython-39.pyc",
+      "bytes": 766,
+      "sha256": "1cb0d98f4de9e30aa4dcd95d70d976164c4230e3c073431584c1e93bf036cf2a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__pycache__/_cryptography.cpython-39.pyc",
+      "bytes": 3687,
+      "sha256": "1a7bcf7754242b0b19084b8794ed03c6c35e3ab259f1ba0d5049c15d6e4e2081",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__pycache__/_fallback.cpython-39.pyc",
+      "bytes": 2934,
+      "sha256": "a8e67f78c43329a4eff4c0fdf1008cfcb54abd2ad2e1b17ff0dfc687d1912710",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/__pycache__/_pycryptodome.cpython-39.pyc",
+      "bytes": 2897,
+      "sha256": "6177df42184c1bd36260bdf1d5b0c9f3d0e92f203af4903a335bb7232226b854",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/_base.py",
+      "bytes": 1711,
+      "sha256": "fdfe77323eaf8af84464c438bcdc4de46d083a0158fa7e7f95e91ed1cfea88d5",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/_cryptography.py",
+      "bytes": 4557,
+      "sha256": "cd3dd699b3f37acbe01d190670a02576a276e0c6370706558956d2739e59c61c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/_fallback.py",
+      "bytes": 3334,
+      "sha256": "bec628a30475602015feaf87add21986451cac26fa1ef44134c626d3742d094f",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_crypt_providers/_pycryptodome.py",
+      "bytes": 3381,
+      "sha256": "53569067d89806b668fa12828c952118e3e1c04153a228ada30437d7a4cdaeb0",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_doc_common.py",
+      "bytes": 52246,
+      "sha256": "0a442c0528e4c858f34680e76cecbdd3b2b0066ab358f771037f24a349e4c6cf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_encryption.py",
+      "bytes": 48775,
+      "sha256": "a4f83b7c87ea74bf7a4dce91568072b4456332b99915e72bffa97b75bb4316b1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_merger.py",
+      "bytes": 1744,
+      "sha256": "61f4902838a2433d96b42995663c4ffe7bf6a51dac86205fdad0e201be3573bb",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_page.py",
+      "bytes": 88960,
+      "sha256": "7d41ab88c6e159fc1c84247b2d1501f1b79322cf3bf8fe553c8d6729fe65bcf1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_page_labels.py",
+      "bytes": 8532,
+      "sha256": "7003d95f35d0db82e9a1a8654cdc55b6e8fc46be0073338a7344a5c955578e66",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_protocols.py",
+      "bytes": 2142,
+      "sha256": "9e8135cb67d513ecf5c2af85910cda4b97b16bca2f3854d45ea7504afaa2e7b7",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_reader.py",
+      "bytes": 51552,
+      "sha256": "3d6716332ef3acc3189b77082512ae3750e7a13086efc7594d486eca2c7d4d88",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/__init__.py",
+      "bytes": 8538,
+      "sha256": "edbd8ed7c7ca75cca17167f389806c1e9f878339f218968719b11c77cf2ae7cd",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 6628,
+      "sha256": "b54d574a3c34a6e02874c6dd6108197690beb38de405b0ce2ea8c83234934a51",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/__pycache__/_text_extractor.cpython-39.pyc",
+      "bytes": 10269,
+      "sha256": "343f26cff38906f86342c1ba1582e67fb0fbcff8020874622a4466b1c56e13cf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__init__.py",
+      "bytes": 338,
+      "sha256": "935b4de3a8035f5ce101ab43f284c632e089529fa981b1e3c90f07e9ac574605",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 501,
+      "sha256": "399959b68fc8587fa584ac058006c6a1ce1888f469c95d88da668f939f0f14d3",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/_fixed_width_page.cpython-39.pyc",
+      "bytes": 11844,
+      "sha256": "1028bdafd95b1140a11b3153a5910bcc99f2090072a34fbeef6fa0cd62bd829a",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/_font.cpython-39.pyc",
+      "bytes": 4681,
+      "sha256": "32c240d59273c9653f551268978b96dadf04ee04134f96245ff07b86d90b22bf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/_font_widths.cpython-39.pyc",
+      "bytes": 1661,
+      "sha256": "d75bf1877183c68361a388dae0d317da8805ddfda2800554b9992619b5f2abbb",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_manager.cpython-39.pyc",
+      "bytes": 7821,
+      "sha256": "30fc54c604f57f12f401f6e3c0e9954ddd397c90716d5f190934dc21f01630be",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_params.cpython-39.pyc",
+      "bytes": 5373,
+      "sha256": "e5a179070a96d13e66475583588434b45216bd00e08a69660cebaa03254024f9",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py",
+      "bytes": 14915,
+      "sha256": "b9875c9cb1cd5554844e20dd4e0033ff6afd999413e2b5c0707365350ec34f54",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/_font.py",
+      "bytes": 7047,
+      "sha256": "677df87e97ed1d5111badd5cdeb8d6bc1e3d05d71a03f845ab766e58be70726d",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/_font_widths.py",
+      "bytes": 4265,
+      "sha256": "1df82c7767ed1b0f008e5ec873034895f2d89ee9be7a469a75fc04adc51d5ad2",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/_text_state_manager.py",
+      "bytes": 8196,
+      "sha256": "9c7e78f118ba0368f0204d29c2f8961d27da757f71365fa67ce439dfd4004642",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_layout_mode/_text_state_params.py",
+      "bytes": 5318,
+      "sha256": "6fc0d2a09d9e6ac0995bf26f325f3858514800d28684b0f5ce3315025a927325",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_text_extraction/_text_extractor.py",
+      "bytes": 16641,
+      "sha256": "14a546b94cd4683de2bdf58de1506a6e14f9cc01278a457823dc4f2746d2c280",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_utils.py",
+      "bytes": 20219,
+      "sha256": "2ecb9228f93b970ca294ff8e7d68599369854fce468f7c817ffebd7d5b1944f9",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_version.py",
+      "bytes": 22,
+      "sha256": "2bc4145aab739b446fcaf322d2c859bab95c6d11353221d8e37a092092dc185d",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_writer.py",
+      "bytes": 137759,
+      "sha256": "283d074e99ac4e05c27ddcea63aa56d722a518dd219193e93c7ab3a58ddd5153",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/_xobj_image_helpers.py",
+      "bytes": 14721,
+      "sha256": "6f04d8fd732bb79b1b642283a49b1eff8ead439bfc5b2a88fa192f59ee62989f",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/__init__.py",
+      "bytes": 990,
+      "sha256": "7f693ffa3027dfd082076ecac50fdef771a29e7ce40076d49e749e1899758f21",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 1131,
+      "sha256": "4bbf57cf9cd41ef05ffb38ace428119941e2aee11bb92ebbf4cf18a10c9f0e42",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/__pycache__/_base.cpython-39.pyc",
+      "bytes": 1225,
+      "sha256": "4e21ca8ad1988affabf7863dcd83fe9939edfc3a2021ccbe189f1b594030a0d1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/__pycache__/_markup_annotations.cpython-39.pyc",
+      "bytes": 8491,
+      "sha256": "47768dddc73d5abdc5cd2c62b021fad21fbaecc50fceaa90e35c60f2e18b16da",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/__pycache__/_non_markup_annotations.cpython-39.pyc",
+      "bytes": 3177,
+      "sha256": "e51cea211835a263e0baa4df4956ea5e0439931c5dfb79bcb63b52fcd13b1035",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/_base.py",
+      "bytes": 961,
+      "sha256": "79ea1cf6fdb0d798c05212978f8f25d5b07ae98801815fb6bf92085091febf0b",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/_markup_annotations.py",
+      "bytes": 10100,
+      "sha256": "6a4a00710500f78e571a08d74675fa857d717334d47aaaef7222bb2a2340aede",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/annotations/_non_markup_annotations.py",
+      "bytes": 3656,
+      "sha256": "c802094c513ff1d0dd7a5f2c50a94e05371c7f9a273bc1686bcba5b98e74bb66",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/constants.py",
+      "bytes": 22393,
+      "sha256": "2e4b73c0b45b7bb942f64ecf7e62765851affb84e7942e137dfa26d0722fca2c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/errors.py",
+      "bytes": 1740,
+      "sha256": "c7427999321ba7961c5c0d697586b90cef37b808573f93423b402791fe03b146",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/filters.py",
+      "bytes": 33945,
+      "sha256": "c0f763136951f90f096cca9f539e1e82827bbe853a104d6ba721f76ac2bc5b71",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__init__.py",
+      "bytes": 7386,
+      "sha256": "7dae781252570aeaf75b7744cb466414bb5285b27631d1c284574cb688e0a1aa",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 5431,
+      "sha256": "2eceaa5bcdb92c47d2db16f106ddb0679df1f63173f9ac9c8a7ece5cf089bddf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_base.cpython-39.pyc",
+      "bytes": 26161,
+      "sha256": "585e22231a95139723baca274814325ffe6f44052819f444fa5f8a90cb311ef5",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_data_structures.cpython-39.pyc",
+      "bytes": 42717,
+      "sha256": "4fb4b4842e405549f3e5e8cf85678a23d0a8b507dacfe45e27e92a550a1fa4b1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_files.cpython-39.pyc",
+      "bytes": 10127,
+      "sha256": "dad37ff69506a1c37954ab025205d8c5f78f870e4b50aa59e4cee741c5e6bcad",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_fit.cpython-39.pyc",
+      "bytes": 6251,
+      "sha256": "9d589da2081bb2af0e83aae47d017ea40d5ad9ecbd70f00f6a642a280c0f7c56",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_image_inline.cpython-39.pyc",
+      "bytes": 5321,
+      "sha256": "50aa3f802aafc257e1097aebd724359625d4f19318fc3610995bceda1e332a9c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_link.cpython-39.pyc",
+      "bytes": 3984,
+      "sha256": "1108f73b0a9e4a76168b7253737abd5c007514e0504f8d2ab28eff2e6b0666d0",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_outline.cpython-39.pyc",
+      "bytes": 1363,
+      "sha256": "a7d40ed90854d01196eb65d2875551812c2bdfd8ba9ee51544ba13d4ddc5d711",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_rectangle.cpython-39.pyc",
+      "bytes": 5646,
+      "sha256": "bc524446c98aad6b72d48a53be2363894206211206541e09c76dcc53fc5b44b4",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_utils.cpython-39.pyc",
+      "bytes": 4595,
+      "sha256": "3ae7c2da7561a74b32cb9b46b5db042a0cee85af7a4fa460062dbdb5994b926c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/__pycache__/_viewerpref.cpython-39.pyc",
+      "bytes": 6224,
+      "sha256": "a57b1efcc829773be64068e0e7702e04ba8a9eacdd7b43c9b17e60856740343d",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_base.py",
+      "bytes": 31731,
+      "sha256": "e6d0f742266e12d82f8bdaebdedc8f24fee5f41ea8beb21cfbf96183ad167fa5",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_data_structures.py",
+      "bytes": 63572,
+      "sha256": "c0998218c708b2ba9c328f03bb12c53b3dcd283e2a8847245e2311d99e59490c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_files.py",
+      "bytes": 12879,
+      "sha256": "ad311f09544e7e0f19cf3c19e5c45aa570458c523f101d3da73e9f4a8989832d",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_fit.py",
+      "bytes": 5528,
+      "sha256": "fe9af78f8f9ac138c639d8457b91919e8df9061b2b5f6a2f78b92bef954c13eb",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_image_inline.py",
+      "bytes": 11478,
+      "sha256": "07d8ea3adfe76af8268de929ec1a8da6eef648c71c7478cd0a8e3f26d7b3d79c",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_link.py",
+      "bytes": 4909,
+      "sha256": "9e97b8006d1fcf2225b813a4725e6d44dadc82e1e79d6416f094b0332756d4a1",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_outline.py",
+      "bytes": 1094,
+      "sha256": "a8a6cc5f8d8e59faa7a2922213a054cba12f7532c67b766d8da89637ce49a5a6",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_rectangle.py",
+      "bytes": 3808,
+      "sha256": "e4a2516d0112a9dceb62f24e15cc1fa74feffdb8420d58fdaf8c8cc865d21b27",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_utils.py",
+      "bytes": 7277,
+      "sha256": "a7fe59111b9082040636b5156077f73b1367fed9086f4b583a1068d3de7f3792",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/generic/_viewerpref.py",
+      "bytes": 6768,
+      "sha256": "f20ae0fc24103ec5790479f18f04d8c9e21602cbb4bf92835a04451080defd54",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/pagerange.py",
+      "bytes": 7121,
+      "sha256": "4f6eb46279dd3ba7993eb56b378929f0d150ad80f38ceb8cd42246e796ef70e8",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/papersizes.py",
+      "bytes": 1413,
+      "sha256": "e93cf9b1f34dff724e51aa58f3753e95a928867a57600d2148440d98e54b14bf",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/py.typed",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/types.py",
+      "bytes": 1921,
+      "sha256": "91ce88950b2cc768fdf69a364a14805844612573957a1e48070de46e9e688b15",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf/xmp.py",
+      "bytes": 15936,
+      "sha256": "73e3182467c6d12d556e074acb3a256ade31a0bae30b2a0d4c30364edb9fb788",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/INSTALLER",
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/licenses/LICENSE",
+      "bytes": 1605,
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/METADATA",
+      "bytes": 7148,
+      "sha256": "35c3989508fd615f39e54a387b562d6e862815494e0a7195b98522bcb1e85a59",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/RECORD",
+      "bytes": 8283,
+      "sha256": "4655c8b2b69927dc08a09dbd5c76e988fae14053f1e9d09335da581ca0dca5c5",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/REQUESTED",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/runtime_site/pypdf-5.9.0.dist-info/WHEEL",
+      "bytes": 82,
+      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+      "reason": "Local third-party tool dependencies, reproducible from package versions"
+    },
+    {
+      "path": "experiments/literature_cache/ufm_author_cdn.extracted.txt",
+      "bytes": 39832,
+      "sha256": "e6cdf4573ef15730524d511fcd68bc8860e19e7548a954a784fd177279cd54c7",
+      "reason": "Third-party paper full text; source URL and PDF SHA preserved in reading receipt"
+    },
+    {
+      "path": "experiments/literature_cache/ufm_author_cdn.pdf",
+      "bytes": 1394379,
+      "sha256": "68c7f1eab757374b96e1bef7a139eae63dd29ecd0a3ad0b57becb8cddb8e6b08",
+      "reason": "Third-party paper full text; source URL and PDF SHA preserved in reading receipt"
+    }
+  ],
+  "research_outputs_excluded": false,
+  "raw_dataset_and_checkpoint_copied": false,
+  "literature_receipts_retained": true
+}

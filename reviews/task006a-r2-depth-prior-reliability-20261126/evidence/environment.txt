@@ -1,0 +1,24 @@
+{
+  "timestamp_Asia_Shanghai": "2026-11-26T04:53:12.971064+08:00",
+  "local_python": "3.9.13",
+  "local_platform": "Windows-10-10.0.26200-SP0",
+  "CUDA_VISIBLE_DEVICES": "",
+  "local_packages": {
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "Pillow": "11.3.0",
+    "matplotlib": "3.9.4"
+  },
+  "isolated_packages": {
+    "OpenEXR": "3.3.3",
+    "pypdf": "5.9.0"
+  },
+  "GPU_runtime": "UNAVAILABLE_UNCONFIRMED",
+  "GPU_probe": {
+    "error": "[Errno 8] Exec format error: 'nvidia-smi'"
+  },
+  "remote_free_data_bytes_at_final_probe": 12522487808,
+  "native_inference": false,
+  "torch_imported_for_model": false
+}

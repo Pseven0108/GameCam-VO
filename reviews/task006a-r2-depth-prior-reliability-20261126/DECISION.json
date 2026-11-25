@@ -1,0 +1,20 @@
+{
+  "stage": "TASK006A-R2",
+  "date_Asia_Shanghai": "2026-11-26",
+  "status": "PARTIAL_WAITING_GPU_AND_GT_ADMISSION",
+  "integration_decision": "NO-GO_INSUFFICIENT_INDEPENDENT_EVIDENCE",
+  "CPU_tests_passed": 61,
+  "model_inference_count": 0,
+  "calibration_executed": false,
+  "GT_accuracy_evaluation_executed": false,
+  "GT_files_audited": 100,
+  "RGB_files_audited": 100,
+  "pose_files_audited": 100,
+  "blocking_reasons": [
+    "GPU availability unconfirmed: nvidia-smi Exec format error",
+    "No dense depth GT in audited local VIPER assets",
+    "MVS depth physical units not established; only one complete local GT sequence"
+  ],
+  "confidence_failure_established": false,
+  "next_stage_automatically_authorized": false
+}

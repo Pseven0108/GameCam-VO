@@ -1,3 +1,22 @@
+# GameCam-VO · TASK006A-R2 深度先验可信度阶段证据
+
+2026-11-26。**PARTIAL_WAITING_GPU_AND_GT_ADMISSION**。
+进入联合可信度控制器：**NO-GO_INSUFFICIENT_INDEPENDENT_EVIDENCE**，并非证明 Metric3D Confidence 无效。
+
+[最终研究报告](reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_FINAL_RESEARCH_REPORT.md) · [完整展开评审](reviews/task006a-r2-depth-prior-reliability-20261126) · [完整原始ZIP](review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip)
+
+已完成：实际 Metric3D commit/283 Git blobs/权重SHA核验、Confidence生成与监督源码、四篇核心论文相关全文阅读、100帧真实GT数据审计、300文件来源复核、61/61 CPU评价合同测试。
+
+未执行：模型推理、Confidence数值分布、TTA/bin真实效果、独立GT误差评价。GPU探针Exec format error；VIPER审阅本地资产无dense-depth GT，MVS单位未核实且只有一条完整GT序列。不用R1几何输出作伪GT。
+
+原始ZIP：2,249,504 bytes，116成员；CRC和115项内部SHA通过。SHA-256：`99b71271a53dd84292409be1e9b8dee65feeb54c8d338a777e3b4d3ebe4edb6f`。
+完整源码/CSV/JSON/日志/图与原ZIP一同提供，未上传模型权重或完整原始数据。R1及其他历史封存结果保持不变。
+本分支的状态取代下列历史阶段文字；仓库仍为Public，默认分支不变。
+
+---
+
+## 先前阶段原文（历史记录）
+
 # GameCam-VO · TASK006A-R1 CADP CPU数学原型
 
 2026-11-26。状态：**TASK006A_R1_COMPLETE_WAITING_FOR_HUMAN_REVIEW**。

@@ -1,0 +1,9 @@
+method,needs_new_training,extra_forward,backward,mechanism,limitation,current_execution
+Metric3D native confidence,No for fixed checkpoint,0,No,Joint GRU scalar score with masked confidence loss,Uncalibrated output; severe-error supervision excluded in this loss,SOURCE_ONLY
+Flip TTA,No,1,No,Restore flipped output and compare,Consistently wrong predictions can agree,SYNTHETIC_EVALUATOR_ONLY
+Initial depth-bin statistics,No,0 if hook works,No,Entropy/anchor variance/pmax/neff before RAFT,Initial distribution is not final-depth error distribution,SOURCE_AND_SYNTHETIC_ONLY
+GrUMoDepth,No fixed-depth retraining in author method,Typically 1 beyond original,1,Auxiliary prediction discrepancy gradients,Layers/loss/cost need Metric3D validation,PAPER_AND_ENTRY_CODE_ONLY
+UfM,Author setup uses aleatoric ensemble/MC-dropout models,Temporal sampling replaces simultaneous members,No at inference,Pose-based temporal mixture moments,Geometry dependent and base uncertainty dependent,PAPER_READ_ONLY
+DepthCov,Yes or valid pretrained covariance network,Covariance CNN required,Training only,Learned correlated log-depth GP,Not a no-training plug-in native score,PAPER_READ_ONLY
+MC dropout,Depends on compatible existing architecture,T-1,No,Repeated stochastic masks,Enabling train mode may change more than dropout,NOT_SELECTED
+Ensemble,Requires separately justified model members,M-1,No at inference,Diverse predictor disagreement,Current single fixed checkpoint is not an ensemble,NOT_SELECTED

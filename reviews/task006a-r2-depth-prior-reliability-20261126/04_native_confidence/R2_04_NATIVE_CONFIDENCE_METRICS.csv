@@ -1,0 +1,12 @@
+candidate,environment,threshold,metric,value,status,sample_count,reason
+NativeConfidence,UNMEASURED,,Spearman,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,,Pearson,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.1,AUROC,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.2,AUROC,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.5,AUROC,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.1,AUPRC_AP,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.2,AUPRC_AP,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,0.5,AUPRC_AP,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,,AUSE_raw_AbsRel,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,,AURG_raw_AbsRel,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted
+NativeConfidence,UNMEASURED,,ECE,,NOT_EXECUTED,0,GPU unavailable; independent matched-unit GT not admitted

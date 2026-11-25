@@ -1,0 +1,37 @@
+{
+  "MVS_local_sequences": [
+    {
+      "sequence": "0000",
+      "rgb_count": 100,
+      "GT_EXR_count": 100,
+      "pose_count": 100,
+      "role": "AUDIT_ONLY_NOT_CALIBRATION_OR_INDEPENDENT_TEST"
+    }
+  ],
+  "MVS_audited_frames": 100,
+  "MVS_format": "Single-channel Y HALF EXR; +inf is documented sky, not replaced",
+  "MVS_physical_unit_established": false,
+  "MVS_metric_accuracy_admitted": false,
+  "MVS_depth_GT_file_alignment": "Filename, dimensions and multiview diagnostics only; no independent sensor accuracy certificate",
+  "MVS_independent_calibration_test_split_available": false,
+  "MVS_preview_only_sequences": [
+    "0001",
+    "0039",
+    "0079",
+    "0119"
+  ],
+  "MVS_preview_official_archive_identity_verified": false,
+  "MVS_official_size_540": "9GB; full download not attempted",
+  "MVS_official_license": "Research and educational use only",
+  "VIPER_audited_RGB_archives": 11,
+  "VIPER_train_camera_archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_R0_1_TRAIN_AND_VO_PROTOCOL_AUDIT\\02_metadata\\train_camera.zip",
+  "VIPER_train_camera_members": 78,
+  "VIPER_dense_depth_GT_found_in_audited_local_inputs": false,
+  "new_dataset_download_bytes": 0,
+  "independent_error_validation_ready": false,
+  "blocking_reasons": [
+    "No matched-unit independent depth GT for VIPER",
+    "MVS physical unit/convention admission incomplete",
+    "Only one complete local MVS sequence; no independent calibration/test split"
+  ]
+}

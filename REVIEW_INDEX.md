@@ -1,3 +1,13 @@
+# 最新评审：TASK006A-R2（部分完成）
+
+[最终研究报告](reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_FINAL_RESEARCH_REPORT.md) · [完整展开评审](reviews/task006a-r2-depth-prior-reliability-20261126) · [完整原始ZIP](review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip)
+
+源码/数据/61项CPU工具测试已完成；真实推理与GT资格仍阻断。请保留未知项，不将未测CSV当成零。
+
+---
+
+## 历史评审索引
+
 # 最新评审 · TASK006A-R1（2026-11-26）
 
 [最终评审](reviews/task006a-r1-cadp-cpu-20261126/FINAL_REVIEW.md) · [完整展开目录](reviews/task006a-r1-cadp-cpu-20261126) · [完整评审ZIP](review_packages/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip)

@@ -1,0 +1,28 @@
+{
+  "own_scripts_AST_valid": 14,
+  "CPU_test_suite": {
+    "passed": 61,
+    "scope": "Synthetic evaluator and source-mask contract tests; NOT Metric3D inference or confidence accuracy evidence"
+  },
+  "unmeasured_numeric_cells_empty": true,
+  "prior_assets_unchanged": true,
+  "raw_GT_files_unchanged": true,
+  "no_confidence_accuracy_claim": true,
+  "decision": "PARTIAL / NO-GO_INSUFFICIENT_EVIDENCE",
+  "script_hashes": {
+    "experiments/scripts/audit_datasets.py": "c6b8b27eef5f40a4501018f6f4fb63465462f3bae557ad534b0fb7d81aa76e65",
+    "experiments/scripts/dataset_addendum.py": "217e3dc18187ff517e99e27f589b7537fe441068ecd9e69522caa0acaa6aec3f",
+    "experiments/scripts/finalize_review.py": "6bcb901be5430b2236c96c1a5c26b61f608d8b5df216db2274055c0a0676002e",
+    "experiments/scripts/local_intake.py": "c21dd4a86e5ba193e8bb1b9a82b4d941c52435696b8766c3a23f48440aa5ad32",
+    "experiments/scripts/metric3d_confidence_probe.py": "87cb437f7ef05661b379f093c7daefc67eeed036d4acef5cc5b3c562f95124be",
+    "experiments/scripts/read_ufm_paper.py": "4330ca0cc85efa75aa525201e6c1d70b254d97c93501ce31322f6b8df44f1f04",
+    "experiments/scripts/reliability_metrics.py": "38da7b713492bacc82788cb36825dac34301d949f755f9129f3ac1026743aeea",
+    "experiments/scripts/remote_finalize_read.py": "548c4d6605921071ebea64659cf102a3e35482ba08eb1d31200ef771e88706aa",
+    "experiments/scripts/remote_identity_read.py": "1e40b3f89d7c4ca1223f5aa12adf59f488f35028190e11722fe6e57a88464e28",
+    "experiments/scripts/remote_probe.py": "20a7c9e92173237913a8c62a3e783d87f29ce7691ee7523f3be4bfafd3ca6a76",
+    "experiments/scripts/remote_read.py": "b6449328ed58b80bb3914ecdd3a391306c8346876e34d7a33661ef9b93ede828",
+    "experiments/scripts/remote_source_read.py": "26424b4fe22ddfcdd1f9dc79595630856f482c12affffae3f4537c0eddfcc74a",
+    "experiments/scripts/test_reliability.py": "32b559febab0fad0eada2fa0b6fa9cb5364ab3a41ea099b01ca8c1af16a616d4",
+    "experiments/scripts/write_reports.py": "396c20d4df5c7a8e06c286c57937deb22ae43bd8e172c4e0a6599eca7b0f09db"
+  }
+}

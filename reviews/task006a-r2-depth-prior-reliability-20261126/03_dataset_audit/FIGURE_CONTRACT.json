@@ -1,0 +1,17 @@
+{
+  "figure": "MVS local GT audit",
+  "claim": "Real EXR depth and sky masks exist, but do not establish meter units or Metric3D reliability",
+  "panels": [
+    "original RGB thumbnails",
+    "GT depth native units, LogNorm display only",
+    "finite-positive GT mask"
+  ],
+  "archetype": "image plate + quant",
+  "backend": "Python/matplotlib",
+  "exports": [
+    "PNG",
+    "SVG"
+  ],
+  "integrity": "Only display normalization; +inf retained in raw data; no predictions fabricated",
+  "caption": "MVS-Synth sequence 0000, audit only; native units, not verified meters"
+}

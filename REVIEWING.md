@@ -1,3 +1,22 @@
+# 当前评审：TASK006A-R2（部分证据包）
+
+[最终研究报告](reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_FINAL_RESEARCH_REPORT.md) · [完整展开评审](reviews/task006a-r2-depth-prior-reliability-20261126) · [完整原始ZIP](review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip)
+
+请优先检查：
+
+1. 首页七个研究问题全部区分已知与未测，NO-GO仅针对当前接入资格。
+2. 实际Metric3D commit与283文件、权重SHA，不使用注释旧commit。
+3. Confidence loss排除严重错误像素的精确mask；没有据此宣布模型失效。
+4. MVS 100帧审计、非零基线Z/range对照、单位未核实和一条完整序列的划分限制。
+5. 61项CPU评价器测试与未执行GPU实验分开；原始CSV保留空值。
+6. 完整ZIP及展开成员一致；R1、原始数据、生产入口和权重的保护复核。
+
+不要用主观热图代替GT准确性，不把raw score当概率，不据当前结果进入CADP/BA融合。
+
+---
+
+## 历史审查说明
+
 # 当前评审：TASK006A-R1
 
 [最终评审](reviews/task006a-r1-cadp-cpu-20261126/FINAL_REVIEW.md) · [完整展开目录](reviews/task006a-r1-cadp-cpu-20261126) · [完整评审ZIP](review_packages/GAMECAM_TASK006A_R1_CADP_CPU_REVIEW.zip)

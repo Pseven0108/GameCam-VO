@@ -1,0 +1,52 @@
+--- R2/reference
++++ R3/reference
+@@ -1,4 +1,4 @@
+-std::vector<torch::Tensor> ba_trace_reference_cuda(
++std::vector<torch::Tensor> ba_r3_reference_cuda(
+     torch::Tensor poses,        // [buffer, 7]
+     torch::Tensor disps,        // [buffer, height, width]
+     torch::Tensor intrinsics,
+@@ -28,11 +28,13 @@
+     const bool enable_udba,
+     const bool enable_affine_transform,
+     const bool enable_bidirectional_uncer,
+-    const bool debug)
++    const bool debug,
++    const bool freeze_U)
+ {
+   std::vector<torch::Tensor> trace;
+-  TORCH_CHECK(iterations == 2 && !motion_only && !depth_only && enable_update_uncer && enable_affine_transform && !debug, "R2 bounded trace contract");
++  TORCH_CHECK(iterations == 2 && !motion_only && !depth_only && enable_update_uncer && enable_affine_transform && !debug, "R3 bounded trace contract");
+   auto opts = poses.options();
++  torch::Tensor frozen_U = uncertainties.detach().clone(); // U-only control; no affine/temp freeze
+   const int num = ii.size(0);
+   const int ht = disps.size(1);
+   const int wd = disps.size(2);
+@@ -142,6 +144,18 @@
+ 
+       SparseBlock S = schur_block(E, Q, w, ii_exp, jj_exp, kk_exp, t0, t1);   // simulataneouly construct the lhs and rhs of the linear system
+       dx = (A - S).solve(lm, ep);     // compute delta_pose
++
++      SparseBlock r3_H = A - S;
++      trace.push_back(task005b_matrix(A.A)); // R3_OBSERVE A
++      trace.push_back(task005b_vector(A.b)); // R3_OBSERVE v
++      trace.push_back(task005b_matrix(S.A)); // R3_OBSERVE schur_subtraction
++      trace.push_back(task005b_vector(S.b)); // R3_OBSERVE schur_rhs_subtraction
++      trace.push_back(task005b_matrix(r3_H.A)); // R3_OBSERVE H_raw
++      trace.push_back(task005b_vector(r3_H.b)); // R3_OBSERVE rhs
++      Eigen::SparseMatrix<double> r3_L(r3_H.A);
++      r3_L.diagonal().array() += ep + lm * r3_L.diagonal().array();
++      trace.push_back(task005b_matrix(r3_L)); // R3_OBSERVE L_damped_raw
++
+     trace.push_back(dx.detach().cpu().clone()); // R2_OBSERVE dx
+ 
+ 
+@@ -234,6 +248,8 @@
+           dino_feats.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+           affine_weights.packed_accessor32<float,1,torch::RestrictPtrTraits>(),
+           kx.packed_accessor32<long,1,torch::RestrictPtrTraits>());
++    trace.push_back(uncertainties.detach().cpu().clone()); // R3_OBSERVE U_computed
++    if (freeze_U) uncertainties.copy_(frozen_U); // R3_U_ONLY_INTERVENTION
+     trace.push_back(uncertainties.detach().cpu().clone()); // R2_OBSERVE U_after
+     trace.push_back(temp_y_cdot.detach().cpu().clone()); // R2_OBSERVE temp_after
+ 

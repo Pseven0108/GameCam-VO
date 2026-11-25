@@ -1,0 +1,45 @@
+{
+  "isolated_preview": [
+    {
+      "kind": "jjj",
+      "field": "Jii_data",
+      "calls": 16,
+      "pairs": 120,
+      "bitwise_equal_pairs": 120,
+      "original_tolerance_PASS_pairs": 120,
+      "maximum_abs_difference": 0.0,
+      "variable_elements": 0
+    },
+    {
+      "kind": "jjj",
+      "field": "Jjj_data",
+      "calls": 16,
+      "pairs": 120,
+      "bitwise_equal_pairs": 0,
+      "original_tolerance_PASS_pairs": 120,
+      "maximum_abs_difference": 2.288818359375e-05,
+      "variable_elements": 9931
+    },
+    {
+      "kind": "jjj",
+      "field": "kf_count",
+      "calls": 16,
+      "pairs": 120,
+      "bitwise_equal_pairs": 120,
+      "original_tolerance_PASS_pairs": 120,
+      "maximum_abs_difference": 0.0,
+      "variable_elements": 0
+    },
+    {
+      "kind": "linear",
+      "field": "J_linear",
+      "calls": 16,
+      "pairs": 120,
+      "bitwise_equal_pairs": 0,
+      "original_tolerance_PASS_pairs": 120,
+      "maximum_abs_difference": 1.6763806343078613e-08,
+      "variable_elements": 5775
+    }
+  ],
+  "not_additional_GPU_execution": true
+}

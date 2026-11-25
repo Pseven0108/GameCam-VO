@@ -1,0 +1,33 @@
+{
+  "task": "TASK005B-R3",
+  "status": "DIAGNOSTIC_COMPLETE_U_FEEDBACK_ISOLATED_NATIVE_GATE_NOT_PASSED",
+  "context": "D0_S1_RGB233",
+  "isolated_jjj_calls": 16,
+  "isolated_J_linear_calls": 16,
+  "two_iteration_BA_calls": 20,
+  "internal_BA_iterations": 40,
+  "tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05,
+    "changed": false
+  },
+  "both_reductions_independently_nonbitwise_reproducible": true,
+  "isolated_reductions_all_original_tolerance_PASS": true,
+  "Fixed_U_second_round_geometry_and_solve_repeat_bitwise": true,
+  "fixed_U_only_controls_validated": true,
+  "affine_temp_updates_preserved": true,
+  "native_unconditional_endpoint_gate_PASS": false,
+  "direct_compiler_contribution_isolated": false,
+  "atomic_instruction_order_captured": false,
+  "individual_Jjj_vs_linear_propagation_fraction_identified": false,
+  "S0_started": false,
+  "remaining_S1_matrix_resumed": false,
+  "original_CUDA_implementation_modified": false,
+  "R1_R2_assets_modified": false,
+  "new_diagnostic_extension_compiled": true,
+  "model_loaded_or_forward_executed": false,
+  "instance_shutdown": false,
+  "next_stage_requires_review": true,
+  "CPU_tests_PASS": 30,
+  "independent_formula_checks_PASS": 144
+}

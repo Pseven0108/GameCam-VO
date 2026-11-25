@@ -1,0 +1,392 @@
+{
+  "within": [
+    {
+      "group": "original_native",
+      "calls": 4,
+      "within_pair_count": 6,
+      "seven_final_fields_PASS_pairs": 2,
+      "strict_all_final_pairs_PASS": false
+    },
+    {
+      "group": "reference_native",
+      "calls": 4,
+      "within_pair_count": 6,
+      "seven_final_fields_PASS_pairs": 3,
+      "strict_all_final_pairs_PASS": false
+    },
+    {
+      "group": "paths_native",
+      "calls": 4,
+      "within_pair_count": 6,
+      "seven_final_fields_PASS_pairs": 3,
+      "strict_all_final_pairs_PASS": false
+    },
+    {
+      "group": "reference_fixed",
+      "calls": 4,
+      "within_pair_count": 6,
+      "seven_final_fields_PASS_pairs": 6,
+      "strict_all_final_pairs_PASS": true
+    },
+    {
+      "group": "paths_fixed",
+      "calls": 4,
+      "within_pair_count": 6,
+      "seven_final_fields_PASS_pairs": 6,
+      "strict_all_final_pairs_PASS": true
+    }
+  ],
+  "cross": [
+    {
+      "comparison": "original_vs_reference_native",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 7,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": false
+    },
+    {
+      "comparison": "original_vs_paths_native",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 9,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": false
+    },
+    {
+      "comparison": "reference_vs_paths_native",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 7,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": false
+    },
+    {
+      "comparison": "reference_vs_paths_fixed",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 16,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": true
+    },
+    {
+      "comparison": "reference_native_vs_fixed",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 0,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": false
+    },
+    {
+      "comparison": "paths_native_vs_fixed",
+      "pairs": 16,
+      "all_seven_final_PASS_pairs": 0,
+      "all_seven_bitwise_equal_pairs": 0,
+      "all_final_pairs_PASS": false
+    }
+  ],
+  "all_fixed_U_controls_PASS": true,
+  "all_fixed_affine_and_temp_actually_update": true,
+  "all_feedback_seams_PASS": true,
+  "all_systems_SPD": true,
+  "feedback_variability": [
+    {
+      "implementation": "reference",
+      "field": "iter1_Jjj_data",
+      "native_range_max": 1.1444091796875e-05,
+      "fixed_range_max": 1.52587890625e-05,
+      "native_RMS_SD": 3.8893105638375645e-08,
+      "fixed_RMS_SD": 4.6772591738030186e-08,
+      "native_SD_over_fixed_SD": 0.8315362521754843,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "reference",
+      "field": "iter1_J_linear",
+      "native_range_max": 1.3737007975578308e-08,
+      "fixed_range_max": 1.6530975699424744e-08,
+      "native_RMS_SD": 7.003587144688278e-10,
+      "fixed_RMS_SD": 7.082507095177632e-10,
+      "native_SD_over_fixed_SD": 0.9888570601583881,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "reference",
+      "field": "iter1_U_computed",
+      "native_range_max": 1.1920928955078125e-07,
+      "fixed_range_max": 2.384185791015625e-07,
+      "native_RMS_SD": 1.3967934452194217e-09,
+      "fixed_RMS_SD": 1.407482841910629e-09,
+      "native_SD_over_fixed_SD": 0.9924053094127266,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_U_before",
+      "native_range_max": 1.1920928955078125e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.3967934452194217e-09,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_Cii_geometry",
+      "native_range_max": 1.7508864402770996e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 2.1505208482569963e-10,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_H_raw",
+      "native_range_max": 0.0002593994140625,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 8.546191687201967e-06,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_rhs",
+      "native_range_max": 1.0475923772901297e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.3007564760142676e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_dx",
+      "native_range_max": 7.995404303073883e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.0968729747856998e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "iter2_dz",
+      "native_range_max": 2.294778823852539e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.558259301459924e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "dx_last",
+      "native_range_max": 7.995404303073883e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.0968729747856998e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "dz_last",
+      "native_range_max": 2.294778823852539e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.558259301459924e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "poses",
+      "native_range_max": 9.5367431640625e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 2.020910035217164e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "disps",
+      "native_range_max": 2.384185791015625e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 2.7460798845868934e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "reference",
+      "field": "affine_weights",
+      "native_range_max": 9.313225746154785e-10,
+      "fixed_range_max": 1.862645149230957e-09,
+      "native_RMS_SD": 1.0733541521876752e-10,
+      "fixed_RMS_SD": 1.1106262123510186e-10,
+      "native_SD_over_fixed_SD": 0.966440500189128,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "reference",
+      "field": "temp_y_cdot",
+      "native_range_max": 2.384185791015625e-07,
+      "fixed_range_max": 2.384185791015625e-07,
+      "native_RMS_SD": 2.7359548281678107e-09,
+      "fixed_RMS_SD": 2.4696667894588198e-09,
+      "native_SD_over_fixed_SD": 1.1078234682693138,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "paths",
+      "field": "iter1_Jjj_data",
+      "native_range_max": 1.1444091796875e-05,
+      "fixed_range_max": 1.52587890625e-05,
+      "native_RMS_SD": 4.274637081813642e-08,
+      "fixed_RMS_SD": 4.413861099124428e-08,
+      "native_SD_over_fixed_SD": 0.9684575444980804,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "paths",
+      "field": "iter1_J_linear",
+      "native_range_max": 1.3969838619232178e-08,
+      "fixed_range_max": 1.3969838619232178e-08,
+      "native_RMS_SD": 7.187129712014402e-10,
+      "fixed_RMS_SD": 6.995214457956841e-10,
+      "native_SD_over_fixed_SD": 1.0274352209229645,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "paths",
+      "field": "iter1_U_computed",
+      "native_range_max": 2.384185791015625e-07,
+      "fixed_range_max": 2.384185791015625e-07,
+      "native_RMS_SD": 1.5956668164683716e-09,
+      "fixed_RMS_SD": 1.5881502180498995e-09,
+      "native_SD_over_fixed_SD": 1.0047329266041987,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_U_before",
+      "native_range_max": 2.384185791015625e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.5956668164683716e-09,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_Cii_geometry",
+      "native_range_max": 4.023313522338867e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 4.4906913318351557e-10,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_H_raw",
+      "native_range_max": 0.000335693359375,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 9.695100734570028e-06,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_rhs",
+      "native_range_max": 1.2105738278478384e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.656952437627593e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_dx",
+      "native_range_max": 8.041970431804657e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.0120671968886429e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "iter2_dz",
+      "native_range_max": 2.3730099201202393e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.5306655334001422e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "dx_last",
+      "native_range_max": 8.041970431804657e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.0120671968886429e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "dz_last",
+      "native_range_max": 2.3730099201202393e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.5306655334001422e-07,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "poses",
+      "native_range_max": 4.76837158203125e-07,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 1.2727348730818616e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "disps",
+      "native_range_max": 2.384185791015625e-06,
+      "fixed_range_max": 0.0,
+      "native_RMS_SD": 2.7051196554546318e-08,
+      "fixed_RMS_SD": 0.0,
+      "native_SD_over_fixed_SD": null,
+      "fixed_repeat_bitwise_equal": true
+    },
+    {
+      "implementation": "paths",
+      "field": "affine_weights",
+      "native_range_max": 9.313225746154785e-10,
+      "fixed_range_max": 1.862645149230957e-09,
+      "native_RMS_SD": 1.1324252348730808e-10,
+      "fixed_RMS_SD": 1.180623058510279e-10,
+      "native_SD_over_fixed_SD": 0.9591759424908957,
+      "fixed_repeat_bitwise_equal": false
+    },
+    {
+      "implementation": "paths",
+      "field": "temp_y_cdot",
+      "native_range_max": 2.384185791015625e-07,
+      "fixed_range_max": 2.384185791015625e-07,
+      "native_RMS_SD": 2.681084768625825e-09,
+      "fixed_RMS_SD": 2.7002998377447764e-09,
+      "native_SD_over_fixed_SD": 0.9928840979618769,
+      "fixed_repeat_bitwise_equal": false
+    }
+  ],
+  "pairwise_rows": 7746,
+  "n_per_group": 4,
+  "paired_comparisons_not_independent_replicates": true
+}

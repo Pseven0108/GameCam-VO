@@ -1,3 +1,9 @@
+# TASK005B-R3 latest review
+
+[Expanded review](reviews/task005b-r3-reduction-u-isolation-20261125/FINAL_REVIEW.md) · [Entire evidence ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-r3-reduction-u-isolation-20261125/GAMECAM_TASK005B_R3_REVIEW.zip)
+
+---
+
 # TASK005B-R2 latest review
 
 [Expanded review](reviews/task005b-r2-native-numerics-20261125/FINAL_REVIEW.md) · [Entire evidence ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-r2-native-numerics-20261125/GAMECAM_TASK005B_R2_REVIEW.zip)

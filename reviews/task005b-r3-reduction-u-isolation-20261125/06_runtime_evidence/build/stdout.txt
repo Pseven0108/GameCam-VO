@@ -1,0 +1,1043 @@
+{"torch": "2.1.0+cu118", "cuda_home": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118", "cuda_initialized": false}
+[1/3] c++ -MMD -MF task005b_r3_bindings.o.d -DTORCH_EXTENSION_NAME=gamecam_task005b_r3_isolation -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -c /root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_bindings.cpp -o task005b_r3_bindings.o 
+[2/3] /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/bin/nvcc  -DTORCH_EXTENSION_NAME=gamecam_task005b_r3_isolation -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -O3 -std=c++17 -c /root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu -o task005b_r3_kernels.cuda.o 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1442): warning #174-D: expression has no effect
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1442): warning #174-D: expression has no effect
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1442): warning #174-D: expression has no effect
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1442): warning #174-D: expression has no effect
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1568): warning #177-D: variable "h" was declared but never referenced
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1539): warning #550-D: variable "vi" was set but never used
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1539): warning #550-D: variable "vj" was set but never used
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1696): warning #177-D: variable "thread_id" was declared but never referenced
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1702): warning #177-D: variable "num_blocks" was declared but never referenced
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1704): warning #177-D: variable "similarity_threshold" was declared but never referenced
+
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1734): warning #177-D: variable "thread_id" was declared but never referenced
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(19): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<Eigen::internal::traits<Derived>::Scalar, Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::SparseMatrixBase<Derived>::operator-(const Eigen::SparseMatrixBase<OtherDerived> &) const [with Derived=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(19): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<Eigen::internal::traits<Derived>::Scalar, Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::SparseMatrixBase<Derived>::operator-(const Eigen::SparseMatrixBase<OtherDerived> &) const [with Derived=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(123): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::rows() const [with BinaryOp=Eigen::internal::scalar_difference_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(176): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::rows() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(689): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::SparseMatrix(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(125): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::rows() const [with BinaryOp=Eigen::internal::scalar_difference_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(176): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::rows() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(689): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::SparseMatrix(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(131): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::cols() const [with BinaryOp=Eigen::internal::scalar_difference_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(178): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::cols() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(689): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::SparseMatrix(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(133): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::cols() const [with BinaryOp=Eigen::internal::scalar_difference_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(178): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::cols() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(689): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::SparseMatrix(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1273): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(357): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(357): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(358): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(358): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(369): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(369): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(755): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_resize_to_match(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(627): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(761): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::internal::resize_if_allowed(DstXprType &, const SrcXprType &, const Eigen::internal::assign_op<T1, T2> &) [with DstXprType=Eigen::Matrix<double, -1, -1, 0, -1, -1>, SrcXprType=Eigen::SparseMatrix<double, 0, int>, T1=double, T2=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseAssign.h(146): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, SrcXprType, Functor, Eigen::internal::Sparse2Dense, Weak>::run(DstXprType &, const SrcXprType &, const Functor &) [with DstXprType=Eigen::Matrix<double, -1, -1, 0, -1, -1>, SrcXprType=Eigen::SparseMatrix<double, 0, int>, Functor=Eigen::internal::assign_op<double, double>, Weak=void]" 
+(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>, Func=Eigen::internal::assign_op<double, double>]" 
+(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>, Func=Eigen::internal::assign_op<double, double>]" 
+(826): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Assign.h(75): here
+            instantiation of "Derived &Eigen::MatrixBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(628): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(762): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::internal::resize_if_allowed(DstXprType &, const SrcXprType &, const Eigen::internal::assign_op<T1, T2> &) [with DstXprType=Eigen::Matrix<double, -1, -1, 0, -1, -1>, SrcXprType=Eigen::SparseMatrix<double, 0, int>, T1=double, T2=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseAssign.h(146): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, SrcXprType, Functor, Eigen::internal::Sparse2Dense, Weak>::run(DstXprType &, const SrcXprType &, const Functor &) [with DstXprType=Eigen::Matrix<double, -1, -1, 0, -1, -1>, SrcXprType=Eigen::SparseMatrix<double, 0, int>, Functor=Eigen::internal::assign_op<double, double>, Weak=void]" 
+(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>, Func=Eigen::internal::assign_op<double, double>]" 
+(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>, Func=Eigen::internal::assign_op<double, double>]" 
+(826): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &) [with Dst=Eigen::Matrix<double, -1, -1, 0, -1, -1>, Src=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Assign.h(75): here
+            instantiation of "Derived &Eigen::MatrixBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(628): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(238): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols> &Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(897): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>, T=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(332): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T &) [with _Scalar=double, _Rows=-1, _Cols=-1, _Options=0, _MaxRows=-1, _MaxCols=-1, T=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1277): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Diagonal<MatrixType, _DiagIndex>::rows() const [with MatrixType=Eigen::SparseMatrix<double, 0, int>, _DiagIndex=0]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ArrayWrapper.h(64): here
+            instantiation of "Eigen::Index Eigen::ArrayWrapper<ExpressionType>::rows() const [with ExpressionType=Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h(50): here
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type, Eigen::internal::traits<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>::Scalar>, const Eigen::internal::plain_constant_type<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type>::type, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>> Eigen::operator*(const T &, const Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::StorageBaseType &) [with T=float]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1294): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Diagonal<MatrixType, _DiagIndex>::rows() const [with MatrixType=Eigen::SparseMatrix<double, 0, int>, _DiagIndex=0]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ArrayWrapper.h(64): here
+            instantiation of "Eigen::Index Eigen::ArrayWrapper<ExpressionType>::rows() const [with ExpressionType=Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h(50): here
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type, Eigen::internal::traits<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>::Scalar>, const Eigen::internal::plain_constant_type<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type>::type, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>> Eigen::operator*(const T &, const Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::StorageBaseType &) [with T=float]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1294): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Diagonal<MatrixType, _DiagIndex>::rows() const [with MatrixType=Eigen::SparseMatrix<double, 0, int>, _DiagIndex=0]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ArrayWrapper.h(64): here
+            instantiation of "Eigen::Index Eigen::ArrayWrapper<ExpressionType>::rows() const [with ExpressionType=Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h(50): here
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type, Eigen::internal::traits<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>::Scalar>, const Eigen::internal::plain_constant_type<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type>::type, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>> Eigen::operator*(const T &, const Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::StorageBaseType &) [with T=float]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1294): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Diagonal<MatrixType, _DiagIndex>::rows() const [with MatrixType=Eigen::SparseMatrix<double, 0, int>, _DiagIndex=0]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ArrayWrapper.h(64): here
+            instantiation of "Eigen::Index Eigen::ArrayWrapper<ExpressionType>::rows() const [with ExpressionType=Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h(50): here
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type, Eigen::internal::traits<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>::Scalar>, const Eigen::internal::plain_constant_type<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Eigen::internal::promote_scalar_arg<Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar, Eigen::internal::scalar_product_op<T, Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::Scalar>>>::value>::type>::type, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>> Eigen::operator*(const T &, const Eigen::ArrayBase<Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>::StorageBaseType &) [with T=float]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1294): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(1615): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::internal::evaluator<Eigen::Diagonal<ArgType, DiagIndex>>::evaluator(const Eigen::internal::evaluator<Eigen::Diagonal<ArgType, DiagIndex>>::XprType &) [with ArgType=Eigen::SparseMatrix<double, 0, int>, DiagIndex=0]" 
+(1383): here
+            instantiation of "Eigen::internal::evaluator_wrapper_base<XprType>::evaluator_wrapper_base(const Eigen::internal::evaluator_wrapper_base<XprType>::ArgType &) [with XprType=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>]" 
+(1465): here
+            instantiation of "Eigen::internal::unary_evaluator<Eigen::ArrayWrapper<TArgType>, Eigen::internal::evaluator_traits<Eigen::ArrayWrapper<TArgType>::NestedExpression>::Kind, Eigen::ArrayWrapper<TArgType>::Scalar>::unary_evaluator(const Eigen::internal::unary_evaluator<Eigen::ArrayWrapper<TArgType>, Eigen::internal::evaluator_traits<Eigen::ArrayWrapper<TArgType>::NestedExpression>::Kind, Eigen::ArrayWrapper<TArgType>::Scalar>::XprType &) [with TArgType=Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>]" 
+(94): here
+            instantiation of "Eigen::internal::evaluator<T>::evaluator(const T &) [with T=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>]" 
+(104): here
+            instantiation of "Eigen::internal::evaluator<const T>::evaluator(const T &) [with T=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>]" 
+(799): here
+            [ 7 instantiation contexts not shown ]
+            instantiation of "void Eigen::internal::call_dense_assignment_loop(DstXprType &, const SrcXprType &, const Functor &) [with DstXprType=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, SrcXprType=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>>, Functor=Eigen::internal::add_assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(944): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, SrcXprType, Functor, Eigen::internal::Dense2Dense, Weak>::run(DstXprType &, const SrcXprType &, const Functor &) [with DstXprType=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, SrcXprType=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>>, Functor=Eigen::internal::add_assign_op<double, double>, Weak=void]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Src=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>>, Func=Eigen::internal::add_assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, Src=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>>, Func=Eigen::internal::add_assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ArrayBase.h(194): here
+            instantiation of "Derived &Eigen::ArrayBase<Derived>::operator+=(const Eigen::ArrayBase<OtherDerived> &) [with Derived=Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Array<double, -1, 1, 0, -1, 1>>, const Eigen::ArrayWrapper<Eigen::Diagonal<Eigen::SparseMatrix<double, 0, int>, 0>>>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1294): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Transpose.h(69): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Transpose<MatrixType>::rows() const [with MatrixType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(176): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::rows() const [with Derived=Eigen::Transpose<const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::Transpose<const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(30): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Transpose.h(71): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Transpose<MatrixType>::cols() const [with MatrixType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(178): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::cols() const [with Derived=Eigen::Transpose<const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::Transpose<const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(30): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(27): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<Eigen::internal::traits<Derived>::Scalar, Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::SparseMatrixBase<Derived>::operator+(const Eigen::SparseMatrixBase<OtherDerived> &) const [with Derived=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(27): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "const Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<Eigen::internal::traits<Derived>::Scalar, Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::SparseMatrixBase<Derived>::operator+(const Eigen::SparseMatrixBase<OtherDerived> &) const [with Derived=Eigen::SparseMatrix<double, 0, int>, OtherDerived=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(123): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::rows() const [with BinaryOp=Eigen::internal::scalar_sum_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(176): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::rows() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(125): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::rows() const [with BinaryOp=Eigen::internal::scalar_sum_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(176): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::rows() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(131): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::cols() const [with BinaryOp=Eigen::internal::scalar_sum_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(178): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::cols() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(133): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::CwiseBinaryOp<BinaryOp, LhsType, RhsType>::cols() const [with BinaryOp=Eigen::internal::scalar_sum_op<double, double>, LhsType=const Eigen::SparseMatrix<double, 0, int>, RhsType=const Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrixBase.h(178): here
+            instantiation of "Eigen::Index Eigen::SparseMatrixBase<Derived>::cols() const [with Derived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/SparseMatrix.h(1197): here
+            instantiation of "Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex> &Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived> &) [with _Scalar=double, _Options=0, _StorageIndex=int, OtherDerived=Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<double, double>, const Eigen::SparseMatrix<double, 0, int>, const Eigen::SparseMatrix<double, 0, int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(36): here
+            instantiation of "void Eigen::internal::ordering_helper_at_plus_a(const MatrixType &, MatrixType &) [with MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/OrderingMethods/Ordering.h(63): here
+            instantiation of "void Eigen::AMDOrdering<StorageIndex>::operator()(const MatrixType &, Eigen::AMDOrdering<StorageIndex>::PermutationType &) [with StorageIndex=int, MatrixType=Eigen::SparseMatrix<double, 0, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(671): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PermutationMatrix.h(97): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::PermutationBase<Derived>::size() const [with Derived=Eigen::PermutationMatrix<-1, -1, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(674): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::ordering(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &, Eigen::SimplicialCholeskyBase<Derived>::ConstCholMatrixPtr &, Eigen::SimplicialCholeskyBase<Derived>::CholMatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(208): here
+            instantiation of "void Eigen::SimplicialCholeskyBase<Derived>::compute<DoLDLT>(const Eigen::SimplicialCholeskyBase<Derived>::MatrixType &) [with Derived=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, DoLDLT=false]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h(374): here
+            instantiation of "Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering> &Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::compute(const Eigen::SimplicialLLT<_MatrixType, _UpLo, _Ordering>::MatrixType &) [with _MatrixType=Eigen::SparseMatrix<double, 0, int>, _UpLo=1, _Ordering=Eigen::AMDOrdering<int>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1297): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Solve.h(72): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::Solve<Decomposition, RhsType>::rows() const [with Decomposition=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, RhsType=Eigen::Matrix<double, -1, 1, 0, -1, 1>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(357): here
+            instantiation of "void Eigen::PlainObjectBase<Derived>::resizeLike(const Eigen::EigenBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(593): here
+            instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(424): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=1, _Options=0, _MaxRows=-1, _MaxCols=1, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1300): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PermutationMatrix.h(91): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "Eigen::Index Eigen::PermutationBase<Derived>::rows() const [with Derived=Eigen::PermutationMatrix<-1, -1, int>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Product.h(102): here
+            instantiation of "Eigen::Index Eigen::Product<_Lhs, _Rhs, Option>::rows() const [with _Lhs=Eigen::PermutationMatrix<-1, -1, int>, _Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Option=2]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(143): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Options=2, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(826): here
+            [ 3 instantiation contexts not shown ]
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, DecType=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, RhsType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(797): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(594): here
+            instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(424): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=1, _Options=0, _MaxRows=-1, _MaxCols=1, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1300): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1030): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::internal::permutation_matrix_product<ExpressionType, Side, Transposed, Eigen::DenseShape>::run(Dest &, const PermutationType &, const ExpressionType &) [with ExpressionType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Side=1, Transposed=false, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>, PermutationType=Eigen::PermutationMatrix<-1, -1, int>]" 
+(1063): here
+            instantiation of "void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::PermutationShape, MatrixShape, ProductTag>::evalTo(Dest &, const Lhs &, const Rhs &) [with Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, ProductTag=3, MatrixShape=Eigen::DenseShape, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>]" 
+(148): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Options=2, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(826): here
+            [ 3 instantiation contexts not shown ]
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, DecType=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, RhsType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(797): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(594): here
+            instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(424): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=1, _Options=0, _MaxRows=-1, _MaxCols=1, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1300): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1030): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::internal::permutation_matrix_product<ExpressionType, Side, Transposed, Eigen::DenseShape>::run(Dest &, const PermutationType &, const ExpressionType &) [with ExpressionType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Side=1, Transposed=false, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>, PermutationType=Eigen::PermutationMatrix<-1, -1, int>]" 
+(1063): here
+            instantiation of "void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::PermutationShape, MatrixShape, ProductTag>::evalTo(Dest &, const Lhs &, const Rhs &) [with Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, ProductTag=3, MatrixShape=Eigen::DenseShape, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>]" 
+(148): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Options=2, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(826): here
+            [ 3 instantiation contexts not shown ]
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, DecType=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, RhsType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(797): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(594): here
+            instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(424): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=1, _Options=0, _MaxRows=-1, _MaxCols=1, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1300): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1045): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "void Eigen::internal::permutation_matrix_product<ExpressionType, Side, Transposed, Eigen::DenseShape>::run(Dest &, const PermutationType &, const ExpressionType &) [with ExpressionType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Side=1, Transposed=false, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>, PermutationType=Eigen::PermutationMatrix<-1, -1, int>]" 
+(1063): here
+            instantiation of "void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::PermutationShape, MatrixShape, ProductTag>::evalTo(Dest &, const Lhs &, const Rhs &) [with Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, ProductTag=3, MatrixShape=Eigen::DenseShape, Dest=Eigen::Matrix<double, -1, 1, 0, -1, 1>]" 
+(148): here
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, Eigen::internal::enable_if<<expression>, void>::type>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Lhs=Eigen::PermutationMatrix<-1, -1, int>, Rhs=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Options=2, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(848): here
+            instantiation of "void Eigen::internal::call_assignment(Dst &, const Src &, const Func &, Eigen::internal::enable_if<<expression>, void *>::type) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Product<Eigen::PermutationMatrix<-1, -1, int>, Eigen::Matrix<double, -1, 1, 0, -1, 1>, 2>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(826): here
+            [ 3 instantiation contexts not shown ]
+            instantiation of "void Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::run(DstXprType &, const Eigen::internal::Assignment<DstXprType, Eigen::Solve<DecType, RhsType>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, void>::SrcXprType &, const Eigen::internal::assign_op<Scalar, Scalar> &) [with DstXprType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, DecType=Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, RhsType=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Scalar=double]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): here
+            instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with Dst=Eigen::Matrix<double, -1, 1, 0, -1, 1>, Src=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>, Func=Eigen::internal::assign_op<double, double>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(797): here
+            instantiation of "Derived &Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(594): here
+            instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &) [with Derived=Eigen::Matrix<double, -1, 1, 0, -1, 1>, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Matrix.h(424): here
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived> &) [with _Scalar=double, _Rows=-1, _Cols=1, _Options=0, _MaxRows=-1, _MaxCols=1, OtherDerived=Eigen::Solve<Eigen::SimplicialLLT<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::AMDOrdering<int>>, Eigen::Matrix<double, -1, 1, 0, -1, 1>>]" 
+/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/candidate/task005b_r3_kernels.cu(1300): here
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(19): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::derived() const") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::operator -< ::Eigen::SparseMatrix<double, (int)0, int> >  const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(19): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::derived() const") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::operator -< ::Eigen::SparseMatrix<double, (int)0, int> >  const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(27): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::derived() const") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::operator +< ::Eigen::SparseMatrix<double, (int)0, int> >  const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h(27): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::derived() const") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::SparseMatrix<double, (int)0, int> > ::operator +< ::Eigen::SparseMatrix<double, (int)0, int> >  const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseNullaryOp.h(84): warning #20011-D: calling a __host__ function("Eigen::CwiseBinaryOpImpl< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::Sparse> ::CwiseBinaryOpImpl()") from a __host__ __device__ function("Eigen::CwiseBinaryOpImpl< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::Sparse> ::CwiseBinaryOpImpl [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(123): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(125): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(131): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::cols const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(133): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::cols const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(83): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Diagonal.h(84): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PlainObjectBase.h(426): warning #20011-D: calling a __host__ function("Eigen::internal::conservative_resize_like_impl< ::Eigen::Matrix<int, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::Matrix<int, (int)-1, (int)1, (int)0, (int)-1, (int)1> , (bool)1> ::run( ::Eigen::DenseBase< ::Eigen::Matrix<int, (int)-1, (int)1, (int)0, (int)-1, (int)1> >  &, long)") from a __host__ __device__ function("Eigen::PlainObjectBase< ::Eigen::Matrix<int, (int)-1, (int)1, (int)0, (int)-1, (int)1> > ::conservativeResize") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PermutationMatrix.h(91): warning #20011-D: calling a __host__ function("Eigen::PermutationBase< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ::indices() const") from a __host__ __device__ function("Eigen::PermutationBase< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/PermutationMatrix.h(97): warning #20011-D: calling a __host__ function("Eigen::PermutationBase< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ::indices() const") from a __host__ __device__ function("Eigen::PermutationBase< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ::size const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Solve.h(72): warning #20011-D: calling a __host__ function("Eigen::SimplicialCholeskyBase< ::Eigen::SimplicialLLT< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1,  ::Eigen::AMDOrdering<int> > > ::cols() const") from a __host__ __device__ function("Eigen::Solve< ::Eigen::SimplicialLLT< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1,  ::Eigen::AMDOrdering<int> > ,  ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/EigenBase.h(49): warning #20011-D: calling a __host__ function("Eigen::SparseCompressedBase< ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > > ::SparseCompressedBase()") from a __host__ __device__ function("Eigen::SparseCompressedBase< ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > > ::SparseCompressedBase [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Transpose.h(69): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Transpose.h(71): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > ::cols const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Transpose.h(76): warning #20011-D: calling a __host__ function("Eigen::CwiseBinaryOpImpl< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::Sparse> ::CwiseBinaryOpImpl()") from a __host__ __device__ function("Eigen::CwiseBinaryOpImpl< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::Sparse> ::CwiseBinaryOpImpl [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(123): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(125): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::rows() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::rows const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(131): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::cols const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CwiseBinaryOp.h(133): warning #20011-D: calling a __host__ function("Eigen::SparseMatrix<double, (int)0, int> ::cols() const") from a __host__ __device__ function("Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ::cols const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/EigenBase.h(49): warning #20011-D: calling a __host__ function("Eigen::InverseImpl< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> ,  ::Eigen::PermutationStorage> ::InverseImpl()") from a __host__ __device__ function("Eigen::InverseImpl< ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> ,  ::Eigen::PermutationStorage> ::InverseImpl [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Block.h(123): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::TriangularView<const  ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)1u> > ::SparseMatrixBase()") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::TriangularView<const  ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)1u> > ::SparseMatrixBase [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/Product.h(109): warning #20011-D: calling a __host__ function("Eigen::SparseMatrixBase< ::Eigen::TriangularView<const  ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > , (unsigned int)2u> > ::SparseMatrixBase()") from a __host__ __device__ function("Eigen::SparseMatrixBase< ::Eigen::TriangularView<const  ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > , (unsigned int)2u> > ::SparseMatrixBase [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(122): warning #20011-D: calling a __host__ function("Eigen::internal::evaluator< ::Eigen::SparseMatrix<double, (int)0, int> > ::evaluator(const  ::Eigen::SparseMatrix<double, (int)0, int>  &)") from a __host__ __device__ function("Eigen::internal::evaluator< ::Eigen::SparseMatrix<double, (int)0, int> > ::evaluator [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(122): warning #20011-D: calling a __host__ function("Eigen::internal::binary_evaluator< ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased,  ::Eigen::internal::IteratorBased, double, double> ::binary_evaluator(const  ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> >  &)") from a __host__ __device__ function("Eigen::internal::binary_evaluator< ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased,  ::Eigen::internal::IteratorBased, double, double> ::binary_evaluator [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(1615): warning #20011-D: calling a __host__ function("Eigen::internal::evaluator< ::Eigen::SparseMatrix<double, (int)0, int> > ::evaluator(const  ::Eigen::SparseMatrix<double, (int)0, int>  &)") from a __host__ __device__ function("Eigen::internal::evaluator< ::Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> > ::evaluator") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(1631): warning #20011-D: calling a __host__ function("Eigen::internal::evaluator< ::Eigen::SparseCompressedBase< ::Eigen::SparseMatrix<double, (int)0, int> > > ::coeff(long, long) const") from a __host__ __device__ function("Eigen::internal::evaluator< ::Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> > ::coeff const") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(1643): warning #20011-D: calling a __host__ function("Eigen::internal::evaluator< ::Eigen::SparseCompressedBase< ::Eigen::SparseMatrix<double, (int)0, int> > > ::coeffRef(long, long)") from a __host__ __device__ function("Eigen::internal::evaluator< ::Eigen::Diagonal< ::Eigen::SparseMatrix<double, (int)0, int> , (int)0> > ::coeffRef") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(122): warning #20011-D: calling a __host__ function("Eigen::internal::unary_evaluator< ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased, double> ::unary_evaluator(const  ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> >  &)") from a __host__ __device__ function("Eigen::internal::unary_evaluator< ::Eigen::Transpose<const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased, double> ::unary_evaluator [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/CoreEvaluators.h(122): warning #20011-D: calling a __host__ function("Eigen::internal::binary_evaluator< ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased,  ::Eigen::internal::IteratorBased, double, double> ::binary_evaluator(const  ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> >  &)") from a __host__ __device__ function("Eigen::internal::binary_evaluator< ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_sum_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::IteratorBased,  ::Eigen::internal::IteratorBased, double, double> ::binary_evaluator [subobject]") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1030): warning #20011-D: calling a __host__ function("Eigen::PermutationMatrix<(int)-1, (int)-1, int> ::indices() const") from a __host__ __device__ function("Eigen::internal::permutation_matrix_product< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> , (int)1, (bool)0,  ::Eigen::DenseShape> ::run< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1030): warning #20011-D: calling a __host__ function("Eigen::PermutationMatrix<(int)-1, (int)-1, int> ::indices() const") from a __host__ __device__ function("Eigen::internal::permutation_matrix_product< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> , (int)1, (bool)0,  ::Eigen::DenseShape> ::run< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/ProductEvaluators.h(1045): warning #20011-D: calling a __host__ function("Eigen::PermutationMatrix<(int)-1, (int)-1, int> ::indices() const") from a __host__ __device__ function("Eigen::internal::permutation_matrix_product< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> , (int)1, (bool)0,  ::Eigen::DenseShape> ::run< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::PermutationMatrix<(int)-1, (int)-1, int> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): warning #20011-D: calling a __host__ function("Eigen::internal::Assignment< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::internal::assign_op<double, double> ,  ::Eigen::internal::Sparse2Sparse, void> ::run( ::Eigen::SparseMatrix<double, (int)0, int>  &, const  ::Eigen::SparseMatrix<double, (int)0, int>  &, const  ::Eigen::internal::assign_op<double, double>  &)") from a __host__ __device__ function("Eigen::internal::call_assignment_no_alias< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::internal::assign_op<double, double> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): warning #20011-D: calling a __host__ function("Eigen::internal::Assignment< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::assign_op<double, double> ,  ::Eigen::internal::Sparse2Sparse, void> ::run( ::Eigen::SparseMatrix<double, (int)0, int>  &, const  ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> >  &, const  ::Eigen::internal::assign_op<double, double>  &)") from a __host__ __device__ function("Eigen::internal::call_assignment_no_alias< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::CwiseBinaryOp< ::Eigen::internal::scalar_difference_op<double, double> , const  ::Eigen::SparseMatrix<double, (int)0, int> , const  ::Eigen::SparseMatrix<double, (int)0, int> > ,  ::Eigen::internal::assign_op<double, double> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): warning #20011-D: calling a __host__ function("void Eigen::internal::Assignment< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::SparseSelfAdjointView<const  ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)1u> ,  ::Eigen::internal::assign_op<double, double> ,  ::Eigen::internal::SparseSelfAdjoint2Sparse, void> ::run<double, (int)0> ( ::Eigen::SparseMatrix<T1, T2, int>  &, const  ::Eigen::SparseSelfAdjointView<const  ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)1u>  &, const  ::Eigen::internal::assign_op<double, double>  &)") from a __host__ __device__ function("Eigen::internal::call_assignment_no_alias< ::Eigen::SparseMatrix<double, (int)0, int> ,  ::Eigen::SparseSelfAdjointView<const  ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)1u> ,  ::Eigen::internal::assign_op<double, double> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(919): warning #20011-D: calling a __host__ function("void Eigen::internal::Assignment< ::Eigen::SparseSelfAdjointView< ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)2u> ,  ::Eigen::SparseSymmetricPermutationProduct< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1> ,  ::Eigen::internal::assign_op<double, double> ,  ::Eigen::internal::Sparse2Sparse, void> ::run< ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)2u> ( ::Eigen::SparseSelfAdjointView<T1, T2>  &, const  ::Eigen::SparseSymmetricPermutationProduct< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1>  &, const  ::Eigen::internal::assign_op<double, double>  &)") from a __host__ __device__ function("Eigen::internal::call_assignment_no_alias_no_transpose< ::Eigen::SparseSelfAdjointView< ::Eigen::SparseMatrix<double, (int)0, int> , (unsigned int)2u> ,  ::Eigen::SparseSymmetricPermutationProduct< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1> ,  ::Eigen::internal::assign_op<double, double> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/AssignEvaluator.h(880): warning #20011-D: calling a __host__ function("Eigen::internal::Assignment< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::Solve< ::Eigen::SimplicialLLT< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1,  ::Eigen::AMDOrdering<int> > ,  ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> > ,  ::Eigen::internal::assign_op<double, double> ,  ::Eigen::internal::Dense2Dense, void> ::run( ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1>  &, const  ::Eigen::Solve< ::Eigen::SimplicialLLT< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1,  ::Eigen::AMDOrdering<int> > ,  ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> >  &, const  ::Eigen::internal::assign_op<double, double>  &)") from a __host__ __device__ function("Eigen::internal::call_assignment_no_alias< ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> ,  ::Eigen::Solve< ::Eigen::SimplicialLLT< ::Eigen::SparseMatrix<double, (int)0, int> , (int)1,  ::Eigen::AMDOrdering<int> > ,  ::Eigen::Matrix<double, (int)-1, (int)1, (int)0, (int)-1, (int)1> > ,  ::Eigen::internal::assign_op<double, double> > ") is not allowed
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(77): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(79): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(81): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(83): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(85): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(86): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE/source_candidate/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+[3/3] c++ task005b_r3_bindings.o task005b_r3_kernels.cuda.o -shared -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/lib -lcudart -o gamecam_task005b_r3_isolation.so
+{"PASS": true, "module": "/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/build/gamecam_task005b_r3_isolation.so", "sha256": "5321143836751271b051b747511698078ed764ac778bc965cf025cd0cd2d9e35", "seconds": 96.95995426177979, "cuda_initialized": false, "native_calls": 0}

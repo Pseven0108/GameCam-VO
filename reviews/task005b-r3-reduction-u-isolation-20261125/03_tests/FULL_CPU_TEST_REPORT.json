@@ -1,0 +1,32 @@
+{
+  "PASS": true,
+  "tests": 30,
+  "suites": [
+    {
+      "name": "test_source_contract.py",
+      "tests": 14,
+      "exit_code": 0,
+      "seconds": 0.08369612693786621
+    },
+    {
+      "name": "test_numerics.py",
+      "tests": 8,
+      "exit_code": 0,
+      "seconds": 0.1775515079498291
+    },
+    {
+      "name": "test_evidence.py",
+      "tests": 8,
+      "exit_code": 0,
+      "seconds": 14.230998992919922
+    }
+  ],
+  "logs_SHA": {
+    "test_evidence.stderr.txt": "5dd328eacb337ebe07822e37f0c517add733a0649e09d1610eea0ad7d9465697",
+    "test_evidence.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_numerics.stderr.txt": "881bb93e792060338fca69e6b51baa79c1ecbe0262edc76dc10d9688cf1fd3ad",
+    "test_numerics.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_source_contract.stderr.txt": "bfd6fc740f04ba102a4f9f28b4e4c784d86f2f882a7a9be2bbd7cbc95082a6d9",
+    "test_source_contract.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

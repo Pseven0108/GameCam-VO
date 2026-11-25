@@ -1,0 +1,15 @@
+{
+  "disk_free": 12977471488,
+  "build": {
+    "STARTED.json": "{\"pid\": 4013, \"started_unix\": 1795593279.0949538, \"automatic_retry\": false}"
+  },
+  "run": {
+    "stderr.txt": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n",
+    "launcher.log": "",
+    "STARTED.json": "{\n  \"pid\": 4139,\n  \"started_unix\": 1795593440.6459916,\n  \"launches\": 1,\n  \"gpu_BA_call_budget\": 20,\n  \"isolated_calls_each\": 16,\n  \"automatic_retry\": false\n}",
+    "stdout.txt": "{\"event\": \"START\", \"tag\": \"jjj_01\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_01\", \"seconds\": 5.729956150054932, \"bytes\": 1204551}\n{\"event\": \"START\", \"tag\": \"jjj_02\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_02\", \"seconds\": 5.812347888946533, \"bytes\": 1204542}\n{\"event\": \"START\", \"tag\": \"jjj_03\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_03\", \"seconds\": 5.752048015594482, \"bytes\": 1204553}\n{\"event\": \"START\", \"tag\": \"jjj_04\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_04\", \"seconds\": 5.599081754684448, \"bytes\": 1204547}\n{\"event\": \"START\", \"tag\": \"jjj_05\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_05\", \"seconds\": 5.66089940071106, \"bytes\": 1204531}\n{\"event\": \"START\", \"tag\": \"jjj_06\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_06\", \"seconds\": 5.681738615036011, \"bytes\": 1204536}\n{\"event\": \"START\", \"tag\": \"jjj_07\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_07\", \"seconds\": 5.6200807094573975, \"bytes\": 1204540}\n{\"event\": \"START\", \"tag\": \"jjj_08\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_08\", \"seconds\": 5.7480878829956055, \"bytes\": 1204546}\n{\"event\": \"START\", \"tag\": \"jjj_09\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_09\", \"seconds\": 5.577117204666138, \"bytes\": 1204522}\n{\"event\": \"START\", \"tag\": \"jjj_10\"}\n{\"event\": \"COMPLETE\", \"tag\": \"jjj_10\", \"seconds\": 5.746403932571411, \"bytes\": 1204547}\n"
+  },
+  "build_complete": "{\n  \"PASS\": true,\n  \"module\": \"/root/rivermind-data/GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1/build/gamecam_task005b_r3_isolation.so\",\n  \"sha256\": \"5321143836751271b051b747511698078ed764ac778bc965cf025cd0cd2d9e35\",\n  \"seconds\": 96.95995426177979,\n  \"cuda_initialized\": false,\n  \"native_calls\": 0\n}\n",
+  "build_failed": null,
+  "run_complete": null
+}

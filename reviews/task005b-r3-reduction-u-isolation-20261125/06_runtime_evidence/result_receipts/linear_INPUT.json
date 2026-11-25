@@ -1,0 +1,84 @@
+{
+  "hashes": [
+    "e901d70ee7eb2f92ce1e7074a7e043ed107b08f20c7ab5422399c6c5efb3b451",
+    "5797aeaeceaeefb67c9c6be270ce7bc3c9015a26f0421ee50fe5676599092ab6",
+    "685ec5fab70e32f4a38bdc211c724d6582fcfc9fad232aa8d05d9039d8ab482a",
+    "8c0f28af272eb0f6292ff7b7a3d779bcf3adc09af6404454085b328a972edef6",
+    "dafd5bf3e8350b20074ce357da9d1b2db4cb85bc35308ac4673e68f1c33bfbeb"
+  ],
+  "metadata": [
+    {
+      "shape": [
+        15,
+        3600
+      ],
+      "stride": [
+        3600,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    {
+      "shape": [
+        500,
+        384,
+        45,
+        80
+      ],
+      "stride": [
+        1382400,
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    {
+      "shape": [
+        500,
+        45,
+        80
+      ],
+      "stride": [
+        3600,
+        80,
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    },
+    {
+      "shape": [
+        15
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  ],
+  "from_fixed_R2_trace": "trace_reference_1.npz/iter1",
+  "upstream_r3_results_used": false
+}

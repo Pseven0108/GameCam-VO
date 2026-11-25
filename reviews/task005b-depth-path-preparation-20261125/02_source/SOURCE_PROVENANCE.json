@@ -1,0 +1,40 @@
+{
+  "original": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_STAGE_OBSERVABILITY_R2\\review\\frozen_source\\DROID-W\\src\\lib\\droid_kernels.cu",
+  "baseline_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "original_git_blob": "9c171af1bfafc278e9776f2f89667054a66dc2bf",
+  "original_sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+  "original_preserved_byte_for_byte_as_prefix": true,
+  "candidate_entry": "ba_paths_cuda",
+  "isolated_module": "gamecam_task005b_depth_paths",
+  "compiled": false,
+  "GPU_validated": false,
+  "diagnostic_tensors_per_iteration": [
+    "poses_before",
+    "disps_before",
+    "U_before",
+    "C_geometry",
+    "w_geometry",
+    "C",
+    "w",
+    "Q",
+    "E",
+    "kx",
+    "A",
+    "v",
+    "schur_subtraction",
+    "schur_rhs_subtraction",
+    "H_raw",
+    "rhs",
+    "L_damped_raw",
+    "dx",
+    "dz",
+    "poses_after",
+    "disps_after",
+    "U_after"
+  ],
+  "outputs_prefix": [
+    "dx_last",
+    "dz_last"
+  ],
+  "no_inner_iteration_clamp_added": true
+}

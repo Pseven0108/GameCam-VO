@@ -1,0 +1,202 @@
+{
+  "schema": "TASK005B_CPU_CONTRACT_TESTS_V1",
+  "passed": 37,
+  "total": 38,
+  "PASS": false,
+  "seed": 105,
+  "scope": "CPU_SYNTHETIC_AND_SOURCE_ONLY",
+  "native_GPU_equivalence": "NOT_EXECUTED",
+  "events": [
+    {
+      "test": "__main__.MathematicalTests.test_A_equals_original_D1",
+      "status": "PASS",
+      "seconds": 0.11937880000914447
+    },
+    {
+      "test": "__main__.MathematicalTests.test_B_changes_only_curvature",
+      "status": "PASS",
+      "seconds": 0.0015886000182945281
+    },
+    {
+      "test": "__main__.MathematicalTests.test_C_changes_only_gradient",
+      "status": "PASS",
+      "seconds": 0.00031740000122226775
+    },
+    {
+      "test": "__main__.MathematicalTests.test_D_equals_original_zero_prior",
+      "status": "PASS",
+      "seconds": 0.0002212999970652163
+    },
+    {
+      "test": "__main__.MathematicalTests.test_alpha_equal_eta_removes_curvature_effect",
+      "status": "PASS",
+      "seconds": 0.00044589999015443027
+    },
+    {
+      "test": "__main__.MathematicalTests.test_contrast_closure",
+      "status": "PASS",
+      "seconds": 0.000898900005267933
+    },
+    {
+      "test": "__main__.MathematicalTests.test_gradient_does_not_change_first_linearized_spectrum",
+      "status": "PASS",
+      "seconds": 0.000690999993821606
+    },
+    {
+      "test": "__main__.MathematicalTests.test_indefinite_matrix_not_classified_as_SPD",
+      "status": "PASS",
+      "seconds": 0.0027871000056620687
+    },
+    {
+      "test": "__main__.MathematicalTests.test_inf_rejected",
+      "status": "PASS",
+      "seconds": 0.0001568000006955117
+    },
+    {
+      "test": "__main__.MathematicalTests.test_input_arrays_unchanged",
+      "status": "PASS",
+      "seconds": 0.0003923000185750425
+    },
+    {
+      "test": "__main__.MathematicalTests.test_invalid_factor_rejected",
+      "status": "PASS",
+      "seconds": 0.00011520000407472253
+    },
+    {
+      "test": "__main__.MathematicalTests.test_masks_do_not_silently_accept_nan",
+      "status": "PASS",
+      "seconds": 0.00011969998013228178
+    },
+    {
+      "test": "__main__.MathematicalTests.test_missing_prior_invariant",
+      "status": "PASS",
+      "seconds": 0.0005723999929614365
+    },
+    {
+      "test": "__main__.MathematicalTests.test_native_damping_uses_schur_diagonal",
+      "status": "PASS",
+      "seconds": 0.00026020000223070383
+    },
+    {
+      "test": "__main__.MathematicalTests.test_native_lower_triangle_not_averaged",
+      "status": "PASS",
+      "seconds": 0.000287900009425357
+    },
+    {
+      "test": "__main__.MathematicalTests.test_no_pose_depth_coupling_no_pose_effect",
+      "status": "PASS",
+      "seconds": 0.00046400001156143844
+    },
+    {
+      "test": "__main__.MathematicalTests.test_prior_force_sign_and_analytic_effect",
+      "status": "PASS",
+      "seconds": 0.0004916999896522611
+    },
+    {
+      "test": "__main__.MathematicalTests.test_rank_deficiency_no_fake_finite_condition_number",
+      "status": "PASS",
+      "seconds": 9.980000322684646e-05
+    },
+    {
+      "test": "__main__.MathematicalTests.test_schur_matches_full_joint_normal_equations",
+      "status": "PASS",
+      "seconds": 0.0008147000044118613
+    },
+    {
+      "test": "__main__.MathematicalTests.test_shapes_rejected",
+      "status": "PASS",
+      "seconds": 0.00011589998030103743
+    },
+    {
+      "test": "__main__.MathematicalTests.test_two_path_effect_is_not_additive",
+      "status": "PASS",
+      "seconds": 0.0005574999959208071
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_alpha_does_not_in_general_equal_D0",
+      "status": "PASS",
+      "seconds": 0.0002674999996088445
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_depth_block_rejected",
+      "status": "ERROR",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\aaa\\GameCam-VO\\experiments\\GAMECAM_TASK005B_DEPTH_PATH_DECOMPOSITION_20261125_R1\\04_tests\\test_depth_paths.py\", line 88, in test_zero_depth_block_rejected\n    z=fixture();z['cg']*=0;z['eta']*=0\n                ^^^^^^^^^^\nValueError: output array is read-only\n"
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_prior_all_cells_identical",
+      "status": "PASS",
+      "seconds": 0.0005772000004071742
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_prior_error_removes_gradient",
+      "status": "PASS",
+      "seconds": 0.00043280000681988895
+    },
+    {
+      "test": "__main__.SourceTests.test_U_update_body_unchanged",
+      "status": "PASS",
+      "seconds": 0.000222100003156811
+    },
+    {
+      "test": "__main__.SourceTests.test_U_update_occurs_after_retraction",
+      "status": "PASS",
+      "seconds": 3.9300008211284876e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_candidate_in_separate_entry",
+      "status": "PASS",
+      "seconds": 0.00018960001762025058
+    },
+    {
+      "test": "__main__.SourceTests.test_diagnostic_schema_count",
+      "status": "PASS",
+      "seconds": 2.7000001864507794e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_dirty_source_fails_closed",
+      "status": "PASS",
+      "seconds": 9.809999028220773e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_geometry_kernel_call_unchanged",
+      "status": "PASS",
+      "seconds": 4.429998807609081e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_motion_and_depth_only_forbidden",
+      "status": "PASS",
+      "seconds": 2.269999822601676e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_native_iterations_not_split_into_calls",
+      "status": "PASS",
+      "seconds": 3.0499999411404133e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_no_model_import_in_CPU_tests",
+      "status": "PASS",
+      "seconds": 2.13000166695565e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_LLT_method_unchanged",
+      "status": "PASS",
+      "seconds": 3.5999983083456755e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_all_functions_preserved_byte_identical",
+      "status": "PASS",
+      "seconds": 6.439999560825527e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_file_git_blob",
+      "status": "PASS",
+      "seconds": 6.310001481324434e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_row_major_matrix_export",
+      "status": "PASS",
+      "seconds": 3.429999924264848e-05
+    }
+  ],
+  "numpy": "2.3.5"
+}

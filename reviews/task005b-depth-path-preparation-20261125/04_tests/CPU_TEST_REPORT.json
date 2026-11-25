@@ -1,0 +1,202 @@
+{
+  "schema": "TASK005B_CPU_CONTRACT_TESTS_V1",
+  "passed": 38,
+  "total": 38,
+  "PASS": true,
+  "seed": 105,
+  "scope": "CPU_SYNTHETIC_AND_SOURCE_ONLY",
+  "native_GPU_equivalence": "NOT_EXECUTED",
+  "events": [
+    {
+      "test": "__main__.MathematicalTests.test_A_equals_original_D1",
+      "status": "PASS",
+      "seconds": 0.11123520002001897
+    },
+    {
+      "test": "__main__.MathematicalTests.test_B_changes_only_curvature",
+      "status": "PASS",
+      "seconds": 0.0007662000134587288
+    },
+    {
+      "test": "__main__.MathematicalTests.test_C_changes_only_gradient",
+      "status": "PASS",
+      "seconds": 0.00039709999691694975
+    },
+    {
+      "test": "__main__.MathematicalTests.test_D_equals_original_zero_prior",
+      "status": "PASS",
+      "seconds": 0.0003206999972462654
+    },
+    {
+      "test": "__main__.MathematicalTests.test_alpha_equal_eta_removes_curvature_effect",
+      "status": "PASS",
+      "seconds": 0.0005298999894876033
+    },
+    {
+      "test": "__main__.MathematicalTests.test_contrast_closure",
+      "status": "PASS",
+      "seconds": 0.0008579999848734587
+    },
+    {
+      "test": "__main__.MathematicalTests.test_gradient_does_not_change_first_linearized_spectrum",
+      "status": "PASS",
+      "seconds": 0.0004943999811075628
+    },
+    {
+      "test": "__main__.MathematicalTests.test_indefinite_matrix_not_classified_as_SPD",
+      "status": "PASS",
+      "seconds": 0.00027099999715574086
+    },
+    {
+      "test": "__main__.MathematicalTests.test_inf_rejected",
+      "status": "PASS",
+      "seconds": 0.00014970000484026968
+    },
+    {
+      "test": "__main__.MathematicalTests.test_input_arrays_unchanged",
+      "status": "PASS",
+      "seconds": 0.0003829999768640846
+    },
+    {
+      "test": "__main__.MathematicalTests.test_invalid_factor_rejected",
+      "status": "PASS",
+      "seconds": 0.00011510000331327319
+    },
+    {
+      "test": "__main__.MathematicalTests.test_masks_do_not_silently_accept_nan",
+      "status": "PASS",
+      "seconds": 0.0001215000229422003
+    },
+    {
+      "test": "__main__.MathematicalTests.test_missing_prior_invariant",
+      "status": "PASS",
+      "seconds": 0.000575200014282018
+    },
+    {
+      "test": "__main__.MathematicalTests.test_native_damping_uses_schur_diagonal",
+      "status": "PASS",
+      "seconds": 0.00026980001712217927
+    },
+    {
+      "test": "__main__.MathematicalTests.test_native_lower_triangle_not_averaged",
+      "status": "PASS",
+      "seconds": 0.00014970000484026968
+    },
+    {
+      "test": "__main__.MathematicalTests.test_no_pose_depth_coupling_no_pose_effect",
+      "status": "PASS",
+      "seconds": 0.000451600004453212
+    },
+    {
+      "test": "__main__.MathematicalTests.test_prior_force_sign_and_analytic_effect",
+      "status": "PASS",
+      "seconds": 0.00048809999134391546
+    },
+    {
+      "test": "__main__.MathematicalTests.test_rank_deficiency_no_fake_finite_condition_number",
+      "status": "PASS",
+      "seconds": 9.90999978967011e-05
+    },
+    {
+      "test": "__main__.MathematicalTests.test_schur_matches_full_joint_normal_equations",
+      "status": "PASS",
+      "seconds": 0.0008244000200647861
+    },
+    {
+      "test": "__main__.MathematicalTests.test_shapes_rejected",
+      "status": "PASS",
+      "seconds": 0.00012509999214671552
+    },
+    {
+      "test": "__main__.MathematicalTests.test_two_path_effect_is_not_additive",
+      "status": "PASS",
+      "seconds": 0.0004594000056385994
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_alpha_does_not_in_general_equal_D0",
+      "status": "PASS",
+      "seconds": 0.0004345000197645277
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_depth_block_rejected",
+      "status": "PASS",
+      "seconds": 0.00016080000204965472
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_prior_all_cells_identical",
+      "status": "PASS",
+      "seconds": 0.0005828000139445066
+    },
+    {
+      "test": "__main__.MathematicalTests.test_zero_prior_error_removes_gradient",
+      "status": "PASS",
+      "seconds": 0.00043829999049194157
+    },
+    {
+      "test": "__main__.SourceTests.test_U_update_body_unchanged",
+      "status": "PASS",
+      "seconds": 6.389999180100858e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_U_update_occurs_after_retraction",
+      "status": "PASS",
+      "seconds": 2.8699985705316067e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_candidate_in_separate_entry",
+      "status": "PASS",
+      "seconds": 4.81999886687845e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_diagnostic_schema_count",
+      "status": "PASS",
+      "seconds": 1.8999999156221747e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_dirty_source_fails_closed",
+      "status": "PASS",
+      "seconds": 6.6100008552894e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_geometry_kernel_call_unchanged",
+      "status": "PASS",
+      "seconds": 3.540000761859119e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_motion_and_depth_only_forbidden",
+      "status": "PASS",
+      "seconds": 1.9000028260052204e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_native_iterations_not_split_into_calls",
+      "status": "PASS",
+      "seconds": 2.61999957729131e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_no_model_import_in_CPU_tests",
+      "status": "PASS",
+      "seconds": 2.020000829361379e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_LLT_method_unchanged",
+      "status": "PASS",
+      "seconds": 2.9099988751113415e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_all_functions_preserved_byte_identical",
+      "status": "PASS",
+      "seconds": 5.3099996875971556e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_original_file_git_blob",
+      "status": "PASS",
+      "seconds": 5.370000144466758e-05
+    },
+    {
+      "test": "__main__.SourceTests.test_row_major_matrix_export",
+      "status": "PASS",
+      "seconds": 2.820001100189984e-05
+    }
+  ],
+  "numpy": "2.3.5"
+}

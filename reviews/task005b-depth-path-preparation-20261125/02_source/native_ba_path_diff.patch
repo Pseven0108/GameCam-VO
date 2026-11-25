@@ -1,0 +1,89 @@
+--- frozen/ba_cuda
++++ candidate/ba_paths_cuda
+@@ -1,4 +1,4 @@
+-std::vector<torch::Tensor> ba_cuda(
++std::vector<torch::Tensor> ba_paths_cuda(
+     torch::Tensor poses,        // [buffer, 7]
+     torch::Tensor disps,        // [buffer, height, width]
+     torch::Tensor intrinsics,
+@@ -28,8 +28,14 @@
+     const bool enable_udba,
+     const bool enable_affine_transform,
+     const bool enable_bidirectional_uncer,
+-    const bool debug)
++    const bool debug,
++    const bool curvature_path,
++    const bool gradient_path)
+ {
++  TORCH_CHECK(!motion_only && !depth_only, "TASK005B requires joint pose-depth BA");
++  TORCH_CHECK(iterations == 2, "TASK005B captures two iterations in one native call");
++  TORCH_CHECK(!debug, "TASK005B does not enable optional legacy debug loss");
++  std::vector<torch::Tensor> trace;
+   auto opts = poses.options();
+   const int num = ii.size(0);
+   const int ht = disps.size(1);
+@@ -72,6 +78,9 @@
+   torch::Tensor loss_total = torch::zeros({num_kf}, opts);
+ 
+   for (int itr=0; itr<iterations; itr++) {
++    trace.push_back(poses.detach().cpu().clone());
++    trace.push_back(disps.detach().cpu().clone());
++    trace.push_back(uncertainties.detach().cpu().clone());
+ 
+     projective_transform_kernel<<<num, THREADS>>>(
+       targets.packed_accessor32<float,4,torch::RestrictPtrTraits>(),
+@@ -115,15 +124,28 @@
+       // add depth residual if there are depth sensor measurements
+       const float alpha = gamma_depth;
+       torch::Tensor m = (disps_sens.index({kx, "..."}) > 0).to(torch::TensorOptions().dtype(torch::kFloat32)).view({-1, ht*wd});
+-      torch::Tensor C = accum_cuda(Cii, ii, kx) + m * alpha + (1 - m) * eta.view({-1, ht*wd});
+-      torch::Tensor w = accum_cuda(wi, ii, kx) - m * alpha * (disps.index({kx, "..."}) - disps_sens.index({kx, "..."})).view({-1, ht*wd});
++      torch::Tensor C_geometry = accum_cuda(Cii, ii, kx);
++      torch::Tensor m_curvature = curvature_path ? m : torch::zeros_like(m);
++      torch::Tensor C = C_geometry + m_curvature * alpha + (1 - m_curvature) * eta.view({-1, ht*wd});
++      torch::Tensor w_geometry = accum_cuda(wi, ii, kx);
++      torch::Tensor m_gradient = gradient_path ? m : torch::zeros_like(m);
++      torch::Tensor w = w_geometry - m_gradient * alpha * (disps.index({kx, "..."}) - disps_sens.index({kx, "..."})).view({-1, ht*wd});
+       torch::Tensor Q = 1.0 / C;
+ 
+       torch::Tensor Ei = accum_cuda(Eii.view({num, 6*ht*wd}), ii, ts).view({t1-t0, 6, ht*wd});
+       torch::Tensor E = torch::cat({Ei, Eij}, 0);
+ 
+       SparseBlock S = schur_block(E, Q, w, ii_exp, jj_exp, kk_exp, t0, t1);   // simulataneouly construct the lhs and rhs of the linear system
+-      dx = (A - S).solve(lm, ep);     // compute delta_pose
++      SparseBlock H = A - S;
++      dx = H.solve(lm, ep);     // SAME native Eigen LLT and damping
++      for (const auto& t : std::vector<torch::Tensor>{C_geometry,w_geometry,C,w,Q,E,kx})
++        trace.push_back(t.detach().cpu().clone());
++      trace.push_back(task005b_matrix(A.A)); trace.push_back(task005b_vector(A.b));
++      trace.push_back(task005b_matrix(S.A)); trace.push_back(task005b_vector(S.b));
++      trace.push_back(task005b_matrix(H.A)); trace.push_back(task005b_vector(H.b));
++      Eigen::SparseMatrix<double> L_dump(H.A);
++      L_dump.diagonal().array() += ep + lm * L_dump.diagonal().array();
++      trace.push_back(task005b_matrix(L_dump));
+ 
+       torch::Tensor ix = jj_exp - t0;
+       torch::Tensor dw = torch::zeros({ix.size(0), ht*wd}, opts);
+@@ -135,6 +157,8 @@
+         dw.packed_accessor32<float,2,torch::RestrictPtrTraits>());
+ 
+       dz = Q * (w - accum_cuda(dw, ii_exp, kx));      // compute delta_d
++      trace.push_back(dx.detach().cpu().clone());
++      trace.push_back(dz.detach().cpu().clone());
+ 
+       if (!depth_only){
+         // update poses
+@@ -230,7 +254,12 @@
+         loss_total.zero_();
+       }
+     }
++    trace.push_back(poses.detach().cpu().clone());
++    trace.push_back(disps.detach().cpu().clone());
++    trace.push_back(uncertainties.detach().cpu().clone());
+   }
+ 
+-  return {dx, dz};
++  std::vector<torch::Tensor> result{dx, dz};
++  result.insert(result.end(), trace.begin(), trace.end());
++  return result;
+ }

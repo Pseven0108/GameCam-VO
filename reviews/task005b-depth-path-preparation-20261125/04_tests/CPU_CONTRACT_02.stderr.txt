@@ -1,0 +1,43 @@
+test_A_equals_original_D1 (__main__.MathematicalTests.test_A_equals_original_D1) ... ok
+test_B_changes_only_curvature (__main__.MathematicalTests.test_B_changes_only_curvature) ... ok
+test_C_changes_only_gradient (__main__.MathematicalTests.test_C_changes_only_gradient) ... ok
+test_D_equals_original_zero_prior (__main__.MathematicalTests.test_D_equals_original_zero_prior) ... ok
+test_alpha_equal_eta_removes_curvature_effect (__main__.MathematicalTests.test_alpha_equal_eta_removes_curvature_effect) ... ok
+test_contrast_closure (__main__.MathematicalTests.test_contrast_closure) ... ok
+test_gradient_does_not_change_first_linearized_spectrum (__main__.MathematicalTests.test_gradient_does_not_change_first_linearized_spectrum) ... ok
+test_indefinite_matrix_not_classified_as_SPD (__main__.MathematicalTests.test_indefinite_matrix_not_classified_as_SPD) ... ok
+test_inf_rejected (__main__.MathematicalTests.test_inf_rejected) ... ok
+test_input_arrays_unchanged (__main__.MathematicalTests.test_input_arrays_unchanged) ... ok
+test_invalid_factor_rejected (__main__.MathematicalTests.test_invalid_factor_rejected) ... ok
+test_masks_do_not_silently_accept_nan (__main__.MathematicalTests.test_masks_do_not_silently_accept_nan) ... ok
+test_missing_prior_invariant (__main__.MathematicalTests.test_missing_prior_invariant) ... ok
+test_native_damping_uses_schur_diagonal (__main__.MathematicalTests.test_native_damping_uses_schur_diagonal) ... ok
+test_native_lower_triangle_not_averaged (__main__.MathematicalTests.test_native_lower_triangle_not_averaged) ... ok
+test_no_pose_depth_coupling_no_pose_effect (__main__.MathematicalTests.test_no_pose_depth_coupling_no_pose_effect) ... ok
+test_prior_force_sign_and_analytic_effect (__main__.MathematicalTests.test_prior_force_sign_and_analytic_effect) ... ok
+test_rank_deficiency_no_fake_finite_condition_number (__main__.MathematicalTests.test_rank_deficiency_no_fake_finite_condition_number) ... ok
+test_schur_matches_full_joint_normal_equations (__main__.MathematicalTests.test_schur_matches_full_joint_normal_equations) ... ok
+test_shapes_rejected (__main__.MathematicalTests.test_shapes_rejected) ... ok
+test_two_path_effect_is_not_additive (__main__.MathematicalTests.test_two_path_effect_is_not_additive) ... ok
+test_zero_alpha_does_not_in_general_equal_D0 (__main__.MathematicalTests.test_zero_alpha_does_not_in_general_equal_D0) ... ok
+test_zero_depth_block_rejected (__main__.MathematicalTests.test_zero_depth_block_rejected) ... ok
+test_zero_prior_all_cells_identical (__main__.MathematicalTests.test_zero_prior_all_cells_identical) ... ok
+test_zero_prior_error_removes_gradient (__main__.MathematicalTests.test_zero_prior_error_removes_gradient) ... ok
+test_U_update_body_unchanged (__main__.SourceTests.test_U_update_body_unchanged) ... ok
+test_U_update_occurs_after_retraction (__main__.SourceTests.test_U_update_occurs_after_retraction) ... ok
+test_candidate_in_separate_entry (__main__.SourceTests.test_candidate_in_separate_entry) ... ok
+test_diagnostic_schema_count (__main__.SourceTests.test_diagnostic_schema_count) ... ok
+test_dirty_source_fails_closed (__main__.SourceTests.test_dirty_source_fails_closed) ... ok
+test_geometry_kernel_call_unchanged (__main__.SourceTests.test_geometry_kernel_call_unchanged) ... ok
+test_motion_and_depth_only_forbidden (__main__.SourceTests.test_motion_and_depth_only_forbidden) ... ok
+test_native_iterations_not_split_into_calls (__main__.SourceTests.test_native_iterations_not_split_into_calls) ... ok
+test_no_model_import_in_CPU_tests (__main__.SourceTests.test_no_model_import_in_CPU_tests) ... ok
+test_original_LLT_method_unchanged (__main__.SourceTests.test_original_LLT_method_unchanged) ... ok
+test_original_all_functions_preserved_byte_identical (__main__.SourceTests.test_original_all_functions_preserved_byte_identical) ... ok
+test_original_file_git_blob (__main__.SourceTests.test_original_file_git_blob) ... ok
+test_row_major_matrix_export (__main__.SourceTests.test_row_major_matrix_export) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.122s
+
+OK

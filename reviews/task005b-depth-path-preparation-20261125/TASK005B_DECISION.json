@@ -1,0 +1,16 @@
+{
+  "status": "CPU_PREPARATION_COMPLETE_GPU_EXPERIMENT_NOT_STARTED",
+  "real_mechanism_attribution": "INSUFFICIENT_EVIDENCE",
+  "CPU_tests_passed": 38,
+  "native_GPU_replays_executed": 0,
+  "historical_BA_target_checkpoints_complete": 0,
+  "target_contexts": 12,
+  "C0_available": true,
+  "blocking_conditions": [
+    "User-confirmed no-GPU instance",
+    "Target complete historical BA inputs absent",
+    "Native candidate not compiled or GPU-equivalence tested",
+    "Exact live capture/trace storage budget not established"
+  ],
+  "next_concrete_operation": "User-confirmed directed prefix capture through RGB401 on a GPU-enabled instance, then bounded 2x2/U replay; no full487 rerun"
+}

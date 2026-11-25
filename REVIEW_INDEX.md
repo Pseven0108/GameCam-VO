@@ -1,3 +1,9 @@
+# 最新准备评审
+
+[task005b-depth-path-preparation-20261125](reviews/task005b-depth-path-preparation-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005b-depth-path-preparation-20261125/GAMECAM_TASK005B_DEPTH_PATH_PREPARATION_REVIEW_20261125.zip)。
+
+---
+
 # 最新评审
 
 [task005a-d-schedule-mechanism-20261125](reviews/task005a-d-schedule-mechanism-20261125/FINAL_REVIEW.md) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task005a-d-schedule-mechanism-20261125/GAMECAM_TASK005A_D_SCHEDULE_MECHANISM_REVIEW_20261125.zip) · [展开文件](reviews/task005a-d-schedule-mechanism-20261125)。

@@ -1,0 +1,116 @@
+{
+  "status": "CLEANUP_COMPLETED_AND_BASELINE_ASSETS_PRESERVED",
+  "utc": "2026-11-26T16:54:46.362785+00:00",
+  "deleted": [
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/wheelhouse",
+      "logical_bytes": 2938972034,
+      "regular_files": 45,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/tmp",
+      "logical_bytes": 88318780,
+      "regular_files": 11,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/official_source_fresh_clone.bundle",
+      "logical_bytes": 9845623,
+      "regular_files": 1,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R2_FORMAT_VERIFIED/outputs",
+      "logical_bytes": 865610717,
+      "regular_files": 488,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/external_models/pi3mos_task008_weights",
+      "logical_bytes": 4100235800,
+      "regular_files": 1,
+      "removed": true
+    },
+    {
+      "path": "/opt/gamecam-pi3mos/envs/pi3mos-infer",
+      "logical_bytes": 5468423300,
+      "regular_files": 22036,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK008_API_PUBLICATION_20261126_CONCURRENT/GAMECAM_TASK008_PI3MOS_NIGHT007_REVIEW.zip",
+      "logical_bytes": 14953695,
+      "regular_files": 1,
+      "removed": true
+    },
+    {
+      "path": "/root/rivermind-data/GAMECAM_TASK007D_PUBLICATION_20261126/GAMECAM_TASK007D_METRIC_SCALE_PROVENANCE_REVIEW.zip",
+      "logical_bytes": 87017,
+      "regular_files": 1,
+      "removed": true
+    }
+  ],
+  "before": {
+    "/": {
+      "total": 31526391808,
+      "used": 30776184832,
+      "free": 733429760
+    },
+    "/root/rivermind-data": {
+      "total": 105089261568,
+      "used": 101144600576,
+      "free": 3927883776
+    },
+    "/dev/shm": {
+      "total": 2147483648,
+      "used": 0,
+      "free": 2147483648
+    }
+  },
+  "after": {
+    "/": {
+      "total": 31526391808,
+      "used": 25340829696,
+      "free": 6168784896
+    },
+    "/root/rivermind-data": {
+      "total": 105089261568,
+      "used": 93126258688,
+      "free": 11946225664
+    },
+    "/dev/shm": {
+      "total": 2147483648,
+      "used": 0,
+      "free": 2147483648
+    }
+  },
+  "free_space_change_bytes": {
+    "/": 5435355136,
+    "/root/rivermind-data": 8018341888,
+    "/dev/shm": 0
+  },
+  "protected_files_verified": 2318,
+  "output_backup_files_verified": 488,
+  "protected_SHA256_identity": "PASS",
+  "environment_registration": {
+    "exists": true,
+    "only_target_registration_removed": true,
+    "removed_lines": 1,
+    "before_sha256": "bcfe6930a4f0a8209c31d62014dbf075c9fe9b8c4c1168f63313b1ee7b672b86",
+    "after_sha256": "ae3a6aa5b4bb35d8c3704f0e75d383b0fbe20cc1165947d7d49358a120763d42"
+  },
+  "disposition": {
+    "client_date": "2026-11-27 Asia/Shanghai",
+    "TASK008": "STOPPED_AND_PARKED_BY_USER",
+    "TASK007D": "AUDIT_SEALED_REPEATED_SERVER_ZIP_REMOVED",
+    "research_direction": "DROID-W BASELINE OPTIMIZATION",
+    "new_experiment_started": false,
+    "GPU_used": false,
+    "instance_reboot_or_shutdown": false,
+    "raw_predictions_retained_local": "D:\\aaa\\GameCam-VO\\experiments\\task008_pi3mos\\retrieved",
+    "remote_predictions_deleted": true,
+    "existing_reports_configs_source_and_baselines_retained": true
+  },
+  "audit_directory": "/root/rivermind-data/GAMECAM_TASK008_TASK007D_CLEANUP_20261127"
+}

@@ -1,0 +1,64 @@
+{
+  "local_files": [
+    {
+      "root": "D:\\aaa\\GameCam-VO\\experiments\\task008_pi3mos\\retrieved",
+      "files": 520,
+      "SHA256": "PASS",
+      "bytes": 866457714,
+      "manifest_SHA256": "148eaddc205bba2645e5ae55a27163673655294142bef4d7eeea19db64b2efe7"
+    },
+    {
+      "root": "D:\\aaa\\GameCam-VO\\reviews\\task008-pi3mos-night007-independent-inference-20261126",
+      "files": 526,
+      "SHA256": "PASS",
+      "bytes": 16786443,
+      "manifest_SHA256": "dde71145144b0ce8f81a5f77c5393cd64f82123901993da21dd65f98e0f78165"
+    },
+    {
+      "root": "D:\\aaa\\GameCam-VO\\reviews\\task007d-metric-scale-provenance-audit-20261126",
+      "files": 47,
+      "SHA256": "PASS",
+      "bytes": 224729,
+      "manifest_SHA256": "64e0377ac82c4d86a89b474113bddcdad51b2eed5f3365ab4f43bc7e1b50eb36"
+    }
+  ],
+  "public_review_receipts": {
+    "TASK007D": {
+      "commit": "3bf7da7bb39192081cefe9898e948784ae6cd5aa",
+      "ZIP": {
+        "ZIP_name": "GAMECAM_TASK007D_METRIC_SCALE_PROVENANCE_REVIEW.zip",
+        "ZIP_bytes": 87017,
+        "ZIP_sha256": "6dc16370ee4dd16d872cbe76a6a662c6c1a5b6e4528c3abeb6405378c017fa90",
+        "ZIP_members": 48,
+        "internal_SHA256_entries": 47,
+        "CRC": "PASS",
+        "all_review_payload_files_included": true,
+        "raw_dataset_exclusions_explicit": true,
+        "GPU_used": false,
+        "CPU_audit_checks": "26 commit histories,6 metadata versions,6 source blobs and141 historical manifest entries verified; no model accuracy test"
+      },
+      "ZIP_url": "https://github.com/Pseven0108/GameCam-VO/releases/download/task007d-metric-scale-provenance-audit-20261126/GAMECAM_TASK007D_METRIC_SCALE_PROVENANCE_REVIEW.zip",
+      "release_url": "https://github.com/Pseven0108/GameCam-VO/releases/tag/task007d-metric-scale-provenance-audit-20261126"
+    },
+    "TASK008": {
+      "commit": "9341fce81a540a9ef1711b0f0b6cb49873ce990b",
+      "ZIP": {
+        "ZIP_name": "GAMECAM_TASK008_PI3MOS_NIGHT007_REVIEW.zip",
+        "ZIP_bytes": 14953695,
+        "ZIP_sha256": "f0f308aa4d21f74f9d083171f5b04808c80d8c1191f3f291b15942c72e1d1ba8",
+        "ZIP_members": 527,
+        "internal_SHA256_entries": 526,
+        "CRC": "PASS",
+        "all_review_payload_files_included": true,
+        "raw_dataset_and_large_array_exclusions_explicit": true,
+        "GPU_forwards": 64,
+        "review_visuals": 384
+      },
+      "ZIP_url": "https://github.com/Pseven0108/GameCam-VO/releases/download/task008-pi3mos-night007-independent-inference-20261126/GAMECAM_TASK008_PI3MOS_NIGHT007_REVIEW.zip",
+      "release_url": "https://github.com/Pseven0108/GameCam-VO/releases/tag/task008-pi3mos-night007-independent-inference-20261126"
+    }
+  },
+  "private_raw_prediction_backup": "D:/aaa/GameCam-VO/experiments/task008_pi3mos/retrieved",
+  "no_local_raw_output_deletion": true,
+  "original_public_releases_unchanged": true
+}

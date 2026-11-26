@@ -1,14 +1,13 @@
-# GameCam-VO 项目状态 · TASK008
+# GameCam-VO 当前状态
 
-2026-11-26（Asia/Shanghai）。当前阶段：**TASK008 π³mos独立推理完成，Night007两组各32帧；有限定性证据，不宣称准确率或VO改进。**
+2026-11-27（Asia/Shanghai）。**TASK008已按用户指令停止并封存，研究方向恢复为DROID-W Baseline优化。当前没有新实验运行。**
 
-[最终评审](reviews/task008-pi3mos-night007-independent-inference-20261126/FINAL_REVIEW.md) · [完整展开证据](reviews/task008-pi3mos-night007-independent-inference-20261126) · [完整Review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task008-pi3mos-night007-independent-inference-20261126/GAMECAM_TASK008_PI3MOS_NIGHT007_REVIEW.zip)
+[本轮清理报告](reviews/task008-task007d-server-cleanup-baseline-resume-20261127/FINAL_REVIEW.md) · [完整清理评审](reviews/task008-task007d-server-cleanup-baseline-resume-20261127) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task008-task007d-server-cleanup-baseline-resume-20261127/GAMECAM_SERVER_CLEANUP_BASELINE_RESUME_REVIEW.zip)
 
-- 官方固定commit、官方safetensors权重strict加载；3090上64次前向完成，无OOM。
-- 3帧预热后282.575ms、5.916GiB；5帧426.992ms、6.328GiB。保存所有连续概率、Mask、Overlay、Confidence及辅助深度。
-- 卡车轮廓连续，未见大面积背景阈值响应；无动态GT、停放车/行人/纯旋转控制，未证明5帧更优或第三人称泛化。
-- 52张RGB和1830份既有DROID-W源码/配置/观测JSON前后SHA一致，Baseline不变，无训练或BA集成。
-- 64份数组及像素映射合同复核通过；原始RGB/浮点NPZ/权重不公开提交，位置和SHA随完整Review提供。
-- TASK007D的严格米制GT NO-GO继续有效，不自动启动Confidence校准、CADP或下一阶段。
+- 数据盘实测释放7.468 GiB，可用11.126 GiB；系统盘释放5.062 GiB，可用5.745 GiB。
+- 清理TASK008专用环境/权重/安装缓存/已备份服务器预测，以及TASK007D重复ZIP。2,318份源码、RGB和Manifest保护核验一致。
+- 本地64份原始浮点预测、历史报告和GitHub Release保留。TASK007D严格米制GT结论不变。
+- 不再推进π³mos支线；没有修改DROID-W、Metric3D、BA或R2配置，没有启动新消融，没有关闭/重启实例。
+- 下一项Baseline优化实验的具体范围待另行确定，本次存储维护不扩大算法授权。
 
-上一封存阶段：[TASK007D固定提交](https://github.com/Pseven0108/GameCam-VO/tree/3bf7da7bb39192081cefe9898e948784ae6cd5aa)。等待人工评审。
+历史封存：[TASK008](https://github.com/Pseven0108/GameCam-VO/tree/9341fce81a540a9ef1711b0f0b6cb49873ce990b) · [TASK007D](https://github.com/Pseven0108/GameCam-VO/tree/3bf7da7bb39192081cefe9898e948784ae6cd5aa)。

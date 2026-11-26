@@ -1,0 +1,22 @@
+torch: 256 MiB downloaded
+torch: 512 MiB downloaded
+torch: 768 MiB downloaded
+torch: 1024 MiB downloaded
+torch: 1280 MiB downloaded
+torch: 1536 MiB downloaded
+torch: 1792 MiB downloaded
+Verified torch 2.15.0+cu132: 2,108,257,640 bytes
+Verified torchvision 0.29.2+cu132: 6,603,299 bytes
+Verified fsspec 2026.9.0: 221,738 bytes
+Verified networkx 3.6.1: 2,068,504 bytes
+Verified sympy 1.14.0: 6,299,353 bytes
+Verified mpmath 1.3.0: 536,198 bytes
+Verified typing_extensions 4.16.0: 45,571 bytes
+Verified filelock 4.2.4: 162,475 bytes
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO\maintenance\LOCAL_RTX5060_ENVIRONMENT_20261126\scripts\download_and_budget.py", line 100, in <module>
+    main()
+  File "D:\aaa\GameCam-VO\maintenance\LOCAL_RTX5060_ENVIRONMENT_20261126\scripts\download_and_budget.py", line 42, in main
+    expected = source["archive_info"]["hashes"]["sha256"]
+               ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'hashes'

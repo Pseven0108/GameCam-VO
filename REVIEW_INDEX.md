@@ -1,3 +1,13 @@
+# 本地 RTX 5060 环境与三级执行规范
+
+2026-11-26：现有 gamecam-vo 环境，12/12 合成GPU检查通过；未运行研究模型。
+
+[环境评审](reviews/local-rtx5060-environment-20261126/FINAL_REVIEW.md) · [完整评审ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/local-rtx5060-environment-20261126/GAMECAM_LOCAL_RTX5060_ENVIRONMENT_REVIEW.zip) · [执行规范](docs/LOCAL_EXPERIMENT_WORKFLOW.md)
+
+本条为工程环境更新；研究阶段仍保留 TASK006A-R2.2 的评审状态。
+
+---
+
 # 最新评审：TASK006A-R2.2
 
 [最终评审](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FINAL_REVIEW.md) · [展开材料](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-2-depth-restoration-gt-audit-20261126/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip)

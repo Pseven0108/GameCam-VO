@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "passed": 12,
+  "total": 12,
+  "checks": [
+    {
+      "name": "scientific_and_torchvision_imports",
+      "status": "PASS",
+      "seconds": 2.3994867999863345,
+      "details": {
+        "torch": "2.15.0+cu132",
+        "torchvision": "0.29.2+cu132",
+        "numpy": "2.2.6",
+        "scipy": "1.16.3",
+        "opencv-python-headless": "4.13.0.92",
+        "pillow": "13.0.0",
+        "matplotlib": "3.10.9",
+        "pytest": "8.4.2"
+      }
+    },
+    {
+      "name": "sm120_native_build_and_hardware",
+      "status": "PASS",
+      "seconds": 0.005475899990415201,
+      "details": {
+        "device_name": "NVIDIA GeForce RTX 5060",
+        "capability": [
+          12,
+          0
+        ],
+        "build_architectures": [
+          "sm_75",
+          "sm_80",
+          "sm_86",
+          "sm_90",
+          "sm_100",
+          "sm_120"
+        ],
+        "device_total_memory_bytes": 8546353152,
+        "torch_cuda_runtime": "13.2",
+        "cudnn_version": 92600,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "float32_matmul_precision": "highest"
+      }
+    },
+    {
+      "name": "cuda_matmul_float32",
+      "status": "PASS",
+      "seconds": 0.12560110000777058,
+      "details": {
+        "max_abs_error": 2.5590000091169074e-07,
+        "rtol": 0.0002,
+        "atol": 2e-05
+      }
+    },
+    {
+      "name": "cuda_matmul_float16",
+      "status": "PASS",
+      "seconds": 0.14237270000739954,
+      "details": {
+        "max_abs_error": 0.00024340117670362815,
+        "rtol": 0.003,
+        "atol": 0.0005
+      }
+    },
+    {
+      "name": "cuda_matmul_bfloat16",
+      "status": "PASS",
+      "seconds": 0.10374180000508204,
+      "details": {
+        "max_abs_error": 0.0019395221024751663,
+        "rtol": 0.03,
+        "atol": 0.005
+      }
+    },
+    {
+      "name": "cudnn_convolution_and_fp16_autocast",
+      "status": "PASS",
+      "seconds": 0.1525190999964252,
+      "details": {
+        "shape": [
+          1,
+          16,
+          90,
+          160
+        ],
+        "float32_max_abs_error": 1.6391277313232422e-07,
+        "autocast_max_abs_error": 0.00021728873252868652,
+        "synthetic_only": true
+      }
+    },
+    {
+      "name": "depth_bilinear_restore_cpu_gpu",
+      "status": "PASS",
+      "seconds": 0.005650099978083745,
+      "details": {
+        "shape": [
+          1,
+          1,
+          360,
+          640
+        ],
+        "max_abs_error": 1.7881393432617188e-07
+      }
+    },
+    {
+      "name": "float64_spd_linear_solve",
+      "status": "PASS",
+      "seconds": 0.035157499980414286,
+      "details": {
+        "max_abs_error": 2.55351295663786e-15,
+        "relative_residual": 5.1803412324396445e-15
+      }
+    },
+    {
+      "name": "synthetic_autograd_cpu_gpu",
+      "status": "PASS",
+      "seconds": 0.08323079999536276,
+      "details": {
+        "gradient_max_abs_error": 7.450580596923828e-08,
+        "research_model_loaded": false,
+        "optimizer_steps": 0
+      }
+    },
+    {
+      "name": "torchvision_compiled_cuda_nms",
+      "status": "PASS",
+      "seconds": 0.13088429998606443,
+      "details": {
+        "selected": [
+          0,
+          2
+        ],
+        "native_torchvision_cuda_op": true
+      }
+    },
+    {
+      "name": "pinned_memory_transfer",
+      "status": "PASS",
+      "seconds": 0.0017865000118035823,
+      "details": {
+        "elements": 4096,
+        "pinned": true
+      }
+    },
+    {
+      "name": "windows_spawn_independent_gpu_context",
+      "status": "PASS",
+      "seconds": 3.116863999981433,
+      "details": {
+        "ok": true,
+        "device": "NVIDIA GeForce RTX 5060",
+        "value": 2861214720.0,
+        "relative_error": 0.0,
+        "peak_allocated_bytes": 16896,
+        "cuda_tensor_IPC_tested": false,
+        "one_independent_child": true
+      }
+    }
+  ],
+  "details": {
+    "packages": {
+      "torch": "2.15.0+cu132",
+      "torchvision": "0.29.2+cu132",
+      "numpy": "2.2.6",
+      "scipy": "1.16.3",
+      "opencv-python-headless": "4.13.0.92",
+      "pillow": "13.0.0",
+      "matplotlib": "3.10.9",
+      "pytest": "8.4.2"
+    },
+    "GPU": {
+      "device_name": "NVIDIA GeForce RTX 5060",
+      "capability": [
+        12,
+        0
+      ],
+      "build_architectures": [
+        "sm_75",
+        "sm_80",
+        "sm_86",
+        "sm_90",
+        "sm_100",
+        "sm_120"
+      ],
+      "device_total_memory_bytes": 8546353152,
+      "torch_cuda_runtime": "13.2",
+      "cudnn_version": 92600,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "float32_matmul_precision": "highest"
+    },
+    "free_total_bytes_before": [
+      7373586432,
+      8546353152
+    ],
+    "peak_allocated_bytes_parent": 34340864,
+    "peak_reserved_bytes_parent": 35651584,
+    "free_total_bytes_after": [
+      7113539584,
+      8546353152
+    ]
+  },
+  "python": "3.11.18 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 18:13:29) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\Administrator\\.conda\\envs\\gamecam-vo\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "utc": "2026-11-26T08:36:39.564846+00:00",
+  "seconds": 6.628195600002073,
+  "scope": {
+    "synthetic_GPU_operations": true,
+    "research_model_loaded": false,
+    "checkpoint_deserialized": false,
+    "real_RGB_read": false,
+    "SLAM_executed": false,
+    "custom_CUDA_compiled": false,
+    "remote_GPU_used": false,
+    "metric3d_inference_validated": false,
+    "droidw_runtime_validated": false
+  }
+}

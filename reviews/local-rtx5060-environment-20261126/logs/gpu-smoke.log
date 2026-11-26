@@ -1,0 +1,18 @@
+PASS scientific_and_torchvision_imports
+PASS sm120_native_build_and_hardware
+PASS cuda_matmul_float32
+PASS cuda_matmul_float16
+PASS cuda_matmul_bfloat16
+PASS cudnn_convolution_and_fp16_autocast
+PASS depth_bilinear_restore_cpu_gpu
+PASS float64_spd_linear_solve
+PASS synthetic_autograd_cpu_gpu
+PASS torchvision_compiled_cuda_nms
+PASS pinned_memory_transfer
+PASS windows_spawn_independent_gpu_context
+{
+  "status": "PASS",
+  "passed": 12,
+  "total": 12,
+  "output": "D:\\aaa\\GameCam-VO\\maintenance\\LOCAL_RTX5060_ENVIRONMENT_20261126\\after\\GPU_SMOKE_REPORT.json"
+}

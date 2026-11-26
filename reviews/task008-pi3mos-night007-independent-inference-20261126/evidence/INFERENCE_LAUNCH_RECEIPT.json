@@ -1,0 +1,16 @@
+{
+  "PID": 2178,
+  "arguments": [
+    "/opt/gamecam-pi3mos/envs/pi3mos-infer/bin/python",
+    "-B",
+    "-u",
+    "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R2_FORMAT_VERIFIED/scripts/infer_pi3mos.py",
+    "--config",
+    "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R2_FORMAT_VERIFIED/configs/night007.json",
+    "--checkpoint",
+    "/root/rivermind-data/external_models/pi3mos_task008_weights/pi3mos_official.pth"
+  ],
+  "CUDA_VISIBLE_DEVICES": "0",
+  "start_UTC": "2026-11-26T15:24:06Z",
+  "retry": false
+}

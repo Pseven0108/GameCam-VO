@@ -1,14 +1,14 @@
-# GameCam-VO · TASK007D
+# GameCam-VO · TASK008
 
-2026-11-26（Asia/Shanghai）。当前阶段：**TASK007D来源追溯完成；用途B（相对/辅助诊断），严格米制GT仍NO-GO**。
+2026-11-26（Asia/Shanghai）。当前阶段：**TASK008 π³mos独立推理完成，Night007两组各32帧；有限定性证据，不宣称准确率或VO改进。**
 
-[最终评审](reviews/task007d-metric-scale-provenance-audit-20261126/FINAL_REVIEW.md) · [完整证据](reviews/task007d-metric-scale-provenance-audit-20261126) · [完整Review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task007d-metric-scale-provenance-audit-20261126/GAMECAM_TASK007D_METRIC_SCALE_PROVENANCE_REVIEW.zip)
+[最终评审](reviews/task008-pi3mos-night007-independent-inference-20261126/FINAL_REVIEW.md) · [完整展开证据](reviews/task008-pi3mos-night007-independent-inference-20261126) · [完整Review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task008-pi3mos-night007-independent-inference-20261126/GAMECAM_TASK008_PI3MOS_NIGHT007_REVIEW.zip)
 
-- GitHub main完整可达历史26提交、6个CSV版本及3个UID已核查。2026-03-21新增484行Metric Scale列，其余字段未变；当前CSV与发布时字节一致。
-- Reader只读取/应用尺度；未找到绑定三UID的生成程序、拟合帧、独立物理标尺或误差界。
-- 作者旧的MoGe-2近似建议不能当作当前因子的生产事实；是否使用Metric3D或Test拟合仍未知。
-- 不启动Metric3D Confidence校准/NLL/Coverage。模型运行0、GPU/CUDA0、新原始数据/权重下载0。
-- TASK007A/B/C封存141项SHA通过；不改历史Release、VIPER主线或Baseline。
-- VKITTI2训练家族重叠纠正继续有效；Scalix、CADP与Confidence-aware BA不启动。
+- 官方固定commit、官方safetensors权重strict加载；3090上64次前向完成，无OOM。
+- 3帧预热后282.575ms、5.916GiB；5帧426.992ms、6.328GiB。保存所有连续概率、Mask、Overlay、Confidence及辅助深度。
+- 卡车轮廓连续，未见大面积背景阈值响应；无动态GT、停放车/行人/纯旋转控制，未证明5帧更优或第三人称泛化。
+- 52张RGB和1830份既有DROID-W源码/配置/观测JSON前后SHA一致，Baseline不变，无训练或BA集成。
+- 64份数组及像素映射合同复核通过；原始RGB/浮点NPZ/权重不公开提交，位置和SHA随完整Review提供。
+- TASK007D的严格米制GT NO-GO继续有效，不自动启动Confidence校准、CADP或下一阶段。
 
-完整历史入口保留在[上一固定提交](https://github.com/Pseven0108/GameCam-VO/tree/30c4149863ce202f4545a872707f0a6fc6a0bfb1)。本次不自动进入下一阶段。
+上一封存阶段：[TASK007D固定提交](https://github.com/Pseven0108/GameCam-VO/tree/3bf7da7bb39192081cefe9898e948784ae6cd5aa)。等待人工评审。

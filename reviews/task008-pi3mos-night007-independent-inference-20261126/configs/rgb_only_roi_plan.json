@@ -1,0 +1,16 @@
+{
+  "selection_stage": "RGB-only preview before first Pi3MOS forward",
+  "source": "Original Night007 frames281,301,309,312,320,328,332 visually inspected",
+  "not_segmentation_GT": true,
+  "meaning": "Broad image-region diagnostic probes; boxes include context and do not define true object boundaries",
+  "all_target_fixed_regions_normalized_xyxy": {
+    "road_surface": [0.37, 0.58, 0.62, 0.75],
+    "right_concrete_barrier": [0.70, 0.46, 0.94, 0.60],
+    "upper_blue_lights_and_building": [0.67, 0.23, 0.94, 0.39],
+    "camera_coupled_car_hood_uncertain_world_motion": [0.24, 0.85, 0.88, 0.98]
+  },
+  "frame312_vehicle_box_normalized_xyxy": [0.073, 0.31, 0.315, 0.54],
+  "vehicle_label": "Visible truck candidate; its true world motion is not independently established from monocular appearance",
+  "absent_controls": ["No clearly established parked vehicle in this32-frame crop", "No clearly visible pedestrian control", "No separately verified pure camera-rotation interval"],
+  "interpretation": "Region probability differences and temporal same-pixel proxies cannot be reported as precision, recall, IoU against GT or dynamic-object accuracy"
+}

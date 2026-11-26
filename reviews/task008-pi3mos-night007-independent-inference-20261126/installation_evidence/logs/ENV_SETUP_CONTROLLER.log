@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/create_independent_env.py", line 15, in <module>
+    run([p+'/bin/python','-m','pip','install','--no-cache-dir','--index-url','https://download.pytorch.org/whl/cu121','torch==2.3.1','torchvision==0.18.1'],'INSTALL_TORCH_CU121',1800)
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/create_independent_env.py", line 12, in run
+    if r.returncode:raise RuntimeError(label+' failed; retain the partial environment and logs')
+RuntimeError: INSTALL_TORCH_CU121 failed; retain the partial environment and logs

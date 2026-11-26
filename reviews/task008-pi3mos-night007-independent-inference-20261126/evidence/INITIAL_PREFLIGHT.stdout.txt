@@ -1,0 +1,113 @@
+{
+  "hostname": "jupyter-jbrlffe29wd3x49z",
+  "GPU": {
+    "exit_code": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, GPU-043d277d-32fb-7889-4097-8513c10e0d19, 580.119.02, 24576 MiB, 24125 MiB",
+    "stderr": ""
+  },
+  "GPU_processes": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "volumes": {
+    "/": {
+      "total": 31526391808,
+      "used": 25141964800,
+      "free": 6367649792
+    },
+    "/opt": {
+      "total": 31526391808,
+      "used": 25141964800,
+      "free": 6367649792
+    },
+    "/root/rivermind-data": {
+      "total": 105089261568,
+      "used": 93078429696,
+      "free": 11994054656
+    },
+    "/dev/shm": {
+      "total": 25769803776,
+      "used": 0,
+      "free": 25769803776
+    }
+  },
+  "conda_candidates": {
+    "/opt/conda/bin/conda": true
+  },
+  "project_directories": [
+    {
+      "root": "/root/rivermind-data",
+      "names": [
+        "GAMECAM_LOCAL_RTX5060_PUBLICATION_20261126",
+        "VIPER_FLOTS_TRANSFER_R1",
+        "GAMECAM_TASK007B_PUBLICATION_20261126",
+        "DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T193605562762Z",
+        "GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1",
+        "DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1",
+        "DROID_W_TASK004C_B_NATIVE_RELEASE_FIXES_20261124_R1",
+        "DROID_W_TASK004C_B_IO_COMPAT_20261124_R1",
+        "DROID_W_TASK003_VAL007_OBSERVATION_R1",
+        "VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408",
+        "DROID_W_TASK004C_B_GPU_C0_20261124_R1",
+        "DROID_W_TASK004A_GPU_SCREENING_20261123T082038066Z",
+        "GAMECAM_TASK005B_R3_REDUCTION_U_ISOLATION_20261125_R1",
+        "DROID_W_TASK004C_B_FORMAT_RUNNER_20261124_R1",
+        "VIPER_MATCHED_DUAL_BASELINE_R2",
+        "GAMECAM_TASK007A_PUBLICATION_20261126",
+        "DROID_W_TASK004B_CONFIRMATORY_20261123T124144277Z",
+        "GAMECAM_TASK007D_PUBLICATION_20261126",
+        "GAMECAM_TASK005B_GPU_MECHANISM_20261125_R1",
+        "DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T191710937946Z",
+        "GAMECAM_TASK005B_R2_NUMERICAL_EQUIVALENCE_20261125_R1",
+        "DROID_W_TASK004C_B_IO_COMPAT_20261125_R3_OFFLINE",
+        "DROID_W_TASK004C_RECOVERY_20261123T152953805Z",
+        "GAMECAM_TASK007C_PUBLICATION_20261126",
+        "GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1",
+        "VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1",
+        "DROIDW_ORIGINAL_DOMAIN_REPRODUCTION_R1",
+        "VIPER_VAL007_STAGE_OBSERVABILITY_R2",
+        "DROID_W_TASK004C_B_NATIVE_INTEGRATION_20261124_R1",
+        "DROID_W_TASK004C_B_MINIMAL_CONTROL_CPU_20261123T190546090836Z",
+        "lost+found",
+        "DROID_W_TASK004C_B_IO_COMPAT_20261124_R2_READY",
+        "DROID_W_TASK004C_B_GPU_C0_R2_20261124_R1",
+        "DROID_W_TASK004C_B_AUTONOMOUS_20261124_R1",
+        "DROID_W_TASK004C_B_CONFIGDICT_CLOSURE_20261124_R1"
+      ]
+    },
+    {
+      "root": "/opt",
+      "names": [
+        "conda",
+        "init.sh",
+        "gamecam-github",
+        "gamecam-viper-fullseq-3090-20261120-061408",
+        "nvidia"
+      ]
+    },
+    {
+      "root": "/root",
+      "names": [
+        "rivermind-data",
+        "gamecam-task004cb-r3-completed-spool"
+      ]
+    }
+  ],
+  "framework_imported": false,
+  "GPU_model_runs": 0,
+  "GitHub": {
+    "credential_wrapper_present": true,
+    "repository_read_exit_code": 0,
+    "repository": "Pseven0108/GameCam-VO",
+    "visibility": "public",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "default_branch": "codex/research-review-20261124"
+  }
+}

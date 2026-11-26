@@ -1,0 +1,1654 @@
+Retrieving notices: - \ | / - \ | / - done
+Channels:
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='conda.anaconda.org', port=443): Read timed out. (read timeout=9.15)")': /conda-forge/linux-64/repodata_shards.msgpack.zst
+
+- \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Solving environment: - \ done
+
+## Package Plan ##
+
+  environment location: /opt/gamecam-pi3mos/envs/pi3mos-infer
+
+  added / updated specs:
+    - pip
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-4.5          |           20_gnu          28 KB  conda-forge
+    bzip2-1.0.8                |      hda65f42_10         252 KB  conda-forge
+    ca-certificates-2026.11.20 |       hbd8a1cb_0         121 KB  conda-forge
+    ld_impl_linux-64-2.46.1    |default_hbd61a6d_103         725 KB  conda-forge
+    libexpat-2.11.0            |       hd2095e1_0          82 KB  conda-forge
+    libffi-3.7.0               |       h81df57d_1          66 KB  conda-forge
+    libgcc-16.2.0              |       ha9f2e26_7         1.0 MB  conda-forge
+    libgomp-16.2.0             |       he0feb66_7         626 KB  conda-forge
+    liblzma-5.8.3              |       hb03c661_1         110 KB  conda-forge
+    libnsl-2.0.1               |       hb9d3cd8_1          33 KB  conda-forge
+    libsqlite-3.54.1           |     h0737f62_101         958 KB  conda-forge
+    libuuid-2.42.4             |       hcfc3c73_1          35 KB  conda-forge
+    libxcrypt-4.4.38           |       h280c20c_0         100 KB  conda-forge
+    libzlib-1.3.2              |       h25fd6f3_3          62 KB  conda-forge
+    ncurses-6.6                |       hdb14827_1         890 KB  conda-forge
+    openssl-3.6.5              |       h781a0a9_0         3.0 MB  conda-forge
+    packaging-26.4             |     pyhc364b38_0         121 KB  conda-forge
+    pip-26.2.1                 |     pyh8b19718_0         1.1 MB  conda-forge
+    python-3.10.22             |h267e890_0_cpython        24.2 MB  conda-forge
+    readline-8.3               |       hd6e31c0_1         341 KB  conda-forge
+    setuptools-84.0.0          |     pyh332efcf_0         512 KB  conda-forge
+    tk-8.6.13                  | noxft_h1df4ec4_4         3.4 MB  conda-forge
+    tzdata-2026e               |       h5d301ff_0         116 KB  conda-forge
+    wheel-0.48.0               |     pyhd8ed1ab_0          34 KB  conda-forge
+    zstd-1.5.7                 |       hb78ec9c_7         587 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        38.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-20_gnu 
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-hda65f42_10 
+  ca-certificates    conda-forge/noarch::ca-certificates-2026.11.20-hbd8a1cb_0 
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.46.1-default_hbd61a6d_103 
+  libexpat           conda-forge/linux-64::libexpat-2.11.0-hd2095e1_0 
+  libffi             conda-forge/linux-64::libffi-3.7.0-h81df57d_1 
+  libgcc             conda-forge/linux-64::libgcc-16.2.0-ha9f2e26_7 
+  libgomp            conda-forge/linux-64::libgomp-16.2.0-he0feb66_7 
+  liblzma            conda-forge/linux-64::liblzma-5.8.3-hb03c661_1 
+  libnsl             conda-forge/linux-64::libnsl-2.0.1-hb9d3cd8_1 
+  libsqlite          conda-forge/linux-64::libsqlite-3.54.1-h0737f62_101 
+  libuuid            conda-forge/linux-64::libuuid-2.42.4-hcfc3c73_1 
+  libxcrypt          conda-forge/linux-64::libxcrypt-4.4.38-h280c20c_0 
+  libzlib            conda-forge/linux-64::libzlib-1.3.2-h25fd6f3_3 
+  ncurses            conda-forge/linux-64::ncurses-6.6-hdb14827_1 
+  openssl            conda-forge/linux-64::openssl-3.6.5-h781a0a9_0 
+  packaging          conda-forge/noarch::packaging-26.4-pyhc364b38_0 
+  pip                conda-forge/noarch::pip-26.2.1-pyh8b19718_0 
+  python             conda-forge/linux-64::python-3.10.22-h267e890_0_cpython 
+  readline           conda-forge/linux-64::readline-8.3-hd6e31c0_1 
+  setuptools         conda-forge/noarch::setuptools-84.0.0-pyh332efcf_0 
+  tk                 conda-forge/linux-64::tk-8.6.13-noxft_h1df4ec4_4 
+  tzdata             conda-forge/noarch::tzdata-2026e-h5d301ff_0 
+  wheel              conda-forge/noarch::wheel-0.48.0-pyhd8ed1ab_0 
+  zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_7 
+
+
+
+Downloading and Extracting Packages: ...working...python-3.10.22       | 24.2 MB   |            |   0% 
+tk-8.6.13            | 3.4 MB    |            |   0% [A
+
+openssl-3.6.5        | 3.0 MB    |            |   0% [A[A
+
+
+pip-26.2.1           | 1.1 MB    |            |   0% [A[A[A
+
+
+
+libgcc-16.2.0        | 1.0 MB    |            |   0% [A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    |            |   0% [A[A[A[A[A
+
+
+
+
+
+ncurses-6.6          | 890 KB    |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    |            |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    |            |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+readline-8.3         | 341 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+bzip2-1.0.8          | 252 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 121 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+packaging-26.4       | 121 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026e         | 116 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+liblzma-5.8.3        | 110 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   |            |   0% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | 1          |   2% [A[A[A[Apython-3.10.22       | 24.2 MB   |            |   0% 
+tk-8.6.13            | 3.4 MB    |            |   0% [Apython-3.10.22       | 24.2 MB   |            |   0% 
+tk-8.6.13            | 3.4 MB    | 1          |   2% [A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | 6          |   6% [A[A[A[Apython-3.10.22       | 24.2 MB   |            |   1% 
+tk-8.6.13            | 3.4 MB    | 3          |   4% [A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | 7          |   8% [A[A[A[A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | #          |  11% [A[A[A[A
+tk-8.6.13            | 3.4 MB    | 4          |   5% [A
+tk-8.6.13            | 3.4 MB    | 5          |   6% [Apython-3.10.22       | 24.2 MB   |            |   1% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | #5         |  15% [A[A[A[Apython-3.10.22       | 24.2 MB   |            |   1% 
+tk-8.6.13            | 3.4 MB    | 6          |   7% [A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | #8         |  19% [A[A[A[Apython-3.10.22       | 24.2 MB   | 1          |   1% 
+tk-8.6.13            | 3.4 MB    | #          |  11% [Apython-3.10.22       | 24.2 MB   | 1          |   1% python-3.10.22       | 24.2 MB   | 1          |   2% 
+tk-8.6.13            | 3.4 MB    | #1         |  12% [A
+tk-8.6.13            | 3.4 MB    | #2         |  13% [Apython-3.10.22       | 24.2 MB   | 1          |   2% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ##7        |  28% [A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    |            |   1% [A[Apython-3.10.22       | 24.2 MB   | 1          |   2% python-3.10.22       | 24.2 MB   | 2          |   2% python-3.10.22       | 24.2 MB   | 2          |   2% 
+
+openssl-3.6.5        | 3.0 MB    | 1          |   1% [A[A
+
+openssl-3.6.5        | 3.0 MB    | 1          |   2% [A[A
+
+openssl-3.6.5        | 3.0 MB    | 2          |   2% [A[Apython-3.10.22       | 24.2 MB   | 2          |   2% 
+tk-8.6.13            | 3.4 MB    | #4         |  15% [A
+tk-8.6.13            | 3.4 MB    | ##         |  20% [Apython-3.10.22       | 24.2 MB   | 2          |   2% 
+tk-8.6.13            | 3.4 MB    | ##2        |  22% [A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ###4       |  34% [A[A[A[Apython-3.10.22       | 24.2 MB   | 2          |   3% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ######8    |  68% [A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    | 2          |   3% [A[A
+tk-8.6.13            | 3.4 MB    | ##3        |  24% [Apython-3.10.22       | 24.2 MB   | 2          |   3% 
+
+
+pip-26.2.1           | 1.1 MB    | 1          |   1% [A[A[Apython-3.10.22       | 24.2 MB   | 2          |   3% 
+tk-8.6.13            | 3.4 MB    | ##5        |  25% [A
+
+openssl-3.6.5        | 3.0 MB    | 5          |   5% [A[Apython-3.10.22       | 24.2 MB   | 2          |   3% 
+tk-8.6.13            | 3.4 MB    | ##7        |  27% [Apython-3.10.22       | 24.2 MB   | 3          |   3% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | #######7   |  77% [A[A[A[Apython-3.10.22       | 24.2 MB   | 3          |   3% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ########9  |  90% [A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    | 8          |   9% [A[A
+tk-8.6.13            | 3.4 MB    | ##9        |  30% [Apython-3.10.22       | 24.2 MB   | 3          |   4% 
+
+openssl-3.6.5        | 3.0 MB    | #3         |  13% [A[A
+tk-8.6.13            | 3.4 MB    | ###3       |  34% [Apython-3.10.22       | 24.2 MB   | 3          |   4% 
+
+
+
+libgcc-16.2.0        | 1.0 MB    | #########9 |  99% [A[A[A[A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ########## | 100% [A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    | #5         |  15% [A[A
+
+
+
+libgcc-16.2.0        | 1.0 MB    | ########## | 100% [A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    | ##9        |  29% [A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | 1          |   2% [A[A[A[A[A
+
+openssl-3.6.5        | 3.0 MB    | ###5       |  35% [A[A
+tk-8.6.13            | 3.4 MB    | ###5       |  35% [A
+
+
+pip-26.2.1           | 1.1 MB    | 5          |   5% [A[A[Apython-3.10.22       | 24.2 MB   | 3          |   4% python-3.10.22       | 24.2 MB   | 4          |   4% 
+
+openssl-3.6.5        | 3.0 MB    | ###9       |  39% [A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | 3          |   3% [A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #6         |  16% [A[A[A
+tk-8.6.13            | 3.4 MB    | ###9       |  40% [A
+
+openssl-3.6.5        | 3.0 MB    | ####6      |  47% [A[A
+tk-8.6.13            | 3.4 MB    | ####       |  41% [A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | 8          |   8% [A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #9         |  19% [A[A[A
+
+openssl-3.6.5        | 3.0 MB    | ######3    |  63% [A[A
+
+openssl-3.6.5        | 3.0 MB    | ########## | 100% [A[A
+
+openssl-3.6.5        | 3.0 MB    | ########## | 100% [A[A
+
+openssl-3.6.5        | 3.0 MB    | ########## | 100% [A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #3         |  13% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 4          |   4% 
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #8         |  18% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 4          |   5% 
+tk-8.6.13            | 3.4 MB    | ####2      |  42% [A
+
+
+pip-26.2.1           | 1.1 MB    | ##         |  20% [A[A[A
+
+
+
+
+
+ncurses-6.6          | 890 KB    | 1          |   2% [A[A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ##1        |  22% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 4          |   5% 
+tk-8.6.13            | 3.4 MB    | ####3      |  43% [A
+
+
+
+
+
+ncurses-6.6          | 890 KB    | ##3        |  23% [A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ####7      |  48% [A
+
+
+pip-26.2.1           | 1.1 MB    | ##4        |  25% [A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ###6       |  37% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 5          |   5% 
+
+
+
+
+
+ncurses-6.6          | 890 KB    | ##8        |  29% [A[A[A[A[A[A
+
+
+
+
+
+ncurses-6.6          | 890 KB    | ########## | 100% [A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #####1     |  51% [Apython-3.10.22       | 24.2 MB   | 5          |   5% 
+
+
+pip-26.2.1           | 1.1 MB    | ###        |  30% [A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | 2          |   2% [A[A[A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ####       |  40% [A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #####2     |  53% [A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ######3    |  63% [A[A[A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | 6          |   7% [A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #####4     |  55% [A
+
+
+pip-26.2.1           | 1.1 MB    | ###2       |  33% [A[A[A
+
+
+
+
+
+ncurses-6.6          | 890 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+ncurses-6.6          | 890 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########1  |  82% [A[A[A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #######1   |  72% [A[A[A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########## | 100% [A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 5          |   5% 
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #######8   |  79% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 5          |   6% 
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    | 2          |   3% [A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #####6     |  56% [A
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    | 7          |   8% [A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #####7     |  58% [A
+
+
+pip-26.2.1           | 1.1 MB    | ###5       |  36% [A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ########5  |  85% [A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ###6       |  37% [A[A[A
+tk-8.6.13            | 3.4 MB    | ######1    |  62% [Apython-3.10.22       | 24.2 MB   | 6          |   6% 
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #########  |  90% [A[A[A[A[Apython-3.10.22       | 24.2 MB   | 6          |   6% 
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    | #          |  10% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+libgomp-16.2.0       | 626 KB    | ########## | 100% [A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ######2    |  63% [Apython-3.10.22       | 24.2 MB   | 6          |   7% 
+tk-8.6.13            | 3.4 MB    | ######5    |  66% [A
+
+
+pip-26.2.1           | 1.1 MB    | ####2      |  42% [A[A[A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    | 2          |   3% [A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ######7    |  67% [A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    | #3         |  14% [A[A[A[A[A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | #########8 |  99% [A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+libsqlite-3.54.1     | 958 KB    | ########## | 100% [A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ######8    |  69% [A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    | ########7  |  87% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+zstd-1.5.7           | 587 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #######    |  70% [Apython-3.10.22       | 24.2 MB   | 6          |   7% 
+
+
+pip-26.2.1           | 1.1 MB    | #####      |  51% [A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #####4     |  55% [A[A[A
+
+
+
+
+
+
+
+
+
+
+readline-8.3         | 341 KB    | 4          |   5% [A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 7          |   7% 
+tk-8.6.13            | 3.4 MB    | #######1   |  71% [A
+
+
+
+
+
+
+
+
+
+
+readline-8.3         | 341 KB    | 9          |   9% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | 3          |   3% [A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #######2   |  72% [Apython-3.10.22       | 24.2 MB   | 7          |   7% 
+
+
+
+
+
+
+
+
+
+
+readline-8.3         | 341 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+readline-8.3         | 341 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #####7     |  57% [A[A[Apython-3.10.22       | 24.2 MB   | 7          |   7% python-3.10.22       | 24.2 MB   | 7          |   8% 
+tk-8.6.13            | 3.4 MB    | #######3   |  73% [A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | 6          |   6% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+bzip2-1.0.8          | 252 KB    | 6          |   6% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #####8     |  59% [A[A[A
+tk-8.6.13            | 3.4 MB    | #######5   |  75% [A
+
+
+
+
+
+
+
+
+
+
+
+bzip2-1.0.8          | 252 KB    | ######3    |  64% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+bzip2-1.0.8          | 252 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+bzip2-1.0.8          | 252 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ######2    |  63% [A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | #8         |  19% [A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 7          |   8% 
+tk-8.6.13            | 3.4 MB    | #######6   |  76% [A
+
+
+pip-26.2.1           | 1.1 MB    | ######4    |  64% [A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ###7       |  37% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 121 KB    | #3         |  13% [A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #######7   |  77% [A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | #####6     |  56% [A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ######5    |  66% [A[A[Apython-3.10.22       | 24.2 MB   | 8          |   8% 
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ######2    |  62% [A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ######9    |  70% [A[A[A
+tk-8.6.13            | 3.4 MB    | #######7   |  78% [A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ######8    |  69% [A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 8          |   8% 
+tk-8.6.13            | 3.4 MB    | ########2  |  83% [A
+
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 121 KB    | #########2 |  93% [A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 8          |   9% 
+
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 121 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+ca-certificates-2026 | 121 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ########1  |  81% [A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #######1   |  71% [A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ########7  |  87% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+packaging-26.4       | 121 KB    | #3         |  13% [A[A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 8          |   9% 
+
+
+pip-26.2.1           | 1.1 MB    | #######2   |  72% [A[A[A
+tk-8.6.13            | 3.4 MB    | ########4  |  85% [A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | #########6 |  97% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ########6  |  86% [A
+
+
+
+
+
+
+
+
+
+
+
+
+
+packaging-26.4       | 121 KB    | ##6        |  27% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+setuptools-84.0.0    | 512 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+packaging-26.4       | 121 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+packaging-26.4       | 121 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ########7  |  88% [Apython-3.10.22       | 24.2 MB   | 9          |   9% 
+
+
+pip-26.2.1           | 1.1 MB    | #######3   |  74% [A[A[Apython-3.10.22       | 24.2 MB   | 9          |   9% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+liblzma-5.8.3        | 110 KB    | #4         |  14% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #######6   |  76% [A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026e         | 116 KB    | #3         |  14% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ########9  |  89% [Apython-3.10.22       | 24.2 MB   | 9          |   9% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+liblzma-5.8.3        | 110 KB    | ########6  |  87% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+liblzma-5.8.3        | 110 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+liblzma-5.8.3        | 110 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026e         | 116 KB    | #########6 |  96% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026e         | 116 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tzdata-2026e         | 116 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | #######9   |  79% [A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     | #9         |  20% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    | #6         |  16% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     | ###9       |  39% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    | ####8      |  48% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | 9          |  10% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libexpat-2.11.0      | 82 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #########1 |  92% [A
+tk-8.6.13            | 3.4 MB    | #########6 |  96% [Apython-3.10.22       | 24.2 MB   | #          |  10% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | #          |  10% 
+tk-8.6.13            | 3.4 MB    | #########7 |  98% [A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Apython-3.10.22       | 24.2 MB   | #          |  11% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    | #########6 |  96% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | #########9 | 100% [A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+libxcrypt-4.4.38     | 100 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+tk-8.6.13            | 3.4 MB    | ########## | 100% [A
+
+
+pip-26.2.1           | 1.1 MB    | ########4  |  85% [A[A[A
+tk-8.6.13            | 3.4 MB    | ########## | 100% [Apython-3.10.22       | 24.2 MB   | #          |  11% python-3.10.22       | 24.2 MB   | #          |  11% 
+
+
+pip-26.2.1           | 1.1 MB    | #########1 |  92% [A[A[Apython-3.10.22       | 24.2 MB   | #1         |  11% python-3.10.22       | 24.2 MB   | #1         |  11% 
+
+
+pip-26.2.1           | 1.1 MB    | #########5 |  96% [A[A[Apython-3.10.22       | 24.2 MB   | #1         |  11% 
+
+
+pip-26.2.1           | 1.1 MB    | #########8 |  98% [A[A[Apython-3.10.22       | 24.2 MB   | #1         |  12% python-3.10.22       | 24.2 MB   | #1         |  12% python-3.10.22       | 24.2 MB   | #2         |  12% 
+
+
+pip-26.2.1           | 1.1 MB    | #########9 | 100% [A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ########## | 100% [A[A[A
+
+
+pip-26.2.1           | 1.1 MB    | ########## | 100% [A[A[Apython-3.10.22       | 24.2 MB   | #2         |  12% python-3.10.22       | 24.2 MB   | #2         |  13% python-3.10.22       | 24.2 MB   | #3         |  13% python-3.10.22       | 24.2 MB   | #3         |  13% python-3.10.22       | 24.2 MB   | #3         |  13% python-3.10.22       | 24.2 MB   | #3         |  14% python-3.10.22       | 24.2 MB   | #3         |  14% python-3.10.22       | 24.2 MB   | #3         |  14% python-3.10.22       | 24.2 MB   | #3         |  14% python-3.10.22       | 24.2 MB   | #4         |  14% python-3.10.22       | 24.2 MB   | #4         |  14% python-3.10.22       | 24.2 MB   | #4         |  15% python-3.10.22       | 24.2 MB   | #4         |  15% python-3.10.22       | 24.2 MB   | #5         |  15% python-3.10.22       | 24.2 MB   | #5         |  15% python-3.10.22       | 24.2 MB   | #5         |  15% python-3.10.22       | 24.2 MB   | #5         |  15% python-3.10.22       | 24.2 MB   | #5         |  16% python-3.10.22       | 24.2 MB   | #5         |  16% python-3.10.22       | 24.2 MB   | #6         |  16% python-3.10.22       | 24.2 MB   | #6         |  16% python-3.10.22       | 24.2 MB   | #6         |  16% python-3.10.22       | 24.2 MB   | #6         |  17% python-3.10.22       | 24.2 MB   | #6         |  17% python-3.10.22       | 24.2 MB   | #7         |  17% python-3.10.22       | 24.2 MB   | #7         |  17% python-3.10.22       | 24.2 MB   | #7         |  17% python-3.10.22       | 24.2 MB   | #7         |  17% python-3.10.22       | 24.2 MB   | #7         |  18% python-3.10.22       | 24.2 MB   | #7         |  18% python-3.10.22       | 24.2 MB   | #8         |  18% python-3.10.22       | 24.2 MB   | #8         |  18% python-3.10.22       | 24.2 MB   | #8         |  19% python-3.10.22       | 24.2 MB   | #8         |  19% python-3.10.22       | 24.2 MB   | #8         |  19% python-3.10.22       | 24.2 MB   | #9         |  19% python-3.10.22       | 24.2 MB   | #9         |  19% python-3.10.22       | 24.2 MB   | #9         |  20% python-3.10.22       | 24.2 MB   | #9         |  20% python-3.10.22       | 24.2 MB   | #9         |  20% python-3.10.22       | 24.2 MB   | #9         |  20% python-3.10.22       | 24.2 MB   | ##         |  20% python-3.10.22       | 24.2 MB   | ##         |  20% python-3.10.22       | 24.2 MB   | ##         |  21% python-3.10.22       | 24.2 MB   | ##         |  21% python-3.10.22       | 24.2 MB   | ##         |  21% python-3.10.22       | 24.2 MB   | ##         |  21% python-3.10.22       | 24.2 MB   | ##1        |  21% python-3.10.22       | 24.2 MB   | ##1        |  22% python-3.10.22       | 24.2 MB   | ##1        |  22% python-3.10.22       | 24.2 MB   | ##1        |  22% python-3.10.22       | 24.2 MB   | ##2        |  22% python-3.10.22       | 24.2 MB   | ##2        |  23% python-3.10.22       | 24.2 MB   | ##2        |  23% python-3.10.22       | 24.2 MB   | ##3        |  23% python-3.10.22       | 24.2 MB   | ##3        |  23% python-3.10.22       | 24.2 MB   | ##3        |  23% python-3.10.22       | 24.2 MB   | ##3        |  24% python-3.10.22       | 24.2 MB   | ##3        |  24% python-3.10.22       | 24.2 MB   | ##3        |  24% python-3.10.22       | 24.2 MB   | ##4        |  24% python-3.10.22       | 24.2 MB   | ##4        |  24% python-3.10.22       | 24.2 MB   | ##4        |  24% python-3.10.22       | 24.2 MB   | ##4        |  25% python-3.10.22       | 24.2 MB   | ##4        |  25% python-3.10.22       | 24.2 MB   | ##5        |  25% python-3.10.22       | 24.2 MB   | ##5        |  25% python-3.10.22       | 24.2 MB   | ##5        |  25% python-3.10.22       | 24.2 MB   | ##5        |  25% python-3.10.22       | 24.2 MB   | ##5        |  26% python-3.10.22       | 24.2 MB   | ##5        |  26% python-3.10.22       | 24.2 MB   | ##6        |  26% python-3.10.22       | 24.2 MB   | ##6        |  26% python-3.10.22       | 24.2 MB   | ##6        |  27% python-3.10.22       | 24.2 MB   | ##6        |  27% python-3.10.22       | 24.2 MB   | ##6        |  27% python-3.10.22       | 24.2 MB   | ##6        |  27% python-3.10.22       | 24.2 MB   | ##7        |  27% python-3.10.22       | 24.2 MB   | ##7        |  27% python-3.10.22       | 24.2 MB   | ##7        |  27% python-3.10.22       | 24.2 MB   | ##7        |  27% python-3.10.22       | 24.2 MB   | ##7        |  27% python-3.10.22       | 24.2 MB   | ##7        |  28% python-3.10.22       | 24.2 MB   | ##7        |  28% python-3.10.22       | 24.2 MB   | ##8        |  28% python-3.10.22       | 24.2 MB   | ##8        |  28% python-3.10.22       | 24.2 MB   | ##8        |  28% python-3.10.22       | 24.2 MB   | ##8        |  28% python-3.10.22       | 24.2 MB   | ##8        |  29% python-3.10.22       | 24.2 MB   | ##8        |  29% python-3.10.22       | 24.2 MB   | ##8        |  29% python-3.10.22       | 24.2 MB   | ##9        |  29% python-3.10.22       | 24.2 MB   | ##9        |  29% python-3.10.22       | 24.2 MB   | ##9        |  29% python-3.10.22       | 24.2 MB   | ##9        |  30% python-3.10.22       | 24.2 MB   | ###        |  30% python-3.10.22       | 24.2 MB   | ###        |  30% python-3.10.22       | 24.2 MB   | ###        |  30% python-3.10.22       | 24.2 MB   | ###        |  30% python-3.10.22       | 24.2 MB   | ###        |  31% python-3.10.22       | 24.2 MB   | ###        |  31% python-3.10.22       | 24.2 MB   | ###1       |  31% python-3.10.22       | 24.2 MB   | ###1       |  31% python-3.10.22       | 24.2 MB   | ###1       |  31% python-3.10.22       | 24.2 MB   | ###2       |  32% python-3.10.22       | 24.2 MB   | ###2       |  32% python-3.10.22       | 24.2 MB   | ###2       |  32% python-3.10.22       | 24.2 MB   | ###2       |  33% python-3.10.22       | 24.2 MB   | ###2       |  33% python-3.10.22       | 24.2 MB   | ###2       |  33% python-3.10.22       | 24.2 MB   | ###2       |  33% python-3.10.22       | 24.2 MB   | ###3       |  33% python-3.10.22       | 24.2 MB   | ###3       |  33% python-3.10.22       | 24.2 MB   | ###3       |  33% python-3.10.22       | 24.2 MB   | ###3       |  33% python-3.10.22       | 24.2 MB   | ###3       |  34% python-3.10.22       | 24.2 MB   | ###3       |  34% python-3.10.22       | 24.2 MB   | ###3       |  34% python-3.10.22       | 24.2 MB   | ###4       |  34% python-3.10.22       | 24.2 MB   | ###4       |  34% python-3.10.22       | 24.2 MB   | ###4       |  34% python-3.10.22       | 24.2 MB   | ###4       |  34% python-3.10.22       | 24.2 MB   | ###4       |  34% python-3.10.22       | 24.2 MB   | ###4       |  35% python-3.10.22       | 24.2 MB   | ###4       |  35% python-3.10.22       | 24.2 MB   | ###4       |  35% python-3.10.22       | 24.2 MB   | ###4       |  35% python-3.10.22       | 24.2 MB   | ###5       |  35% python-3.10.22       | 24.2 MB   | ###5       |  35% python-3.10.22       | 24.2 MB   | ###5       |  35% python-3.10.22       | 24.2 MB   | ###5       |  36% python-3.10.22       | 24.2 MB   | ###5       |  36% python-3.10.22       | 24.2 MB   | ###5       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  36% python-3.10.22       | 24.2 MB   | ###6       |  37% python-3.10.22       | 24.2 MB   | ###6       |  37% python-3.10.22       | 24.2 MB   | ###6       |  37% python-3.10.22       | 24.2 MB   | ###6       |  37% python-3.10.22       | 24.2 MB   | ###6       |  37% python-3.10.22       | 24.2 MB   | ###7       |  37% python-3.10.22       | 24.2 MB   | ###7       |  37% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###7       |  38% python-3.10.22       | 24.2 MB   | ###8       |  38% python-3.10.22       | 24.2 MB   | ###8       |  38% python-3.10.22       | 24.2 MB   | ###8       |  38% python-3.10.22       | 24.2 MB   | ###8       |  38% python-3.10.22       | 24.2 MB   | ###8       |  39% python-3.10.22       | 24.2 MB   | ###8       |  39% python-3.10.22       | 24.2 MB   | ###8       |  39% python-3.10.22       | 24.2 MB   | ###8       |  39% python-3.10.22       | 24.2 MB   | ###8       |  39% python-3.10.22       | 24.2 MB   | ###9       |  39% python-3.10.22       | 24.2 MB   | ###9       |  39% python-3.10.22       | 24.2 MB   | ###9       |  39% python-3.10.22       | 24.2 MB   | ###9       |  39% python-3.10.22       | 24.2 MB   | ###9       |  39% python-3.10.22       | 24.2 MB   | ###9       |  40% python-3.10.22       | 24.2 MB   | ###9       |  40% python-3.10.22       | 24.2 MB   | ###9       |  40% python-3.10.22       | 24.2 MB   | ###9       |  40% python-3.10.22       | 24.2 MB   | ###9       |  40% python-3.10.22       | 24.2 MB   | ####       |  40% python-3.10.22       | 24.2 MB   | ####       |  40% python-3.10.22       | 24.2 MB   | ####       |  40% python-3.10.22       | 24.2 MB   | ####       |  41% python-3.10.22       | 24.2 MB   | ####       |  41% python-3.10.22       | 24.2 MB   | ####       |  41% python-3.10.22       | 24.2 MB   | ####       |  41% python-3.10.22       | 24.2 MB   | ####       |  41% python-3.10.22       | 24.2 MB   | ####1      |  41% python-3.10.22       | 24.2 MB   | ####1      |  41% python-3.10.22       | 24.2 MB   | ####1      |  41% python-3.10.22       | 24.2 MB   | ####1      |  41% python-3.10.22       | 24.2 MB   | ####1      |  42% python-3.10.22       | 24.2 MB   | ####1      |  42% python-3.10.22       | 24.2 MB   | ####2      |  42% python-3.10.22       | 24.2 MB   | ####2      |  42% python-3.10.22       | 24.2 MB   | ####2      |  42% python-3.10.22       | 24.2 MB   | ####2      |  42% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####2      |  43% python-3.10.22       | 24.2 MB   | ####3      |  43% python-3.10.22       | 24.2 MB   | ####3      |  43% python-3.10.22       | 24.2 MB   | ####3      |  44% python-3.10.22       | 24.2 MB   | ####3      |  44% python-3.10.22       | 24.2 MB   | ####3      |  44% python-3.10.22       | 24.2 MB   | ####3      |  44% python-3.10.22       | 24.2 MB   | ####4      |  44% python-3.10.22       | 24.2 MB   | ####4      |  44% python-3.10.22       | 24.2 MB   | ####4      |  44% python-3.10.22       | 24.2 MB   | ####4      |  44% python-3.10.22       | 24.2 MB   | ####4      |  44% python-3.10.22       | 24.2 MB   | ####4      |  45% python-3.10.22       | 24.2 MB   | ####4      |  45% python-3.10.22       | 24.2 MB   | ####4      |  45% python-3.10.22       | 24.2 MB   | ####4      |  45% python-3.10.22       | 24.2 MB   | ####4      |  45% python-3.10.22       | 24.2 MB   | ####5      |  45% python-3.10.22       | 24.2 MB   | ####5      |  45% python-3.10.22       | 24.2 MB   | ####5      |  45% python-3.10.22       | 24.2 MB   | ####5      |  45% python-3.10.22       | 24.2 MB   | ####5      |  46% python-3.10.22       | 24.2 MB   | ####5      |  46% python-3.10.22       | 24.2 MB   | ####5      |  46% python-3.10.22       | 24.2 MB   | ####5      |  46% python-3.10.22       | 24.2 MB   | ####6      |  46% python-3.10.22       | 24.2 MB   | ####6      |  46% python-3.10.22       | 24.2 MB   | ####6      |  46% python-3.10.22       | 24.2 MB   | ####6      |  47% python-3.10.22       | 24.2 MB   | ####6      |  47% python-3.10.22       | 24.2 MB   | ####6      |  47% python-3.10.22       | 24.2 MB   | ####7      |  47% python-3.10.22       | 24.2 MB   | ####7      |  47% python-3.10.22       | 24.2 MB   | ####7      |  47% python-3.10.22       | 24.2 MB   | ####7      |  47% python-3.10.22       | 24.2 MB   | ####7      |  47% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####7      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  48% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####8      |  49% python-3.10.22       | 24.2 MB   | ####9      |  49% python-3.10.22       | 24.2 MB   | ####9      |  49% python-3.10.22       | 24.2 MB   | ####9      |  49% python-3.10.22       | 24.2 MB   | ####9      |  49% python-3.10.22       | 24.2 MB   | ####9      |  50% python-3.10.22       | 24.2 MB   | ####9      |  50% python-3.10.22       | 24.2 MB   | ####9      |  50% python-3.10.22       | 24.2 MB   | ####9      |  50% python-3.10.22       | 24.2 MB   | ####9      |  50% python-3.10.22       | 24.2 MB   | #####      |  50% python-3.10.22       | 24.2 MB   | #####      |  50% python-3.10.22       | 24.2 MB   | #####      |  50% python-3.10.22       | 24.2 MB   | #####      |  51% python-3.10.22       | 24.2 MB   | #####      |  51% python-3.10.22       | 24.2 MB   | #####      |  51% python-3.10.22       | 24.2 MB   | #####      |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  51% python-3.10.22       | 24.2 MB   | #####1     |  52% python-3.10.22       | 24.2 MB   | #####1     |  52% python-3.10.22       | 24.2 MB   | #####1     |  52% python-3.10.22       | 24.2 MB   | #####1     |  52% python-3.10.22       | 24.2 MB   | #####1     |  52% python-3.10.22       | 24.2 MB   | #####2     |  52% python-3.10.22       | 24.2 MB   | #####2     |  52% python-3.10.22       | 24.2 MB   | #####2     |  52% python-3.10.22       | 24.2 MB   | #####2     |  52% python-3.10.22       | 24.2 MB   | #####2     |  52% python-3.10.22       | 24.2 MB   | #####2     |  53% python-3.10.22       | 24.2 MB   | #####2     |  53% python-3.10.22       | 24.2 MB   | #####2     |  53% python-3.10.22       | 24.2 MB   | #####2     |  53% python-3.10.22       | 24.2 MB   | #####2     |  53% python-3.10.22       | 24.2 MB   | #####3     |  53% python-3.10.22       | 24.2 MB   | #####3     |  53% python-3.10.22       | 24.2 MB   | #####3     |  53% python-3.10.22       | 24.2 MB   | #####3     |  54% python-3.10.22       | 24.2 MB   | #####3     |  54% python-3.10.22       | 24.2 MB   | #####3     |  54% python-3.10.22       | 24.2 MB   | #####3     |  54% python-3.10.22       | 24.2 MB   | #####4     |  54% python-3.10.22       | 24.2 MB   | #####4     |  54% python-3.10.22       | 24.2 MB   | #####4     |  54% python-3.10.22       | 24.2 MB   | #####4     |  54% python-3.10.22       | 24.2 MB   | #####4     |  54% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####4     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  55% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####5     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  56% python-3.10.22       | 24.2 MB   | #####6     |  57% python-3.10.22       | 24.2 MB   | #####6     |  57% python-3.10.22       | 24.2 MB   | #####6     |  57% python-3.10.22       | 24.2 MB   | #####6     |  57% python-3.10.22       | 24.2 MB   | #####6     |  57% python-3.10.22       | 24.2 MB   | #####7     |  57% python-3.10.22       | 24.2 MB   | #####7     |  57% python-3.10.22       | 24.2 MB   | #####7     |  57% python-3.10.22       | 24.2 MB   | #####7     |  57% python-3.10.22       | 24.2 MB   | #####7     |  58% python-3.10.22       | 24.2 MB   | #####7     |  58% python-3.10.22       | 24.2 MB   | #####7     |  58% python-3.10.22       | 24.2 MB   | #####7     |  58% python-3.10.22       | 24.2 MB   | #####7     |  58% python-3.10.22       | 24.2 MB   | #####8     |  58% python-3.10.22       | 24.2 MB   | #####8     |  58% python-3.10.22       | 24.2 MB   | #####8     |  58% python-3.10.22       | 24.2 MB   | #####8     |  59% python-3.10.22       | 24.2 MB   | #####8     |  59% python-3.10.22       | 24.2 MB   | #####8     |  59% python-3.10.22       | 24.2 MB   | #####9     |  59% python-3.10.22       | 24.2 MB   | #####9     |  59% python-3.10.22       | 24.2 MB   | #####9     |  59% python-3.10.22       | 24.2 MB   | #####9     |  59% python-3.10.22       | 24.2 MB   | #####9     |  59% python-3.10.22       | 24.2 MB   | #####9     |  60% python-3.10.22       | 24.2 MB   | #####9     |  60% python-3.10.22       | 24.2 MB   | #####9     |  60% python-3.10.22       | 24.2 MB   | ######     |  60% python-3.10.22       | 24.2 MB   | ######     |  60% python-3.10.22       | 24.2 MB   | ######     |  60% python-3.10.22       | 24.2 MB   | ######     |  60% python-3.10.22       | 24.2 MB   | ######     |  60% python-3.10.22       | 24.2 MB   | ######     |  61% python-3.10.22       | 24.2 MB   | ######     |  61% python-3.10.22       | 24.2 MB   | ######     |  61% python-3.10.22       | 24.2 MB   | ######1    |  61% python-3.10.22       | 24.2 MB   | ######1    |  61% python-3.10.22       | 24.2 MB   | ######1    |  61% python-3.10.22       | 24.2 MB   | ######1    |  62% python-3.10.22       | 24.2 MB   | ######1    |  62% python-3.10.22       | 24.2 MB   | ######1    |  62% python-3.10.22       | 24.2 MB   | ######1    |  62% python-3.10.22       | 24.2 MB   | ######1    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  62% python-3.10.22       | 24.2 MB   | ######2    |  63% python-3.10.22       | 24.2 MB   | ######2    |  63% python-3.10.22       | 24.2 MB   | ######2    |  63% python-3.10.22       | 24.2 MB   | ######2    |  63% python-3.10.22       | 24.2 MB   | ######3    |  63% python-3.10.22       | 24.2 MB   | ######3    |  63% python-3.10.22       | 24.2 MB   | ######3    |  63% python-3.10.22       | 24.2 MB   | ######3    |  63% python-3.10.22       | 24.2 MB   | ######3    |  63% python-3.10.22       | 24.2 MB   | ######3    |  64% python-3.10.22       | 24.2 MB   | ######3    |  64% python-3.10.22       | 24.2 MB   | ######3    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  64% python-3.10.22       | 24.2 MB   | ######4    |  65% python-3.10.22       | 24.2 MB   | ######4    |  65% python-3.10.22       | 24.2 MB   | ######4    |  65% python-3.10.22       | 24.2 MB   | ######5    |  65% python-3.10.22       | 24.2 MB   | ######5    |  65% python-3.10.22       | 24.2 MB   | ######5    |  65% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######5    |  66% python-3.10.22       | 24.2 MB   | ######6    |  66% python-3.10.22       | 24.2 MB   | ######6    |  66% python-3.10.22       | 24.2 MB   | ######6    |  66% python-3.10.22       | 24.2 MB   | ######6    |  66% python-3.10.22       | 24.2 MB   | ######6    |  66% python-3.10.22       | 24.2 MB   | ######6    |  67% python-3.10.22       | 24.2 MB   | ######6    |  67% python-3.10.22       | 24.2 MB   | ######6    |  67% python-3.10.22       | 24.2 MB   | ######6    |  67% python-3.10.22       | 24.2 MB   | ######7    |  67% python-3.10.22       | 24.2 MB   | ######7    |  67% python-3.10.22       | 24.2 MB   | ######7    |  68% python-3.10.22       | 24.2 MB   | ######7    |  68% python-3.10.22       | 24.2 MB   | ######7    |  68% python-3.10.22       | 24.2 MB   | ######7    |  68% python-3.10.22       | 24.2 MB   | ######7    |  68% python-3.10.22       | 24.2 MB   | ######8    |  68% python-3.10.22       | 24.2 MB   | ######8    |  68% python-3.10.22       | 24.2 MB   | ######8    |  68% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######8    |  69% python-3.10.22       | 24.2 MB   | ######9    |  69% python-3.10.22       | 24.2 MB   | ######9    |  69% python-3.10.22       | 24.2 MB   | ######9    |  69% python-3.10.22       | 24.2 MB   | ######9    |  69% python-3.10.22       | 24.2 MB   | ######9    |  69% python-3.10.22       | 24.2 MB   | ######9    |  70% python-3.10.22       | 24.2 MB   | ######9    |  70% python-3.10.22       | 24.2 MB   | ######9    |  70% python-3.10.22       | 24.2 MB   | #######    |  70% python-3.10.22       | 24.2 MB   | #######    |  70% python-3.10.22       | 24.2 MB   | #######    |  70% python-3.10.22       | 24.2 MB   | #######    |  70% python-3.10.22       | 24.2 MB   | #######    |  70% python-3.10.22       | 24.2 MB   | #######    |  71% python-3.10.22       | 24.2 MB   | #######    |  71% python-3.10.22       | 24.2 MB   | #######    |  71% python-3.10.22       | 24.2 MB   | #######    |  71% python-3.10.22       | 24.2 MB   | #######    |  71% python-3.10.22       | 24.2 MB   | #######1   |  71% python-3.10.22       | 24.2 MB   | #######1   |  71% python-3.10.22       | 24.2 MB   | #######1   |  71% python-3.10.22       | 24.2 MB   | #######1   |  71% python-3.10.22       | 24.2 MB   | #######1   |  71% python-3.10.22       | 24.2 MB   | #######1   |  72% python-3.10.22       | 24.2 MB   | #######1   |  72% python-3.10.22       | 24.2 MB   | #######1   |  72% python-3.10.22       | 24.2 MB   | #######1   |  72% python-3.10.22       | 24.2 MB   | #######1   |  72% python-3.10.22       | 24.2 MB   | #######2   |  72% python-3.10.22       | 24.2 MB   | #######2   |  72% python-3.10.22       | 24.2 MB   | #######2   |  72% python-3.10.22       | 24.2 MB   | #######2   |  73% python-3.10.22       | 24.2 MB   | #######2   |  73% python-3.10.22       | 24.2 MB   | #######2   |  73% python-3.10.22       | 24.2 MB   | #######2   |  73% python-3.10.22       | 24.2 MB   | #######2   |  73% python-3.10.22       | 24.2 MB   | #######3   |  73% python-3.10.22       | 24.2 MB   | #######3   |  73% python-3.10.22       | 24.2 MB   | #######3   |  73% python-3.10.22       | 24.2 MB   | #######3   |  73% python-3.10.22       | 24.2 MB   | #######3   |  73% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######3   |  74% python-3.10.22       | 24.2 MB   | #######4   |  74% python-3.10.22       | 24.2 MB   | #######4   |  74% python-3.10.22       | 24.2 MB   | #######4   |  74% python-3.10.22       | 24.2 MB   | #######4   |  74% python-3.10.22       | 24.2 MB   | #######4   |  74% python-3.10.22       | 24.2 MB   | #######4   |  75% python-3.10.22       | 24.2 MB   | #######4   |  75% python-3.10.22       | 24.2 MB   | #######4   |  75% python-3.10.22       | 24.2 MB   | #######4   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  75% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######5   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  76% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######6   |  77% python-3.10.22       | 24.2 MB   | #######7   |  77% python-3.10.22       | 24.2 MB   | #######7   |  77% python-3.10.22       | 24.2 MB   | #######7   |  77% python-3.10.22       | 24.2 MB   | #######7   |  77% python-3.10.22       | 24.2 MB   | #######7   |  77% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######7   |  78% python-3.10.22       | 24.2 MB   | #######8   |  78% python-3.10.22       | 24.2 MB   | #######8   |  78% python-3.10.22       | 24.2 MB   | #######8   |  78% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######8   |  79% python-3.10.22       | 24.2 MB   | #######9   |  79% python-3.10.22       | 24.2 MB   | #######9   |  79% python-3.10.22       | 24.2 MB   | #######9   |  79% python-3.10.22       | 24.2 MB   | #######9   |  79% python-3.10.22       | 24.2 MB   | #######9   |  79% python-3.10.22       | 24.2 MB   | #######9   |  80% python-3.10.22       | 24.2 MB   | #######9   |  80% python-3.10.22       | 24.2 MB   | #######9   |  80% python-3.10.22       | 24.2 MB   | #######9   |  80% python-3.10.22       | 24.2 MB   | #######9   |  80% python-3.10.22       | 24.2 MB   | ########   |  80% python-3.10.22       | 24.2 MB   | ########   |  80% python-3.10.22       | 24.2 MB   | ########   |  81% python-3.10.22       | 24.2 MB   | ########   |  81% python-3.10.22       | 24.2 MB   | ########   |  81% python-3.10.22       | 24.2 MB   | ########   |  81% python-3.10.22       | 24.2 MB   | ########1  |  81% python-3.10.22       | 24.2 MB   | ########1  |  81% python-3.10.22       | 24.2 MB   | ########1  |  82% python-3.10.22       | 24.2 MB   | ########1  |  82% python-3.10.22       | 24.2 MB   | ########1  |  82% python-3.10.22       | 24.2 MB   | ########2  |  82% python-3.10.22       | 24.2 MB   | ########2  |  82% python-3.10.22       | 24.2 MB   | ########2  |  82% python-3.10.22       | 24.2 MB   | ########2  |  83% python-3.10.22       | 24.2 MB   | ########2  |  83% python-3.10.22       | 24.2 MB   | ########3  |  83% python-3.10.22       | 24.2 MB   | ########3  |  83% python-3.10.22       | 24.2 MB   | ########3  |  83% python-3.10.22       | 24.2 MB   | ########3  |  84% python-3.10.22       | 24.2 MB   | ########3  |  84% python-3.10.22       | 24.2 MB   | ########3  |  84% python-3.10.22       | 24.2 MB   | ########3  |  84% python-3.10.22       | 24.2 MB   | ########3  |  84% python-3.10.22       | 24.2 MB   | ########4  |  84% python-3.10.22       | 24.2 MB   | ########4  |  84% python-3.10.22       | 24.2 MB   | ########4  |  84% python-3.10.22       | 24.2 MB   | ########4  |  84% python-3.10.22       | 24.2 MB   | ########4  |  84% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########4  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  85% python-3.10.22       | 24.2 MB   | ########5  |  86% python-3.10.22       | 24.2 MB   | ########5  |  86% python-3.10.22       | 24.2 MB   | ########5  |  86% python-3.10.22       | 24.2 MB   | ########5  |  86% python-3.10.22       | 24.2 MB   | ########6  |  86% python-3.10.22       | 24.2 MB   | ########6  |  86% python-3.10.22       | 24.2 MB   | ########6  |  86% python-3.10.22       | 24.2 MB   | ########6  |  86% python-3.10.22       | 24.2 MB   | ########6  |  87% python-3.10.22       | 24.2 MB   | ########6  |  87% python-3.10.22       | 24.2 MB   | ########6  |  87% python-3.10.22       | 24.2 MB   | ########6  |  87% python-3.10.22       | 24.2 MB   | ########6  |  87% python-3.10.22       | 24.2 MB   | ########7  |  87% python-3.10.22       | 24.2 MB   | ########7  |  87% python-3.10.22       | 24.2 MB   | ########7  |  87% python-3.10.22       | 24.2 MB   | ########7  |  87% python-3.10.22       | 24.2 MB   | ########7  |  87% python-3.10.22       | 24.2 MB   | ########7  |  88% python-3.10.22       | 24.2 MB   | ########7  |  88% python-3.10.22       | 24.2 MB   | ########7  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  88% python-3.10.22       | 24.2 MB   | ########8  |  89% python-3.10.22       | 24.2 MB   | ########8  |  89% python-3.10.22       | 24.2 MB   | ########8  |  89% python-3.10.22       | 24.2 MB   | ########8  |  89% python-3.10.22       | 24.2 MB   | ########8  |  89% python-3.10.22       | 24.2 MB   | ########9  |  89% python-3.10.22       | 24.2 MB   | ########9  |  89% python-3.10.22       | 24.2 MB   | ########9  |  89% python-3.10.22       | 24.2 MB   | ########9  |  89% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | ########9  |  90% python-3.10.22       | 24.2 MB   | #########  |  90% python-3.10.22       | 24.2 MB   | #########  |  90% python-3.10.22       | 24.2 MB   | #########  |  90% python-3.10.22       | 24.2 MB   | #########  |  90% python-3.10.22       | 24.2 MB   | #########  |  90% python-3.10.22       | 24.2 MB   | #########  |  91% python-3.10.22       | 24.2 MB   | #########  |  91% python-3.10.22       | 24.2 MB   | #########  |  91% python-3.10.22       | 24.2 MB   | #########  |  91% python-3.10.22       | 24.2 MB   | #########  |  91% python-3.10.22       | 24.2 MB   | #########1 |  91% python-3.10.22       | 24.2 MB   | #########1 |  91% python-3.10.22       | 24.2 MB   | #########1 |  91% python-3.10.22       | 24.2 MB   | #########1 |  91% python-3.10.22       | 24.2 MB   | #########1 |  91% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########1 |  92% python-3.10.22       | 24.2 MB   | #########2 |  92% python-3.10.22       | 24.2 MB   | #########2 |  92% python-3.10.22       | 24.2 MB   | #########2 |  92% python-3.10.22       | 24.2 MB   | #########2 |  92% python-3.10.22       | 24.2 MB   | #########2 |  92% python-3.10.22       | 24.2 MB   | #########2 |  93% python-3.10.22       | 24.2 MB   | #########2 |  93% python-3.10.22       | 24.2 MB   | #########2 |  93% python-3.10.22       | 24.2 MB   | #########2 |  93% python-3.10.22       | 24.2 MB   | #########2 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  93% python-3.10.22       | 24.2 MB   | #########3 |  94% python-3.10.22       | 24.2 MB   | #########3 |  94% python-3.10.22       | 24.2 MB   | #########3 |  94% python-3.10.22       | 24.2 MB   | #########3 |  94% python-3.10.22       | 24.2 MB   | #########4 |  94% python-3.10.22       | 24.2 MB   | #########4 |  94% python-3.10.22       | 24.2 MB   | #########4 |  94% python-3.10.22       | 24.2 MB   | #########4 |  94% python-3.10.22       | 24.2 MB   | #########4 |  94% python-3.10.22       | 24.2 MB   | #########4 |  95% python-3.10.22       | 24.2 MB   | #########4 |  95% python-3.10.22       | 24.2 MB   | #########4 |  95% python-3.10.22       | 24.2 MB   | #########4 |  95% python-3.10.22       | 24.2 MB   | #########5 |  95% python-3.10.22       | 24.2 MB   | #########5 |  95% python-3.10.22       | 24.2 MB   | #########5 |  95% python-3.10.22       | 24.2 MB   | #########5 |  95% python-3.10.22       | 24.2 MB   | #########5 |  95% python-3.10.22       | 24.2 MB   | #########5 |  96% python-3.10.22       | 24.2 MB   | #########5 |  96% python-3.10.22       | 24.2 MB   | #########5 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  96% python-3.10.22       | 24.2 MB   | #########6 |  97% python-3.10.22       | 24.2 MB   | #########6 |  97% python-3.10.22       | 24.2 MB   | #########6 |  97% python-3.10.22       | 24.2 MB   | #########6 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  97% python-3.10.22       | 24.2 MB   | #########7 |  98% python-3.10.22       | 24.2 MB   | #########7 |  98% python-3.10.22       | 24.2 MB   | #########8 |  98% python-3.10.22       | 24.2 MB   | #########8 |  98% python-3.10.22       | 24.2 MB   | #########8 |  98% python-3.10.22       | 24.2 MB   | #########8 |  98% python-3.10.22       | 24.2 MB   | #########8 |  98% python-3.10.22       | 24.2 MB   | #########8 |  99% python-3.10.22       | 24.2 MB   | #########8 |  99% python-3.10.22       | 24.2 MB   | #########8 |  99% python-3.10.22       | 24.2 MB   | #########8 |  99% python-3.10.22       | 24.2 MB   | #########8 |  99% python-3.10.22       | 24.2 MB   | #########9 |  99% python-3.10.22       | 24.2 MB   | #########9 |  99% python-3.10.22       | 24.2 MB   | #########9 |  99% python-3.10.22       | 24.2 MB   | #########9 |  99% python-3.10.22       | 24.2 MB   | #########9 |  99% python-3.10.22       | 24.2 MB   | #########9 | 100% python-3.10.22       | 24.2 MB   | #########9 | 100% python-3.10.22       | 24.2 MB   | #########9 | 100% python-3.10.22       | 24.2 MB   | #########9 | 100% python-3.10.22       | 24.2 MB   | ########## | 100% python-3.10.22       | 24.2 MB   | ########## | 100% python-3.10.22       | 24.2 MB   | ########## | 100% 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A                                                     
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+[A
+
+[A[A
+
+
+[A[A[A
+
+
+
+[A[A[A[A
+
+
+
+
+[A[A[A[A[A done
+Preparing transaction: / - \ done
+Verifying transaction: / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+#
+# To activate this environment, use
+#
+#     $ conda activate /opt/gamecam-pi3mos/envs/pi3mos-infer
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+

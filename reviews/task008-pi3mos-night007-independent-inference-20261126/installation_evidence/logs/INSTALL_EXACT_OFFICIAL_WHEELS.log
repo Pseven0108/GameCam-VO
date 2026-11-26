@@ -1,0 +1,23 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Processing ./rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/wheelhouse/torch-2.3.1+cu121-cp310-cp310-linux_x86_64.whl
+Processing ./rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/wheelhouse/torchvision-0.18.1+cu121-cp310-cp310-linux_x86_64.whl
+Collecting filelock (from torch==2.3.1+cu121)
+  Downloading filelock-4.1.0-py3-none-any.whl (133 kB)
+Collecting typing-extensions>=4.8.0 (from torch==2.3.1+cu121)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Collecting sympy (from torch==2.3.1+cu121)
+  Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Collecting networkx (from torch==2.3.1+cu121)
+  Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+Collecting jinja2 (from torch==2.3.1+cu121)
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Collecting fsspec (from torch==2.3.1+cu121)
+  Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch==2.3.1+cu121)
+  Downloading nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch==2.3.1+cu121)
+  Downloading nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch==2.3.1+cu121)
+  Downloading nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch==2.3.1+cu121)
+  Downloading nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)

@@ -1,0 +1,3911 @@
+{
+  "frames": [
+    {
+      "mode": "A",
+      "target_rgb_id": 301,
+      "context_rgb_ids": [
+        291,
+        296,
+        301
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 1509.7332763671875,
+      "forward_wall_seconds": 1.5098819581326097,
+      "GPU_peak_allocated_bytes": 6352360448,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.0225771926343441,
+      "model_probability_quantiles": [
+        7.78766770963557e-05,
+        0.00583768542855978,
+        0.04399024695158005,
+        0.06074730399996042,
+        0.8304920196533203
+      ],
+      "confidence_mean": 0.1754549741744995,
+      "confidence_quantiles": [
+        5.042894546392063e-09,
+        5.670040650329611e-07,
+        0.15548592805862427,
+        0.4092642366886139,
+        0.4391903057694435,
+        0.6191500425338745
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.012744502314814814,
+        "0.4": 0.011475212191358025,
+        "0.6": 0.009905960648148148
+      },
+      "dynamic_model_area": {
+        "0.2": 0.012692113882590074,
+        "0.4": 0.01151108591584782,
+        "0.6": 0.009912761400856639
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.2016398429870607,
+        "log_depth_display_P98": 2.8663983821868886,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": null,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "ebeba079b763a726059cbf8c8ad23082b58026caf3c62072d4d6714595a93ede",
+      "prediction_bytes": 12921745,
+      "per_target_wall_with_saving_seconds": 2.5528349590022117
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 302,
+      "context_rgb_ids": [
+        292,
+        297,
+        302
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 297.5304870605469,
+      "forward_wall_seconds": 0.2976118610240519,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.023563139140605927,
+      "model_probability_quantiles": [
+        5.454452184494585e-05,
+        0.005888349376618862,
+        0.04277741722762585,
+        0.06115576159209013,
+        0.8440080881118774
+      ],
+      "confidence_mean": 0.08876914530992508,
+      "confidence_quantiles": [
+        5.565454763711841e-09,
+        4.954102905685431e-07,
+        0.06834997236728668,
+        0.2166224792599678,
+        0.2395523153245449,
+        0.36182546615600586
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.014247202932098765,
+        "0.4": 0.012896894290123457,
+        "0.6": 0.010907600308641975
+      },
+      "dynamic_model_area": {
+        "0.2": 0.014180209120685312,
+        "0.4": 0.012936192995716805,
+        "0.6": 0.01085758377425044
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.4109248399734495,
+        "log_depth_display_P98": 2.7154100894927975,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005456088576465845,
+      "Eulerian_temporal_mask_IoU": 0.6879586844251155,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "40c56b39f2d78829996bc4a5b32e6f84dd96ed731fc028510bf8462d8c976ca9",
+      "prediction_bytes": 12927190,
+      "per_target_wall_with_saving_seconds": 1.290619732113555
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 303,
+      "context_rgb_ids": [
+        293,
+        298,
+        303
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.9875793457031,
+      "forward_wall_seconds": 0.2810666570439935,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.025948243215680122,
+      "model_probability_quantiles": [
+        0.0001345821365248412,
+        0.006473576417192817,
+        0.04755675978958607,
+        0.07574444636702538,
+        0.8395053744316101
+      ],
+      "confidence_mean": 0.05749300494790077,
+      "confidence_quantiles": [
+        4.923952801050291e-09,
+        3.7067985658723046e-07,
+        0.046994779258966446,
+        0.13953761011362076,
+        0.15740185603499413,
+        0.23750397562980652
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.015463927469135802,
+        "0.4": 0.013738425925925926,
+        "0.6": 0.011725983796296297
+      },
+      "dynamic_model_area": {
+        "0.2": 0.015451782564877803,
+        "0.4": 0.013727481733434115,
+        "0.6": 0.01174335474930713
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.027561616897583,
+        "log_depth_display_P98": 2.6686174392700193,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.008002127520740032,
+      "Eulerian_temporal_mask_IoU": 0.7300127713920818,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "fa19cca25214c3431149af5b365150fe942d7d075eaf21ded2c23e3f4f2e6447",
+      "prediction_bytes": 12903757,
+      "per_target_wall_with_saving_seconds": 1.2968602750916034
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 304,
+      "context_rgb_ids": [
+        294,
+        299,
+        304
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.9721984863281,
+      "forward_wall_seconds": 0.28104816703125834,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.02505875937640667,
+      "model_probability_quantiles": [
+        0.0001259868440683931,
+        0.005521791987121105,
+        0.04320928454399109,
+        0.07161671668291092,
+        0.7848148345947266
+      ],
+      "confidence_mean": 0.0623796321451664,
+      "confidence_quantiles": [
+        5.266171942963638e-09,
+        3.588539101428978e-07,
+        0.043830208480358124,
+        0.15613608062267303,
+        0.17472371086478233,
+        0.2529049515724182
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.016610725308641976,
+        "0.4": 0.014876060956790123,
+        "0.6": 0.011688850308641975
+      },
+      "dynamic_model_area": {
+        "0.2": 0.016569822373393803,
+        "0.4": 0.014908509700176367,
+        "0.6": 0.011696113630637441
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.8928045511245726,
+        "log_depth_display_P98": 2.6988587141036975,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.006068232003599405,
+      "Eulerian_temporal_mask_IoU": 0.7625393748485583,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "1605a5e4fa337d49748e38eaba19162437bbfcd805daff17a1da1417fd5fcc62",
+      "prediction_bytes": 12919022,
+      "per_target_wall_with_saving_seconds": 1.2808276480063796
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 305,
+      "context_rgb_ids": [
+        295,
+        300,
+        305
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.96307373046875,
+      "forward_wall_seconds": 0.28104003705084324,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.029382525011897087,
+      "model_probability_quantiles": [
+        0.000159981005708687,
+        0.008250527083873749,
+        0.05208072066307068,
+        0.08181926049292088,
+        0.7988535761833191
+      ],
+      "confidence_mean": 0.06609167903661728,
+      "confidence_quantiles": [
+        5.418311577187751e-09,
+        4.586126607364349e-07,
+        0.0563000850379467,
+        0.1577315554022789,
+        0.17686063423752785,
+        0.34461116790771484
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.01825906635802469,
+        "0.4": 0.01646460262345679,
+        "0.6": 0.014289158950617284
+      },
+      "dynamic_model_area": {
+        "0.2": 0.018211451247165535,
+        "0.4": 0.01645959309649786,
+        "0.6": 0.014247134038800706
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.202192687988282,
+        "log_depth_display_P98": 2.7057572841644286,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.006100469268858433,
+      "Eulerian_temporal_mask_IoU": 0.7726362625139044,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "b92dcc9911445a4ec7904e566d850d1946590e51ab84ffc5778df0a3468afa28",
+      "prediction_bytes": 12876568,
+      "per_target_wall_with_saving_seconds": 1.3230283029843122
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 306,
+      "context_rgb_ids": [
+        296,
+        301,
+        306
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 281.6625061035156,
+      "forward_wall_seconds": 0.28174217278137803,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03052406571805477,
+      "model_probability_quantiles": [
+        0.0002555952232796699,
+        0.009361186064779758,
+        0.05422676540911198,
+        0.07741736620664597,
+        0.777490496635437
+      ],
+      "confidence_mean": 0.07406195253133774,
+      "confidence_quantiles": [
+        6.2135945277930205e-09,
+        4.690613764068985e-07,
+        0.059840330854058266,
+        0.1778799667954445,
+        0.19808990135788918,
+        0.2872296869754791
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.019700038580246913,
+        "0.4": 0.017838059413580246,
+        "0.6": 0.01501929012345679
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0196444318468128,
+        "0.4": 0.017845332577475434,
+        "0.6": 0.014995118417737466
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.1177576065063475,
+        "log_depth_display_P98": 2.6742236614227286,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005467617884278297,
+      "Eulerian_temporal_mask_IoU": 0.9030355972919851,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "37f277181a3260a3c689914a8366d5d431f002cbd29098d50eed4f47e5bc5090",
+      "prediction_bytes": 12903972,
+      "per_target_wall_with_saving_seconds": 1.2934870740864426
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 307,
+      "context_rgb_ids": [
+        297,
+        302,
+        307
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.9815368652344,
+      "forward_wall_seconds": 0.2810492671560496,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03197639808058739,
+      "model_probability_quantiles": [
+        0.0002132640074705705,
+        0.01041985023766756,
+        0.05752135254442692,
+        0.07962720468640327,
+        0.7595743536949158
+      ],
+      "confidence_mean": 0.11730014532804489,
+      "confidence_quantiles": [
+        6.048715750495148e-09,
+        5.56154645892093e-07,
+        0.08829591795802116,
+        0.2804405838251114,
+        0.30697934329509735,
+        0.45016855001449585
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.021452064043209877,
+        "0.4": 0.019537037037037037,
+        "0.6": 0.01577739197530864
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0214277840765936,
+        "0.4": 0.019534202569916857,
+        "0.6": 0.01571554547745024
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.9936927795410155,
+        "log_depth_display_P98": 2.8006577730178828,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.00669061578810215,
+      "Eulerian_temporal_mask_IoU": 0.8365570599613152,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "d5b058a39a3d982bde66575ad4d23e9209f89ef6cf7a7c3c75c128ea50451e2d",
+      "prediction_bytes": 12887920,
+      "per_target_wall_with_saving_seconds": 1.2913499970454723
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 308,
+      "context_rgb_ids": [
+        298,
+        303,
+        308
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.3030090332031,
+      "forward_wall_seconds": 0.282404389930889,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03208742290735245,
+      "model_probability_quantiles": [
+        0.00018071266822516918,
+        0.00985603965818882,
+        0.05136697739362717,
+        0.078976696357131,
+        0.8075423836708069
+      ],
+      "confidence_mean": 0.13856136798858643,
+      "confidence_quantiles": [
+        5.035944994347119e-09,
+        4.612194999253916e-07,
+        0.11335428431630135,
+        0.3284025192260742,
+        0.357890322804451,
+        0.5787234306335449
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.023271604938271604,
+        "0.4": 0.02140576774691358,
+        "0.6": 0.016654128086419754
+      },
+      "dynamic_model_area": {
+        "0.2": 0.02320326278659612,
+        "0.4": 0.02146715167548501,
+        "0.6": 0.016554075333837237
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.347358131408692,
+        "log_depth_display_P98": 2.7345899820327757,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005760500207543373,
+      "Eulerian_temporal_mask_IoU": 0.8654845065377037,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "8037192a92696ec3121ab52c6011266617ff9ee4f508e206c0263fd57b136ec8",
+      "prediction_bytes": 12886510,
+      "per_target_wall_with_saving_seconds": 1.2961925799027085
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 309,
+      "context_rgb_ids": [
+        299,
+        304,
+        309
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 283.1413879394531,
+      "forward_wall_seconds": 0.28322546393610537,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03835238143801689,
+      "model_probability_quantiles": [
+        0.0002421750978101045,
+        0.013986514881253242,
+        0.06692169606685638,
+        0.09179328009486198,
+        0.7293102145195007
+      ],
+      "confidence_mean": 0.19458222389221191,
+      "confidence_quantiles": [
+        8.018015584809746e-09,
+        6.678292834294552e-07,
+        0.1845485046505928,
+        0.44975683093070984,
+        0.480671226978302,
+        0.7130650877952576
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.025968846450617283,
+        "0.4": 0.023790509259259258,
+        "0.6": 0.015910493827160494
+      },
+      "dynamic_model_area": {
+        "0.2": 0.025856638951877047,
+        "0.4": 0.023825270849080375,
+        "0.6": 0.015794280675233058
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.41338357925415,
+        "log_depth_display_P98": 2.9000413894653305,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.009900626726448536,
+      "Eulerian_temporal_mask_IoU": 0.8473025048169557,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "8e2474a2cd34a13e2a21237c539c48796d51a7b04b58d735d5d7b35375c0d1a2",
+      "prediction_bytes": 12854123,
+      "per_target_wall_with_saving_seconds": 1.335280411876738
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 310,
+      "context_rgb_ids": [
+        300,
+        305,
+        310
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.5943908691406,
+      "forward_wall_seconds": 0.28267757804133,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03526410087943077,
+      "model_probability_quantiles": [
+        0.000414446258218959,
+        0.009950823150575161,
+        0.05214792490005493,
+        0.08991959132254124,
+        0.7398809790611267
+      ],
+      "confidence_mean": 0.15646903216838837,
+      "confidence_quantiles": [
+        5.992116136610548e-09,
+        4.362503460697553e-07,
+        0.13874585926532745,
+        0.36924856901168823,
+        0.4007885903120041,
+        0.6515003442764282
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.03017554012345679,
+        "0.4": 0.027523630401234567,
+        "0.6": 0.019838445216049383
+      },
+      "dynamic_model_area": {
+        "0.2": 0.03012408667170572,
+        "0.4": 0.027537635424540186,
+        "0.6": 0.019734977324263037
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.459653615951538,
+        "log_depth_display_P98": 2.9094304561614983,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.014358466491103172,
+      "Eulerian_temporal_mask_IoU": 0.7828641705383985,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "c565b6be816ae15935e6781f3479caf026ee1be27bc030c9ef3fb48092b84a63",
+      "prediction_bytes": 12825036,
+      "per_target_wall_with_saving_seconds": 1.290088884998113
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 311,
+      "context_rgb_ids": [
+        301,
+        306,
+        311
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.2191162109375,
+      "forward_wall_seconds": 0.28229572996497154,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.035553958266973495,
+      "model_probability_quantiles": [
+        0.0003499890153761953,
+        0.009082541335374117,
+        0.046142956241965294,
+        0.0794354397803545,
+        0.7226027250289917
+      ],
+      "confidence_mean": 0.14759480953216553,
+      "confidence_quantiles": [
+        6.921090367484339e-09,
+        6.23535527211061e-07,
+        0.14844294637441635,
+        0.3333103805780411,
+        0.3614955022931099,
+        0.6649126410484314
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0346826774691358,
+        "0.4": 0.032116126543209875,
+        "0.6": 0.024347993827160495
+      },
+      "dynamic_model_area": {
+        "0.2": 0.03458049886621315,
+        "0.4": 0.03215151801461325,
+        "0.6": 0.02385282816830436
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.46024227142334,
+        "log_depth_display_P98": 2.9706183433532716,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.008836556226015091,
+      "Eulerian_temporal_mask_IoU": 0.7575055059696302,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "57a8073a6645533393953f38de24b4eb1924163e808d2c1b0a5dcc426e4e5465",
+      "prediction_bytes": 12821330,
+      "per_target_wall_with_saving_seconds": 1.3118727279361337
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 312,
+      "context_rgb_ids": [
+        302,
+        307,
+        312
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.6527099609375,
+      "forward_wall_seconds": 0.28273137705400586,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.038673341274261475,
+      "model_probability_quantiles": [
+        0.00027088355273008347,
+        0.008108533453196287,
+        0.04771014302968979,
+        0.10464457236230373,
+        0.718381404876709
+      ],
+      "confidence_mean": 0.13861218094825745,
+      "confidence_quantiles": [
+        4.233045913792921e-09,
+        4.4590950665224227e-07,
+        0.12969034165143967,
+        0.32137009501457214,
+        0.3512078747153282,
+        0.6041029691696167
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.041453993055555555,
+        "0.4": 0.03807918595679012,
+        "0.6": 0.02719087577160494
+      },
+      "dynamic_model_area": {
+        "0.2": 0.04139109347442681,
+        "0.4": 0.0380842151675485,
+        "0.6": 0.02657312925170068
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.360417890548706,
+        "log_depth_display_P98": 3.0378935098648068,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.00980457104742527,
+      "Eulerian_temporal_mask_IoU": 0.745865544573833,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "2fbf6cd2b628881adb5d0b37bfe64c2ce4a4378a44f23b159a2ca18bdaf50be6",
+      "prediction_bytes": 12839821,
+      "per_target_wall_with_saving_seconds": 1.2878153680358082
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 313,
+      "context_rgb_ids": [
+        303,
+        308,
+        313
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.71380615234375,
+      "forward_wall_seconds": 0.282794936792925,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.04288898780941963,
+      "model_probability_quantiles": [
+        0.0003924044722225517,
+        0.008414371870458126,
+        0.05246446467936039,
+        0.18536928668618202,
+        0.7302778959274292
+      ],
+      "confidence_mean": 0.15786170959472656,
+      "confidence_quantiles": [
+        4.4768331264322114e-09,
+        5.133490219577652e-07,
+        0.15034139901399612,
+        0.3660317212343216,
+        0.39430437982082367,
+        0.65286785364151
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.049380787037037036,
+        "0.4": 0.04542148919753086,
+        "0.6": 0.03210599922839506
+      },
+      "dynamic_model_area": {
+        "0.2": 0.049339411690602165,
+        "0.4": 0.045406588561350464,
+        "0.6": 0.03195074326026707
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.416373348236084,
+        "log_depth_display_P98": 3.02462673187255,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.010286620818078518,
+      "Eulerian_temporal_mask_IoU": 0.7346638311794537,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "25747bfa6e3308559ec51690298b31742df320c2dc36faefee7de411b098305f",
+      "prediction_bytes": 12815337,
+      "per_target_wall_with_saving_seconds": 1.2954766440670937
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 314,
+      "context_rgb_ids": [
+        304,
+        309,
+        314
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.75628662109375,
+      "forward_wall_seconds": 0.28283769683912396,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.04949875548481941,
+      "model_probability_quantiles": [
+        0.0004162136756349355,
+        0.009687587153166533,
+        0.061184583231806755,
+        0.5291954129934311,
+        0.8041471242904663
+      ],
+      "confidence_mean": 0.1802314668893814,
+      "confidence_quantiles": [
+        6.4243730335533655e-09,
+        6.513721757528401e-07,
+        0.1611844003200531,
+        0.42126163840293884,
+        0.4509867951273918,
+        0.6957681179046631
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.058877797067901236,
+        "0.4": 0.05515769675925926,
+        "0.6": 0.03415798611111111
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05887030738221215,
+        "0.4": 0.055169753086419755,
+        "0.6": 0.03417501259763164
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.441394376754761,
+        "log_depth_display_P98": 2.9159935712814287,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.011570301838219166,
+      "Eulerian_temporal_mask_IoU": 0.7260995878656847,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "5584dcf390ccc050f8943867e55010c86071f2f09867cf2ced0ca97b91b10adf",
+      "prediction_bytes": 12816367,
+      "per_target_wall_with_saving_seconds": 1.3073473740369081
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 315,
+      "context_rgb_ids": [
+        305,
+        310,
+        315
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.3081970214844,
+      "forward_wall_seconds": 0.28238625009544194,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.05176336318254471,
+      "model_probability_quantiles": [
+        0.0004455742018762976,
+        0.011534880846738815,
+        0.05691460706293583,
+        0.555264800786972,
+        0.8441295027732849
+      ],
+      "confidence_mean": 0.19426514208316803,
+      "confidence_quantiles": [
+        7.226658382819551e-09,
+        5.684805444161611e-07,
+        0.1776406466960907,
+        0.4556853622198105,
+        0.4835607036948204,
+        0.7331532835960388
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.06009452160493827,
+        "0.4": 0.05686680169753086,
+        "0.6": 0.03689477237654321
+      },
+      "dynamic_model_area": {
+        "0.2": 0.06001984126984127,
+        "0.4": 0.056894053917863445,
+        "0.6": 0.03663548752834467
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.362678670883179,
+        "log_depth_display_P98": 3.0322977781295757,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.009097272530198097,
+      "Eulerian_temporal_mask_IoU": 0.8484415584415584,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "4b1f92c594048f02bf261f5e60416d7d952f7b2753d62b4561c709a20200c46b",
+      "prediction_bytes": 12835645,
+      "per_target_wall_with_saving_seconds": 1.3019626061432064
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 316,
+      "context_rgb_ids": [
+        306,
+        311,
+        316
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.36102294921875,
+      "forward_wall_seconds": 0.28243508911691606,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.0495452955365181,
+      "model_probability_quantiles": [
+        0.00015668429841753095,
+        0.008283517323434353,
+        0.04870080575346947,
+        0.5636501163244247,
+        0.805625319480896
+      ],
+      "confidence_mean": 0.11972175538539886,
+      "confidence_quantiles": [
+        1.2433666540800914e-08,
+        8.317203423757746e-07,
+        0.12076365947723389,
+        0.2674028128385544,
+        0.2895517498254776,
+        0.46197012066841125
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.06037663966049383,
+        "0.4": 0.05672019675925926,
+        "0.6": 0.040285976080246914
+      },
+      "dynamic_model_area": {
+        "0.2": 0.06036233938019652,
+        "0.4": 0.05673264676240867,
+        "0.6": 0.03998960695389267
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.382450914382934,
+        "log_depth_display_P98": 3.12419910430908,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.01014654990285635,
+      "Eulerian_temporal_mask_IoU": 0.8647758108282724,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "c6a09ab11c8290292de3ecc9f02199c17331f62b6fe00584c13c7938e5751f0a",
+      "prediction_bytes": 12867521,
+      "per_target_wall_with_saving_seconds": 1.2895276679191738
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 317,
+      "context_rgb_ids": [
+        307,
+        312,
+        317
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.51239013671875,
+      "forward_wall_seconds": 0.282593997893855,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.05858084559440613,
+      "model_probability_quantiles": [
+        0.0005561508587561548,
+        0.017250572331249714,
+        0.08380492776632309,
+        0.5165517181158066,
+        0.8446719646453857
+      ],
+      "confidence_mean": 0.06491777300834656,
+      "confidence_quantiles": [
+        7.477575891812194e-09,
+        6.153455558433052e-07,
+        0.05729350261390209,
+        0.14936751127243042,
+        0.1653917133808136,
+        0.26961612701416016
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0582055362654321,
+        "0.4": 0.05407262731481482,
+        "0.6": 0.03207417052469136
+      },
+      "dynamic_model_area": {
+        "0.2": 0.058177437641723354,
+        "0.4": 0.05406352355757118,
+        "0.6": 0.0322814310909549
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.027606391906739,
+        "log_depth_display_P98": 3.033908724784847,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.017553873360157013,
+      "Eulerian_temporal_mask_IoU": 0.84357395519455,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "157f3ab7461fdf65f480b4fe48cc9175c43a80ee6af6aaf1d51032d9f7a90142",
+      "prediction_bytes": 12834828,
+      "per_target_wall_with_saving_seconds": 1.343845881987363
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 318,
+      "context_rgb_ids": [
+        308,
+        313,
+        318
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.6651306152344,
+      "forward_wall_seconds": 0.2827574471011758,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.056634873151779175,
+      "model_probability_quantiles": [
+        0.00036174379056319594,
+        0.017378294840455055,
+        0.07728716358542442,
+        0.41127341985702515,
+        0.795013427734375
+      ],
+      "confidence_mean": 0.061075400561094284,
+      "confidence_quantiles": [
+        4.713170742576267e-09,
+        4.4041406965789065e-07,
+        0.06629770249128342,
+        0.12780294567346573,
+        0.1424594633281231,
+        0.3575049042701721
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.056222511574074076,
+        "0.4": 0.0501586612654321,
+        "0.6": 0.03700424382716049
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05617756361803981,
+        "0.4": 0.05015432098765432,
+        "0.6": 0.036375661375661374
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.4720237255096436,
+        "log_depth_display_P98": 3.2284984827041625,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.013944569043815136,
+      "Eulerian_temporal_mask_IoU": 0.7883537120853881,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "2f057f4ced8559b53c97c524e3233edd5dfe1a7fdaac23ca7515f3abc50e3c9d",
+      "prediction_bytes": 12854603,
+      "per_target_wall_with_saving_seconds": 1.3535040658898652
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 319,
+      "context_rgb_ids": [
+        309,
+        314,
+        319
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 283.3730773925781,
+      "forward_wall_seconds": 0.28346221311949193,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.05171867087483406,
+      "model_probability_quantiles": [
+        0.0007094675092957914,
+        0.016698211431503296,
+        0.0811070054769516,
+        0.19611379876732826,
+        0.7489625215530396
+      ],
+      "confidence_mean": 0.05299638584256172,
+      "confidence_quantiles": [
+        5.51534418136157e-09,
+        4.4395694942522823e-07,
+        0.0575228426605463,
+        0.11128433048725128,
+        0.12383133545517921,
+        0.2386409193277359
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.04975790895061728,
+        "0.4": 0.04389130015432099,
+        "0.6": 0.028957851080246913
+      },
+      "dynamic_model_area": {
+        "0.2": 0.04972521415973797,
+        "0.4": 0.04389487276392038,
+        "0.6": 0.028569066515495088
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.577264738082886,
+        "log_depth_display_P98": 2.8417623281478877,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.014160017482936382,
+      "Eulerian_temporal_mask_IoU": 0.7491580026358179,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "50836329430d42bae44f802b389aed4c344e6fccc59d15bfefac915eb3d7e0f6",
+      "prediction_bytes": 12855430,
+      "per_target_wall_with_saving_seconds": 1.3430820368230343
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 320,
+      "context_rgb_ids": [
+        310,
+        315,
+        320
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.8975830078125,
+      "forward_wall_seconds": 0.28299680608324707,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.04855166748166084,
+      "model_probability_quantiles": [
+        0.0007456945604644716,
+        0.017844973132014275,
+        0.07506150379776955,
+        0.14553038403391838,
+        0.8110435605049133
+      ],
+      "confidence_mean": 0.06806918233633041,
+      "confidence_quantiles": [
+        5.820222082064674e-09,
+        7.025945762961783e-07,
+        0.0741562657058239,
+        0.1425686478614807,
+        0.1572776585817337,
+        0.27786335349082947
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.04197289737654321,
+        "0.4": 0.036305941358024695,
+        "0.6": 0.027644193672839507
+      },
+      "dynamic_model_area": {
+        "0.2": 0.04196586041824137,
+        "0.4": 0.03628905265810028,
+        "0.6": 0.02755338246409675
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.359216642379761,
+        "log_depth_display_P98": 3.0102104187011687,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.011086939834058285,
+      "Eulerian_temporal_mask_IoU": 0.7480260899416409,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "47380515cf074c884bdbbb1541b6f10050386c0f02a32f77f813805c6ceae03c",
+      "prediction_bytes": 12864100,
+      "per_target_wall_with_saving_seconds": 1.3325894579757005
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 321,
+      "context_rgb_ids": [
+        311,
+        316,
+        321
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.8414306640625,
+      "forward_wall_seconds": 0.2829220360144973,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.03710177540779114,
+      "model_probability_quantiles": [
+        0.0002880684332922101,
+        0.009917082730680704,
+        0.06388284638524055,
+        0.1278008483350277,
+        0.7748103141784668
+      ],
+      "confidence_mean": 0.04151654243469238,
+      "confidence_quantiles": [
+        3.703462203574759e-09,
+        3.6271656256303686e-07,
+        0.0442605409771204,
+        0.08812465891242027,
+        0.09993450529873371,
+        0.2246553599834442
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.03530044367283951,
+        "0.4": 0.025698302469135802,
+        "0.6": 0.019800347222222223
+      },
+      "dynamic_model_area": {
+        "0.2": 0.03523793776769967,
+        "0.4": 0.025651927437641723,
+        "0.6": 0.01970348324514991
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.5826976776123045,
+        "log_depth_display_P98": 2.7636594057083106,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.01674433797597885,
+      "Eulerian_temporal_mask_IoU": 0.6167283189478011,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "aadcaf2dfcf11289eb9408c4dee2e840774e02e8c1100cd80955dd0dfe1fe0c2",
+      "prediction_bytes": 12863186,
+      "per_target_wall_with_saving_seconds": 1.3045037910342216
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 322,
+      "context_rgb_ids": [
+        312,
+        317,
+        322
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.3175354003906,
+      "forward_wall_seconds": 0.28239423921331763,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.035436712205410004,
+      "model_probability_quantiles": [
+        0.00029513967456296086,
+        0.01180048007518053,
+        0.06921930983662605,
+        0.12223812751471996,
+        0.7665499448776245
+      ],
+      "confidence_mean": 0.04378803074359894,
+      "confidence_quantiles": [
+        2.8499282933580616e-09,
+        4.109573978894332e-07,
+        0.03849031776189804,
+        0.10175976902246475,
+        0.11563499085605145,
+        0.2186971753835678
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.02734809027777778,
+        "0.4": 0.016686439043209877,
+        "0.6": 0.013647762345679012
+      },
+      "dynamic_model_area": {
+        "0.2": 0.027340797430083143,
+        "0.4": 0.016676114890400606,
+        "0.6": 0.013420414462081129
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.8759644508361815,
+        "log_depth_display_P98": 2.901704716682432,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.014049110002815723,
+      "Eulerian_temporal_mask_IoU": 0.49022869022869026,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "3566542febee0e9a4f9318b607a12bb2b6904be61ada88fec429c7c68a1e60df",
+      "prediction_bytes": 12859580,
+      "per_target_wall_with_saving_seconds": 1.3061468210071325
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 323,
+      "context_rgb_ids": [
+        313,
+        318,
+        323
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.0356750488281,
+      "forward_wall_seconds": 0.28211293113417923,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.0309370718896389,
+      "model_probability_quantiles": [
+        0.0004029689880553633,
+        0.0140128075145185,
+        0.07626330852508545,
+        0.11494374088943005,
+        0.7314717769622803
+      ],
+      "confidence_mean": 0.043039340525865555,
+      "confidence_quantiles": [
+        3.30436744633289e-09,
+        3.150797027728913e-07,
+        0.04228655621409416,
+        0.09871665760874748,
+        0.11055955104529858,
+        0.2439654916524887
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.01070360725308642,
+        "0.4": 0.006593364197530864,
+        "0.6": 0.002232831790123457
+      },
+      "dynamic_model_area": {
+        "0.2": 0.010924508692365836,
+        "0.4": 0.006582262534643487,
+        "0.6": 0.002232142857142857
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.207024097442627,
+        "log_depth_display_P98": 2.82663938999176,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.013785934075713158,
+      "Eulerian_temporal_mask_IoU": 0.27685325264750377,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "8308f3e713a1dc5f48f61f6b846db486b71a2a881a295bb288c7420f656b063e",
+      "prediction_bytes": 12812150,
+      "per_target_wall_with_saving_seconds": 1.345031226053834
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 324,
+      "context_rgb_ids": [
+        314,
+        319,
+        324
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.71478271484375,
+      "forward_wall_seconds": 0.2827951379586011,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.022327452898025513,
+      "model_probability_quantiles": [
+        0.0002772170410025865,
+        0.012387091293931007,
+        0.05948648415505886,
+        0.0868315938860178,
+        0.19151902198791504
+      ],
+      "confidence_mean": 0.06433897465467453,
+      "confidence_quantiles": [
+        9.227728803296031e-09,
+        6.8596497726503e-07,
+        0.05325312167406082,
+        0.15236686915159225,
+        0.16921241953969002,
+        0.4341129660606384
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.007339239120483,
+        "log_depth_display_P98": 2.9283125400543137,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.011239794082939625,
+      "Eulerian_temporal_mask_IoU": 0.0,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "13edc63fbfa5a424df484fbff6cad97e1e3b318cd7af5fbc7580282a3b030ce5",
+      "prediction_bytes": 12770457,
+      "per_target_wall_with_saving_seconds": 1.3005176139995456
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 325,
+      "context_rgb_ids": [
+        315,
+        320,
+        325
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.6815185546875,
+      "forward_wall_seconds": 0.282758847810328,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.01968761533498764,
+      "model_probability_quantiles": [
+        0.00027002126444131136,
+        0.006912138778716326,
+        0.061392683535814285,
+        0.09513785317540169,
+        0.20426726341247559
+      ],
+      "confidence_mean": 0.07659664750099182,
+      "confidence_quantiles": [
+        1.0259384453092935e-08,
+        7.950114877530723e-07,
+        0.0546199306845665,
+        0.18752063065767288,
+        0.20563676953315735,
+        0.5181479454040527
+      ],
+      "dynamic_original_area": {
+        "0.2": 4.822530864197531e-07,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 3.936759889140842e-06,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.5715139865875245,
+        "log_depth_display_P98": 2.9849766969680758,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005216111894696951,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "cb4adbb0e4443f3c3c6ce8ca8777a8604537535c40df4596634647f12d978ae3",
+      "prediction_bytes": 12811101,
+      "per_target_wall_with_saving_seconds": 1.263036001008004
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 326,
+      "context_rgb_ids": [
+        316,
+        321,
+        326
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.0531921386719,
+      "forward_wall_seconds": 0.2821272509172559,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.013375319540500641,
+      "model_probability_quantiles": [
+        0.0001171939293271862,
+        0.004967263899743557,
+        0.03897010535001755,
+        0.05783243104815483,
+        0.14227056503295898
+      ],
+      "confidence_mean": 0.05043918639421463,
+      "confidence_quantiles": [
+        6.332546043097409e-09,
+        4.921959941839305e-07,
+        0.030796891078352928,
+        0.12700440734624863,
+        0.14270178601145744,
+        0.48032301664352417
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.490607237815857,
+        "log_depth_display_P98": 2.73092827796936,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.006656587589532137,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "4a797ecfbcfad38d702da15e6b2f8f484b2b2f8faad53648aeb5098865338be8",
+      "prediction_bytes": 12818293,
+      "per_target_wall_with_saving_seconds": 1.2483915670309216
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 327,
+      "context_rgb_ids": [
+        317,
+        322,
+        327
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 282.1125793457031,
+      "forward_wall_seconds": 0.2821857309900224,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.008532878011465073,
+      "model_probability_quantiles": [
+        3.9816382923163474e-05,
+        0.0014778285403735936,
+        0.021832815371453762,
+        0.052505520172417164,
+        0.19158700108528137
+      ],
+      "confidence_mean": 0.036818839609622955,
+      "confidence_quantiles": [
+        3.11626147109223e-09,
+        2.859435852542447e-07,
+        0.024881763383746147,
+        0.09290365502238274,
+        0.10657298564910889,
+        0.2478390336036682
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.7385207414627075,
+        "log_depth_display_P98": 2.609717965126034,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.00565750477835536,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "12d1b704ae1c84c03f92de3634a1916dbc14ecddf2d71acccee098cc8f758d78",
+      "prediction_bytes": 12838752,
+      "per_target_wall_with_saving_seconds": 1.2194193562027067
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 328,
+      "context_rgb_ids": [
+        318,
+        323,
+        328
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 281.2953796386719,
+      "forward_wall_seconds": 0.2813697650562972,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.008524669334292412,
+      "model_probability_quantiles": [
+        9.560909529682249e-05,
+        0.0016746663604862988,
+        0.024398901499807835,
+        0.04470019228756428,
+        0.17953085899353027
+      ],
+      "confidence_mean": 0.040731728076934814,
+      "confidence_quantiles": [
+        2.8434563592583117e-09,
+        3.1763462970957335e-07,
+        0.029288124293088913,
+        0.10158965364098549,
+        0.11687536165118217,
+        0.21528726816177368
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.688113307952881,
+        "log_depth_display_P98": 2.899349141120908,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0022574379108846188,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "0665355f2e76dd99cd0c75b02a8c5d0892cd1230e62adfef17b666e5690b89e7",
+      "prediction_bytes": 12784935,
+      "per_target_wall_with_saving_seconds": 1.2439455732237548
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 329,
+      "context_rgb_ids": [
+        319,
+        324,
+        329
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 281.3063659667969,
+      "forward_wall_seconds": 0.2813745550811291,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.0067679849453270435,
+      "model_probability_quantiles": [
+        2.5431212634430267e-05,
+        0.0011501882108859718,
+        0.020141400396823883,
+        0.03714815620332956,
+        0.13136880099773407
+      ],
+      "confidence_mean": 0.05932651087641716,
+      "confidence_quantiles": [
+        6.1776939119795315e-09,
+        5.176190995825891e-07,
+        0.06105560623109341,
+        0.1329023614525795,
+        0.1489212065935135,
+        0.23317907750606537
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.5265892267227175,
+        "log_depth_display_P98": 2.948764967918396,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.003231444861739874,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "a158cd62e8f807d8950c4e0522a0916deb3d3bddb5e7ecbdad9985178410f902",
+      "prediction_bytes": 12888443,
+      "per_target_wall_with_saving_seconds": 1.2145005441270769
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 330,
+      "context_rgb_ids": [
+        320,
+        325,
+        330
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.7529296875,
+      "forward_wall_seconds": 0.28082205913960934,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.008368861861526966,
+      "model_probability_quantiles": [
+        0.00013587494322564453,
+        0.0019263506401330233,
+        0.023552993312478065,
+        0.04164469614624977,
+        0.13781405985355377
+      ],
+      "confidence_mean": 0.08711808174848557,
+      "confidence_quantiles": [
+        9.114102361706955e-09,
+        8.243539468821837e-07,
+        0.08960065245628357,
+        0.19349738210439682,
+        0.21304946392774582,
+        0.3292977511882782
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.535902404785156,
+        "log_depth_display_P98": 3.083438158035278,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.00235349265858531,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "5b385acbc34971eb2b9eb02baad044dd8847c0b1e19db23a0c7d0db75bbd835c",
+      "prediction_bytes": 12823355,
+      "per_target_wall_with_saving_seconds": 1.2196400151588023
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 331,
+      "context_rgb_ids": [
+        321,
+        326,
+        331
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 280.9881591796875,
+      "forward_wall_seconds": 0.2810607480350882,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.00484849140048027,
+      "model_probability_quantiles": [
+        3.114186620223336e-05,
+        0.000924019463127479,
+        0.011153381317853928,
+        0.0261020977050066,
+        0.09384181350469589
+      ],
+      "confidence_mean": 0.1518057882785797,
+      "confidence_quantiles": [
+        1.131351368144351e-08,
+        9.274688181903912e-07,
+        0.16835273802280426,
+        0.3282945901155472,
+        0.35269683599472046,
+        0.4824797511100769
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.497920298576355,
+        "log_depth_display_P98": 3.077269673347473,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.003570572705939412,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "035a14894b94333d9188aed0a036fe86d8363ffeab82aeafded12d2f7e1f295d",
+      "prediction_bytes": 12821572,
+      "per_target_wall_with_saving_seconds": 1.2042735528666526
+    },
+    {
+      "mode": "A",
+      "target_rgb_id": 332,
+      "context_rgb_ids": [
+        322,
+        327,
+        332
+      ],
+      "input_shape": [
+        1,
+        3,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 281.1220397949219,
+      "forward_wall_seconds": 0.28119254601188004,
+      "GPU_peak_allocated_bytes": 6352435712,
+      "GPU_peak_reserved_bytes": 6484393984,
+      "model_probability_mean": 0.006493657361716032,
+      "model_probability_quantiles": [
+        7.56177250877954e-05,
+        0.0014896351494826376,
+        0.02022231463342905,
+        0.03486334253102541,
+        0.09265335649251938
+      ],
+      "confidence_mean": 0.1774946004152298,
+      "confidence_quantiles": [
+        9.863662775444482e-09,
+        9.803275133890565e-07,
+        0.19738689064979553,
+        0.3796740770339966,
+        0.40555795282125473,
+        0.5200223922729492
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.5250471353530886,
+        "log_depth_display_P98": 3.091001486778259,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.002636989811435342,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "515e0f5f65dd016dd1949561127ceb6937cf495fec54ef1c213d69e32c337133",
+      "prediction_bytes": 12849588,
+      "per_target_wall_with_saving_seconds": 1.212009937968105
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 301,
+      "context_rgb_ids": [
+        281,
+        286,
+        291,
+        296,
+        301
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 429.7588195800781,
+      "forward_wall_seconds": 0.42984273307956755,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.023709477856755257,
+      "model_probability_quantiles": [
+        0.0001946423144545406,
+        0.006685671396553516,
+        0.05653552897274494,
+        0.08128623105585575,
+        0.7585371136665344
+      ],
+      "confidence_mean": 0.2084704339504242,
+      "confidence_quantiles": [
+        4.836881561942619e-09,
+        5.028065572787455e-07,
+        0.1859494149684906,
+        0.47869257628917694,
+        0.5080230832099915,
+        0.7201449275016785
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.01289158950617284,
+        "0.4": 0.011540316358024692,
+        "0.6": 0.009879436728395061
+      },
+      "dynamic_model_area": {
+        "0.2": 0.012841710758377424,
+        "0.4": 0.011526832955404385,
+        "0.6": 0.009830089443184682
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.546730399131775,
+        "log_depth_display_P98": 2.5769320487976066,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": null,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "b0539488738375275f5409767aefdecb94b7b890d6ac0adb0c638ae22c368a09",
+      "prediction_bytes": 12845252,
+      "per_target_wall_with_saving_seconds": 1.4229485031682998
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 302,
+      "context_rgb_ids": [
+        282,
+        287,
+        292,
+        297,
+        302
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.1268615722656,
+      "forward_wall_seconds": 0.42620184388943017,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.024932293221354485,
+      "model_probability_quantiles": [
+        0.00023161705757956952,
+        0.006993350340053439,
+        0.05365430563688278,
+        0.08052952960133553,
+        0.7838345766067505
+      ],
+      "confidence_mean": 0.1678168624639511,
+      "confidence_quantiles": [
+        4.409974163621655e-09,
+        4.2230426799960696e-07,
+        0.13824760168790817,
+        0.38951003551483154,
+        0.4187384992837906,
+        0.584220826625824
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.014423225308641976,
+        "0.4": 0.012964891975308642,
+        "0.6": 0.010875289351851851
+      },
+      "dynamic_model_area": {
+        "0.2": 0.01436130007558579,
+        "0.4": 0.013003117913832199,
+        "0.6": 0.01089695137314185
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.7331135272979736,
+        "log_depth_display_P98": 2.4903356552123994,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005436232779175043,
+      "Eulerian_temporal_mask_IoU": 0.68042071197411,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "c37dc8c4f67a334e1fa1812ee650c519527baffd83b4c0f0c4245be47ca22275",
+      "prediction_bytes": 12843342,
+      "per_target_wall_with_saving_seconds": 1.423068932024762
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 303,
+      "context_rgb_ids": [
+        283,
+        288,
+        293,
+        298,
+        303
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 425.6705322265625,
+      "forward_wall_seconds": 0.4257475968915969,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.026963617652654648,
+      "model_probability_quantiles": [
+        0.00019092053116764873,
+        0.007562181679531932,
+        0.05995229817926884,
+        0.08738270588219166,
+        0.7746309638023376
+      ],
+      "confidence_mean": 0.18795381486415863,
+      "confidence_quantiles": [
+        5.817990977874388e-09,
+        4.6488260352361976e-07,
+        0.14992491155862808,
+        0.4456493556499481,
+        0.4789980947971344,
+        0.6228886246681213
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.015322627314814815,
+        "0.4": 0.013473668981481482,
+        "0.6": 0.010599440586419753
+      },
+      "dynamic_model_area": {
+        "0.2": 0.015274628369866466,
+        "0.4": 0.013503086419753086,
+        "0.6": 0.01057807382212144
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.974500870704651,
+        "log_depth_display_P98": 2.550366854667663,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005697479005903006,
+      "Eulerian_temporal_mask_IoU": 0.7330759330759331,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "fce9f0de5af52966a3c0277e6163f832c5a5f09faf0fa07dc77f68140c98467e",
+      "prediction_bytes": 12831736,
+      "per_target_wall_with_saving_seconds": 1.4307389268651605
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 304,
+      "context_rgb_ids": [
+        284,
+        289,
+        294,
+        299,
+        304
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.4732971191406,
+      "forward_wall_seconds": 0.4265664708800614,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.02712929993867874,
+      "model_probability_quantiles": [
+        0.00028738976106978953,
+        0.007376262452453375,
+        0.05880143493413925,
+        0.09107998013496399,
+        0.7443903088569641
+      ],
+      "confidence_mean": 0.2338583618402481,
+      "confidence_quantiles": [
+        4.95499596908644e-09,
+        4.1331389866172685e-07,
+        0.18427573889493942,
+        0.557725191116333,
+        0.5937077105045319,
+        0.7841903567314148
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.016568287037037038,
+        "0.4": 0.01478539737654321,
+        "0.6": 0.011813271604938272
+      },
+      "dynamic_model_area": {
+        "0.2": 0.01650683421516755,
+        "0.4": 0.014766786344167296,
+        "0.6": 0.011786659108087679
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.922745943069458,
+        "log_depth_display_P98": 2.6343006372451745,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0042010885663330555,
+      "Eulerian_temporal_mask_IoU": 0.7665436654366544,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "2be10ece60ffd7c564662913a349c92e8c656d7688c8416803c4216ad710e8f7",
+      "prediction_bytes": 12847660,
+      "per_target_wall_with_saving_seconds": 1.431510282913223
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 305,
+      "context_rgb_ids": [
+        285,
+        290,
+        295,
+        300,
+        305
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 425.9468078613281,
+      "forward_wall_seconds": 0.4260236939880997,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.029372038319706917,
+      "model_probability_quantiles": [
+        0.00043767972965724766,
+        0.008796065114438534,
+        0.05812243930995464,
+        0.0923132598400116,
+        0.749302327632904
+      ],
+      "confidence_mean": 0.24668996036052704,
+      "confidence_quantiles": [
+        4.42651648668857e-09,
+        4.81713840372322e-07,
+        0.20059074461460114,
+        0.5858895480632782,
+        0.626104936003685,
+        0.7668161988258362
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.01823881172839506,
+        "0.4": 0.016374421296296297,
+        "0.6": 0.013578317901234567
+      },
+      "dynamic_model_area": {
+        "0.2": 0.018195704207608968,
+        "0.4": 0.016357237339380198,
+        "0.6": 0.013503086419753086
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.052106809616089,
+        "log_depth_display_P98": 2.6806806087493897,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004878619685769081,
+      "Eulerian_temporal_mask_IoU": 0.7758310871518419,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "025095b747fc7790f49cb816d832b7c87cb6594ea150c21e5c80568959f78ccd",
+      "prediction_bytes": 12802055,
+      "per_target_wall_with_saving_seconds": 1.4322888480965048
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 306,
+      "context_rgb_ids": [
+        286,
+        291,
+        296,
+        301,
+        306
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.6841735839844,
+      "forward_wall_seconds": 0.42675967002287507,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.027847277000546455,
+      "model_probability_quantiles": [
+        0.0003569837426766753,
+        0.007654487853869796,
+        0.05508476309478283,
+        0.07969120889902115,
+        0.7471616268157959
+      ],
+      "confidence_mean": 0.2149418294429779,
+      "confidence_quantiles": [
+        4.046595947215792e-09,
+        4.080351345692179e-07,
+        0.17485803365707397,
+        0.5148153007030487,
+        0.5504899024963379,
+        0.7170010805130005
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.01962721836419753,
+        "0.4": 0.017723283179012346,
+        "0.6": 0.014071180555555556
+      },
+      "dynamic_model_area": {
+        "0.2": 0.01960112748803225,
+        "0.4": 0.01773904006046863,
+        "0.6": 0.013983371126228269
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.102094316482544,
+        "log_depth_display_P98": 2.6426355123519882,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004543411545455456,
+      "Eulerian_temporal_mask_IoU": 0.9064494827206692,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "529043d2b37ec72770ce77ea7e36171573d2c00e263c1112719b65614669d208",
+      "prediction_bytes": 12855417,
+      "per_target_wall_with_saving_seconds": 1.424862990854308
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 307,
+      "context_rgb_ids": [
+        287,
+        292,
+        297,
+        302,
+        307
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 425.9049377441406,
+      "forward_wall_seconds": 0.4259848562069237,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.029986942186951637,
+      "model_probability_quantiles": [
+        0.00046792600187473,
+        0.009983280673623085,
+        0.05113152228295803,
+        0.07789626158773899,
+        0.7362072467803955
+      ],
+      "confidence_mean": 0.20492462813854218,
+      "confidence_quantiles": [
+        4.047552959463019e-09,
+        3.9368850934806687e-07,
+        0.15431677550077438,
+        0.49131353199481964,
+        0.5234076678752899,
+        0.6627277731895447
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.021279417438271605,
+        "0.4": 0.019183063271604937,
+        "0.6": 0.013988233024691358
+      },
+      "dynamic_model_area": {
+        "0.2": 0.021227009322247418,
+        "0.4": 0.01921532501889645,
+        "0.6": 0.01380228017132779
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.038056468963623,
+        "log_depth_display_P98": 2.641004252433773,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005502279847860336,
+      "Eulerian_temporal_mask_IoU": 0.8431180051050461,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "a77edaf02a0f641cef485b7719513b769d2eed09d44fba9c44ab1f00340115a7",
+      "prediction_bytes": 12809633,
+      "per_target_wall_with_saving_seconds": 1.4407410400453955
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 308,
+      "context_rgb_ids": [
+        288,
+        293,
+        298,
+        303,
+        308
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 425.8912658691406,
+      "forward_wall_seconds": 0.4259669550228864,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.029377155005931854,
+      "model_probability_quantiles": [
+        0.0002566278853919357,
+        0.007137091597542167,
+        0.05174636282026768,
+        0.09018724597990513,
+        0.7526938319206238
+      ],
+      "confidence_mean": 0.23068009316921234,
+      "confidence_quantiles": [
+        3.989775176904686e-09,
+        3.5939007148044766e-07,
+        0.17452920973300934,
+        0.5508686006069183,
+        0.5878415405750275,
+        0.8009538054466248
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.023275462962962963,
+        "0.4": 0.021410108024691357,
+        "0.6": 0.015944251543209876
+      },
+      "dynamic_model_area": {
+        "0.2": 0.023179642227261276,
+        "0.4": 0.02148289871504157,
+        "0.6": 0.0157116087175611
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.1172655582427975,
+        "log_depth_display_P98": 2.6625085353851317,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.006101003382354975,
+      "Eulerian_temporal_mask_IoU": 0.8573481854114265,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "ff238e0bf3f08dfc202c2c5e8aaf3e00a849554bcce22a9da5c0f695fd1f1bbe",
+      "prediction_bytes": 12842919,
+      "per_target_wall_with_saving_seconds": 1.4184269888792187
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 309,
+      "context_rgb_ids": [
+        289,
+        294,
+        299,
+        304,
+        309
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 425.99322509765625,
+      "forward_wall_seconds": 0.4260755949653685,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.030546491965651512,
+      "model_probability_quantiles": [
+        0.00033058924600481987,
+        0.007949695456773043,
+        0.049782849848270416,
+        0.08137029781937599,
+        0.7008836269378662
+      ],
+      "confidence_mean": 0.25099629163742065,
+      "confidence_quantiles": [
+        4.5609875876095884e-09,
+        4.0425098291052564e-07,
+        0.18857218325138092,
+        0.6008267104625702,
+        0.6313111931085587,
+        0.8131579160690308
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.025943287037037036,
+        "0.4": 0.0237842399691358,
+        "0.6": 0.014620949074074074
+      },
+      "dynamic_model_area": {
+        "0.2": 0.02586451247165533,
+        "0.4": 0.023801650289745527,
+        "0.6": 0.014373110355253212
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.178330373764038,
+        "log_depth_display_P98": 2.6454338312149033,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005323946010321379,
+      "Eulerian_temporal_mask_IoU": 0.8532302239407121,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "9ba6b1a486d62591f1d992a0af25f3526d7bd2ab52061afe556b20488144860b",
+      "prediction_bytes": 12832181,
+      "per_target_wall_with_saving_seconds": 1.4170358970295638
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 310,
+      "context_rgb_ids": [
+        290,
+        295,
+        300,
+        305,
+        310
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.4598693847656,
+      "forward_wall_seconds": 0.4275599259417504,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.0335719995200634,
+      "model_probability_quantiles": [
+        0.0004784705233760178,
+        0.008352114353328943,
+        0.05486614070832729,
+        0.09480706602334976,
+        0.7154933214187622
+      ],
+      "confidence_mean": 0.25029003620147705,
+      "confidence_quantiles": [
+        3.159352335302401e-09,
+        3.697273314173799e-07,
+        0.18638087064027786,
+        0.6071766316890717,
+        0.6380044668912888,
+        0.8102644085884094
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.02994020061728395,
+        "0.4": 0.027366415895061728,
+        "0.6": 0.016574074074074074
+      },
+      "dynamic_model_area": {
+        "0.2": 0.02986032375913328,
+        "0.4": 0.02740772234819854,
+        "0.6": 0.01603835978835979
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.071492767333984,
+        "log_depth_display_P98": 2.6958400249481196,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005871479865163565,
+      "Eulerian_temporal_mask_IoU": 0.7865677791512155,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "7a3cfa52f991480d201c625f8474dd1ca90854542a424bc44e173d4bf0f6ca7b",
+      "prediction_bytes": 12795106,
+      "per_target_wall_with_saving_seconds": 1.4331247131340206
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 311,
+      "context_rgb_ids": [
+        291,
+        296,
+        301,
+        306,
+        311
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.507080078125,
+      "forward_wall_seconds": 0.4265899411402643,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.034337498247623444,
+      "model_probability_quantiles": [
+        0.00041516023338772357,
+        0.007195869227871299,
+        0.055856406688690186,
+        0.09224196895956993,
+        0.693061888217926
+      ],
+      "confidence_mean": 0.1977410614490509,
+      "confidence_quantiles": [
+        3.844533580377174e-09,
+        3.820105263230289e-07,
+        0.15783823281526566,
+        0.47500310838222504,
+        0.504732757806778,
+        0.7501442432403564
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.034487364969135806,
+        "0.4": 0.03179012345679012,
+        "0.6": 0.012093460648148148
+      },
+      "dynamic_model_area": {
+        "0.2": 0.03439940791131267,
+        "0.4": 0.03184051398337113,
+        "0.6": 0.012353552532123961
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.182919216156006,
+        "log_depth_display_P98": 2.7178493976593017,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0072155422531068325,
+      "Eulerian_temporal_mask_IoU": 0.7571511967308815,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "031baba4a3023ba5065d83a570619e393d9b63bb97c39f2eaaa96aef1ce03670",
+      "prediction_bytes": 12812769,
+      "per_target_wall_with_saving_seconds": 1.4304137900471687
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 312,
+      "context_rgb_ids": [
+        292,
+        297,
+        302,
+        307,
+        312
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.9166259765625,
+      "forward_wall_seconds": 0.426995589165017,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.036285825073719025,
+      "model_probability_quantiles": [
+        0.00024572978145442903,
+        0.005792095325887203,
+        0.05143699236214161,
+        0.10496154986321926,
+        0.7030763030052185
+      ],
+      "confidence_mean": 0.14787262678146362,
+      "confidence_quantiles": [
+        5.5509943308607035e-09,
+        4.534588242677273e-07,
+        0.11063455045223236,
+        0.352097824215889,
+        0.3814702406525612,
+        0.5221181511878967
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.04200665509259259,
+        "0.4": 0.038326099537037035,
+        "0.6": 0.014620466820987655
+      },
+      "dynamic_model_area": {
+        "0.2": 0.04196586041824137,
+        "0.4": 0.03832435752078609,
+        "0.6": 0.015006928697404888
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.8525315046310427,
+        "log_depth_display_P98": 2.7830123424529973,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.009467562660574913,
+      "Eulerian_temporal_mask_IoU": 0.7347673739536694,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "62687e61762f2769f329b646b140724498cdb93bdaaf7a4931a6fee252745312",
+      "prediction_bytes": 12825448,
+      "per_target_wall_with_saving_seconds": 1.4248995708767325
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 313,
+      "context_rgb_ids": [
+        293,
+        298,
+        303,
+        308,
+        313
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.26348876953125,
+      "forward_wall_seconds": 0.42634207312949,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.042765241116285324,
+      "model_probability_quantiles": [
+        0.0003574073489289731,
+        0.007087270263582468,
+        0.06741782650351524,
+        0.1759796403348446,
+        0.7011168003082275
+      ],
+      "confidence_mean": 0.13125856220722198,
+      "confidence_quantiles": [
+        5.110031953137195e-09,
+        4.5365348455561616e-07,
+        0.11240804940462112,
+        0.30267637968063354,
+        0.32728031277656555,
+        0.5283869504928589
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.048993055555555554,
+        "0.4": 0.04484567901234568,
+        "0.6": 0.016631944444444446
+      },
+      "dynamic_model_area": {
+        "0.2": 0.04894573570168808,
+        "0.4": 0.04485937893675989,
+        "0.6": 0.016947751322751323
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.26137900352478,
+        "log_depth_display_P98": 2.726488757133481,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.009966392070055008,
+      "Eulerian_temporal_mask_IoU": 0.7471473457913015,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "3c40514a0341151c02d138fb17f8fd983b3fbcacca009dc29c7842d9e0981345",
+      "prediction_bytes": 12811936,
+      "per_target_wall_with_saving_seconds": 1.444506567902863
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 314,
+      "context_rgb_ids": [
+        294,
+        299,
+        304,
+        309,
+        314
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.2976379394531,
+      "forward_wall_seconds": 0.4263779819011688,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.04681098833680153,
+      "model_probability_quantiles": [
+        0.0003702430985867977,
+        0.006689703790470958,
+        0.06408137455582619,
+        0.5071346461772919,
+        0.7699911594390869
+      ],
+      "confidence_mean": 0.1636926680803299,
+      "confidence_quantiles": [
+        7.513374811196627e-09,
+        6.294462764344644e-07,
+        0.13127724081277847,
+        0.3816542774438858,
+        0.4081661105155945,
+        0.6219239830970764
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.05855661651234568,
+        "0.4": 0.05486641589506173,
+        "0.6": 0.019597800925925925
+      },
+      "dynamic_model_area": {
+        "0.2": 0.058543556311413454,
+        "0.4": 0.05487449609473419,
+        "0.6": 0.02034123834719073
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.176226234436035,
+        "log_depth_display_P98": 2.824709701538084,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.011023461818695068,
+      "Eulerian_temporal_mask_IoU": 0.7184913851580518,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "2d56af7788e438925dee2d8ed1dd1576f7a99d2a1fd14521d516ba55d6f81c08",
+      "prediction_bytes": 12807702,
+      "per_target_wall_with_saving_seconds": 1.4387794209178537
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 315,
+      "context_rgb_ids": [
+        295,
+        300,
+        305,
+        310,
+        315
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.73175048828125,
+      "forward_wall_seconds": 0.4268162101507187,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.0472017377614975,
+      "model_probability_quantiles": [
+        0.0003942736657336354,
+        0.006347928894683719,
+        0.06167563050985336,
+        0.5276584774255753,
+        0.7997839450836182
+      ],
+      "confidence_mean": 0.16955377161502838,
+      "confidence_quantiles": [
+        6.100599581060351e-09,
+        5.418841055870871e-07,
+        0.14262831211090088,
+        0.39598990976810455,
+        0.42230162769556046,
+        0.6306945085525513
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.05968557098765432,
+        "0.4": 0.056532600308641975,
+        "0.6": 0.01898485725308642
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05960254472159234,
+        "0.4": 0.05657517636684303,
+        "0.6": 0.019813712522045855
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.161869668960572,
+        "log_depth_display_P98": 2.8324637174606275,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0077301450073719025,
+      "Eulerian_temporal_mask_IoU": 0.8457426000782371,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "859641b480c112af982e9092bf73aa889f081643ea32a5dc40e0c8953bfe03ab",
+      "prediction_bytes": 12815386,
+      "per_target_wall_with_saving_seconds": 1.4432146351318806
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 316,
+      "context_rgb_ids": [
+        296,
+        301,
+        306,
+        311,
+        316
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.1925964355469,
+      "forward_wall_seconds": 0.42627323302440345,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.04762715473771095,
+      "model_probability_quantiles": [
+        0.00023380565107800066,
+        0.007084483979269862,
+        0.06660102307796478,
+        0.5105012059211731,
+        0.7681958675384521
+      ],
+      "confidence_mean": 0.1528605818748474,
+      "confidence_quantiles": [
+        1.5296471644887788e-08,
+        9.498479585090536e-07,
+        0.1294829174876213,
+        0.35672128200531006,
+        0.3807833194732666,
+        0.5316182971000671
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.05934172453703704,
+        "0.4": 0.055600887345679015,
+        "0.6": 0.016340663580246915
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05924036281179138,
+        "0.4": 0.055638227513227514,
+        "0.6": 0.016770597127739983
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.197506523132324,
+        "log_depth_display_P98": 2.8571287870407094,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.00797286443412304,
+      "Eulerian_temporal_mask_IoU": 0.8647128091063718,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "3a6400c6083ff256477b5e8e6009a23263b166f1fa2ca31628ef34f54f6c8907",
+      "prediction_bytes": 12831656,
+      "per_target_wall_with_saving_seconds": 1.4460186590440571
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 317,
+      "context_rgb_ids": [
+        297,
+        302,
+        307,
+        312,
+        317
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.69964599609375,
+      "forward_wall_seconds": 0.4267824199050665,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.04652150720357895,
+      "model_probability_quantiles": [
+        0.00021270918659865856,
+        0.00866462429985404,
+        0.05539460852742195,
+        0.483221672475338,
+        0.7866644263267517
+      ],
+      "confidence_mean": 0.13932277262210846,
+      "confidence_quantiles": [
+        8.20145906743619e-09,
+        8.005280562883854e-07,
+        0.10610649734735489,
+        0.3278011381626129,
+        0.352318674325943,
+        0.5083557963371277
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.05693045910493827,
+        "0.4": 0.0532445987654321,
+        "0.6": 0.016568287037037038
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05691767447719829,
+        "0.4": 0.053256487780297304,
+        "0.6": 0.016865079365079364
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.71719970703125,
+        "log_depth_display_P98": 2.898967552185058,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.009323340840637684,
+      "Eulerian_temporal_mask_IoU": 0.8391622340425532,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "2220e592a896f436c16e32fef6a37b09f6a30c66fdf64baf73423152085fc074",
+      "prediction_bytes": 12859691,
+      "per_target_wall_with_saving_seconds": 1.4385038521140814
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 318,
+      "context_rgb_ids": [
+        298,
+        303,
+        308,
+        313,
+        318
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.8341369628906,
+      "forward_wall_seconds": 0.4269233390223235,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.04677301645278931,
+      "model_probability_quantiles": [
+        0.00024370827304665,
+        0.008851723279803991,
+        0.06984637677669525,
+        0.3609870374202728,
+        0.7651609778404236
+      ],
+      "confidence_mean": 0.1583738476037979,
+      "confidence_quantiles": [
+        6.132658381119427e-09,
+        6.443454765303613e-07,
+        0.15310265123844147,
+        0.35038822889328003,
+        0.3777448534965515,
+        0.6856958866119385
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.05430217978395062,
+        "0.4": 0.04935378086419753,
+        "0.6": 0.016480516975308643
+      },
+      "dynamic_model_area": {
+        "0.2": 0.05432334971025447,
+        "0.4": 0.049335474930713025,
+        "0.6": 0.016951688082640463
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.392371606826782,
+        "log_depth_display_P98": 2.9597352027893025,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.010772638954222202,
+      "Eulerian_temporal_mask_IoU": 0.7909422032849976,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "dae76fcf53f84512cc558f185c8af8a5b3d9ef6ee5dd9265512df9c20559cd15",
+      "prediction_bytes": 12839320,
+      "per_target_wall_with_saving_seconds": 1.4412707660812885
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 319,
+      "context_rgb_ids": [
+        299,
+        304,
+        309,
+        314,
+        319
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.3384704589844,
+      "forward_wall_seconds": 0.4274141469504684,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.04672188684344292,
+      "model_probability_quantiles": [
+        0.0005387563724070787,
+        0.011839305516332388,
+        0.07883185148239136,
+        0.1728024072945118,
+        0.7159927487373352
+      ],
+      "confidence_mean": 0.17472346127033234,
+      "confidence_quantiles": [
+        6.370027172408754e-09,
+        8.642590785257198e-07,
+        0.1640734300017357,
+        0.38710325956344604,
+        0.412299245595932,
+        0.6614082455635071
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.04757378472222222,
+        "0.4": 0.04311005015432099,
+        "0.6": 0.013158757716049383
+      },
+      "dynamic_model_area": {
+        "0.2": 0.047563932980599646,
+        "0.4": 0.04307602670697909,
+        "0.6": 0.013558201058201057
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.507260751724243,
+        "log_depth_display_P98": 2.966506123542783,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.01163101103156805,
+      "Eulerian_temporal_mask_IoU": 0.7372705743043221,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "876aa0caf3ac96926b78245ce91b644fd99a1381325fb247d0edccf11e123f07",
+      "prediction_bytes": 12805573,
+      "per_target_wall_with_saving_seconds": 1.465423866175115
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 320,
+      "context_rgb_ids": [
+        300,
+        305,
+        310,
+        315,
+        320
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.4227600097656,
+      "forward_wall_seconds": 0.42750531691126525,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.042898476123809814,
+      "model_probability_quantiles": [
+        0.0006473951507359743,
+        0.01238861819729209,
+        0.07404132559895515,
+        0.13406826183199883,
+        0.726668119430542
+      ],
+      "confidence_mean": 0.18735705316066742,
+      "confidence_quantiles": [
+        5.498915545132377e-09,
+        7.887272204243345e-07,
+        0.1756804808974266,
+        0.4169594496488571,
+        0.44447918236255646,
+        0.6909197568893433
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.03980516975308642,
+        "0.4": 0.034989872685185185,
+        "0.6": 0.0131225887345679
+      },
+      "dynamic_model_area": {
+        "0.2": 0.03980851599899219,
+        "0.4": 0.03497811161501638,
+        "0.6": 0.01318814562862182
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.471484518051147,
+        "log_depth_display_P98": 3.0196953535079953,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.008677606470882893,
+      "Eulerian_temporal_mask_IoU": 0.7372294751599053,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "89cdbe49d7ed7ac6ebefa912188293cf5b45ecd7a295774bfcf197c9b133d978",
+      "prediction_bytes": 12795019,
+      "per_target_wall_with_saving_seconds": 1.456159400055185
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 321,
+      "context_rgb_ids": [
+        301,
+        306,
+        311,
+        316,
+        321
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.988525390625,
+      "forward_wall_seconds": 0.42806644295342267,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.03720695897936821,
+      "model_probability_quantiles": [
+        0.0002918037062045187,
+        0.009921592194586992,
+        0.072365652769804,
+        0.11453309841454029,
+        0.7446252107620239
+      ],
+      "confidence_mean": 0.15032000839710236,
+      "confidence_quantiles": [
+        8.254882111202733e-09,
+        8.485051807838317e-07,
+        0.14376682043075562,
+        0.32998761534690857,
+        0.35431264340877533,
+        0.6041314005851746
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.030308641975308644,
+        "0.4": 0.02517795138888889,
+        "0.6": 0.012944155092592592
+      },
+      "dynamic_model_area": {
+        "0.2": 0.030482331821617536,
+        "0.4": 0.025183453010833964,
+        "0.6": 0.012707860922146636
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.461698579788208,
+        "log_depth_display_P98": 2.9576800823211657,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.01139718759804964,
+      "Eulerian_temporal_mask_IoU": 0.6188559322033899,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "4f9972a070113a960fe045d655ca3560833241edb8a09cc13ee091868fe4ad4c",
+      "prediction_bytes": 12832615,
+      "per_target_wall_with_saving_seconds": 1.4517899751663208
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 322,
+      "context_rgb_ids": [
+        302,
+        307,
+        312,
+        317,
+        322
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 428.621337890625,
+      "forward_wall_seconds": 0.4287379391025752,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.03239281103014946,
+      "model_probability_quantiles": [
+        0.00028607406420633197,
+        0.009779333602637053,
+        0.07139181718230247,
+        0.10873410105705261,
+        0.7209498286247253
+      ],
+      "confidence_mean": 0.13112975656986237,
+      "confidence_quantiles": [
+        4.88539164678059e-09,
+        6.590754537683097e-07,
+        0.11699480563402176,
+        0.29186733067035675,
+        0.3214543089270592,
+        0.6045123338699341
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.02052854938271605,
+        "0.4": 0.016354166666666666,
+        "0.6": 0.007788869598765432
+      },
+      "dynamic_model_area": {
+        "0.2": 0.020561696900982616,
+        "0.4": 0.01637298437893676,
+        "0.6": 0.007818405139833711
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.0440891742706295,
+        "log_depth_display_P98": 2.8924444913864114,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.011231566779315472,
+      "Eulerian_temporal_mask_IoU": 0.4850872256612268,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "cd432406f21f6f3be73eaa06d03f69d33a94eba70f40bca785d99621c7701676",
+      "prediction_bytes": 12821827,
+      "per_target_wall_with_saving_seconds": 1.4491664608940482
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 323,
+      "context_rgb_ids": [
+        303,
+        308,
+        313,
+        318,
+        323
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.4692077636719,
+      "forward_wall_seconds": 0.42754703597165644,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.026807112619280815,
+      "model_probability_quantiles": [
+        0.00025956128956750035,
+        0.010823937598615885,
+        0.0673873983323574,
+        0.0936846174299717,
+        0.6902053356170654
+      ],
+      "confidence_mean": 0.154978409409523,
+      "confidence_quantiles": [
+        5.2094271119074165e-09,
+        6.040456810296746e-07,
+        0.1411757469177246,
+        0.35393399000167847,
+        0.38223154097795486,
+        0.633251428604126
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.007954282407407408,
+        "0.4": 0.006447723765432099,
+        "0.6": 0.0007296489197530865
+      },
+      "dynamic_model_area": {
+        "0.2": 0.008034926933736457,
+        "0.4": 0.00645234945830184,
+        "0.6": 0.0008778974552784076
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.203002977371216,
+        "log_depth_display_P98": 2.9858465671539305,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.010886268690228462,
+      "Eulerian_temporal_mask_IoU": 0.2703768624014023,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "8c99933f599f9a2456b63afd3e6e7896b3141475665acade85a4c48a0da985d1",
+      "prediction_bytes": 12789902,
+      "per_target_wall_with_saving_seconds": 1.4420445619616657
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 324,
+      "context_rgb_ids": [
+        304,
+        309,
+        314,
+        319,
+        324
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.6289367675781,
+      "forward_wall_seconds": 0.42670400091446936,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.021883973851799965,
+      "model_probability_quantiles": [
+        0.0003037817950826138,
+        0.011094848159700632,
+        0.06207718327641487,
+        0.08309067226946354,
+        0.1815018206834793
+      ],
+      "confidence_mean": 0.1503693014383316,
+      "confidence_quantiles": [
+        6.6091407902035826e-09,
+        6.035216699729062e-07,
+        0.1321725696325302,
+        0.34667621552944183,
+        0.37444259971380234,
+        0.7027412056922913
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -4.242392635345459,
+        "log_depth_display_P98": 2.8704557657241794,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.008202769793570042,
+      "Eulerian_temporal_mask_IoU": 0.0,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "9b21470b8788c5dba6b30a317935991882e5fa28f154c2f38a549e2789a4f8db",
+      "prediction_bytes": 12717724,
+      "per_target_wall_with_saving_seconds": 1.4367480028886348
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 325,
+      "context_rgb_ids": [
+        305,
+        310,
+        315,
+        320,
+        325
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.35455322265625,
+      "forward_wall_seconds": 0.4274313570931554,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.019107593223452568,
+      "model_probability_quantiles": [
+        0.00019358548161108047,
+        0.007484226953238249,
+        0.0592669527977705,
+        0.08201664872467518,
+        0.16885672509670258
+      ],
+      "confidence_mean": 0.15423928201198578,
+      "confidence_quantiles": [
+        5.11194331309639e-09,
+        5.691724709322443e-07,
+        0.11706172302365303,
+        0.3705558031797409,
+        0.3974175602197647,
+        0.7170826196670532
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.9954182863235475,
+        "log_depth_display_P98": 2.8261945724487285,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0037168769631534815,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "a3bde432a3026bc12d2d9f03a402878e9011b26a339343f1ce1d75ef48db9f50",
+      "prediction_bytes": 12774872,
+      "per_target_wall_with_saving_seconds": 1.4144041929394007
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 326,
+      "context_rgb_ids": [
+        306,
+        311,
+        316,
+        321,
+        326
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.8408508300781,
+      "forward_wall_seconds": 0.4279203428886831,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.015549340285360813,
+      "model_probability_quantiles": [
+        0.0001906204124679789,
+        0.006219890667125583,
+        0.045559246093034744,
+        0.06384365260601044,
+        0.1384260654449463
+      ],
+      "confidence_mean": 0.09671583771705627,
+      "confidence_quantiles": [
+        6.585383793833444e-09,
+        7.3584203619248e-07,
+        0.07018182054162025,
+        0.231430321931839,
+        0.2513953298330307,
+        0.684796154499054
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.9278497219085695,
+        "log_depth_display_P98": 2.748631763458251,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004335704725235701,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "93f675c062e79e1903d08ffafbc80592e2f0403d140b55bd1c7a82308eada3e2",
+      "prediction_bytes": 12750955,
+      "per_target_wall_with_saving_seconds": 1.411486028926447
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 327,
+      "context_rgb_ids": [
+        307,
+        312,
+        317,
+        322,
+        327
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.9030456542969,
+      "forward_wall_seconds": 0.42796410410664976,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.014621562324464321,
+      "model_probability_quantiles": [
+        0.0001408865791745484,
+        0.006223219679668546,
+        0.03852417133748531,
+        0.06198314856737852,
+        0.17222590744495392
+      ],
+      "confidence_mean": 0.04729637876152992,
+      "confidence_quantiles": [
+        5.166295391489939e-09,
+        4.861746845108428e-07,
+        0.03623429872095585,
+        0.113166444003582,
+        0.12785983085632324,
+        0.31590378284454346
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.1696756362915037,
+        "log_depth_display_P98": 2.719989585876464,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.0040668584406375885,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "954c4ff6e13f4ea32dd52420d32bdb1a6d535a94ecc942f55fc635596b191a80",
+      "prediction_bytes": 12785668,
+      "per_target_wall_with_saving_seconds": 1.3993660900741816
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 328,
+      "context_rgb_ids": [
+        308,
+        313,
+        318,
+        323,
+        328
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 426.8318176269531,
+      "forward_wall_seconds": 0.4269089300651103,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.014587408863008022,
+      "model_probability_quantiles": [
+        0.0003902791067957878,
+        0.004383692052215338,
+        0.04372375085949898,
+        0.06864231638610363,
+        0.20769689977169037
+      ],
+      "confidence_mean": 0.035615336149930954,
+      "confidence_quantiles": [
+        2.6687150267434845e-09,
+        2.89699741529148e-07,
+        0.02486906759440899,
+        0.0904814824461937,
+        0.10441778413951397,
+        0.19559870660305023
+      ],
+      "dynamic_original_area": {
+        "0.2": 9.645061728395062e-07,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 3.936759889140842e-06,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -3.2350183010101317,
+        "log_depth_display_P98": 2.7972071647644032,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004194340202957392,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "3fa868c31ee6213f7cda4b874f9c18cf6cd92d1a5645041fdf19bff96db21211",
+      "prediction_bytes": 12723368,
+      "per_target_wall_with_saving_seconds": 1.4098819689825177
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 329,
+      "context_rgb_ids": [
+        309,
+        314,
+        319,
+        324,
+        329
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 428.11138916015625,
+      "forward_wall_seconds": 0.42819086206145585,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.01215042732656002,
+      "model_probability_quantiles": [
+        0.00017968467727769166,
+        0.003058582777157426,
+        0.03832566924393177,
+        0.05576685070991516,
+        0.16776444017887115
+      ],
+      "confidence_mean": 0.060062021017074585,
+      "confidence_quantiles": [
+        5.260489821523606e-09,
+        5.748213141032466e-07,
+        0.05725711211562157,
+        0.1363516002893448,
+        0.15259651839733124,
+        0.27612683176994324
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.7332961797714233,
+        "log_depth_display_P98": 2.812665653228758,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004017502535134554,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "f4183b59faddf840816c5291f4a96a382bdb7b8c4941b369fa06f92b7dd538a6",
+      "prediction_bytes": 12792237,
+      "per_target_wall_with_saving_seconds": 1.3984640850685537
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 330,
+      "context_rgb_ids": [
+        310,
+        315,
+        320,
+        325,
+        330
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 427.3612365722656,
+      "forward_wall_seconds": 0.4274417459964752,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.012584416195750237,
+      "model_probability_quantiles": [
+        0.00034810128272511065,
+        0.00412020506337285,
+        0.03223063237965107,
+        0.060631271451711655,
+        0.1635238528251648
+      ],
+      "confidence_mean": 0.091360904276371,
+      "confidence_quantiles": [
+        8.002401408191417e-09,
+        9.133998162269563e-07,
+        0.08097930625081062,
+        0.20734433084726334,
+        0.22716575860977173,
+        0.3359386920928955
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.836565041542053,
+        "log_depth_display_P98": 2.8356149196624734,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.003193323267623782,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "51935531e2cb069543450353964aef5e8db50679e7cab4265d339f97d66079a7",
+      "prediction_bytes": 12754952,
+      "per_target_wall_with_saving_seconds": 1.3928604379761964
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 331,
+      "context_rgb_ids": [
+        311,
+        316,
+        321,
+        326,
+        331
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 428.8907775878906,
+      "forward_wall_seconds": 0.4289653969462961,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.008589637465775013,
+      "model_probability_quantiles": [
+        9.259340731659904e-05,
+        0.001996144652366638,
+        0.022687876597046852,
+        0.048467583023011684,
+        0.13997337222099304
+      ],
+      "confidence_mean": 0.1344553828239441,
+      "confidence_quantiles": [
+        7.918830924324993e-09,
+        9.154430529179081e-07,
+        0.12645063549280167,
+        0.2999078035354614,
+        0.3234281688928604,
+        0.43026870489120483
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.7320974349975584,
+        "log_depth_display_P98": 2.8186811208724967,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.004072890151292086,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "a087a97090a5d6fe12f83a983cb7dcbea4bee0a2a5b574329b0350f1ca930dd0",
+      "prediction_bytes": 12808686,
+      "per_target_wall_with_saving_seconds": 1.3912587868981063
+    },
+    {
+      "mode": "B",
+      "target_rgb_id": 332,
+      "context_rgb_ids": [
+        312,
+        317,
+        322,
+        327,
+        332
+      ],
+      "input_shape": [
+        1,
+        5,
+        3,
+        378,
+        672
+      ],
+      "forward_GPU_ms": 428.3832092285156,
+      "forward_wall_seconds": 0.42846310092136264,
+      "GPU_peak_allocated_bytes": 6794448384,
+      "GPU_peak_reserved_bytes": 6945767424,
+      "model_probability_mean": 0.012378202751278877,
+      "model_probability_quantiles": [
+        0.00026265918859280646,
+        0.0038856298197060823,
+        0.04074163734912872,
+        0.057853177189826965,
+        0.12146005779504776
+      ],
+      "confidence_mean": 0.16562315821647644,
+      "confidence_quantiles": [
+        9.01018726295888e-09,
+        9.015392663513921e-07,
+        0.17435937374830246,
+        0.35734812915325165,
+        0.3833937793970108,
+        0.49986138939857483
+      ],
+      "dynamic_original_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "dynamic_model_area": {
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0
+      },
+      "depth_units": "nonmetric auxiliary only",
+      "depth_display": {
+        "log_depth_display_P02": -2.762111854553223,
+        "log_depth_display_P98": 2.920212817192076,
+        "metric_units": false,
+        "display_only": true
+      },
+      "Eulerian_temporal_probability_MAD": 0.005208010319620371,
+      "Eulerian_temporal_mask_IoU": null,
+      "GT_detection_accuracy": null,
+      "prediction_sha256": "a468980017736a3d4e9d23c7f7d152b5178cae4661ac7ce8628c107c3b5c20ec",
+      "prediction_bytes": 12775420,
+      "per_target_wall_with_saving_seconds": 1.398303315974772
+    }
+  ],
+  "total_forward_count": 64,
+  "accuracy_or_GT_IoU_computed": false,
+  "temporal_metric_limit": "Eulerian same-pixel proxies; camera/object motion affects them; not detection accuracy or motion-compensated consistency"
+}

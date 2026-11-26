@@ -1,0 +1,2775 @@
+{
+  "contracts": {
+    "size": [
+      672,
+      378
+    ],
+    "pixels": 254016,
+    "exact_aspect_ratio": true,
+    "RGB_channel_contract": "PASS",
+    "uint8_to_float_divide_once": "PASS",
+    "coordinate_roundtrip": "PASS",
+    "model_imported": false
+  },
+  "mappings": [
+    {
+      "rgb_id": 281,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 282,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 283,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 284,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 285,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 286,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 287,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 288,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 289,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 290,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 291,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 292,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 293,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 294,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 295,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 296,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 297,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 298,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 299,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 300,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 301,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 302,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 303,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 304,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 305,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 306,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 307,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 308,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 309,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 310,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 311,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 312,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 313,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 314,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 315,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 316,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 317,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 318,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 319,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 320,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 321,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 322,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 323,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 324,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 325,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 326,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 327,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        0.9960784316062927
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 328,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 329,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 330,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 331,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    },
+    {
+      "rgb_id": 332,
+      "original_wh": [
+        1920,
+        1080
+      ],
+      "model_wh": [
+        672,
+        378
+      ],
+      "scale_xy": [
+        0.35,
+        0.35
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "padding_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+      "original_to_model_matrix": [
+        [
+          0.35,
+          0,
+          -0.325
+        ],
+        [
+          0,
+          0.35,
+          -0.325
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "color": "RGB",
+      "dtype": "float32",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "resize": "PIL_LANCZOS",
+      "ImageNet_normalization": "Only inside the original model"
+    }
+  ],
+  "ImageNet_normalized_in_adapter": false,
+  "uint8_BGR_DPVO_stream_used": false,
+  "images_verified": 52
+}

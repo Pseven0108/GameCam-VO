@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/setup_independent.py", line 19, in <module>
+    run(['git','-C',str(repo),'checkout','--detach','1b81d729c4259a5a775eb4aae41f959eea38ae14'],'PIN_OFFICIAL_COMMIT',180)
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/setup_independent.py", line 13, in run
+    p=subprocess.run(argv,stdout=out,stderr=subprocess.STDOUT,env=e,timeout=timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 1154, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 2047, in _communicate
+    self.wait(timeout=self._remaining_time(endtime))
+  File "/usr/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 1951, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['git', '-C', '/root/rivermind-data/external_models/Pi3MOS-SLAM_1b81d729c4259a5a775eb4aae41f959eea38ae14', 'checkout', '--detach', '1b81d729c4259a5a775eb4aae41f959eea38ae14']' timed out after 179.99998495006002 seconds

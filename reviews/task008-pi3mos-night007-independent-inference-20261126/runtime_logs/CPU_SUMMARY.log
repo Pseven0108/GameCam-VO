@@ -1,0 +1,98 @@
+{
+  "mode_summary": [
+    {
+      "mode": "A",
+      "context_frames": 3,
+      "predictions": 32,
+      "mean_forward_GPU_ms": 320.92344856262207,
+      "median_forward_GPU_ms": 282.3128662109375,
+      "mean_forward_GPU_ms_excluding_first": 282.5747444398942,
+      "maximum_peak_allocated_GiB": 5.91616678237915,
+      "maximum_peak_reserved_GiB": 6.0390625,
+      "mean_dynamic_area_p04": 0.02179107289255401,
+      "mean_Eulerian_probability_MAD": 0.00876423660966177,
+      "mean_Eulerian_mask_IoU": 0.7121158605593844,
+      "GT_accuracy": null,
+      "temporal_metric": "Uncompensated same-pixel proxy, not true object consistency or accuracy"
+    },
+    {
+      "mode": "B",
+      "context_frames": 5,
+      "predictions": 32,
+      "mean_forward_GPU_ms": 427.0780897140503,
+      "median_forward_GPU_ms": 426.8329772949219,
+      "mean_forward_GPU_ms_excluding_first": 426.9916145570817,
+      "maximum_peak_allocated_GiB": 6.327823162078857,
+      "maximum_peak_reserved_GiB": 6.46875,
+      "mean_dynamic_area_p04": 0.021538929880401236,
+      "mean_Eulerian_probability_MAD": 0.006963206635367486,
+      "mean_Eulerian_mask_IoU": 0.7108487952975616,
+      "GT_accuracy": null,
+      "temporal_metric": "Uncompensated same-pixel proxy, not true object consistency or accuracy"
+    }
+  ],
+  "A_B_probability_MAD_mean": 0.007195337588200346,
+  "region_plan": {
+    "selection_stage": "RGB-only preview before first Pi3MOS forward",
+    "source": "Original Night007 frames281,301,309,312,320,328,332 visually inspected",
+    "not_segmentation_GT": true,
+    "meaning": "Broad image-region diagnostic probes; boxes include context and do not define true object boundaries",
+    "all_target_fixed_regions_normalized_xyxy": {
+      "road_surface": [
+        0.37,
+        0.58,
+        0.62,
+        0.75
+      ],
+      "right_concrete_barrier": [
+        0.7,
+        0.46,
+        0.94,
+        0.6
+      ],
+      "upper_blue_lights_and_building": [
+        0.67,
+        0.23,
+        0.94,
+        0.39
+      ],
+      "camera_coupled_car_hood_uncertain_world_motion": [
+        0.24,
+        0.85,
+        0.88,
+        0.98
+      ]
+    },
+    "frame312_vehicle_box_normalized_xyxy": [
+      0.073,
+      0.31,
+      0.315,
+      0.54
+    ],
+    "vehicle_label": "Visible truck candidate; its true world motion is not independently established from monocular appearance",
+    "absent_controls": [
+      "No clearly established parked vehicle in this32-frame crop",
+      "No clearly visible pedestrian control",
+      "No separately verified pure camera-rotation interval"
+    ],
+    "interpretation": "Region probability differences and temporal same-pixel proxies cannot be reported as precision, recall, IoU against GT or dynamic-object accuracy"
+  },
+  "GT_detection_metrics": null,
+  "all32_targets_in_both_modes": true,
+  "original_probability_shape": [
+    1080,
+    1920
+  ],
+  "model_probability_shape": [
+    378,
+    672
+  ],
+  "coordinate_correspondence": "Recorded no-crop scaling; restored probabilities and overlays use original RGB grid",
+  "limitations": [
+    "No pixelwise dynamic GT",
+    "Eulerian IoU/MAD confounded by object and camera motion",
+    "Parked vehicle/pedestrian/pure-rotation controls absent",
+    "Only one32-frame Night007 window"
+  ],
+  "next_stage_or_DROID_integration_started": false
+}

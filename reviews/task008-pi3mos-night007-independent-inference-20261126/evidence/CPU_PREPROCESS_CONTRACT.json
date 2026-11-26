@@ -1,0 +1,76 @@
+{
+  "CPU_contracts": {
+    "size": [
+      672,
+      378
+    ],
+    "pixels": 254016,
+    "exact_aspect_ratio": true,
+    "RGB_channel_contract": "PASS",
+    "uint8_to_float_divide_once": "PASS",
+    "coordinate_roundtrip": "PASS",
+    "model_imported": false
+  },
+  "independent_vs_official_RGB_reader_bitwise_equal": true,
+  "correct_domain_tensor_helper_equal": true,
+  "synthetic_uint8_BGR_tensor_helper_MAD": 0.33376917243003845,
+  "scope": "CPU synthetic color contract; demonstrates wrong-domain sensitivity, not a claim that every upstream user path is wrong",
+  "preprocess_mapping": {
+    "original_wh": [
+      1920,
+      1080
+    ],
+    "model_wh": [
+      672,
+      378
+    ],
+    "scale_xy": [
+      0.35,
+      0.35
+    ],
+    "crop_ltrb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "padding_ltrb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pixel_centers": "model_x=sx*(original_x+0.5)-0.5; inverse=(model_x+0.5)/sx-0.5",
+    "original_to_model_matrix": [
+      [
+        0.35,
+        0,
+        -0.325
+      ],
+      [
+        0,
+        0.35,
+        -0.325
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "color": "RGB",
+    "dtype": "float32",
+    "range": [
+      0.0,
+      1.0
+    ],
+    "resize": "PIL_LANCZOS",
+    "ImageNet_normalization": "Only inside the original model"
+  },
+  "torch": "2.3.1+cu121",
+  "CUDA_build": "12.1",
+  "GPU_initialized": false,
+  "model_created_or_weights_loaded": false,
+  "model_forward_expected_dynamic_shape": "[B,N,1,H,W,1], sigmoid output",
+  "model_forward_expected_conf_shape": "[B,N,H,W,1], sigmoid output"
+}

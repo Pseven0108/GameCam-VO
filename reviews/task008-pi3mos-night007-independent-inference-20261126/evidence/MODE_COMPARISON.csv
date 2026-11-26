@@ -1,0 +1,3 @@
+mode,context_frames,predictions,mean_forward_GPU_ms,median_forward_GPU_ms,mean_forward_GPU_ms_excluding_first,maximum_peak_allocated_GiB,maximum_peak_reserved_GiB,mean_dynamic_area_p04,mean_Eulerian_probability_MAD,mean_Eulerian_mask_IoU,GT_accuracy,temporal_metric
+A,3,32,320.92344856262207,282.3128662109375,282.5747444398942,5.91616678237915,6.0390625,0.02179107289255401,0.00876423660966177,0.7121158605593844,,"Uncompensated same-pixel proxy, not true object consistency or accuracy"
+B,5,32,427.0780897140503,426.8329772949219,426.9916145570817,6.327823162078857,6.46875,0.021538929880401236,0.006963206635367486,0.7108487952975616,,"Uncompensated same-pixel proxy, not true object consistency or accuracy"

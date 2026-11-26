@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "path": "scripts/preprocess.py",
+      "sha256": "a3730f7d3c0700e712dc0975d9a02215b763cd61c462772a66c3d63c4c3cc49f"
+    },
+    {
+      "path": "scripts/visualize_masks.py",
+      "sha256": "2ad622643f97c5cb2def2ef2227db283fc9b5bd5648aaa568d422d444f3e2118"
+    },
+    {
+      "path": "scripts/infer_pi3mos.py",
+      "sha256": "9ff6615a05194dc05cd49392c9d1c909f302a6f2d4d70d0c8a593307bdf67394"
+    },
+    {
+      "path": "scripts/inspect_model_interface.py",
+      "sha256": "2ac31fb1a8b3b872d646a1a0b98ec66f9ef52af6d5909b214a6a43ddf46114e6"
+    },
+    {
+      "path": "scripts/summarize_and_visualize.py",
+      "sha256": "c932e8e73a4baa2fe7673b1e5843839f110c695ba72fad87aeb579ca094e89e5"
+    },
+    {
+      "path": "configs/night007.json",
+      "sha256": "4654559f87f107dfab7c6416c0d95a2cdb936ed173ede26e33491b4bd2c5402f"
+    },
+    {
+      "path": "configs/rgb_only_roi_plan.json",
+      "sha256": "2d026d7407973959098a89b8d12a558f186e3253239571e557c4522bc127ac8d"
+    }
+  ],
+  "previous_attempt_preserved": "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1",
+  "previous_GPU_forwards": 0,
+  "new_algorithm_parameters": false,
+  "reason": "Correct verified safetensors binary loader, not a retry of a failed GPU forward"
+}

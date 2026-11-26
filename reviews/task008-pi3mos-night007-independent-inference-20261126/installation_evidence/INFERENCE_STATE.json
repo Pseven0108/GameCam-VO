@@ -1,0 +1,10 @@
+{
+  "stage": "STOPPED_ERROR",
+  "completed_A": 0,
+  "completed_B": 0,
+  "model_forwards_started": 0,
+  "model_forwards_complete": 0,
+  "auto_retry": false,
+  "error_type": "UnpicklingError",
+  "error": "Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported operand 120"
+}

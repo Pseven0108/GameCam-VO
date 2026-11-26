@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/install_exact_local_wheels.py", line 15, in <module>
+    run([py,'-m','pip','install','--no-cache-dir','--progress-bar','off','--index-url','https://mirrors.aliyun.com/pypi/simple','--constraint',str(w/'dependency_constraints.txt'),*wheels],'INSTALL_EXACT_OFFICIAL_WHEELS')
+  File "/root/rivermind-data/GAMECAM_TASK008_PI3MOS_20261126_R1/install_exact_local_wheels.py", line 12, in run
+    if p.returncode:raise RuntimeError(label+' failed; keep logs and partial new env')
+RuntimeError: INSTALL_EXACT_OFFICIAL_WHEELS failed; keep logs and partial new env

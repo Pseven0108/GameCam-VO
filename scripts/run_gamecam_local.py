@@ -21,7 +21,7 @@ def main() -> int:
     if not args:
         parser.error("Pass Python arguments after --; this wrapper does not start an experiment by itself")
     project = Path(__file__).resolve().parents[1]
-    prefix = Path(r"C:\Users\Administrator\.conda\envs\gamecam-vo")
+    prefix = Path(r"D:\aaa\envs\gamecam-vo")
     executable = prefix / "python.exe"
     if not executable.is_file():
         raise FileNotFoundError("Reviewed Conda interpreter unavailable: " + str(executable))
@@ -33,6 +33,12 @@ def main() -> int:
     environment["OPENCV_IO_ENABLE_OPENEXR"] = "1"
     environment["PYTHONDONTWRITEBYTECODE"] = "1"
     environment["PYTHONUTF8"] = "1"
+    temporary = Path(r"D:\aaa\tmp\gamecam-vo")
+    temporary.mkdir(parents=True, exist_ok=True)
+    environment["TEMP"] = environment["TMP"] = str(temporary)
+    environment["PIP_CACHE_DIR"] = r"D:\aaa\caches\pip"
+    environment["CONDA_PKGS_DIRS"] = r"D:\aaa\caches\conda_pkgs"
+    environment["TORCHINDUCTOR_CACHE_DIR"] = r"D:\aaa\caches\torchinductor"
     cache = project / "maintenance/local_model_cache"
     environment["TORCH_HOME"] = str(cache / "torch")
     environment["HF_HOME"] = str(cache / "huggingface")

@@ -1,0 +1,139 @@
+{
+  "status": "SCENE_TRAINED_HEAD_TRANSFER_PROBE_COMPLETE",
+  "rows": [
+    {
+      "training_scene": "WW_A",
+      "rgb_id": 301,
+      "strict_load": true,
+      "checkpoint_sha256": "fea6b224bdaec5c2ab1138134a8135efb5c71c9d6bc902039c73c203d730badf",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.09163688123226166,
+      "p95": 0.3375137746334076,
+      "mean_repeat_std": 0.04390401020646095,
+      "seconds": 0.2245219000033103,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_A",
+      "rgb_id": 312,
+      "strict_load": true,
+      "checkpoint_sha256": "fea6b224bdaec5c2ab1138134a8135efb5c71c9d6bc902039c73c203d730badf",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.0809137225151062,
+      "p95": 0.265182226896286,
+      "mean_repeat_std": 0.04150112718343735,
+      "seconds": 0.0063304000068455935,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_A",
+      "rgb_id": 325,
+      "strict_load": true,
+      "checkpoint_sha256": "fea6b224bdaec5c2ab1138134a8135efb5c71c9d6bc902039c73c203d730badf",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.1279481053352356,
+      "p95": 0.39976224303245544,
+      "mean_repeat_std": 0.048191193491220474,
+      "seconds": 0.005667500023264438,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_A",
+      "rgb_id": 332,
+      "strict_load": true,
+      "checkpoint_sha256": "fea6b224bdaec5c2ab1138134a8135efb5c71c9d6bc902039c73c203d730badf",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.17857953906059265,
+      "p95": 0.4335499405860901,
+      "mean_repeat_std": 0.055240780115127563,
+      "seconds": 0.005515000026207417,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_B",
+      "rgb_id": 301,
+      "strict_load": true,
+      "checkpoint_sha256": "ca26e3715eadbcd6bfda144bd599456c3f0ebf5ef6a91d3f711433bb93c652cc",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.8162497878074646,
+      "p95": 1.3034135103225708,
+      "mean_repeat_std": 0.09535488486289978,
+      "seconds": 0.005924099998082966,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_B",
+      "rgb_id": 312,
+      "strict_load": true,
+      "checkpoint_sha256": "ca26e3715eadbcd6bfda144bd599456c3f0ebf5ef6a91d3f711433bb93c652cc",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.7433518767356873,
+      "p95": 1.2408857345581055,
+      "mean_repeat_std": 0.08390045911073685,
+      "seconds": 0.005725299997720867,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_B",
+      "rgb_id": 325,
+      "strict_load": true,
+      "checkpoint_sha256": "ca26e3715eadbcd6bfda144bd599456c3f0ebf5ef6a91d3f711433bb93c652cc",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.7436420917510986,
+      "p95": 1.2598875761032104,
+      "mean_repeat_std": 0.0926261842250824,
+      "seconds": 0.005714799975976348,
+      "pretrained_generic_detector": false
+    },
+    {
+      "training_scene": "WW_B",
+      "rgb_id": 332,
+      "strict_load": true,
+      "checkpoint_sha256": "ca26e3715eadbcd6bfda144bd599456c3f0ebf5ef6a91d3f711433bb93c652cc",
+      "shape": [
+        4,
+        15,
+        27
+      ],
+      "median": 0.8094170093536377,
+      "p95": 1.3346582651138306,
+      "mean_repeat_std": 0.09596248716115952,
+      "seconds": 0.0057975000236183405,
+      "pretrained_generic_detector": false
+    }
+  ],
+  "feature_contract": "384-d FiT3D; dimensional compatibility is not distribution calibration",
+  "native_functional_dropout_preserved": true,
+  "model_eval_still_stochastic": true,
+  "accuracy_gt_available": false,
+  "DROID_U_replaced": false,
+  "source_sha256": "b52889e09e133f19bfbb0f591dc62fcc6e93ea473c26c5652c48747fb8755785"
+}

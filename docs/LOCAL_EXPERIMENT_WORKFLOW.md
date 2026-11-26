@@ -1,5 +1,13 @@
 # GameCam-VO 本地与远端实验规范
 
+## 2026-11-27 存储迁移更新
+
+按用户“全部移动到D盘”的要求，现有环境实际存储改为 `D:\aaa\envs\gamecam-vo`。
+原 `C:\Users\Administrator\.conda\envs\gamecam-vo` 保留为指向 D: 的 Junction，旧脚本和环境名可继续使用。
+本项目激活钩子与启动器将临时目录、pip/Conda/Hugging Face/Torch 缓存放到 D:；不修改系统分页文件、驱动或其他 Conda 环境。
+迁移过程逐文件 SHA-256 与 CUDA 验证记录位于 `D:\aaa\GameCam-VO-TASK009\maintenance\STORAGE_MIGRATION_20261127`。
+下文 2026-11-26 的原始路径及剩余空间是历史记录，以本更新和实时实测为准。
+
 2026-11-26，Asia/Shanghai。按用户要求采用三级执行体系。
 
 | 执行位置 | 默认任务 | 当前验收范围 |
@@ -10,9 +18,11 @@
 
 ## 使用现有环境
 
-真实 Conda 环境名为 `gamecam-vo`，不是新建环境。位置保持为：
+真实 Conda 环境名为 `gamecam-vo`，不是新建环境。2026-11-27 迁移后的实际位置为：
 
-`C:\Users\Administrator\.conda\envs\gamecam-vo`
+`D:\aaa\envs\gamecam-vo`
+
+旧的 `C:\Users\Administrator\.conda\envs\gamecam-vo` 仅作为指向该目录的 Junction，保留旧脚本兼容性。
 
 在 PowerShell 中使用：
 
@@ -66,8 +76,8 @@ python scripts/run_gamecam_local.py --device cpu -- -c "import torch; print(torc
 
 ## 存储与交付
 
-现有 Conda 环境仍在 C:；本轮下载、临时文件、日志和成果放在 D:。
-安装后 C: 实测约 5.02 GiB 可用，后续安装或下载需重新检查，不将模型缓存默认写入 C:。
+现有 Conda 环境、下载、临时文件、缓存、日志和成果均放在 D:。
+2026-11-26 安装后 C: 曾实测约 5.02 GiB 可用，此数值仅为迁移前历史记录；后续安装或下载需重新检查，不将模型缓存默认写入 C:。
 后续任务应显式将 Hugging Face/Torch 模型缓存及输出设置到 D: 的独立目录，避免改写已封存资产。
 
 评审沿用 Public `Pseven0108/GameCam-VO` 的完整 ZIP 加展开文件发布方式，交付固定 commit 链接。

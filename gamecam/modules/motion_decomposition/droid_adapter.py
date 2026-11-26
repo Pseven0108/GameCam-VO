@@ -1,0 +1,109 @@
+"""Sparse static-track target blending, before the unchanged native BA.
+
+This is an experimental 2D reprojection constraint, not measured 3D motion.
+It replaces a fraction of an existing residual target instead of counting a
+second independent observation at the same source pixel. Native weights and U
+are unchanged. Predicted depth is used only to reject invalid tracker outputs.
+"""
+import functools
+import json
+from pathlib import Path
+
+import numpy as np
+import torch
+
+
+class StaticTrackCache:
+    def __init__(self, directory, tracker_hw, blend=.15, min_visibility=.9, max_dynamic=.1):
+        directory=Path(directory)
+        meta=json.loads((directory/'statistics.json').read_text())
+        if meta['status']!='INDEPENDENT_INFERENCE_COMPLETE':
+            raise ValueError('Incomplete MDTracker inference')
+        self.input_hw=tuple(meta['input_shape'][-2:])
+        self.tracker_hw=tuple(tracker_hw)
+        if not 0<=blend<=1:
+            raise ValueError('Invalid blend')
+        with np.load(directory/'predictions.npz',allow_pickle=False) as z:
+            self.ids={int(x):i for i,x in enumerate(z['rgb_ids'])}
+            self.xy=z['total_xy'][0].astype(np.float64)
+            self.static=z['static_xyz'][0].astype(np.float64)
+            self.vis=z['visibility'][0].astype(np.float64)
+            self.dynamic=z['dynamic_probability'][0].astype(np.float64)
+        if self.static.shape!=(*self.xy.shape[:2],3) or self.vis.shape!=self.xy.shape[:2] or self.dynamic.shape!=self.vis.shape:
+            raise ValueError('Invalid MDTracker shapes')
+        self.blend,self.min_visibility,self.max_dynamic=blend,min_visibility,max_dynamic
+        self._observation_cache={}
+
+    def observations(self, source_rgb, target_rgb, feature_hw, stride=8):
+        key=(source_rgb,target_rgb,tuple(feature_hw),stride)
+        if key in self._observation_cache:
+            return self._observation_cache[key]
+        a,b=self.ids[source_rgb],self.ids[target_rgb]
+        scale=np.array(self.tracker_hw[::-1],dtype=np.float64)/np.array(self.input_hw[::-1])
+        source=(self.xy[a]+.5)*scale-.5
+        static=(self.static[[a,b],:,:2]+.5)*scale-.5
+        h,w=feature_hw
+        good=(self.vis[a]>=self.min_visibility)&(self.vis[b]>=self.min_visibility)
+        good&=(self.dynamic[a]<=self.max_dynamic)&(self.dynamic[b]<=self.max_dynamic)
+        good&=np.isfinite(source).all(-1)&np.isfinite(static).all(axis=(0,2))
+        good&=(self.static[a,:,2]>0)&(self.static[b,:,2]>0)
+        for points in (source,static[0],static[1]):
+            good&=(points[:,0]>=0)&(points[:,0]<self.tracker_hw[1])&(points[:,1]>=0)&(points[:,1]<self.tracker_hw[0])
+        grid=source/stride
+        cells=np.rint(np.nan_to_num(grid,nan=-1e6,posinf=-1e6,neginf=-1e6)).astype(np.int64)
+        good&=(np.linalg.norm(grid-cells,axis=-1)<=.35)
+        good&=(cells[:,0]>=0)&(cells[:,0]<w)&(cells[:,1]>=0)&(cells[:,1]<h)
+        # Move the actual feature-grid origin by the predicted camera-only
+        # displacement; do not silently use an off-grid source coordinate.
+        destination=cells+(static[1]-static[0])/stride
+        good&=np.isfinite(destination).all(-1)&(destination[:,0]>=0)&(destination[:,0]<w)&(destination[:,1]>=0)&(destination[:,1]<h)
+        quality=self.vis[a]*self.vis[b]*(1-self.dynamic[a])*(1-self.dynamic[b])
+        selected={}
+        for p in np.flatnonzero(good):
+            cell=tuple(cells[p])
+            if cell not in selected or quality[p]>quality[selected[cell]]:
+                selected[cell]=p
+        result=[(int(cells[p,1]),int(cells[p,0]),destination[p],float(self.blend*quality[p])) for p in selected.values()]
+        self._observation_cache[key]=result
+        return result
+
+
+def install_static_targets(video, cache, timestamp_to_rgb, log_path):
+    if hasattr(video,'_task009_static_original_ba'):
+        raise RuntimeError('Static adapter already installed')
+    original=video.ba
+    path=Path(log_path)
+    calls=[]
+
+    @functools.wraps(original)
+    def wrapped(target,weight,eta,ii,jj,*args,**kwargs):
+        if target.ndim!=5 or target.shape!=weight.shape or target.shape[0]!=1 or target.shape[-1]!=2:
+            raise ValueError('Expected native [1,E,H,W,2] BA data')
+        changed=target.clone()
+        selected=[]
+        for edge,(i,j) in enumerate(zip(ii.tolist(),jj.tolist())):
+            ts=[float(video.timestamp[x].item()) for x in (i,j)]
+            if any(t!=int(t) or int(t) not in timestamp_to_rgb for t in ts):
+                raise ValueError('Unmapped static-track timestamp')
+            a,b=(timestamp_to_rgb[int(t)] for t in ts)
+            for y,x,xy,coefficient in cache.observations(a,b,target.shape[2:4],video.down_scale):
+                selected.append((edge,y,x,xy,coefficient))
+        largest=0.
+        if selected:
+            # Every (edge,y,x) is unique. One indexed operation preserves the
+            # scalar blend, without one GPU synchronization per sparse point.
+            e,y,x=(torch.tensor([r[k] for r in selected],device=target.device) for k in range(3))
+            desired=torch.as_tensor(np.stack([r[3] for r in selected]),device=target.device,dtype=target.dtype)
+            coefficient=torch.tensor([r[4] for r in selected],device=target.device,dtype=target.dtype)[:,None]
+            previous=changed[0,e,y,x]
+            delta=coefficient*(desired-previous)
+            changed[0,e,y,x]=previous+delta
+            largest=float(delta.abs().max())
+        row={'call':len(calls),'sparse_targets':len(selected),'max_change_feature_pixels':largest,
+             'kind':'counterfactual_static_2d_target_blend','new_edges':0,'weights_and_native_u_unchanged':True}
+        calls.append(row)
+        with path.open('a',encoding='utf-8') as f:f.write(json.dumps(row)+'\n')
+        return original(changed,weight,eta,ii,jj,*args,**kwargs)
+    video._task009_static_original_ba=original
+    video.ba=wrapped
+    return calls

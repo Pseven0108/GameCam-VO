@@ -1,0 +1,78 @@
+{
+  "status": "INDEPENDENT_INFERENCE_COMPLETE",
+  "input_shape": [
+    1,
+    8,
+    4,
+    192,
+    336
+  ],
+  "queries": 36,
+  "precision": "fp32",
+  "seconds": 0.8899339999770746,
+  "seconds_per_frame": 0.11124174999713432,
+  "peak_allocated_bytes": 581350912,
+  "peak_reserved_bytes": 696254464,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132",
+  "checkpoint_sha256": "c1189d8d6912798e66b99b3e853ce644f587ed57837a5e7bb768405980dc1422",
+  "depth_source": "TASK008 Pi3 local_points z; auxiliary nonmetric, not official UniDepth pipeline",
+  "outputs": {
+    "total_xy": {
+      "shape": [
+        1,
+        8,
+        36,
+        2
+      ],
+      "min": 7.330927848815918,
+      "median": 126.55308532714844,
+      "max": 347.9753112792969
+    },
+    "track_depth": {
+      "shape": [
+        1,
+        8,
+        36,
+        1
+      ],
+      "min": -0.20930224657058716,
+      "median": 0.3810626268386841,
+      "max": 17.426559448242188
+    },
+    "static_xyz": {
+      "shape": [
+        1,
+        8,
+        36,
+        3
+      ],
+      "min": -0.20930224657058716,
+      "median": 61.21910858154297,
+      "max": 342.1196594238281
+    },
+    "visibility": {
+      "shape": [
+        1,
+        8,
+        36
+      ],
+      "min": 4.1469834854979126e-07,
+      "median": 0.9998300075531006,
+      "max": 0.999998927116394
+    },
+    "dynamic_probability": {
+      "shape": [
+        1,
+        8,
+        36
+      ],
+      "min": 2.770385310046919e-10,
+      "median": 3.6637078437706805e-07,
+      "max": 0.9999949932098389
+    }
+  },
+  "dynamic_gt_available": false,
+  "accuracy_claim": false,
+  "droid_integration_complete": false
+}

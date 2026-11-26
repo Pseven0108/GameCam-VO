@@ -1,0 +1,22 @@
+{
+  "lietorch_cuda_se3": "PASS",
+  "upstream_python_scatter_sum_mean_on_cuda": "PASS",
+  "scatter_compatibility": {
+    "mode": "UPSTREAM_PURE_PYTORCH_SUM_MEAN_ONLY",
+    "scatter_py_sha256": "68b23f27c45bfb37a3fe066c75bd1c3dd711cbf5d8385aa9708f912c6916c3bc",
+    "utils_py_sha256": "0e3e310ffb443ff047116f8c330afb76dce2bbf3c00c3a029b44d9097ea195f9",
+    "custom_scatter_binary_loaded": false,
+    "native_torch_scatter_add_used": true
+  },
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.7.1+cu128",
+  "capability": [
+    12,
+    0
+  ],
+  "droid_imports": "PASS",
+  "droid_native_frame_distance": "PASS",
+  "distance": [
+    0.19999995827674866
+  ]
+}

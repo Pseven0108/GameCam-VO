@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO-TASK009\experiments\TASK009\scripts\cache_native_priors.py", line 141, in <module>
+    main()
+  File "D:\aaa\GameCam-VO-TASK009\experiments\TASK009\scripts\cache_native_priors.py", line 70, in main
+    from hubconf import metric3d_vit_large
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\hubconf.py", line 10, in <module>
+    from mono.model.monodepth_model import get_configured_monodepth_model
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\mono\model\__init__.py", line 1, in <module>
+    from .monodepth_model import DepthModel
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\mono\model\monodepth_model.py", line 3, in <module>
+    from .model_pipelines.__base_model__ import BaseDepthModel
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\mono\model\model_pipelines\__init__.py", line 2, in <module>
+    from .dense_pipeline import DensePredModel
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\mono\model\model_pipelines\dense_pipeline.py", line 3, in <module>
+    from mono.utils.comm import get_func
+  File "D:\aaa\GameCam-VO-TASK009\external\Metric3D\mono\utils\comm.py", line 8, in <module>
+    from mmcv.utils import collect_env as collect_base_env
+ModuleNotFoundError: No module named 'mmcv'

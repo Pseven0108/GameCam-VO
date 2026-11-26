@@ -1,0 +1,109 @@
+{
+  "status": "DOCUMENTED_EXISTING_RUNS_NOT_A_NEW_EXECUTION",
+  "device_tier": "local RTX5060 exploratory",
+  "rgb_ids": [
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332
+  ],
+  "height": 216,
+  "width": 384,
+  "stride": 1,
+  "buffer": 64,
+  "warmup": 6,
+  "force_keyframe_every_n_frames": 2,
+  "seed": 43,
+  "gamma_depth": 0.01,
+  "native_u": true,
+  "native_uba": true,
+  "final_ba_iterations": [
+    7,
+    12
+  ],
+  "filler": true,
+  "online_visualization": false,
+  "mapping": false,
+  "prior_cache": "experiments/TASK009/outputs/native_priors_216x384_r3",
+  "motion_cache": "experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1",
+  "conditions": {
+    "E0": {
+      "pi3_gate": false,
+      "static_targets": false
+    },
+    "E1": {
+      "pi3_gate": true,
+      "static_targets": false,
+      "alpha": 1.0,
+      "beta": 1.0,
+      "floor": 0.1
+    },
+    "E2": {
+      "pi3_gate": false,
+      "static_targets": true,
+      "blend": 0.15,
+      "min_visibility": 0.9,
+      "max_dynamic": 0.1
+    },
+    "E3": {
+      "pi3_gate": true,
+      "static_targets": true,
+      "alpha": 1.0,
+      "beta": 1.0,
+      "floor": 0.1
+    },
+    "E1_weak": {
+      "pi3_gate": true,
+      "static_targets": false,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "floor": 0.5
+    },
+    "E3_weak": {
+      "pi3_gate": true,
+      "static_targets": true,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "floor": 0.5
+    },
+    "E4": {
+      "status": "NOT_ADMITTED",
+      "reason": "Scene-trained WildGS heads lack validated VIPER feature-domain compatibility"
+    },
+    "E5": {
+      "status": "CANDIDATE_SELECTION_ONLY",
+      "selected": "E2",
+      "independent_validation_run": false
+    }
+  },
+  "timing": "Tracker + final BA + filler + observer after loading; cached prior inference and cold startup excluded",
+  "scope": "Offline future-aware module exploration, not online speed or the sealed formal R2 protocol"
+}

@@ -1,0 +1,26 @@
+test_anisotropic_channels_same_factor (test_dynamic_gate.GateTests.test_anisotropic_channels_same_factor) ... ok
+test_bilinear_noninteger (test_dynamic_gate.GateTests.test_bilinear_noninteger) ... ok
+test_cache_id_and_hook_u_protection (test_dynamic_gate.GateTests.test_cache_id_and_hook_u_protection) ... ok
+test_disabled_object_identity (test_dynamic_gate.GateTests.test_disabled_object_identity) ... ok
+test_halfpixel_geometry (test_dynamic_gate.GateTests.test_halfpixel_geometry) ... ok
+test_invalid_probability_rejected (test_dynamic_gate.GateTests.test_invalid_probability_rejected) ... ok
+test_native_weight_not_mutated (test_dynamic_gate.GateTests.test_native_weight_not_mutated) ... ok
+test_negative_parameter (test_dynamic_gate.GateTests.test_negative_parameter) ... ok
+test_outside_neutral (test_dynamic_gate.GateTests.test_outside_neutral) ... ok
+test_rigid_pose_known_translation (test_dynamic_gate.GateTests.test_rigid_pose_known_translation) ... ok
+test_shape_rejected (test_dynamic_gate.GateTests.test_shape_rejected) ... ok
+test_static_identity (test_dynamic_gate.GateTests.test_static_identity) ... ok
+test_target_correspondence_not_source_pixel (test_dynamic_gate.GateTests.test_target_correspondence_not_source_pixel) ... ok
+test_constant_translation_cannot_receive_finite_scale (test_evaluation.EvaluationContract.test_constant_translation_cannot_receive_finite_scale) ... ok
+test_known_sim3_and_rotation (test_evaluation.EvaluationContract.test_known_sim3_and_rotation) ... ok
+test_duplicate_source_cell_not_double_counted (test_static_targets.StaticTargetContract.test_duplicate_source_cell_not_double_counted) ... ok
+test_half_pixel_resize_before_feature_grid (test_static_targets.StaticTargetContract.test_half_pixel_resize_before_feature_grid) ... ok
+test_invalid_depth_and_dynamic_points_rejected (test_static_targets.StaticTargetContract.test_invalid_depth_and_dynamic_points_rejected) ... ok
+test_known_camera_only_displacement (test_static_targets.StaticTargetContract.test_known_camera_only_displacement) ... ok
+test_native_weight_and_uncertainty_unchanged (test_static_targets.StaticTargetContract.test_native_weight_and_uncertainty_unchanged) ... ok
+test_reverse_edge (test_static_targets.StaticTargetContract.test_reverse_edge) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.011s
+
+OK

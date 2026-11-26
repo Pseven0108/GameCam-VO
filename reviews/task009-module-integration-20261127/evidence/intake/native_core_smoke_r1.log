@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/scripts/smoke_native.py", line 7, in <module>
+    from torch_scatter import scatter_sum
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch_scatter/__init__.py", line 16, in <module>
+    torch.ops.load_library(spec.origin)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch_scatter/_version_cuda.so)

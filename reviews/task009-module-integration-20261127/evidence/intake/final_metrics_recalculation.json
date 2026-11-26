@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "run": "droid_E0_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "af02bfdad6243a82ed48291bc37860c3d071ab920da964b06c0ff0b6690c4fbf"
+    },
+    {
+      "run": "droid_E0_216x384_r2",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "fff1dbf7a04658398476d69df4238e34afe8a2359030e155d71e9dc3040037ac"
+    },
+    {
+      "run": "droid_E1_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "6b2098eb7cbbe37d9cdb1e35937a88bc7f67cb8425e02824f3eae2553714d55a"
+    },
+    {
+      "run": "droid_E2_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "918aaee04eb48c3c0c2f0c02b4f0e7df8208dffa48d27f1841051f37a3f5390a"
+    },
+    {
+      "run": "droid_E2_216x384_r2",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "1fc63d22a34e7f920b99a38388539024a1d72e9ba92b8e18f1c92b701e3838bf"
+    },
+    {
+      "run": "droid_E3_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "8d4744fa5eca3ca99f8dc03df4d16d2742182efd51807965d43d056260e29949"
+    },
+    {
+      "run": "droid_E3_216x384_r2",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "7d853aa7b0eee30547271e4e34d8a62e91bc5f1f39f75ae7953ea90e6faf7a21"
+    },
+    {
+      "run": "droid_E1_weak_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "6763422d26cadb5d08914baf245a7fe2c38061806d6e2fb0eb932d7c708046bd"
+    },
+    {
+      "run": "droid_E3_weak_216x384_r1",
+      "status": "PASS",
+      "pose_count": 32,
+      "recomputed_numeric_fields": 27,
+      "maximum_absolute_difference": 0,
+      "trajectory_sha256": "8a8b90271c14e076c13d6a803b20d8b110fa1b5de357a9553e2ebfc910bb8a0e"
+    }
+  ],
+  "method": "CPU recalculation from all nine original trajectories and the same frozen offline GT; no inference"
+}

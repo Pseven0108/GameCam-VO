@@ -1,0 +1,61 @@
+running build_ext
+/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/utils/cpp_extension.py:425: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (clang++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using clang++, and then you can also use
+clang++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/utils/cpp_extension.py:490: UserWarning: There are no clang++ version bounds defined for CUDA version 12.8
+  warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+building 'lietorch_backends' extension
+Emitting ninja build file /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/build.ninja...
+Compiling objects...
+Using envvar MAX_JOBS (1) as the number of workers...
+[1/1] /mnt/d/aaa/GameCam-VO-TASK009/runtime/cuda128/bin/nvcc --generate-dependencies-with-compile --dependency-output /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/lietorch/src/lietorch_gpu.o.d -I/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/include -I/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen -I/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/include -I/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/mnt/d/aaa/GameCam-VO-TASK009/runtime/cuda128/include -I/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/include -I/install/include/python3.10 -c -c /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu -o /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/lietorch/src/lietorch_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O2 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=lietorch_backends -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_120,code=sm_120 -std=c++17
+In file included from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu:5:
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/include/common.h:4: warning: "EIGEN_DEFAULT_DENSE_INDEX_TYPE" redefined
+    4 | #define EIGEN_DEFAULT_DENSE_INDEX_TYPE int
+      | 
+In file included from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/Core:19,
+                 from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/Dense:1,
+                 from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu:3:
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/Macros.h:33: note: this is the location of the previous definition
+   33 | #define EIGEN_DEFAULT_DENSE_INDEX_TYPE std::ptrdiff_t
+      | 
+In file included from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu:5:
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/include/common.h:4: warning: "EIGEN_DEFAULT_DENSE_INDEX_TYPE" redefined
+    4 | #define EIGEN_DEFAULT_DENSE_INDEX_TYPE int
+      | 
+In file included from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/Core:19,
+                 from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/Dense:1,
+                 from /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu:3:
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/Macros.h:33: note: this is the location of the previous definition
+   33 | #define EIGEN_DEFAULT_DENSE_INDEX_TYPE std::ptrdiff_t
+      | 
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu(218): warning #174-D: expression has no effect
+          Eigen::Map<PointGrad>(dp + i*3) = dq * X.Matrix4x4().block<3,3>(0,0);
+                                                                          ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/lietorch/src/lietorch_gpu.cu(218): warning #174-D: expression has no effect
+          Eigen::Map<PointGrad>(dp + i*3) = dq * X.Matrix4x4().block<3,3>(0,0);
+                                                                          ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+creating build/lib.linux-x86_64-cpython-310
+clang++ -pthread -shared -Wl,--exclude-libs,ALL -g0 /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/lietorch/src/lietorch.o /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/lietorch/src/lietorch_cpu.o /mnt/d/aaa/GameCam-VO-TASK009/external/DROID-W/thirdparty/lietorch/build/temp.linux-x86_64-cpython-310/lietorch/src/lietorch_gpu.o -L/mnt/d/aaa/GameCam-VO-TASK009/runtime/wsl310/lib/python3.10/site-packages/torch/lib -L/mnt/d/aaa/GameCam-VO-TASK009/runtime/cuda128/lib64 -L/install/lib -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-310/lietorch_backends.cpython-310-x86_64-linux-gnu.so
+error: command 'clang++' failed: No such file or directory

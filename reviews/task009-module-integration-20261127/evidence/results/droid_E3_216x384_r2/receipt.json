@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "gate": true,
+  "static_tracks": "experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1",
+  "original_droid_slam_ran": false,
+  "local_exploratory_protocol": true,
+  "seed": 43,
+  "input_frames": 32,
+  "not_formal_R2_equivalence": true,
+  "scatter_compatibility": {
+    "mode": "UPSTREAM_PURE_PYTORCH_SUM_MEAN_ONLY",
+    "scatter_py_sha256": "68b23f27c45bfb37a3fe066c75bd1c3dd711cbf5d8385aa9708f912c6916c3bc",
+    "utils_py_sha256": "0e3e310ffb443ff047116f8c330afb76dce2bbf3c00c3a029b44d9097ea195f9",
+    "custom_scatter_binary_loaded": false,
+    "native_torch_scatter_add_used": true
+  },
+  "protocol_deviations": [
+    "32-frame local window RGB301..332",
+    "216x384 / buffer64 / warmup6 / force-keyframe-every2",
+    "cached official priors at reduced canonical resolution with BF16",
+    "serial tracking process; Gaussian mapping and live visualization not launched"
+  ],
+  "prior_receipt_sha256": "cd13a651b36375aeb1a86ddbeb400a5d190ae5bed5a79192d383f614276a57c7",
+  "checkpoint_sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+  "frames": 32,
+  "keyframes": 16,
+  "native_u_enabled": true,
+  "native_ba_calls": 117,
+  "gate_calls": 117,
+  "static_calls": 117,
+  "tracking_seconds": 15.968147317000017,
+  "total_seconds": 23.570601454000013,
+  "peak_allocated_bytes": 1329272832,
+  "peak_reserved_bytes": 1900019712,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.7.1+cu128",
+  "native_extension_sha256": "c3b0e68bb2f87e1a89e0a3ef6b6bba53aedfca3fefa6253e6d57f6e74bc8dd9d"
+}

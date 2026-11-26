@@ -1,0 +1,27 @@
+{
+  "source_commit": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6",
+  "eigen_commit": "824272cde8ca2541e8b67b0887f5ded92b128d1f",
+  "candidate_is_exported_archive": true,
+  "files": [
+    {
+      "file": "setup.py",
+      "before_sha256": "f10eba30b02e62667160174ed16d886efa8b5666836db538be8bd6d89d1f0990",
+      "after_sha256": "1e3f2d6c6ef2fd74fdd113df404f3859f6999e6f51b920bcd396df2809e5d84c"
+    },
+    {
+      "file": "lietorch/src/lietorch_cpu.cpp",
+      "before_sha256": "87ed2479b77673cbf314026035bec66662ee6ad57d5f06e8046e11e7b9a061c9",
+      "after_sha256": "33e2d39de52f9d7a8d0fba702898d1a429c5787430c918af2cbd8d1887d11137"
+    },
+    {
+      "file": "lietorch/src/lietorch_gpu.cu",
+      "before_sha256": "f9a9d7d7f5e72fedb2eb0360015b2db5f840db45365d23d78c9792ec6de1eb44",
+      "after_sha256": "cdc7cce045c2dd51891e73c109e6d14cfecc68be4f0f0cb80256566ef94bc3c9"
+    },
+    {
+      "file": "lietorch/extras/corr_index_kernel.cu",
+      "before_sha256": "7432aba780651e8d652082c489ee5068e94b6e7eb49c4bfd590731cabea39b5c",
+      "after_sha256": "efb6ed078e56aa2add64de3c21992249e02df2f234e7504cbd3f0c62cdd4383b"
+    }
+  ]
+}

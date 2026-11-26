@@ -1,0 +1,17 @@
+{
+  "source_commits": [
+    {
+      "path": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\upstream\\thirdparty\\lietorch",
+      "commit": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\upstream\\thirdparty\\lietorch\\eigen",
+      "commit": "824272cde8ca2541e8b67b0887f5ded92b128d1f"
+    }
+  ],
+  "scope": "isolated candidate only; numerical kernel formulas unchanged",
+  "changes": [
+    "ATen scalar_type dispatcher metadata",
+    "sm_120 build via TORCH_CUDA_ARCH_LIST"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "device": "NVIDIA GeForce RTX 5060",
+  "torch": "2.7.1+cu128",
+  "rows": [
+    {
+      "seed": 43,
+      "bit_equal": true,
+      "max_abs": 0.0,
+      "input_unchanged": true
+    },
+    {
+      "seed": 44,
+      "bit_equal": true,
+      "max_abs": 0.0,
+      "input_unchanged": true
+    },
+    {
+      "seed": 45,
+      "bit_equal": true,
+      "max_abs": 0.0,
+      "input_unchanged": true
+    }
+  ],
+  "scope": "Adapter same-input equality only; no claim that native BA is deterministic"
+}

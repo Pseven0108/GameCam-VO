@@ -1,0 +1,80 @@
+D:\aaa\envs\gamecam-vo\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\TensorShape.cpp:4209.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{
+  "status": "INDEPENDENT_INFERENCE_COMPLETE",
+  "input_shape": [
+    1,
+    16,
+    4,
+    160,
+    280
+  ],
+  "queries": 25,
+  "precision": "fp32",
+  "seconds": 0.9199579999549314,
+  "seconds_per_frame": 0.057497374997183215,
+  "peak_allocated_bytes": 478453760,
+  "peak_reserved_bytes": 754974720,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132",
+  "checkpoint_sha256": "c1189d8d6912798e66b99b3e853ce644f587ed57837a5e7bb768405980dc1422",
+  "depth_source": "TASK008 Pi3 local_points z; auxiliary nonmetric, not official UniDepth pipeline",
+  "outputs": {
+    "total_xy": {
+      "shape": [
+        1,
+        16,
+        25,
+        2
+      ],
+      "min": -0.2546977996826172,
+      "median": 103.12239074707031,
+      "max": 288.41839599609375
+    },
+    "track_depth": {
+      "shape": [
+        1,
+        16,
+        25,
+        1
+      ],
+      "min": -0.24070435762405396,
+      "median": 0.5270771384239197,
+      "max": 20.64463233947754
+    },
+    "static_xyz": {
+      "shape": [
+        1,
+        16,
+        25,
+        3
+      ],
+      "min": -0.25469449162483215,
+      "median": 47.839622497558594,
+      "max": 288.4188232421875
+    },
+    "visibility": {
+      "shape": [
+        1,
+        16,
+        25
+      ],
+      "min": 7.16805743650184e-08,
+      "median": 0.9998247623443604,
+      "max": 0.9999998807907104
+    },
+    "dynamic_probability": {
+      "shape": [
+        1,
+        16,
+        25
+      ],
+      "min": 6.61488808173516e-10,
+      "median": 1.8744763963240985e-07,
+      "max": 0.018117593601346016
+    }
+  },
+  "dynamic_gt_available": false,
+  "accuracy_claim": false,
+  "droid_integration_complete": false
+}

@@ -19,3 +19,10 @@ checkpoints/
 *.o
 *.npy
 *.npz
+
+# TASK009 isolated local research assets
+/runtime/
+/external/
+/experiments/TASK009/outputs/
+/experiments/TASK009/private/
+/maintenance/STORAGE_MIGRATION_20261127/*.files.jsonl

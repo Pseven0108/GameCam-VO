@@ -1,0 +1,234 @@
+D:\aaa\GameCam-VO-TASK009\external\Easi3R\dust3r\model.py:217: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+Warning, cannot find cuda-compiled version of RoPE2D, using a slow pytorch version instead
+Freezing none parameters
+{
+  "status": "ISOLATED_EASI_ATTENTION_MASK_COMPLETE",
+  "full_easi3r_pipeline": false,
+  "raft_used": false,
+  "sam2_used": false,
+  "global_optimization": false,
+  "droid_integration": false,
+  "dynamic_gt_available": false,
+  "strict_load": true,
+  "checkpoint_constructor": "AsymmetricCroCo3DStereo(enc_depth=24, dec_depth=12, enc_embed_dim=1024, dec_embed_dim=768, enc_num_heads=16, dec_num_heads=12, pos_embed='RoPE100', patch_embed_cls='PatchEmbedDust3R', img_size=(512, 512), head_type='dpt', output_mode='pts3d', depth_mode=('exp', -inf, inf), conf_mode=('exp', 1, inf))",
+  "rgb_ids": [
+    301,
+    312,
+    325
+  ],
+  "input_hw": [
+    128,
+    224
+  ],
+  "pairs": [
+    {
+      "source": 301,
+      "target": 312,
+      "seconds": 0.7959494999959134,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    },
+    {
+      "source": 301,
+      "target": 325,
+      "seconds": 0.1696032999898307,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    },
+    {
+      "source": 312,
+      "target": 301,
+      "seconds": 0.16595890000462532,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    },
+    {
+      "source": 312,
+      "target": 325,
+      "seconds": 0.1567161999992095,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    },
+    {
+      "source": 325,
+      "target": 301,
+      "seconds": 0.15362860000459477,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    },
+    {
+      "source": 325,
+      "target": 312,
+      "seconds": 0.15172859997255728,
+      "output_shapes": {
+        "pts3d": [
+          1,
+          128,
+          224,
+          3
+        ],
+        "conf": [
+          1,
+          128,
+          224
+        ],
+        "match_feature": [
+          1,
+          8,
+          14,
+          1024
+        ],
+        "cross_atten_maps_k": [
+          1,
+          8,
+          14,
+          144
+        ]
+      },
+      "finite": true
+    }
+  ],
+  "precision": "BF16 forward / FP32 heads and attention aggregation",
+  "forward_seconds": 1.634813499986194,
+  "peak_allocated_bytes": 2373644800,
+  "peak_reserved_bytes": 2495610880,
+  "checkpoint_sha256": "9f194a32e34fc124ed10f64115b8e848b7da87c2d1ed131d34b4806721c19dbd",
+  "upstream_base_sha256": "4e6478041a10ac64a43291395924399ee6f879e5b4da3e19f6ffc30c67fcd424",
+  "threshold": 0.6171774864196777,
+  "dynamic_fractions": [
+    0.1221749410033226,
+    0.1358468234539032,
+    0.0530133917927742
+  ],
+  "score_semantics": "Minmax normalized attention score, not calibrated dynamic probability",
+  "functions_from_unchanged_external_ast": [
+    "NoGradParamDict",
+    "aggregate_attention_maps",
+    "cluster_attention_maps",
+    "adaptive_multiotsu_variance"
+  ],
+  "roi_or_detection_accuracy_claim": false,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132"
+}

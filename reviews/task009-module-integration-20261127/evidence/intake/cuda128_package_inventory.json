@@ -1,0 +1,261 @@
+[
+  {
+    "filename": "cuda-cccl-12.8.90-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "cuda-cccl_linux-64 12.8.90",
+      "cuda-version >=12.8,<12.9.0a0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1739456499386,
+    "md5": "e3af6b512914384e3dd153803408e2b7",
+    "name": "cuda-cccl",
+    "requires": [],
+    "size": 17222,
+    "version": "12.8.90",
+    "binstar": {
+      "package_id": "6137d5a15a1e30bf3fead130",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "0b2d403a67b3f6059d5ae9e2deafbe2de8567dbab4a5b15262c8f6cd7f3c7724"
+  },
+  {
+    "filename": "cuda-cudart-12.8.90-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "__glibc >=2.17,<3.0.a0",
+      "cuda-cudart_linux-64 12.8.90 0",
+      "cuda-version >=12.8,<12.9.0a0",
+      "libgcc-ng >=11.2.0",
+      "libstdcxx-ng >=11.2.0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1739446204409,
+    "md5": "1f08a30e0c3f7056cb10020107696928",
+    "name": "cuda-cudart",
+    "requires": [],
+    "size": 17666,
+    "version": "12.8.90",
+    "binstar": {
+      "package_id": "60ef384750ccf307bdbb0bc8",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "879f0dbda4464c0f9b4158e8bd6e521833ac95be3df9d432e988b10bbb0f54f8"
+  },
+  {
+    "filename": "cuda-cudart-dev-12.8.90-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": true,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "__glibc >=2.17,<3.0.a0",
+      "cuda-cudart 12.8.90 0",
+      "cuda-cudart-dev_linux-64 12.8.90 0",
+      "cuda-cudart-static 12.8.90 0",
+      "cuda-version >=12.8,<12.9.0a0",
+      "libgcc-ng >=11.2.0",
+      "libstdcxx-ng >=11.2.0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1739446220747,
+    "md5": "ce069f909b1df418f2be01859e080bef",
+    "name": "cuda-cudart-dev",
+    "requires": [],
+    "size": 17741,
+    "version": "12.8.90",
+    "binstar": {
+      "package_id": "617093a1a9d628b5027dc952",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "9fa2b5cd8ccc8431638988936dd920741c38f46fd69956ade54ab91db30c3654"
+  },
+  {
+    "filename": "cuda-nvcc-12.8.93-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "cuda-nvcc_linux-64 12.8.93.*",
+      "gcc_linux-64",
+      "gxx_linux-64"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1740203716574,
+    "md5": "1b9af3335b3f5f07a3faca9d7f14eba3",
+    "name": "cuda-nvcc",
+    "requires": [],
+    "size": 16906,
+    "version": "12.8.93",
+    "binstar": {
+      "package_id": "60ef37bc9075359542fe2967",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "68f20004bc574095a73cc0b2d8cc1d4db6d86f3980aa4baf32bd1aee0446a89e"
+  },
+  {
+    "filename": "cuda-nvcc-impl-12.8.93-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "constrains": [
+      "gcc_impl_linux-64 >=6,<14.0a0"
+    ],
+    "depends": [
+      "cuda-cudart >=12.8.57,<13.0a0",
+      "cuda-cudart-dev",
+      "cuda-nvcc-dev_linux-64 12.8.93 0",
+      "cuda-nvcc-tools 12.8.93 0",
+      "cuda-nvvm-impl 12.8.93 0",
+      "cuda-version >=12.8,<12.9.0a0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1740203690610,
+    "md5": "036e883bf1bc010b0cbefa4cacf2b5b4",
+    "name": "cuda-nvcc-impl",
+    "requires": [],
+    "size": 18824,
+    "version": "12.8.93",
+    "binstar": {
+      "package_id": "664d0a5dc578442c7fac3f59",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "b0fb0b9f13e08253aa0055f59b252acf14d491ef4fad0137ff1844c0756b4770"
+  },
+  {
+    "filename": "cuda-nvcc-tools-12.8.93-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "constrains": [
+      "gcc_impl_linux-64 >=6,<14.0a0"
+    ],
+    "depends": [
+      "__glibc >=2.17,<3.0.a0",
+      "cuda-crt-tools 12.8.93 0",
+      "cuda-nvvm-tools 12.8.93 0",
+      "cuda-version >=12.8,<12.9.0a0",
+      "libgcc-ng >=11.2.0",
+      "libstdcxx-ng >=11.2.0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1740203616520,
+    "md5": "4822347af4cbff51dbcaaecc40c84a11",
+    "name": "cuda-nvcc-tools",
+    "requires": [],
+    "size": 25679347,
+    "version": "12.8.93",
+    "binstar": {
+      "package_id": "664d0a3847b297f6dc7bc865",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "06de41a38e95df52dfa1cfa331b1db12ff72b217b09f00daef3e7562842307de"
+  },
+  {
+    "filename": "cuda-nvtx-12.8.90-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "__glibc >=2.17,<3.0.a0",
+      "cuda-version >=12.8,<12.9.0a0",
+      "libgcc-ng >=11.2.0",
+      "libstdcxx-ng >=11.2.0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1739445637894,
+    "md5": "2516df806a22f0682e18aa94bbdd7356",
+    "name": "cuda-nvtx",
+    "requires": [],
+    "size": 27143,
+    "version": "12.8.90",
+    "binstar": {
+      "package_id": "60ef38815f0624224abb08bf",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "d42f2315a5a59b34415bb529511d075f1352b3bc093047d78bbf5a02e3378c0c"
+  },
+  {
+    "filename": "cuda-nvvm-impl-12.8.93-0.conda",
+    "operatingsystem": "linux",
+    "machine": "x86_64",
+    "target-triplet": "x86_64-any-linux",
+    "has_prefix": false,
+    "subdir": "linux-64",
+    "arch": "x86_64",
+    "build": "0",
+    "build_number": 0,
+    "depends": [
+      "__glibc >=2.17,<3.0.a0",
+      "cuda-version >=12.8,<12.9.0a0",
+      "libgcc-ng >=11.2.0",
+      "libstdcxx-ng >=11.2.0"
+    ],
+    "license": "LicenseRef-NVIDIA-End-User-License-Agreement",
+    "platform": "linux",
+    "timestamp": 1740203537883,
+    "md5": "1d07df513c414dea7fe4e106cb80a4b5",
+    "name": "cuda-nvvm-impl",
+    "requires": [],
+    "size": 21773749,
+    "version": "12.8.93",
+    "binstar": {
+      "package_id": "664d0ab4b3e15d3a076374dc",
+      "owner_id": "5be2119d5c4b9a1104ccdc8f",
+      "channel": "cuda-12.8.1"
+    },
+    "sha256": "f000a6f3153b5e25546b576353ac9564caa5c7c63373491103f088bab0f4f794"
+  }
+]

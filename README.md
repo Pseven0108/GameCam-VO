@@ -1,3 +1,21 @@
+# GameCam-VO · TASK006A-R2.2 深度恢复与GT审计
+
+2026-11-26。**R2_2_PARTIALLY_READY_FOR_REVIEW**。
+
+[最终评审](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FINAL_REVIEW.md) · [展开材料](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-2-depth-restoration-gt-audit-20261126/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip)
+
+复用16张RGB的32份Native/Flip深度图，237个旧bicubic负值截零→0。
+200帧GT及198相邻pair支持内部几何对应，raw EXR物理单位仍未核实。
+在已观察0001三帧上，AbsRel0.133120→0.133160，没有整体精度改进证据。
+高Confidence Q75区域严重错误仅1个，不能写成大量高置信严重错误。
+71/71CPU测试、799/799历史保护通过；新增GPU前向0，没有训练或CADP/BA接入。
+完整ZIP含全部28份原始CPU数组和逐像素误差图，另附展开报告/CSV/源码/图表。
+本轮完成后停止，后续阶段需要用户决定。
+
+---
+
+## 历史记录
+
 # GameCam-VO · TASK006A-R2.1 真实GPU推理验证
 
 2026-11-26。**GPU_PILOT_COMPLETE / FORMAL_GT_ACCURACY_BLOCKED / CADP_INTEGRATION_NO_GO**。

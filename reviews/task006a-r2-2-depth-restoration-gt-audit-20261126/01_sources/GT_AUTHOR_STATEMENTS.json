@@ -1,0 +1,166 @@
+{
+  "statements": [
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-465852343",
+      "author": "phuang17",
+      "association": "OWNER",
+      "body": "Hi Kaixuan, I looked through your codes, but did not find anything wrong in the transformation. I will do more experiments to make sure, but could you try other datasets (GTAV_720 and GTAV_1080) and see if they have the same problem? Thanks.",
+      "created_at": "2019-02-21T03:54:34Z",
+      "updated_at": "2019-02-21T03:54:34Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-465853658",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "Dear,\r\nThanks for your reply.\r\nI would like to check the other two datasets and inform the results under this issue.",
+      "created_at": "2019-02-21T04:02:03Z",
+      "updated_at": "2019-02-21T04:02:03Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-466259553",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "Dear, \r\nI only tested on GTAV_720 dataset, cause the GTAV_1080 is too big and I did not download.\r\nI found that the depth-pose is consistent in GTAV_720 dataset. Maybe there are bugs when you scale the dataset to low-resolutions. ",
+      "created_at": "2019-02-22T03:22:09Z",
+      "updated_at": "2019-02-22T03:22:09Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-466260101",
+      "author": "phuang17",
+      "association": "OWNER",
+      "body": "Hi Kaixuan, thanks a lot for verifying that GTAV_720 is ok. I will work on updating GTAV_540, but I don't have an ETA for that yet. For now, could you resize the images from GTAV_720 if you would like to work with lower resolutions?",
+      "created_at": "2019-02-22T03:25:29Z",
+      "updated_at": "2019-02-22T03:25:29Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-466264105",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "I am glad that I can help:)",
+      "created_at": "2019-02-22T03:51:58Z",
+      "updated_at": "2019-02-22T03:51:58Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-505050627",
+      "author": "mihaidusmanu",
+      "association": "NONE",
+      "body": "It seems that the problem for GTAV_540 is `f_x` - the images don't respect the initial aspect ratio. The resolution of images is `810x540` instead of `960x540`. In order to get coherent correspondences you need to scale `f_x` for GTAV_540 accordingly - `f_x * 2 * 810 / 1920`.",
+      "created_at": "2019-06-24T15:05:00Z",
+      "updated_at": "2019-06-24T15:17:09Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-511166864",
+      "author": "phuang17",
+      "association": "OWNER",
+      "body": "@mihaidusmanu You are totally correct. Not sure why I did such simple math wrong....",
+      "created_at": "2019-07-14T02:02:20Z",
+      "updated_at": "2019-07-14T02:02:26Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642081493",
+      "author": "phongnhhn92",
+      "association": "NONE",
+      "body": "@WANG-KX  Thanks for sharing the code to warp the source image to target image using the depth map of the target view. As I understand you are finding the new pixel position for each of the pixel in the target image by rounding them up as a int number. I think this is sub-optimal, my suggestion is to use the bilinear sampling approach. Another thing is that you are using 2 for loops which is time consuming so is there any way we can achieve the same results with pure matrix multiplication ? ",
+      "created_at": "2020-06-10T15:23:49Z",
+      "updated_at": "2020-06-10T15:23:49Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642083843",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "hi, this is just a proof code that doesn't seek for any optimization. And yes, there exist optimizatin using torch.nn.functional.gridsample.",
+      "created_at": "2020-06-10T15:26:38Z",
+      "updated_at": "2020-06-10T15:26:38Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642502081",
+      "author": "phongnhhn92",
+      "association": "NONE",
+      "body": "> hi, this is just a proof code that doesn't seek for any optimization. And yes, there exist optimizatin using torch.nn.functional.gridsample.\r\n\r\nHi, Thanks for your reply ! I have read the gridsample function and it requires the range in the grid between -1 and 1. In your code, you are looping in range(W) and range(H). How can I convert them in the range between (-1,1) ?",
+      "created_at": "2020-06-11T08:39:50Z",
+      "updated_at": "2020-06-11T08:39:50Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642519445",
+      "author": "phongnhhn92",
+      "association": "NONE",
+      "body": "@WANG-KX \r\nHere is the code that I have made to optimize your code using the torch.nn.functional.gridsample but it seems like I am making some mistakes :(\r\n````\r\nimport numpy as np\r\nfrom numpy.linalg import inv\r\nfrom PIL import Image\r\nimport imageio\r\nimport json,torch\r\nfrom torchvision.transforms import *\r\nfrom torchvision.utils import *\r\nimport torch.nn.functional as F\r\n\r\npath = \"./data/MVSSynth/0000/\"\r\nimage1_idx = 0\r\nimage2_idx = 2\r\n\r\n\r\ndef read_img_depth_pose(i):\r\n    img_path = path + \"%04d.png\" % i\r\n    depth_path = path + \"%04d.exr\" % i\r\n    pose_path = path + \"%04d.json\" % i\r\n\r\n    img = np.array(Image.open(img_path))\r\n    raw_depth = np.asarray(imageio.imread(depth_path)[:])\r\n    raw_depth = np.clip(raw_depth, 0.1, 1000.0)\r\n    with open(pose_path) as f:\r\n        r_info = json.load(f)\r\n        c_x = r_info[\"c_x\"]\r\n        c_y = r_info[\"c_y\"]\r\n        f_x = r_info[\"f_x\"]\r\n        f_y = r_info[\"f_y\"]\r\n        # f_x = f_x * 2 * 810 / 1920\r\n        extrinsic = np.array(r_info[\"extrinsic\"])\r\n        extrinsic = inv(extrinsic)\r\n\r\n    K = np.array([[f_x, 0, c_x], [0, f_y, c_y], [0, 0, 1]])\r\n    return img, raw_depth, K, extrinsic\r\n\r\n\r\nimg1, depth1, K, T1 = read_img_depth_pose(image1_idx)\r\nimg2, depth2, K, T2 = read_img_depth_pose(image2_idx)\r\n\r\nleft2right = np.dot(inv(T2), T1)\r\nleft2right_r = left2right[:3, :3]\r\nleft2right_t = left2right[:3, 3]\r\nleft2right_t = left2right_t.reshape(3,1)\r\n\r\nH, W, _ = img1.shape\r\nrecon = np.zeros(img1.shape)\r\nrecon_d = np.ones(depth1.shape) * 1000.0\r\n\r\nxs, ys = np.meshgrid(np.linspace(-1, 1, W), np.linspace(-1, 1, H))\r\nxs = xs.reshape(1, H, W)\r\nys = ys.reshape(1, H, W)\r\ndepth_gt = depth1.reshape(1,H,W)\r\nuv_d1 = np.vstack((xs*depth_gt,ys*depth_gt,depth_gt))\r\nuv_d1 = uv_d1.reshape(3,-1)\r\nuv_c1 = np.dot(inv(K),uv_d1)\r\nuv_c2 = np.dot(left2right_r,uv_c1)+left2right_t\r\nuv_d2 = np.dot(K,uv_c2)\r\nuv2 = uv_d2[0:2]/uv_d2[2]\r\nuv2 = uv2.reshape(2,H,W).astype(np.float32)\r\n\r\n#Create img tensor\r\nimg1_tensor = ToTensor()(img1).unsqueeze(0)\r\nimg2_tensor = ToTensor()(img2).unsqueeze(0)\r\nsampler = torch.from_numpy(uv2).permute(1,2,0).unsqueeze(0)\r\n\r\n# Sample pixels from the reference image to the query image\r\nimg_warp = F.grid_sample(img2_tensor,sampler,align_corners=True)\r\n\r\n#Save Image\r\nsave_image(img1_tensor[0], './1.png')\r\nsave_image(img2_tensor[0], './2.png')\r\nsave_image(img_warp[0], './warped.png')\r\n\r\nprint('Done')\r\n````\r\n\r\n",
+      "created_at": "2020-06-11T09:11:11Z",
+      "updated_at": "2020-06-11T09:11:11Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642539491",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "the x-coordinate should be normalized as \"x = x / (W-1) * 2.0 - 1.0\"  such that it's between -1 and 1.\r\nthe y-coordinate should be normalized as \"y = y / (H-1) * 2.0 - 1.0\"  such that it's between -1 and 1.\r\n",
+      "created_at": "2020-06-11T09:48:38Z",
+      "updated_at": "2020-06-11T09:48:38Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642548420",
+      "author": "phongnhhn92",
+      "association": "NONE",
+      "body": "@WANG-KX \r\nI think I have already done that with the np.meshgrid function. \r\n````\r\nxs, ys = np.meshgrid(np.linspace(-1, 1, W), np.linspace(-1, 1, H))\r\nxs = xs.reshape(1, H, W)\r\nys = ys.reshape(1, H, W)\r\ndepth_gt = depth1.reshape(1,H,W)\r\nuv_d1 = np.vstack((xs*depth_gt,ys*depth_gt,depth_gt))\r\nuv_d1 = uv_d1.reshape(3,-1)\r\nuv_c1 = np.dot(inv(K),uv_d1)\r\n````\r\nI am just trying to optimize the nested for loop with pure matrix multiplication but I am not sure if it is correct because the returned uv2 is not in range of (-1,1). ",
+      "created_at": "2020-06-11T10:07:09Z",
+      "updated_at": "2020-06-11T10:07:24Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642551340",
+      "author": "WANG-KX",
+      "association": "NONE",
+      "body": "ok, then you need to scale the fx, fy and shift cx, cy since the coordinate is normalized.\r\nfx = fx / W * 2.0\r\nfy = fy / H * 2.0\r\ncx = cx / W * 2.0 - 1.0\r\ncy = cy / H * 2.0 - 1.0\r\nNot sure above is correct. you have to do it yourself.\r\n",
+      "created_at": "2020-06-11T10:13:38Z",
+      "updated_at": "2020-06-11T10:13:38Z"
+    },
+    {
+      "source_file": "issue13.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/13#issuecomment-642607847",
+      "author": "phongnhhn92",
+      "association": "NONE",
+      "body": "@WANG-KX \r\nThanks a lot ! It works :dancers: ",
+      "created_at": "2020-06-11T12:19:53Z",
+      "updated_at": "2020-06-11T12:19:53Z"
+    },
+    {
+      "source_file": "issue16.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/16#issuecomment-537333553",
+      "author": "phuang17",
+      "association": "OWNER",
+      "body": "@rann1018 I used [RenderDoc](https://renderdoc.org/) to access the Z-buffer, which can then be converted to depth maps. The extrinsic and intrinsic camera parameters can also be computed by the model-to-world matrix and the model-to-world-to-view matrix withing the RenderDoc buffer results. It will require some knowledge about Computer Graphics. Please let me know if you have any other questions. Thanks!",
+      "created_at": "2019-10-02T04:48:57Z",
+      "updated_at": "2019-10-02T04:48:57Z"
+    },
+    {
+      "source_file": "issue25.comments.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/25#issuecomment-2829873362",
+      "author": "ZhileiChen99",
+      "association": "NONE",
+      "body": "@guangkaixu I meet the same problem, have you solved it?",
+      "created_at": "2025-04-25T09:25:23Z",
+      "updated_at": "2025-04-25T09:25:23Z"
+    },
+    {
+      "source_file": "issue25.json",
+      "url": "https://github.com/phuang17/DeepMVS/issues/25",
+      "author": "guangkaixu",
+      "association": "NONE",
+      "body": "Hi, thanks for your great work. The maximum of the depth exr file can be larger than 10000. How can I get the metric scale of the depth, so that I can obtain metric depth with:\n\nmetric_depth = depth_read_from_exr / metric_scale\n\nThanks a lot!",
+      "created_at": "2025-01-20T06:17:35Z",
+      "updated_at": "2025-04-25T09:25:24Z"
+    }
+  ]
+}

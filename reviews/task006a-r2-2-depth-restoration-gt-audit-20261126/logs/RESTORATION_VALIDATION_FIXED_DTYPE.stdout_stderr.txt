@@ -1,0 +1,29 @@
+RESTORE_VALIDATED VIPER_Night_val007_00001
+RESTORE_VALIDATED VIPER_Day_val001_00001
+RESTORE_VALIDATED VIPER_Day_val001_00239
+RESTORE_VALIDATED VIPER_Night_val007_00244
+RESTORE_VALIDATED VIPER_Sunset_val008_00001
+RESTORE_VALIDATED VIPER_Sunset_val008_00354
+RESTORE_VALIDATED VIPER_Rain_val018_00001
+RESTORE_VALIDATED VIPER_Rain_val018_00356
+RESTORE_VALIDATED VIPER_Snow_val021_00001
+RESTORE_VALIDATED VIPER_Snow_val021_00355
+RESTORE_VALIDATED MVS_0000_0000
+RESTORE_VALIDATED MVS_0000_0049
+RESTORE_VALIDATED MVS_0000_0099
+RESTORE_VALIDATED MVS_0001_0000
+RESTORE_VALIDATED MVS_0001_0049
+RESTORE_VALIDATED MVS_0001_0099
+{
+  "unique_RGB": 16,
+  "native_and_flip_maps": 32,
+  "old_bicubic_negative_all_maps": 237,
+  "old_clamped_zero_all_maps": 237,
+  "new_nonpositive_all_maps": 0,
+  "old_native_MVS_zero_on_valid_GT": 7,
+  "new_native_MVS_nonpositive_on_valid_GT": 0,
+  "float32_vs_torch_CPU_max_abs": 0.00096893310546875,
+  "elapsed_CPU_seconds": 3.404088,
+  "algorithm_production_source_changed": false,
+  "repair_scope": "Independent depth evaluator restore function; production DROID-W unchanged"
+}

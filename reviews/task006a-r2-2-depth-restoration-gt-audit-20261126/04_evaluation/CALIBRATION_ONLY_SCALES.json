@@ -1,0 +1,29 @@
+{
+  "per_variant_native_unit_scale": {
+    "R2_1_BICUBIC_FROZEN": 15.985507037495662,
+    "BILINEAR_SAME_FOCAL": 15.982373964596567,
+    "BILINEAR_OFFICIAL_RESIZED_FOCAL": 14.420186529190488
+  },
+  "historical_frozen_scale": 15.985507037495662,
+  "fit_sequence": "0000",
+  "fit_frames": [
+    "0000",
+    "0049",
+    "0099"
+  ],
+  "formula": "exp(median(log(GT)-log(pred)))",
+  "observed_audit_sequence": "0001",
+  "audit_is_fresh_test": false,
+  "probability_fit_performed": false,
+  "confidence_Q25_Q50_Q75": [
+    0.9673841893672943,
+    0.9798970818519592,
+    0.987671822309494
+  ],
+  "distance_terciles_native": [
+    189.125,
+    337.5
+  ],
+  "no_unit_conversion_claim": true,
+  "thresholds_fit_to_observed_sequence": false
+}

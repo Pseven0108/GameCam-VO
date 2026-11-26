@@ -1,0 +1,41 @@
+{
+  "stage": "TASK006A-R2.2 DEPTH RESTORATION AND GT QUALITY AUDIT",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "registered_utc": "2026-11-26T07:04:47.661576+00:00",
+  "mode": "Reuse 16 sealed real inference outputs; CPU processing, no new model inference",
+  "source_review_commit": "9e8e1f609796ed78a0a27b942d3d7440bcf23d72",
+  "source_zip_sha256": "fc8dfeb8e2746c8033621af9647a382e9e3138ff09bf46e8ddee453f678c7ae8",
+  "primary_isolated_change": "Pixel-center bilinear restoration instead of bicubic; same unpad, fx/1000, clamp0..300",
+  "selection_basis": "Positivity/convex-hull guarantee and pinned Metric3D official example; not fitted to GT error",
+  "secondary_focal_audit": "Official example rescales fx by canonical input resize; report independently from interpolation",
+  "variants": [
+    "R2_1_BICUBIC_FROZEN",
+    "BILINEAR_SAME_FOCAL",
+    "BILINEAR_OFFICIAL_RESIZED_FOCAL"
+  ],
+  "predictions_invalid_on_valid_GT": "Retain invalid counts; no outcome-dependent masking or replacing GT",
+  "GT_valid": "Finite and strictly positive native EXR only; no clipping or interpolation of GT",
+  "GT_units": "UNKNOWN until independent original-export evidence establishes raw EXR-to-meters",
+  "scale": "One global log-median scale from sequence0000 frames0000,0049,0099 per variant; freeze for0001",
+  "also_fixed_historical_scale_sensitivity": 15.985507037495662,
+  "test0001_status": "ALREADY_OBSERVED_AUDIT_DATA_NOT_NEW_HELD_OUT_TEST",
+  "no_fresh_generalization_certificate": true,
+  "severe_error_event": "AbsRel >= 1.0, boundary inclusive; reliable <=0.2, uncertain >0.2 and <1.0",
+  "other_error_thresholds": [
+    0.2,
+    0.5
+  ],
+  "native_confidence": "Raw score; no P(error) interpretation; high-score cutoff=Calibration0000 Q75, descriptive",
+  "spatial_strata": "Calibration GT distance terciles, depth-boundary proxy relative Sobel>0.05, image border5pct",
+  "connected_components": "8-connected severe-error components; full mask retained",
+  "GT_alignment_tests": "200 frame metadata/decode/header audit; selected adjacent crossviews z vs range, K/pixel-center/extrinsic controls; sampled RGB warp",
+  "automatic_GT_correction": false,
+  "production_code_modification": false,
+  "no_new_probability_fit": true,
+  "no_detector_training": true,
+  "no_CADP_or_BA_changes": true,
+  "no_TASK007": true,
+  "new_dataset_download": false,
+  "publication_authorized": "Public full review ZIP and expanded files, exclude raw datasets/weights/credentials",
+  "local_free_bytes": 139357933568
+}

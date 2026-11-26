@@ -1,0 +1,59 @@
+{
+  "task": "TASK006A-R2.2",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "final_status": "R2_2_PARTIALLY_READY_FOR_REVIEW",
+  "gates": [
+    {
+      "item": "封存输入/历史结果保护",
+      "status": "PASS",
+      "evidence": "799/799本地文件、16/16远端封存输出身份一致"
+    },
+    {
+      "item": "bicubic负值机制及独立恢复修复",
+      "status": "PASS",
+      "evidence": "32张图237个旧负值/截零→0；正值canonical输入的bilinear凸组合"
+    },
+    {
+      "item": "独立数值实现",
+      "status": "PASS_WITH_TOLERANCE",
+      "evidence": "71/71 CPU测试；32张真实图均满足预定混合容差，不逐位等价"
+    },
+    {
+      "item": "GT有限值/Inf/尺寸及内部几何",
+      "status": "PARTIAL",
+      "evidence": "200帧、198相邻对及最大平移控制支持；无独立真值精度证书或物理时间戳"
+    },
+    {
+      "item": "raw EXR物理单位",
+      "status": "BLOCKED",
+      "evidence": "作者原始单位换算、导出元数据及独立物理长度均缺失"
+    },
+    {
+      "item": "准确性改善",
+      "status": "NOT_SUPPORTED",
+      "evidence": "AbsRel及严重错误比例略升，不能把恢复正值写成精度改进"
+    },
+    {
+      "item": "大量高Confidence严重错误",
+      "status": "NOT_SUPPORTED_IN_THIS_SAMPLE",
+      "evidence": "0001三帧高分Q75区域分别0/204054、0/112800、1/23359"
+    },
+    {
+      "item": "新鲜独立测试/跨场景泛化",
+      "status": "BLOCKED",
+      "evidence": "0001已在R2.1观察，只有3张带预测的复用审计帧"
+    },
+    {
+      "item": "生产接入/概率校准/检测器训练",
+      "status": "NOT_AUTHORIZED_NOT_EXECUTED",
+      "evidence": "独立评估器；没有修改DROID-W、BA、CUDA或训练"
+    }
+  ],
+  "new_model_forwards": 0,
+  "GPU_used": false,
+  "accuracy_improvement_demonstrated": false,
+  "physical_metric_depth_GT_established": false,
+  "fresh_test_established": false,
+  "production_integration_approved": false,
+  "automatic_next_stage": false
+}

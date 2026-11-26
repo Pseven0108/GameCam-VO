@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DeepMVS: Learning Multi-View Stereopsis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta property="og:title" content="DeepMVS: Learning Multi-View Stereopsis">
+	<meta property="og:url" content="https://phuang17.github.io/DeepMVS/index.html">
+	<meta property="og:image" content="https://phuang17.github.io/DeepMVS/img/overview-cropped.png">
+	<meta property="og:description" content="DeepMVS is a Deep Convolutional Neural Network which learns to estimate pixel-wise disparity maps from a sequence of an arbitrary number of unordered images with the camera poses already known or estimated.">
+	<meta name="description" content="DeepMVS is a Deep Convolutional Neural Network which learns to estimate pixel-wise disparity maps from a sequence of an arbitrary number of unordered images with the camera poses already known or estimated.">
+	<meta name="keywords" content="DeepMVS, Po-Han Huang, Jia-Bin Huang, Johannes Kopf, Kevin Matzen, Narendra Ahuja, Deep Learning, Multi-View Stereo, Learning Multi-View Stereopsis, Computer Vision, MVS-Synth">
+	<meta name="author" content="Po-Han Huang">
+	<!-- jQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<br>
+				<h1>DeepMVS: Learning Multi-View Stereopsis</h1>
+				<br>
+				<h4><a href="https://phuang17.github.io/">Po-Han&nbsp;Huang</a><sup>1</sup> &emsp; <a href="http://www.kmatzen.com/">Kevin&nbsp;Matzen</a><sup>2</sup> &emsp; <a href="http://johanneskopf.de/">Johannes&nbsp;Kopf</a><sup>2</sup> &emsp; <a href="http://vision.ai.illinois.edu/ahuja.html">Narendra&nbsp;Ahuja</a><sup>1</sup> &emsp; <a href="https://jbhuang0604.github.io/">Jia-Bin&nbsp;Huang</a><sup>3</sup></h4>
+			</div>
+			<div class="col-xs-12 text-center">
+				<h4><sup>1</sup>University&nbsp;of&nbsp;Illinois, Urbana&nbsp;Champaign &emsp; <sup>2</sup>Facebook &emsp; <sup>3</sup>Virginia&nbsp;Tech</h4>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<img class="img-responsive" src="img/overview.png">
+					</div>
+					<div class="col-xs-12 col-sm-4" style="margin-top: 5%">
+						<img class="img-responsive" src="img/ours_0087.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Abstract</h3>
+				<p >We present DeepMVS, a deep convolutional neural network (ConvNet) for multi-view stereo reconstruction. Taking an arbitrary number of posed images as input, we first produce a set of plane-sweep volumes and use the proposed DeepMVS network to predict high-quality disparity maps. The key contributions that enable these results are (1) supervised training on a photorealistic synthetic dataset, (2) an effective method for aggregating information across a set of unordered images, and (3) integrating multi-layer feature activations from the pre-trained VGG-19 network. We validate the efficacy of DeepMVS using the ETH3D Benchmark. Our results show that DeepMVS compares favorably against state-of-the-art conventional MVS algorithms and other CNN based methods, particularly for near-textureless regions and thin structures. </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Links</h3>
+				<a href="https://arxiv.org/abs/1804.00650">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> Paper</button>
+				</a>
+				<a href="DeepMVS-supp.pdf">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> Supplementary Material (11MB)</button>
+				</a>
+				<a href="https://github.com/phuang17/DeepMVS">
+					<button type="button" class="btn btn-primary"><img src="img/GitHub-Mark-Light-32px.png" height="16px"> Codes</button>
+				</a>
+				<a href="mvs-synth.html">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;MVS-Synth Dataset</button>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Examples</h3>
+				<a href="comparison.html"><button type="button" class="btn btn-info">More Comparisons <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></a>
+				<a href="result.html"><button type="button" class="btn btn-info">Full Results on ETH3D Datasets <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></a>
+				<a href="https://1drv.ms/u/s!AoA3NyEQIlSOcs4HBTm4lY9WwZc?e=N1hpmF">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Full Results on ETH3D Datasets (3GB)</button>
+				</a>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+				<div class="row">
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/teaser_0030.gif">
+					</div>
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/ours_0030.gif">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-3 col-md-offset-0">
+				<div class="row">
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/teaser_0010.gif">
+					</div>
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/ours_0010.gif">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-0">
+				<div class="row">
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/teaser_0110.gif">
+					</div>
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/ours_0110.gif">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-3 col-md-offset-0">
+				<div class="row">
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/teaser_0126.gif">
+					</div>
+					<div class="col-xs-12 teaser-img">
+						<img class="img-responsive" src="img/ours_0126.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>BibTeX</h3>
+				<p>If you use our code or data, please cite:</p>
+				<pre>
+    @inproceedings{DeepMVS,
+      author       = "Huang, Po-Han and Matzen, Kevin and Kopf, Johannes and Ahuja, Narendra and Huang, Jia-Bin",
+      title        = "DeepMVS: Learning Multi-View Stereopsis",
+      booktitle    = "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      year         = "2018"
+    }
+</pre>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	<style type="text/css">
+.container {
+	background-color: #FBFBFC;
+}
+.teaser-img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.img-responsive {
+	margin: auto;
+}
+	</style>
+</body>
+</html>

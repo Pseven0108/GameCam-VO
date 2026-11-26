@@ -1,3 +1,16 @@
+# 当前审查：TASK006A-R2.2
+
+[最终评审](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FINAL_REVIEW.md) · [展开材料](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-2-depth-restoration-gt-audit-20261126/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip)
+
+重点审查：插值修复与精度改善的区别；官方resized focal与历史focal隔离；GT单位/Inf/float16精度；
+198相邻检查及最大平移控制的证据边界；0001不是fresh test；不按坏预测删点；严重事件>=1；
+Native raw score不是概率；高分严重错误数量和低基率/AP；原始失败证据；完整ZIP的28份NPZ。
+不得据本轮批准训练、CADP接入或新的SLAM。
+
+---
+
+## 历史说明
+
 # 当前审查：TASK006A-R2.1
 
 [最终评审](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FINAL_REVIEW.md) · [完整报告](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_FINAL_RESEARCH_REPORT.md) · [展开材料](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-1-metric3d-gpu-pilot-20261126/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip)

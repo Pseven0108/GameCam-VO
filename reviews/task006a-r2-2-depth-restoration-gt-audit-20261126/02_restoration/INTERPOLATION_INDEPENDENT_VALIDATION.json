@@ -1,0 +1,94 @@
+{
+  "fixtures": [
+    {
+      "id": 0,
+      "input_shape": [
+        1,
+        1
+      ],
+      "output_shape": [
+        3,
+        7
+      ],
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "id": 1,
+      "input_shape": [
+        1,
+        4
+      ],
+      "output_shape": [
+        3,
+        11
+      ],
+      "max_abs_diff": 1.2191859156018836e-05,
+      "allclose": true
+    },
+    {
+      "id": 2,
+      "input_shape": [
+        4,
+        1
+      ],
+      "output_shape": [
+        11,
+        3
+      ],
+      "max_abs_diff": 6.068836555073176e-06,
+      "allclose": true
+    },
+    {
+      "id": 3,
+      "input_shape": [
+        3,
+        5
+      ],
+      "output_shape": [
+        7,
+        9
+      ],
+      "max_abs_diff": 1.6742282454629276e-05,
+      "allclose": true
+    },
+    {
+      "id": 4,
+      "input_shape": [
+        7,
+        9
+      ],
+      "output_shape": [
+        3,
+        4
+      ],
+      "max_abs_diff": 1.0649363190395889e-05,
+      "allclose": true
+    },
+    {
+      "id": 5,
+      "input_shape": [
+        8,
+        12
+      ],
+      "output_shape": [
+        8,
+        12
+      ],
+      "max_abs_diff": 0.0,
+      "allclose": true
+    }
+  ],
+  "all_real_maps_native_dtype_reconstruction_pass": true,
+  "rtol": 3e-05,
+  "atol": 0.0003,
+  "fixture_rtol": 2e-05,
+  "fixture_atol": 2e-05,
+  "geometry": "Pixel-center, align_corners=False, non-antialiased bilinear, edge extension",
+  "initial_float64_vs_float32_failure_preserved": "INITIAL_FLOAT64_VS_FLOAT32_VALIDATION_FAILURE.json",
+  "standards_relaxed": false,
+  "fix": "Match original float32 source-coordinate and lambda arithmetic; retain float64 analytic comparison",
+  "exact_bitwise_GPU_equivalence_claim": false,
+  "torch_CPU_interpolation_context_only": true,
+  "no_model_inference": true
+}

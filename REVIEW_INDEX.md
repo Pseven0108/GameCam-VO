@@ -1,3 +1,13 @@
+# 最新评审：TASK006A-R2.2
+
+[最终评审](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FINAL_REVIEW.md) · [展开材料](reviews/task006a-r2-2-depth-restoration-gt-audit-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-2-depth-restoration-gt-audit-20261126/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip)
+
+完整ZIP包含全部28份NPZ。
+
+---
+
+## 历史索引
+
 # 最新评审：TASK006A-R2.1
 
 [最终评审](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FINAL_REVIEW.md) · [完整报告](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_FINAL_RESEARCH_REPORT.md) · [展开材料](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-1-metric3d-gpu-pilot-20261126/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip)

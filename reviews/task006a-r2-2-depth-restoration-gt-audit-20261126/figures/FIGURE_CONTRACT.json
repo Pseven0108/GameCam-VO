@@ -1,0 +1,18 @@
+{
+  "backend": "Existing Python matplotlib workflow",
+  "conclusion": "Bilinear restoration removes cubic overshoot zeros but does not establish better depth accuracy or physical GT units.",
+  "archetypes": ["image plate + quant", "quantitative grid"],
+  "evidence_chain": {
+    "MVS_SPATIAL_ERROR_CONFIDENCE": "Same three previously observed RGB frames; GT native units, restored depth, relative error, raw confidence.",
+    "ZERO_PIXEL_RESTORATION_DETAIL": "All seven old zero coordinates and a documented crop showing the local interpolation failure.",
+    "PAIRED_ERROR_AND_SEVERE": "Per-frame paired errors; same GT masks, calibration-only scales, no new held-out claim.",
+    "CONFIDENCE_ERROR_DIAGNOSTICS": "Calibration-defined confidence bins show error and severe-error occurrence; raw scores are not probabilities.",
+    "GEOMETRY_ALIGNMENT_UNIT_AMBIGUITY": "198 adjacent Z-depth checks and independently pose-selected maximum-translation controls support internal geometry, not meters."
+  },
+  "export": ["PNG 220dpi preview", "SVG editable labels", "PDF embedded image panels"],
+  "statistics": "Three technical image samples in one previously observed sequence. Equal-frame macro; no pixel-iid CI or significance.",
+  "image_integrity": "RGB colors unchanged; quantitative pseudocolor only. One crop explicitly labeled. GT invalid pixels masked gray for display only; metrics keep all finite positive GT.",
+  "display_limits": "Specified in figure script/captions; numerical outputs are never display-clipped.",
+  "risks": ["Numerical positivity is not accuracy", "Scaling and interpolation must be separated", "Raw confidence near 0.9 is not 90%", "Cross-view consistency cannot certify meters", "Test0001 is reused audit data"],
+  "source_data": "02_restoration and 04_evaluation structured CSV/JSON/NPZ"
+}

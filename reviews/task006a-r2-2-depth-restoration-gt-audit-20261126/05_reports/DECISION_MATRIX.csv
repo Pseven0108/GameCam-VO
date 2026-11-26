@@ -1,0 +1,10 @@
+item,status,evidence
+封存输入/历史结果保护,PASS,799/799本地文件、16/16远端封存输出身份一致
+bicubic负值机制及独立恢复修复,PASS,32张图237个旧负值/截零→0；正值canonical输入的bilinear凸组合
+独立数值实现,PASS_WITH_TOLERANCE,71/71 CPU测试；32张真实图均满足预定混合容差，不逐位等价
+GT有限值/Inf/尺寸及内部几何,PARTIAL,200帧、198相邻对及最大平移控制支持；无独立真值精度证书或物理时间戳
+raw EXR物理单位,BLOCKED,作者原始单位换算、导出元数据及独立物理长度均缺失
+准确性改善,NOT_SUPPORTED,AbsRel及严重错误比例略升，不能把恢复正值写成精度改进
+大量高Confidence严重错误,NOT_SUPPORTED_IN_THIS_SAMPLE,0001三帧高分Q75区域分别0/204054、0/112800、1/23359
+新鲜独立测试/跨场景泛化,BLOCKED,0001已在R2.1观察，只有3张带预测的复用审计帧
+生产接入/概率校准/检测器训练,NOT_AUTHORIZED_NOT_EXECUTED,独立评估器；没有修改DROID-W、BA、CUDA或训练

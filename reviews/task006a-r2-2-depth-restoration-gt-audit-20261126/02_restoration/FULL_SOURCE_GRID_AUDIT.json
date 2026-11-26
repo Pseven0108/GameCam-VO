@@ -1,0 +1,122 @@
+{
+  "examples": [
+    {
+      "sample_id": "VIPER_Night_val007_00001",
+      "environment": "Night",
+      "tracker_input_hw": [
+        360,
+        640
+      ],
+      "output_hw": [
+        1080,
+        1920
+      ],
+      "source_rgb_hw": [
+        1080,
+        1920
+      ],
+      "min_depth": 1.4652893337457162,
+      "depth_unit_multiplied_by_image_resize": false,
+      "source_grid_adds_new_geometric_detail": false,
+      "max_abs_vs_resized_input_depth": 5.904897463437919e-06,
+      "output": "02_restoration\\source_grid_examples\\VIPER_Night_val007_00001_source_grid.npz",
+      "sha256": "520becc9fb080f929ed0824a30eafff2a520f5eb1fdf171c05dada5a5c5641b2",
+      "bytes": 6681936
+    },
+    {
+      "sample_id": "VIPER_Day_val001_00001",
+      "environment": "Day",
+      "tracker_input_hw": [
+        360,
+        640
+      ],
+      "output_hw": [
+        1080,
+        1920
+      ],
+      "source_rgb_hw": [
+        1080,
+        1920
+      ],
+      "min_depth": 1.4369510427114478,
+      "depth_unit_multiplied_by_image_resize": false,
+      "source_grid_adds_new_geometric_detail": false,
+      "max_abs_vs_resized_input_depth": 6.270944709285686e-06,
+      "output": "02_restoration\\source_grid_examples\\VIPER_Day_val001_00001_source_grid.npz",
+      "sha256": "bf87adf2b7d551912d8b416542f30d08000183fef2900005effc52bf2138eb9a",
+      "bytes": 5981319
+    },
+    {
+      "sample_id": "VIPER_Sunset_val008_00001",
+      "environment": "Sunset",
+      "tracker_input_hw": [
+        360,
+        640
+      ],
+      "output_hw": [
+        1080,
+        1920
+      ],
+      "source_rgb_hw": [
+        1080,
+        1920
+      ],
+      "min_depth": 1.0050501389746187,
+      "depth_unit_multiplied_by_image_resize": false,
+      "source_grid_adds_new_geometric_detail": false,
+      "max_abs_vs_resized_input_depth": 6.316977078313357e-06,
+      "output": "02_restoration\\source_grid_examples\\VIPER_Sunset_val008_00001_source_grid.npz",
+      "sha256": "2582e633507581c2d0992d18b0bd03eb31e75e9a8ae6279707865e139e111b47",
+      "bytes": 6735179
+    },
+    {
+      "sample_id": "VIPER_Rain_val018_00001",
+      "environment": "Rain",
+      "tracker_input_hw": [
+        360,
+        640
+      ],
+      "output_hw": [
+        1080,
+        1920
+      ],
+      "source_rgb_hw": [
+        1080,
+        1920
+      ],
+      "min_depth": 0.03860347862117176,
+      "depth_unit_multiplied_by_image_resize": false,
+      "source_grid_adds_new_geometric_detail": false,
+      "max_abs_vs_resized_input_depth": 6.35644151714132e-06,
+      "output": "02_restoration\\source_grid_examples\\VIPER_Rain_val018_00001_source_grid.npz",
+      "sha256": "2bac424620c1cf9de5888da61ca9d5e9afb716ac3ad171746bf5270cb388a819",
+      "bytes": 5643704
+    },
+    {
+      "sample_id": "VIPER_Snow_val021_00001",
+      "environment": "Snow",
+      "tracker_input_hw": [
+        360,
+        640
+      ],
+      "output_hw": [
+        1080,
+        1920
+      ],
+      "source_rgb_hw": [
+        1080,
+        1920
+      ],
+      "min_depth": 1.2157995479435353,
+      "depth_unit_multiplied_by_image_resize": false,
+      "source_grid_adds_new_geometric_detail": false,
+      "max_abs_vs_resized_input_depth": 5.6648632948963495e-06,
+      "output": "02_restoration\\source_grid_examples\\VIPER_Snow_val021_00001_source_grid.npz",
+      "sha256": "44ee81a106edc4b8ff303e935840479e402bd161c36224c39828f4c7a05bd7c6",
+      "bytes": 5938310
+    }
+  ],
+  "five_environments": 5,
+  "new_model_forwards": 0,
+  "notes": "MVS predictions are already restored to native960x540; VIPER R2.1 prediction grid was640x360 with rawRGB1920x1080. Five native1920x1080 maps are included as explicit two-stage exports."
+}

@@ -1,0 +1,947 @@
+{
+  "task": "TASK006A-R2.2",
+  "base_commit": "9e8e1f609796ed78a0a27b942d3d7440bcf23d72",
+  "ZIP": {
+    "status": "PASS",
+    "ZIP_name": "GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip",
+    "ZIP_bytes": 298049439,
+    "ZIP_sha256": "160290adbc14770a8bbf3e9a1464b059f660b796d5eed6200d8ba3cf0c7baca3",
+    "ZIP_CRC": "PASS",
+    "ZIP_members": 146,
+    "internal_SHA256_entries": 145,
+    "internal_SHA256_passed": 145,
+    "NPZ_files": 28,
+    "protected_files_unchanged": 799,
+    "tests": 71,
+    "new_GPU_forwards": 0,
+    "raw_datasets_or_weights_included": false,
+    "created_utc": "2026-11-26T07:35:20.045470+00:00"
+  },
+  "release_asset_url": "https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-2-depth-restoration-gt-audit-20261126/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip",
+  "Git_omitted_raw_outputs": [
+    {
+      "path": "02_restoration/source_grid_examples/VIPER_Day_val001_00001_source_grid.npz",
+      "bytes": 5981319,
+      "sha256": "bf87adf2b7d551912d8b416542f30d08000183fef2900005effc52bf2138eb9a",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/source_grid_examples/VIPER_Night_val007_00001_source_grid.npz",
+      "bytes": 6681936,
+      "sha256": "520becc9fb080f929ed0824a30eafff2a520f5eb1fdf171c05dada5a5c5641b2",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/source_grid_examples/VIPER_Rain_val018_00001_source_grid.npz",
+      "bytes": 5643704,
+      "sha256": "2bac424620c1cf9de5888da61ca9d5e9afb716ac3ad171746bf5270cb388a819",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/source_grid_examples/VIPER_Snow_val021_00001_source_grid.npz",
+      "bytes": 5938310,
+      "sha256": "44ee81a106edc4b8ff303e935840479e402bd161c36224c39828f4c7a05bd7c6",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/source_grid_examples/VIPER_Sunset_val008_00001_source_grid.npz",
+      "bytes": 6735179,
+      "sha256": "2582e633507581c2d0992d18b0bd03eb31e75e9a8ae6279707865e139e111b47",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/CPU_INTERPOLATION_FIXTURES.npz",
+      "bytes": 3889,
+      "sha256": "b7872ff1c090f95f1c3bf772b07fd9c302bee830fd8fdac4190ec5e7b2147841",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0000_0000.npz",
+      "bytes": 18638641,
+      "sha256": "ade1e4e12743a248ae27389d3b8b075733d7ab930ad777729b716bc63996ad34",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0000_0049.npz",
+      "bytes": 18615488,
+      "sha256": "ca094df7820e8eb79a2455cee364c62dcc53f69a5159df58873e4308f7516269",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0000_0099.npz",
+      "bytes": 16850083,
+      "sha256": "40104924d082a0901bb840a64e769db956bf8cb56464f3e2e027416193dde6f5",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0001_0000.npz",
+      "bytes": 18854013,
+      "sha256": "bf55309f325634ab01c1e37d9586f7920dd4d70a0d083250b799e73f62497335",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0001_0049.npz",
+      "bytes": 18123329,
+      "sha256": "e0c87a317300043d47036ba4bf1c79f73719789c9845cc5c67aa2f679968018d",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/MVS_0001_0099.npz",
+      "bytes": 17851353,
+      "sha256": "be2127bce57a88db5940e9a48a5c7772909b71feddcb8621281256e9947dd2fa",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Day_val001_00001.npz",
+      "bytes": 8154250,
+      "sha256": "0d7db59131cfbb15028b1996739975ae85870fabde830969969bba5a478089dc",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Day_val001_00239.npz",
+      "bytes": 7556763,
+      "sha256": "493c68310c95842a50fb84b4363b9ddcc0d60ff341f2b82be55132e34e32ce4e",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Night_val007_00001.npz",
+      "bytes": 9050837,
+      "sha256": "c9b261588f52b014be884e1091a4aca3bf1705b16b1eee32e90fbb4030d3b4d7",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Night_val007_00244.npz",
+      "bytes": 8967726,
+      "sha256": "5f41304e78e46fc7a8ad693089a3c1c8d5b9a093a08fbd43d3daf8d8ffb80cce",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Rain_val018_00001.npz",
+      "bytes": 7901096,
+      "sha256": "acb84c9ddd213dc5f8ab7500b0eba2cb88c44ec2d02bfdae484bfdd39ecd3399",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Rain_val018_00356.npz",
+      "bytes": 7429202,
+      "sha256": "a76c115bfcb3cdbea0be86968b82ef2d14d0f441a1c60405993a69ec262a9ca1",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Snow_val021_00001.npz",
+      "bytes": 8193536,
+      "sha256": "918d8b2040690cbe44e1d7905683a0eebbb2db70963e5c5430fd80de25c1fcb6",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Snow_val021_00355.npz",
+      "bytes": 8254456,
+      "sha256": "a6efe80a426efe3fefa84100aaf545657aabd341ea767ca2b6d5d93e02a29f8e",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Sunset_val008_00001.npz",
+      "bytes": 9044597,
+      "sha256": "d718f58845f66f7cf64158edf2718bc92dfb69c693f01720f5c706b1a1f54e17",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_restoration/torch_CPU/VIPER_Sunset_val008_00354.npz",
+      "bytes": 8509367,
+      "sha256": "1f12ffdd4d0fe164a7f5831667cb90b1e1b1031cd4d190eb027e821128c9c7c2",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0000_0000.npz",
+      "bytes": 11058950,
+      "sha256": "51fb9f159342c98338bdb0ecc0abd080569e3e73c607b5e8d83a2b34c48b4706",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0000_0049.npz",
+      "bytes": 11081181,
+      "sha256": "6d34586d5a0e9f1f2f17f3d9516d7dcef434cfab36ef7470fa2255a43855acbe",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0000_0099.npz",
+      "bytes": 9924131,
+      "sha256": "7f9954b8e86d3d4dbc8b87c210aee48d29ce355a92c4a7da4dcffd18cd883b90",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0001_0000.npz",
+      "bytes": 11503998,
+      "sha256": "9338158ee042552380c39c84e4e3ed75f3c248cf39d6e1b63dae23f7dd8a2a80",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0001_0049.npz",
+      "bytes": 10855610,
+      "sha256": "1583f357ea713d515744b4d6aa78202476de302191fd94a9cf7f4cd5e9689073",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "04_evaluation/pixel_maps/MVS_0001_0099.npz",
+      "bytes": 10499508,
+      "sha256": "18aab26b864210f07cc125c5f56c5885d2b5e436dce5f0dd584044429f4c7b0b",
+      "available_in_original_ZIP": true
+    }
+  ],
+  "all_omitted_Git_outputs_inside_original_ZIP": true,
+  "original_payload_files_expanded": 118,
+  "visibility_changed": false,
+  "default_branch_changed": false,
+  "files": [
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/00_evidence/PRESERVATION_AFTER.json",
+      "bytes": 210548,
+      "sha256": "7d6123b0ca2b59a62eb901faab2379973d757f056e1b1db3fde93d6a73b1f70b",
+      "git_blob_sha": "cdfe8ae5ade9feba9d1edd1bdb0db3fcd2579d8d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/00_evidence/PRESERVATION_BEFORE.json",
+      "bytes": 224484,
+      "sha256": "1ecc5379b4ff0512dbba5a03af74fa596021f2d5d8f8dced7380456c850b13d2",
+      "git_blob_sha": "c44351a1932760cbe3a5e7998ad780724d5191ab"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/00_evidence/REMOTE_FINAL_PRESERVATION.json",
+      "bytes": 5712,
+      "sha256": "caf70a5ef03f66548cd6c23c9966161518a153d38986e7cee989a63de0f118f7",
+      "git_blob_sha": "dea1563b7c59e933aee175931acbf17c98139a88"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/00_evidence/SEALED_INPUT_INDEX.json",
+      "bytes": 40268,
+      "sha256": "12e16792e3ea43eaa74235c3eaf8e6431d7fca0746f38adc90547e52fba088ea",
+      "git_blob_sha": "f0ba1825ce50c9cb9bef6bc80780f2c33c125f8d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DROID-W-runtime/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "git_blob_sha": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/README.historical.md",
+      "bytes": 4843,
+      "sha256": "4c77c4ac80c12c65318a69dd0550e55cbd6a3697a9d5a61bdf82489ba7310fe6",
+      "git_blob_sha": "97c9f40564306ecb02325787c5b1103a61235f77"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/generate_volume_train.py",
+      "bytes": 9013,
+      "sha256": "d67f7ce7266250cb1f7ad9784100258ed3edbee248e5ef575a8dec6647574453",
+      "git_blob_sha": "7def85dc0df9e1aff45c2ae1b07c85a7ccfd5fb0"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/issue13.comments.json",
+      "bytes": 30110,
+      "sha256": "d331fe61477035df45bdcd381e95decc606e519a41ea44d24b7ca1a734b02c4e",
+      "git_blob_sha": "198e14a1a95e2f310a65b8b5568e43114d6dff1a"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/issue16.comments.json",
+      "bytes": 2016,
+      "sha256": "7d63cd0b10fc2fd69f875cdf1c1263a55c3b906ad02525ed0ffa0bec914657da",
+      "git_blob_sha": "ce70818005847122bca44f149656d2bcfa2d1e63"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/issue25.comments.json",
+      "bytes": 1699,
+      "sha256": "5e2da66e38e868e67394153649153198a647fb078b3338091d230ee9664a2a73",
+      "git_blob_sha": "3cd7870522bd2adfafdb14e473bd535bd92f2631"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/issue25.json",
+      "bytes": 2643,
+      "sha256": "21e55dece82b03be27f1fe27f91ef6b9bd9bd22ed3de86c4a5ce209161c5ffda",
+      "git_blob_sha": "2105b488e6113e9601b62de571361a4a795a6047"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/DeepMVS/project_page.html",
+      "bytes": 7460,
+      "sha256": "eaf937f65e8f786389807c05290a83500f7ddb3c0f551bc44d4c2364fc871937",
+      "git_blob_sha": "cdadd08bd7564a38bbee2616d121a1985286f9fe"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/GT_AUTHOR_STATEMENTS.json",
+      "bytes": 12081,
+      "sha256": "b383b459a34db09675c1e84a7873df85618768baf216e0bd97d46020fa17abfa",
+      "git_blob_sha": "9c30ea674e9cb204cdea38048e466bb49d2d02f6"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/Metric3D-eb5b6fac/hubconf.fresh.py",
+      "bytes": 8535,
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119",
+      "git_blob_sha": "a775f2cf135a62f4f9bb4f9578033a8d1180da5c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/Metric3D-eb5b6fac/hubconf.py",
+      "bytes": 8535,
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119",
+      "git_blob_sha": "a775f2cf135a62f4f9bb4f9578033a8d1180da5c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/PyTorch-v2.1.0/UpSample.h",
+      "bytes": 18935,
+      "sha256": "f01bd3574a230c02485e4cc2a8aadcb7bfd48be95aca030ff8552a7ae52f4809",
+      "git_blob_sha": "95797cb53828404d4ceb8611cd08d0aca104ed00"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/PyTorch-v2.1.0/UpSampleBilinear2d.cpp",
+      "bytes": 6617,
+      "sha256": "25d584a7d2751d14227ad95f5b745fcd8170373551ddae2908555b976bee48b3",
+      "git_blob_sha": "5d91e93e016dfa85b9bd3e5ca8dc0e6519a9e4d5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/01_sources/SOURCE_RETRIEVAL_MANIFEST.json",
+      "bytes": 5670,
+      "sha256": "c53c25d2512d52a07107ab3aba8437a687fa3c73d6bb52d7a2c7d93dbd176d21",
+      "git_blob_sha": "72353d6ceeabb2cbb006775b9434f9272f9099ef"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/FOCAL_AND_GRID_TRANSFORM_AUDIT.csv",
+      "bytes": 3979,
+      "sha256": "46d946e3f2765726908e7569f9a1b838c99675656cb9b99f8673e1d65e081847",
+      "git_blob_sha": "0b3893a49660387ef3a9336c8bd516746f41f97e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/FULL_SOURCE_GRID_AUDIT.json",
+      "bytes": 3692,
+      "sha256": "deb1b0e66ea3d2e1b642827fc4e9d06592fe1ed71d1cd3d9b32fe89a4cfecc6a",
+      "git_blob_sha": "33ecf935c7e2caa8b18ab566b9afb2f84741f933"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/INITIAL_FLOAT64_VS_FLOAT32_VALIDATION_FAILURE.json",
+      "bytes": 12896,
+      "sha256": "0ab7901254a369038db9d72e8b054b376d55d07e32394d4315681971f0a9bf7e",
+      "git_blob_sha": "a4cf226743e114c55441c0abfe3ceaaa17ba32de"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/INTERPOLATION_INDEPENDENT_VALIDATION.json",
+      "bytes": 1819,
+      "sha256": "78a24afe4fe8f1ee5913368b6d9702f96c7212c4fd75fce1ac250ee4f468dc09",
+      "git_blob_sha": "13dc13bb028d477380734a5592ade5426a240b38"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/RESTORATION_COMPARISON.csv",
+      "bytes": 7566,
+      "sha256": "83da5ba1915d3858e343c272015546add17a0c072da6f7545ab22c158e341442",
+      "git_blob_sha": "c4a93a2998122816574e4f71f81806bb56b4dd72"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/RESTORATION_SUMMARY.json",
+      "bytes": 483,
+      "sha256": "098c03a4d34e37e5bd0f6953bb21942362cabbdded9267a559bdf4440ec89db6",
+      "git_blob_sha": "c57da166ff87cd6880a5b0c64a47d6ff24def2a6"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/torch_CPU/CPU_RESTORE_RECEIPT.json",
+      "bytes": 23795,
+      "sha256": "3f520f569bfbd403319fd8706e84726cc3e014e1d4c3d49b72085bf4ea1435b4",
+      "git_blob_sha": "1534b82799ff623a7f1fdcd0df990dda02e44f46"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/02_restoration/torch_CPU/DOWNLOAD_VERIFICATION.json",
+      "bytes": 3391,
+      "sha256": "d6df4d7234024d563042d2c185cd3f7335bed53535c1d9efac480b0641070b94",
+      "git_blob_sha": "6b488ac4e823eb07496bb708ee69f26a7a479c66"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/ADJACENT_MOTION_CONDITIONING.csv",
+      "bytes": 13323,
+      "sha256": "971517aafe9073508cbc4c626c0a77256920937e3ef2c99199d8a4dae240d78e",
+      "git_blob_sha": "0d8c45cb1da6d75f5863e9f0f06deeb470e0d22e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/ALL_198_ADJACENT_Z_DEPTH_PAIRS.csv",
+      "bytes": 21539,
+      "sha256": "e430fec26de066d8c1a35870cfc0441465db77ad1984db4db65d9d8b2fef2e8f",
+      "git_blob_sha": "f29a1566d99a9130505acaa2fcb48122b472dea4"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/EXR_HEADERS.json",
+      "bytes": 139622,
+      "sha256": "c02c224d3f3a9acb4c6e3fe4944df63f166149a8611133ccf9902297ca3f5877",
+      "git_blob_sha": "ad05f63ffc64b50d2898942542cbb4093f5ba310"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/EXR_PRECISION_AUDIT.json",
+      "bytes": 2428,
+      "sha256": "73fdc18ba04610b73e1df8e4b95ea0e530b829f11a9bd169fa82a4bc7f28aff0",
+      "git_blob_sha": "f7251591f272b9daeeb39f0b8e71bcb3f1e43093"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/FULL_200_FRAME_METADATA_AUDIT.csv",
+      "bytes": 77667,
+      "sha256": "9e0a4fa8386d9c95131b1bb2fd406ebe437c328f643c4615161a7135be3c4e1d",
+      "git_blob_sha": "7bb8198b8d7104d0d7bae42099af5f80243f34e1"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/GEOMETRY_CONVENTION_CONTROLS.csv",
+      "bytes": 6672,
+      "sha256": "7eaeee6f2964726d293cb6de7e9ccaddb87b519dfb47188fffa63ef0459c8267",
+      "git_blob_sha": "ae1c9ac937bad0eff1c999ef8836d3fa073845df"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/GT_QUALITY_SUMMARY.json",
+      "bytes": 882,
+      "sha256": "a2e6cb56cb453074c7a99afa461f46353d09edf8902be23df5787b0129742089",
+      "git_blob_sha": "c7d8ab56ce2b8e7f23c823bf550fd1254764f6f4"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/MAX_TRANSLATION_ALIGNMENT_CONTROLS.csv",
+      "bytes": 2400,
+      "sha256": "b681a818087f47138610d97d9ec08cbe67da285cf18c68f9a9c5faefff8bb5a5",
+      "git_blob_sha": "4f1e97c35013fde61a23e38e31bb6fd39868089f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/MOTION_CONDITIONING_SUMMARY.json",
+      "bytes": 859,
+      "sha256": "4bd830aea65bd338c9497b1908da78d3dea3ec87b9f08f2e43ee879acb06b633",
+      "git_blob_sha": "89f103224734c80c9fe8ea98e3d71e3711704572"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/PILOT_CAMERA_MATRICES.json",
+      "bytes": 5073,
+      "sha256": "f096678c44af82a0d21879b3459bf4d6586dbd839f9f6409c4ec10279c13bea3",
+      "git_blob_sha": "cb942cfcd49cd00a6fed12beb9dd1917bb40260f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/CALIBRATION_ONLY_SCALES.json",
+      "bytes": 733,
+      "sha256": "b5855621289465f397e90c548d0aeaac36b3917aaff49bf120154b2968221497",
+      "git_blob_sha": "cf25c78d800c5d9618312354c3f15a0e02ee1ca7"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/CONFIDENCE_AND_TTA_RANKING.csv",
+      "bytes": 11194,
+      "sha256": "c0e9ff9c41915be78665ba3e7208bfaab743c1aabcc8ec2b577aeb48d3ee840e",
+      "git_blob_sha": "b13e93cddab6367047b79169c8c947ae4d8a0424"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/CONFIDENCE_ERROR_BINS.csv",
+      "bytes": 25614,
+      "sha256": "dbfc4bab218565357186282400c4886df33ac6df196a1ce6ed93ff6b7eff0d07",
+      "git_blob_sha": "5fdb2d905ac325fee036796f04c6e6cd9146837d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/DEPTH_ERROR_MACRO.csv",
+      "bytes": 1167,
+      "sha256": "0d0d0627c689a9201d42d1fc8f0a852d0d4c28f02e1833361b2f48a8374b2653",
+      "git_blob_sha": "c020467437a9f8cc666ec3c0c8b91d86ac7f32f5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/EVALUATION_STATUS.json",
+      "bytes": 3349,
+      "sha256": "4a02fa148686d9d78cbf0f8ac5f49cfa819ee21c45d5599b99ba53e8578a2b78",
+      "git_blob_sha": "c53400f561cb8be7ff3a2112a7898287f1b88ce5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/FOCAL_FIXED_SCALE_SENSITIVITY.csv",
+      "bytes": 1975,
+      "sha256": "3d763426e3e4c6dc9ee2325ddc487c219ea15e25defad345017d954c9ef294c9",
+      "git_blob_sha": "4d178c808b7ddbcc57ac56e8f28deb8ff107846a"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/ORIGINAL_SEVEN_ZERO_PIXELS.csv",
+      "bytes": 740,
+      "sha256": "36b96ffaab8949e7effdbe00780ba7ed583093b72b4ff7c3a0d83bc7ef583a52",
+      "git_blob_sha": "c3f3c2f8346fbddfe5de2eb130c4924903582359"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/PAIRED_DEPTH_ERROR_METRICS.csv",
+      "bytes": 5494,
+      "sha256": "e8b0fd2750122058d95c8c1c6f3465c477731b0808f14ccd9701a1df5aeba28a",
+      "git_blob_sha": "08039c8a35e78ec95138fffbe6d625b51a6db4cd"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/PIXEL_ERROR_CONFIDENCE_SAMPLED.csv",
+      "bytes": 3601798,
+      "sha256": "336e7bad32f781f480a6fe951d95e411580f64d8ac894e1c3121ed2398a184c1",
+      "git_blob_sha": "879490d41df20872b574afe7ff5195019dd2d9ce"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/SEVERE_ERROR_COMPONENTS_TOP10.csv",
+      "bytes": 17726,
+      "sha256": "129715ccaf7aa903cb42759b6cbf6f6a0be26c7cb0475a0d878ff2220a9ecb38",
+      "git_blob_sha": "4fb64877da07a443e9145de695fb7c3d4b58c8c4"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/04_evaluation/SPATIAL_ERROR_STRATA.csv",
+      "bytes": 25962,
+      "sha256": "27c7d953eebdbf10a27a75d11305c693bf9871c852954709d972d710f0b93e44",
+      "git_blob_sha": "8a94f0bf6d79bdbb8f7c48e4128d37c26c88652d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/DECISION_MATRIX.csv",
+      "bytes": 1073,
+      "sha256": "2bb838811da33d2c3ef6caf8a030a12ab08a881ae07bac4dd58fd3a9347a7668",
+      "git_blob_sha": "4d2c406233afb47da6672935afd694dc32f0a226"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/DEPTH_RESTORATION_MATHEMATICS.md",
+      "bytes": 2648,
+      "sha256": "6e98ef6a6cd01d74e6cc05a03fe506bff4afcb725668200a4f31a12ca7344133",
+      "git_blob_sha": "da9e5676d7267e336c63eb6a3244ecf36d562ff9"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/ERROR_AND_CONFIDENCE_REPORT.md",
+      "bytes": 3159,
+      "sha256": "119c50f6ecd12a86d184dfa39e4962c3099b837b20c22e2db4bd373dde7527c2",
+      "git_blob_sha": "71e28214c99f5c1f6c235d211f867592a62e52a1"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/FOCAL_AND_INTRINSICS_AUDIT.md",
+      "bytes": 1865,
+      "sha256": "96c4f9ac81d30927642cb8bd455051be65da9167f2e2408d22976b453a9db0c0",
+      "git_blob_sha": "a545b27cab87fcec784ea712e749f38ed7063ddf"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/GT_UNITS_VALIDITY_AND_ALIGNMENT.md",
+      "bytes": 3444,
+      "sha256": "5517ce2c3a446cd282e5fc53ea18d80153ebccb6fdcbaeea8a4efaf61a776647",
+      "git_blob_sha": "6f35b163be30dba60e0bbbe4666b178633c50151"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/LIMITATIONS_AND_NEXT_STAGE.md",
+      "bytes": 1801,
+      "sha256": "367ddce60aa187f701e484b2eddd49ebf7d4900d8387bd22fcdac9ad029be888",
+      "git_blob_sha": "8bfa464556b890a18e37f8fef091581e7141399c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/05_reports/REPRODUCIBILITY.md",
+      "bytes": 2492,
+      "sha256": "ec5996236caf32f1583957fc05b3aec7d3a4bcc3f1fcef72d0a3fb61d92beb37",
+      "git_blob_sha": "45eaadcdbb6e06f1ea3af6951250edd3ac4041fc"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/EXECUTION_LOG.md",
+      "bytes": 1681,
+      "sha256": "cfe55eb308095143aafa1cddb916a29e1405844096eaf80812202639250756b6",
+      "git_blob_sha": "9300e92f53349549b356ea1634790c05e7b2d4ad"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FILE_SHA256_MANIFEST.json",
+      "bytes": 25569,
+      "sha256": "bb77320031633def6e640dba3ac6378f289e9cc645c4f795b9959355fa06feac",
+      "git_blob_sha": "e907141e8ef20b1715ef83145af277756cbfcd52"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/FINAL_REVIEW.md",
+      "bytes": 4130,
+      "sha256": "0622a7a429468fab4f3b49688a9027fcdd080934f74a5cb15c019e585a03df9f",
+      "git_blob_sha": "871342cd2345efac2899a7030727e2f7050e3f5a"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/PROTOCOL.json",
+      "bytes": 2512,
+      "sha256": "a9921796ca84257495c96e0df7d46497b70cbeb00230d437fd4589a49b0a5005",
+      "git_blob_sha": "d771a0b352616ca46b6fc4dd48a93bb538f7517f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/R2_2_DECISION.json",
+      "bytes": 2063,
+      "sha256": "a9ffe1681b65efa7f5c47242adc2383deec3d4511c4a3f6fb00549920aaa0541",
+      "git_blob_sha": "f0041d3b275d5ea5c76ffa961f72cfb420722ab8"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/README_请先读.md",
+      "bytes": 1455,
+      "sha256": "c7d81470bf21a6ab13ee5e680fa1312be8e44cf543981fb01f22d316aa931072",
+      "git_blob_sha": "5008475d92c3b0b8f6e62c5bb1f2e7c2d74f479e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/SECURITY_AUDIT.json",
+      "bytes": 1454,
+      "sha256": "a96018f71acbe7d15ef00ee0dd6f2d6f3190d08dbdf275c6f6624fe22d10c005",
+      "git_blob_sha": "354ffabd138925ca01b4dcc99dce74b23afc3917"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/alignment_conditioning.py",
+      "bytes": 2579,
+      "sha256": "ec8680b9d70d27d0c68a884cc29eaf55286a99d6c8d0302f0dd5b191d2cb0ce4",
+      "git_blob_sha": "b94d901221d683b1c62ac3269f4d6c875500bf23"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/audit_gt.py",
+      "bytes": 8262,
+      "sha256": "e967052a292b0bfc81b99c694925fef1fb83d032892c15999a8ed47b7f9d4942",
+      "git_blob_sha": "279d5845ac7aa057259c4ef55c6e3737ac1951f5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/collect_sources.py",
+      "bytes": 3823,
+      "sha256": "597b1e73db52e1278fe46b7f6b6dbc9752ca04c4dc1e175e59b2a634c9a770dd",
+      "git_blob_sha": "e2e80d10dda748ea0bf91b3096aecf106b127833"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/common.py",
+      "bytes": 5380,
+      "sha256": "3560a340d53f5b10d221daddba123c4d424e33f08b7ada1accd873607b2aa83b",
+      "git_blob_sha": "5123d2c9dfe104d871ba5ad6d6dcf9029dd1f1cd"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/depth_restoration.py",
+      "bytes": 2761,
+      "sha256": "2eb476c2c95cc9f44e7f485afbc199c0f4ce9577d5f7680d972fe334c3eca716",
+      "git_blob_sha": "49836d578ef796c48b1a9e5ee095ec991f524765"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/evaluate_restored.py",
+      "bytes": 11893,
+      "sha256": "b2eeadb3d241eccea066e0d480ed1a1b5dc0a8d464209068624d49ac3253c530",
+      "git_blob_sha": "25c5e86be401e896265a8621c1ec627115eb4fae"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/final_preservation.py",
+      "bytes": 2528,
+      "sha256": "b643c7ac241fe1a7aad6bb345c8f1f65e5a7473e212f6bf5afcb07402f930fad",
+      "git_blob_sha": "d6698b89eaec4c9f841169b83056afe06b599069"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/format_reports.py",
+      "bytes": 595,
+      "sha256": "64dea981255c1b3da2a2668ac4d1aad37e5598f9be1e6d13e17e12f3b47d4fd6",
+      "git_blob_sha": "383c27447c0caa577a32bda6c8b14d1549cfbef5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/full_resolution_audit.py",
+      "bytes": 2184,
+      "sha256": "4de3e33d6d535777de67aebf4bb1bf968ad7447730068173eabca744ab0f270e",
+      "git_blob_sha": "975d010900fa26d9d4e425c393c447b5f65c354e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/inspect_validation_failure.py",
+      "bytes": 1472,
+      "sha256": "a6e73298f620d1c96b870d1c8dc94325b9f2c0f5dd1449f40c86df84fd46b7cf",
+      "git_blob_sha": "496d4d0ed0a9b0122bfb5fb055cf7332f663479c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/intake.py",
+      "bytes": 4233,
+      "sha256": "4fbe5f6bd29fc46995a9b3cc87e40ad3b039b6588ee0f4e9551f6911dccd7ac4",
+      "git_blob_sha": "8604bdaaab5579ee8647976deed758304a54723e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/package_review.py",
+      "bytes": 5031,
+      "sha256": "b2dc1f2af736dfe626f2188362e7a6d4fd5a535a5afa6cb04bc9085984ad31a4",
+      "git_blob_sha": "781d2e4c82e77d60079f188accc97d1b47190163"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/plot_results.py",
+      "bytes": 11168,
+      "sha256": "2a2846a624fb1ec0f8f6b859cec17d9074b0ea2b0c0225ee9c9af882613ef79a",
+      "git_blob_sha": "c82407d85db3a584b6a6c5e5efdb84dd9435bbdd"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/precision_audit.py",
+      "bytes": 1121,
+      "sha256": "ff454530e677fe8156334b7940591bed5f518d3a057c460521fd71cc4d40eedd",
+      "git_blob_sha": "4cc7ac0ff9cf9e8488d45676289f14c0b78573de"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/remote_cpu_restore.py",
+      "bytes": 5067,
+      "sha256": "172d43ef77a78ac1bf10ea1d7c39c236942f5a2a144dbca5a199692bf256a700",
+      "git_blob_sha": "187bf9274c24cc4750118eab9754af0be70dee3d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/remote_transport.py",
+      "bytes": 4187,
+      "sha256": "819d809446bc072bbafedbfc317eb4812db7a3f2f6472b1d07152a2d4bd41c6b",
+      "git_blob_sha": "dd66f233ab97c126c2b01615dffaacb982179e52"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/run_tests.py",
+      "bytes": 1219,
+      "sha256": "6268907db20566893be3f5c02763c1414e154c52200980cc5c9842a7364b335f",
+      "git_blob_sha": "777a57a15fe8b11c29f37c2a2b01c5bcc16f294f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/validate_restoration.py",
+      "bytes": 6324,
+      "sha256": "7e8607400c847d6cca71c0aa16482bab64e8f42d010efb37e475120e76e7bbff",
+      "git_blob_sha": "940e953b635796939bec8e31e5d64df8edbf9419"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/code/write_reports.py",
+      "bytes": 28110,
+      "sha256": "9ea744473ae4444b9a9768a25e729bd38c0ab567a9de29040bea915fcd8b4941",
+      "git_blob_sha": "c2c4f14f3360b7bb86a27356ef91252ec746cebc"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/CONFIDENCE_ERROR_DIAGNOSTICS.pdf",
+      "bytes": 36253,
+      "sha256": "f6ae88cdaef4467fe80706eb1518664848e768bda3698d796cf6505dd5195dac",
+      "git_blob_sha": "0b6458f7ec783ba7661e8479842355a7cbed06ab"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/CONFIDENCE_ERROR_DIAGNOSTICS.png",
+      "bytes": 188085,
+      "sha256": "098c06806ac156e7949cc9a7aed5ced93ea21370da1c6fda4a73b9536827a0b6",
+      "git_blob_sha": "9633f2887f244d3775009ff90068c635faf8639d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/CONFIDENCE_ERROR_DIAGNOSTICS.svg",
+      "bytes": 51052,
+      "sha256": "a4d378906b00bf52a07f89aac3b359388583bcaf0fc379a281ed5cec5026b44f",
+      "git_blob_sha": "56b98c26d01a74354a30b9a05a9160bd90add669"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/FIGURE_CAPTIONS.md",
+      "bytes": 2367,
+      "sha256": "067e7a1496564632eb3901730d40229e7057acd482f88cedabc4b1f29a2bc6d2",
+      "git_blob_sha": "c2682bcef322973a30c8dda1bbe977710afee64f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/FIGURE_CONTRACT.json",
+      "bytes": 1822,
+      "sha256": "5b5f9dfb5998a270013576b65716e42f3b44f1c2ba0ca0a1da43a6d24b66af1a",
+      "git_blob_sha": "f968c3de284a021c9a14b8ec8b5685086e2acfe1"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/FIGURE_QA.json",
+      "bytes": 551,
+      "sha256": "08521fb6a0c7a432af118deb03975c717a673befae1fb27893d63289bb11f298",
+      "git_blob_sha": "88827329271dc4e30b0d086e1fc417e30f4e6354"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/GEOMETRY_ALIGNMENT_UNIT_AMBIGUITY.pdf",
+      "bytes": 36584,
+      "sha256": "471b0134e6bc92b57006a6a502b29fcbf1b4669389df27e301b75dc37b334d81",
+      "git_blob_sha": "778321bd6bbc6574980259fef7d925769736591f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/GEOMETRY_ALIGNMENT_UNIT_AMBIGUITY.png",
+      "bytes": 196971,
+      "sha256": "84f525af912c6754672f25ac874ec43f2c73129ef5b12f7aeab3e929cda0810b",
+      "git_blob_sha": "983fd662c612c504e5546c34db0fcb7f774e5e99"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/GEOMETRY_ALIGNMENT_UNIT_AMBIGUITY.svg",
+      "bytes": 45460,
+      "sha256": "4a5a827324696b3f634712db9faa5841c20b15759612aca521dc4293599ca78d",
+      "git_blob_sha": "246cee383b3dd2d46e46d37768314b7ee908c48d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/MVS_SPATIAL_ERROR_CONFIDENCE.pdf",
+      "bytes": 1477953,
+      "sha256": "43222fa1c9ce962ab64b8ca26ae681896dd8119c3c9469c56317d3b8b43c4b40",
+      "git_blob_sha": "f6ea74622ded400eb9cc342f588c6bb65d4fe3e6"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/MVS_SPATIAL_ERROR_CONFIDENCE.png",
+      "bytes": 2359422,
+      "sha256": "83d11980f50fd7e115e797031d4da2166bdfd879f28e91eeb775affbb8d86b39",
+      "git_blob_sha": "795870833504e333a085537e821b262637bef8f4"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/MVS_SPATIAL_ERROR_CONFIDENCE.svg",
+      "bytes": 2786277,
+      "sha256": "ccdffd217862787d390313717a6899b47ec7c8a3ae1a87d99142a66c644d39b6",
+      "git_blob_sha": "038e221df669be3c5d8f3b76fd40dcaebf125ea3"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/PAIRED_ERROR_AND_SEVERE.pdf",
+      "bytes": 34299,
+      "sha256": "97786856ba88d18fbc9cb0b4f08ccee598558a762f685faec1cd2dea672f64ad",
+      "git_blob_sha": "effdbf805722cb59b10480cd1700cf82b0acbb33"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/PAIRED_ERROR_AND_SEVERE.png",
+      "bytes": 98540,
+      "sha256": "b103eabeb098c5e60c79e2aad3ff0c8acfd9aa828b3763af25e04fed2f0bdea0",
+      "git_blob_sha": "4741d8bea9dcd6192212619ac50e4213ccc05619"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/PAIRED_ERROR_AND_SEVERE.svg",
+      "bytes": 19675,
+      "sha256": "a1407b851ce5b7d64c67f4befd3ece1539d3e44aa07ba9ca837d561614045de7",
+      "git_blob_sha": "5d87d9ad7b1dc5f01eb476ee3cd67830f37264ff"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/ZERO_PIXEL_RESTORATION_DETAIL.pdf",
+      "bytes": 675568,
+      "sha256": "96a5de6fb84618ede48bee88146de6313eed0718e1b12f9a0da1479282eeccc4",
+      "git_blob_sha": "839dfa4790f9073c15c9ddca32fabba80fa412c6"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/ZERO_PIXEL_RESTORATION_DETAIL.png",
+      "bytes": 869396,
+      "sha256": "924e35fae0bad896aee76de80e1775041c206b8ed32afb085faa9fbcbbb6f4d1",
+      "git_blob_sha": "63798c54d4e0492390faa1180d2109a71d9811de"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/figures/ZERO_PIXEL_RESTORATION_DETAIL.svg",
+      "bytes": 1093904,
+      "sha256": "c9f33206f813e9255d860151b7ec727b20d9b27facd0ef633482617b5d702253",
+      "git_blob_sha": "118be68f79be335c789ba76b517a53991d6c8d1a"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/ALIGNMENT_CONDITIONING.stdout_stderr.txt",
+      "bytes": 661,
+      "sha256": "08ea67d6e90d22b614c5b8f9d0bf8f9ab9f2db99ac3681e20d334a1e30930a0a",
+      "git_blob_sha": "b90ca7fa0d508987aba2dce33e5e40ec706ff9a1"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_DOWNLOAD_INDEX.receipt.json",
+      "bytes": 171,
+      "sha256": "30187bbfb98b69cd0e5d1b57c88fdb741e7700dccc53eb81e91701c49dce98fd",
+      "git_blob_sha": "cf7463dad4d9d73e0c38e444e0eb290487e6b08d"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_DOWNLOAD_INDEX.stderr.txt",
+      "bytes": 3892,
+      "sha256": "695fd430f73d3855bca6b13ff28cb461ad466a750e64b3c445b470db6ac31887",
+      "git_blob_sha": "4e8634c11e68939b40bbb1f7508b4f8536b88c0f"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_DOWNLOAD_INDEX.stdout.txt",
+      "bytes": 2412,
+      "sha256": "2dd1e988319f3f4375236967a029785def45785186047508689ed11f44f4b338",
+      "git_blob_sha": "dd54a3e5aaf2594223292436e2a3df5a50d4fda0"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_RESTORE.receipt.json",
+      "bytes": 180,
+      "sha256": "f743431c05c8cce9e059f10beba31e93d2c79cebbba05eba75149eed4d1d5b93",
+      "git_blob_sha": "cd9845f17d5dc335c19b9af9ab1e523fca053368"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_RESTORE.stderr.txt",
+      "bytes": 3942,
+      "sha256": "d75df16c5d1abc646c82095a44a056cd02cacf526f1ba87a5fa9bd641a5b127f",
+      "git_blob_sha": "440fa4475a9da569c7f13170c4cd367d28efd0d8"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_RESTORE.stdout.txt",
+      "bytes": 496,
+      "sha256": "33824779a2162cc224f6143d19a1331365f001cb56dd7ff71cf304047286c40e",
+      "git_blob_sha": "138f08b878e4b59b1513634a15b99a9c6b3a2908"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/CPU_TESTS.stdout_stderr.txt",
+      "bytes": 4535,
+      "sha256": "e022d6b2c7742a56e462f91e64c7bdb1d6423afa24dba2c358ed3d463bac4d84",
+      "git_blob_sha": "7a173ff9731f263e01189d6d5b8401fd995e759b"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/EVALUATION.stdout_stderr.txt",
+      "bytes": 2805,
+      "sha256": "61873d338c462980570a0763ad9c964a5b3c468dc43f8189e81db0b3ddf37209",
+      "git_blob_sha": "42d24b6ae326c05281c388a59a0e1623936ad6be"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/FIGURES.stdout_stderr.txt",
+      "bytes": 81,
+      "sha256": "a6b75b0f79d5477d4f273d11714348f94aca10311878378bbb45613143a6136f",
+      "git_blob_sha": "b2dd560a0f98ec5cfa6d18d3aeec294627059189"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/FINAL_REMOTE_READONLY.receipt.json",
+      "bytes": 171,
+      "sha256": "49c535c54aee7e3d7709b045c08d058221ce1e795af4abd54721d3219df417db",
+      "git_blob_sha": "89a39892f307d60e0923b1f579665d7ad1233106"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/FINAL_REMOTE_READONLY.stderr.txt",
+      "bytes": 3889,
+      "sha256": "b4f549bc9fc54cc058984878aa4ef4bc17555d542903726b6881a4724334ac52",
+      "git_blob_sha": "93ea41e51837fa0eb7fa0c43f7bb352f987ec0f5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/FINAL_REMOTE_READONLY.stdout.txt",
+      "bytes": 4738,
+      "sha256": "cd99d80e7e032095bbd44cd891021b8edb2176ef62a4e98b81d241bdc95b1a22",
+      "git_blob_sha": "a70fda70e231d290584d972e5aaff775ed623603"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/GT_AUDIT.stdout_stderr.txt",
+      "bytes": 948,
+      "sha256": "b8c8512bbb3846d83babfb9cc2ca24b1912238fc7c9b9bbb7b1499a4c3c529be",
+      "git_blob_sha": "d0f7b24f00bd278c4d92152cf9c60ef7bd6af5c8"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/PRECISION.stdout_stderr.txt",
+      "bytes": 2180,
+      "sha256": "860ae4e1b2199ea3d1f153f2d5593fe85b2f2a321364700cd8795fb1525cd3d1",
+      "git_blob_sha": "300cb697c1c59e8e65de2a06a944253c376c79c5"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/RESTORATION_VALIDATION.stdout_stderr.txt",
+      "bytes": 486,
+      "sha256": "13edbd47b88eb4155fe541ece2f2d27daab2e3e2de6b14372ce46791947a923b",
+      "git_blob_sha": "854d616af11c55f4f67f32efcff887aa8c54420e"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/RESTORATION_VALIDATION_FIXED_DTYPE.stdout_stderr.txt",
+      "bytes": 1128,
+      "sha256": "b586523b732e11d38c61abb4c4c77798f7fc5af1433f6f903e5bde43fe7fa78e",
+      "git_blob_sha": "fcadf62a82065d1374e40c982594b7560d2a536c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/logs/SOURCE_GRID.stdout_stderr.txt",
+      "bytes": 48,
+      "sha256": "89ee3a3309e2f9e86bf45d059a7fe984f40f20037bcd617cee363ee793f8dadf",
+      "git_blob_sha": "b7a239fa3fef2978e6aad04d0ce5fb1388832e94"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/tests/CPU_TEST_REPORT.json",
+      "bytes": 422,
+      "sha256": "6b65df8d2912182b48cbdb20139e1c5f0ce4b2c23f4e70f8ee3106e874e3a909",
+      "git_blob_sha": "cc170428bed300d57ad349b6db11b45a85de0edd"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/tests/test_r22.py",
+      "bytes": 8331,
+      "sha256": "fcc2e8074acb8a29774df5e4f765dfb005b1b50d85e1f2198e853656f879d402",
+      "git_blob_sha": "68162251184edfdbdf9ca624aedbeeac0b46355c"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/deliveries/PACKAGE_VERIFICATION.json",
+      "bytes": 507,
+      "sha256": "a0c972f22f5add3293c5ca71e3f5a8b7080729d29bdf4588f3ba4c8190882766",
+      "git_blob_sha": "6a3824c3dc1954d58888290e0ffe50c092430d12"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R2_2_DEPTH_RESTORATION_GT_REVIEW.zip.sha256",
+      "bytes": 120,
+      "sha256": "474bcfc36fd34c9777d811284bc0b6d46ae5b998b68fb8cc2a3235d13770f0f3",
+      "git_blob_sha": "1a1d5ac62e157f167553a366fdb717297c5be4ac"
+    },
+    {
+      "path": "reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/PUBLICATION_NOTES.md",
+      "bytes": 1502,
+      "sha256": "f513ca465b1f30446ae407191275c4fedaa785526143a6b980aaadb8526af927",
+      "git_blob_sha": "81d8588c0fdd39e90146b1296257fe12b76393e6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6595,
+      "sha256": "1b71aaf3ab665da52fd5733dee204c38a9ef11d1f8a64c337caae32bc356ca19",
+      "git_blob_sha": "f448826409712a811255bc6f4b1f9ded65c0ca0e"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 6595,
+      "sha256": "7969ff59df1fbd74536f777d5b1a001467063fa69acc44ffc32c1d43a8d22d09",
+      "git_blob_sha": "d5d4432d203d09bcbbfbcee5f455dcec97494f17"
+    },
+    {
+      "path": "REVIEW_INDEX.md",
+      "bytes": 5974,
+      "sha256": "b55cc6902fb3e2a6166c364c81fbba549603cecddfa944b0f6e8dc80cc2af0c9",
+      "git_blob_sha": "154c603a179ec8b33ea7c3bcb358dce1913a807e"
+    },
+    {
+      "path": "REVIEWING.md",
+      "bytes": 4931,
+      "sha256": "f8f24b3fabc248f3ae776ae95527377268c181b9c43019aa61d28c4fc50d80e2",
+      "git_blob_sha": "8b4ed9d86b3d9df34b4f8823406f28283ff0bf53"
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "status": "PASS",
+  "torch": "2.1.0+cu118",
+  "device": "cpu",
+  "CUDA_VISIBLE_DEVICES": "",
+  "model_forwards": 0,
+  "checkpoint_deserialized": false,
+  "elapsed_seconds": 17.84592316672206,
+  "script_sha256": "172d43ef77a78ac1bf10ea1d7c39c236942f5a2a144dbca5a199692bf256a700",
+  "results": [
+    {
+      "sample_id": "VIPER_Night_val007_00001",
+      "source_sha256": "9f478e1c38177a687e69195dfed265cec644baa16d2dc490d61260e8f2e17670",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Night_val007_00001.npz",
+      "sha256": "c9b261588f52b014be884e1091a4aca3bf1705b16b1eee32e90fbb4030d3b4d7",
+      "bytes": 9050837,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 3.789947509765625,
+          "bicubic_CPU_min": 0.6346549391746521,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.355702256162962e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.4652892351150513,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 3.218902587890625,
+          "bicubic_CPU_min": 0.1281358301639557,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.070203234131137e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.3270937204360962,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Day_val001_00001",
+      "source_sha256": "b6caebb717347731b02660f8e2892062c415e60c0f56acaa3c39aa8bea1df48f",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Day_val001_00001.npz",
+      "sha256": "0d7db59131cfbb15028b1996739975ae85870fabde830969969bba5a478089dc",
+      "bytes": 8154250,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.4367376565933228,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 9.03116435640388e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.4369510412216187,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.4481844902038574,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 8.999287254280515e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.4483532905578613,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Day_val001_00239",
+      "source_sha256": "5711894fee74c346dec620fc685c209cbde26fa9400858ac06a8340bdc7dc35c",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Day_val001_00239.npz",
+      "sha256": "493c68310c95842a50fb84b4363b9ddcc0d60ff341f2b82be55132e34e32ce4e",
+      "bytes": 7556763,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 3.719146728515625,
+          "bicubic_CPU_min": 1.493592381477356,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 1.0269580201970205e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.4936985969543457,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 3.6734771728515625,
+          "bicubic_CPU_min": 1.4822120666503906,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 1.0316048024429216e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.482400894165039,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Night_val007_00244",
+      "source_sha256": "9c3ae760cefc6353b2e8fcb6fa5fdeadb8433b77c3ae85643abb8b2c727ba21f",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Night_val007_00244.npz",
+      "sha256": "5f41304e78e46fc7a8ad693089a3c1c8d5b9a093a08fbd43d3daf8d8ffb80cce",
+      "bytes": 8967726,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -0.36080819368362427,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 5.918031219051853e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 0.03860348090529442,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -0.2836744785308838,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 5.712492510509846e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 0.03860348090529442,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Sunset_val008_00001",
+      "source_sha256": "dd301a13b2cf096cc8f0ab21e24aa63bab8337a5a89b7cdb1001884fed9ebbe4",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Sunset_val008_00001.npz",
+      "sha256": "d718f58845f66f7cf64158edf2718bc92dfb69c693f01720f5c706b1a1f54e17",
+      "bytes": 9044597,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 0.7928222417831421,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 4.065706808533933e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.0050501823425293,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 0.7229146957397461,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 4.145896269215478e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.1382904052734375,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Sunset_val008_00354",
+      "source_sha256": "c63311a88dbed8f088005c08764b9d79aba1d9becde859a67b3c40fd2d12aebb",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Sunset_val008_00354.npz",
+      "sha256": "1f12ffdd4d0fe164a7f5831667cb90b1e1b1031cd4d190eb027e821128c9c7c2",
+      "bytes": 8509367,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -6.989660263061523,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.618117347695968e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 0.03860348090529442,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -6.352316379547119,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.617331463429663e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 0.03860348090529442,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Rain_val018_00001",
+      "source_sha256": "f0d113cee2cc3db22363b16e170990b5c2741ff0679d983e255a244377bcf19c",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Rain_val018_00001.npz",
+      "sha256": "acb84c9ddd213dc5f8ab7500b0eba2cb88c44ec2d02bfdae484bfdd39ecd3399",
+      "bytes": 7901096,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -4.915189743041992,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.690419589479764e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 0.03860347718000412,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.4162291288375854,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.70784566965368e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.416536808013916,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Rain_val018_00356",
+      "source_sha256": "fa397816565bcf25710682502f06204b060dfae8f62a224ca07c89462e9cadd2",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Rain_val018_00356.npz",
+      "sha256": "a76c115bfcb3cdbea0be86968b82ef2d14d0f441a1c60405993a69ec262a9ca1",
+      "bytes": 7429202,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -7.063114166259766,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.773791811713535e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.241335153579712,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -5.998859405517578,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.806736620194796e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.2418358325958252,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Snow_val021_00001",
+      "source_sha256": "c583e17ebe6de21abdcf2b8adb3b3ee73211786820512a7c3e62b813dc9fb2dc",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Snow_val021_00001.npz",
+      "sha256": "918d8b2040690cbe44e1d7905683a0eebbb2db70963e5c5430fd80de25c1fcb6",
+      "bytes": 8193536,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 0.41504108905792236,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.906135887321498e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.2157995700836182,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 0.41439345479011536,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.946279770798153e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.1744778156280518,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "VIPER_Snow_val021_00355",
+      "source_sha256": "e3283334e5c394f9e653d3cb35493a1e06e5712020c47bce03e7c4fda299549a",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/VIPER_Snow_val021_00355.npz",
+      "sha256": "a6efe80a426efe3fefa84100aaf545657aabd341ea767ca2b6d5d93e02a29f8e",
+      "bytes": 8254456,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.247758150100708,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.897566426131461e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.248097538948059,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.2212693691253662,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 6.857095286250114e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 1.2212858200073242,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.6625
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0000_0000",
+      "source_sha256": "dc439b5d34137a9ef1cb9c9735aaeb40a22dde2212ff3445827374f9a5648aef",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0000_0000.npz",
+      "sha256": "ade1e4e12743a248ae27389d3b8b075733d7ab930ad777729b716bc63996ad34",
+      "bytes": 18638641,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.0434057712554932,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.961966373302319e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 4.146702766418457,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -0.6842886209487915,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.941372646593754e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 4.073531150817871,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0000_0049",
+      "source_sha256": "60cc9e84a94e14e8763ead62332d31d4f02b0c9f004b7825edf1226a7000af26",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0000_0049.npz",
+      "sha256": "ca094df7820e8eb79a2455cee364c62dcc53f69a5159df58873e4308f7516269",
+      "bytes": 18615488,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 3.393612861633301,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 2.8267065867965603e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 3.997333526611328,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 3.8942995071411133,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 2.8391504361305706e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 3.895657777786255,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0000_0099",
+      "source_sha256": "c6029583e174625bc53da324123b0f1db729440703ea9722966168dee19d4e61",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0000_0099.npz",
+      "sha256": "40104924d082a0901bb840a64e769db956bf8cb56464f3e2e027416193dde6f5",
+      "bytes": 16850083,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 5.777984619140625,
+          "bicubic_CPU_min": 6.315296173095703,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.154139471642765e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 6.318726539611816,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 3.7604823112487793,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 7.197076891675408e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 6.18527889251709,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0001_0000",
+      "source_sha256": "8f4b8390198304b8a2c66329bb2d6b969e74225f016604440b57bacdd0eb675e",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0001_0000.npz",
+      "sha256": "bf55309f325634ab01c1e37d9586f7920dd4d70a0d083250b799e73f62497335",
+      "bytes": 18854013,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 2.7273948192596436,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 5.935334864957832e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 2.727491855621338,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 2.7016615867614746,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 7.62939453125e-06,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 5.955773371237296e-07,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 2.701817512512207,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0001_0049",
+      "source_sha256": "61a0bad015f97f5fb1fc364fd6340cf471bc752459c06e58d5526f131a79d5b7",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0001_0049.npz",
+      "sha256": "e0c87a317300043d47036ba4bf1c79f73719789c9845cc5c67aa2f679968018d",
+      "bytes": 18123329,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.8996692895889282,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 2.328290569561499e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 2.965273857116699,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": 1.1506555080413818,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 2.3305669058988124e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 2.9515671730041504,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    },
+    {
+      "sample_id": "MVS_0001_0099",
+      "source_sha256": "56ffda33a3f77349ca31aa73ed2fa703c7d69c58d845c400b6d5e2c9aa8ef8c6",
+      "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_2_CPU_RESTORE_20261126_R1/MVS_0001_0099.npz",
+      "sha256": "be2127bce57a88db5940e9a48a5c7772909b71feddcb8621281256e9947dd2fa",
+      "bytes": 17851353,
+      "comparisons": [
+        {
+          "mode": "native",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -3.769418239593506,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 1.8976829345280558e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 2.443990707397461,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        },
+        {
+          "mode": "flip",
+          "canonical_min": 0.100006103515625,
+          "bicubic_CPU_min": -10.691500663757324,
+          "bicubic_CPU_vs_saved_GPU_max_abs": 1.52587890625e-05,
+          "bicubic_CPU_vs_saved_GPU_mean_abs": 1.8425395355285374e-06,
+          "bicubic_CPU_vs_saved_GPU_allclose": true,
+          "confidence_CPU_vs_saved_GPU_max_abs": 0.0,
+          "linear_min": 3.9891042709350586,
+          "linear_nonpositive": 0,
+          "official_scale_ratio": 1.1083333333333334
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "id": 0,
+      "input_shape": [
+        1,
+        1
+      ],
+      "output_shape": [
+        3,
+        7
+      ]
+    },
+    {
+      "id": 1,
+      "input_shape": [
+        1,
+        4
+      ],
+      "output_shape": [
+        3,
+        11
+      ]
+    },
+    {
+      "id": 2,
+      "input_shape": [
+        4,
+        1
+      ],
+      "output_shape": [
+        11,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "input_shape": [
+        3,
+        5
+      ],
+      "output_shape": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": 4,
+      "input_shape": [
+        7,
+        9
+      ],
+      "output_shape": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "input_shape": [
+        8,
+        12
+      ],
+      "output_shape": [
+        8,
+        12
+      ]
+    }
+  ],
+  "free_bytes_after": 11995480064
+}

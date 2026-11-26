@@ -1,0 +1,21 @@
+{
+  "status": "PASS_VISUAL_INSPECTION",
+  "inspected_all_five_PNG": true,
+  "checks": [
+    "axes and labels readable",
+    "no cropped panel labels",
+    "same comparison ranges documented",
+    "all three observed frames displayed",
+    "zero-pixel crop bounds disclosed",
+    "native GT unit labels retained",
+    "no calibrated-confidence or new-test claims",
+    "complete original numerical outputs retained"
+  ],
+  "figure_count": 5,
+  "formats": [
+    "PNG",
+    "SVG",
+    "PDF"
+  ],
+  "scientific_accuracy_claim_from_figures_alone": false
+}

@@ -1,0 +1,355 @@
+{
+  "candidates": [
+    {
+      "uid": "016d3596da27",
+      "metric_scale": 389.5556421321845,
+      "metric_scale_row_unique": true,
+      "source_metadata": {
+        "UID": "016d3596da27",
+        "Video Path": "videos/OmniWorld-Game/016d3596da27",
+        "Annotation Path": "annotations/OmniWorld-Game/016d3596da27",
+        "Split Img Num": "6011",
+        "Split Num": "24",
+        "Total Img Num": "6053",
+        "Test Split Index": "1,6,22,23",
+        "FPS": "24.0",
+        "Resolution": "1280×720",
+        "Metric Scale": "389.5556421321845"
+      },
+      "split_index": 0,
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "first_split_length": 401,
+      "not_official_test_split": true,
+      "caption_class": "TP_FOLLOW_TEXT_ONLY",
+      "viewpoint_visually_verified": false,
+      "caption_sha256": "02ccfda5770675b435593baacf2a621f469be287748a04a16a3b51925a4488bc",
+      "caption_evidence": [
+        {
+          "field": "Camera_Caption",
+          "kind": "TP",
+          "phrase": "thirdperson perspective",
+          "exact_text": "The camera maintains a thirdperson perspective, staying behind and slightly above the character, ensuring visibility of the surrounding environment.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera smoothly follows",
+          "exact_text": "As the character jumps, the camera smoothly follows the movement, panning horizontally to keep the character centered while showcasing the expansive landscape.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera smoothly follows the movement, panning horizontally to keep the character center",
+          "exact_text": "As the character jumps, the camera smoothly follows the movement, panning horizontally to keep the character centered while showcasing the expansive landscape.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Video_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera follows",
+          "exact_text": "The camera follows the character closely from behind, panning smoothly to capture the expansive landscape as the character moves.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Key_Tags",
+          "kind": "TP",
+          "phrase": "thirdperson",
+          "exact_text": "character, rooftops, ancient architecture, historical setting, thirdperson camera",
+          "negated": false,
+          "hedged": false
+        }
+      ],
+      "others_archive": {
+        "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\016d3596da27\\016d3596da27_others.tar.gz",
+        "bytes": 19552045,
+        "sha256": "52a3ef179ea1ec26d4e70661878ed38b2415301e9084d612eb48f2bdc5a05a8e"
+      },
+      "local_metadata_members": [
+        {
+          "path": "fps.txt",
+          "bytes": 44,
+          "sha256": "d6316af88ec2177ce61a787d24d4c24800d1b4a2d37ce4f126d8166b3a9e4ce3"
+        },
+        {
+          "path": "split_info.json",
+          "bytes": 35067,
+          "sha256": "6722e2621534a81e8a6457dc45fdd5ac224d61ac6d2ea865d872f191227111c9"
+        },
+        {
+          "path": "camera/split_0.json",
+          "bytes": 70281,
+          "sha256": "be7c49f1df9dd7708fddee630cb6b098cc2ac2bd2da757e39bcbd4d71b414e3a"
+        },
+        {
+          "path": "text/000001_000081.json",
+          "bytes": 2298,
+          "sha256": "02ccfda5770675b435593baacf2a621f469be287748a04a16a3b51925a4488bc"
+        }
+      ],
+      "needed_archives": [
+        {
+          "path": "annotations/OmniWorld-Game/016d3596da27/016d3596da27_depth_0000.tar.gz",
+          "bytes": "1046725531",
+          "lfs_sha256": "eb70e78d72d68a417830c51cd40dc94737ee20a2fbb14d3753fc5d0c38a6f76d",
+          "git_blob": "c7c3b6d29c4acfabf29b747691dc992e6f85e9f0",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        },
+        {
+          "path": "videos/OmniWorld-Game/016d3596da27/016d3596da27_rgb_0000.tar.gz",
+          "bytes": "3265350023",
+          "lfs_sha256": "f8ce91a5e195573c49e762bfe269ca4264a57ed67d08b8b40d0233cb508267fd",
+          "git_blob": "e3d829b23c0f1aa16706432d6396837595ed1443",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        }
+      ],
+      "candidate_selection_uses_model_errors": false
+    },
+    {
+      "uid": "03b9161e3ff2",
+      "metric_scale": 401.8066861251384,
+      "metric_scale_row_unique": true,
+      "source_metadata": {
+        "UID": "03b9161e3ff2",
+        "Video Path": "videos/OmniWorld-Game/03b9161e3ff2",
+        "Annotation Path": "annotations/OmniWorld-Game/03b9161e3ff2",
+        "Split Img Num": "305",
+        "Split Num": "5",
+        "Total Img Num": "1715",
+        "Test Split Index": "",
+        "FPS": "30.0",
+        "Resolution": "1280×720",
+        "Metric Scale": "401.8066861251384"
+      },
+      "split_index": 0,
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "first_split_length": 113,
+      "not_official_test_split": true,
+      "caption_class": "TP_FOLLOW_TEXT_ONLY",
+      "viewpoint_visually_verified": false,
+      "caption_sha256": "535b8e4e99b564940e5769631a37c4932167ce742606293b2c9c08983175fdfc",
+      "caption_evidence": [
+        {
+          "field": "Short_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera follows",
+          "exact_text": "A character navigates a futuristic racing track at night, passing through checkpoints marked by glowing signs, while the camera follows closely from behind, capturing the illuminated path and surrounding landscape.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "TP",
+          "phrase": "thirdperson perspective",
+          "exact_text": "The camera maintains a thirdperson perspective, positioned behind and slightly above the character.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "FOLLOW",
+          "phrase": "It follows the character",
+          "exact_text": "It follows the character smoothly, keeping the track and upcoming checkpoints in view.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Video_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera follows",
+          "exact_text": "The camera follows closely from behind, providing a clear view of the track ahead and the approaching checkpoints.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Key_Tags",
+          "kind": "TP",
+          "phrase": "thirdperson",
+          "exact_text": "racing, nighttime, checkpoints, illuminated track, thirdperson camera",
+          "negated": false,
+          "hedged": false
+        }
+      ],
+      "others_archive": {
+        "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\03b9161e3ff2\\03b9161e3ff2_others.tar.gz",
+        "bytes": 3548320,
+        "sha256": "ae7f15c633b969223d56196afaed49c75236267bba1b7a680d2434877a74618f"
+      },
+      "local_metadata_members": [
+        {
+          "path": "fps.txt",
+          "bytes": 44,
+          "sha256": "ee20778635cf8f98ead8992812ff0450025a893fe38dafe3d2524900d47fce45"
+        },
+        {
+          "path": "split_info.json",
+          "bytes": 1515,
+          "sha256": "a30075d7aa68795a351d4510b8fa66c3d68502ec32502d646b9a2ca1406dc299"
+        },
+        {
+          "path": "camera/split_0.json",
+          "bytes": 20843,
+          "sha256": "0c5b50914106b14c25cddb5ac2e4caf487fb7e20c088134680682b9e651f1160"
+        },
+        {
+          "path": "text/000001_000081.json",
+          "bytes": 2131,
+          "sha256": "535b8e4e99b564940e5769631a37c4932167ce742606293b2c9c08983175fdfc"
+        }
+      ],
+      "needed_archives": [
+        {
+          "path": "annotations/OmniWorld-Game/03b9161e3ff2/03b9161e3ff2_depth_0000.tar.gz",
+          "bytes": "754237620",
+          "lfs_sha256": "00ee8bd05140f3ef50c5f74fdfd801f7647f4f55cee39eeef8eaef1b416d51d8",
+          "git_blob": "034be82b1484c36a69e3600d7eab0341bd6abfa7",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        },
+        {
+          "path": "videos/OmniWorld-Game/03b9161e3ff2/03b9161e3ff2_rgb_0000.tar.gz",
+          "bytes": "1374272969",
+          "lfs_sha256": "4031ad9fcc390bbc6cedab0cf53844dacb016a39a53d8ef8e1d3dd15a8dd3547",
+          "git_blob": "4bb0f4e8ed20b88b81ba7c21bde9d7575ad35b2b",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        }
+      ],
+      "candidate_selection_uses_model_errors": false
+    },
+    {
+      "uid": "0caf78b8eeac",
+      "metric_scale": 207.00688933270382,
+      "metric_scale_row_unique": true,
+      "source_metadata": {
+        "UID": "0caf78b8eeac",
+        "Video Path": "videos/OmniWorld-Game/0caf78b8eeac",
+        "Annotation Path": "annotations/OmniWorld-Game/0caf78b8eeac",
+        "Split Img Num": "4735",
+        "Split Num": "17",
+        "Total Img Num": "4776",
+        "Test Split Index": "10",
+        "FPS": "24.0",
+        "Resolution": "1280×720",
+        "Metric Scale": "207.00688933270382"
+      },
+      "split_index": 0,
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "first_split_length": 401,
+      "not_official_test_split": true,
+      "caption_class": "TP_FOLLOW_TEXT_ONLY",
+      "viewpoint_visually_verified": false,
+      "caption_sha256": "bc680ba260029270c0deca38b7e60d3cb05fee7a330a26802802c24a4da91e2f",
+      "caption_evidence": [
+        {
+          "field": "Short_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera follows",
+          "exact_text": "A warrior equipped with a large weapon walks steadily through a snowy, rocky landscape, navigating between boulders and uneven terrain while the camera follows closely from behind.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "TP",
+          "phrase": "thirdperson perspective",
+          "exact_text": "The camera maintains a consistent thirdperson perspective, positioned slightly above and behind the warrior.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Camera_Caption",
+          "kind": "FOLLOW",
+          "phrase": "It tracks the character",
+          "exact_text": "It tracks the character smoothly, ensuring they remain centered in the frame as they move forward.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Video_Caption",
+          "kind": "FOLLOW",
+          "phrase": "camera follows",
+          "exact_text": "The camera follows the warrior from behind, maintaining a steady focus on their progress, capturing the intricate details of the landscape and the character's interaction with it.",
+          "negated": false,
+          "hedged": false
+        },
+        {
+          "field": "Key_Tags",
+          "kind": "TP",
+          "phrase": "thirdperson perspective",
+          "exact_text": "warrior, snowy landscape, rocky terrain, wooden bridge, thirdperson perspective",
+          "negated": false,
+          "hedged": false
+        }
+      ],
+      "others_archive": {
+        "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\0caf78b8eeac\\0caf78b8eeac_others.tar.gz",
+        "bytes": 18345251,
+        "sha256": "7e8c3e33f8b9ac6f6553219b7a31312a3b0825717c8775725b990c709d2249f9"
+      },
+      "local_metadata_members": [
+        {
+          "path": "fps.txt",
+          "bytes": 44,
+          "sha256": "f9629ea6f3fb23f8c159d98ecd481d8f48ec1286b2548bf977219d4a81ae2a7c"
+        },
+        {
+          "path": "split_info.json",
+          "bytes": 27393,
+          "sha256": "e267cf2f8baebe2c0752445fb0f8cc873619322d436942cd9dc99a6c40f6e216"
+        },
+        {
+          "path": "camera/split_0.json",
+          "bytes": 70278,
+          "sha256": "0858055a150ddae571c5c8a086173b4f5030c10e7b8cd3f187062ad381897d1a"
+        },
+        {
+          "path": "text/000001_000081.json",
+          "bytes": 2176,
+          "sha256": "bc680ba260029270c0deca38b7e60d3cb05fee7a330a26802802c24a4da91e2f"
+        }
+      ],
+      "needed_archives": [
+        {
+          "path": "annotations/OmniWorld-Game/0caf78b8eeac/0caf78b8eeac_depth_0000.tar.gz",
+          "bytes": "1419307565",
+          "lfs_sha256": "e94fc753884e769ad14e5a8f1f62b5e0239480b454cbd92c9f76aa9767711ac1",
+          "git_blob": "007ef93af0a0c7d53effa493fa630d828434293d",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        },
+        {
+          "path": "videos/OmniWorld-Game/0caf78b8eeac/0caf78b8eeac_rgb_0000.tar.gz",
+          "bytes": "3173132593",
+          "lfs_sha256": "7d202d241b80c4cf453dce08560d6c48e44d64dffae9dbd9a2a23b9af822b542",
+          "git_blob": "de61c7541b4490c261c5946a873ea6746a441266",
+          "revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+          "content_downloaded": "False"
+        }
+      ],
+      "candidate_selection_uses_model_errors": false
+    }
+  ],
+  "new_payload_downloaded_bytes": 0,
+  "official_metric_scale_source_row_check": "PASS",
+  "independent_physical_accuracy": "NOT_ESTABLISHED_FROM_CSV_ALONE"
+}

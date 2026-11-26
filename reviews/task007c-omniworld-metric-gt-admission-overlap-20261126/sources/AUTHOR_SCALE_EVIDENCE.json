@@ -1,0 +1,14 @@
+{
+  "source_type": "Public statements by the OmniWorld repository owner, distinguished from later released metadata",
+  "records": [
+    {"url": "https://github.com/yangzhou24/OmniWorld/issues/3#issuecomment-3494867729", "author": "yangzhou24", "association": "OWNER", "date": "2025-11-06", "finding": "The first part of the depth formula linearizes the ReShade buffer. Division by0.004 is for numerical stability, not by itself a conversion to meters."},
+    {"url": "https://github.com/yangzhou24/OmniWorld/issues/10#issuecomment-3568742850", "author": "yangzhou24", "association": "OWNER", "date": "2025-11-24", "finding": "Game depth is captured directly through ReShade. The learned stereo/sparse-prior pipelines concern different OmniWorld subdatasets."},
+    {"url": "https://github.com/yangzhou24/OmniWorld/issues/10#issuecomment-3570627221", "author": "yangzhou24", "association": "OWNER", "date": "2025-11-24", "finding": "The owner suggests aligning scene depth to MoGe-2 predicted metric depth using a sampled-frame median ratio as a practical approximate metric solution."},
+    {"url": "https://github.com/yangzhou24/OmniWorld/blob/bd91509e0b840f3082848cd561da60a695e6b70b/README.md", "date": "2026-03-21 release announcement", "finding": "A later release announces Metric Scale and documents a scene-specific factor for depth and camera translation."}
+  ],
+  "temporal_interpretation": "The historical comments do not disprove the later metadata release; the later release still needs per-factor derivation and independent physical validation for a strict metric calibration claim.",
+  "not_established": ["That the currently released CSV factors were actually computed with MoGe-2", "That Metric3D was used to compute them", "An independently measured physical-length calibration and error bound for the selected UIDs"],
+  "raw_render_depth_independent_of_Metric3D": "SUPPORTED_BY_AUTHOR_PIPELINE_DESCRIPTION",
+  "released_metric_factor_independent_accuracy": "UNVERIFIED",
+  "additional_metadata_warning": "Existing HF card arxiv field2602.04441 resolves to SynthVerse, not OmniWorld. It was not used as OmniWorld paper evidence; the actual OmniWorld source is arXiv2509.12201v2."
+}

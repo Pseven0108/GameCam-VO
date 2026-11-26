@@ -1,0 +1,25 @@
+{
+  "state": "PROVISIONAL_NOT_EXECUTABLE",
+  "unit_of_partition": "entire scene UID, including every split/frame/augmentation",
+  "calibration_UIDs": [
+    "016d3596da27"
+  ],
+  "development_UIDs": [],
+  "evaluation_UIDs": [
+    "0caf78b8eeac"
+  ],
+  "diagnostic_UIDs_excluded_from_strict_TP": [
+    "03b9161e3ff2"
+  ],
+  "all_current_9_pairs": "ADMISSION_INSPECTED_ONLY; no fitting and no untouched-test claim",
+  "needs": [
+    "Independent scale/admission evidence",
+    "A distinct visually confirmed TP development UID",
+    "Audit cross-UID scene/game duplication before claiming independent scenes"
+  ],
+  "future_fresh_evaluation": "Reserve new UID or preregister untouched remaining material; already inspected admission samples cannot be relabelled fresh test evidence",
+  "official_test_splits_used": false,
+  "fit_rows": 0,
+  "no_role_UID_overlap": true,
+  "authorization": "Proposal only; no added UID download, split freeze, model run or fitting this stage"
+}

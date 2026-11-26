@@ -1,0 +1,13 @@
+gate,status,evidence_or_limit
+VKITTI family training-overlap correction,PASS,Public ViT-Large active training data_array includes Virtual_KITTI; exact2.0.3 frame membership of the installed weight unverified
+Minimal payload integrity,PASS_WITH_SCOPE,18 PNG chunk CRCs/full decodes; prefix HTTP identity. No whole archive SHA/gzip CRC claim
+RGB/depth/member and split mapping,PASS_SOURCE_INDEX,"9 exact ID pairs, split0 list and camera lengths consistent, all1280x720; no substitutes"
+Depth decoder and source mask,PASS,9 actual pairs bitwise equal to official load_depth;16 synthetic boundary tests
+Metric Scale row and application,PASS_SOURCE_DECLARATION,3 unique positive source factors; valid-only scaling and sentinel preserved
+Independent physical metric scale accuracy,BLOCKED_UNVERIFIED,No factor-generation provenance or independently anchored error bound for these UIDs
+Pixel-accurate RGB/depth sync/alignment,PARTIAL,Same grids and broad contour support; no independent calibration or per-frame timestamp certificate
+Strict third-person candidate eligibility,PARTIAL,2 visually supported; night racer text label not confirmed
+UID-disjoint TP calibration/dev/evaluation,BLOCKED_INCOMPLETE,Only2 eligible UIDs; development role pending. No fitting and no shared UID across roles
+Metric3D training-unseen OWG certification,UNVERIFIED,No OWG item found in inspected public recipe; private annotations/backbone web membership not exposed
+Camera GT/temporal geometry admission,NOT_ADMITTED,"Existing parking remains; nonunit source quaternion fields observed, no independent camera precision established"
+Metric3D Confidence metric calibration,NO_GO,"Strict metric GT/independence/holdout gates unresolved; no inference, NLL or Coverage performed"

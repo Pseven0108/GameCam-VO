@@ -1,0 +1,13 @@
+{
+  "method": "Assistant visually inspected all3 generated audit sheets, covering RGB/depth/edge overlays for frames000000,000001,000002 per UID",
+  "alignment_claim_limit": "Qualitative shape/contour correspondence only; no verified pixelwise timing/calibration accuracy, optical-flow GT or independent metric check",
+  "observations": [
+    {"uid": "016d3596da27", "viewpoint": "THIRD_PERSON_PLAYER_VISIBLE", "context": "Player on tiled rooftops with historical buildings, foliage and distant hills", "depth_RGB_support": "Roof and building contours, foreground foliage and player silhouette have broad corresponding depth structure", "limitations": "Only3 near-static adjacent frames; cannot validate scene-wide quality or precise synchronization"},
+    {"uid": "03b9161e3ff2", "viewpoint": "TEXT_TP_CLAIM_NOT_VISUALLY_CONFIRMED", "context": "Night racing track; forward roadway with a lower vehicle/reflective strip, no visible third-person player", "depth_RGB_support": "Track, poles, trees and horizon have corresponding structures; sky is black/invalid in depth display", "limitations": "Caption says third person but the visual evidence does not establish it; exclude from strict third-person cohort. Lower image strip/rendering artifact remains uncorrected"},
+    {"uid": "0caf78b8eeac", "viewpoint": "THIRD_PERSON_PLAYER_VISIBLE", "context": "Armored player with weapon traversing snow, rocks and trees", "depth_RGB_support": "Player and weapon silhouette, large rocks and background structures have broad corresponding depth boundaries", "limitations": "Snow/vegetation edges and3 adjacent frames do not constitute a pixelwise alignment or physical scale certificate"}
+  ],
+  "strict_TP_candidates_supported": ["016d3596da27", "0caf78b8eeac"],
+  "candidate_dropped_from_TP_only": "03b9161e3ff2",
+  "no_resampling_or_original_correction": true,
+  "new_acquisition_after_metric_provenance_block": false
+}

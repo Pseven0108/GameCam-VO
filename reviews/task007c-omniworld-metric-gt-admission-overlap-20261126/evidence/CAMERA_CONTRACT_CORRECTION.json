@@ -1,0 +1,15 @@
+{
+  "pairs_verified": 9,
+  "native_reader_K_match": true,
+  "first_pixel": [
+    0.5,
+    0.5,
+    1
+  ],
+  "correction": "ACQUISITION_RECEIPT UID_checks cx_plus_half/cy_plus_half are diagnostic arithmetic, not the native K. Native K copies cx/cy unchanged; get_pixel already adds0.5 to pixel coordinates. Do not apply both shifts.",
+  "depth_decode_affected": false,
+  "prior_receipt_preserved": true,
+  "model_inference_consumed_wrong_K": false,
+  "source_quaternions": "Read-only SciPy normalization for the reader check, not rewritten or certified as accurate camera GT",
+  "torch_imported": false
+}

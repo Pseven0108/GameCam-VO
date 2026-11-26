@@ -1,0 +1,48 @@
+{
+  "original_input_files": [
+    {
+      "path": "D:\\aaa\\GameCam-VO\\GAMECAM_OWG_PREFLIGHT_20261115\\evidence\\omniworld_game_metadata.csv",
+      "bytes": 66930,
+      "sha256": "460ad6d26f775b265da462be679fa96bff6df4e4211a66a9b2aa7d303a826fdf",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\GAMECAM_OWG_PREFLIGHT_20261115\\01_DATASET_INVENTORY\\OWG_REMOTE_FILE_MANIFEST.csv",
+      "bytes": 1235925,
+      "sha256": "c85bcabed4d5fd5744d99966bc12fe3ff2b1749d06e587993bd800e658fa6773",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\016d3596da27\\016d3596da27_others.tar.gz",
+      "bytes": 19552045,
+      "sha256": "52a3ef179ea1ec26d4e70661878ed38b2415301e9084d612eb48f2bdc5a05a8e",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\03b9161e3ff2\\03b9161e3ff2_others.tar.gz",
+      "bytes": 3548320,
+      "sha256": "ae7f15c633b969223d56196afaed49c75236267bba1b7a680d2434877a74618f",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO\\R6_VP1_OTHERS_FULL_DOWNLOAD_20261115\\02_ARCHIVES\\annotations\\OmniWorld-Game\\0caf78b8eeac\\0caf78b8eeac_others.tar.gz",
+      "bytes": 18345251,
+      "sha256": "7e8c3e33f8b9ac6f6553219b7a31312a3b0825717c8775725b990c709d2249f9",
+      "unchanged": true
+    }
+  ],
+  "prior_sealed_reviews": [
+    {
+      "review": "task007a-mpsfm-confidence-calibration-audit-20261126",
+      "sealed_manifest_entries_checked": 38,
+      "status": "PASS"
+    },
+    {
+      "review": "task007b-depth-gt-availability-alternative-data-audit-20261126",
+      "sealed_manifest_entries_checked": 46,
+      "status": "PASS"
+    }
+  ],
+  "scope": "Five reused input files before/after plus original TASK007A/B manifests; no claim of exhaustive hashing of every historical baseline/data file",
+  "original_files_written": 0
+}

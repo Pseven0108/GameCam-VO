@@ -1,0 +1,19 @@
+{
+  "task": "TASK007C OmniWorld-Game Metric GT Admission & Metric3D Pretraining Overlap Audit",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "authorization": "User reopens a bounded OmniWorld depth-GT audit; prior camera-benchmark parking remains in force outside this scope",
+  "mode": "Local CPU; reuse frozen metadata/captions/data first; at most3 candidate UIDs and necessary RGB/depth/camera samples",
+  "source_versions": {"Metric3D": "eb5b6fac0dc155e4e52f576e304fbf11655ff339", "OmniWorld_GitHub": "bd91509e0b840f3082848cd561da60a695e6b70b", "OmniWorld_HF": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841"},
+  "historical_metadata_read_now_authorized": true,
+  "candidate_selection": "Explicit third-person caption evidence, contrasting backgrounds/dynamic context, available modalities, early split IDs for bounded extraction; no model errors used",
+  "sample_target": "Up to3 RGB/depth pairs per UID from exact first verified split frame IDs; no substitution",
+  "network_hard_limit_bytes": 268435456,
+  "per_stream_compressed_limit_bytes": 33554432,
+  "no_full_archive_download": true,
+  "stop_rule": "Stop new sample acquisition and any calibration if decoder, units or alignment fails admission; retain evidence. Complete reporting and publication only.",
+  "truth_levels": ["Declared/source unit contract", "Actual decode/integrity/grid checks", "Independent physical metric accuracy", "Training membership independence"],
+  "no_automatic_inference": true,
+  "forbidden": ["GPU/CUDA", "Metric3D inference or modification", "DROID-W or BA modification", "Scalix training", "Full OmniWorld download", "Test fitting", "Rewriting originals", "Restoring OmniWorld as formal camera benchmark", "Next-stage execution"],
+  "historical_assets": "TASK007A/B and R6 archives remain sealed; corrections are additive",
+  "publication": "Complete ZIP plus expanded review and consistent state entries on Public GitHub; verify before local ZIP-only cleanup"
+}

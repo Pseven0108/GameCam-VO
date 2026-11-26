@@ -1,0 +1,30 @@
+{
+  "source": "https://arxiv.org/html/2509.12201v2",
+  "version_date": "2025-09-24",
+  "capture_sha256": "3ce7b6f4d8036b7cb57216d3b188428a7094dbb33610d4ca42e3f759ced3e3ae",
+  "sections_read": [
+    "2.1",
+    "2.2",
+    "3.1",
+    "Appendix C.1",
+    "Appendix D"
+  ],
+  "facts": [
+    {
+      "section": "2.1",
+      "finding": "The described Game acquisition combines ReShade depth and OBS RGB."
+    },
+    {
+      "section": "2.2",
+      "finding": "Camera annotations are estimated/refined; other-domain learned depth pipelines should not be substituted for the Game pipeline."
+    },
+    {
+      "section": "C.1",
+      "finding": "Monocular depth is evaluated with per-frame scale alignment; video depth uses aligned protocols. These metrics are not absolute metric-unit certification."
+    }
+  ],
+  "March2026_CSV_generation_recipe_or_per_UID_factor_receipts": "NOT_FOUND_IN_THIS_VERSION",
+  "temporal_limit": "The inspected arXiv version predates the March2026 Metric Scale release.",
+  "accepted_OpenReview_text": "Not independently retrieved because verification challenge/API403; do not claim all later supplements were inspected",
+  "paper_summary_not_republished_full_text": true
+}

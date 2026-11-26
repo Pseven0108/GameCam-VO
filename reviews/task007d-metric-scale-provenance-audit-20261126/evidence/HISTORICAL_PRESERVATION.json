@@ -1,0 +1,88 @@
+{
+  "sealed_review_manifests": [
+    {
+      "review": "task007a-mpsfm-confidence-calibration-audit-20261126",
+      "manifest_sha256": "9de1532e85e158b32685c9ad49861f602a0fb36d9eb75e3fa2f2dab6ff00ff8d",
+      "manifest_entries_verified": 38,
+      "status": "PASS"
+    },
+    {
+      "review": "task007b-depth-gt-availability-alternative-data-audit-20261126",
+      "manifest_sha256": "7992f29239f13fd4c712cc6534a30040d4dbcdef231ba856c0a84ca2067682d1",
+      "manifest_entries_verified": 46,
+      "status": "PASS"
+    },
+    {
+      "review": "task007c-omniworld-metric-gt-admission-overlap-20261126",
+      "manifest_sha256": "841ae739e3edb9e76f10d0111a05f55e25e2f1179cd8037a6e77014013a6ae37",
+      "manifest_entries_verified": 57,
+      "status": "PASS"
+    }
+  ],
+  "metadata_sha256_before_after": "460ad6d26f775b265da462be679fa96bff6df4e4211a66a9b2aa7d303a826fdf",
+  "local_others": [
+    {
+      "uid": "016d3596da27",
+      "archive_sha256": "52a3ef179ea1ec26d4e70661878ed38b2415301e9084d612eb48f2bdc5a05a8e",
+      "archive_bytes": 19552045,
+      "regular_member_count": 6233,
+      "extension_counts": {
+        ".txt": 1,
+        ".json": 179,
+        ".png": 6053
+      },
+      "readable_recipe_or_log_files": [
+        {
+          "path": "fps.txt",
+          "bytes": 44
+        }
+      ],
+      "provenance_keyword_filename_hits": [],
+      "binary_arrays_or_pickles_deserialized": false,
+      "scope": "Header/name/type audit plus existing metadata; unparsed binary contents not certified free of hidden metadata"
+    },
+    {
+      "uid": "03b9161e3ff2",
+      "archive_sha256": "ae7f15c633b969223d56196afaed49c75236267bba1b7a680d2434877a74618f",
+      "archive_bytes": 3548320,
+      "regular_member_count": 1734,
+      "extension_counts": {
+        ".txt": 1,
+        ".json": 18,
+        ".png": 1715
+      },
+      "readable_recipe_or_log_files": [
+        {
+          "path": "fps.txt",
+          "bytes": 44
+        }
+      ],
+      "provenance_keyword_filename_hits": [],
+      "binary_arrays_or_pickles_deserialized": false,
+      "scope": "Header/name/type audit plus existing metadata; unparsed binary contents not certified free of hidden metadata"
+    },
+    {
+      "uid": "0caf78b8eeac",
+      "archive_sha256": "7e8c3e33f8b9ac6f6553219b7a31312a3b0825717c8775725b990c709d2249f9",
+      "archive_bytes": 18345251,
+      "regular_member_count": 4919,
+      "extension_counts": {
+        ".txt": 1,
+        ".json": 142,
+        ".png": 4776
+      },
+      "readable_recipe_or_log_files": [
+        {
+          "path": "fps.txt",
+          "bytes": 44
+        }
+      ],
+      "provenance_keyword_filename_hits": [],
+      "binary_arrays_or_pickles_deserialized": false,
+      "scope": "Header/name/type audit plus existing metadata; unparsed binary contents not certified free of hidden metadata"
+    }
+  ],
+  "old_files_written": 0,
+  "historical_Releases_modified": false,
+  "scope": "Read-back against sealed manifests and reused inputs; not an exhaustive hash of every project asset"
+}

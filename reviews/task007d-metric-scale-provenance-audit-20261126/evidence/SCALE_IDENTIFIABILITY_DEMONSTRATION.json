@@ -1,0 +1,30 @@
+{
+  "type": "Synthetic float64 mathematics only, no real depth/pose inference",
+  "shared_depth_translation_scaling": [
+    {
+      "arbitrary_global_scale": 0.1,
+      "max_reprojection_pixel_difference": 1.1368683772161603e-13
+    },
+    {
+      "arbitrary_global_scale": 2.0,
+      "max_reprojection_pixel_difference": 0.0
+    },
+    {
+      "arbitrary_global_scale": 10.0,
+      "max_reprojection_pixel_difference": 1.1368683772161603e-13
+    },
+    {
+      "arbitrary_global_scale": 207.00688933270382,
+      "max_reprojection_pixel_difference": 1.1368683772161603e-13
+    }
+  ],
+  "division_factor_reparameterization": {
+    "old_divisor": 0.004,
+    "new_divisor": 0.008,
+    "old_scene_scale": 207.00688933270382,
+    "new_scene_scale": 414.01377866540764,
+    "output_difference": 0.0
+  },
+  "implication": "Reprojection consistency and application of a scalar do not determine its physical unit; an independent unit anchor is needed",
+  "real_metric_accuracy_test": false
+}

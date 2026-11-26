@@ -1,0 +1,136 @@
+{
+  "versions": [
+    {
+      "commit": "32789de7e6fde4f725bf07e68be2543ebfccaaac",
+      "date_UTC": "2025-09-15T09:38:01.000Z",
+      "rows": 56,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Img Num",
+        "Split Num",
+        "FPS",
+        "Resolution"
+      ],
+      "Metric_Scale_column": false,
+      "bytes": 6200,
+      "sha256": "0c53b9ccd0f770e48e168b975ed46af14e7a61772f9f1e1685447bfcadb63cd5",
+      "git_blob": "815dc8b28894ee6388878923283760e6cb6a47a9",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/32789de7e6fde4f725bf07e68be2543ebfccaaac/metadata/omniworld_game_metadata.csv"
+    },
+    {
+      "commit": "7ea32a988df07b07b7b061eaa8522c3945470687",
+      "date_UTC": "2025-09-21T12:36:16.000Z",
+      "rows": 196,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Split Img Num",
+        "Split Num",
+        "Total Img Num",
+        "Test Split Index",
+        "FPS",
+        "Resolution"
+      ],
+      "Metric_Scale_column": false,
+      "bytes": 23310,
+      "sha256": "64c8cc1a12c8635a80453f52a40d40759c6b614c97f2c184253b1b6663d94aed",
+      "git_blob": "655f37e94be2212587131cac7f0aff8283587783",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/7ea32a988df07b07b7b061eaa8522c3945470687/metadata/omniworld_game_metadata.csv"
+    },
+    {
+      "commit": "889d62751241610ee97e098a8567c540865bc5ba",
+      "date_UTC": "2025-09-26T03:59:59.000Z",
+      "rows": 196,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Split Img Num",
+        "Split Num",
+        "Total Img Num",
+        "Test Split Index",
+        "FPS",
+        "Resolution"
+      ],
+      "Metric_Scale_column": false,
+      "bytes": 23899,
+      "sha256": "e62d7cf47db2405b8e058b69a58d9dbed2934ace1fdb4581ba3e42b85d25ab30",
+      "git_blob": "afb3ed035a33cb4654128ead5b0b969de345c9f8",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/889d62751241610ee97e098a8567c540865bc5ba/metadata/omniworld_game_metadata.csv"
+    },
+    {
+      "commit": "20575506863ddc0d42025859f1642a050e037df0",
+      "date_UTC": "2026-01-05T13:31:23.000Z",
+      "rows": 364,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Split Img Num",
+        "Split Num",
+        "Total Img Num",
+        "Test Split Index",
+        "FPS",
+        "Resolution"
+      ],
+      "Metric_Scale_column": false,
+      "bytes": 44225,
+      "sha256": "8ec2be1cb512f33b4dca32d963da465e29e1b164a17b2d6b9a95c5621582e704",
+      "git_blob": "eaaa7974bcdf5e63ae07e0257b38dc80d71ad317",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/20575506863ddc0d42025859f1642a050e037df0/metadata/omniworld_game_metadata.csv"
+    },
+    {
+      "commit": "873d2e80cdd11ef54fca72235c6af234cdaabac0",
+      "date_UTC": "2026-01-06T11:13:02.000Z",
+      "rows": 484,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Split Img Num",
+        "Split Num",
+        "Total Img Num",
+        "Test Split Index",
+        "FPS",
+        "Resolution"
+      ],
+      "Metric_Scale_column": false,
+      "bytes": 58501,
+      "sha256": "8a90a059469d105e082c40ea65132bda31bfcc4cbdc3419c7fbf330f0059501e",
+      "git_blob": "6b2fd72deb6f5288f38da5645390e4fe443035ec",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/873d2e80cdd11ef54fca72235c6af234cdaabac0/metadata/omniworld_game_metadata.csv"
+    },
+    {
+      "commit": "a3934526f95d4e6be043868a08ee4cdac4eacfee",
+      "date_UTC": "2026-03-21T09:17:44.000Z",
+      "rows": 484,
+      "headers": [
+        "UID",
+        "Video Path",
+        "Annotation Path",
+        "Split Img Num",
+        "Split Num",
+        "Total Img Num",
+        "Test Split Index",
+        "FPS",
+        "Resolution",
+        "Metric Scale"
+      ],
+      "Metric_Scale_column": true,
+      "bytes": 66930,
+      "sha256": "460ad6d26f775b265da462be679fa96bff6df4e4211a66a9b2aa7d303a826fdf",
+      "git_blob": "00b580ead4422f315800191127cf749b38eff697",
+      "source_url": "https://huggingface.co/datasets/InternRobotics/OmniWorld/resolve/a3934526f95d4e6be043868a08ee4cdac4eacfee/metadata/omniworld_game_metadata.csv"
+    }
+  ],
+  "scale_first_in_checked_path_history": "2026-03-21T09:17:44.000Z",
+  "new_column_only_vs_direct_parent": true,
+  "unchanged_non_scale_rows": 484,
+  "all_484_factors_finite_positive": true,
+  "release_csv_equals_existing_local_and_current_HF_blob": true,
+  "current_HF_revision": "4e34897a2fcf8e1cc44b1ae8d2bbd0188c8f2841",
+  "scope": "First publication of fields verified; calculation time, generating model or method not inferred"
+}

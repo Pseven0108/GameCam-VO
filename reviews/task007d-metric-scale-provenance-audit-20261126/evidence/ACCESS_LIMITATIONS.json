@@ -1,0 +1,18 @@
+{
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=1y1YFKb9pp",
+    "accepted_paper": "https://openreview.net/pdf?id=1y1YFKb9pp",
+    "indexed_hash_pdf": "https://openreview.net/pdf/094da53cbae5b8e6ec559bd94c67ca8f5e0b7844.pdf",
+    "browser_read_result": "Public pages returned verification challenge; no CAPTCHA bypass or login attempted",
+    "public_API_read": "https://api2.openreview.net/notes?id=1y1YFKb9pp returned HTTP403",
+    "claim_limit": "Accepted PDF/supplement full text was not independently read; arXiv2509.12201v2 including appendices was read. No exhaustive claim about inaccessible materials."
+  },
+  "HF_history": {
+    "unfiltered_recent_commits": "100 recent April upload commits were insufficient for metadata history; no attempt to read all unrelated upload pages",
+    "guessed_path_API": "commits/main/metadata/omniworld_game_metadata.csv API route returned404",
+    "working_path_history": "Official HTML commits/main/metadata/omniworld_game_metadata.csv returned200; structured commits parsed from data-props",
+    "history_target": "Six file-specific metadata versions, earliest2025-09-15 through2026-03-21; no dataset archive payload read"
+  },
+  "GitHub_tags": "Connector rejected /tags; /git/refs/tags returned404. No formal release record from /releases (empty); March launch proven via commits and HF, not via a GitHub Release asset.",
+  "new_models_or_dataset_payload": false
+}

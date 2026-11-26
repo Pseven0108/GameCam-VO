@@ -1,0 +1,126 @@
+{
+  "records": [
+    {
+      "issue": 3,
+      "id": 3322227112,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/3#issuecomment-3322227112",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-09-23T03:14:20Z",
+      "updated": "2025-09-23T03:14:20Z",
+      "body_sha256": "54c58332886d712b34b9bc04f16d8793f8cae497cf15865bb6bb04cf7ff03bd7",
+      "interpretation": "Author says the pre-release Game depth was not metric and point-map training used normalization.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 3,
+      "id": 3326289730,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/3#issuecomment-3326289730",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-09-24T03:17:55Z",
+      "updated": "2025-09-24T03:17:55Z",
+      "body_sha256": "4e5a9f66cfd720b3c4e0b90e995f445b5ecdde13db6f1b4db103bf6b382ab24e",
+      "interpretation": "Author says depth and camera translations share a scale; no physical-length anchor is supplied.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 3,
+      "id": 3404344533,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/3#issuecomment-3404344533",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-10-15T03:09:27Z",
+      "updated": "2025-10-15T03:09:27Z",
+      "body_sha256": "9b65cb7e01322d4e6862d6af4864c9f9416ceb0acc680dd1f83b647f5f4c4fef",
+      "interpretation": "Optional far-depth filtering is suggested for training stability, not for physical calibration.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 3,
+      "id": 3494867729,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/3#issuecomment-3494867729",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-11-06T04:06:43Z",
+      "updated": "2025-11-06T04:06:43Z",
+      "body_sha256": "90a8a9223f3966068e428b056d47ac119bc448e62a9201224203fb79b722aa6d",
+      "interpretation": "Author explains ReShade buffer linearization and says division by0.004 is numerical scaling for stability.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 6,
+      "id": 3473099994,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/6#issuecomment-3473099994",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-10-31T13:28:49Z",
+      "updated": "2025-10-31T13:28:49Z",
+      "body_sha256": "dd1cdc659e8f0213302a6a9b410cc83515512502ec6f432dbc7c1affdea146ad",
+      "interpretation": "Author says the acquisition pipeline was custom to their research environment; no public collector implementation is provided in the reply.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 10,
+      "id": 3566565501,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/10#issuecomment-3566565501",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-11-22T11:12:45Z",
+      "updated": "2025-11-22T11:12:45Z",
+      "body_sha256": "c0f115cdebf0bd7cc56eb593f537103f364b6cabdce522ce81046d2216a88e1c",
+      "interpretation": "Author says pre-release extrinsics were nonmetric but on the same scale as depth.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 10,
+      "id": 3568742850,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/10#issuecomment-3568742850",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-11-24T02:41:08Z",
+      "updated": "2025-11-24T02:41:08Z",
+      "body_sha256": "3266d83df98c44f259a64c786282fba5fbf454e3890295204cdf5c29ebd03125",
+      "interpretation": "Author distinguishes directly captured ReShade Game depth from model-annotated DROID/HOI4D subdatasets.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 10,
+      "id": 3570627221,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/10#issuecomment-3570627221",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2025-11-24T12:46:39Z",
+      "updated": "2025-11-24T12:46:39Z",
+      "body_sha256": "ba60f80b4d98e8d624a2c1c8552fa164b8b3ab516e1a122fbe743bf59d70f39b",
+      "interpretation": "Author suggests a scene median-ratio scale from MoGe-2 metric predictions on sampled frames as a practical approximation; does not identify the later released CSV factors.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 20,
+      "id": 4127257933,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/20#issuecomment-4127257933",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2026-03-25T14:54:30Z",
+      "updated": "2026-03-25T14:54:30Z",
+      "body_sha256": "3dc3745ca719bdbc7c9eec66b9e7380d1d6e304e90c3a6b2ec59e0409a14d909",
+      "interpretation": "Author directs users to the released metadata CSV; the reply supplies location, not the generation recipe.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    },
+    {
+      "issue": 23,
+      "id": 5384909434,
+      "url": "https://github.com/yangzhou24/OmniWorld/issues/23#issuecomment-5384909434",
+      "author": "yangzhou24",
+      "association": "OWNER",
+      "date": "2026-08-23T07:47:49Z",
+      "updated": "2026-08-23T07:47:49Z",
+      "body_sha256": "2612d187d13da5b82c6155d3d19d20efb84cf9516c52a98dde45e571fcec1826",
+      "interpretation": "Author says Game cameras were estimated with DroidCalib/DROID-SLAM plus refinement, not exported engine cameras; this is not an independent metric motion measurement.",
+      "evidence_type": "Author explanation, not a released per-UID factor-generation run log"
+    }
+  ],
+  "full_bodies_not_republished": true,
+  "chronology_warning": "2025 suggestions precede March2026 factor release; no assertion that the suggestion was used to produce the current CSV"
+}

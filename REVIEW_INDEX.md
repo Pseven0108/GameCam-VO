@@ -1,17 +1,23 @@
-# 当前评审：TASK007C
+# 当前评审：TASK007D
 
-2026-11-26（Asia/Shanghai）。当前阶段：**TASK007C审计完成，独立米制GT准入NO-GO，停在推理之前**。
+2026-11-26（Asia/Shanghai）。当前阶段：**TASK007D来源追溯完成；用途B（相对/辅助诊断），严格米制GT仍NO-GO**。
 
-[最终评审](reviews/task007c-omniworld-metric-gt-admission-overlap-20261126/FINAL_REVIEW.md) · [完整展开材料](reviews/task007c-omniworld-metric-gt-admission-overlap-20261126) · [完整评审ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task007c-omniworld-metric-gt-admission-overlap-20261126/GAMECAM_TASK007C_OMNIWORLD_METRIC_GT_ADMISSION_REVIEW.zip)
+[最终评审](reviews/task007d-metric-scale-provenance-audit-20261126/FINAL_REVIEW.md) · [完整证据](reviews/task007d-metric-scale-provenance-audit-20261126) · [完整Review ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task007d-metric-scale-provenance-audit-20261126/GAMECAM_TASK007D_METRIC_SCALE_PROVENANCE_REVIEW.zip)
 
-- TASK007B推荐已纠正：公开Metric3D活跃训练列表含Virtual_KITTI，不再推荐VKITTI2为训练未见独立测试；精确权重帧重叠未知。
-- 本轮3个OmniWorld候选、9对RGB/Depth、17.89MiB前缀读取；18PNG检查通过，9对decoder/mask与官方逐位一致，16/16CPU测试。
-- 3个UID的Metric Scale行和应用已核实；独立物理尺度来源/精度仍未核实，RGB/Depth精确同步仅有粗视觉支持。
-- 只有2个候选视觉确认第三人称；严格UID-disjoint Calibration/Dev/Evaluation尚不完整。无拟合、无NLL/Coverage、无GPU前向。
-- VIPER保持VO主线，DROID-W/Metric3D冻结；本次深度审核不撤销既有OWG Camera Benchmark封存/未准入状态。
-- 不启动Scalix、Confidence-aware BA或CADP，不扩大下载、不自动进入下一阶段。
+- GitHub main完整可达历史26提交、6个CSV版本及3个UID已核查。2026-03-21新增484行Metric Scale列，其余字段未变；当前CSV与发布时字节一致。
+- Reader只读取/应用尺度；未找到绑定三UID的生成程序、拟合帧、独立物理标尺或误差界。
+- 作者旧的MoGe-2近似建议不能当作当前因子的生产事实；是否使用Metric3D或Test拟合仍未知。
+- 不启动Metric3D Confidence校准/NLL/Coverage。模型运行0、GPU/CUDA0、新原始数据/权重下载0。
+- TASK007A/B/C封存141项SHA通过；不改历史Release、VIPER主线或Baseline。
+- VKITTI2训练家族重叠纠正继续有效；Scalix、CADP与Confidence-aware BA不启动。
 
-上一阶段原始评审和历史状态保留于[固定提交](https://github.com/Pseven0108/GameCam-VO/tree/46a616925a77ada679f2e9975b17f790ff44bdfa)；更正采用增补文件，不倒改历史ZIP。
+完整历史入口保留在[上一固定提交](https://github.com/Pseven0108/GameCam-VO/tree/30c4149863ce202f4545a872707f0a6fc6a0bfb1)。本次不自动进入下一阶段。
+
+---
+
+## 上一阶段：TASK007C
+
+[TASK007C原始评审](https://github.com/Pseven0108/GameCam-VO/blob/30c4149863ce202f4545a872707f0a6fc6a0bfb1/reviews/task007c-omniworld-metric-gt-admission-overlap-20261126/FINAL_REVIEW.md) · [原始完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task007c-omniworld-metric-gt-admission-overlap-20261126/GAMECAM_TASK007C_OMNIWORLD_METRIC_GT_ADMISSION_REVIEW.zip)
 
 ---
 

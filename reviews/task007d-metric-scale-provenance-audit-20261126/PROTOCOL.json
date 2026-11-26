@@ -1,0 +1,12 @@
+{
+  "task": "TASK007D OmniWorld Metric Scale provenance and independent physical scale audit",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "scope": "Public source/history/paper/author statements plus existing local metadata; CPU only",
+  "targets": ["016d3596da27", "03b9161e3ff2", "0caf78b8eeac"],
+  "protect": ["TASK007A", "TASK007B", "TASK007C", "historical Releases", "DROID-W baseline", "Metric3D baseline", "raw dataset assets"],
+  "primary_questions": ["Released factor-generation procedure", "Independence from Metric3D", "Independent physical meter calibration", "Per-UID production provenance", "Calibration/test usage"],
+  "evidence_classes": ["Official claim", "Implemented consumer code", "Author explanation", "Generation record", "Independent physical measurement", "Missing evidence"],
+  "prohibited": ["Models", "GPU/CUDA", "Full dataset download", "New RGB/depth download", "Scalix", "CADP", "Confidence-aware BA", "Contacting authors", "Changing historical results", "Automatic next stage"],
+  "network": "Bounded public text/code/metadata only; no archives, checkpoints or dataset imagery",
+  "publication": "Complete review ZIP and expanded review to existing Public GitHub; verify before exact local ZIP cleanup"
+}

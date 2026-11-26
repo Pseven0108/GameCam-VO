@@ -1,0 +1,330 @@
+{
+  "hostname": "jupyter-k65whb62w7pnw0y4",
+  "GPU": {
+    "exit_code": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, GPU-18dd1d45-8dca-2400-dddb-af8cd9bd5fae, 580.119.02, 24576, 24125\n",
+    "stderr": ""
+  },
+  "GPU_full": {
+    "exit_code": 0,
+    "stdout": "Thu Nov 26 12:49:32 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.119.02             Driver Version: 580.119.02     CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3090        On  |   00000000:A1:00.0 Off |                  N/A |\n| 30%   29C    P8             21W /  320W |       0MiB /  24576MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "GPU_processes": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "process_names": {
+    "exit_code": 0,
+    "stdout": "    PID COMMAND\n      1 tini\n    498 bash\n    501 sshd\n    514 MainThread\n    515 bash\n    516 tail\n    517 jupyter-lab\n    536 MainThread\n    550 sshd\n    561 python3\n    568 ps\n",
+    "stderr": ""
+  },
+  "filesystems": {
+    "/root/rivermind-data": {
+      "total": 105089261568,
+      "free": 12522430464
+    },
+    "/dev/shm": {
+      "total": 25769803776,
+      "free": 25769803776
+    }
+  },
+  "hub_HEAD": {
+    "exit_code": 0,
+    "stdout": "eb5b6fac0dc155e4e52f576e304fbf11655ff339\n",
+    "stderr": ""
+  },
+  "hub_status": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "DROID_W_HEAD": {
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any parent up to mount point /root)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n"
+  },
+  "files": [
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "bytes": 1647972663,
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972"
+    },
+    {
+      "path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487"
+    }
+  ],
+  "package_metadata": {
+    "exit_code": 0,
+    "stdout": "{\n  \"torch\": \"2.1.0+cu118\",\n  \"torchvision\": \"0.16.0+cu118\",\n  \"numpy\": \"1.26.4\",\n  \"opencv-python\": \"4.8.1.78\",\n  \"timm\": \"0.9.10\",\n  \"Pillow\": \"12.3.0\"\n}\n",
+    "stderr": ""
+  },
+  "paths": {
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data": [
+      {
+        "name": "droid.pth",
+        "directory": false
+      },
+      {
+        "name": "huggingface",
+        "directory": true
+      },
+      {
+        "name": "official",
+        "directory": true
+      },
+      {
+        "name": "runtime_cache",
+        "directory": true
+      },
+      {
+        "name": "torch_hub",
+        "directory": true
+      },
+      {
+        "name": "train_009",
+        "directory": true
+      },
+      {
+        "name": "train_023",
+        "directory": true
+      },
+      {
+        "name": "train_033",
+        "directory": true
+      },
+      {
+        "name": "val_001",
+        "directory": true
+      },
+      {
+        "name": "val_002",
+        "directory": true
+      },
+      {
+        "name": "val_003",
+        "directory": true
+      },
+      {
+        "name": "val_004",
+        "directory": true
+      },
+      {
+        "name": "val_005",
+        "directory": true
+      },
+      {
+        "name": "val_006",
+        "directory": true
+      },
+      {
+        "name": "val_007",
+        "directory": true
+      },
+      {
+        "name": "val_008",
+        "directory": true
+      },
+      {
+        "name": "val_009",
+        "directory": true
+      },
+      {
+        "name": "val_010",
+        "directory": true
+      },
+      {
+        "name": "val_011",
+        "directory": true
+      },
+      {
+        "name": "val_012",
+        "directory": true
+      },
+      {
+        "name": "val_013",
+        "directory": true
+      },
+      {
+        "name": "val_014",
+        "directory": true
+      },
+      {
+        "name": "val_015",
+        "directory": true
+      },
+      {
+        "name": "val_016",
+        "directory": true
+      },
+      {
+        "name": "val_017",
+        "directory": true
+      },
+      {
+        "name": "val_018",
+        "directory": true
+      },
+      {
+        "name": "val_019",
+        "directory": true
+      },
+      {
+        "name": "val_020",
+        "directory": true
+      },
+      {
+        "name": "val_021",
+        "directory": true
+      },
+      {
+        "name": "val_022",
+        "directory": true
+      },
+      {
+        "name": "val_023",
+        "directory": true
+      },
+      {
+        "name": "val_024",
+        "directory": true
+      },
+      {
+        "name": "val_025",
+        "directory": true
+      },
+      {
+        "name": "val_026",
+        "directory": true
+      },
+      {
+        "name": "val_027",
+        "directory": true
+      },
+      {
+        "name": "val_028",
+        "directory": true
+      },
+      {
+        "name": "val_029",
+        "directory": true
+      },
+      {
+        "name": "val_030",
+        "directory": true
+      },
+      {
+        "name": "val_031",
+        "directory": true
+      },
+      {
+        "name": "val_032",
+        "directory": true
+      },
+      {
+        "name": "val_033",
+        "directory": true
+      },
+      {
+        "name": "val_034",
+        "directory": true
+      },
+      {
+        "name": "val_035",
+        "directory": true
+      },
+      {
+        "name": "val_036",
+        "directory": true
+      },
+      {
+        "name": "val_037",
+        "directory": true
+      },
+      {
+        "name": "val_038",
+        "directory": true
+      },
+      {
+        "name": "val_039",
+        "directory": true
+      },
+      {
+        "name": "val_040",
+        "directory": true
+      },
+      {
+        "name": "val_041",
+        "directory": true
+      },
+      {
+        "name": "val_042",
+        "directory": true
+      },
+      {
+        "name": "val_043",
+        "directory": true
+      },
+      {
+        "name": "val_044",
+        "directory": true
+      },
+      {
+        "name": "val_045",
+        "directory": true
+      },
+      {
+        "name": "val_046",
+        "directory": true
+      },
+      {
+        "name": "val_047",
+        "directory": true
+      }
+    ],
+    "/root/rivermind-data/VIPER_MATCHED_DUAL_BASELINE_R2": [
+      {
+        "name": "PROTOCOL_LOCK.json",
+        "directory": false
+      },
+      {
+        "name": "display-libs",
+        "directory": true
+      },
+      {
+        "name": "evidence",
+        "directory": true
+      },
+      {
+        "name": "gpu_rgb_intake.tar.gz",
+        "directory": false
+      },
+      {
+        "name": "manifests",
+        "directory": true
+      },
+      {
+        "name": "pipeline",
+        "directory": true
+      },
+      {
+        "name": "results",
+        "directory": true
+      },
+      {
+        "name": "runtime_cache",
+        "directory": true
+      },
+      {
+        "name": "smoke",
+        "directory": true
+      }
+    ]
+  },
+  "models_loaded": false,
+  "CUDA_context_initialized": false,
+  "checkpoint_deserialized": false
+}

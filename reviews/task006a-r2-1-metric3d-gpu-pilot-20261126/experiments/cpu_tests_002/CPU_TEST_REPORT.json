@@ -1,0 +1,56 @@
+{
+  "tests": 8,
+  "passed": 8,
+  "success": true,
+  "records": [
+    {
+      "test": "__main__.TestEvaluationGeometry.test_constant_signal_is_random",
+      "status": "PASS",
+      "seconds": 0.0005177999999999017,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_fast_curve_matches_reference_with_ties",
+      "status": "PASS",
+      "seconds": 0.011070099999999972,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_fast_curve_unique_scores",
+      "status": "PASS",
+      "seconds": 0.0028629000000000016,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_invalid_signal_stops",
+      "status": "PASS",
+      "seconds": 7.699999999988272e-05,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_pixel_center_bilinear_grid_oracle",
+      "status": "PASS",
+      "seconds": 0.0008294999999998165,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_real_readonly_hook_bitwise_equality",
+      "status": "PASS",
+      "seconds": 0.0002415000000000056,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_real_unconstrained_confidence_kept_raw",
+      "status": "PASS",
+      "seconds": 0.004532600000000109,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_restore_same_constant_grid_with_odd_padding",
+      "status": "PASS",
+      "seconds": 0.04678950000000004,
+      "detail": null
+    }
+  ],
+  "scope": "CPU evaluator/grid oracles plus real-output readback assertions, no new model inference"
+}

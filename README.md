@@ -1,3 +1,24 @@
+# GameCam-VO · TASK006A-R2.1 真实GPU推理验证
+
+2026-11-26。**GPU_PILOT_COMPLETE / FORMAL_GT_ACCURACY_BLOCKED / CADP_INTEGRATION_NO_GO**。
+
+[最终评审](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FINAL_REVIEW.md) · [完整报告](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_FINAL_RESEARCH_REPORT.md) · [展开材料](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-1-metric3d-gpu-pilot-20261126/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip)
+
+RTX3090完成16图/33次前向，保存Native Confidence、Flip TTA和实际256-bin统计。
+74项最新CPU检查通过。Confidence实测约-2.519至6.544，不是概率。
+次级诊断在Calibration0000拟合单一scale，再对Test0001的3帧评价：
+AbsRel>0.2 AUROC为Native0.812、Flip0.675、初始Entropy0.277；Flip的AUSE略好，不宣称全面优胜。
+未核实raw GT物理单位；严格入口在7个零预测处停止，其失败保留。另有明确标注、不删点的次级诊断。
+不进入CADP/BA/Task007。没有训练、SLAM、源码/权重修改或实例重启关机。
+
+完整ZIP338,633,937 bytes，含全部16份原始模型输出；199成员CRC和198内部SHA通过。
+SHA256 `fc8dfeb8e2746c8033621af9647a382e9e3138ff09bf46e8ddee453f678c7ae8`。
+仓库保持Public；发布使用独立分支。下列文字是历史状态。
+
+---
+
+## 历史记录
+
 # GameCam-VO · TASK006A-R2 深度先验可信度阶段证据
 
 2026-11-26。**PARTIAL_WAITING_GPU_AND_GT_ADMISSION**。

@@ -1,0 +1,18 @@
+{
+  "pid": 1290,
+  "stage": "pilot",
+  "argv": [
+    "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+    "-B",
+    "-u",
+    "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot_qualified.py",
+    "--manifest",
+    "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/pilot_manifest.json",
+    "--out",
+    "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/pilot"
+  ],
+  "CPU_only": false,
+  "GPU_inference_authorized": true,
+  "model": "Metric3D only",
+  "no_SLAM": true
+}

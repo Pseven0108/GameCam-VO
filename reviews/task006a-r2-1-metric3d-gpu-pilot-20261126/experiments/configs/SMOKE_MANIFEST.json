@@ -1,0 +1,28 @@
+{
+  "samples": [
+    {
+      "sample_id": "VIPER_Night_val007_00001",
+      "dataset": "VIPER",
+      "sequence_id": "val_007",
+      "frame_id": "00001",
+      "environment": "Night",
+      "rgb_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/val_007/00001.jpg",
+      "rgb_sha256": "0568cb14fa7d25b81bb395e3d3ba7811b51fe7ec351d30ffdfaf4163c3a52cd8",
+      "source_hw": [
+        1080,
+        1920
+      ],
+      "input_hw": [
+        360,
+        640
+      ],
+      "fx": 386.0112538364529,
+      "source_fx": 1158.0337615093588,
+      "input_protocol": "FROZEN_R2_640x360_INTER_LINEAR",
+      "role": "NO_GT_SMOKE_ONLY"
+    }
+  ],
+  "source_manifest": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_MATCHED_DUAL_BASELINE_R2\\manifests\\val_007_full_00001-00487.json",
+  "source_manifest_sha256": "5547cdd407e022ba27a8b9af18f1ef4e9471ea58c1e0df96aec38fee180aa537",
+  "GT_error_evaluation_admitted": false
+}

@@ -1,0 +1,17 @@
+{
+  "primary_strict_evaluation": "STOPPED_BEFORE_CALIBRATION",
+  "evidence": "04_evaluation/STRICT_GT_GATE_FAILURE.json",
+  "reason": "MVS_0001_0099 has 7 zero predictions on valid GT after native bicubic undershoot and clamp; no points are silently removed",
+  "amendment_timing": "After invalid-output detection, before depth-scale fitting or GT ranking results",
+  "purpose": "Secondary diagnostic only; does not turn the failed strict gate into PASS",
+  "changes_to_model_or_raw_outputs": false,
+  "changes_to_original_strict_depth_errors_function": false,
+  "secondary_AbsRel": "For finite nonnegative predictions use abs(pred-GT)/GT on every valid GT pixel, so zero gives error 1",
+  "secondary_AbsLog": "Keep infinite log error at zero predictions; report infinity count and null mean with explicit status, no epsilon floor to manufacture finite accuracy",
+  "secondary_TTA": "Recalculate the user-defined abs(D1-D2)/(abs(D1)+1e-6) and abs(log(D1+1e-6)-log(D2+1e-6)) from unchanged nonnegative raw maps, including zeros",
+  "raw_saved_TTA_NaNs": "Remain unchanged; diagnostic values are separately labelled zero-extended formulas",
+  "calibration": "Original sequence0000 native predictions are positive on valid GT, so its preregistered scale formula and fit set are unchanged",
+  "test_pixels_removed": 0,
+  "physical_metric_accuracy_still_blocked": true,
+  "integration_gate_still_requires_new_evidence": true
+}

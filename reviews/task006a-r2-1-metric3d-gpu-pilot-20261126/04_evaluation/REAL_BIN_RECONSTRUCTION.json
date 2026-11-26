@@ -1,0 +1,41 @@
+{
+  "real_sample": "VIPER_Night_val007_00001",
+  "comparisons": [
+    {
+      "field": "bin_entropy",
+      "max_abs_difference": 2.3841009788583278e-07,
+      "allclose_float32_storage": true,
+      "rtol": 5e-07,
+      "atol": 1e-05
+    },
+    {
+      "field": "bin_variance",
+      "max_abs_difference": 0.00024389940244873287,
+      "allclose_float32_storage": true,
+      "rtol": 5e-07,
+      "atol": 1e-05
+    },
+    {
+      "field": "initial_depth",
+      "max_abs_difference": 7.629027123812193e-06,
+      "allclose_float32_storage": true,
+      "rtol": 5e-07,
+      "atol": 1e-05
+    },
+    {
+      "field": "bin_max_probability",
+      "max_abs_difference": 2.9783804311733775e-08,
+      "allclose_float32_storage": true,
+      "rtol": 5e-07,
+      "atol": 1e-05
+    },
+    {
+      "field": "effective_bins",
+      "max_abs_difference": 7.628360833678016e-06,
+      "allclose_float32_storage": true,
+      "rtol": 5e-07,
+      "atol": 1e-05
+    }
+  ],
+  "GPU_inference_repeated": false
+}

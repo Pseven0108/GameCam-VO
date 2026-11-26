@@ -1,0 +1,50 @@
+{
+  "models": [
+    {
+      "signal": "NativeConfidence",
+      "standardize_mean": -0.9732182149957144,
+      "standardize_SD": 0.02716458182500483,
+      "nonnegative_risk_coefficient": 0.4572386228822815,
+      "intercept": -1.0693468610442782,
+      "event": "AbsRel>0.2 after calibration-only global scale",
+      "fitted_on_sequences": [
+        "0000"
+      ],
+      "grid_stride": 8,
+      "calibration_pixels": 20274,
+      "test_fitted": false,
+      "network_training": false
+    },
+    {
+      "signal": "FlipRelative",
+      "standardize_mean": 0.022161080422046422,
+      "standardize_SD": 0.03595413472857513,
+      "nonnegative_risk_coefficient": 0.8649636547971685,
+      "intercept": -1.0514575958952812,
+      "event": "AbsRel>0.2 after calibration-only global scale",
+      "fitted_on_sequences": [
+        "0000"
+      ],
+      "grid_stride": 8,
+      "calibration_pixels": 20274,
+      "test_fitted": false,
+      "network_training": false
+    },
+    {
+      "signal": "InitialBinEntropy",
+      "standardize_mean": 3.7801908377811313,
+      "standardize_SD": 1.2670167575024558,
+      "nonnegative_risk_coefficient": 0.0,
+      "intercept": -1.0375869455479758,
+      "event": "AbsRel>0.2 after calibration-only global scale",
+      "fitted_on_sequences": [
+        "0000"
+      ],
+      "grid_stride": 8,
+      "calibration_pixels": 20274,
+      "test_fitted": false,
+      "network_training": false
+    }
+  ],
+  "test_sequence_used_for_fit": false
+}

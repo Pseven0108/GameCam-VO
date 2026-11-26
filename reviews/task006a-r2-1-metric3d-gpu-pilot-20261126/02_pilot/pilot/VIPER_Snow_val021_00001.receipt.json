@@ -1,0 +1,83 @@
+{
+  "sample": {
+    "sample_id": "VIPER_Snow_val021_00001",
+    "dataset": "VIPER",
+    "sequence_id": "val_021",
+    "frame_id": "00001",
+    "environment": "Snow",
+    "rgb_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/val_021/00001.jpg",
+    "rgb_sha256": "7754d441379e05cff56589417c3a08d1906ee13ea39886cfed1fcfe09270d72c",
+    "source_hw": [
+      1080,
+      1920
+    ],
+    "input_hw": [
+      360,
+      640
+    ],
+    "fx": 386.01122245316384,
+    "source_fx": 1158.0336673594916,
+    "input_protocol": "FROZEN_R2_640x360_INTER_LINEAR",
+    "role": "NO_DEPTH_GT_DISTRIBUTION_ONLY"
+  },
+  "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/pilot/VIPER_Snow_val021_00001.npz",
+  "bytes": 15249254,
+  "sha256": "c583e17ebe6de21abdcf2b8adb3b3ee73211786820512a7c3e62b813dc9fb2dc",
+  "canonical_hw": [
+    616,
+    1064
+  ],
+  "resize_scale": 1.6625,
+  "resized_hw": [
+    598,
+    1064
+  ],
+  "padding_ltrb": [
+    0,
+    9,
+    0,
+    9
+  ],
+  "depth_restore": "baseline fx/1000; bicubic; clamp0..300",
+  "confidence_restore": "same unpad; bilinear; no depth scale",
+  "times": [
+    {
+      "mode": "native_with_hook",
+      "canonical_shape": [
+        1,
+        1,
+        616,
+        1064
+      ],
+      "bin_shape": [
+        256,
+        154,
+        266
+      ],
+      "seconds_forward": 0.4451537597924471,
+      "peak_allocated_bytes": 2515347456,
+      "peak_reserved_bytes": 2816475136
+    },
+    {
+      "mode": "flip_with_hook",
+      "canonical_shape": [
+        1,
+        1,
+        616,
+        1064
+      ],
+      "bin_shape": [
+        256,
+        154,
+        266
+      ],
+      "seconds_forward": 0.4479999262839556,
+      "peak_allocated_bytes": 2515347456,
+      "peak_reserved_bytes": 2816475136
+    }
+  ],
+  "TTA_invalid_pixels": 0,
+  "bin_anchor_count": 256,
+  "GT_used_for_inference": false,
+  "model_weights_updated": false
+}

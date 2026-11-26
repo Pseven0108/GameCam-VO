@@ -1,0 +1,374 @@
+{
+  "tests": 61,
+  "passed": 61,
+  "success": true,
+  "records": [
+    {
+      "test": "test_reliability.TestAdmission.test_alignment_unknown_stops",
+      "status": "PASS",
+      "seconds": 7.489999999998886e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_depth_convention_unknown_stops",
+      "status": "PASS",
+      "seconds": 2.0799999999931984e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_independent_GT_required",
+      "status": "PASS",
+      "seconds": 1.6100000000074388e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_invalid_GT_excluded_and_logged_by_mask",
+      "status": "PASS",
+      "seconds": 0.0008247999999999589,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_invalid_pred_not_silently_dropped",
+      "status": "PASS",
+      "seconds": 3.779999999986572e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_no_valid_GT_stops",
+      "status": "PASS",
+      "seconds": 2.9700000000021376e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_raw_relative_and_log_error",
+      "status": "PASS",
+      "seconds": 0.0002697999999998757,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_shape_mismatch_stops",
+      "status": "PASS",
+      "seconds": 2.4800000000047007e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestAdmission.test_units_unknown_stops",
+      "status": "PASS",
+      "seconds": 1.8000000000073513e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_bins_are_not_probability_claim",
+      "status": "PASS",
+      "seconds": 0.0009524000000000754,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_missing_calibration_stops",
+      "status": "PASS",
+      "seconds": 2.379999999990723e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_perfect_event_probabilities_zero_ECE",
+      "status": "PASS",
+      "seconds": 0.00041559999999996045,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_probability_bounds_checked",
+      "status": "PASS",
+      "seconds": 7.050000000008438e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_probability_one_not_lost",
+      "status": "PASS",
+      "seconds": 0.00011070000000001912,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_raw_confidence_not_ECE",
+      "status": "PASS",
+      "seconds": 0.003604099999999999,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestCalibration.test_sequence_leakage_stops",
+      "status": "PASS",
+      "seconds": 2.2999999999884224e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_actual_anchor_count_required",
+      "status": "PASS",
+      "seconds": 2.780000000002225e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_initial_distribution_does_not_determine_final_error",
+      "status": "PASS",
+      "seconds": 0.0001534999999999176,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_logit_shift_invariance",
+      "status": "PASS",
+      "seconds": 0.000151200000000129,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_one_hot_limit",
+      "status": "PASS",
+      "seconds": 8.889999999994735e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestDepthBins.test_uniform_entropy_and_variance",
+      "status": "PASS",
+      "seconds": 0.00023050000000002235,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestGroupedStatistics.test_constant_group_interval",
+      "status": "PASS",
+      "seconds": 0.000893099999999869,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestGroupedStatistics.test_group_macro_prevents_long_sequence_dominance",
+      "status": "PASS",
+      "seconds": 0.00025879999999989245,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestGroupedStatistics.test_group_resampling_reproducibility",
+      "status": "PASS",
+      "seconds": 0.0005256999999998513,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestGroupedStatistics.test_one_sequence_has_no_cross_sequence_interval",
+      "status": "PASS",
+      "seconds": 4.3299999999968364e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_NaN_score_rejected",
+      "status": "PASS",
+      "seconds": 2.859999999982321e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_all_ties_are_random_not_input_order",
+      "status": "PASS",
+      "seconds": 0.0002488999999998853,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_confidence_direction_is_explicit",
+      "status": "PASS",
+      "seconds": 0.003919899999999865,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_constant_correlation_not_zero_imputed",
+      "status": "PASS",
+      "seconds": 3.719999999995949e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_multiple_error_thresholds_retained",
+      "status": "PASS",
+      "seconds": 0.0026911000000000573,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_perfect_binary",
+      "status": "PASS",
+      "seconds": 0.000172000000000061,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_reversed_binary",
+      "status": "PASS",
+      "seconds": 0.000164800000000076,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_single_class_metrics_undefined",
+      "status": "PASS",
+      "seconds": 8.830000000004112e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_0",
+      "status": "PASS",
+      "seconds": 0.002618800000000032,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_1",
+      "status": "PASS",
+      "seconds": 0.001354199999999972,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_1729",
+      "status": "PASS",
+      "seconds": 0.0012813000000000407,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_2",
+      "status": "PASS",
+      "seconds": 0.0012811999999999824,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_20261126",
+      "status": "PASS",
+      "seconds": 0.0012847000000000275,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_3",
+      "status": "PASS",
+      "seconds": 0.001269399999999976,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_43",
+      "status": "PASS",
+      "seconds": 0.0013081999999999816,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_44",
+      "status": "PASS",
+      "seconds": 0.0013104999999999922,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_45",
+      "status": "PASS",
+      "seconds": 0.0014314000000001936,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_sklearn_oracle_seed_7",
+      "status": "PASS",
+      "seconds": 0.00130779999999997,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRanking.test_wrong_direction_not_automatically_fixed",
+      "status": "PASS",
+      "seconds": 0.0029240000000001487,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_bad_ranking_negative_AURG",
+      "status": "PASS",
+      "seconds": 0.0001651000000000291,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_constant_score_AURG_zero",
+      "status": "PASS",
+      "seconds": 0.00012710000000004662,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_negative_error_rejected",
+      "status": "PASS",
+      "seconds": 3.509999999984359e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_oracle_AUSE_zero",
+      "status": "PASS",
+      "seconds": 0.00014010000000008738,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_tie_expected_prefix_matches_enumeration",
+      "status": "PASS",
+      "seconds": 0.00031269999999983256,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_tie_permutation_invariance",
+      "status": "PASS",
+      "seconds": 0.00028620000000012524,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestRiskCoverage.test_zero_error_returns_zero_areas",
+      "status": "PASS",
+      "seconds": 0.000142400000000098,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_TTA_relative_and_log_scores",
+      "status": "PASS",
+      "seconds": 0.00010690000000002087,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_consistently_wrong_model_is_not_detected",
+      "status": "PASS",
+      "seconds": 5.689999999991535e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_correct_inverse_flip",
+      "status": "PASS",
+      "seconds": 7.45999999998137e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_invalid_TTA_depth_stops",
+      "status": "PASS",
+      "seconds": 3.139999999990373e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_odd_padding",
+      "status": "PASS",
+      "seconds": 2.2799999999989495e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_resize_padding_native_dimensions",
+      "status": "PASS",
+      "seconds": 1.7399999999945237e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTTA.test_zero_bottom_padding_does_not_empty_map",
+      "status": "PASS",
+      "seconds": 6.02999999999021e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_correct_target_confidence",
+      "status": "PASS",
+      "seconds": 0.00010849999999984483,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_gross_errors_not_confidence_supervised",
+      "status": "PASS",
+      "seconds": 8.049999999992785e-05,
+      "detail": null
+    },
+    {
+      "test": "test_reliability.TestTrainingMask.test_wrong_pixel_confidence_unconstrained_by_this_loss",
+      "status": "PASS",
+      "seconds": 8.790000000002962e-05,
+      "detail": null
+    }
+  ],
+  "scope": "Synthetic evaluator and source-mask contract tests; NOT Metric3D inference or confidence accuracy evidence"
+}

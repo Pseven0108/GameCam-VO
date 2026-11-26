@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "file": "CALIBRATION_ONLY_DEPTH_SCALE.json",
+      "identical_bytes": true,
+      "sha256": "590f0d719dcc4eb1fa0474c35395d9dc0c6c1af330a52971eae74259c5324cf7"
+    },
+    {
+      "file": "CALIBRATION_ONLY_PROBABILITY_MODELS.json",
+      "identical_bytes": true,
+      "sha256": "1d12ed624128dfc3aa57200936a773935faa37c56dd982092eefb516ef5bee33"
+    },
+    {
+      "file": "CONDITIONAL_CALIBRATED_EVENT_ECE.csv",
+      "identical_bytes": true,
+      "sha256": "b977ff830fe17c3b3ce6f26956e55b1f624bfb28671efe3e926974ec2c533da3"
+    },
+    {
+      "file": "CONDITIONAL_DEPTH_ERRORS.csv",
+      "identical_bytes": true,
+      "sha256": "4bd6911474e07743b1d508bd52c8361d208f0de0c078b8e89b8a96f72d0b67f3"
+    },
+    {
+      "file": "CONDITIONAL_NATIVE_UNIT_METRICS.csv",
+      "identical_bytes": true,
+      "sha256": "7ae4b4d956e162a0ec74a9c5008ca4bc1ffe266f663c1fe60f5b2d99d1397eb5"
+    },
+    {
+      "file": "CONDITIONAL_TEST_MACRO.csv",
+      "identical_bytes": true,
+      "sha256": "3cda8647ea71298489b66eba842f2fac36423a95ed0aad1561148a13aa394792"
+    },
+    {
+      "file": "CONDITIONAL_TEST_STRATA.csv",
+      "identical_bytes": true,
+      "sha256": "fa33221ecdedf89fe0341eaaa1a285c650946e6e7584aaac5b0570ec96620720"
+    },
+    {
+      "file": "INFERENCE_TIMING_MEMORY.csv",
+      "identical_bytes": true,
+      "sha256": "4b5a18566120b632286659fd500a77ea8781d6ff7eddabe0fd3fefc8ffad9144"
+    },
+    {
+      "file": "MVS_0000_0000_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "ace7b2b1e4c6cf5518a9c837b2b8bea00c1fb51a76dfbc5c3540135355164503"
+    },
+    {
+      "file": "MVS_0000_0049_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "25b56e1197b2d633d63031467053784e15d489b50b5089f3e5842e127943e3e1"
+    },
+    {
+      "file": "MVS_0000_0099_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "7ab15e3331b91ee7e4b1a4862072146051e70ed2aef100906f2c87793b20fde1"
+    },
+    {
+      "file": "MVS_0001_0000_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "7231d3c0525ee1f77273eb113106829d38664533c4ea650615528fb64189ac4b"
+    },
+    {
+      "file": "MVS_0001_0049_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "c682781d57b1a7c1f8ef9f2fde0d5297c86a3b352b9d2c6fce828d5eb73d40c1"
+    },
+    {
+      "file": "MVS_0001_0099_GT_PAIRING.json",
+      "identical_bytes": true,
+      "sha256": "68d1d8f9c055aded1471ce967d7a4a883e5808a6e029ab206de7d7bbb17ea90c"
+    },
+    {
+      "file": "OUTPUT_NUMERICAL_AUDIT.csv",
+      "identical_bytes": true,
+      "sha256": "ebb1c1aa3589ed62f80f9b840dc10bfdfce4909f3dfa5ddab939a250a17f46d3"
+    },
+    {
+      "file": "RAW_OUTPUT_INDEX.json",
+      "identical_bytes": true,
+      "sha256": "f8b8d0bd19a9019567a402050125645d106d59d8e20e2ee2941bf5001babbe31"
+    },
+    {
+      "file": "REAL_BIN_RECONSTRUCTION.json",
+      "identical_bytes": true,
+      "sha256": "5b03bb012dc6c1cdfa10854981ec65f3943f6dadbbb19db05f8dfe4ab87b5130"
+    },
+    {
+      "file": "RISK_COVERAGE_SOURCE_DATA.csv",
+      "identical_bytes": true,
+      "sha256": "ac2e1f958079445b076c4a34f7668015f66cdaf22ed5f313ac5673ec071e5e1e"
+    },
+    {
+      "file": "SCORE_ERROR_BINS.csv",
+      "identical_bytes": true,
+      "sha256": "296b898ecc94a1c9ad64b776c5b221e2f086a82139107c8ed9b09b1de9f58bbe"
+    }
+  ],
+  "all_scientific_numbers_identical": true,
+  "excluded": [
+    "EVALUATION_STATUS.json: elapsed time and new producer SHA metadata"
+  ],
+  "no_new_GPU_calls": true
+}

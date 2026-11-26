@@ -1,0 +1,66 @@
+{
+  "source": "https://huggingface.co/datasets/phuang17/MVS-Synth/resolve/73e4b0abff2806a67c0f9bc038c3a1ac5df9ef0b/GTAV_540.tar.gz",
+  "official_revision": "73e4b0abff2806a67c0f9bc038c3a1ac5df9ef0b",
+  "status": "BOUNDED_PARTIAL",
+  "bytes_read": 180000000,
+  "hard_limit_bytes": 180000000,
+  "headers": {
+    "content_length": "10492893238",
+    "content_type": "application/gzip"
+  },
+  "initial_members": [
+    "GTAV_540/0026/images/0001.png",
+    "GTAV_540/0007/images/0046.png",
+    "GTAV_540/0008/poses/0052.json",
+    "GTAV_540/0098/depths/0097.exr",
+    "GTAV_540/0003/poses/0046.json",
+    "GTAV_540/0082/poses/0042.json",
+    "GTAV_540/0068/images/0022.png",
+    "GTAV_540/0049/images/0067.png",
+    "GTAV_540/0032/images/0079.png",
+    "GTAV_540/0051/images/0034.png"
+  ],
+  "target_files": [
+    {
+      "official_member": "GTAV_540/0001/poses/0050.json",
+      "local": "D:\\aaa\\GameCam-VO\\reviews\\task006a-r2-1-metric3d-gpu-pilot-20261126\\inputs\\MVS-Synth\\GTAV_540\\0001\\poses\\0050.json",
+      "bytes": 368,
+      "sha256": "ffcf8edcbf3a387e188a964d9c9bc91313dba45e6b851455cfbb2448ed392604",
+      "matches_mirror": true
+    },
+    {
+      "official_member": "GTAV_540/0001/images/0007.png",
+      "local": "D:\\aaa\\GameCam-VO\\reviews\\task006a-r2-1-metric3d-gpu-pilot-20261126\\inputs\\MVS-Synth\\GTAV_540\\0001\\images\\0007.png",
+      "bytes": 703442,
+      "sha256": "5b4ae4310cbfce2461fec1f6d26fa7a43933f933cf967bca75254d9b24254e01",
+      "matches_mirror": true
+    },
+    {
+      "official_member": "GTAV_540/0001/images/0014.png",
+      "local": "D:\\aaa\\GameCam-VO\\reviews\\task006a-r2-1-metric3d-gpu-pilot-20261126\\inputs\\MVS-Synth\\GTAV_540\\0001\\images\\0014.png",
+      "bytes": 644793,
+      "sha256": "7d15bbc7ef211cfe92f0ec6ea84fc0856466f9d8af0bab6231471ce6ab4edcec",
+      "matches_mirror": true
+    },
+    {
+      "official_member": "GTAV_540/0001/poses/0090.json",
+      "local": "D:\\aaa\\GameCam-VO\\reviews\\task006a-r2-1-metric3d-gpu-pilot-20261126\\inputs\\MVS-Synth\\GTAV_540\\0001\\poses\\0090.json",
+      "bytes": 370,
+      "sha256": "fca905a248878382630a0c314811f3caa730116d77c852a691ed38b3e468e2b8",
+      "matches_mirror": true
+    },
+    {
+      "official_member": "GTAV_540/0001/images/0021.png",
+      "local": "D:\\aaa\\GameCam-VO\\reviews\\task006a-r2-1-metric3d-gpu-pilot-20261126\\inputs\\MVS-Synth\\GTAV_540\\0001\\images\\0021.png",
+      "bytes": 697625,
+      "sha256": "3ce17f4f11a7a8e20c0f8240bbf531dc0f4d5596d0911a8d740542050191c076",
+      "matches_mirror": true
+    }
+  ],
+  "matches": 5,
+  "error": "Official compressed prefix budget reached",
+  "seconds": 17.9401844,
+  "full_archive_downloaded": false,
+  "full_archive_CRC_certified": false,
+  "target_member_bytes_compared": true
+}

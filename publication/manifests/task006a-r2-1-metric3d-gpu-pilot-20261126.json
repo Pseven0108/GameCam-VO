@@ -1,0 +1,1268 @@
+{
+  "task": "TASK006A-R2.1",
+  "branch": "codex/task006a-r2-1-metric3d-gpu-pilot-20261126",
+  "base_commit": "1595abf7d19f641d90761b462f3406cc8cf35636",
+  "ZIP": {
+    "ZIP": "GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip",
+    "ZIP_bytes": 338633937,
+    "ZIP_sha256": "fc8dfeb8e2746c8033621af9647a382e9e3138ff09bf46e8ddee453f678c7ae8",
+    "members": 199,
+    "internal_SHA_entries": 198,
+    "CRC": "PASS",
+    "internal_SHA": "PASS",
+    "raw_model_output_files": 16,
+    "all_raw_model_outputs_included": true,
+    "protected_historical_files": 406,
+    "historical_R2_payload_checks": 115,
+    "latest_CPU_tests": 74,
+    "GPU_samples": 16,
+    "GPU_model_forward_count": 33,
+    "strict_GT_gate": "FAILED_PRESERVED",
+    "formal_metric_accuracy": "BLOCKED"
+  },
+  "release_asset_url": "https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-1-metric3d-gpu-pilot-20261126/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip",
+  "Git_omitted_raw_outputs": [
+    {
+      "path": "01_smoke/smoke_qualified/VIPER_Night_val007_00001.npz",
+      "bytes": 53352448,
+      "sha256": "9f478e1c38177a687e69195dfed265cec644baa16d2dc490d61260e8f2e17670",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0000_0000.npz",
+      "bytes": 23607670,
+      "sha256": "dc439b5d34137a9ef1cb9c9735aaeb40a22dde2212ff3445827374f9a5648aef",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0000_0049.npz",
+      "bytes": 23580361,
+      "sha256": "60cc9e84a94e14e8763ead62332d31d4f02b0c9f004b7825edf1226a7000af26",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0000_0099.npz",
+      "bytes": 22467009,
+      "sha256": "c6029583e174625bc53da324123b0f1db729440703ea9722966168dee19d4e61",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0001_0000.npz",
+      "bytes": 23317067,
+      "sha256": "8f4b8390198304b8a2c66329bb2d6b969e74225f016604440b57bacdd0eb675e",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0001_0049.npz",
+      "bytes": 23053223,
+      "sha256": "61a0bad015f97f5fb1fc364fd6340cf471bc752459c06e58d5526f131a79d5b7",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/MVS_0001_0099.npz",
+      "bytes": 23445928,
+      "sha256": "56ffda33a3f77349ca31aa73ed2fa703c7d69c58d845c400b6d5e2c9aa8ef8c6",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Day_val001_00001.npz",
+      "bytes": 15153565,
+      "sha256": "b6caebb717347731b02660f8e2892062c415e60c0f56acaa3c39aa8bea1df48f",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Day_val001_00239.npz",
+      "bytes": 14470504,
+      "sha256": "5711894fee74c346dec620fc685c209cbde26fa9400858ac06a8340bdc7dc35c",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Night_val007_00244.npz",
+      "bytes": 16065639,
+      "sha256": "9c3ae760cefc6353b2e8fcb6fa5fdeadb8433b77c3ae85643abb8b2c727ba21f",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Rain_val018_00001.npz",
+      "bytes": 14778351,
+      "sha256": "f0d113cee2cc3db22363b16e170990b5c2741ff0679d983e255a244377bcf19c",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Rain_val018_00356.npz",
+      "bytes": 14401024,
+      "sha256": "fa397816565bcf25710682502f06204b060dfae8f62a224ca07c89462e9cadd2",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Snow_val021_00001.npz",
+      "bytes": 15249254,
+      "sha256": "c583e17ebe6de21abdcf2b8adb3b3ee73211786820512a7c3e62b813dc9fb2dc",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Snow_val021_00355.npz",
+      "bytes": 15326351,
+      "sha256": "e3283334e5c394f9e653d3cb35493a1e06e5712020c47bce03e7c4fda299549a",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Sunset_val008_00001.npz",
+      "bytes": 16312013,
+      "sha256": "dd301a13b2cf096cc8f0ab21e24aa63bab8337a5a89b7cdb1001884fed9ebbe4",
+      "available_in_original_ZIP": true
+    },
+    {
+      "path": "02_pilot/pilot/VIPER_Sunset_val008_00354.npz",
+      "bytes": 15522861,
+      "sha256": "c63311a88dbed8f088005c08764b9d79aba1d9becde859a67b3c40fd2d12aebb",
+      "available_in_original_ZIP": true
+    }
+  ],
+  "all_omitted_Git_outputs_inside_original_ZIP": true,
+  "original_payload_files_expanded": 183,
+  "visibility_changed": false,
+  "default_branch_changed": false,
+  "files": [
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/MASK_SOURCE.receipt.json",
+      "bytes": 202,
+      "sha256": "113939f74e3e80a7d0035cc7748cff86cb604ed328333bf259e921be62a63774",
+      "git_blob_sha": "5618a2f37874d8c4ab937ff37e56e05fc03cc3c6"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/MASK_SOURCE.stderr.txt",
+      "bytes": 3853,
+      "sha256": "a439734306d54582796872d751958af4b2016a9bcd00e169c69192f91569a3d7",
+      "git_blob_sha": "e25f1567dddbddc443921cea7c4a76d20892c544"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/MASK_SOURCE.stdout.txt",
+      "bytes": 59819,
+      "sha256": "2544601eceda7b3b3367f118168228a90d977ee1fb8eebe33d9795b5fafd3c48",
+      "git_blob_sha": "711291898a6f0eaf55d12036e47ccf4b419b4b5a"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PREFLIGHT_001.receipt.json",
+      "bytes": 202,
+      "sha256": "1a23bf4c0c53964d729b02ee0d1043881cce22e5665708f088e2e17337441992",
+      "git_blob_sha": "0131b01231dbcbd007a0b5be00cfbbfb14b3e731"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PREFLIGHT_001.stderr.txt",
+      "bytes": 3851,
+      "sha256": "d9239758b8348356c252d6e5b1f3ceb954f867805c867cc1b9501a374b93268a",
+      "git_blob_sha": "711937e509198d78ab8441b6ab163005458abcfd"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PREFLIGHT_001.stdout.txt",
+      "bytes": 8623,
+      "sha256": "e314df4280e63bcff0e77ba72b540c5bb28b0fcc76d0e31bc2e6d8c7595293f1",
+      "git_blob_sha": "f1fad35650c1be626e5118c354158c1d9a53a237"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PRESERVATION_FINAL.receipt.json",
+      "bytes": 202,
+      "sha256": "96f3f6ca2f3c1f36eb4840dca18d2b63a459b2e9c670a7a4304745530e278097",
+      "git_blob_sha": "3e9b6fb8a4b231c77c69b4a21ff843629e504eac"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PRESERVATION_FINAL.stderr.txt",
+      "bytes": 3850,
+      "sha256": "25e92f85b32ea72454207e9745eab4a11621d7c84ed49fe102bcb2b0681ca981",
+      "git_blob_sha": "3c025c2ffddfb263c01c0fdaf76fd9510fe7a1fe"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/PRESERVATION_FINAL.stdout.txt",
+      "bytes": 4688,
+      "sha256": "44524a9fb41dd04a3cda87fa48108eae7fbed55717ab52568a429107d7884e08",
+      "git_blob_sha": "4ab5c71568ccc8fdc253e135b185f75a1a16062d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/SAMPLE_INVENTORY.receipt.json",
+      "bytes": 202,
+      "sha256": "df6bb5bc75c7586e9547a70613384846f9ff9f23a11d7d7323051de52aaec5de",
+      "git_blob_sha": "430986a38ebc6229eb5bf055747fdf5a7b5f7ab3"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/SAMPLE_INVENTORY.stderr.txt",
+      "bytes": 3851,
+      "sha256": "92712d4ec3ab90746c053d6b7ede1a4c385cc3a9a742a89cfb758d3ab0e8405c",
+      "git_blob_sha": "cce1341601f4e6955dba8a18a8cbda60d5a67607"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/SAMPLE_INVENTORY.stdout.txt",
+      "bytes": 5940,
+      "sha256": "5deaebc0e222d2957c73e7d606a8d89f13461618ada32994b8ed222a6bccf45b",
+      "git_blob_sha": "36b835762cc07575e92bec2c0f05c2cd830c7030"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_001.receipt.json",
+      "bytes": 201,
+      "sha256": "c75befd6e9bb2afceb7d34b87d81a232ececc80e5779301c50af9aa3e3aa7cd5",
+      "git_blob_sha": "42e55932069fa4a8ba4e45164848f96f258a47da"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_001.stderr.txt",
+      "bytes": 3851,
+      "sha256": "f71657f0ed9afca911eccda4eec72710d7b18fd48382ed61c5e1ca2341d348cd",
+      "git_blob_sha": "c9018b3d3bbaabf78dc524b7ff4526558403e796"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_001.stdout.txt",
+      "bytes": 2018,
+      "sha256": "825d7ef6b5d21933e1f08f5e25525ce840ce4a9f75873bf30581ac39eee9768d",
+      "git_blob_sha": "68a4daaa225a79f39190739d1b21c09fdacc1f4a"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_002.receipt.json",
+      "bytes": 202,
+      "sha256": "ce46a81c703f634ebe14bad7320f82202730d30e427327f85c9f422ec3dfc898",
+      "git_blob_sha": "7f4c4f8fb33dc957dd286409271a36fcb7ac5cc4"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_002.stderr.txt",
+      "bytes": 3852,
+      "sha256": "6b6bc1c5a5cefe0d46e59bdc23dc63f53bde706d82a60a85dc1e4b81f7564e3e",
+      "git_blob_sha": "846438b3bc26aa9a56b989dcdfbf2f1996cfd0ad"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_002.stdout.txt",
+      "bytes": 7998,
+      "sha256": "33280e9d0134688b61e888d412616858fcae14fcbc9933746f236b8c1b3b08cd",
+      "git_blob_sha": "11fbc02a55256769582564bf343fd1ed4f1908d7"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_003.receipt.json",
+      "bytes": 202,
+      "sha256": "874f9362fedfef7a7201eeb0b7dc6b015ebb9df7c52cac90d3e61961c69b7845",
+      "git_blob_sha": "bd4e5feef06e28d9be96b087d59f6b243c3420db"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_003.stderr.txt",
+      "bytes": 3853,
+      "sha256": "59c84b36a5d2dfdd81a9fd155193ea4129b18805bdae158d617ba68bdae8d4a8",
+      "git_blob_sha": "9803f0264b9ba5eb4228bd1849912aa0e6c2f796"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/00_preflight/STATUS_003.stdout.txt",
+      "bytes": 57356,
+      "sha256": "a33ad118206a81650f4e6fa2d1b3448848d4d355c64364c307dc8bd1d18ded8a",
+      "git_blob_sha": "0c836fe797bc124f59dfd6850d920cde7f6250da"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/CHECKPOINT_COMPATIBILITY.json",
+      "bytes": 90,
+      "sha256": "7a29a2e4ead613c532bfd06fc5654f38caa3f7abbacfb927469d8e302eb53c35",
+      "git_blob_sha": "9ae19a18f6817cb5bd9eae75dc37bef2a10ed6a1"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/DOWNLOAD_VERIFICATION.json",
+      "bytes": 2036,
+      "sha256": "a2f0b2ca0d46f101f6dcf21c03ff758604d1dd54cddb28684ee0ecd8ba7b73b8",
+      "git_blob_sha": "4d85884e9e735facac554fbdf660a9aa395dc8fb"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/HOOK_EQUIVALENCE.json",
+      "bytes": 157,
+      "sha256": "2dafadc4db36146f2c54a225dea7e1595f65d1546937f9fb6b5be71595d95762",
+      "git_blob_sha": "c1501e6134e72fb10f4c72f9d9604e8f9fa5e1f1"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/INFERENCE_RECEIPT.json",
+      "bytes": 3562,
+      "sha256": "94ceeae621f27fb20f7b12e23d4ff7a69dfb2987327a219c846b6a872f75da55",
+      "git_blob_sha": "7e780ffff395a2c6d2baddb846c5b8f48ee91bfe"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/VIPER_Night_val007_00001.receipt.json",
+      "bytes": 2109,
+      "sha256": "7b527fcf0f71edb4e674ab5396d3acc16b17287bee21dfb1d06c4bcc918999fb",
+      "git_blob_sha": "5e4c99eb6c25d480b514574a280499480fb76772"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/smoke_qualified.stderr.txt",
+      "bytes": 1232,
+      "sha256": "33f904f0ceebda0d8fa5e79368271bf43a80c7af3d93af610defc3c39568fe9e",
+      "git_blob_sha": "3f27f5b58b4536dac2128682545e8687b62efd27"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/smoke_qualified.stdout.txt",
+      "bytes": 124,
+      "sha256": "835b2c54b8d765c0bf303e15d1df3a1a2ba1f72e0330475b88394e3dc5daa78f",
+      "git_blob_sha": "5a15719cd3cb52ffd6d8aa1f2b5152e1f79f78ee"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/01_smoke/smoke_qualified/smoke_qualified_launch.json",
+      "bytes": 614,
+      "sha256": "e38ef0daa9e284e74243178fd6a97e6646c60d3dd6df386da1628b95422fc122",
+      "git_blob_sha": "e69bafcc728e38d55ebfa838ca4e6f8964b798db"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/CHECKPOINT_COMPATIBILITY.json",
+      "bytes": 90,
+      "sha256": "7a29a2e4ead613c532bfd06fc5654f38caa3f7abbacfb927469d8e302eb53c35",
+      "git_blob_sha": "9ae19a18f6817cb5bd9eae75dc37bef2a10ed6a1"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/DOWNLOAD_VERIFICATION.json",
+      "bytes": 8457,
+      "sha256": "7311f652a747c7e1e90867750b480770147f434e6abf8e1cff16aee4170eb066",
+      "git_blob_sha": "879ecf44e99f34d0257b7b44e7350f95db07268d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/INFERENCE_RECEIPT.json",
+      "bytes": 38385,
+      "sha256": "0563c24f91a6d627fbcea07071f3d9ec83dfcf90db58e93739e454d3ccdba78d",
+      "git_blob_sha": "c57d1974828bc1354595d8cad66b77a1e0175d32"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0000_0000.receipt.json",
+      "bytes": 2141,
+      "sha256": "ee935569c1151f5c6bbebacc02a1cf9ecef4b97a6bbe90d865c67fea1ae7cd91",
+      "git_blob_sha": "9fa60636664963e2397ba5d6e8ef6f8b4510d879"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0000_0049.receipt.json",
+      "bytes": 2141,
+      "sha256": "0d36bdc0d49c1d5a3bac70f12ed4c5bb8487142f3f5be2dc883ca75b38df985c",
+      "git_blob_sha": "3eb57f68ba1d133a11fca059485fae3a6425bf19"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0000_0099.receipt.json",
+      "bytes": 2141,
+      "sha256": "9767e98ad51561f81670e73db6278484a7a571ec092993211ac1ec4026d4b76b",
+      "git_blob_sha": "7bff4b2ee7715eb24765a5d4413145cbd5e989c9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0001_0000.receipt.json",
+      "bytes": 2242,
+      "sha256": "a42be1828f88f9bce00be7281610b94a1afa4fcda0c96cac14ce912da4a9daaf",
+      "git_blob_sha": "066171c06f8e302eb8488fa9acc8981dc4cb3dc0"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0001_0049.receipt.json",
+      "bytes": 2243,
+      "sha256": "c82146166981cbf49d05a3e1a2bffa15096f7fdcd2a7398e950d261bcc2fccbd",
+      "git_blob_sha": "cf75a08065cb113ba374526cd5adb40449c950cb"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/MVS_0001_0099.receipt.json",
+      "bytes": 2242,
+      "sha256": "64ec306c412541c40a7debb5d5c6c3ac420a05c1bd59ef0f697bd1acba0db462",
+      "git_blob_sha": "853298a5939607398d9ed742c096db94e3df730d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Day_val001_00001.receipt.json",
+      "bytes": 1926,
+      "sha256": "eba08621a12b78b5c96ff36a3bf1ebe8e51023a33b4b62d7d1d247f2baf2ff13",
+      "git_blob_sha": "24d5f1ba86c3fc11b2c681d46bd1fade08ffc772"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Day_val001_00239.receipt.json",
+      "bytes": 1925,
+      "sha256": "830691abc8d079cea6cb9b6911e89737fd4d0ae36b8b55d6c0009aec827a4a34",
+      "git_blob_sha": "10ee1be6e9a30182d14533ed3c21f1d457b7396d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Night_val007_00244.receipt.json",
+      "bytes": 1932,
+      "sha256": "693c79f8e43a7c99050e9f0f0feb007ed47d19086c240770260793f13849a84d",
+      "git_blob_sha": "3e35aada3be9994fb03bc06fde68a92f84d3ad12"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Rain_val018_00001.receipt.json",
+      "bytes": 1929,
+      "sha256": "9dbb00c4003a238dce906fa3124c4261d7fcfd77623eaf45e687adf9bc11c264",
+      "git_blob_sha": "83acb18816a4d891c38b62ad20a045b29ef47a01"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Rain_val018_00356.receipt.json",
+      "bytes": 1930,
+      "sha256": "c6287c2ebefb80dc41084aa3ed07270c890dcd00a3e292bd4cf2e8a8b78cebbd",
+      "git_blob_sha": "956e90501a439cf8d944a32413bd80bced04b5b3"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Snow_val021_00001.receipt.json",
+      "bytes": 1929,
+      "sha256": "05376434a1ff2e891688b30ffab8c15d4512a17c447b109baf6d0fffecc8a36a",
+      "git_blob_sha": "9a9ef17f4f917324d937f289e57d753f678edaf0"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Snow_val021_00355.receipt.json",
+      "bytes": 1930,
+      "sha256": "398191be47c8ce2bfe4b152c653ba20a3345c8e61a9fcda7877f9b5a63941cc1",
+      "git_blob_sha": "3f65dea254fb6057d1aa3f2d5b3dbc9847c1602f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Sunset_val008_00001.receipt.json",
+      "bytes": 1933,
+      "sha256": "c06b3edacca7efe470533c1b2690a50de7fea565c49dd23c97d0f885b84f5696",
+      "git_blob_sha": "ae5d682900a1a2588b6a7617c77539ae14545836"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/VIPER_Sunset_val008_00354.receipt.json",
+      "bytes": 1935,
+      "sha256": "de4cd09888c4a14bbd1ea486436faa71c8435278c180bd5be9c2948a54ab55a4",
+      "git_blob_sha": "6cf59c5472585c0e2b94edcb155da574cecf6ee9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/pilot.stderr.txt",
+      "bytes": 1232,
+      "sha256": "33f904f0ceebda0d8fa5e79368271bf43a80c7af3d93af610defc3c39568fe9e",
+      "git_blob_sha": "3f27f5b58b4536dac2128682545e8687b62efd27"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/pilot.stdout.txt",
+      "bytes": 1192,
+      "sha256": "5636027c7a5a26a0d7a0474e58b952df56f0df8f39b989b149182eee4cee7b7e",
+      "git_blob_sha": "6a8eb6b446bb09f9999d766d76a575def1ab750f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/02_pilot/pilot/pilot_launch.json",
+      "bytes": 570,
+      "sha256": "9a51cac84acf21f90338b641a8e3e496a185b6f3a872a21ea19a5edc7895325b",
+      "git_blob_sha": "3b7e3dbcf32299383c30cf049228b926c7aa3ca7"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/GT_ADMISSION_FINAL.json",
+      "bytes": 80177,
+      "sha256": "45148e8024534a96b207101b177ca36ffc6db4bb6b6e75e4040500b380015e01",
+      "git_blob_sha": "d6d29eb048bfbadde15a7b06d80903540181f400"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/MIRROR_SEQUENCE_0001_TREE.json",
+      "bytes": 73427,
+      "sha256": "9ed1c0742bcfe3a2770fc043f1264f0ffb72c64793d98cdc9253d0bfe1f29d86",
+      "git_blob_sha": "0d58c6c8ea9369f7a09dbb76ba2eb7f89209e479"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/OFFICIAL_SEQUENCE_0001_CROSSCHECK.json",
+      "bytes": 2831,
+      "sha256": "b07633b946c1b7cb03f9bc9db0057bccd808471f718dff0f94c4a5c0267a24ef",
+      "git_blob_sha": "d0bdca397d013a408f6c25f3347328875e943d2f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/PRIMARY_DATASET_ISSUE_RESEARCH.json",
+      "bytes": 36498,
+      "sha256": "2e3cadbf9709b40abc1c13bb25a55f203f847a86c6af2ada0aff1e0eb2e415c5",
+      "git_blob_sha": "bfb7e6d1c73316cd03b5fbc4307fe9ce107df8fe"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/SECOND_SEQUENCE_COMPLETE_ACQUISITION.json",
+      "bytes": 115917,
+      "sha256": "b2ebc2bfb113d1a723fc6a69d3fd632e5909a3e97f9c986f1babd4c0fcf26183",
+      "git_blob_sha": "1f984245bc1729b69da9863eda07ab045b2b3321"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/SECOND_SEQUENCE_FULL_AUDIT.csv",
+      "bytes": 29776,
+      "sha256": "867037087f2b00f7804c0132286d98b86c3280bb77312e7f1664ddea68eb8d6d",
+      "git_blob_sha": "651799e96959ab5598209fdfb344e4900c8d54df"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/SECOND_SEQUENCE_PILOT_ACQUISITION.json",
+      "bytes": 3886,
+      "sha256": "a7d924cca0cb4a544a06b12d8121e7618ef1dc5ddfaafd9041677705290535fe",
+      "git_blob_sha": "268d2d453daed9bfe894d1f6ab24ad0b85b823c4"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/03_gt_admission/SECOND_SEQUENCE_PROJECTION.csv",
+      "bytes": 903,
+      "sha256": "e6496092445eb8a44fd3604641417c8e089d65b8cafa733c0c9763232aa93676",
+      "git_blob_sha": "75f5f04507620320849eb95c10de3f84e9a6ca4b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/INFERENCE_TIMING_MEMORY.csv",
+      "bytes": 3221,
+      "sha256": "4b5a18566120b632286659fd500a77ea8781d6ff7eddabe0fd3fefc8ffad9144",
+      "git_blob_sha": "c2a21914833670fb2297744ab4c7741554266810"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/OUTPUT_NUMERICAL_AUDIT.csv",
+      "bytes": 48389,
+      "sha256": "ebb1c1aa3589ed62f80f9b840dc10bfdfce4909f3dfa5ddab939a250a17f46d3",
+      "git_blob_sha": "dc4f020844387a7a5b6843745fe3ed8ef47a06d9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/RAW_OUTPUT_INDEX.json",
+      "bytes": 6804,
+      "sha256": "f8b8d0bd19a9019567a402050125645d106d59d8e20e2ee2941bf5001babbe31",
+      "git_blob_sha": "12b326547446cf2f59a387ce1f6cab3e038d397c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/REAL_BIN_RECONSTRUCTION.json",
+      "bytes": 1039,
+      "sha256": "5b03bb012dc6c1cdfa10854981ec65f3943f6dadbbb19db05f8dfe4ab87b5130",
+      "git_blob_sha": "759360a12e897f7138a2340732c79fe32984bd7b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/STRICT_GT_GATE_FAILURE.json",
+      "bytes": 1915,
+      "sha256": "9902621e5aabf95f9c63a0cbaa5abce97667419e908c07a5693193a4266210c7",
+      "git_blob_sha": "11ef0f0ca86717b4fd646b3e0c7259c34e924291"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CALIBRATION_ONLY_DEPTH_SCALE.json",
+      "bytes": 749,
+      "sha256": "590f0d719dcc4eb1fa0474c35395d9dc0c6c1af330a52971eae74259c5324cf7",
+      "git_blob_sha": "16c150a7e80c8b244808ff28827dd2931d2bbb10"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CALIBRATION_ONLY_PROBABILITY_MODELS.json",
+      "bytes": 1525,
+      "sha256": "1d12ed624128dfc3aa57200936a773935faa37c56dd982092eefb516ef5bee33",
+      "git_blob_sha": "ebeb04fae86fcced4f8eabaa650c490d187c9368"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CONDITIONAL_CALIBRATED_EVENT_ECE.csv",
+      "bytes": 1285,
+      "sha256": "b977ff830fe17c3b3ce6f26956e55b1f624bfb28671efe3e926974ec2c533da3",
+      "git_blob_sha": "8bf0a9b013121182d9c986943a1ec18af2aad92c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CONDITIONAL_DEPTH_ERRORS.csv",
+      "bytes": 982,
+      "sha256": "4bd6911474e07743b1d508bd52c8361d208f0de0c078b8e89b8a96f72d0b67f3",
+      "git_blob_sha": "8bbf2626b4e963d4164560c7222c1601ca1944e5"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CONDITIONAL_NATIVE_UNIT_METRICS.csv",
+      "bytes": 8198,
+      "sha256": "7ae4b4d956e162a0ec74a9c5008ca4bc1ffe266f663c1fe60f5b2d99d1397eb5",
+      "git_blob_sha": "b515c588382c438d7083d4684fe7200119a74858"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CONDITIONAL_TEST_MACRO.csv",
+      "bytes": 1720,
+      "sha256": "3cda8647ea71298489b66eba842f2fac36423a95ed0aad1561148a13aa394792",
+      "git_blob_sha": "c51a6710fde72c3a9eeab18059153dee55101029"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/CONDITIONAL_TEST_STRATA.csv",
+      "bytes": 10815,
+      "sha256": "fa33221ecdedf89fe0341eaaa1a285c650946e6e7584aaac5b0570ec96620720",
+      "git_blob_sha": "245a4fa7a045cfa27e7b5c20b5398cda5e1eabb2"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/EVALUATION_STATUS.json",
+      "bytes": 593,
+      "sha256": "ceda1a7ffbcc2435bab9177fdc40e6ec98c8256082e41327c1b4a8b72bfd2ed3",
+      "git_blob_sha": "91198b9763f5dcfb6f52b874328d6bfb03d5ab32"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/INFERENCE_TIMING_MEMORY.csv",
+      "bytes": 3221,
+      "sha256": "4b5a18566120b632286659fd500a77ea8781d6ff7eddabe0fd3fefc8ffad9144",
+      "git_blob_sha": "c2a21914833670fb2297744ab4c7741554266810"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0000_0000_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "ace7b2b1e4c6cf5518a9c837b2b8bea00c1fb51a76dfbc5c3540135355164503",
+      "git_blob_sha": "e338cd3606123fee9b134ac3b37cc6126938b780"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0000_0049_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "25b56e1197b2d633d63031467053784e15d489b50b5089f3e5842e127943e3e1",
+      "git_blob_sha": "9f51c9029c040c71b99a00c13fa37ef8fb9db6dc"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0000_0099_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "7ab15e3331b91ee7e4b1a4862072146051e70ed2aef100906f2c87793b20fde1",
+      "git_blob_sha": "8aada68d7672c145a13910b9c8f79450808aa9e4"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0001_0000_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "7231d3c0525ee1f77273eb113106829d38664533c4ea650615528fb64189ac4b",
+      "git_blob_sha": "b16eca1e9a219410abb4d4490d9978ded5e4b91b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0001_0049_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "c682781d57b1a7c1f8ef9f2fde0d5297c86a3b352b9d2c6fce828d5eb73d40c1",
+      "git_blob_sha": "0bfed00fcbb6230b46161a2f90fb5346052897ab"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/MVS_0001_0099_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "68d1d8f9c055aded1471ce967d7a4a883e5808a6e029ab206de7d7bbb17ea90c",
+      "git_blob_sha": "b99edf6d54123ace46c59ef8222ecee75dd0618f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/OUTPUT_NUMERICAL_AUDIT.csv",
+      "bytes": 48389,
+      "sha256": "ebb1c1aa3589ed62f80f9b840dc10bfdfce4909f3dfa5ddab939a250a17f46d3",
+      "git_blob_sha": "dc4f020844387a7a5b6843745fe3ed8ef47a06d9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/RAW_OUTPUT_INDEX.json",
+      "bytes": 6804,
+      "sha256": "f8b8d0bd19a9019567a402050125645d106d59d8e20e2ee2941bf5001babbe31",
+      "git_blob_sha": "12b326547446cf2f59a387ce1f6cab3e038d397c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/REAL_BIN_RECONSTRUCTION.json",
+      "bytes": 1039,
+      "sha256": "5b03bb012dc6c1cdfa10854981ec65f3943f6dadbbb19db05f8dfe4ab87b5130",
+      "git_blob_sha": "759360a12e897f7138a2340732c79fe32984bd7b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/RISK_COVERAGE_SOURCE_DATA.csv",
+      "bytes": 262164,
+      "sha256": "ac2e1f958079445b076c4a34f7668015f66cdaf22ed5f313ac5673ec071e5e1e",
+      "git_blob_sha": "5368edc161c10be5137836f09dc2a17072919a77"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_001/SCORE_ERROR_BINS.csv",
+      "bytes": 12400,
+      "sha256": "296b898ecc94a1c9ad64b776c5b221e2f086a82139107c8ed9b09b1de9f58bbe",
+      "git_blob_sha": "394993a233ca1ed6a5cbdba8af61c07fb6b7e69d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CALIBRATION_ONLY_DEPTH_SCALE.json",
+      "bytes": 749,
+      "sha256": "590f0d719dcc4eb1fa0474c35395d9dc0c6c1af330a52971eae74259c5324cf7",
+      "git_blob_sha": "16c150a7e80c8b244808ff28827dd2931d2bbb10"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CALIBRATION_ONLY_PROBABILITY_MODELS.json",
+      "bytes": 1525,
+      "sha256": "1d12ed624128dfc3aa57200936a773935faa37c56dd982092eefb516ef5bee33",
+      "git_blob_sha": "ebeb04fae86fcced4f8eabaa650c490d187c9368"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CONDITIONAL_CALIBRATED_EVENT_ECE.csv",
+      "bytes": 1285,
+      "sha256": "b977ff830fe17c3b3ce6f26956e55b1f624bfb28671efe3e926974ec2c533da3",
+      "git_blob_sha": "8bf0a9b013121182d9c986943a1ec18af2aad92c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CONDITIONAL_DEPTH_ERRORS.csv",
+      "bytes": 982,
+      "sha256": "4bd6911474e07743b1d508bd52c8361d208f0de0c078b8e89b8a96f72d0b67f3",
+      "git_blob_sha": "8bbf2626b4e963d4164560c7222c1601ca1944e5"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CONDITIONAL_NATIVE_UNIT_METRICS.csv",
+      "bytes": 8198,
+      "sha256": "7ae4b4d956e162a0ec74a9c5008ca4bc1ffe266f663c1fe60f5b2d99d1397eb5",
+      "git_blob_sha": "b515c588382c438d7083d4684fe7200119a74858"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CONDITIONAL_TEST_MACRO.csv",
+      "bytes": 1720,
+      "sha256": "3cda8647ea71298489b66eba842f2fac36423a95ed0aad1561148a13aa394792",
+      "git_blob_sha": "c51a6710fde72c3a9eeab18059153dee55101029"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/CONDITIONAL_TEST_STRATA.csv",
+      "bytes": 10815,
+      "sha256": "fa33221ecdedf89fe0341eaaa1a285c650946e6e7584aaac5b0570ec96620720",
+      "git_blob_sha": "245a4fa7a045cfa27e7b5c20b5398cda5e1eabb2"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/EVALUATION_STATUS.json",
+      "bytes": 890,
+      "sha256": "311ed6fe4df0a40e137cf4cb349a2f1ca3cde3cff315efd65c92ff3b74b47b7e",
+      "git_blob_sha": "6cafc6cc1c72a37a7bfd04a2a9919f227713ce45"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/INFERENCE_TIMING_MEMORY.csv",
+      "bytes": 3221,
+      "sha256": "4b5a18566120b632286659fd500a77ea8781d6ff7eddabe0fd3fefc8ffad9144",
+      "git_blob_sha": "c2a21914833670fb2297744ab4c7741554266810"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0000_0000_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "ace7b2b1e4c6cf5518a9c837b2b8bea00c1fb51a76dfbc5c3540135355164503",
+      "git_blob_sha": "e338cd3606123fee9b134ac3b37cc6126938b780"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0000_0049_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "25b56e1197b2d633d63031467053784e15d489b50b5089f3e5842e127943e3e1",
+      "git_blob_sha": "9f51c9029c040c71b99a00c13fa37ef8fb9db6dc"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0000_0099_GT_PAIRING.json",
+      "bytes": 453,
+      "sha256": "7ab15e3331b91ee7e4b1a4862072146051e70ed2aef100906f2c87793b20fde1",
+      "git_blob_sha": "8aada68d7672c145a13910b9c8f79450808aa9e4"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0001_0000_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "7231d3c0525ee1f77273eb113106829d38664533c4ea650615528fb64189ac4b",
+      "git_blob_sha": "b16eca1e9a219410abb4d4490d9978ded5e4b91b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0001_0049_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "c682781d57b1a7c1f8ef9f2fde0d5297c86a3b352b9d2c6fce828d5eb73d40c1",
+      "git_blob_sha": "0bfed00fcbb6230b46161a2f90fb5346052897ab"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/MVS_0001_0099_GT_PAIRING.json",
+      "bytes": 500,
+      "sha256": "68d1d8f9c055aded1471ce967d7a4a883e5808a6e029ab206de7d7bbb17ea90c",
+      "git_blob_sha": "b99edf6d54123ace46c59ef8222ecee75dd0618f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/OUTPUT_NUMERICAL_AUDIT.csv",
+      "bytes": 48389,
+      "sha256": "ebb1c1aa3589ed62f80f9b840dc10bfdfce4909f3dfa5ddab939a250a17f46d3",
+      "git_blob_sha": "dc4f020844387a7a5b6843745fe3ed8ef47a06d9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/RAW_OUTPUT_INDEX.json",
+      "bytes": 6804,
+      "sha256": "f8b8d0bd19a9019567a402050125645d106d59d8e20e2ee2941bf5001babbe31",
+      "git_blob_sha": "12b326547446cf2f59a387ce1f6cab3e038d397c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/REAL_BIN_RECONSTRUCTION.json",
+      "bytes": 1039,
+      "sha256": "5b03bb012dc6c1cdfa10854981ec65f3943f6dadbbb19db05f8dfe4ab87b5130",
+      "git_blob_sha": "759360a12e897f7138a2340732c79fe32984bd7b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/RISK_COVERAGE_SOURCE_DATA.csv",
+      "bytes": 262164,
+      "sha256": "ac2e1f958079445b076c4a34f7668015f66cdaf22ed5f313ac5673ec071e5e1e",
+      "git_blob_sha": "5368edc161c10be5137836f09dc2a17072919a77"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/04_evaluation/diagnostic_zero_extension_002/SCORE_ERROR_BINS.csv",
+      "bytes": 12400,
+      "sha256": "296b898ecc94a1c9ad64b776c5b221e2f086a82139107c8ed9b09b1de9f58bbe",
+      "git_blob_sha": "394993a233ca1ed6a5cbdba8af61c07fb6b7e69d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/05_reports/GO_NO_GO.md",
+      "bytes": 560,
+      "sha256": "042955b268d4c5b3cf7b55e1a07cb47c479fa90586e130c5ec4005a8da547123",
+      "git_blob_sha": "b2be47db50b5ddd46e5b1984ec173b86fc6886a3"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/05_reports/GT_ADMISSION_AND_LIMITATIONS.md",
+      "bytes": 1058,
+      "sha256": "5acb4864659113deab7d06652527c05949e61824a472de5165b811107cd48b88",
+      "git_blob_sha": "8cbacebf09a36063d13b15e3c489940682d556a4"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/05_reports/INFERENCE_COMPATIBILITY.md",
+      "bytes": 736,
+      "sha256": "b7c9b1e3373d0ed07725d3284b83c51d9b934b4ed3dd90451e723141062ed842",
+      "git_blob_sha": "14576ecdc604a4e2d6d38ff1eb9315085263878b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/EXECUTION_LOG.md",
+      "bytes": 1237,
+      "sha256": "6fe9e9e0bb847153259d3d1bb00167573e5ecf00744cff887910a270b71b67e4",
+      "git_blob_sha": "6ea61b790e7753c6d3b8af0a9c69ee1ef826bb7d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FILE_SHA256_MANIFEST.json",
+      "bytes": 37446,
+      "sha256": "63fec02a05b8722fc7be05e4ed943cf35398da7159d888637fadd868f641cfcd",
+      "git_blob_sha": "3baeb896e5ed8fcfb9796311ca54a01ed9987e86"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FINAL_REVIEW.md",
+      "bytes": 2562,
+      "sha256": "e4aba7730da9a44f402a23a0a9f86ccc053418321dca12daaf500002c7c44ea0",
+      "git_blob_sha": "a1db4c19f417e663d1b9baf47e0017152ded239e"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/PACKAGE_CONTENTS.md",
+      "bytes": 866,
+      "sha256": "c7d55cf01f4a532fa77dd3eb3517aa4a266f0d8484239ff62736497b9cc4c642",
+      "git_blob_sha": "9318608784a3f9a4a45cd10a965a51031f18f798"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_CODEX_HANDOFF.md",
+      "bytes": 1167,
+      "sha256": "4c7d7c55ec6882769a57175cfc6c800288a18b60ce44149998fa18c6e0d006d4",
+      "git_blob_sha": "a90ce955932cba00765049d0f3084db74a87600b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_FINAL_RESEARCH_REPORT.md",
+      "bytes": 8936,
+      "sha256": "4f68be3dbf26e1ebb3888bf51bd93e6a3b5353bccd2a31d3b8664e20180fd962",
+      "git_blob_sha": "1e0922ef743c9537b090d410c16c25f442c310ff"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/README.md",
+      "bytes": 1135,
+      "sha256": "79950ab0fad4ae78be594ed41dffaff664f7932075cb2142961a5336c76f867c",
+      "git_blob_sha": "bc52f1d9967d1e9650a5feb6078c34d889d6e8ef"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/SECURITY_AUDIT.json",
+      "bytes": 967,
+      "sha256": "e84700bf73fa4a1dd46215524e16a6be266ab7c79d2a593a7202d1e1f4e23562",
+      "git_blob_sha": "4c960ebcace1f405caf6b8b769b185492bbd719d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/SHA256_MANIFEST.csv",
+      "bytes": 23840,
+      "sha256": "b1c7f077f315557d5c328143d3e82903a9d77f76d41b8e287a43afd0c07fdc4a",
+      "git_blob_sha": "6177a3625e6eb569ff278c1d037b6d6d7e19fd01"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/CPU_REPRODUCIBILITY_COMPARISON.json",
+      "bytes": 3595,
+      "sha256": "dc22d8527c552aad508f06d6df0809837936174d38bcd00e46a9c49942d7333c",
+      "git_blob_sha": "3576605f524ba736da774e7676b1b1053443b0c8"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/EXCLUDED_RAW_DATA_INPUTS.json",
+      "bytes": 84964,
+      "sha256": "49aacfcec9b7ad1d7b3dd3247b65a16aa1cc6c7be9bd7f09bd3bbb3de9117318",
+      "git_blob_sha": "ce4b4998c498384317d6668a69dea6c079567e5e"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/FIGURE_INPUT_IDENTITY.json",
+      "bytes": 4839,
+      "sha256": "96911f38ed22104c5b8705f147df37a4d45df998ad3189cab853a38631579289",
+      "git_blob_sha": "4028e278a46bd521e6476cfff1bbdd5b11b85b3c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/FINAL_CPU_QA.json",
+      "bytes": 461,
+      "sha256": "359f9dd34bc6941086990b181916e4ce4e412a3060f8ebf5a7a5fca8c7deab0e",
+      "git_blob_sha": "2be08ac5500d6d08dc7629c595cf5df2ba2802e3"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/DROID-W-runtime/metric_depth_estimators.py",
+      "bytes": 5426,
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "git_blob_sha": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/LICENSE",
+      "bytes": 1306,
+      "sha256": "cb2dba18d598b6ad0b34f0f8b0ad01f9d495e657cae9bf0544786190cb26f9f9",
+      "git_blob_sha": "7341ee74f75bbda07163562ebad33de86be29bd9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/hubconf.py",
+      "bytes": 8535,
+      "sha256": "b29ffc0530109bd55ce4067afd5dffd87fb2567416afb145e2cfdd0a1a0c8119",
+      "git_blob_sha": "a775f2cf135a62f4f9bb4f9578033a8d1180da5c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/configs/HourglassDecoder/vit.raft5.large.py",
+      "bytes": 704,
+      "sha256": "ac3d288e13f5330dcbf7ca6be037661ff1c25ff1cbd8785f2afcd2631db20811",
+      "git_blob_sha": "4febdcb2867513008496f394ce8dc513230fb480"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/configs/_base_/models/encoder_decoder/dino_vit_large_reg.dpt_raft.py",
+      "bytes": 667,
+      "sha256": "451a56b64d803b2b3ba4e0a5e5df993bc3ab41e9b503b98372ce6c6041fbbc0f",
+      "git_blob_sha": "26ab6dc090e9cdb840d84fab10587becb536dbb8"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/model/backbones/ViT_DINO_reg.py",
+      "bytes": 47046,
+      "sha256": "70963202c3fca5f75e313bfd21223514251b273b132282cf100767f3942ea712",
+      "git_blob_sha": "3fc9fd650d516a90ccaa2a2de805665495cb8e29"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/model/decode_heads/RAFTDepthNormalDPTDecoder5.py",
+      "bytes": 44427,
+      "sha256": "24b832c6e831d25a101ebb8c02b1b3df4b5d5474530481078d6df56c7ff93951",
+      "git_blob_sha": "9af89f9b4b1878a2e4bcfcd489075c2e97cd8d3d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/model/model_pipelines/__base_model__.py",
+      "bytes": 619,
+      "sha256": "55936a9ff96bcc5459741979761bc7a0c0ad2e603e0cdeaf39b0a324143de738",
+      "git_blob_sha": "d599c418b3d9677a195fe87d45bb31bf1068fbce"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/mono/model/monodepth_model.py",
+      "bytes": 1150,
+      "sha256": "9f3cdea9a2f01cbfc54ee5049ff17eed22bb011d67158f83dd2efbbf7d3340d9",
+      "git_blob_sha": "0b58b7643ee43f84fd4e621e5b3b61b1f3f85564"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/training/mono/configs/RAFTDecoder/vit.raft5.large.py",
+      "bytes": 43625,
+      "sha256": "f79213783d1170c143a2cbf447ca8c9b8b4e5a1fe2432fed056252cdb34bf388",
+      "git_blob_sha": "645d24d76e2078bb3806b0bc9d68c0b4add814aa"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/Metric3D-eb5b6fac/training/mono/model/losses/GRUSequenceLoss.py",
+      "bytes": 9103,
+      "sha256": "a635356d9df6d776606a041a39e36bd39703f91b89d8521ea94138da2fb45393",
+      "git_blob_sha": "7d829f2874dc007260be349955b7bea62debd8ae"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/MoGe-74fbce05/LICENSE",
+      "bytes": 12501,
+      "sha256": "e7cf4f9b5488579c41f3eaf38dd509dbe16db95e88c5f2f7825e648c21129a68",
+      "git_blob_sha": "cc9f08d979d835c238ee3b61a2760f1900c998db"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/MoGe-74fbce05/configs/train/v2.json",
+      "bytes": 23460,
+      "sha256": "0a48c982bb430b3b78379e3e5918ddf4d0b948224f397ab91bccef19cb620055",
+      "git_blob_sha": "771489d44fb66700cc2e8b16cf31a4d17c6d0ac9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/MoGe-74fbce05/moge/train/dataloader.py",
+      "bytes": 24343,
+      "sha256": "916b6ccd44df98d62394d3503b3c7ea273635d54894ba4e99796bc47e02f2e38",
+      "git_blob_sha": "1495b9b8036631d67deef829a8fb5ff454925508"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/ORIGINAL_EVIDENCE_PRESERVATION.json",
+      "bytes": 98230,
+      "sha256": "46ad8cc45719f7649ab2858ce6c87501d1a9bdd2726c302357b6a6c222938dbb",
+      "git_blob_sha": "e10793c0f47b3ace9962642a1f320212dc6a08c0"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/evidence/SOURCE_SNAPSHOT_MANIFEST.json",
+      "bytes": 2579,
+      "sha256": "53568387e5e9d0ea5efa75613a9452824069c48b9122148c17dba83bd0cc80e6",
+      "git_blob_sha": "368b7820d5dc9002aaf7b45e5590a3b2d0f1ba8f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/configs/DIAGNOSTIC_ZERO_EXTENSION_AMENDMENT.json",
+      "bytes": 1422,
+      "sha256": "a7626166139fc1f4777704b49521ede121461f19014713be8a1ce71a3d61d44d",
+      "git_blob_sha": "2d92c423cddb0ea80daddc5ec1e751032a000110"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/configs/EVALUATION_PREREGISTRATION.json",
+      "bytes": 2851,
+      "sha256": "1e8ec99bdb863731dc2e2c2620643323a5f7ae5a382ad9f6fc1fa7f4df96846b",
+      "git_blob_sha": "a04c0542d26d3647e65e09bd0626a7999fca4530"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/configs/PILOT_MANIFEST.json",
+      "bytes": 15581,
+      "sha256": "0d92694fc5e06b31dc0460ff9666b0d750b6dbf01af5bdfb6ac25787b9061415",
+      "git_blob_sha": "07d0136bfe5dab3c08938285b5ade619956f24b9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/configs/SMOKE_MANIFEST.json",
+      "bytes": 973,
+      "sha256": "90a0aa8b842001d827c48910b441ee42ce1e41a77ed764f192c96228621892fe",
+      "git_blob_sha": "c4ae0dd2ce2841ef7d666109c1cf56bfd47f440f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_001/CPU_TEST_REPORT.json",
+      "bytes": 11500,
+      "sha256": "b9961c60b6963ba1464d6a91c69df89c8f0dec65f6d795537d7862401aae9f50",
+      "git_blob_sha": "c89a0707cca9d470eb3de3fb8f89aaef0035a2e1"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_001/stdout.txt",
+      "bytes": 4627,
+      "sha256": "5145aac0c1fff1ac79f87db8dac0f65e5ad218d6b125eef8eef4a4c12560f9f7",
+      "git_blob_sha": "b97e4b2c58f44ef8a9072346403f70a10aa4e5d7"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_002/CPU_TEST_REPORT.json",
+      "bytes": 1704,
+      "sha256": "cb0942017f59736c2b4a942664fd45cdf2b50fff542c35717d6ca5cfc0a9696a",
+      "git_blob_sha": "f718327b46b6ba82a1ef2ced373a51610f466932"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_002/stdout.txt",
+      "bytes": 743,
+      "sha256": "039e1c72a58e64644c632a9e584f5a57fc2dffaa9fb6a5381dc09037544a4467",
+      "git_blob_sha": "a3e4d5cdf31b88bfb9aa58f8270ab8a6cfc3cf59"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_003/CPU_TEST_REPORT.json",
+      "bytes": 2714,
+      "sha256": "62256453faae12b86bd953f7252ab7e1db43b7aaf8e4d7f4ab18477d544b9df1",
+      "git_blob_sha": "4d1e12b9eaeedda722d708584bce858ea6b5cf43"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/cpu_tests_003/stdout.txt",
+      "bytes": 1195,
+      "sha256": "94bc4616eca7df6dc7cd5069e915880ce5e8c5b5b00282042684ceb10d8b9266",
+      "git_blob_sha": "b2ffea9a4d90e93a416ccc103dccdd5e61bb7213"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/logs/pilot_launch.receipt.json",
+      "bytes": 519,
+      "sha256": "471e1350c469da3a383e52bb425ba3a011194402b73d94a121381b4242f0b408",
+      "git_blob_sha": "b1d190071ddf4374e7ad4c9128513c2952c0bb93"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/logs/smoke_launch.receipt.json",
+      "bytes": 519,
+      "sha256": "9b6c4e6ad12d743e4e68779ce0385468ff6ab3028db39a9563266d28962f1548",
+      "git_blob_sha": "529a2711a762a473e746ebc4baca53a4cc1faa6b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/logs/smoke_qualified_launch.receipt.json",
+      "bytes": 559,
+      "sha256": "87f3a48975e2ad7e5f106ffaad9e9eb2aa750ba520f2fca7364a0923e6262e82",
+      "git_blob_sha": "3d358b6a35d687dfe749c09f6e4a09a214e25fde"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/acquire_second_sequence.py",
+      "bytes": 2890,
+      "sha256": "ee928132c8efbd1fa76f0f811144d0fb9b869f7286d9b03c77625c0748e44404",
+      "git_blob_sha": "dc7d03e3c0d2d15c4747a545549e0df20ba08020"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/audit_second_gt.py",
+      "bytes": 4493,
+      "sha256": "969500fa22eb1f83719032cf134aa6716b205975ebd93e24f518f05246703e81",
+      "git_blob_sha": "311aa8e1b44e6b7345a25de76536d233e07fc0a1"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/collect_figure_inputs.py",
+      "bytes": 1403,
+      "sha256": "557acc8aa340b41c5a76148b29c5cd01d70b058a56bfefcd7320a98afc5e2f8f",
+      "git_blob_sha": "8b887b3acbad87a9f7d46a157feb74aa2fdae50b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/download_stage.py",
+      "bytes": 2150,
+      "sha256": "b1af70837d30e8576e2dd7a48d3bce23d203980e39afa698d6f88b525a83dc26",
+      "git_blob_sha": "073d5cc57f42ed3d29f81469b662279148180029"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/evaluate_pilot.py",
+      "bytes": 18801,
+      "sha256": "f3af079e53cd01d904b50f7b2d820df3f6e432c92defc39c8a31bc7edee1031f",
+      "git_blob_sha": "d2323b47775120edbffd79c2a9fd83aa0bb9740b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/metric3d_pilot.py",
+      "bytes": 11765,
+      "sha256": "941d1de7e77c084831ae58f25cf505025b97491336758d9a35789c5a7354ffd2",
+      "git_blob_sha": "6fa1ad47acb833c1183979ebd8b67784797386de"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/metric3d_pilot_attempt01_strict.py",
+      "bytes": 10557,
+      "sha256": "992b8569510022f6f1e8bbc16fd45a9ac6bfa99f6b55308b27f2356a1acbff5d",
+      "git_blob_sha": "e4f8c03312398ad7c1d4b017dfdfdb3994d7213e"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/official_stream_crosscheck.py",
+      "bytes": 3419,
+      "sha256": "1d142332245f07167e892f997ba4b71673f2dd80fc7334093993ae848598dcbe",
+      "git_blob_sha": "874007599d88eca4c1b7a083ab7dba955aa62c2f"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/plot_results.py",
+      "bytes": 9427,
+      "sha256": "49163570c58ea773b3d5780809ed9cce318f782554e9f0d2ba10add74b2f0191",
+      "git_blob_sha": "34bca83599d4330909d808fca0896181b65b5713"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/prepare_pilot.py",
+      "bytes": 3252,
+      "sha256": "41f95a44e499d37758979bceaf42ce008bfe2919eaf056659ccd4df88a4d6b80",
+      "git_blob_sha": "c65791c953be895aaa6d69af8e1f3189fcede700"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/prepare_smoke.py",
+      "bytes": 1233,
+      "sha256": "226ba625bd7bc995bdc8a65c4e74877d3b8a1648c6f4437671615ba0e0a4e7f5",
+      "git_blob_sha": "ec197b3d16368cdfc61f9c0326d3f44ec0ed0666"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/reliability_metrics.py",
+      "bytes": 11098,
+      "sha256": "38da7b713492bacc82788cb36825dac34301d949f755f9129f3ac1026743aeea",
+      "git_blob_sha": "cfca0361625cf2e88f7ec3c6667bfb68613c48bc"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_io.py",
+      "bytes": 2725,
+      "sha256": "63c41f44c29562ebe5958ff81e133befa572c6c7aff57121b88a1493b884e750",
+      "git_blob_sha": "225cad7a9b8e4559fbf99074d5236bf4472fbe38"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_mask_source.py",
+      "bytes": 879,
+      "sha256": "7fe4bdedd3ff55ac4a0a56e82639f100c2feed347b3e1b5fbc8b129e05634cc9",
+      "git_blob_sha": "c45d485839cd188b732025f455d05dba298673bf"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_preflight_read.py",
+      "bytes": 2206,
+      "sha256": "b9ab9e918408d83b4983cc200cb2b55c5b9a99d8d7e24419a554582256ff4e51",
+      "git_blob_sha": "b168efa06dea1469f087addd2b83a44b6dd4a086"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_preservation_end.py",
+      "bytes": 1620,
+      "sha256": "6204aae0fd5ff52548a966f85baf353d6dd4bef44d1140ade50a626a99a89639",
+      "git_blob_sha": "c1b8633363958b1cf41989486a9a9880f47adde2"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_sample_inventory.py",
+      "bytes": 641,
+      "sha256": "2c2e89f583c9d046db2640b6a96296114ea1aca0b02f3622bb5186bb6ce9ae44",
+      "git_blob_sha": "31df3a1b60b8967739c4bd85937801e7257a63c3"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_stage_status.py",
+      "bytes": 797,
+      "sha256": "9873dbc408f291415576998396d598e95d097c9abbf439b14a037f4c7587f3d3",
+      "git_blob_sha": "b3fb2c654f58a813829cbfab993d744e25f9615c"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/remote_start.py",
+      "bytes": 4145,
+      "sha256": "1e64fd0bf06acd3da1ca131ffd5378d4e381e4bbdb44eec94b328d60610415f8",
+      "git_blob_sha": "0095c6f96264e2656bbf62c6433178a1e5e3b7ca"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/seal_review.py",
+      "bytes": 9046,
+      "sha256": "e5b9096118509da8de49b3b64cb9e2637cdec5798a42f70c2f71baec1adcc97c",
+      "git_blob_sha": "139cddc0b35e8700af3960c84a7620f40f749ebb"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/test_evaluation_geometry.py",
+      "bytes": 4466,
+      "sha256": "69f31383bf9f0aa236ef40658a64974e06750000282be120d13e46506af37c61",
+      "git_blob_sha": "16fcbdbc9892105f72021630e631d62a475981a8"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/test_reliability.py",
+      "bytes": 10818,
+      "sha256": "32b559febab0fad0eada2fa0b6fa9cb5364ab3a41ea099b01ca8c1af16a616d4",
+      "git_blob_sha": "0f0b246c7e9637896bfd5892ad4ec50e3de55b35"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/experiments/scripts/write_review.py",
+      "bytes": 18788,
+      "sha256": "a05483fb1804740c77114421045b42ff8e2548d7b6d06f4491f7a4495100b07c",
+      "git_blob_sha": "580ca9848ed19d5660b7a8abdb6d2b4ae1bb2a1b"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/CONDITIONAL_RISK_COVERAGE.png",
+      "bytes": 108091,
+      "sha256": "7f4b5a475fdfff5f9e1e4fa96470eed4719c7cdc9da1480e692418c3f524d7d3",
+      "git_blob_sha": "05f89c0eded077c01ec57841692d1e2ab1708784"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/CONDITIONAL_RISK_COVERAGE.svg",
+      "bytes": 15355,
+      "sha256": "9e87c15ec838fe734432437b396c2099e5d9304fda52c64a9edebfa81665c527",
+      "git_blob_sha": "017b3ba3621b99e35c3504e0b3b9d575bb681e90"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/CONDITIONAL_TEST_AUROC_PAIRED_FRAMES.png",
+      "bytes": 82706,
+      "sha256": "55a4efd92f61ef71737e6c98ee20a96297d699f67ea22c491f4df56239fa6d8c",
+      "git_blob_sha": "7f439395b0eacbc1404d027e33671ca9914736f8"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/CONDITIONAL_TEST_AUROC_PAIRED_FRAMES.svg",
+      "bytes": 24280,
+      "sha256": "8c32b41b85d6e883c40608e400af79c17860bfcf1a02dc16b35b6be39df48e1c",
+      "git_blob_sha": "02cc016c1036e27e7c264faf7fe774bd2e59d265"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/FIGURE_CAPTIONS.md",
+      "bytes": 1332,
+      "sha256": "3cf8b2b71d5c0fc4971daa874e16970704010ba89fa6ad610328d473fe827075",
+      "git_blob_sha": "775710aedcf93cef220d72a8db3a701fb3afb11d"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/FIGURE_CONTRACT.json",
+      "bytes": 735,
+      "sha256": "d0f43cf96f56bd044fa52349f68eb8803c4223f389c26b9723b83dd9188d49fd",
+      "git_blob_sha": "add4b22318706709906c67daede997bf1dbdd11e"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/MVS_HELDOUT_NATIVE_UNIT_DIAGNOSTIC.png",
+      "bytes": 2561451,
+      "sha256": "72a48112046d9d2a8da75bcb84e8dd0df51cc11fa258966ba0f971b8e0d518c1",
+      "git_blob_sha": "d47e52a8e0c2087241b437274e85316327395d0a"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/MVS_HELDOUT_NATIVE_UNIT_DIAGNOSTIC.svg",
+      "bytes": 841480,
+      "sha256": "12491465c608573178956cf2a77996168748ef50963c48cb2132e749347fd45c",
+      "git_blob_sha": "b9d7e96148ba32a6ee6c900ac555919bdec819f5"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/RAW_CONFIDENCE_ENVIRONMENT_DISTRIBUTIONS.png",
+      "bytes": 78556,
+      "sha256": "afe06ca1b88090a6be037fe8f920b6d5cc430843fdb26ba044098c6ccf0026e7",
+      "git_blob_sha": "307a57c3bd831dba1d4359ca0d2d1f6e04d6aab9"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/RAW_CONFIDENCE_ENVIRONMENT_DISTRIBUTIONS.svg",
+      "bytes": 17190,
+      "sha256": "de6b38eab6d4890d93986437ab4a54d07c834b1a4cde286ae829f912ae83432e",
+      "git_blob_sha": "ad4d41fa98f2b9ac544f0d9c07cc6f327427cb2a"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/VIPER_FIVE_ENVIRONMENT_REAL_OUTPUTS.png",
+      "bytes": 3662103,
+      "sha256": "8fc5f9917cb3ec591f112353eae49c9f18e2a40037f4fffaf107716646d29ad6",
+      "git_blob_sha": "4f64556be61eb94d286e38dddc4ec150b9c30cee"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/figures/VIPER_FIVE_ENVIRONMENT_REAL_OUTPUTS.svg",
+      "bytes": 1313608,
+      "sha256": "e1a6fa07a3ec225a2a14a69300a8cba984be4a3433bbdec3eb379efd4d85671f",
+      "git_blob_sha": "90bf1c99de64e1bc0068ab60da1016ddc0d774a6"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/deliveries/PACKAGE_VERIFICATION.json",
+      "bytes": 590,
+      "sha256": "d9a7609425b699e01ce001688f94d8e253933212c9483f51f936a1d8bdda1346",
+      "git_blob_sha": "6bd8563bc5d2411a14047048840c70281be3b7e3"
+    },
+    {
+      "path": "review_packages/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip.sha256",
+      "bytes": 113,
+      "sha256": "6f47399abc16f7789ea85b37f298324e43e38f559504156ef1c1f7fb74a3e687",
+      "git_blob_sha": "ad7c4d6b4b44aec73580d4e73461866778c6dfd8"
+    },
+    {
+      "path": "reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/PUBLICATION_NOTES.md",
+      "bytes": 1076,
+      "sha256": "3cd5234eadfe864caf1367b728bb6d24ca247d892aae983ef57e0426be578623",
+      "git_blob_sha": "21878e9cc85ef782ad2cc67ea6e9b505e6836d4a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5510,
+      "sha256": "b9f9f24763c07b69d92346630a0443e8bd7a71122f350b781e2c366b1b857206",
+      "git_blob_sha": "a599fc443a258fa70fa9ce98458e9bfd13ada677"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 5510,
+      "sha256": "57c38d64c77df84bb387546819b1c43f28c6831d80c6a2a559db2796c258f696",
+      "git_blob_sha": "29f582c166bf4befb9f5786f43a082b9521a4a05"
+    },
+    {
+      "path": "REVIEW_INDEX.md",
+      "bytes": 5533,
+      "sha256": "43940ea639e64cf0345f32b8f770fd8679ba8ceecb5ddc5cc73492f6c9f85e01",
+      "git_blob_sha": "d8f45bb4c69872585fd0f4ae888e4e617b983465"
+    },
+    {
+      "path": "REVIEWING.md",
+      "bytes": 4102,
+      "sha256": "2b20ed259a336721793b4e1820584e05047abf849b25d5b9e896e655f7e86309",
+      "git_blob_sha": "f362589a23f603649a1568a79857361927869605"
+    }
+  ]
+}

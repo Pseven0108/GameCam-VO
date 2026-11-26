@@ -1,0 +1,86 @@
+{
+  "tests": 13,
+  "passed": 13,
+  "success": true,
+  "records": [
+    {
+      "test": "__main__.TestEvaluationGeometry.test_constant_signal_is_random",
+      "status": "PASS",
+      "seconds": 0.00048130000000012885,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_fast_curve_matches_reference_with_ties",
+      "status": "PASS",
+      "seconds": 0.00993580000000005,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_fast_curve_unique_scores",
+      "status": "PASS",
+      "seconds": 0.0018569999999999975,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_invalid_signal_stops",
+      "status": "PASS",
+      "seconds": 6.679999999992248e-05,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_negative_prediction_not_accepted_by_extension",
+      "status": "PASS",
+      "seconds": 4.419999999982771e-05,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_original_strict_gate_still_rejects_zero",
+      "status": "PASS",
+      "seconds": 3.3199999999844465e-05,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_pixel_center_bilinear_grid_oracle",
+      "status": "PASS",
+      "seconds": 0.00018450000000003186,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_real_7_zero_predictions_preserved",
+      "status": "PASS",
+      "seconds": 0.02456679999999989,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_real_readonly_hook_bitwise_equality",
+      "status": "PASS",
+      "seconds": 0.0002762999999998961,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_real_unconstrained_confidence_kept_raw",
+      "status": "PASS",
+      "seconds": 0.004105800000000048,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_restore_same_constant_grid_with_odd_padding",
+      "status": "PASS",
+      "seconds": 0.037410000000000165,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_zero_TTA_formula_has_finite_large_disagreement",
+      "status": "PASS",
+      "seconds": 7.550000000011714e-05,
+      "detail": null
+    },
+    {
+      "test": "__main__.TestEvaluationGeometry.test_zero_prediction_stays_error_one_and_log_infinite",
+      "status": "PASS",
+      "seconds": 0.00018079999999986995,
+      "detail": null
+    }
+  ],
+  "scope": "CPU evaluator/grid oracles plus real-output readback assertions, no new model inference"
+}

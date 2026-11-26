@@ -1,3 +1,13 @@
+# 最新评审：TASK006A-R2.1
+
+[最终评审](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/FINAL_REVIEW.md) · [完整报告](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/R2_1_FINAL_RESEARCH_REPORT.md) · [展开材料](reviews/task006a-r2-1-metric3d-gpu-pilot-20261126) · [完整原始ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task006a-r2-1-metric3d-gpu-pilot-20261126/GAMECAM_TASK006A_R2_1_METRIC3D_GPU_REVIEW.zip)
+
+完整ZIP含原始NPZ；展开报告与CSV可直接审查。请区分GPU推理、严格门禁失败与次级非米制诊断。
+
+---
+
+## 历史索引
+
 # 最新评审：TASK006A-R2（部分完成）
 
 [最终研究报告](reviews/task006a-r2-depth-prior-reliability-20261126/TASK006A_R2_FINAL_RESEARCH_REPORT.md) · [完整展开评审](reviews/task006a-r2-depth-prior-reliability-20261126) · [完整原始ZIP](review_packages/GAMECAM_TASK006A_R2_DEPTH_PRIOR_RELIABILITY_REVIEW.zip)

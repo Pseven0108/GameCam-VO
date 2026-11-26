@@ -1,0 +1,187 @@
+{
+  "free_data_bytes": 12468973568,
+  "smoke": {
+    "receipt": {
+      "status": "FAILED",
+      "stage": "SMOKE",
+      "model_forwards": 0,
+      "training": false,
+      "SLAM": false,
+      "error": "Checkpoint incompatible; no reviewed missing-key allowance",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 58, in main\n    if keys.missing_keys or keys.unexpected_keys:raise RuntimeError('Checkpoint incompatible; no reviewed missing-key allowance')\nRuntimeError: Checkpoint incompatible; no reviewed missing-key allowance\n",
+      "results": []
+    },
+    "stdout_tail": "",
+    "stderr_tail": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\nTraceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 154, in <module>\n    if __name__=='__main__':main()\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 58, in main\n    if keys.missing_keys or keys.unexpected_keys:raise RuntimeError('Checkpoint incompatible; no reviewed missing-key allowance')\nRuntimeError: Checkpoint incompatible; no reviewed missing-key allowance\n",
+    "files": [
+      {
+        "name": "CHECKPOINT_COMPATIBILITY.json",
+        "bytes": 90
+      },
+      {
+        "name": "INFERENCE_RECEIPT.json",
+        "bytes": 577
+      }
+    ]
+  },
+  "smoke_qualified": {
+    "receipt": {
+      "status": "PASS",
+      "stage": "SMOKE",
+      "model_forwards": 3,
+      "training": false,
+      "SLAM": false,
+      "GPU": "NVIDIA GeForce RTX 3090, GPU-18dd1d45-8dca-2400-dddb-af8cd9bd5fae, 580.119.02, 24125",
+      "torch": "2.1.0+cu118",
+      "CUDA_build": "11.8",
+      "Metric3D_commit": "eb5b6fac0dc155e4e52f576e304fbf11655ff339",
+      "checkpoint_sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "manifest_sha256": "90a0aa8b842001d827c48910b441ee42ce1e41a77ed764f192c96228621892fe",
+      "script_sha256": "941d1de7e77c084831ae58f25cf505025b97491336758d9a35789c5a7354ffd2",
+      "model_load_seconds": 10.476427963003516,
+      "seed": 43,
+      "cudnn_deterministic": false,
+      "cudnn_benchmark": false,
+      "model_training": false,
+      "samples": 1,
+      "results": [
+        {
+          "sample": {
+            "sample_id": "VIPER_Night_val007_00001",
+            "dataset": "VIPER",
+            "sequence_id": "val_007",
+            "frame_id": "00001",
+            "environment": "Night",
+            "rgb_path": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/val_007/00001.jpg",
+            "rgb_sha256": "0568cb14fa7d25b81bb395e3d3ba7811b51fe7ec351d30ffdfaf4163c3a52cd8",
+            "source_hw": [
+              1080,
+              1920
+            ],
+            "input_hw": [
+              360,
+              640
+            ],
+            "fx": 386.0112538364529,
+            "source_fx": 1158.0337615093588,
+            "input_protocol": "FROZEN_R2_640x360_INTER_LINEAR",
+            "role": "NO_GT_SMOKE_ONLY"
+          },
+          "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/smoke_qualified/VIPER_Night_val007_00001.npz",
+          "bytes": 53352448,
+          "sha256": "9f478e1c38177a687e69195dfed265cec644baa16d2dc490d61260e8f2e17670",
+          "canonical_hw": [
+            616,
+            1064
+          ],
+          "resize_scale": 1.6625,
+          "resized_hw": [
+            598,
+            1064
+          ],
+          "padding_ltrb": [
+            0,
+            9,
+            0,
+            9
+          ],
+          "depth_restore": "baseline fx/1000; bicubic; clamp0..300",
+          "confidence_restore": "same unpad; bilinear; no depth scale",
+          "times": [
+            {
+              "mode": "native_without_hook_cold",
+              "seconds_forward": 1.004973728209734,
+              "peak_allocated_bytes": 2510403584,
+              "peak_reserved_bytes": 2816475136
+            },
+            {
+              "mode": "native_with_hook",
+              "canonical_shape": [
+                1,
+                1,
+                616,
+                1064
+              ],
+              "bin_shape": [
+                256,
+                154,
+                266
+              ],
+              "seconds_forward": 0.4514680355787277,
+              "peak_allocated_bytes": 2515347456,
+              "peak_reserved_bytes": 2816475136
+            },
+            {
+              "mode": "flip_with_hook",
+              "canonical_shape": [
+                1,
+                1,
+                616,
+                1064
+              ],
+              "bin_shape": [
+                256,
+                154,
+                266
+              ],
+              "seconds_forward": 0.4532311148941517,
+              "peak_allocated_bytes": 2515347456,
+              "peak_reserved_bytes": 2816475136
+            }
+          ],
+          "TTA_invalid_pixels": 0,
+          "bin_anchor_count": 256,
+          "GT_used_for_inference": false,
+          "model_weights_updated": false
+        }
+      ],
+      "mask_token_missing_allowance": [
+        "depth_model.encoder.mask_token"
+      ],
+      "encoder_input_observations": [
+        {
+          "positional_inputs": 1,
+          "masks": null
+        },
+        {
+          "positional_inputs": 1,
+          "masks": null
+        },
+        {
+          "positional_inputs": 1,
+          "masks": null
+        }
+      ],
+      "mask_token_used": false
+    },
+    "stdout_tail": "SAMPLE_START val_007 00001\nSAMPLE_COMPLETE VIPER_Night_val007_00001 bytes 53352448\nSTAGE_COMPLETE PASS samples 1 forwards 3\n",
+    "stderr_tail": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\n/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).\n  warnings.warn(\n",
+    "files": [
+      {
+        "name": "CHECKPOINT_COMPATIBILITY.json",
+        "bytes": 90
+      },
+      {
+        "name": "HOOK_EQUIVALENCE.json",
+        "bytes": 157
+      },
+      {
+        "name": "INFERENCE_RECEIPT.json",
+        "bytes": 3562
+      },
+      {
+        "name": "VIPER_Night_val007_00001.npz",
+        "bytes": 53352448
+      },
+      {
+        "name": "VIPER_Night_val007_00001.receipt.json",
+        "bytes": 2109
+      }
+    ]
+  },
+  "pilot": {
+    "receipt": null,
+    "files": []
+  },
+  "GPU": "NVIDIA GeForce RTX 3090, 0, 24125, 0\n"
+}

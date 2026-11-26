@@ -1,0 +1,86 @@
+{
+  "sample": {
+    "sample_id": "MVS_0000_0049",
+    "dataset": "MVS-Synth",
+    "sequence_id": "0000",
+    "frame_id": "0049",
+    "environment": "UNCLASSIFIED",
+    "rgb_path": "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/inputs/mvs/0000_0049.png",
+    "rgb_sha256": "55a45d046d95d9b360434e7a90b5d0c058b725187a5ae2612c6063081deab4d1",
+    "source_hw": [
+      540,
+      960
+    ],
+    "input_hw": [
+      540,
+      960
+    ],
+    "fx": 578.9251553492843,
+    "source_fx": 578.9251553492843,
+    "input_protocol": "NATIVE_MVS_960x540_NO_INPUT_DOWNSAMPLE",
+    "role": "CALIBRATION",
+    "GT_depth_uploaded_to_model": false,
+    "local_RGB_path": "D:\\aaa\\GameCam-VO\\data\\mvs_synth\\GTAV_540\\0000\\images\\0049.png",
+    "local_pose_path": "D:\\aaa\\GameCam-VO\\data\\mvs_synth\\GTAV_540\\0000\\poses\\0049.json"
+  },
+  "output": "/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/pilot/MVS_0000_0049.npz",
+  "bytes": 23580361,
+  "sha256": "60cc9e84a94e14e8763ead62332d31d4f02b0c9f004b7825edf1226a7000af26",
+  "canonical_hw": [
+    616,
+    1064
+  ],
+  "resize_scale": 1.1083333333333334,
+  "resized_hw": [
+    598,
+    1064
+  ],
+  "padding_ltrb": [
+    0,
+    9,
+    0,
+    9
+  ],
+  "depth_restore": "baseline fx/1000; bicubic; clamp0..300",
+  "confidence_restore": "same unpad; bilinear; no depth scale",
+  "times": [
+    {
+      "mode": "native_with_hook",
+      "canonical_shape": [
+        1,
+        1,
+        616,
+        1064
+      ],
+      "bin_shape": [
+        256,
+        154,
+        266
+      ],
+      "seconds_forward": 0.44841551780700684,
+      "peak_allocated_bytes": 2515347456,
+      "peak_reserved_bytes": 2816475136
+    },
+    {
+      "mode": "flip_with_hook",
+      "canonical_shape": [
+        1,
+        1,
+        616,
+        1064
+      ],
+      "bin_shape": [
+        256,
+        154,
+        266
+      ],
+      "seconds_forward": 0.4494181275367737,
+      "peak_allocated_bytes": 2515347456,
+      "peak_reserved_bytes": 2816475136
+    }
+  ],
+  "TTA_invalid_pixels": 0,
+  "bin_anchor_count": 256,
+  "GT_used_for_inference": false,
+  "model_weights_updated": false
+}

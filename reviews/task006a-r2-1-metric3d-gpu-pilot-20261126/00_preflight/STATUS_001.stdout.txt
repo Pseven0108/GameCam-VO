@@ -1,0 +1,32 @@
+{
+  "free_data_bytes": 12522377216,
+  "smoke": {
+    "receipt": {
+      "status": "FAILED",
+      "stage": "SMOKE",
+      "model_forwards": 0,
+      "training": false,
+      "SLAM": false,
+      "error": "Checkpoint incompatible; no reviewed missing-key allowance",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 58, in main\n    if keys.missing_keys or keys.unexpected_keys:raise RuntimeError('Checkpoint incompatible; no reviewed missing-key allowance')\nRuntimeError: Checkpoint incompatible; no reviewed missing-key allowance\n",
+      "results": []
+    },
+    "stdout_tail": "",
+    "stderr_tail": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.\n  warnings.warn(\nTraceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 154, in <module>\n    if __name__=='__main__':main()\n  File \"/root/rivermind-data/GAMECAM_TASK006A_R2_1_GPU_PILOT_20261126_R1/control/metric3d_pilot.py\", line 58, in main\n    if keys.missing_keys or keys.unexpected_keys:raise RuntimeError('Checkpoint incompatible; no reviewed missing-key allowance')\nRuntimeError: Checkpoint incompatible; no reviewed missing-key allowance\n",
+    "files": [
+      {
+        "name": "CHECKPOINT_COMPATIBILITY.json",
+        "bytes": 90
+      },
+      {
+        "name": "INFERENCE_RECEIPT.json",
+        "bytes": 577
+      }
+    ]
+  },
+  "pilot": {
+    "receipt": null,
+    "files": []
+  },
+  "GPU": "NVIDIA GeForce RTX 3090, 0, 24125, 0\n"
+}

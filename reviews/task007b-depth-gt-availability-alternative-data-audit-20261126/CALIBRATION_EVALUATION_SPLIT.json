@@ -1,0 +1,27 @@
+{
+  "status": "PRE_DATA_PROPOSAL_NOT_EXECUTED_NOT_OFFICIAL_SPLIT",
+  "dataset_candidate": "Virtual KITTI 2.0.3",
+  "adoption_approved": false,
+  "parent_group_key": "base Scene ID; all weather/view/camera variants of the same scene remain in one role",
+  "groups": [
+    {"scene": "01", "role": "CALIBRATION"},
+    {"scene": "02", "role": "CALIBRATION"},
+    {"scene": "06", "role": "DEVELOPMENT"},
+    {"scene": "18", "role": "EVALUATION"},
+    {"scene": "20", "role": "EVALUATION"}
+  ],
+  "planned_camera": "Camera_0 only; Camera_1 cannot be treated as an independent split",
+  "planned_variants": ["clone", "fog", "morning", "overcast", "rain", "sunset"],
+  "not_covered": ["VIPER Night", "VIPER Snow", "Third-person following camera"],
+  "future_full_pilot_sampling": "After verified member enumeration, choose 8 unique RGB IDs uniformly by rank over each verified common RGB/depth/class/K intersection; freeze manifest before inference/errors. No fabricated IDs or neighbor substitution.",
+  "target_counts_if_every_context_is_available": {"CALIBRATION": 96, "DEVELOPMENT": 48, "EVALUATION": 96, "total": 240},
+  "first_acquisition_proposal_only": "12 pairs: Scenes01/02 x six variants x first verified common RGB ID; no Evaluation scene sample preview",
+  "actual_samples_acquired": 0,
+  "actual_frame_ID_manifest": null,
+  "GT_valid_mask_candidate": "uint16 depth>0 and <65535; remove official semantic Sky/Undefined; verify actual label encoding and preserve exclusions/coverage; no prediction-dependent filtering",
+  "fit_contract": "Only CALIBRATION can fit confidence-to-variance parameters; DEVELOPMENT may select registered variants; EVALUATION locked until all choices and hashes are sealed",
+  "normalization": "No GT-based per-frame metric scale correction in main calibration/evaluation; any shape-only centering is separate diagnostic",
+  "leakage_checks_required": ["Exact RGB/depth byte identities", "Parent-scene grouping of all weather/camera/temporal variants", "Near-duplicate and frame intersection audit", "Document any Metric3D pretraining overlap uncertainty", "No Evaluation-based mask/threshold/model selection"],
+  "existing_data_quarantine": {"VIPER_cached_validation_10_frames": "Already observed; no test-set calibration fitting", "MVS_0000": "Observed exploration only", "MVS_0001": "Observed exploration only"},
+  "VIPER_frozen_split_or_protocol_changed": false
+}

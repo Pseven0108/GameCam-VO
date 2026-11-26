@@ -1,0 +1,365 @@
+{
+  "archives": [
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_R0_1_TRAIN_AND_VO_PROTOCOL_AUDIT\\02_metadata\\train_camera.zip",
+      "bytes": 33054088,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 78,
+      "VIPER_layout_members": 77,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"CAMERA_OR_TABLE_NOT_PIXEL_DEPTH\": 77}",
+      "central_directory_identity_sha256": "780e8c1f2a98979142f4eadf545824ebfaa2726460eba4b8e9b179a060f1c51c",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/camera/001.csv",
+        "train/camera/002.csv",
+        "train/camera/003.csv",
+        "train/camera/004.csv"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_R1_A_15FRAME_CPU_PILOT_LOCAL_RECOVERY_V2\\local_archives\\train_img_00-19_2-9_jpg.zip",
+      "bytes": 4360062002,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 24138,
+      "VIPER_layout_members": 24137,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 24137}",
+      "central_directory_identity_sha256": "9e40f6eec9856cfe17786c4fc3d40587a0854025999119001f2c10fe68a6be52",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/001/001_00002.jpg",
+        "train/img/001/001_00003.jpg",
+        "train/img/001/001_00004.jpg",
+        "train/img/001/001_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_R1_A_15FRAME_CPU_PILOT_LOCAL_RECOVERY_V2\\local_archives\\train_img_00-77_0_jpg.zip",
+      "bytes": 2904002262,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 13368,
+      "VIPER_layout_members": 13367,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 13367}",
+      "central_directory_identity_sha256": "024d075d941b8406a5a9c70d0ad2f55957ff3d81c35476fa7e0ad59b611aa3d2",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/001/001_00010.jpg",
+        "train/img/001/001_00020.jpg",
+        "train/img/001/001_00030.jpg",
+        "train/img/001/001_00040.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\audits\\VIPER_R1_A_15FRAME_CPU_PILOT_LOCAL_RECOVERY_V2\\local_archives\\train_img_20-39_2-9_jpg.zip",
+      "bytes": 3451117718,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 18483,
+      "VIPER_layout_members": 18482,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 18482}",
+      "central_directory_identity_sha256": "c48b97a2136d21b9aae7f0921522513040726f80ec7c91647661386ad16df7a6",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/020/020_00002.jpg",
+        "train/img/020/020_00003.jpg",
+        "train/img/020/020_00004.jpg",
+        "train/img/020/020_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\test_img_00-60_0_jpg.zip",
+      "bytes": 517139362,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 2500,
+      "VIPER_layout_members": 2500,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 2500}",
+      "central_directory_identity_sha256": "985dc7ba28e405f688c29fbb3e075c9df2bb43f9345847b00d5e10342ab232e1",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "test/img/001/001_00001.jpg",
+        "test/img/001/001_00076.jpg",
+        "test/img/001/001_00094.jpg",
+        "test/img/001/001_00112.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\test_img_00-60_1_jpg (1).zip",
+      "bytes": 516040779,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 2495,
+      "VIPER_layout_members": 2494,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 2494}",
+      "central_directory_identity_sha256": "3632b05434603a9bde4197f77ec1706fd0627e514593da89c4dbac3ab1251a3d",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "test/img/001/001_00002.jpg",
+        "test/img/001/001_00077.jpg",
+        "test/img/001/001_00095.jpg",
+        "test/img/001/001_00113.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\test_img_00-60_1_jpg.zip",
+      "bytes": 516040779,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 2495,
+      "VIPER_layout_members": 2494,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 2494}",
+      "central_directory_identity_sha256": "3632b05434603a9bde4197f77ec1706fd0627e514593da89c4dbac3ab1251a3d",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "test/img/001/001_00002.jpg",
+        "test/img/001/001_00077.jpg",
+        "test/img/001/001_00095.jpg",
+        "test/img/001/001_00113.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\train_img_00-77_1_jpg.zip",
+      "bytes": 2919039311,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 13441,
+      "VIPER_layout_members": 13440,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 13440}",
+      "central_directory_identity_sha256": "df1bb52b1fa60ccc33830c741ab4db92f7f9d3d51457a7677a829eb15743af2a",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/001/001_00001.jpg",
+        "train/img/001/001_00011.jpg",
+        "train/img/001/001_00021.jpg",
+        "train/img/001/001_00031.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\train_img_40-59_2-9_jpg.zip",
+      "bytes": 8302290485,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 34012,
+      "VIPER_layout_members": 34011,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 34011}",
+      "central_directory_identity_sha256": "c4bb093b062d3b642b2a4961c246e34ebd800a0197a7883d76de0dd01de49f99",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/040/040_00002.jpg",
+        "train/img/040/040_00003.jpg",
+        "train/img/040/040_00004.jpg",
+        "train/img/040/040_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\train_img_60-77_2-9_jpg.zip",
+      "bytes": 7189563758,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 30661,
+      "VIPER_layout_members": 30660,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 30660}",
+      "central_directory_identity_sha256": "2fd104e2ea7eca1167f309a135807d454ef7c94c4bb7f65813a42bb559d99cb1",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/060/060_00002.jpg",
+        "train/img/060/060_00003.jpg",
+        "train/img/060/060_00004.jpg",
+        "train/img/060/060_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-19_2-9_jpg.zip",
+      "bytes": 2485165440,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 13047,
+      "VIPER_layout_members": 13046,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 13046}",
+      "central_directory_identity_sha256": "b3c2c41bcd7590761bcf76b4cb3bbf3b5a31171c2a0670d65ef2acb80afb92e5",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/001/001_00002.jpg",
+        "val/img/001/001_00003.jpg",
+        "val/img/001/001_00004.jpg",
+        "val/img/001/001_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-47_0_jpg.zip",
+      "bytes": 1040427616,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 4960,
+      "VIPER_layout_members": 4959,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 4959}",
+      "central_directory_identity_sha256": "3723110140528cb38ec6b8eddba4ba6f868daa0fa97cb2b162d7dd1d9ee8d950",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/001/001_00010.jpg",
+        "val/img/001/001_00020.jpg",
+        "val/img/001/001_00030.jpg",
+        "val/img/001/001_00040.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_00-47_1_jpg.zip",
+      "bytes": 1049369199,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 5003,
+      "VIPER_layout_members": 5002,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 5002}",
+      "central_directory_identity_sha256": "121269b2f48afb7935c94104723a4484636206ae13475ec78ac304b007a8bf95",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/001/001_00001.jpg",
+        "val/img/001/001_00011.jpg",
+        "val/img/001/001_00021.jpg",
+        "val/img/001/001_00031.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_20-39_2-9_jpg.zip",
+      "bytes": 2998559788,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 15579,
+      "VIPER_layout_members": 15578,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 15578}",
+      "central_directory_identity_sha256": "aaa4d45afaf68a54062dac3316ca48eefbaaf4ce769e4a0ae606e7e277093b12",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/020/020_00002.jpg",
+        "val/img/020/020_00003.jpg",
+        "val/img/020/020_00004.jpg",
+        "val/img/020/020_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\archives\\val_img_40-47_2-9_jpg.zip",
+      "bytes": 2877650749,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 11231,
+      "VIPER_layout_members": 11230,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 11230}",
+      "central_directory_identity_sha256": "84589bfd4e3b57649ca6974d83bfcf0a03c64ee9db6749773feca3d1506a68a7",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/040/040_00002.jpg",
+        "val/img/040/040_00003.jpg",
+        "val/img/040/040_00004.jpg",
+        "val/img/040/040_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\downloads\\VIPER_RGB_JPG_ORIGINALS_20261119\\REDOWNLOAD_COMPARE_20261119_050520583\\train_img_40-59_2-9_jpg.zip",
+      "bytes": 8302290485,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 34012,
+      "VIPER_layout_members": 34011,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 34011}",
+      "central_directory_identity_sha256": "c4bb093b062d3b642b2a4961c246e34ebd800a0197a7883d76de0dd01de49f99",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/040/040_00002.jpg",
+        "train/img/040/040_00003.jpg",
+        "train/img/040/040_00004.jpg",
+        "train/img/040/040_00005.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DUAL_BASELINE_VALIDATION_EXPANSION_R1\\cpu_qa\\20261119T104607978250Z\\synthetic_camera.zip",
+      "bytes": 92412,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 47,
+      "VIPER_layout_members": 47,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"CAMERA_OR_TABLE_NOT_PIXEL_DEPTH\": 47}",
+      "central_directory_identity_sha256": "eed5825aa72f07f6dd0e524e34edd3770ebcb2ce81d0050fee5d057f15d7d87c",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/camera/003.csv",
+        "val/camera/046.csv",
+        "val/camera/019.csv",
+        "val/camera/025.csv"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DUAL_BASELINE_VALIDATION_EXPANSION_R1\\cpu_qa\\20261119T104706602858Z\\synthetic_camera.zip",
+      "bytes": 92412,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 47,
+      "VIPER_layout_members": 47,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"CAMERA_OR_TABLE_NOT_PIXEL_DEPTH\": 47}",
+      "central_directory_identity_sha256": "eed5825aa72f07f6dd0e524e34edd3770ebcb2ce81d0050fee5d057f15d7d87c",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/camera/003.csv",
+        "val/camera/046.csv",
+        "val/camera/019.csv",
+        "val/camera/025.csv"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\exports\\VIPER_Night008_RGB00693_00756_ORIGINAL_20261117T194624\\VIPER_Night008_RGB00693_00756_ORIGINAL_JPG.zip",
+      "bytes": 10044173,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 65,
+      "VIPER_layout_members": 64,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 64}",
+      "central_directory_identity_sha256": "22e199ed46a50792aaba9069cee188cf7bfe7889dfff0aada1ab06810cd30d50",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "train/img/008/008_00693.jpg",
+        "train/img/008/008_00694.jpg",
+        "train/img/008/008_00695.jpg",
+        "train/img/008/008_00696.jpg"
+      ],
+      "potential_depth_members": []
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\exports\\VIPER_VAL007_RGB00301_00353_20261120_191022\\VIPER_VAL007_RGB00301_00353_original_JPG.zip",
+      "bytes": 7155178,
+      "status": "CENTRAL_DIRECTORY_READ",
+      "members": 54,
+      "VIPER_layout_members": 53,
+      "VIPER_potential_depth_members": 0,
+      "VIPER_modality_counts": "{\"RGB_IMAGE\": 53}",
+      "central_directory_identity_sha256": "21cebf56cb0073beb7a3910256a06ef64add19f8f780b1f0e9e95f2cbd8a802d",
+      "payload_CRC_checked": false,
+      "VIPER_member_examples": [
+        "val/img/007/007_00301.jpg",
+        "val/img/007/007_00302.jpg",
+        "val/img/007/007_00303.jpg",
+        "val/img/007/007_00304.jpg"
+      ],
+      "potential_depth_members": []
+    }
+  ],
+  "potential_depth_members": []
+}

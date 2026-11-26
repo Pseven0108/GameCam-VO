@@ -1,0 +1,21 @@
+{
+  "task": "TASK007B VIPER Depth-GT Availability & Alternative Dataset Audit",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "authorization": "User requested execution of the six-part TASK007B data feasibility audit",
+  "mode": "Local CPU; existing inputs and public documentation/metadata only",
+  "objectives": [
+    "Establish what official VIPER monodepth channels actually provide",
+    "Inspect local archive contents without filename-based modality exclusion",
+    "Adjudicate historical train_dense catalogs and recovery fragments",
+    "Compare depth-GT alternatives without replacing the VIPER mainline",
+    "Assess scale-invariant MVS-Synth auxiliary diagnostics",
+    "Specify leakage-resistant Calibration/Development/Evaluation groups",
+    "Reconcile published README, PROJECT_STATUS and review entry points"
+  ],
+  "network_limit": "Public text metadata and HEAD only; no raw dataset payload acquisition",
+  "forbidden": ["New Metric3D inference", "GPU/CUDA", "Scalix training", "DROID-W modification", "SLAM runs", "Full dataset downloads", "Test-set fitting", "Changing frozen VIPER splits", "Contacting authors", "Next-stage execution"],
+  "absence_claim_scope": "Only enumerated local paths, inspectable archive members, official docs and accessed catalog snapshots; inaccessible or unknown records stay unverified",
+  "alternative_selection": "Recommendation only; adoption and sample acquisition remain pending approval",
+  "split_status": "Pre-data design proposal, not an executed or official benchmark split",
+  "publication": "Full original review ZIP plus expanded files on the existing Public GitHub repo; verify then remove only this delivered local ZIP"
+}

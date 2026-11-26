@@ -1,0 +1,370 @@
+{
+  "containers": [
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DROID_SLAM_COMPARISON_R1\\evidence\\official_source.tar.gz",
+      "bytes": 12631485,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 2113,
+      "depth_like_member_names": [
+        {
+          "member": "data/euroc_groundtruth/MH_01_easy.txt",
+          "bytes": 461623,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/MH_02_easy.txt",
+          "bytes": 380727,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/MH_03_medium.txt",
+          "bytes": 333662,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/MH_04_difficult.txt",
+          "bytes": 250902,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/MH_05_difficult.txt",
+          "bytes": 281910,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V1_01_easy.txt",
+          "bytes": 364137,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V1_02_medium.txt",
+          "bytes": 211821,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V1_03_difficult.txt",
+          "bytes": 265077,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V2_01_easy.txt",
+          "bytes": 284725,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V2_02_medium.txt",
+          "bytes": 293618,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "data/euroc_groundtruth/V2_03_difficult.txt",
+          "bytes": 240359,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "droid_slam/depth_video.py",
+          "bytes": 7852,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "thirdparty/lietorch/examples/registration/assets/depth1.npy",
+          "bytes": 1228928,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "thirdparty/lietorch/examples/registration/assets/depth2.npy",
+          "bytes": 1228928,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "thirdparty/lietorch/examples/registration/assets/depth3.npy",
+          "bytes": 1228928,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "thirdparty/lietorch/examples/registration/assets/depth4.npy",
+          "bytes": 1228928,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        }
+      ],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "0517fc211fbbf3b3c1123d4290168408ea82f4e1836015ba897fdda017fe70e1"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DUAL_BASELINE_FULL_DATASET_STRATIFIED_R1\\evidence\\P4_GPU_PAYLOAD.tar.gz",
+      "bytes": 265823,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 11,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "688307eb2833c757463aac1b77c5ac3896e302531a3b02b85579d94c47b6188d"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DUAL_BASELINE_FULL_DATASET_STRATIFIED_R1\\evidence\\P4_GPU_PAYLOAD_02.tar.gz",
+      "bytes": 16546652,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 75,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "14f2553ce1088c9854556b1c763d5ec17ad9e04b0db83f7fec9f9fbd3c5c40c6"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_DUAL_BASELINE_FULL_DATASET_STRATIFIED_R1\\evidence\\REMOTE_SEALED_RUNS_02.tar.gz",
+      "bytes": 8525864,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 239,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "971258ae44526b48fa1380da6e3ea2a279dfd9d4598e064baeba9e3de00baf9d"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_MATCHED_DUAL_BASELINE_R2\\evidence\\gpu_rgb_intake.tar.gz",
+      "bytes": 3005608,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 98,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "3901e03dca4ed5e1e831a2c4e2c2be71ebaefe174d5fed2798a2b3857f2ec6e3"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B1_GPU_SMOKE_64F_640x360\\resume_20261117T015833\\VIPER_64F_TRANSFER.tar",
+      "bytes": 24596480,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 90,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "e860685d4a5d028e7273b29e4c61a1baa8d0ef43ba2b35868af8bc597529b4c9"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_1_GPU_FOUR_ENV_64F\\resume_20261117062049\\night_008_TRANSFER.tar",
+      "bytes": 19107840,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 92,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "d6e7f4007a9003515e4f017963020996b3302afd92f10ce1e2a890a8b6378a2f"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_1_GPU_FOUR_ENV_64F\\resume_20261117062049\\rain_030_TRANSFER.tar",
+      "bytes": 25600000,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 92,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "94bf1090b3c8150153d1a3cbfd468c1ce41b532f6e6db9cf91b28c2d79d69140"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_1_GPU_FOUR_ENV_64F\\resume_20261117062049\\snow_032_TRANSFER.tar",
+      "bytes": 20398080,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 92,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "212be164f592a4e887575816eafc51dbdbfcb978f8e8bf2968851a596447ec4d"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_1_GPU_FOUR_ENV_64F\\resume_20261117062049\\sunset_007_TRANSFER.tar",
+      "bytes": 25128960,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 92,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "017ebfe97cfdb3d5d4e1d93144aa1ef9c64fb43426c17481e2b7abb675a2b544"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_5_NIGHT_008_00693_00756_GPU_64F\\prepared\\TRANSFER_PACKAGE.tar",
+      "bytes": 19466240,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 94,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "0d8ec731b19e6d6d62aee1c40f3244e314503f101712e6830d3bd8c62a005590"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_7_4_GPU_IO_SMOKE_ATTEMPT_02\\evidence\\REMOTE_TEXT_CAPTURE.tar.gz",
+      "bytes": 626509,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 58,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "fa45f2b067803e03858034f4a541794854f8b725fe69872bca43e2d6cfbcbd68"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_R1_B2_7_5_NIGHT008_L0_STATE_FIRST_GPU\\evidence\\REMOTE_SEALED_CAPTURE.tar.gz",
+      "bytes": 98602500,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 518,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "ef0b4cfa5e18ca507cf3db7071e41b098ba30a543378cf2c5662bb725d7d3cb5"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1\\capture-code.tar",
+      "bytes": 38912,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 6,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "6f0bc9977542d0a4d985e213c9375fff065f6783fd1ef22d03ddfbfa831fb4c2"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1\\evidence_transfer\\raw_capture.tar",
+      "bytes": 253440000,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 32,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "eb65e03bb3de81c0530df425ed8761236ee9cc98fc83b32aa1e4633aa3b2bc7f"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1\\evidence_transfer\\raw_replays.tar",
+      "bytes": 11550720,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 32,
+      "depth_like_member_names": [
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER.log",
+          "bytes": 129,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER",
+          "bytes": 0,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER/INPUT_IDENTITY.json",
+          "bytes": 4838,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER/REPLAY_EXECUTION.json",
+          "bytes": 975,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER/AFTER_STATE.npz",
+          "bytes": 2075074,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER/INVOCATION_STARTED.json",
+          "bytes": 114,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "results/A_JOINT_POSE_DISPARITY_1ITER/BEFORE_STATE.npz",
+          "bytes": 1831535,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        }
+      ],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "122b9a0198af10891c1d2975492434f7429ab57b25c7292730b440fa96e553c1"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_BA280_POSE_DISPARITY_ABLATION_R1\\replay-code.tar",
+      "bytes": 15872,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 3,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "e3c156a4903c2d5cfb949d49875dae535a6899ff49997ee6a4543fcc2309dbee"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_STAGE_OBSERVABILITY_R2\\evidence_transfer\\VAL007_OBSERVATION_EVIDENCE.tar.gz",
+      "bytes": 793886951,
+      "status": "BOUNDED_PREFIX_ONLY_REMAINDER_UNVERIFIED",
+      "headers_read": 297,
+      "depth_like_member_names": [],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "0050f7789709de944e56aa4cd2e1f3176b35738d6e6fe50d66c1e7223cd340d4"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_STAGE_OBSERVABILITY_R2\\preflight\\intake.tgz",
+      "bytes": 78883,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 83,
+      "depth_like_member_names": [
+        {
+          "member": "source/DROID-W/src/depth_video.py",
+          "bytes": 45293,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "source/DROID-W/src/utils/mono_priors/metric_depth_estimators.py",
+          "bytes": 5426,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        }
+      ],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "ae0efcae016343ab02047919a8d25c0511e912f1f1f15d972181aa2af131ba47"
+    },
+    {
+      "archive": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_STAGE_OBSERVABILITY_R2\\preflight\\observer-transfer.tgz",
+      "bytes": 66287,
+      "status": "ALL_TAR_HEADERS_READ",
+      "headers_read": 26,
+      "depth_like_member_names": [
+        {
+          "member": "source_observer_patch/src/depth_video.py",
+          "bytes": 45700,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        },
+        {
+          "member": "source_observer_patch/src/utils/mono_priors/metric_depth_estimators.py",
+          "bytes": 6001,
+          "status": "HEADER_ONLY_NOT_GT_PROVENANCE"
+        }
+      ],
+      "payload_extracted": false,
+      "compressed_scan_limit_bytes": 268435456,
+      "GT_admitted": false,
+      "header_identity_sha256": "469b5db1ba937fa991c0fa6af59c7c033ae6d58a5d76108b11f6a9f368b6881d"
+    }
+  ],
+  "containers_attempted": 20,
+  "complete_header_inspections": 19,
+  "incomplete_or_unverified": [
+    "D:\\aaa\\GameCam-VO\\experiments\\VIPER_VAL007_STAGE_OBSERVABILITY_R2\\evidence_transfer\\VAL007_OBSERVATION_EVIDENCE.tar.gz"
+  ],
+  "GT_admitted": 0,
+  "scope": "VIPER/dense context paths selected from previously disclosed non-ZIP inventory; all other non-ZIPs remain unverified"
+}

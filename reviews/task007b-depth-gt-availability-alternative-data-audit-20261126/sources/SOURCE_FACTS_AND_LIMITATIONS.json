@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-26 Asia/Shanghai",
+  "evidence": [
+    {
+      "id": "V1",
+      "url": "https://github.com/srrichter/viper/blob/2f1d3918473e4e7785d420bf43b9a1895a5c6450/README.md",
+      "claim": "Published modalities listed are RGB, camera calibration, segmentation, bounding boxes, optical flow; no depth-GT product is documented in this README",
+      "strength": "CONFIRMED_DOCUMENT_SCOPE_ONLY"
+    },
+    {
+      "id": "V2",
+      "url": "https://github.com/srrichter/viper/blob/2f1d3918473e4e7785d420bf43b9a1895a5c6450/prepare_submission.py",
+      "claim": "Depth submission checks predicted PFM files and invokes an encoder; it is not a GT downloader",
+      "strength": "CONFIRMED_SOURCE"
+    },
+    {
+      "id": "V3",
+      "url": "https://github.com/ozendelait/rvc_devkit/blob/9ea8963069be7ff8ef6768ebfc141099e111a10d/depth/README.md",
+      "git_blob_sha": "828934160d5f6e6afcd6869d0c0733e9a64fd2ee",
+      "claim": "The RVC 2022 single-image-depth devkit says VIPER does not provide training data for this task and still requires test predictions",
+      "short_exact_excerpt": "does not supply any training data",
+      "strength": "CONFIRMED_CHALLENGE_DOCUMENT_NOT_ALL_VIPER_MODALITIES"
+    },
+    {
+      "id": "V4",
+      "url": "https://playing-for-benchmarks.org/download/",
+      "claim": "Current anonymous page exposes a terms form; no form was submitted. Historical full catalog is separately labelled historical",
+      "strength": "CURRENT_WEB_ACCESS_AND_SAVED_METADATA"
+    },
+    {
+      "id": "V5",
+      "url": "https://playing-for-benchmarks.org/leaderboards/monodepth/",
+      "claim": "An online depth leaderboard exists; aggregate scores do not supply per-pixel uncertainty calibration labels",
+      "strength": "CONFIRMED_PAGE_PLUS_STATISTICAL_INFERENCE"
+    },
+    {
+      "id": "K1",
+      "url": "https://europe.naverlabs.com/proxy-virtual-worlds-vkitti-2/",
+      "claim": "Virtual KITTI 2 publishes RGB, uint16 PNG Z-depth with centimeter encoding, K/extrinsics and semantic colors; five base scenes have related weather/camera variants",
+      "strength": "CONFIRMED_OFFICIAL_DOCUMENTATION_SAMPLE_NOT_ACQUIRED"
+    },
+    {
+      "id": "K2",
+      "url": "https://europe.naverlabs.com/proxy-virtual-worlds-vkitti-2/",
+      "claim": "Official delivery uses modality-level TAR archives; a per-file minimal pilot has not been verified. A flow-valid flag is not a depth-valid mask",
+      "strength": "CONFIRMED_DELIVERY_AND_MASK_SEMANTICS"
+    },
+    {
+      "id": "T1",
+      "url": "https://github.com/castacks/tartanair_tools/blob/841584a8a1ebbdcc832430212609d48b6b624443/data_type.md",
+      "git_blob_sha": "96796b1e9197701483172f0812af130c8e0c7276",
+      "claim": "TartanAir v1 documents NPY depth in meters, fixed intrinsics, a large finite sky sphere, and flow masks with different semantics from depth validity",
+      "strength": "CONFIRMED_SOURCE_VERSION_PINNED"
+    },
+    {
+      "id": "T2",
+      "url": "https://github.com/castacks/tartanair_tools/blob/841584a8a1ebbdcc832430212609d48b6b624443/README.md",
+      "git_blob_sha": "247da686f747396672adef16bf8a27fd3e7d03c8",
+      "claim": "Training products can be selected by camera/modality/difficulty; trajectory and environment products are large and v2 is a separate release",
+      "strength": "CONFIRMED_SOURCE_SAMPLE_NOT_ACQUIRED"
+    },
+    {
+      "id": "N1",
+      "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+      "claim": "NYUv2 supplies RGB-aligned rawDepths in meters and distinct inpainted depths. Raw sensor holes and imputed depths must not be conflated",
+      "strength": "CONFIRMED_OFFICIAL_DOCUMENTATION"
+    },
+    {
+      "id": "M1",
+      "url": "https://github.com/Pseven0108/GameCam-VO/blob/536ad7c253b4febd182bbc8c3805476a2f83e54b/reviews/task006a-r2-2-depth-restoration-gt-audit-20261126/03_gt_audit/GT_QUALITY_SUMMARY.json",
+      "claim": "Previously audited MVS-Synth raw EXR physical unit was not established; existing sequences 0000 and 0001 were already observed",
+      "strength": "SEALED_LOCAL_PRIMARY_EXPERIMENT_EVIDENCE"
+    }
+  ],
+  "access_limitations": [
+    "VIPER public download-index path unavailable through the web tool; no terms form submitted",
+    "One GitHub issue query required is:issue and succeeded after correction",
+    "JUGGHM/Metric3D commit endpoint returned 404; training-set exclusion of alternatives remains UNVERIFIED",
+    "No raw data or prediction payload downloaded; no authors contacted"
+  ]
+}

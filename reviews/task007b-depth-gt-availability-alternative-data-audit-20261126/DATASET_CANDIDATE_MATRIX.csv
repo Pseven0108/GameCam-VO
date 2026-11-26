@@ -1,0 +1,6 @@
+dataset,decision,GT,unit,validity_limit,research_limit,primary_evidence
+VIPER,NO_GO,Online submission confirmed; no admitted paired GT download,Unverified,Unverified,VO mainline preserved,Official tools + RVC depth devkit
+MVS-Synth,EXPLORATORY_SHAPE_ONLY_CANDIDATE,Existing EXR; observed0000/0001,Physical unit not established,Finite positive existing GT only; provenance limits remain,No absolute-scale uncertainty certificate,Sealed R2.2
+Virtual KITTI 2.0.3,PREFERRED_METADATA_CANDIDATE,Synthetic uint16 PNG Z-depth,1 unit=0.01m documented,Need verified zero/saturation/Sky/Undefined policy,No Night/Snow; 5 correlated base scenes,Official NAVER docs + HEAD + MD5 text
+TartanAir v1,SECONDARY_METADATA_CANDIDATE,Synthetic NPY depth,Meters documented; actual dtype/definition check pending,Finite distant sky; version-specific mask required,Keep related maps/day/night in same group,Official fixed tools docs
+NYUv2,REAL_SENSOR_AUXILIARY_CANDIDATE,Kinect aligned rawDepths + separate inpainting,Meters documented,Raw sensor holes; do not treat all inpainted pixels as measurements,Indoor; scene split; pretraining overlap unverified,Official NYU dataset page

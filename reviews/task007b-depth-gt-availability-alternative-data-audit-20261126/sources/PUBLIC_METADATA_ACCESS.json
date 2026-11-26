@@ -1,0 +1,322 @@
+{
+  "pages": [
+    {
+      "source": "VIPER_download_current",
+      "url": "https://playing-for-benchmarks.org/download/",
+      "method": "GET public text",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://playing-for-benchmarks.org/download/",
+      "bytes": 5521,
+      "sha256": "455ddf91078da303da28172ba72a0ad442be9d1b4173bc59154b8b4549f83ec5",
+      "title": "Download",
+      "form_endpoints": [
+        {
+          "action": "/download/",
+          "method": "POST"
+        }
+      ],
+      "raw_forms_or_CSRF_values_saved": false,
+      "relevant_links": [
+        "https://playing-for-benchmarks.org/leaderboards/monodepth/",
+        "https://playing-for-benchmarks.org/download/"
+      ]
+    },
+    {
+      "source": "VIPER_monodepth_current",
+      "url": "https://playing-for-benchmarks.org/leaderboards/monodepth/",
+      "method": "GET public text",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://playing-for-benchmarks.org/leaderboards/monodepth/",
+      "bytes": 16381,
+      "sha256": "117e638d6728b48ffb8eeafc7259999a983198f4275960f6c8e03ef68e6031c8",
+      "title": "Monocular Depth",
+      "form_endpoints": [],
+      "raw_forms_or_CSRF_values_saved": false,
+      "relevant_links": [
+        "https://playing-for-benchmarks.org/leaderboards/monodepth/",
+        "https://playing-for-benchmarks.org/download/"
+      ]
+    },
+    {
+      "source": "Virtual_KITTI_2_official",
+      "url": "https://europe.naverlabs.com/proxy-virtual-worlds-vkitti-2/",
+      "method": "GET public text",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://europe.naverlabs.com/proxy-virtual-worlds-vkitti-2/",
+      "bytes": 505899,
+      "sha256": "94040183560968dedadcbffefc389e12a4bd8a0bcc5ab405aec497d6220b6d24",
+      "title": "Proxy Virtual Worlds VKITTI 2 - NAVER LABS Europe",
+      "form_endpoints": [
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        },
+        {
+          "action": "#",
+          "method": null
+        },
+        {
+          "action": null,
+          "method": null
+        }
+      ],
+      "raw_forms_or_CSRF_values_saved": false,
+      "relevant_links": [
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_md5_checksums.txt",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_classSegmentation.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_instanceSegmentation.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_forwardFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_backwardFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_forwardSceneFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_backwardSceneFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_classSegmentation.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_instanceSegmentation.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_forwardFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_backwardFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_forwardSceneFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_backwardSceneFlow.tar",
+        "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz"
+      ]
+    },
+    {
+      "source": "NYUv2_official",
+      "url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+      "method": "GET public text",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://cs.nyu.edu/~fergus/datasets/nyu_depth_v2.html",
+      "bytes": 19525,
+      "sha256": "7564ac07aea77e7701c42ef3b93e5866ab513884307ed3ca8a605eaa97ed50ac",
+      "title": "NYU Depth V2 \u00ab  Nathan Silberman",
+      "form_endpoints": [],
+      "raw_forms_or_CSRF_values_saved": false,
+      "relevant_links": [
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat",
+        "https://cs.nyu.edu/~fergus/datasets/toolbox_nyu_depth_v2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/basements.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/basements.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part6.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part6.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/home_offices.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/home_offices.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/misc_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/misc_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part7.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part7.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/offices_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/offices_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/offices_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/offices_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part3.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part3.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part3.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/kitchens_part3.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/office_kitchens.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/office_kitchens.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part4.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bathrooms_part4.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part3.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bookstore_part3.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/libraries.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/libraries.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/playrooms.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/playrooms.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/cafe.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/cafe.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/reception_rooms.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/reception_rooms.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/studies.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/studies.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part3.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part3.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/dining_rooms_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/dining_rooms_part1.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part3.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part3.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/study_rooms.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/study_rooms.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part4.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part4.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/dining_rooms_part2.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/dining_rooms_part2.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part4.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/living_rooms_part4.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part5.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/bedrooms_part5.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/furniture_stores.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/furniture_stores.md5",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/misc_part1.zip",
+        "http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/misc_part1.md5"
+      ]
+    },
+    {
+      "source": "TartanAir_official",
+      "url": "https://theairlab.org/tartanair-dataset/",
+      "method": "GET public text",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://theairlab.org/tartanair-dataset/",
+      "bytes": 29376,
+      "sha256": "e156776eee1ce318e97fba63aafff3375658a02f425b9409781b3b9a6cc731f5",
+      "title": "TartanAir: A Dataset to Push the Limits of Visual SLAM - AirLabTartanAir: A Dataset to Push the Limits of Visual SLAM | AirLab",
+      "form_endpoints": [],
+      "raw_forms_or_CSRF_values_saved": false,
+      "relevant_links": []
+    }
+  ],
+  "Virtual_KITTI_archive_HEAD": [
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_md5_checksums.txt",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_md5_checksums.txt",
+      "Content_Length": "587",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"24b-59ff315c022b7\"",
+      "Last_Modified": "Tue, 03 Mar 2020 13:14:34 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+      "Content_Length": "7532472320",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1c0f86800-59cd09a940149\"",
+      "Last_Modified": "Thu, 23 Jan 2020 15:50:44 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+      "Content_Length": "8145715200",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1e585c000-59ccf7f3a8e60\"",
+      "Last_Modified": "Thu, 23 Jan 2020 14:31:30 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz",
+      "Content_Length": "24451078",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1751806-59ff31163f537\"",
+      "Last_Modified": "Tue, 03 Mar 2020 13:13:21 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_rgb.tar",
+      "Content_Length": "7532472320",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1c0f86800-59cd09a940149\"",
+      "Last_Modified": "Thu, 23 Jan 2020 15:50:44 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_depth.tar",
+      "Content_Length": "8145715200",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1e585c000-59ccf7f3a8e60\"",
+      "Last_Modified": "Thu, 23 Jan 2020 14:31:30 GMT"
+    },
+    {
+      "url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz",
+      "method": "HEAD",
+      "raw_dataset_payload_bytes": 0,
+      "status": 200,
+      "final_url": "https://download.europe.naverlabs.com/virtual_kitti_2.0.3/vkitti_2.0.3_textgt.tar.gz",
+      "Content_Length": "24451078",
+      "Accept_Ranges": "bytes",
+      "ETag": "\"1751806-59ff31163f537\"",
+      "Last_Modified": "Tue, 03 Mar 2020 13:13:21 GMT"
+    }
+  ],
+  "raw_dataset_payload_downloaded": false,
+  "license_form_submitted": false,
+  "no_contacts_or_submissions": true,
+  "no_claim_sample_integrity_from_HEAD": true
+}

@@ -1,3 +1,13 @@
+# TASK007A Confidence calibration admission audit
+
+2026-11-26：10 cached VIPER frames; pixelwise GT admission failed. No calibration fit or GPU inference. 22/22 CPU mapping tests passed.
+
+[TASK007A final review](reviews/task007a-mpsfm-confidence-calibration-audit-20261126/FINAL_REVIEW.md) · [完整评审ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task007a-mpsfm-confidence-calibration-audit-20261126/GAMECAM_TASK007A_CONFIDENCE_CALIBRATION_AUDIT_REVIEW.zip) · [执行规范](docs/LOCAL_EXPERIMENT_WORKFLOW.md)
+
+TASK007A STOPPED_AT_DATA_ADMISSION. NLL, coverage and calibration curves not computed. No Scalix training or baseline change.
+
+---
+
 # 本地 RTX 5060 环境与三级执行规范
 
 2026-11-26：现有 gamecam-vo 环境，12/12 合成GPU检查通过；未运行研究模型。

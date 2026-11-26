@@ -1,0 +1,27 @@
+test_bad_confidence_rejected (test_variance_mapping.VarianceMappingTests.test_bad_confidence_rejected) ... ok
+test_bad_prediction_is_not_masked (test_variance_mapping.VarianceMappingTests.test_bad_prediction_is_not_masked) ... ok
+test_broadcasting_rejected (test_variance_mapping.VarianceMappingTests.test_broadcasting_rejected) ... ok
+test_clipping_order_cannot_be_swapped_with_interpolation (test_variance_mapping.VarianceMappingTests.test_clipping_order_cannot_be_swapped_with_interpolation) ... ok
+test_confidence_one_raw_zero (test_variance_mapping.VarianceMappingTests.test_confidence_one_raw_zero) ... ok
+test_empty_rejected (test_variance_mapping.VarianceMappingTests.test_empty_rejected) ... ok
+test_exact_reference_formula (test_variance_mapping.VarianceMappingTests.test_exact_reference_formula) ... ok
+test_float64 (test_variance_mapping.VarianceMappingTests.test_float64) ... ok
+test_inconsistent_bounds_rejected (test_variance_mapping.VarianceMappingTests.test_inconsistent_bounds_rejected) ... ok
+test_invalid_parameters_rejected (test_variance_mapping.VarianceMappingTests.test_invalid_parameters_rejected) ... ok
+test_max_std_before_final_multiplier (test_variance_mapping.VarianceMappingTests.test_max_std_before_final_multiplier) ... ok
+test_monotonic_before_clipping (test_variance_mapping.VarianceMappingTests.test_monotonic_before_clipping) ... ok
+test_negative_confidence_is_clipped_not_sigmoid (test_variance_mapping.VarianceMappingTests.test_negative_confidence_is_clipped_not_sigmoid) ... ok
+test_no_input_mutation (test_variance_mapping.VarianceMappingTests.test_no_input_mutation) ... ok
+test_prior_multiplier_is_on_std_not_variance (test_variance_mapping.VarianceMappingTests.test_prior_multiplier_is_on_std_not_variance) ... ok
+test_reference_absolute_floor (test_variance_mapping.VarianceMappingTests.test_reference_absolute_floor) ... ok
+test_reference_relative_floor_after_saturation (test_variance_mapping.VarianceMappingTests.test_reference_relative_floor_after_saturation) ... ok
+test_relative_variance_invariant_to_depth (test_variance_mapping.VarianceMappingTests.test_relative_variance_invariant_to_depth) ... ok
+test_scene_variance_is_positive_for_reference_defaults (test_variance_mapping.VarianceMappingTests.test_scene_variance_is_positive_for_reference_defaults) ... ok
+test_std_multiplier_order (test_variance_mapping.VarianceMappingTests.test_std_multiplier_order) ... ok
+test_superunit_confidence_raw_zero_is_exposed (test_variance_mapping.VarianceMappingTests.test_superunit_confidence_raw_zero_is_exposed) ... ok
+test_variance_scales_quadratically_with_depth_unit (test_variance_mapping.VarianceMappingTests.test_variance_scales_quadratically_with_depth_unit) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.065s
+
+OK

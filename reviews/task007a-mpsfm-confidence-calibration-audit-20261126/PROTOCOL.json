@@ -1,0 +1,25 @@
+{
+  "task": "TASK007A MP-SfM-style Confidence Calibration Audit",
+  "date_client": "2026-11-26 Asia/Shanghai",
+  "requested_dataset": "VIPER",
+  "primary_input": "Sealed Metric3D Native Confidence and depth outputs; existing cache only",
+  "execution": "Local gamecam-vo Conda environment; CPU intake/statistics; no model rerun needed",
+  "admission_required": [
+    "Matched pixelwise GT depth for the exact dataset/sequence/RGB IDs",
+    "Confirmed prediction/GT depth definition, unit conversion and scale provenance",
+    "Confirmed RGB-depth-confidence spatial transforms and GT-valid mask",
+    "Non-overlapping calibration/evaluation sequences with no test fitting",
+    "Sealed cached array identities and finite Confidence outputs"
+  ],
+  "stop_rule": "If GT, Confidence, units or GT-valid mask is unconfirmed, stop real-data calibration and error/NLL/coverage experiments. Report null, never substitute another dataset, camera poses or synthetic GT.",
+  "allowed_after_stop": "Evidence reporting and a standalone source-derived, unfitted mathematical mapping with synthetic software unit tests only; no dataset experiment",
+  "forbidden": [
+    "New Metric3D inference", "Backbone or baseline modification", "DROID-W execution",
+    "Full VIPER evaluation", "Test-set fitting", "GT-derived per-frame scale correction",
+    "Training a Scalix-style prediction head", "New raw dataset acquisition", "Next research phase"
+  ],
+  "confidence_semantics": "Raw model score, not a probability",
+  "calibration_model_fitted": false,
+  "source_reference": "cvg/mpsfm at fa49640862391437865b2fd89ca3db3e6948b63b",
+  "publication": "Full original review ZIP and expanded files to existing Public repository; verify readback, then remove only this local delivered ZIP"
+}

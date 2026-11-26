@@ -1,0 +1,8 @@
+First local admission-script execution, 2026-11-26 (Asia/Shanghai).
+Exit code: 1. No fitting or GPU execution occurred.
+Python subprocess decoded rg's UTF-8 Chinese filenames using the Windows GBK
+default, raising UnicodeDecodeError in _readerthread, then AttributeError when
+the unavailable stdout was accessed. The already-written Confidence integrity
+table was retained. Correction: explicitly decode subprocess output as UTF-8;
+accept an existing byte-identical table, refuse to overwrite different evidence.
+The failed attempt does not establish data admission or statistical calibration.

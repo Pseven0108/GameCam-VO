@@ -1,0 +1,5 @@
+The next intake execution refused to replace the existing archive inventory:
+rg returned the same archive entries in a different traversal order. No original
+table was overwritten. Final snapshot reuse compares every CSV field independent
+of row order and preserves the first output bytes when the values are identical.
+This was an audit-script ordering issue, not a dataset change or admission PASS.

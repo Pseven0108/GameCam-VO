@@ -1,0 +1,8 @@
+Second local intake execution stopped at the explicit loose-candidate guard.
+44 candidate files existed in historical VIPER audit folders. Inspection showed
+HTML response bodies, ZIP range/central-directory/tail fragments and three NPZs
+containing optical-flow fields u/v (1080x1920 float16), not matched VIPER depth.
+The candidate inventory was retained. The final auditor records each header and
+classification; unverified archive tails remain unverified and are not discarded,
+decoded as depth or used to infer official dataset completeness.
+No calibration fitting, GT error calculation or GPU execution occurred.

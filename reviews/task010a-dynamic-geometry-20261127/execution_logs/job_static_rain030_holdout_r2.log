@@ -1,0 +1,80 @@
+D:\aaa\envs\gamecam-vo\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\TensorShape.cpp:4209.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{
+  "status": "INDEPENDENT_INFERENCE_COMPLETE",
+  "input_shape": [
+    1,
+    32,
+    4,
+    160,
+    280
+  ],
+  "queries": 100,
+  "precision": "fp32",
+  "seconds": 0.9311915999860503,
+  "seconds_per_frame": 0.02909973749956407,
+  "peak_allocated_bytes": 511696384,
+  "peak_reserved_bytes": 778043392,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132",
+  "checkpoint_sha256": "c1189d8d6912798e66b99b3e853ce644f587ed57837a5e7bb768405980dc1422",
+  "depth_source": "Cached official Metric3D prediction; not GT or official UniDepth pipeline",
+  "outputs": {
+    "total_xy": {
+      "shape": [
+        1,
+        32,
+        100,
+        2
+      ],
+      "min": -661.09765625,
+      "median": 81.40451049804688,
+      "max": 267.6340026855469
+    },
+    "track_depth": {
+      "shape": [
+        1,
+        32,
+        100,
+        1
+      ],
+      "min": -0.7532919645309448,
+      "median": 3.553844451904297,
+      "max": 46.609256744384766
+    },
+    "static_xyz": {
+      "shape": [
+        1,
+        32,
+        100,
+        3
+      ],
+      "min": -801.922119140625,
+      "median": 40.30353546142578,
+      "max": 267.6340026855469
+    },
+    "visibility": {
+      "shape": [
+        1,
+        32,
+        100
+      ],
+      "min": 5.866634467110998e-08,
+      "median": 0.9998821020126343,
+      "max": 1.0
+    },
+    "dynamic_probability": {
+      "shape": [
+        1,
+        32,
+        100
+      ],
+      "min": 8.068233581237649e-11,
+      "median": 0.0007219871622510254,
+      "max": 1.0
+    }
+  },
+  "dynamic_gt_available": false,
+  "accuracy_claim": false,
+  "droid_integration_complete": false
+}

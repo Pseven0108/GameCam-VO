@@ -1,0 +1,142 @@
+[
+  {
+    "title": "DynOSeg: Dynamic Object Segmentation via Motion-Geometry Fusion",
+    "doi": "10.48550/arxiv.2611.04452",
+    "authors": [
+      "Xu Han",
+      "Yiduo Wang",
+      "Yiran Wang",
+      "Viorela Ila"
+    ],
+    "year": 2026,
+    "publication_date": "2026-11-03",
+    "cited_by_count": 0,
+    "journal": "arXiv",
+    "abstract": "Moving Object Segmentation (MOS) detects and separates dynamic objects from the static background in a video, which plays a fundamental role in dynamic-scene understanding. Most MOS methods rely on pure visual motion cues alone, such as optical flow or point tracks, which is inherently ambiguous due to the compounded camera and object motions as well as motion-induced appearance changes, e.g. shadows and reflections. Naive fusion of additional information such as depth and semantics, however, ca",
+    "openalex_id": "https://openalex.org/W7225254071",
+    "relevance_score": 64.59689
+  },
+  {
+    "title": "Video Object Segmentation and Tracking: A Survey",
+    "doi": "10.1145/3391743",
+    "authors": [
+      "Rui Yao",
+      "Guosheng Lin",
+      "Shixiong Xia",
+      "Jiaqi Zhao",
+      "Yong Zheng Zhou"
+    ],
+    "year": 2020,
+    "publication_date": "2020-05-25",
+    "cited_by_count": 261,
+    "journal": "ACM Transactions on Intelligent Systems and Technology",
+    "abstract": "Object segmentation and object tracking are fundamental research areas in the computer vision community. These two topics are difficult to handle some common challenges, such as occlusion, deformation, motion blur, scale variation, and more. The former contains heterogeneous object, interacting object, edge ambiguity, and shape complexity; the latter suffers from difficulties in handling fast motion, out-of-view, and real-time processing. Combining the two problems of Video Object Segmentation a",
+    "openalex_id": "https://openalex.org/W3033114334",
+    "relevance_score": 60.962433
+  },
+  {
+    "title": "On Moving Object Segmentation from Monocular Video with Transformers",
+    "doi": "10.1109/iccvw60793.2023.00095",
+    "authors": [
+      "Christian Homeyer",
+      "Christoph Schnörr"
+    ],
+    "year": 2023,
+    "publication_date": "2023-10-02",
+    "cited_by_count": 9,
+    "journal": "IEEE International Conference on Computer Vision Workshops",
+    "abstract": "Moving object detection and segmentation from a single moving camera is a challenging task, requiring an understanding of recognition, motion and 3D geometry. Combining both recognition and reconstruction boils down to a fusion problem, where appearance and motion features need to be combined for classification and segmentation.In this paper, we present a novel fusion architecture for monocular motion segmentation - M3Former, which leverages the strong performance of transformers for segmentatio",
+    "openalex_id": "https://openalex.org/W4390190104",
+    "relevance_score": 60.129944
+  },
+  {
+    "title": "Joint Stereo Video Deblurring, Scene Flow Estimation and Moving Object Segmentation",
+    "doi": "10.1109/tip.2019.2945867",
+    "authors": [
+      "Liyuan Pan",
+      "Yuchao Dai",
+      "Miaomiao Liu",
+      "Fatih Porikli",
+      "Quan Pan"
+    ],
+    "year": 2019,
+    "publication_date": "2019-10-11",
+    "cited_by_count": 37,
+    "journal": "IEEE Transactions on Image Processing",
+    "abstract": "Stereo videos for the dynamic scenes often show unpleasant blurred effects due to the camera motion and the multiple moving objects with large depth variations. Given consecutive blurred stereo video frames, we aim to recover the latent clean images, estimate the 3D scene flow and segment the multiple moving objects. These three tasks have been previously addressed separately, which fail to exploit the internal connections among these tasks and cannot achieve optimality. In this paper, we propos",
+    "openalex_id": "https://openalex.org/W2979443781",
+    "relevance_score": 58.53032
+  },
+  {
+    "title": "SAVi++: Towards End-To-End Object-Centric Learning from Real-World Videos",
+    "doi": "10.52202/068431-2098",
+    "authors": [
+      "Gamaleldin F. Elsayed",
+      "Aravindh Mahendran",
+      "Sjoerd van Steenkiste",
+      "Klaus Greff",
+      "Michael Mozer"
+    ],
+    "year": 2022,
+    "publication_date": "2022-01-01",
+    "cited_by_count": 226,
+    "journal": "neural information processing systems",
+    "abstract": "The visual world can be parsimoniously characterized in terms of distinct entities with sparse interactions. Discovering this compositional structure in dynamic visual scenes has proven challenging for end-to-end computer vision approaches unless explicit instance-level supervision is provided. Slot-based models leveraging motion cues have recently shown great promise in learning to represent, segment, and track objects without direct supervision, but they still fail to scale to complex real-wor",
+    "openalex_id": "https://openalex.org/W7133215866",
+    "relevance_score": 53.043823
+  },
+  {
+    "title": "Moving object detection and segmentation in urban environments from a moving platform",
+    "doi": "10.1016/j.imavis.2017.07.006",
+    "authors": [
+      "Dingfu Zhou",
+      "Vincent Frémont",
+      "Benjamin Quost",
+      "Yuchao Dai",
+      "Hongdong Li"
+    ],
+    "year": 2017,
+    "publication_date": "2017-08-05",
+    "cited_by_count": 47,
+    "journal": "Image and Vision Computing",
+    "abstract": "",
+    "openalex_id": "https://openalex.org/W2745012865",
+    "relevance_score": 52.603107
+  },
+  {
+    "title": "D2NeRF: Self-Supervised Decoupling of Dynamic and Static Objects from a Monocular Video",
+    "doi": "10.52202/068431-2366",
+    "authors": [
+      "Tianhao Wu",
+      "Fangcheng Zhong",
+      "Andrea Tagliasacchi",
+      "Forrester H. Cole",
+      "Cengiz Öztireli"
+    ],
+    "year": 2022,
+    "publication_date": "2022-01-01",
+    "cited_by_count": 206,
+    "journal": "neural information processing systems",
+    "abstract": "Given a monocular video, segmenting and decoupling dynamic objects while recovering the static environment is a widely studied problem in machine intelligence. Existing solutions usually approach this problem in the image domain, limiting their performance and understanding of the environment. We introduce Decoupled Dynamic Neural Radiance Field (D$^2$NeRF), a self-supervised approach that takes a monocular video and learns a 3D scene representation which decouples moving objects, including thei",
+    "openalex_id": "https://openalex.org/W7133204112",
+    "relevance_score": 52.276447
+  },
+  {
+    "title": "Unsupervised Online Video Object Segmentation With Motion Property Understanding",
+    "doi": "10.1109/tip.2019.2930152",
+    "authors": [
+      "Tao Zhuo",
+      "Zhiyong Cheng",
+      "Peng Zhang",
+      "Yongkang Wong",
+      "Mohan Kankanhalli"
+    ],
+    "year": 2019,
+    "publication_date": "2019-07-26",
+    "cited_by_count": 104,
+    "journal": "IEEE Transactions on Image Processing",
+    "abstract": "Unsupervised video object segmentation aims to automatically segment moving objects over an unconstrained video without any user annotation. So far, only few unsupervised online methods have been reported in the literature, and their performance is still far from satisfactory because the complementary information from future frames cannot be processed under online setting. To solve this challenging problem, in this paper, we propose a novel unsupervised online video object segmentation (UOVOS) f",
+    "openalex_id": "https://openalex.org/W2896430471",
+    "relevance_score": 51.94901
+  }
+]

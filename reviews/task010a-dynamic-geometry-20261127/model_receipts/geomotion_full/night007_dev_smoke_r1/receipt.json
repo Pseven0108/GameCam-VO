@@ -1,0 +1,33 @@
+{
+  "status": "FAILED",
+  "dataset": "night007_dev",
+  "model": "Full_GeoMotion_raw_detector",
+  "SAM2_refinement": false,
+  "temporal_context": 4,
+  "pixel_limit": 255000,
+  "GT_loaded": false,
+  "encoder_timings": [
+    {
+      "context": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "raft_seconds": 0.9891889000427909,
+      "peak_allocated_bytes": 335511552
+    }
+  ],
+  "frames": [],
+  "RAFT_helper_source_sha256": "9407c296431b0500257f2e546f78878fc30c8e8fb06aea565ecbba5be3bbb808",
+  "RAFT_native_hidden_equivalence": {
+    "max_abs": 0.0,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "PASS": true,
+    "source_rgb": 301,
+    "target_rgb": 302
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\aaa\\GameCam-VO-TASK010-A\\experiments\\TASK010-A\\scripts\\infer_full_geomotion.py\", line 86, in main\n    model.cuda().eval();receipt['strict_model_load']=True\n    ^^^^^^^^^^^^\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1098, in cuda\n    return self._apply(lambda t: t.cuda(device))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 933, in _apply\n    module._apply(fn)\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 933, in _apply\n    module._apply(fn)\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 933, in _apply\n    module._apply(fn)\n  [Previous line repeated 2 more times]\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 966, in _apply\n    param_applied = fn(param)\n                    ^^^^^^^^^\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1098, in <lambda>\n    return self._apply(lambda t: t.cuda(device))\n                                 ^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 7.96 GiB of which 3.80 GiB is free. Of the allocated memory 2.98 GiB is allocated by PyTorch, and 6.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+  "total_seconds": 7.233456999994814
+}

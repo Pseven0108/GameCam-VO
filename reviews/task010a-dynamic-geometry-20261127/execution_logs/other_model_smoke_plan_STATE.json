@@ -1,0 +1,48 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\other_model_smoke_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "geo_smoke_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--dataset",
+        "night007_dev",
+        "--model",
+        "geomotion",
+        "--limit",
+        "4",
+        "--output-suffix",
+        "_smoke_r1"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737818.839185,
+      "exit_code": 0,
+      "seconds": 12.514573574066162
+    },
+    {
+      "id": "pi3_smoke_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--dataset",
+        "night007_dev",
+        "--model",
+        "pi3mos",
+        "--limit",
+        "1",
+        "--output-suffix",
+        "_smoke_r1"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737831.3537586,
+      "exit_code": 0,
+      "seconds": 11.53694748878479
+    }
+  ]
+}

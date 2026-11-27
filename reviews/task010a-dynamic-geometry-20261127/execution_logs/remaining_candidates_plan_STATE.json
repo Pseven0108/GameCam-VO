@@ -1,0 +1,295 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\remaining_candidates_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "geomotion_fullwindow_night007_dev",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "night007_dev"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737942.049794,
+      "exit_code": 0,
+      "seconds": 19.33459448814392
+    },
+    {
+      "id": "geomotion_fullwindow_day004_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "day004_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737961.3853934,
+      "exit_code": 0,
+      "seconds": 17.424923181533813
+    },
+    {
+      "id": "geomotion_fullwindow_sunset007_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "sunset007_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737978.811316,
+      "exit_code": 0,
+      "seconds": 17.34174108505249
+    },
+    {
+      "id": "geomotion_fullwindow_rain030_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "rain030_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737996.1540573,
+      "exit_code": 0,
+      "seconds": 17.507612228393555
+    },
+    {
+      "id": "geomotion_fullwindow_night008_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "night008_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738013.662668,
+      "exit_code": 0,
+      "seconds": 17.891214847564697
+    },
+    {
+      "id": "geomotion_fullwindow_snow032_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "snow032_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738031.5543895,
+      "exit_code": 0,
+      "seconds": 18.033596992492676
+    },
+    {
+      "id": "geomotion_fullwindow_downtown1_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "downtown1_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738049.5889857,
+      "exit_code": 0,
+      "seconds": 18.469924926757812
+    },
+    {
+      "id": "geomotion_fullwindow_downtown2_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "downtown2_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738068.0589106,
+      "exit_code": 0,
+      "seconds": 18.335781574249268
+    },
+    {
+      "id": "geomotion_fullwindow_wildworld_thirdperson_qual",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "geomotion",
+        "--dataset",
+        "wildworld_thirdperson_qual"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738086.3956919,
+      "exit_code": 0,
+      "seconds": 17.71553683280945
+    },
+    {
+      "id": "pi3_transfer_day004_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "day004_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738104.1122327,
+      "exit_code": 0,
+      "seconds": 28.635582208633423
+    },
+    {
+      "id": "pi3_transfer_sunset007_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "sunset007_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738132.748815,
+      "exit_code": 0,
+      "seconds": 26.303813457489014
+    },
+    {
+      "id": "pi3_transfer_rain030_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "rain030_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738159.0536275,
+      "exit_code": 0,
+      "seconds": 26.635448694229126
+    },
+    {
+      "id": "pi3_transfer_night008_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "night008_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738185.690076,
+      "exit_code": 0,
+      "seconds": 25.337008476257324
+    },
+    {
+      "id": "pi3_transfer_snow032_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "snow032_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738211.028084,
+      "exit_code": 0,
+      "seconds": 25.583770751953125
+    },
+    {
+      "id": "pi3_transfer_downtown1_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "downtown1_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738236.6129496,
+      "exit_code": 0,
+      "seconds": 25.631178855895996
+    },
+    {
+      "id": "pi3_transfer_downtown2_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "downtown2_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738262.2451284,
+      "exit_code": 0,
+      "seconds": 25.696135759353638
+    },
+    {
+      "id": "pi3_transfer_wildworld_thirdperson_qual",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "pi3mos",
+        "--dataset",
+        "wildworld_thirdperson_qual"
+      ],
+      "status": "COMPLETE",
+      "started": 1795738287.9422638,
+      "exit_code": 0,
+      "seconds": 26.53544545173645
+    }
+  ]
+}

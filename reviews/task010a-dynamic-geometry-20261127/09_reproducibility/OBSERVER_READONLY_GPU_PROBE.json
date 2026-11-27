@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "poses_unchanged": true,
+  "disps_unchanged": true,
+  "K_unchanged": true,
+  "CPU_RNG_unchanged": true,
+  "CUDA_RNG_unchanged": true,
+  "coordinates_finite": true,
+  "self_edge_and_cross_edges_tested": true,
+  "model_loaded": false,
+  "native_BA_called": false,
+  "full_SLAM_called": false,
+  "limit": "State/RNG preservation does not eliminate scheduling effects on later atomic numerical reductions"
+}

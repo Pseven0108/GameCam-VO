@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/native_forkserver_controller.py", line 92, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/native_forkserver_controller.py", line 61, in main
+    child=ctx.Process(target=cpu_probe,args=(str(cpu_path),));child.start();child.join()
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/context.py", line 300, in _Popen
+    return Popen(process_obj)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/popen_forkserver.py", line 35, in __init__
+    super().__init__(process_obj)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/popen_forkserver.py", line 51, in _launch
+    self.sentinel, w = forkserver.connect_to_new_process(self._fds)
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/forkserver.py", line 84, in connect_to_new_process
+    self.ensure_running()
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/multiprocessing/forkserver.py", line 138, in ensure_running
+    listener.bind(address)
+OSError: [Errno 95] Operation not supported

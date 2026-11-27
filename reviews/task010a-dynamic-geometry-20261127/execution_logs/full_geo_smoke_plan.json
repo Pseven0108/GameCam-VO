@@ -1,0 +1,17 @@
+[
+  {
+    "id": "full_geo_smoke_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "night007_dev",
+      "--limit",
+      "4",
+      "--output-suffix",
+      "_smoke_r1"
+    ]
+  }
+]

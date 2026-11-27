@@ -1,0 +1,15 @@
+ENTER_FRESH_CHILD 24 experiments/TASK010-A/scripts/observer_readonly_probe.py
+Traceback (most recent call last):
+  File "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/native_development_controller_r4.py", line 56, in execute
+    runpy.run_path(script,run_name='__main__')
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/mnt/d/aaa/GameCam-VO-TASK009/runtime/python310/python/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "experiments/TASK010-A/scripts/observer_readonly_probe.py", line 9, in <module>
+    install()
+  File "/mnt/d/aaa/GameCam-VO-TASK010-A/gamecam/compat/torch_scatter_python.py", line 18, in install
+    raise RuntimeError('Select the scatter compatibility path before model imports')
+RuntimeError: Select the scatter compatibility path before model imports

@@ -1,0 +1,68 @@
+FULL_MODEL_SMOKE_PASS_STARTING_FIXED_NINE_WINDOWS
+START_JOB full_geomotion_night007_dev_r1
+END_JOB full_geomotion_night007_dev_r1 25.210564374923706
+START_JOB full_geomotion_day004_holdout_r1
+END_JOB full_geomotion_day004_holdout_r1 24.166780710220337
+START_JOB full_geomotion_sunset007_holdout_r1
+END_JOB full_geomotion_sunset007_holdout_r1 23.088680267333984
+START_JOB full_geomotion_rain030_holdout_r1
+END_JOB full_geomotion_rain030_holdout_r1 23.087297916412354
+START_JOB full_geomotion_night008_holdout_r1
+END_JOB full_geomotion_night008_holdout_r1 23.120951890945435
+START_JOB full_geomotion_snow032_holdout_r1
+END_JOB full_geomotion_snow032_holdout_r1 23.128506422042847
+START_JOB full_geomotion_downtown1_holdout_r1
+END_JOB full_geomotion_downtown1_holdout_r1 23.140182495117188
+START_JOB full_geomotion_downtown2_holdout_r1
+END_JOB full_geomotion_downtown2_holdout_r1 23.095065355300903
+START_JOB full_geomotion_wildworld_thirdperson_qual_r1
+END_JOB full_geomotion_wildworld_thirdperson_qual_r1 23.10065197944641
+gmos day004_holdout 32
+gmos downtown1_holdout 32
+gmos downtown2_holdout 32
+gmos night007_dev 32
+gmos night008_holdout 32
+gmos rain030_holdout 32
+gmos snow032_holdout 32
+gmos sunset007_holdout 32
+gmos wildworld_thirdperson_qual 32
+pi3mos day004_holdout 32
+pi3mos downtown1_holdout 32
+pi3mos downtown2_holdout 32
+pi3mos night007_dev 32
+pi3mos night007_dev_smoke_r1 1
+pi3mos night008_holdout 32
+pi3mos rain030_holdout 32
+pi3mos snow032_holdout 32
+pi3mos sunset007_holdout 32
+pi3mos wildworld_thirdperson_qual 32
+geomotion day004_holdout 32
+geomotion downtown1_holdout 32
+geomotion downtown2_holdout 32
+geomotion night007_dev 32
+geomotion night007_dev_smoke_r1 4
+geomotion night008_holdout 32
+geomotion rain030_holdout 32
+geomotion snow032_holdout 32
+geomotion sunset007_holdout 32
+geomotion wildworld_thirdperson_qual 32
+geomotion_full day004_holdout 32
+geomotion_full downtown1_holdout 32
+geomotion_full downtown2_holdout 32
+geomotion_full night007_dev 32
+geomotion_full night007_dev_smoke_r2 4
+geomotion_full night008_holdout 32
+geomotion_full rain030_holdout 32
+geomotion_full snow032_holdout 32
+geomotion_full sunset007_holdout 32
+geomotion_full wildworld_thirdperson_qual 32
+All 1152 saved prediction arrays pass finite/identity/decode/SHA; no motion accuracy inference
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 55, in main
+    wait_status(TASK/'private/forkserver_transfer_STATE.json')
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 19, in wait_status
+    raise RuntimeError('Upstream stage stopped: '+str(path))
+RuntimeError: Upstream stage stopped: D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\private\forkserver_transfer_STATE.json

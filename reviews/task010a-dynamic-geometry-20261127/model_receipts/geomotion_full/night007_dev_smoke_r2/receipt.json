@@ -1,0 +1,120 @@
+{
+  "status": "COMPLETE",
+  "dataset": "night007_dev",
+  "model": "Full_GeoMotion_raw_detector",
+  "SAM2_refinement": false,
+  "temporal_context": 4,
+  "pixel_limit": 255000,
+  "GT_loaded": false,
+  "encoder_timings": [
+    {
+      "context": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "raft_seconds": 1.0095622999942861,
+      "peak_allocated_bytes": 335511552
+    }
+  ],
+  "frames": [
+    {
+      "rgb_id": 301,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.09489180892705917,
+      "p90": 0.503548264503479,
+      "p99": 0.9004663825035095,
+      "fraction_gt_point4": 0.12833837238599144,
+      "fraction_gt_point5": 0.10139125094482238,
+      "chunk_seconds": 4.323691500001587,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 302,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.12749575078487396,
+      "p90": 0.7258733510971069,
+      "p99": 0.9593703150749207,
+      "fraction_gt_point4": 0.1496204963466868,
+      "fraction_gt_point5": 0.13882196397077348,
+      "chunk_seconds": 4.323691500001587,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 303,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.16088581085205078,
+      "p90": 0.8887777328491211,
+      "p99": 0.974254310131073,
+      "fraction_gt_point4": 0.18577963592844546,
+      "fraction_gt_point5": 0.17663847946586042,
+      "chunk_seconds": 4.323691500001587,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 304,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1008663922548294,
+      "p90": 0.5356703996658325,
+      "p99": 0.9392905831336975,
+      "fraction_gt_point4": 0.1231300390526581,
+      "fraction_gt_point5": 0.10745386117409927,
+      "chunk_seconds": 4.323691500001587,
+      "peak_allocated_bytes": 379013120
+    }
+  ],
+  "FP32_module_storage_offload": true,
+  "autocast": "BF16; FP32 checkpoint storage",
+  "source_script_sha256": "8e79f387b1de3171f73e6df9312c04701230cf801c1669dc633c48c1bcec53fb",
+  "RAFT_helper_source_sha256": "9407c296431b0500257f2e546f78878fc30c8e8fb06aea565ecbba5be3bbb808",
+  "RAFT_native_hidden_equivalence": {
+    "max_abs": 0.0,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "PASS": true,
+    "source_rgb": 301,
+    "target_rgb": 302
+  },
+  "strict_model_load": true,
+  "offload_synthetic_contract_passed": true,
+  "all_original_CPU_tensor_objects_restored": true,
+  "offloaded_module_calls": 668,
+  "total_seconds": 8.418147199961822
+}

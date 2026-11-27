@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE",
+  "gate": false,
+  "static_tracks": null,
+  "original_droid_slam_ran": false,
+  "local_exploratory_protocol": true,
+  "seed": 44,
+  "dataset": "sunset007_holdout",
+  "method": "depth_fusion",
+  "input_frames": 32,
+  "not_formal_R2_equivalence": true,
+  "gate_config": {
+    "alpha": 1.0,
+    "beta": 1.0,
+    "floor": 0.1
+  },
+  "model_prior_inference_included_in_timing": false,
+  "source_sha256": {
+    "experiments/TASK010-A/scripts/run_window_v2.py": "0ab61f848ac3d9e7b1bb48a25baca96d9309abec118d4191cdacec60ce4c5f08",
+    "gamecam/modules/dynamic_prior/droid_adapter.py": "06e193d52d63437af895ee516981e72b0e1cce802b2767bcaef8a361f59e1201",
+    "gamecam/modules/dynamic_prior/dynamic_mask.py": "bea8ec2c2494fe083b94904130747266d3c394b69911630e4235cf4b2931ac12",
+    "gamecam/modules/motion_decomposition/droid_adapter.py": "abac37c43e9cdb88c683084be369f006cb4e1a959d88281cd27de0b3297444dd",
+    "experiments/TASK010-A/scripts/task010_fusion_v2.py": "fbe60e7a840b1328530bdc7442c4d6642eafbb996dd4b1b8de6ab6d57f49bc2a"
+  },
+  "scatter_compatibility": {
+    "mode": "UPSTREAM_PURE_PYTORCH_SUM_MEAN_ONLY",
+    "scatter_py_sha256": "68b23f27c45bfb37a3fe066c75bd1c3dd711cbf5d8385aa9708f912c6916c3bc",
+    "utils_py_sha256": "0e3e310ffb443ff047116f8c330afb76dce2bbf3c00c3a029b44d9097ea195f9",
+    "custom_scatter_binary_loaded": false,
+    "native_torch_scatter_add_used": true
+  },
+  "protocol_deviations": [
+    "32-frame local exploratory dataset sunset007_holdout",
+    "216x384 / buffer64 / warmup6 / force-keyframe-every2",
+    "cached official priors at reduced canonical resolution with BF16",
+    "serial tracking process; Gaussian mapping and live visualization not launched"
+  ],
+  "prior_receipt_sha256": "efa59f8cbba6f341c52d833310321c11d93349e5e15b8dbda90fd043bcd7f6a0",
+  "checkpoint_sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+  "frames": 32,
+  "keyframes": 16,
+  "native_u_enabled": true,
+  "native_ba_calls": 117,
+  "gate_calls": 117,
+  "static_calls": 0,
+  "tracking_seconds": 11.660296721000122,
+  "total_seconds": 17.03159716600021,
+  "peak_allocated_bytes": 1317524480,
+  "peak_reserved_bytes": 1849688064,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.7.1+cu128",
+  "native_extension_sha256": "c3b0e68bb2f87e1a89e0a3ef6b6bba53aedfca3fefa6253e6d57f6e74bc8dd9d"
+}

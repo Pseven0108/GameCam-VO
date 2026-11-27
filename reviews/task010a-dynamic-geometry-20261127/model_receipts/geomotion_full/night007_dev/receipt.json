@@ -1,0 +1,750 @@
+{
+  "status": "COMPLETE",
+  "dataset": "night007_dev",
+  "model": "Full_GeoMotion_raw_detector",
+  "SAM2_refinement": false,
+  "temporal_context": 4,
+  "pixel_limit": 255000,
+  "GT_loaded": false,
+  "encoder_timings": [
+    {
+      "context": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "raft_seconds": 0.7917619000072591,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        305,
+        306,
+        307,
+        308
+      ],
+      "raft_seconds": 0.3599440000252798,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        309,
+        310,
+        311,
+        312
+      ],
+      "raft_seconds": 0.3789593999972567,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "raft_seconds": 0.3695698999799788,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        317,
+        318,
+        319,
+        320
+      ],
+      "raft_seconds": 0.36192459997255355,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        321,
+        322,
+        323,
+        324
+      ],
+      "raft_seconds": 0.36476859997492284,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        325,
+        326,
+        327,
+        328
+      ],
+      "raft_seconds": 0.36716209998121485,
+      "peak_allocated_bytes": 335511552
+    },
+    {
+      "context": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "raft_seconds": 0.3735630000010133,
+      "peak_allocated_bytes": 335511552
+    }
+  ],
+  "frames": [
+    {
+      "rgb_id": 301,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.09489180892705917,
+      "p90": 0.503548264503479,
+      "p99": 0.9004663825035095,
+      "fraction_gt_point4": 0.12833837238599144,
+      "fraction_gt_point5": 0.10139125094482238,
+      "chunk_seconds": 2.1692730999784544,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 302,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.12749575078487396,
+      "p90": 0.7258733510971069,
+      "p99": 0.9593703150749207,
+      "fraction_gt_point4": 0.1496204963466868,
+      "fraction_gt_point5": 0.13882196397077348,
+      "chunk_seconds": 2.1692730999784544,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 303,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.16088581085205078,
+      "p90": 0.8887777328491211,
+      "p99": 0.974254310131073,
+      "fraction_gt_point4": 0.18577963592844546,
+      "fraction_gt_point5": 0.17663847946586042,
+      "chunk_seconds": 2.1692730999784544,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 304,
+      "context_rgb_ids": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1008663922548294,
+      "p90": 0.5356703996658325,
+      "p99": 0.9392905831336975,
+      "fraction_gt_point4": 0.1231300390526581,
+      "fraction_gt_point5": 0.10745386117409927,
+      "chunk_seconds": 2.1692730999784544,
+      "peak_allocated_bytes": 379013120
+    },
+    {
+      "rgb_id": 305,
+      "context_rgb_ids": [
+        305,
+        306,
+        307,
+        308
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.14088435471057892,
+      "p90": 0.810564398765564,
+      "p99": 0.9715266823768616,
+      "fraction_gt_point4": 0.16602891156462585,
+      "fraction_gt_point5": 0.15262030738221213,
+      "chunk_seconds": 1.1179508999921381,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 306,
+      "context_rgb_ids": [
+        305,
+        306,
+        307,
+        308
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1056533083319664,
+      "p90": 0.552789568901062,
+      "p99": 0.9666767120361328,
+      "fraction_gt_point4": 0.13744803476946335,
+      "fraction_gt_point5": 0.1131346056941295,
+      "chunk_seconds": 1.1179508999921381,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 307,
+      "context_rgb_ids": [
+        305,
+        306,
+        307,
+        308
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.15735864639282227,
+      "p90": 0.8284223079681396,
+      "p99": 0.9692732095718384,
+      "fraction_gt_point4": 0.18914556563366086,
+      "fraction_gt_point5": 0.17859111237087427,
+      "chunk_seconds": 1.1179508999921381,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 308,
+      "context_rgb_ids": [
+        305,
+        306,
+        307,
+        308
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0973055511713028,
+      "p90": 0.4513241648674011,
+      "p99": 0.9442950487136841,
+      "fraction_gt_point4": 0.11902793524817334,
+      "fraction_gt_point5": 0.08267589443184681,
+      "chunk_seconds": 1.1179508999921381,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 309,
+      "context_rgb_ids": [
+        309,
+        310,
+        311,
+        312
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.19398841261863708,
+      "p90": 0.9337390065193176,
+      "p99": 0.9722141027450562,
+      "fraction_gt_point4": 0.2136125283446712,
+      "fraction_gt_point5": 0.21157722348198538,
+      "chunk_seconds": 1.1314408999751322,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 310,
+      "context_rgb_ids": [
+        309,
+        310,
+        311,
+        312
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.18028680980205536,
+      "p90": 0.8485034704208374,
+      "p99": 0.9713807702064514,
+      "fraction_gt_point4": 0.21571082136558328,
+      "fraction_gt_point5": 0.2117425673973293,
+      "chunk_seconds": 1.1314408999751322,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 311,
+      "context_rgb_ids": [
+        309,
+        310,
+        311,
+        312
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.2101382464170456,
+      "p90": 0.9670270681381226,
+      "p99": 0.9872792959213257,
+      "fraction_gt_point4": 0.2229229654824893,
+      "fraction_gt_point5": 0.22162383471907282,
+      "chunk_seconds": 1.1314408999751322,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 312,
+      "context_rgb_ids": [
+        309,
+        310,
+        311,
+        312
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1639445275068283,
+      "p90": 0.8695764541625977,
+      "p99": 0.9803244471549988,
+      "fraction_gt_point4": 0.1946530927185689,
+      "fraction_gt_point5": 0.17935090702947845,
+      "chunk_seconds": 1.1314408999751322,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 313,
+      "context_rgb_ids": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.11276897042989731,
+      "p90": 0.437990665435791,
+      "p99": 0.9650136232376099,
+      "fraction_gt_point4": 0.12178366717057193,
+      "fraction_gt_point5": 0.07469608213655833,
+      "chunk_seconds": 1.0443769000121392,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 314,
+      "context_rgb_ids": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1287025809288025,
+      "p90": 0.5348503589630127,
+      "p99": 0.9806084036827087,
+      "fraction_gt_point4": 0.1507542831947594,
+      "fraction_gt_point5": 0.10857977450239355,
+      "chunk_seconds": 1.0443769000121392,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 315,
+      "context_rgb_ids": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.17518386244773865,
+      "p90": 0.8236020803451538,
+      "p99": 0.9834107160568237,
+      "fraction_gt_point4": 0.21275825144872765,
+      "fraction_gt_point5": 0.19413737717309146,
+      "chunk_seconds": 1.0443769000121392,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 316,
+      "context_rgb_ids": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.08974441140890121,
+      "p90": 0.24758833646774292,
+      "p99": 0.9853635430335999,
+      "fraction_gt_point4": 0.06769652305366591,
+      "fraction_gt_point5": 0.05865772234819854,
+      "chunk_seconds": 1.0443769000121392,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 317,
+      "context_rgb_ids": [
+        317,
+        318,
+        319,
+        320
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.058515165001153946,
+      "p90": 0.029458265751600266,
+      "p99": 0.9724711775779724,
+      "fraction_gt_point4": 0.056008282942806756,
+      "fraction_gt_point5": 0.05552799823633157,
+      "chunk_seconds": 0.9962142999866046,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 318,
+      "context_rgb_ids": [
+        317,
+        318,
+        319,
+        320
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.08115296810865402,
+      "p90": 0.2073497325181961,
+      "p99": 0.9756899476051331,
+      "fraction_gt_point4": 0.05286674855127236,
+      "fraction_gt_point5": 0.05239040060468632,
+      "chunk_seconds": 0.9962142999866046,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 319,
+      "context_rgb_ids": [
+        317,
+        318,
+        319,
+        320
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.1139037013053894,
+      "p90": 0.4253250062465668,
+      "p99": 0.9772869348526001,
+      "fraction_gt_point4": 0.11228820231796423,
+      "fraction_gt_point5": 0.06549193751574704,
+      "chunk_seconds": 0.9962142999866046,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 320,
+      "context_rgb_ids": [
+        317,
+        318,
+        319,
+        320
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0674857497215271,
+      "p90": 0.19169524312019348,
+      "p99": 0.9796209931373596,
+      "fraction_gt_point4": 0.0388361363063744,
+      "fraction_gt_point5": 0.03821019148400101,
+      "chunk_seconds": 0.9962142999866046,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 321,
+      "context_rgb_ids": [
+        321,
+        322,
+        323,
+        324
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.03831351548433304,
+      "p90": 0.07974166423082352,
+      "p99": 0.9618155360221863,
+      "fraction_gt_point4": 0.025620433358528597,
+      "fraction_gt_point5": 0.02515589569160998,
+      "chunk_seconds": 0.987004499998875,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 322,
+      "context_rgb_ids": [
+        321,
+        322,
+        323,
+        324
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.01892758347094059,
+      "p90": 0.011159072630107403,
+      "p99": 0.9815614819526672,
+      "fraction_gt_point4": 0.01708553791887125,
+      "fraction_gt_point5": 0.01692413076341648,
+      "chunk_seconds": 0.987004499998875,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 323,
+      "context_rgb_ids": [
+        321,
+        322,
+        323,
+        324
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.016772236675024033,
+      "p90": 0.04862067103385925,
+      "p99": 0.1391220986843109,
+      "fraction_gt_point4": 0.006775163769211388,
+      "fraction_gt_point5": 0.006672808012093727,
+      "chunk_seconds": 0.987004499998875,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 324,
+      "context_rgb_ids": [
+        321,
+        322,
+        323,
+        324
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.01437985710799694,
+      "p90": 0.06938576698303223,
+      "p99": 0.1616409868001938,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.987004499998875,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 325,
+      "context_rgb_ids": [
+        325,
+        326,
+        327,
+        328
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.012684972025454044,
+      "p90": 0.059764519333839417,
+      "p99": 0.12027642130851746,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9680041000247002,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 326,
+      "context_rgb_ids": [
+        325,
+        326,
+        327,
+        328
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0032524322159588337,
+      "p90": 0.013009727001190186,
+      "p99": 0.024010295048356056,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9680041000247002,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 327,
+      "context_rgb_ids": [
+        325,
+        326,
+        327,
+        328
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0034824388567358255,
+      "p90": 0.01386627834290266,
+      "p99": 0.030454935505986214,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9680041000247002,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 328,
+      "context_rgb_ids": [
+        325,
+        326,
+        327,
+        328
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0012637434992939234,
+      "p90": 0.00348247354850173,
+      "p99": 0.00975247286260128,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9680041000247002,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 329,
+      "context_rgb_ids": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0008500413969159126,
+      "p90": 0.0015016926918178797,
+      "p99": 0.009586657397449017,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9636508000548929,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 330,
+      "context_rgb_ids": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0010052249999716878,
+      "p90": 0.0026463279500603676,
+      "p99": 0.00557020865380764,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9636508000548929,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 331,
+      "context_rgb_ids": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0005928860628046095,
+      "p90": 0.0016391340177506208,
+      "p99": 0.0028267947491258383,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9636508000548929,
+      "peak_allocated_bytes": 379418624
+    },
+    {
+      "rgb_id": 332,
+      "context_rgb_ids": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "hw": [
+        378,
+        672
+      ],
+      "mean": 0.0011573537485674024,
+      "p90": 0.0031022210605442524,
+      "p99": 0.0053595793433487415,
+      "fraction_gt_point4": 0.0,
+      "fraction_gt_point5": 0.0,
+      "chunk_seconds": 0.9636508000548929,
+      "peak_allocated_bytes": 379418624
+    }
+  ],
+  "FP32_module_storage_offload": true,
+  "autocast": "BF16; FP32 checkpoint storage",
+  "source_script_sha256": "8e79f387b1de3171f73e6df9312c04701230cf801c1669dc633c48c1bcec53fb",
+  "RAFT_helper_source_sha256": "9407c296431b0500257f2e546f78878fc30c8e8fb06aea565ecbba5be3bbb808",
+  "RAFT_native_hidden_equivalence": {
+    "max_abs": 0.0,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "PASS": true,
+    "source_rgb": 301,
+    "target_rgb": 302
+  },
+  "strict_model_load": true,
+  "offload_synthetic_contract_passed": true,
+  "all_original_CPU_tensor_objects_restored": true,
+  "offloaded_module_calls": 5344,
+  "total_seconds": 18.379695900017396
+}

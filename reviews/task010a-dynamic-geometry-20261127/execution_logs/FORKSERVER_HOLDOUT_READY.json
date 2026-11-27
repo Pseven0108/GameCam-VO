@@ -1,0 +1,2069 @@
+{
+  "selection_record_sha256": "70981ae10f0b3d5330129b64e539f6cffac068a31ee981e04dc103d3a0fd639f",
+  "engineering_probe_jobs": 1,
+  "jobs": [
+    {
+      "id": "observer_readonly_probe_holdout_r1",
+      "script": "experiments/TASK010-A/scripts/observer_readonly_probe.py",
+      "args": []
+    },
+    {
+      "id": "day004_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_baseline_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_legacy_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_geometry_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s43_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_static_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s43_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s43_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "43",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s43_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+      ]
+    },
+    {
+      "id": "rain030_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_static_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s44_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_geometry_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_legacy_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_baseline_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s44_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "44",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s44_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown2_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown2_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "downtown1_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "downtown1_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "snow032_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "snow032_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "night008_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "night008_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/night008_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+      ]
+    },
+    {
+      "id": "rain030_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "rain030_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+      ]
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "rain030_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s45_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "sunset007_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "sunset007_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_geometry_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "geometry",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s45_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s45_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_static_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "static",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_static_s45_r1",
+        "--static-tracks",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+      ]
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "depth_fusion",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s45_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_baseline_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "baseline",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s45_r1"
+      ]
+    },
+    {
+      "id": "day004_holdout_legacy_s45_r1",
+      "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+      "args": [
+        "--dataset",
+        "day004_holdout",
+        "--method",
+        "legacy",
+        "--seed",
+        "45",
+        "--priors",
+        "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+        "--output",
+        "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s45_r1"
+      ]
+    }
+  ]
+}

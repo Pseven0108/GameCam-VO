@@ -1,0 +1,27 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\full_geo_smoke_plan.json",
+  "status": "STOPPED_ON_FAILURE",
+  "jobs": [
+    {
+      "id": "full_geo_smoke_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "night007_dev",
+        "--limit",
+        "4",
+        "--output-suffix",
+        "_smoke_r1"
+      ],
+      "status": "FAILED",
+      "started": 1795742269.9664297,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6098 MiB, 3 %",
+      "launcher_pid": 48288,
+      "exit_code": 1,
+      "seconds": 12.611928462982178
+    }
+  ]
+}

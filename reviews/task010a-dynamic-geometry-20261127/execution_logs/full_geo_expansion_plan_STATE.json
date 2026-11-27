@@ -1,0 +1,168 @@
+{
+  "plan": "D:\\aaa\\GameCam-VO-TASK010-A\\experiments\\TASK010-A\\private\\full_geo_expansion_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "full_geomotion_night007_dev_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "night007_dev",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754371.341951,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6303 MiB, 8 %",
+      "launcher_pid": 52776,
+      "exit_code": 0,
+      "seconds": 25.210564374923706
+    },
+    {
+      "id": "full_geomotion_day004_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "day004_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754396.5525153,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6246 MiB, 3 %",
+      "launcher_pid": 49900,
+      "exit_code": 0,
+      "seconds": 24.166780710220337
+    },
+    {
+      "id": "full_geomotion_sunset007_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "sunset007_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754420.719296,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6219 MiB, 3 %",
+      "launcher_pid": 45596,
+      "exit_code": 0,
+      "seconds": 23.088680267333984
+    },
+    {
+      "id": "full_geomotion_rain030_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "rain030_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754443.8084939,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6204 MiB, 2 %",
+      "launcher_pid": 35768,
+      "exit_code": 0,
+      "seconds": 23.087297916412354
+    },
+    {
+      "id": "full_geomotion_night008_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "night008_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754466.8957918,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6207 MiB, 3 %",
+      "launcher_pid": 49552,
+      "exit_code": 0,
+      "seconds": 23.120951890945435
+    },
+    {
+      "id": "full_geomotion_snow032_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "snow032_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754490.0172722,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6182 MiB, 5 %",
+      "launcher_pid": 53188,
+      "exit_code": 0,
+      "seconds": 23.128506422042847
+    },
+    {
+      "id": "full_geomotion_downtown1_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "downtown1_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754513.1457787,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6162 MiB, 3 %",
+      "launcher_pid": 52480,
+      "exit_code": 0,
+      "seconds": 23.140182495117188
+    },
+    {
+      "id": "full_geomotion_downtown2_holdout_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "downtown2_holdout",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754536.2859612,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6144 MiB, 3 %",
+      "launcher_pid": 50624,
+      "exit_code": 0,
+      "seconds": 23.095065355300903
+    },
+    {
+      "id": "full_geomotion_wildworld_thirdperson_qual_r1",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "wildworld_thirdperson_qual",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754559.3815315,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6148 MiB, 1 %",
+      "launcher_pid": 27348,
+      "exit_code": 0,
+      "seconds": 23.10065197944641
+    }
+  ]
+}

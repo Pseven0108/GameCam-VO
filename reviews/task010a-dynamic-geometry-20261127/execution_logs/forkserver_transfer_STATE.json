@@ -1,0 +1,73 @@
+{
+  "status": "STOPPED_ON_FAILURE",
+  "start_method": "forkserver_CPU_preload_only",
+  "plan": {
+    "stage": "Full_detector_development_only",
+    "jobs": [
+      {
+        "id": "observer_readonly_probe_r1",
+        "script": "experiments/TASK010-A/scripts/observer_readonly_probe.py",
+        "args": []
+      },
+      {
+        "id": "night007_dev_geomotion_full_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night007_dev",
+          "--method",
+          "geomotion_full",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_full_s43_r1"
+        ]
+      },
+      {
+        "id": "night007_dev_geomotion_full_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night007_dev",
+          "--method",
+          "geomotion_full",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_full_s44_r1"
+        ]
+      },
+      {
+        "id": "night007_dev_geomotion_full_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night007_dev",
+          "--method",
+          "geomotion_full",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_full_s45_r1"
+        ]
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "id": "observer_readonly_probe_r1",
+      "status": "FAILED",
+      "started": 1795754851.9326627,
+      "fresh_child_process": true,
+      "pid": 24,
+      "exit_code": 1,
+      "seconds": 1.1329164505004883
+    }
+  ]
+}

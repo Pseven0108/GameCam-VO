@@ -1,0 +1,80 @@
+D:\aaa\envs\gamecam-vo\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\TensorShape.cpp:4209.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{
+  "status": "INDEPENDENT_INFERENCE_COMPLETE",
+  "input_shape": [
+    1,
+    32,
+    4,
+    160,
+    280
+  ],
+  "queries": 100,
+  "precision": "fp32",
+  "seconds": 1.1567276999703608,
+  "seconds_per_frame": 0.036147740624073776,
+  "peak_allocated_bytes": 511696384,
+  "peak_reserved_bytes": 778043392,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132",
+  "checkpoint_sha256": "c1189d8d6912798e66b99b3e853ce644f587ed57837a5e7bb768405980dc1422",
+  "depth_source": "Cached official Metric3D prediction; not GT or official UniDepth pipeline",
+  "outputs": {
+    "total_xy": {
+      "shape": [
+        1,
+        32,
+        100,
+        2
+      ],
+      "min": -127.93434143066406,
+      "median": 116.52033996582031,
+      "max": 635.1693115234375
+    },
+    "track_depth": {
+      "shape": [
+        1,
+        32,
+        100,
+        1
+      ],
+      "min": -1.3770077228546143,
+      "median": 3.8718695640563965,
+      "max": 52.062705993652344
+    },
+    "static_xyz": {
+      "shape": [
+        1,
+        32,
+        100,
+        3
+      ],
+      "min": -127.92906188964844,
+      "median": 69.4400634765625,
+      "max": 1634.04150390625
+    },
+    "visibility": {
+      "shape": [
+        1,
+        32,
+        100
+      ],
+      "min": 2.0190071836623247e-08,
+      "median": 0.9997423887252808,
+      "max": 1.0
+    },
+    "dynamic_probability": {
+      "shape": [
+        1,
+        32,
+        100
+      ],
+      "min": 4.6022408106694e-10,
+      "median": 9.768817108124495e-06,
+      "max": 1.0
+    }
+  },
+  "dynamic_gt_available": false,
+  "accuracy_claim": false,
+  "droid_integration_complete": false
+}

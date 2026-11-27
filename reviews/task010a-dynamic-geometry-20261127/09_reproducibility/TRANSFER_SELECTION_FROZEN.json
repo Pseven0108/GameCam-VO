@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN_BEFORE_HELDOUT_NATIVE_RUNS",
+  "selection_metric": "Mean development whole-window globally Sim3-aligned ATE; seeds43/44/45",
+  "frozen_utc": "2026-11-27T04:59:36Z",
+  "development_means": {
+    "baseline": 6.979217809228428,
+    "depth_fusion": 4.977083835781179,
+    "depth": 4.723086274081741,
+    "depth_static": 5.453161449128738,
+    "fusion": 7.197025619588637,
+    "fusion_static": 6.8107513134101545,
+    "geometry": 4.779594142082564,
+    "geomotion_full": 10.868235956207798,
+    "geomotion": 7.171039465551846,
+    "gmos": 8.604447392628407,
+    "legacy_mean": 5.873523652428667,
+    "legacy": 10.603642790877691,
+    "neutral": 8.90131067217662,
+    "static": 6.597254892616392
+  },
+  "best_dynamic_candidate": "geometry",
+  "best_fusion_candidate": "depth_fusion",
+  "main_confirmatory_candidate": "depth",
+  "main_candidate_beats_development_baseline": true,
+  "heldout_primary_methods": [
+    "baseline",
+    "legacy",
+    "geometry",
+    "depth",
+    "static",
+    "depth_fusion"
+  ],
+  "heldout_windows": [
+    "day004_holdout",
+    "sunset007_holdout",
+    "rain030_holdout",
+    "night008_holdout",
+    "snow032_holdout",
+    "downtown1_holdout",
+    "downtown2_holdout"
+  ],
+  "all_methods_and_windows_seeds": [
+    43,
+    44,
+    45
+  ],
+  "balanced_full_matrix": true,
+  "planned_native_runs": 126,
+  "heldout_metrics_read_before_selection": false,
+  "source_sha256": {
+    "experiments\\TASK010-A\\scripts\\run_window_v2.py": "0ab61f848ac3d9e7b1bb48a25baca96d9309abec118d4191cdacec60ce4c5f08",
+    "experiments\\TASK010-A\\scripts\\task010_fusion_v2.py": "fbe60e7a840b1328530bdc7442c4d6642eafbb996dd4b1b8de6ab6d57f49bc2a",
+    "experiments\\TASK010-A\\scripts\\native_holdout_controller.py": "00271c932ed1d09f0750de6a02faa65ea6401619ceca695dd49bc0ebcc5500d0",
+    "experiments\\TASK010-A\\scripts\\task010_native_preload.py": "93edc7ae5c0774d5c4d110b5755c529f3466ed52efc920c1da1c1d2f4f5a8eda",
+    "experiments\\TASK010-A\\scripts\\run_native.sh": "848a0ea9d99e7d655499da072736333122807ed592044d0cf3e16fdb9aeb0acf"
+  },
+  "no_parameter_changes_after_selection": true,
+  "dataset_manifest_sha256": "fa9106695ea400547925fbdbfe49d23c65562d1ad7c299da9e5c7f171b8e69a9",
+  "candidate_output_validation_sha256": "685737690b79e0677b1fd9a2b19179e6303d665d529c34e83699e7e355fad6e7",
+  "pilot_GO_rule": {
+    "scope": "GO only for a separate future formal validation, never production acceptance",
+    "all_five_game_windows_mean_ATE_lower": true,
+    "both_real_windows_mean_ATE_lower": true,
+    "main_candidate_and_baseline_all_three_seeds_complete": true,
+    "mean_translation_RPE1_no_worse_in_each_domain": true,
+    "mean_rotation_RPE1_no_worse_in_each_domain": true,
+    "otherwise": "NO_GO_FOR_GENERALIZED_IMPROVEMENT; report local gains and regressions separately"
+  },
+  "stop_rule": "Complete this fixed comparison, include all failures, then stop tuning. No selection or parameter refit on held-out scores."
+}

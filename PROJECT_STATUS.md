@@ -1,3 +1,12 @@
+<!-- TASK010A-20261127 -->
+# TASK010-A · 2026-11-27
+
+Status: **NO_GO_FOR_GENERALIZED_IMPROVEMENT**. Preselected candidate: `depth`. 42 matched development and126 frozen cross-scene repetitions completed; four independent model providers on9windows. Bounded local32-frame protocol; no production baseline replacement or automatic next stage.
+
+[Complete review](reviews/task010a-dynamic-geometry-20261127/FINAL_REVIEW.md) · [All tables and evidence](reviews/task010a-dynamic-geometry-20261127/) · [Review ZIP](review_packages/GAMECAM_TASK010A_REVIEW.zip) · [Full raw-array assets](https://github.com/Pseven0108/GameCam-VO/releases/tag/task010a-research-20261127)
+
+---
+
 # GameCam-VO · TASK009 本地模块迁移原型
 
 2026-11-27。已完成本地 RTX5060 的9次真实 DROID-W 运行与独立模块验证；本轮已停止推理。

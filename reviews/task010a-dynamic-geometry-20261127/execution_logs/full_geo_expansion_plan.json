@@ -1,0 +1,110 @@
+[
+  {
+    "id": "full_geomotion_night007_dev_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "night007_dev",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_day004_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "day004_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_sunset007_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "sunset007_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_rain030_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "rain030_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_night008_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "night008_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_snow032_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "snow032_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_downtown1_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "downtown1_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_downtown2_holdout_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "downtown2_holdout",
+      "--cpu-offload"
+    ]
+  },
+  {
+    "id": "full_geomotion_wildworld_thirdperson_qual_r1",
+    "command": [
+      "D:/aaa/envs/gamecam-vo/python.exe",
+      "-u",
+      "-B",
+      "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+      "--dataset",
+      "wildworld_thirdperson_qual",
+      "--cpu-offload"
+    ]
+  }
+]

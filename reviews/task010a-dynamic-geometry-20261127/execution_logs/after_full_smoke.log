@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 64, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 28, in main
+    wait_status(TASK/'private/full_geo_smoke_plan_STATE.json')
+  File "D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\scripts\after_full_smoke.py", line 18, in wait_status
+    raise RuntimeError('Upstream stage stopped: '+str(path))
+RuntimeError: Upstream stage stopped: D:\aaa\GameCam-VO-TASK010-A\experiments\TASK010-A\private\full_geo_smoke_plan_STATE.json

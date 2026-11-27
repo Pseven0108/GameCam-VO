@@ -1,0 +1,9 @@
+# Real-window reference and camera model
+
+The two real windows use the officially released DROID-W Downtown1/2 JPEGs and `traj_gt_fastlivo.txt`, recovered from previously verified byte ranges of the original dataset archive. Each new extraction verifies the cached range SHA, original member CRC and full RGB decode. Original image timestamps, filenames and SHA identities are preserved in the public window roster.
+
+The [DROID-W paper, dataset section and supplementary Table8](https://arxiv.org/html/2603.19076v1#S7) describes the RGB/Livox rig and uses FAST-LIVO2 trajectories as the reference for Downtown1/2 where RTK is unavailable. We follow this published reference, not an independent remeasurement. It is a different evidence level from physically measured pixel-depth GT. Released camera calibration is read from frozen `configs/Dynamic/DROIDW/droidw.yaml`.
+
+Original1600×1200 images are OpenCV-undistorted with the released distortion/K, then stored as lossless PNG. Native inputs are288×216 with half-pixel principal-point resize and no crop. Pose timestamps are interpolated within reference coverage: linear translation, quaternion SLERP. No extrapolation or missing-frame substitution is used. Neither this GT file nor its positions enter model inference, static tracks, prior alignment, F estimation or native SLAM.
+
+Metrics are deviations from that published camera-pose reference. This task does not independently certify sensor time offset, rigid extrinsic calibration or metric ground-truth accuracy. The reference's algorithmic source and interpolation are limitations on fine-grained rotation/translation claims. Downtown is the baseline paper's own evaluation domain, not a newly unseen domain; the exact short windows are held out from **TASK010-A method selection**. VIPER transfer windows also have earlier project history and are not advertised as completely untouched benchmark data or confirmed pretraining-independent samples.

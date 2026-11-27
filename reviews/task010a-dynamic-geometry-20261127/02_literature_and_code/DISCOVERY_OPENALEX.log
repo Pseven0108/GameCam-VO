@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.codex\skills\nature-academic-search\scripts\academic_search.py", line 430, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Administrator\.codex\skills\nature-academic-search\scripts\academic_search.py", line 425, in main
+    print(json.dumps(results, ensure_ascii=False, indent=2))
+UnicodeEncodeError: 'gbk' codec can't encode character '\xf6' in position 2179: illegal multibyte sequence

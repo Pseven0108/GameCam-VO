@@ -1,0 +1,28 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\full_geo_smoke_r2_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "full_geo_smoke_r2",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_full_geomotion.py",
+        "--dataset",
+        "night007_dev",
+        "--limit",
+        "4",
+        "--output-suffix",
+        "_smoke_r2",
+        "--cpu-offload"
+      ],
+      "status": "COMPLETE",
+      "started": 1795754347.4604135,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6068 MiB, 5 %",
+      "launcher_pid": 35548,
+      "exit_code": 0,
+      "seconds": 14.808043003082275
+    }
+  ]
+}

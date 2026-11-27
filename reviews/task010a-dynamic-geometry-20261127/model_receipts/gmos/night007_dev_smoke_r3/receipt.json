@@ -1,0 +1,15 @@
+{
+  "status": "FAILED",
+  "model": "gmos",
+  "dataset": "night007_dev",
+  "frames": [],
+  "encoder_timings": [],
+  "pixel_limit": 255000,
+  "GPU": "NVIDIA GeForce RTX 5060",
+  "torch": "2.15.0+cu132",
+  "autocast": "BF16; parameters FP32",
+  "GT_loaded": false,
+  "original_source_edited": false,
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\aaa\\GameCam-VO-TASK010-A\\experiments\\TASK010-A\\scripts\\infer_candidates.py\", line 176, in main\n    globals()[a.model](ds,out,a,receipt)\n  File \"D:\\aaa\\GameCam-VO-TASK010-A\\experiments\\TASK010-A\\scripts\\infer_candidates.py\", line 61, in gmos\n    with torch.device('meta'):encoder=Pi3Encoder()\n                                      ^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\pi3_encoder.py\", line 49, in __init__\n    self.encoder = dinov2_vitl14_reg(pretrained=False)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\Pi3\\pi3\\models\\dinov2\\hub\\backbones.py\", line 132, in dinov2_vitl14_reg\n    return _make_dinov2_model(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\Pi3\\pi3\\models\\dinov2\\hub\\backbones.py\", line 53, in _make_dinov2_model\n    model = vits.__dict__[arch_name](**vit_kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\Pi3\\pi3\\models\\dinov2\\models\\vision_transformer.py\", line 377, in vit_large\n    model = DinoVisionTransformer(\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\Pi3\\pi3\\models\\dinov2\\models\\vision_transformer.py\", line 120, in __init__\n    dpr = [x.item() for x in torch.linspace(0, drop_path_rate, depth)]  # stochastic depth decay rule\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\external_models\\TASK010A\\gmos\\core\\Pi3\\pi3\\models\\dinov2\\models\\vision_transformer.py\", line 120, in <listcomp>\n    dpr = [x.item() for x in torch.linspace(0, drop_path_rate, depth)]  # stochastic depth decay rule\n           ^^^^^^^^\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\utils\\_device.py\", line 122, in __torch_function__\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aaa\\envs\\gamecam-vo\\Lib\\site-packages\\torch\\_meta_registrations.py\", line 8710, in meta_local_scalar_dense\n    raise RuntimeError(\"Tensor.item() cannot be called on meta tensors\")\nRuntimeError: Tensor.item() cannot be called on meta tensors\n",
+  "total_seconds": 3.0641318999696523
+}

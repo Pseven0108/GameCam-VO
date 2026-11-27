@@ -1,0 +1,800 @@
+[
+  {
+    "id": "night007_dev_baseline_s43_r2",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "baseline",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_baseline_s43_r2"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_neutral_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "neutral",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_neutral_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_gmos_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "gmos",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_gmos_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geomotion_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geomotion",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geometry_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geometry",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geometry_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_static_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "static",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_static_s43_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_static_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion_static",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_static_s43_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_mean_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy_mean",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_mean_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_static_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_static",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_static_s43_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_fusion_s43_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_fusion",
+      "--seed",
+      "43",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_fusion_s43_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_fusion_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_fusion",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_fusion_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_static_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_static",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_static_s44_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_mean_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy_mean",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_mean_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_static_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion_static",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_static_s44_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_static_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "static",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_static_s44_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geometry_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geometry",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geometry_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geomotion_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geomotion",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_gmos_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "gmos",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_gmos_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_neutral_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "neutral",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_neutral_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_baseline_s44_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "baseline",
+      "--seed",
+      "44",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_baseline_s44_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_baseline_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "baseline",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_baseline_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geometry_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geometry",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geometry_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_static_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "static",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_static_s45_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_neutral_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "neutral",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_neutral_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_legacy_mean_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "legacy_mean",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_legacy_mean_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_gmos_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "gmos",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_gmos_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_geomotion_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "geomotion",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_geomotion_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_fusion_static_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "fusion_static",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/native_priors_216x384_r3",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_fusion_static_s45_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_s45_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_static_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_static",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_static_s45_r1",
+      "--static-tracks",
+      "/mnt/d/aaa/GameCam-VO-TASK009/experiments/TASK009/outputs/mdtracker_metric_32f_160x280_fp32_r1"
+    ]
+  },
+  {
+    "id": "night007_dev_depth_fusion_s45_r1",
+    "command": [
+      "wsl",
+      "--exec",
+      "sh",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/scripts/run_native.sh",
+      "experiments/TASK010-A/scripts/run_window.py",
+      "--dataset",
+      "night007_dev",
+      "--method",
+      "depth_fusion",
+      "--seed",
+      "45",
+      "--priors",
+      "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night007_dev",
+      "--output",
+      "experiments/TASK010-A/outputs/droid/night007_dev_depth_fusion_s45_r1"
+    ]
+  }
+]

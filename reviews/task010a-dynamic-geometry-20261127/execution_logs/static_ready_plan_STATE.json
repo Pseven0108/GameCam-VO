@@ -1,0 +1,42 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\static_ready_plan.json",
+  "status": "STOPPED_ON_FAILURE",
+  "jobs": [
+    {
+      "id": "static_day004_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_static.py",
+        "--dataset",
+        "day004_holdout",
+        "--source",
+        "D:/aaa/GameCam-VO/baselines/ba_track/upstream",
+        "--weights",
+        "D:/aaa/GameCam-VO/data/sota_assets/BA_TRACK/weights/md_tracker.pth",
+        "--cache-root",
+        "D:\\aaa\\GameCam-VO-TASK010-A\\experiments\\TASK010-A\\private\\datasets\\day004_holdout\\rgb",
+        "--output",
+        "experiments\\TASK010-A\\outputs\\static\\day004_holdout",
+        "--frames",
+        "32",
+        "--height",
+        "160",
+        "--width",
+        "280",
+        "--grid",
+        "10",
+        "--precision",
+        "fp32",
+        "--metric-priors",
+        "experiments\\TASK010-A\\outputs\\priors\\day004_holdout"
+      ],
+      "status": "FAILED",
+      "started": 1795738340.492066,
+      "gpu_preflight": "NVIDIA GeForce RTX 5060, 8151 MiB, 6268 MiB, 6 %",
+      "exit_code": 1,
+      "seconds": 5.693757772445679
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "FP32_checkpoint_storage": true,
+  "BF16_operations_unchanged": true,
+  "same_synthetic_output_bitwise": true,
+  "max_abs": 0.0,
+  "original_tensor_objects_restored": true,
+  "original_state_unchanged": true,
+  "staged_module_calls": 6,
+  "full_model_equivalence_proven": false,
+  "limitation": "Synthetic module contract only; Full model cannot be resident under current local resource conditions."
+}

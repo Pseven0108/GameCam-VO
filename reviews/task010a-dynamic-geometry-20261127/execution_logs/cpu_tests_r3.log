@@ -1,0 +1,28 @@
+test_actual_high_score_gate_floor (test_adapter_state_preservation.AdapterStateContracts.test_actual_high_score_gate_floor) ... ok
+test_actual_neutral_adapter_leaves_weights_equal (test_adapter_state_preservation.AdapterStateContracts.test_actual_neutral_adapter_leaves_weights_equal) ... ok
+test_cpu_test_did_not_initialize_cuda (test_adapter_state_preservation.AdapterStateContracts.test_cpu_test_did_not_initialize_cuda) ... ok
+test_full_geomotion_adapter_same_contract (test_adapter_state_preservation.AdapterStateContracts.test_full_geomotion_adapter_same_contract) ... ok
+test_fusion_requires_independent_geometry (test_adapter_state_preservation.AdapterStateContracts.test_fusion_requires_independent_geometry) ... ok
+test_legacy_mean_matches_actual_legacy_total (test_adapter_state_preservation.AdapterStateContracts.test_legacy_mean_matches_actual_legacy_total) ... ok
+test_missing_geometry_is_neutral (test_adapter_state_preservation.AdapterStateContracts.test_missing_geometry_is_neutral) ... ok
+test_blank_flow_no_false_geometry (test_geometry_and_fusion.FusionContracts.test_blank_flow_no_false_geometry) ... ok
+test_camera_identity_is_zero (test_geometry_and_fusion.FusionContracts.test_camera_identity_is_zero) ... ok
+test_camera_motion_translation_sign (test_geometry_and_fusion.FusionContracts.test_camera_motion_translation_sign) ... ok
+test_cpu_only (test_geometry_and_fusion.FusionContracts.test_cpu_only) ... ok
+test_dead_zone_exact_neutral (test_geometry_and_fusion.FusionContracts.test_dead_zone_exact_neutral) ... ok
+test_empty_initialization_strict_recovery (test_geometry_and_fusion.FusionContracts.test_empty_initialization_strict_recovery) ... ok
+test_epipolar_vertical_violation (test_geometry_and_fusion.FusionContracts.test_epipolar_vertical_violation) ... ok
+test_fb_inconsistent_is_not_admitted_motion (test_geometry_and_fusion.FusionContracts.test_fb_inconsistent_is_not_admitted_motion) ... ok
+test_floor_disparity_not_motion_evidence (test_geometry_and_fusion.FusionContracts.test_floor_disparity_not_motion_evidence) ... ok
+test_fusion_does_not_further_crush_low_uba (test_geometry_and_fusion.FusionContracts.test_fusion_does_not_further_crush_low_uba) ... ok
+test_high_probability_floor (test_geometry_and_fusion.FusionContracts.test_high_probability_floor) ... ok
+test_horizontal_epipolar_flow (test_geometry_and_fusion.FusionContracts.test_horizontal_epipolar_flow) ... ok
+test_mask_disabled_is_bit_neutral (test_geometry_and_fusion.FusionContracts.test_mask_disabled_is_bit_neutral) ... ok
+test_monotone_severity (test_geometry_and_fusion.FusionContracts.test_monotone_severity) ... ok
+test_preprocess_pixel_bound (test_geometry_and_fusion.FusionContracts.test_preprocess_pixel_bound) ... ok
+test_uba_formula_transition (test_geometry_and_fusion.FusionContracts.test_uba_formula_transition) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.132s
+
+OK

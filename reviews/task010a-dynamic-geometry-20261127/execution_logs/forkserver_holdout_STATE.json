@@ -1,0 +1,3218 @@
+{
+  "status": "COMPLETE",
+  "start_method": "forkserver_CPU_preload_only",
+  "plan": {
+    "selection_record_sha256": "70981ae10f0b3d5330129b64e539f6cffac068a31ee981e04dc103d3a0fd639f",
+    "engineering_probe_jobs": 1,
+    "jobs": [
+      {
+        "id": "observer_readonly_probe_holdout_r1",
+        "script": "experiments/TASK010-A/scripts/observer_readonly_probe.py",
+        "args": []
+      },
+      {
+        "id": "day004_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_baseline_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_legacy_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_geometry_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s43_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_static_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s43_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_fusion_s43_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "43",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s43_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+        ]
+      },
+      {
+        "id": "rain030_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_static_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s44_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_geometry_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_legacy_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_baseline_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_fusion_s44_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "44",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s44_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown2_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown2_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown2_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown2_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown2_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/downtown1_holdout_r2"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "downtown1_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "downtown1_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/downtown1_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/downtown1_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/snow032_holdout_r2"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "snow032_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "snow032_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/snow032_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/snow032_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "night008_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "night008_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/night008_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/night008_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/night008_holdout_r2"
+        ]
+      },
+      {
+        "id": "rain030_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "rain030_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/rain030_holdout_r2"
+        ]
+      },
+      {
+        "id": "rain030_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "rain030_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/rain030_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/rain030_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_legacy_s45_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/sunset007_holdout_r2"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "sunset007_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "sunset007_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/sunset007_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/sunset007_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_geometry_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "geometry",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_geometry_s45_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_s45_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_static_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "static",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_static_s45_r1",
+          "--static-tracks",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/static/day004_holdout_r2"
+        ]
+      },
+      {
+        "id": "day004_holdout_depth_fusion_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "depth_fusion",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors_blend/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_depth_fusion_s45_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_baseline_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "baseline",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_baseline_s45_r1"
+        ]
+      },
+      {
+        "id": "day004_holdout_legacy_s45_r1",
+        "script": "experiments/TASK010-A/scripts/run_window_v2.py",
+        "args": [
+          "--dataset",
+          "day004_holdout",
+          "--method",
+          "legacy",
+          "--seed",
+          "45",
+          "--priors",
+          "/mnt/d/aaa/GameCam-VO-TASK010-A/experiments/TASK010-A/outputs/priors/day004_holdout",
+          "--output",
+          "experiments/TASK010-A/outputs/droid/day004_holdout_legacy_s45_r1"
+        ]
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "id": "observer_readonly_probe_holdout_r1",
+      "status": "COMPLETE",
+      "started": 1795755649.9217405,
+      "fresh_child_process": true,
+      "pid": 23,
+      "exit_code": 0,
+      "seconds": 2.281750440597534
+    },
+    {
+      "id": "day004_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755652.2093146,
+      "fresh_child_process": true,
+      "pid": 32,
+      "exit_code": 0,
+      "seconds": 13.31033730506897
+    },
+    {
+      "id": "day004_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755665.5245926,
+      "fresh_child_process": true,
+      "pid": 65,
+      "exit_code": 0,
+      "seconds": 17.70786428451538
+    },
+    {
+      "id": "day004_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755683.2378035,
+      "fresh_child_process": true,
+      "pid": 106,
+      "exit_code": 0,
+      "seconds": 15.522460222244263
+    },
+    {
+      "id": "day004_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755698.765127,
+      "fresh_child_process": true,
+      "pid": 143,
+      "exit_code": 0,
+      "seconds": 13.314233303070068
+    },
+    {
+      "id": "day004_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755712.0844958,
+      "fresh_child_process": true,
+      "pid": 176,
+      "exit_code": 0,
+      "seconds": 14.398195266723633
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755726.4878953,
+      "fresh_child_process": true,
+      "pid": 211,
+      "exit_code": 0,
+      "seconds": 19.8790283203125
+    },
+    {
+      "id": "sunset007_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755746.3720973,
+      "fresh_child_process": true,
+      "pid": 256,
+      "exit_code": 0,
+      "seconds": 17.826807975769043
+    },
+    {
+      "id": "sunset007_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755764.203649,
+      "fresh_child_process": true,
+      "pid": 297,
+      "exit_code": 0,
+      "seconds": 15.584940195083618
+    },
+    {
+      "id": "sunset007_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755779.793472,
+      "fresh_child_process": true,
+      "pid": 334,
+      "exit_code": 0,
+      "seconds": 12.23892617225647
+    },
+    {
+      "id": "sunset007_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755792.0371125,
+      "fresh_child_process": true,
+      "pid": 365,
+      "exit_code": 0,
+      "seconds": 13.312506675720215
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755805.3544853,
+      "fresh_child_process": true,
+      "pid": 398,
+      "exit_code": 0,
+      "seconds": 19.956799745559692
+    },
+    {
+      "id": "sunset007_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755825.3161252,
+      "fresh_child_process": true,
+      "pid": 443,
+      "exit_code": 0,
+      "seconds": 13.363646507263184
+    },
+    {
+      "id": "rain030_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755838.6846898,
+      "fresh_child_process": true,
+      "pid": 476,
+      "exit_code": 0,
+      "seconds": 15.549305438995361
+    },
+    {
+      "id": "rain030_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755854.2387433,
+      "fresh_child_process": true,
+      "pid": 513,
+      "exit_code": 0,
+      "seconds": 12.248756647109985
+    },
+    {
+      "id": "rain030_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755866.4926362,
+      "fresh_child_process": true,
+      "pid": 544,
+      "exit_code": 0,
+      "seconds": 13.328373908996582
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755879.826022,
+      "fresh_child_process": true,
+      "pid": 577,
+      "exit_code": 0,
+      "seconds": 17.750213623046875
+    },
+    {
+      "id": "rain030_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755897.581312,
+      "fresh_child_process": true,
+      "pid": 618,
+      "exit_code": 0,
+      "seconds": 12.231844902038574
+    },
+    {
+      "id": "rain030_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755909.8183184,
+      "fresh_child_process": true,
+      "pid": 649,
+      "exit_code": 0,
+      "seconds": 16.6387300491333
+    },
+    {
+      "id": "night008_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755926.4620094,
+      "fresh_child_process": true,
+      "pid": 688,
+      "exit_code": 0,
+      "seconds": 12.223564863204956
+    },
+    {
+      "id": "night008_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755938.690779,
+      "fresh_child_process": true,
+      "pid": 719,
+      "exit_code": 0,
+      "seconds": 13.290655851364136
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755951.9862442,
+      "fresh_child_process": true,
+      "pid": 752,
+      "exit_code": 0,
+      "seconds": 19.95548677444458
+    },
+    {
+      "id": "night008_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755971.9466043,
+      "fresh_child_process": true,
+      "pid": 797,
+      "exit_code": 0,
+      "seconds": 12.235366582870483
+    },
+    {
+      "id": "night008_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795755984.1869152,
+      "fresh_child_process": true,
+      "pid": 828,
+      "exit_code": 0,
+      "seconds": 17.7991361618042
+    },
+    {
+      "id": "night008_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756001.9909396,
+      "fresh_child_process": true,
+      "pid": 869,
+      "exit_code": 0,
+      "seconds": 15.53714632987976
+    },
+    {
+      "id": "snow032_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756017.5332065,
+      "fresh_child_process": true,
+      "pid": 906,
+      "exit_code": 0,
+      "seconds": 13.343125820159912
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756030.8812237,
+      "fresh_child_process": true,
+      "pid": 939,
+      "exit_code": 0,
+      "seconds": 18.86760902404785
+    },
+    {
+      "id": "snow032_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756049.7535594,
+      "fresh_child_process": true,
+      "pid": 982,
+      "exit_code": 0,
+      "seconds": 12.205816984176636
+    },
+    {
+      "id": "snow032_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756061.9642997,
+      "fresh_child_process": true,
+      "pid": 1013,
+      "exit_code": 0,
+      "seconds": 16.587925672531128
+    },
+    {
+      "id": "snow032_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756078.557494,
+      "fresh_child_process": true,
+      "pid": 1052,
+      "exit_code": 0,
+      "seconds": 14.400354623794556
+    },
+    {
+      "id": "snow032_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756092.9627562,
+      "fresh_child_process": true,
+      "pid": 1087,
+      "exit_code": 0,
+      "seconds": 12.196990966796875
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756105.1646748,
+      "fresh_child_process": true,
+      "pid": 1118,
+      "exit_code": 0,
+      "seconds": 27.7490816116333
+    },
+    {
+      "id": "downtown1_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756132.919125,
+      "fresh_child_process": true,
+      "pid": 1177,
+      "exit_code": 0,
+      "seconds": 18.829122304916382
+    },
+    {
+      "id": "downtown1_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756151.7533662,
+      "fresh_child_process": true,
+      "pid": 1220,
+      "exit_code": 0,
+      "seconds": 24.319884777069092
+    },
+    {
+      "id": "downtown1_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756176.0782554,
+      "fresh_child_process": true,
+      "pid": 1273,
+      "exit_code": 0,
+      "seconds": 22.211663961410522
+    },
+    {
+      "id": "downtown1_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756198.2950618,
+      "fresh_child_process": true,
+      "pid": 1322,
+      "exit_code": 0,
+      "seconds": 18.863481760025024
+    },
+    {
+      "id": "downtown1_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756217.162946,
+      "fresh_child_process": true,
+      "pid": 1365,
+      "exit_code": 0,
+      "seconds": 19.919065475463867
+    },
+    {
+      "id": "downtown2_holdout_baseline_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756237.0872748,
+      "fresh_child_process": true,
+      "pid": 1410,
+      "exit_code": 0,
+      "seconds": 19.89536738395691
+    },
+    {
+      "id": "downtown2_holdout_legacy_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756256.9877565,
+      "fresh_child_process": true,
+      "pid": 1455,
+      "exit_code": 0,
+      "seconds": 23.248855113983154
+    },
+    {
+      "id": "downtown2_holdout_geometry_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756280.2414937,
+      "fresh_child_process": true,
+      "pid": 1506,
+      "exit_code": 0,
+      "seconds": 21.046156883239746
+    },
+    {
+      "id": "downtown2_holdout_depth_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756301.2930503,
+      "fresh_child_process": true,
+      "pid": 1553,
+      "exit_code": 0,
+      "seconds": 18.894344568252563
+    },
+    {
+      "id": "downtown2_holdout_static_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756320.1924143,
+      "fresh_child_process": true,
+      "pid": 1596,
+      "exit_code": 0,
+      "seconds": 19.944235801696777
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s43_r1",
+      "status": "COMPLETE",
+      "started": 1795756340.141546,
+      "fresh_child_process": true,
+      "pid": 1641,
+      "exit_code": 0,
+      "seconds": 25.51715087890625
+    },
+    {
+      "id": "day004_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756365.6638982,
+      "fresh_child_process": true,
+      "pid": 1696,
+      "exit_code": 0,
+      "seconds": 14.464714527130127
+    },
+    {
+      "id": "day004_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756380.1345222,
+      "fresh_child_process": true,
+      "pid": 1731,
+      "exit_code": 0,
+      "seconds": 13.370563268661499
+    },
+    {
+      "id": "day004_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756393.510497,
+      "fresh_child_process": true,
+      "pid": 1764,
+      "exit_code": 0,
+      "seconds": 15.541120767593384
+    },
+    {
+      "id": "day004_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756409.0571141,
+      "fresh_child_process": true,
+      "pid": 1801,
+      "exit_code": 0,
+      "seconds": 17.7626690864563
+    },
+    {
+      "id": "day004_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756426.824883,
+      "fresh_child_process": true,
+      "pid": 1842,
+      "exit_code": 0,
+      "seconds": 13.297189235687256
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756440.1271477,
+      "fresh_child_process": true,
+      "pid": 1875,
+      "exit_code": 0,
+      "seconds": 19.950273036956787
+    },
+    {
+      "id": "sunset007_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756460.0824788,
+      "fresh_child_process": true,
+      "pid": 1920,
+      "exit_code": 0,
+      "seconds": 12.220230340957642
+    },
+    {
+      "id": "sunset007_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756472.3080735,
+      "fresh_child_process": true,
+      "pid": 1951,
+      "exit_code": 0,
+      "seconds": 14.424768924713135
+    },
+    {
+      "id": "sunset007_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756486.738037,
+      "fresh_child_process": true,
+      "pid": 1986,
+      "exit_code": 0,
+      "seconds": 16.648604154586792
+    },
+    {
+      "id": "sunset007_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756503.3920858,
+      "fresh_child_process": true,
+      "pid": 2025,
+      "exit_code": 0,
+      "seconds": 12.227547645568848
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756515.6245775,
+      "fresh_child_process": true,
+      "pid": 2056,
+      "exit_code": 0,
+      "seconds": 19.950419664382935
+    },
+    {
+      "id": "sunset007_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756535.5802507,
+      "fresh_child_process": true,
+      "pid": 2101,
+      "exit_code": 0,
+      "seconds": 13.364229202270508
+    },
+    {
+      "id": "rain030_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756548.94986,
+      "fresh_child_process": true,
+      "pid": 2134,
+      "exit_code": 0,
+      "seconds": 14.411493062973022
+    },
+    {
+      "id": "rain030_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756563.3667562,
+      "fresh_child_process": true,
+      "pid": 2169,
+      "exit_code": 0,
+      "seconds": 17.781593561172485
+    },
+    {
+      "id": "rain030_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756581.1537452,
+      "fresh_child_process": true,
+      "pid": 2210,
+      "exit_code": 0,
+      "seconds": 12.27251672744751
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756593.4316287,
+      "fresh_child_process": true,
+      "pid": 2241,
+      "exit_code": 0,
+      "seconds": 18.93137288093567
+    },
+    {
+      "id": "rain030_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756612.3681662,
+      "fresh_child_process": true,
+      "pid": 2284,
+      "exit_code": 0,
+      "seconds": 13.374231338500977
+    },
+    {
+      "id": "rain030_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756625.7472198,
+      "fresh_child_process": true,
+      "pid": 2317,
+      "exit_code": 0,
+      "seconds": 12.23116135597229
+    },
+    {
+      "id": "night008_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756637.983701,
+      "fresh_child_process": true,
+      "pid": 2348,
+      "exit_code": 0,
+      "seconds": 18.870768785476685
+    },
+    {
+      "id": "night008_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756656.859525,
+      "fresh_child_process": true,
+      "pid": 2391,
+      "exit_code": 0,
+      "seconds": 12.261911392211914
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756669.1271338,
+      "fresh_child_process": true,
+      "pid": 2422,
+      "exit_code": 0,
+      "seconds": 19.932907342910767
+    },
+    {
+      "id": "night008_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756689.0654314,
+      "fresh_child_process": true,
+      "pid": 2467,
+      "exit_code": 0,
+      "seconds": 13.32381820678711
+    },
+    {
+      "id": "night008_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756702.3940232,
+      "fresh_child_process": true,
+      "pid": 2500,
+      "exit_code": 0,
+      "seconds": 12.19344687461853
+    },
+    {
+      "id": "night008_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756714.5927672,
+      "fresh_child_process": true,
+      "pid": 2531,
+      "exit_code": 0,
+      "seconds": 15.54248833656311
+    },
+    {
+      "id": "snow032_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756730.1405745,
+      "fresh_child_process": true,
+      "pid": 2568,
+      "exit_code": 0,
+      "seconds": 13.428257942199707
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756743.5750306,
+      "fresh_child_process": true,
+      "pid": 2601,
+      "exit_code": 0,
+      "seconds": 19.060758590698242
+    },
+    {
+      "id": "snow032_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756762.6409297,
+      "fresh_child_process": true,
+      "pid": 2644,
+      "exit_code": 0,
+      "seconds": 13.31209945678711
+    },
+    {
+      "id": "snow032_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756775.9586852,
+      "fresh_child_process": true,
+      "pid": 2677,
+      "exit_code": 0,
+      "seconds": 12.332723379135132
+    },
+    {
+      "id": "snow032_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756788.2965806,
+      "fresh_child_process": true,
+      "pid": 2708,
+      "exit_code": 0,
+      "seconds": 14.47786831855774
+    },
+    {
+      "id": "snow032_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756802.7794862,
+      "fresh_child_process": true,
+      "pid": 2743,
+      "exit_code": 0,
+      "seconds": 16.710838794708252
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756819.496102,
+      "fresh_child_process": true,
+      "pid": 2782,
+      "exit_code": 0,
+      "seconds": 27.702497243881226
+    },
+    {
+      "id": "downtown1_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756847.2038667,
+      "fresh_child_process": true,
+      "pid": 2841,
+      "exit_code": 0,
+      "seconds": 19.938785791397095
+    },
+    {
+      "id": "downtown1_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756867.1478963,
+      "fresh_child_process": true,
+      "pid": 2886,
+      "exit_code": 0,
+      "seconds": 18.879931688308716
+    },
+    {
+      "id": "downtown1_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756886.0332534,
+      "fresh_child_process": true,
+      "pid": 2929,
+      "exit_code": 0,
+      "seconds": 22.18543839454651
+    },
+    {
+      "id": "downtown1_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756908.2247388,
+      "fresh_child_process": true,
+      "pid": 2978,
+      "exit_code": 0,
+      "seconds": 25.501235485076904
+    },
+    {
+      "id": "downtown1_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756933.7316382,
+      "fresh_child_process": true,
+      "pid": 3033,
+      "exit_code": 0,
+      "seconds": 18.840123891830444
+    },
+    {
+      "id": "downtown2_holdout_static_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756952.576898,
+      "fresh_child_process": true,
+      "pid": 3076,
+      "exit_code": 0,
+      "seconds": 22.488824129104614
+    },
+    {
+      "id": "downtown2_holdout_depth_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756975.0712445,
+      "fresh_child_process": true,
+      "pid": 3125,
+      "exit_code": 0,
+      "seconds": 17.72774910926819
+    },
+    {
+      "id": "downtown2_holdout_geometry_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795756992.8047788,
+      "fresh_child_process": true,
+      "pid": 3166,
+      "exit_code": 0,
+      "seconds": 19.869144916534424
+    },
+    {
+      "id": "downtown2_holdout_legacy_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795757012.6792185,
+      "fresh_child_process": true,
+      "pid": 3211,
+      "exit_code": 0,
+      "seconds": 23.21213984489441
+    },
+    {
+      "id": "downtown2_holdout_baseline_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795757035.897009,
+      "fresh_child_process": true,
+      "pid": 3262,
+      "exit_code": 0,
+      "seconds": 20.177770853042603
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s44_r1",
+      "status": "COMPLETE",
+      "started": 1795757056.0802047,
+      "fresh_child_process": true,
+      "pid": 3307,
+      "exit_code": 0,
+      "seconds": 25.50615882873535
+    },
+    {
+      "id": "downtown2_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757081.591806,
+      "fresh_child_process": true,
+      "pid": 3362,
+      "exit_code": 0,
+      "seconds": 21.122253894805908
+    },
+    {
+      "id": "downtown2_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757102.719763,
+      "fresh_child_process": true,
+      "pid": 3409,
+      "exit_code": 0,
+      "seconds": 18.87555980682373
+    },
+    {
+      "id": "downtown2_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757121.6012735,
+      "fresh_child_process": true,
+      "pid": 3452,
+      "exit_code": 0,
+      "seconds": 20.00456476211548
+    },
+    {
+      "id": "downtown2_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757141.611715,
+      "fresh_child_process": true,
+      "pid": 3497,
+      "exit_code": 0,
+      "seconds": 25.60540747642517
+    },
+    {
+      "id": "downtown2_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757167.2227778,
+      "fresh_child_process": true,
+      "pid": 3552,
+      "exit_code": 0,
+      "seconds": 18.920572757720947
+    },
+    {
+      "id": "downtown2_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757186.1490996,
+      "fresh_child_process": true,
+      "pid": 3595,
+      "exit_code": 0,
+      "seconds": 25.684289932250977
+    },
+    {
+      "id": "downtown1_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757211.8392754,
+      "fresh_child_process": true,
+      "pid": 3650,
+      "exit_code": 0,
+      "seconds": 21.14580249786377
+    },
+    {
+      "id": "downtown1_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757232.990529,
+      "fresh_child_process": true,
+      "pid": 3697,
+      "exit_code": 0,
+      "seconds": 21.13913083076477
+    },
+    {
+      "id": "downtown1_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757254.1363633,
+      "fresh_child_process": true,
+      "pid": 3744,
+      "exit_code": 0,
+      "seconds": 26.72190761566162
+    },
+    {
+      "id": "downtown1_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757280.8640509,
+      "fresh_child_process": true,
+      "pid": 3801,
+      "exit_code": 0,
+      "seconds": 20.0027174949646
+    },
+    {
+      "id": "downtown1_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757300.8720143,
+      "fresh_child_process": true,
+      "pid": 3846,
+      "exit_code": 0,
+      "seconds": 25.578805923461914
+    },
+    {
+      "id": "downtown1_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757326.457318,
+      "fresh_child_process": true,
+      "pid": 3901,
+      "exit_code": 0,
+      "seconds": 22.32038140296936
+    },
+    {
+      "id": "snow032_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757348.7837393,
+      "fresh_child_process": true,
+      "pid": 3950,
+      "exit_code": 0,
+      "seconds": 14.529306888580322
+    },
+    {
+      "id": "snow032_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757363.3196323,
+      "fresh_child_process": true,
+      "pid": 3985,
+      "exit_code": 0,
+      "seconds": 18.991976976394653
+    },
+    {
+      "id": "snow032_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757382.3172238,
+      "fresh_child_process": true,
+      "pid": 4028,
+      "exit_code": 0,
+      "seconds": 12.300835371017456
+    },
+    {
+      "id": "snow032_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757394.6235213,
+      "fresh_child_process": true,
+      "pid": 4059,
+      "exit_code": 0,
+      "seconds": 17.89245581626892
+    },
+    {
+      "id": "snow032_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757412.5216353,
+      "fresh_child_process": true,
+      "pid": 4100,
+      "exit_code": 0,
+      "seconds": 15.617351531982422
+    },
+    {
+      "id": "snow032_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757428.144511,
+      "fresh_child_process": true,
+      "pid": 4137,
+      "exit_code": 0,
+      "seconds": 12.292709112167358
+    },
+    {
+      "id": "night008_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757440.4430182,
+      "fresh_child_process": true,
+      "pid": 4168,
+      "exit_code": 0,
+      "seconds": 21.197436094284058
+    },
+    {
+      "id": "night008_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757461.6462917,
+      "fresh_child_process": true,
+      "pid": 4215,
+      "exit_code": 0,
+      "seconds": 13.361638069152832
+    },
+    {
+      "id": "night008_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757475.0134501,
+      "fresh_child_process": true,
+      "pid": 4248,
+      "exit_code": 0,
+      "seconds": 18.887873888015747
+    },
+    {
+      "id": "night008_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757493.9069805,
+      "fresh_child_process": true,
+      "pid": 4291,
+      "exit_code": 0,
+      "seconds": 15.650038003921509
+    },
+    {
+      "id": "night008_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757509.562434,
+      "fresh_child_process": true,
+      "pid": 4328,
+      "exit_code": 0,
+      "seconds": 13.402915477752686
+    },
+    {
+      "id": "night008_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757522.9712515,
+      "fresh_child_process": true,
+      "pid": 4361,
+      "exit_code": 0,
+      "seconds": 14.505512475967407
+    },
+    {
+      "id": "rain030_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757537.482929,
+      "fresh_child_process": true,
+      "pid": 4396,
+      "exit_code": 0,
+      "seconds": 12.270248651504517
+    },
+    {
+      "id": "rain030_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757549.758822,
+      "fresh_child_process": true,
+      "pid": 4427,
+      "exit_code": 0,
+      "seconds": 17.866794109344482
+    },
+    {
+      "id": "rain030_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757567.6313524,
+      "fresh_child_process": true,
+      "pid": 4468,
+      "exit_code": 0,
+      "seconds": 15.613059759140015
+    },
+    {
+      "id": "rain030_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757583.2502856,
+      "fresh_child_process": true,
+      "pid": 4505,
+      "exit_code": 0,
+      "seconds": 13.355048179626465
+    },
+    {
+      "id": "rain030_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757596.6105285,
+      "fresh_child_process": true,
+      "pid": 4538,
+      "exit_code": 0,
+      "seconds": 14.56439208984375
+    },
+    {
+      "id": "rain030_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757611.1813335,
+      "fresh_child_process": true,
+      "pid": 4573,
+      "exit_code": 0,
+      "seconds": 20.12673592567444
+    },
+    {
+      "id": "sunset007_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757631.3136387,
+      "fresh_child_process": true,
+      "pid": 4618,
+      "exit_code": 0,
+      "seconds": 17.909834146499634
+    },
+    {
+      "id": "sunset007_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757649.2287,
+      "fresh_child_process": true,
+      "pid": 4659,
+      "exit_code": 0,
+      "seconds": 15.698795318603516
+    },
+    {
+      "id": "sunset007_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757664.9333801,
+      "fresh_child_process": true,
+      "pid": 4696,
+      "exit_code": 0,
+      "seconds": 13.42987871170044
+    },
+    {
+      "id": "sunset007_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757678.3687072,
+      "fresh_child_process": true,
+      "pid": 4729,
+      "exit_code": 0,
+      "seconds": 14.543464183807373
+    },
+    {
+      "id": "sunset007_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757692.9183383,
+      "fresh_child_process": true,
+      "pid": 4764,
+      "exit_code": 0,
+      "seconds": 21.196295261383057
+    },
+    {
+      "id": "sunset007_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757714.1205518,
+      "fresh_child_process": true,
+      "pid": 4811,
+      "exit_code": 0,
+      "seconds": 13.404617309570312
+    },
+    {
+      "id": "day004_holdout_geometry_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757727.5310924,
+      "fresh_child_process": true,
+      "pid": 4844,
+      "exit_code": 0,
+      "seconds": 17.95567798614502
+    },
+    {
+      "id": "day004_holdout_depth_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757745.4936266,
+      "fresh_child_process": true,
+      "pid": 4885,
+      "exit_code": 0,
+      "seconds": 15.795799016952515
+    },
+    {
+      "id": "day004_holdout_static_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757761.2951593,
+      "fresh_child_process": true,
+      "pid": 4922,
+      "exit_code": 0,
+      "seconds": 15.739902973175049
+    },
+    {
+      "id": "day004_holdout_depth_fusion_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757777.0402107,
+      "fresh_child_process": true,
+      "pid": 4959,
+      "exit_code": 0,
+      "seconds": 21.31068515777588
+    },
+    {
+      "id": "day004_holdout_baseline_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757798.3564546,
+      "fresh_child_process": true,
+      "pid": 5006,
+      "exit_code": 0,
+      "seconds": 14.521206140518188
+    },
+    {
+      "id": "day004_holdout_legacy_s45_r1",
+      "status": "COMPLETE",
+      "started": 1795757812.8831356,
+      "fresh_child_process": true,
+      "pid": 5041,
+      "exit_code": 0,
+      "seconds": 20.169077157974243
+    }
+  ]
+}

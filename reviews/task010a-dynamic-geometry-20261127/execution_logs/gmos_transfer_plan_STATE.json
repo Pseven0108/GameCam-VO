@@ -1,0 +1,157 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\gmos_transfer_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "gmos_day004_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "day004_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737436.5848153,
+      "exit_code": 0,
+      "seconds": 38.924461364746094
+    },
+    {
+      "id": "gmos_sunset007_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "sunset007_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737475.5107794,
+      "exit_code": 0,
+      "seconds": 38.72135806083679
+    },
+    {
+      "id": "gmos_rain030_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "rain030_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737514.233137,
+      "exit_code": 0,
+      "seconds": 38.463764667510986
+    },
+    {
+      "id": "gmos_night008_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "night008_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737552.6979065,
+      "exit_code": 0,
+      "seconds": 38.36865854263306
+    },
+    {
+      "id": "gmos_snow032_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "snow032_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737591.0685632,
+      "exit_code": 0,
+      "seconds": 38.05065727233887
+    },
+    {
+      "id": "gmos_downtown1_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "downtown1_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737629.1207254,
+      "exit_code": 0,
+      "seconds": 38.07821202278137
+    },
+    {
+      "id": "gmos_downtown2_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "downtown2_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737667.1999373,
+      "exit_code": 0,
+      "seconds": 37.39156913757324
+    },
+    {
+      "id": "gmos_wildworld_thirdperson_qual",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/infer_candidates.py",
+        "--model",
+        "gmos",
+        "--dataset",
+        "wildworld_thirdperson_qual"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737704.5925062,
+      "exit_code": 0,
+      "seconds": 37.18067932128906
+    },
+    {
+      "id": "wildworld_flow",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "wildworld_thirdperson_qual"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737741.7731855,
+      "exit_code": 0,
+      "seconds": 18.586122035980225
+    }
+  ]
+}

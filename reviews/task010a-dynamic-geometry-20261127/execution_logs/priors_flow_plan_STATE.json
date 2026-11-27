@@ -1,0 +1,216 @@
+{
+  "plan": "experiments\\TASK010-A\\private\\priors_flow_plan.json",
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "id": "priors_sunset007_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "sunset007_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737164.7626925,
+      "exit_code": 0,
+      "seconds": 20.386924266815186
+    },
+    {
+      "id": "priors_rain030_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "rain030_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737185.15112,
+      "exit_code": 0,
+      "seconds": 17.94317126274109
+    },
+    {
+      "id": "priors_night008_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "night008_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737203.0942912,
+      "exit_code": 0,
+      "seconds": 17.778285264968872
+    },
+    {
+      "id": "priors_snow032_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "snow032_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737220.8735764,
+      "exit_code": 0,
+      "seconds": 17.803178787231445
+    },
+    {
+      "id": "priors_downtown1_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "downtown1_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737238.67776,
+      "exit_code": 0,
+      "seconds": 18.32160758972168
+    },
+    {
+      "id": "priors_downtown2_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/cache_priors.py",
+        "--dataset",
+        "downtown2_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737256.9993675,
+      "exit_code": 0,
+      "seconds": 18.277189254760742
+    },
+    {
+      "id": "flow_night007_dev",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "night007_dev"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737275.2765567,
+      "exit_code": 0,
+      "seconds": 17.553103923797607
+    },
+    {
+      "id": "flow_day004_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "day004_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737292.8306658,
+      "exit_code": 0,
+      "seconds": 18.59385657310486
+    },
+    {
+      "id": "flow_sunset007_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "sunset007_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737311.425523,
+      "exit_code": 0,
+      "seconds": 17.819350004196167
+    },
+    {
+      "id": "flow_rain030_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "rain030_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737329.2454858,
+      "exit_code": 0,
+      "seconds": 17.702934741973877
+    },
+    {
+      "id": "flow_night008_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "night008_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737346.9494607,
+      "exit_code": 0,
+      "seconds": 17.433595180511475
+    },
+    {
+      "id": "flow_snow032_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "snow032_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737364.3840556,
+      "exit_code": 0,
+      "seconds": 17.271260023117065
+    },
+    {
+      "id": "flow_downtown1_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "downtown1_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737381.6563165,
+      "exit_code": 0,
+      "seconds": 17.439380884170532
+    },
+    {
+      "id": "flow_downtown2_holdout",
+      "command": [
+        "D:/aaa/envs/gamecam-vo/python.exe",
+        "-u",
+        "-B",
+        "experiments/TASK010-A/scripts/flow_geometry.py",
+        "--dataset",
+        "downtown2_holdout"
+      ],
+      "status": "COMPLETE",
+      "started": 1795737399.096749,
+      "exit_code": 0,
+      "seconds": 17.584970712661743
+    }
+  ]
+}

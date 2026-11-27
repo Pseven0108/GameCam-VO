@@ -1,5 +1,7 @@
 # Current reviews
 
+- [TASK011D complete preparation review — 169 tests, 19 windows, formal SLAM=0](reviews/task011d-a7-gpu-adapter-dual-validation-20261128/FINAL_REVIEW.md)
+
 - [TASK011C data audit + A7 CPU readiness — INCONCLUSIVE, GPU=0](reviews/task011c-maxfusion-spatial-utility-20261128/FINAL_REVIEW.md)
 
 - [TASK011B complete actual140-outcome review](reviews/task011b-validity-aware-cadp-dr-20261127/FINAL_REVIEW.md)

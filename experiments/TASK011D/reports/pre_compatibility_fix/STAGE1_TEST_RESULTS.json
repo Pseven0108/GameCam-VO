@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "tests": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 0.6572333000367507,
+      "CUDA_initialized": false,
+      "research_models_loaded": false,
+      "name": "legacy_C_56_on_D_adapter",
+      "device": "cpu",
+      "exit_code": 0
+    },
+    {
+      "tests": 66,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 0.0341729000210762,
+      "CUDA_initialized": false,
+      "research_models_loaded": false,
+      "name": "legacy_B_66_unchanged",
+      "device": "cpu",
+      "exit_code": 0
+    },
+    {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 0.04128800000762567,
+      "CUDA_initialized": false,
+      "research_models_loaded": false,
+      "name": "new_CPU",
+      "device": "cpu",
+      "exit_code": 0
+    },
+    {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 0.01328110002214089,
+      "CUDA_initialized": false,
+      "research_models_loaded": false,
+      "name": "new_source_CPU",
+      "device": "cpu",
+      "exit_code": 0
+    },
+    {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 0.5977548999944702,
+      "CUDA_initialized": true,
+      "research_models_loaded": false,
+      "name": "new_CUDA",
+      "device": "cuda",
+      "exit_code": 0
+    },
+    {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "seconds": 1.68032129999483,
+      "CUDA_initialized": true,
+      "research_models_loaded": false,
+      "name": "D2H_runtime_audit",
+      "device": "cuda",
+      "exit_code": 0
+    }
+  ],
+  "total_tests": 137,
+  "formal_SLAM_runs": 0,
+  "model_forwards": 0
+}

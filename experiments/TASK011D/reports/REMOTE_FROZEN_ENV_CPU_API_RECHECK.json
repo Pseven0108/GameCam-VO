@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_CPU_API_COMPATIBILITY\", \"torch\": \"2.1.0+cu118\", \"CUDA_build\": \"11.8\", \"weights_only\": true, \"source_slots\": [0, 2, 3, 6, 63], \"timestamps\": [63, 61, 60, 57, 0], \"max_mean_error\": 2.980232238769531e-07, \"clone_alias_preserved\": true, \"CUDA_initialized\": false, \"models_loaded\": false}\n",
+  "stderr": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()\n  return self.fget.__get__(instance, owner)()\n",
+  "adapter_source_sha256": "ff03b90683aa7e7ed2590cec1af860887adc09da0719a489aaab736f006d7cbf"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "tests_run": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "was_successful": true,
+      "seconds": 2.883324199996423,
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "torch_imported": true,
+      "CUDA_initialized": false,
+      "model_inference": false,
+      "synthetic_CPU_only": true,
+      "group": "A7_CPU_CONTRACTS",
+      "exit_code": 0
+    },
+    {
+      "tests_run": 66,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "was_successful": true,
+      "seconds": 0.8781707999878563,
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "torch_imported": false,
+      "CUDA_initialized": false,
+      "model_inference": false,
+      "synthetic_CPU_only": true,
+      "group": "FROZEN_TASK011B_REGRESSIONS",
+      "exit_code": 0
+    }
+  ],
+  "tests_run": 122,
+  "fixture_source_parent": "78ca580c636bb232eba6d46ccf704b193988b5ab",
+  "fixture_source_path": "reviews/task011b-validity-aware-cadp-dr-20261127/reproducibility/experiments/TASK011B/intake/reliability_metrics_frozen.py",
+  "fixture_sha256": "38da7b713492bacc82788cb36825dac34301d949f755f9129f3ac1026743aeea",
+  "native_regression_receipt_source": "reviews/task011b-validity-aware-cadp-dr-20261127/reproducibility/experiments/TASK011B/intake/NATIVE_REGRESSION_FORMAL_REAL_FIRST_LOCAL.json",
+  "native_regression_receipt_sha256": "19d5e6d030b835333cfff74f7312972b456eab3c23e64cce708d436210022c24",
+  "GPU_equivalence": "NOT_TESTED",
+  "models_loaded": 0,
+  "CUDA_initializations": 0
+}

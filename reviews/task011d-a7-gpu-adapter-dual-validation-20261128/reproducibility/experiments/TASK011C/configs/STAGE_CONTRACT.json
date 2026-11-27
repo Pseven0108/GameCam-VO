@@ -1,0 +1,51 @@
+{
+  "stage": "DATA_AUDIT_AND_CPU_ADMISSION_ONLY",
+  "GPU_runs_authorized_in_this_delivery": false,
+  "algorithms": [
+    "A0",
+    "A1",
+    "A4",
+    "A5",
+    "A7"
+  ],
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "maximum_future_plan": 300,
+  "frames": 64,
+  "stride": 1,
+  "buffer": 500,
+  "input_hw": [
+    360,
+    640
+  ],
+  "alpha": 0.01,
+  "GT_path_threshold_native_units": 0.0001,
+  "K_max_deviation_px": 0.001,
+  "mean_absolute_tolerance": 1e-06,
+  "prior_precision": "NATIVE_MOTION_FILTER_AUTOCAST_V2",
+  "sequence_exclusion": "ALL historical comparative source sequences, including failed attempts and old stride4",
+  "source_comparison": "A7 vs counterfactual A5 on the identical actual BA state",
+  "old_arm_config_hashes": {
+    "A0": {
+      "sha256": "66f0e660d93514bef939392e9052be951545eaede8832fd0f225dc1bf4b14864",
+      "byte_identical_to_TASK011B": true
+    },
+    "A1": {
+      "sha256": "191b686836163940f7ca21e222176873737ccf3f160acfcb980747f7d9fd4ac3",
+      "byte_identical_to_TASK011B": true
+    },
+    "A4": {
+      "sha256": "52896d46a508734a66b09d823f6d9bbcc69bb4ac04ea7f5c13f84d72eb673ae3",
+      "byte_identical_to_TASK011B": true
+    },
+    "A5": {
+      "sha256": "c3462a6b0486a071b22500f9fcc1d68639870bd92f15735aaf1c5d1edba804e4",
+      "byte_identical_to_TASK011B": true
+    }
+  },
+  "no_model_forward": true,
+  "no_remote_experiment": true
+}

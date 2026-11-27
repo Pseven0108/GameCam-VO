@@ -1,3 +1,20 @@
+# GameCam-VO — TASK011D preparation complete, review required
+
+2026-11-28, Asia/Shanghai. VIPER remains the only active dataset.
+
+TASK011D: source-only A7 adapter fixed; 169 tests passed. Route A19 windows and1216 JPEGs
+passed real data admission, explicitly historically exposed. FSR/E2E protocols and285-job order frozen.
+Local synthetic CUDA only; formal SLAM/native BA/Pilot/model forwards all0. Secondary margins await approval.
+
+[Complete current review](reviews/task011d-a7-gpu-adapter-dual-validation-20261128/FINAL_REVIEW.md).
+
+The current readiness claim does not establish A5>A7. Do not launch formal models without subsequent approval.
+TASK011B/C are sealed history. TASK011C's strict-data blocker is amended for this new Route A only.
+
+---
+
+## Previous status — archived
+
 # GameCam-VO — TASK011C CPU complete / data admission blocked
 
 2026-11-28, Asia/Shanghai. VIPER is the sole active experimental dataset.

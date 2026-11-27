@@ -1,0 +1,36 @@
+test_E2E_CPU_driver_and_attempt_no_retry (test_framework_cpu.AdmissionAndGuards.test_E2E_CPU_driver_and_attempt_no_retry) ... ok
+test_GPU_facing_windows_have_no_GT_paths (test_framework_cpu.AdmissionAndGuards.test_GPU_facing_windows_have_no_GT_paths) ... ok
+test_all_frozen_configs_match_their_SHA (test_framework_cpu.AdmissionAndGuards.test_all_frozen_configs_match_their_SHA) ... ok
+test_authorized_job_cannot_be_relabelled_to_another_arm (test_framework_cpu.AdmissionAndGuards.test_authorized_job_cannot_be_relabelled_to_another_arm) ... ok
+test_cache_job_is_bound_to_a_frozen_window (test_framework_cpu.AdmissionAndGuards.test_cache_job_is_bound_to_a_frozen_window) ... ok
+test_engineering_failure_initialization_not_falsely_inferred (test_framework_cpu.AdmissionAndGuards.test_engineering_failure_initialization_not_falsely_inferred) ... ok
+test_formal_driver_refuses_before_torch_or_native_import (test_framework_cpu.AdmissionAndGuards.test_formal_driver_refuses_before_torch_or_native_import) ... ok
+test_incomplete_or_test_authorization_rejected (test_framework_cpu.AdmissionAndGuards.test_incomplete_or_test_authorization_rejected) ... ok
+test_no_current_execution_authority (test_framework_cpu.AdmissionAndGuards.test_no_current_execution_authority) ... ok
+test_selected_sources_exclude_B_and_val014 (test_framework_cpu.AdmissionAndGuards.test_selected_sources_exclude_B_and_val014) ... ok
+test_bad_uniform_strength_rejected (test_framework_cpu.ReplayContracts.test_bad_uniform_strength_rejected) ... ok
+test_calls_are_nested_not_independent_clusters (test_framework_cpu.ReplayContracts.test_calls_are_nested_not_independent_clusters) ... ok
+test_initialization_or_unmarked_snapshot_not_replayed (test_framework_cpu.ReplayContracts.test_initialization_or_unmarked_snapshot_not_replayed) ... ok
+test_mutated_snapshot_rejected (test_framework_cpu.ReplayContracts.test_mutated_snapshot_rejected) ... ok
+test_native_U_updates_allowed_inside_branches_not_shared_initial_state (test_framework_cpu.ReplayContracts.test_native_U_updates_allowed_inside_branches_not_shared_initial_state) ... ok
+test_three_independent_branches_same_inputs_RNG_and_no_trajectory_score (test_framework_cpu.ReplayContracts.test_three_independent_branches_same_inputs_RNG_and_no_trajectory_score) ... ok
+test_clone_preserves_alias_stride_offset_and_values (test_framework_cpu.SnapshotContracts.test_clone_preserves_alias_stride_offset_and_values) ... ok
+test_disk_snapshot_and_original_protected (test_framework_cpu.SnapshotContracts.test_disk_snapshot_and_original_protected) ... ok
+test_every_write_checks_storage (test_framework_cpu.SnapshotContracts.test_every_write_checks_storage) ... ok
+test_observer_does_not_advance_python_numpy_or_torch_RNG (test_framework_cpu.SnapshotContracts.test_observer_does_not_advance_python_numpy_or_torch_RNG) ... ok
+test_only_actual_eligible_phase (test_framework_cpu.SnapshotContracts.test_only_actual_eligible_phase) ... ok
+test_signature_must_be_complete (test_framework_cpu.SnapshotContracts.test_signature_must_be_complete) ... ok
+test_bootstrap_reproducible_with_preregistered_seed (test_framework_cpu.StatisticsContracts.test_bootstrap_reproducible_with_preregistered_seed) ... ok
+test_constant_estimate_retains_raw_scale_error_without_fake_ATE (test_framework_cpu.StatisticsContracts.test_constant_estimate_retains_raw_scale_error_without_fake_ATE) ... ok
+test_duplicate_outcome_is_rejected (test_framework_cpu.StatisticsContracts.test_duplicate_outcome_is_rejected) ... ok
+test_failed_and_unscorable_outcomes_not_zero_imputed (test_framework_cpu.StatisticsContracts.test_failed_and_unscorable_outcomes_not_zero_imputed) ... ok
+test_failure_denominator_includes_missing_runs (test_framework_cpu.StatisticsContracts.test_failure_denominator_includes_missing_runs) ... ok
+test_plan_has_285_unique_jobs_57_per_arm (test_framework_cpu.StatisticsContracts.test_plan_has_285_unique_jobs_57_per_arm) ... ok
+test_scorer_global_Sim3_corrects_rotations_and_uses_GT_path (test_framework_cpu.StatisticsContracts.test_scorer_global_Sim3_corrects_rotations_and_uses_GT_path) ... ok
+test_single_cluster_is_not_given_fake_CI (test_framework_cpu.StatisticsContracts.test_single_cluster_is_not_given_fake_CI) ... ok
+test_source_cluster_not_seed_pseudoreplication (test_framework_cpu.StatisticsContracts.test_source_cluster_not_seed_pseudoreplication) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.622s
+
+OK

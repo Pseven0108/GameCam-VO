@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nTypeError: all() received an invalid combination of arguments - got (tuple), but expected one of:\n * ()\n      didn't match because some of the arguments have invalid types: (!tuple of (int, int)!)\n * (int dim, bool keepdim)\n * (name dim, bool keepdim)\n\n"
+}

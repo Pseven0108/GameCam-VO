@@ -1,0 +1,955 @@
+{
+  "parent": "78ca580c636bb232eba6d46ccf704b193988b5ab",
+  "inherited": [
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A0.json",
+      "bytes": 304,
+      "sha256": "66f0e660d93514bef939392e9052be951545eaede8832fd0f225dc1bf4b14864"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A1.json",
+      "bytes": 304,
+      "sha256": "191b686836163940f7ca21e222176873737ccf3f160acfcb980747f7d9fd4ac3"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A2.json",
+      "bytes": 296,
+      "sha256": "5d47082d1dadd2ee9c7ea75caa352d00b52b421d1ecb9334da84952fc1c745c1"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A3.json",
+      "bytes": 303,
+      "sha256": "f7130a145f59c3c335b8e350e282edb7340b71f02b49853c0676cfca49b06afe"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A4.json",
+      "bytes": 303,
+      "sha256": "52896d46a508734a66b09d823f6d9bbcc69bb4ac04ea7f5c13f84d72eb673ae3"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A5.json",
+      "bytes": 302,
+      "sha256": "c3462a6b0486a071b22500f9fcc1d68639870bd92f15735aaf1c5d1edba804e4"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_CONFIGS/A6.json",
+      "bytes": 302,
+      "sha256": "54950397f05ca01f5e30815c97b3c58a1f03d9482c14e796efc41aa918916614"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/SOURCE_PROVENANCE.json",
+      "bytes": 2082,
+      "sha256": "9426b12ed16bcd9e82acfdcdabbe8566043748a09bbdd016e1611281e0d41fe1"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/build_extension.py",
+      "bytes": 1564,
+      "sha256": "4c58f1d308a435ca0f69db15eb87a69f3a96482c30cc1cc77a56562ab9b7c716"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/controller.py",
+      "bytes": 10385,
+      "sha256": "8ea96ee20a7e10a33fe05b452eedfdd58079a43b821c1d4d5bc05966af0a0304"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/altcorr_kernel.cu",
+      "bytes": 11622,
+      "sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/correlation_kernels.cu",
+      "bytes": 5531,
+      "sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/droid.cpp",
+      "bytes": 7878,
+      "sha256": "76cb2e99c04f900b55dbafdad1ed8e52b7a9449311398c307cc4dcccc302c2ef"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/droid_kernels.cu",
+      "bytes": 68326,
+      "sha256": "f8949b3f4920b3b2af7417f5dbc5247546fa861fd4ca80b4e21926296e0d2cbf"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/upstream_altcorr_kernel.cu.txt",
+      "bytes": 11622,
+      "sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/upstream_correlation_kernels.cu.txt",
+      "bytes": 5531,
+      "sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/upstream_droid.cpp.txt",
+      "bytes": 7635,
+      "sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/native/upstream_droid_kernels.cu.txt",
+      "bytes": 62996,
+      "sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7"
+    },
+    {
+      "path": "experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/task011b_prior_control.patch",
+      "bytes": 8119,
+      "sha256": "1c227e39e4167f24738c943403c626097ca0e2a0bf416e361ba1e3b533ee1409"
+    },
+    {
+      "path": "experiments/TASK011B/EXECUTION_STATE.md",
+      "bytes": 629,
+      "sha256": "ecd0e0f91d260752014564e081df0fa737b18131ea6435595c4d87b67927286d"
+    },
+    {
+      "path": "experiments/TASK011B/configs/FIGURE_CONTRACT.json",
+      "bytes": 2778,
+      "sha256": "dc36f66b35819b1e38ec12c01f4424117af8c25e5ba5ae6146871cbd53e6eaac"
+    },
+    {
+      "path": "experiments/TASK011B/configs/GPU_RGB_INPUTS.json",
+      "bytes": 217103,
+      "sha256": "11cc753c394915d3036c4815cc4cb390658c31c1723a8b719e89248a232a940a"
+    },
+    {
+      "path": "experiments/TASK011B/configs/GPU_RUN_ORDER_FROZEN.json",
+      "bytes": 9245,
+      "sha256": "5105364f1e55df3d3ea8c106997b62449857ba247111c408c0e5c06340274f42"
+    },
+    {
+      "path": "experiments/TASK011B/configs/POST_SELECTION_MOTION_SENSITIVITY_AMENDMENT.json",
+      "bytes": 900,
+      "sha256": "564470b3b67a2cc6bdba6a2b5442cb2210ff1e27c04e011b03a7ce90c29cc19c"
+    },
+    {
+      "path": "experiments/TASK011B/configs/R2_R3_EXECUTION_PROTOCOL.json",
+      "bytes": 5602,
+      "sha256": "d79ff59a5c6377571b361e083057d2d16eacca7b49a47c93394f248e269f9443"
+    },
+    {
+      "path": "experiments/TASK011B/configs/VIPER_SELECTION_FROZEN.json",
+      "bytes": 606,
+      "sha256": "6a7d052f1e8234167a7ff66f1cc2b13f953ec45ea777c02ec8e22652772ff020"
+    },
+    {
+      "path": "experiments/TASK011B/configs/VIPER_WINDOW_MANIFEST.csv",
+      "bytes": 4493,
+      "sha256": "aecf95c665691f8579bb95051e49d59561f889c8b671d9050177928a5fd20ac3"
+    },
+    {
+      "path": "experiments/TASK011B/configs/frozen_r2.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc"
+    },
+    {
+      "path": "experiments/TASK011B/configs/r0_r1_protocol.json",
+      "bytes": 1119,
+      "sha256": "59019a763fff2481410e406846730d10364c34002ae3d0d5b097047f71c4fe60"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/archive_outputs.py",
+      "bytes": 1360,
+      "sha256": "3e8dd241e09cb2b70607abf5ae7a6b48435c2e373e79d4df36dc3e479d6c11ca"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/audit_cache_precision.py",
+      "bytes": 3144,
+      "sha256": "5b4eda1c9baa54a0fb804fa1dc983856e778b770819815d6a64320c6b1980637"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/cache_priors.py",
+      "bytes": 3766,
+      "sha256": "5ba6327859ff54b75cc8fcf2fa51dad24409e091391b3f316cae022f94754346"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/job_service.py",
+      "bytes": 2405,
+      "sha256": "6b6cbedb1dc15c9c46dbc289bcd66ab33d2d63e60cfa4f601255fb92094c3785"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/probe_spawn.py",
+      "bytes": 1086,
+      "sha256": "56c8d601528309e88752f53783f2a26cd2e3dad6be521e0e8e97e1cf5383c3ed"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/run_window.py",
+      "bytes": 9174,
+      "sha256": "5f4465def3b276bfb2756f4c862d4d5fb327d43ac72872ce9dd7321e36e80fd1"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/runtime.py",
+      "bytes": 3241,
+      "sha256": "38c2de09350f6881306c8224d992c02d8d07531b45703da39ba90bf876e10fda"
+    },
+    {
+      "path": "experiments/TASK011B/gpu/validate_native.py",
+      "bytes": 4928,
+      "sha256": "4caf9f50a66ac566baf98607f12a0614dac3b63f54f240063d1dc65fd1b9ac3e"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_failure_contexts.py",
+      "bytes": 6045,
+      "sha256": "811bf762da4ba8d428848bb4e67fcbaca103af00567eabbb924eb56e9b8c6372"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_geometry_increment.py",
+      "bytes": 3387,
+      "sha256": "53ca3918c874ab844e8c6469d642a3c9c682ca0f9e15c44a8d147368d2a9a865"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_gpu_mechanisms.py",
+      "bytes": 7297,
+      "sha256": "06041144fb726267f63a00495a07da2b15f33242dc2f758f02fcfcbaba0ca1f1"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_input_conditions.py",
+      "bytes": 2394,
+      "sha256": "5f9ae0bcfade9943a6e4436fc20875d73886a6d0491f434f5556c03ec2c43f87"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_metric_tradeoffs.py",
+      "bytes": 3492,
+      "sha256": "7d8f8ad63e61983fa7ab959a6b9bb06a350b9fc7c0f365fb83a1e16d2dea69df"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_motion_strata.py",
+      "bytes": 4871,
+      "sha256": "f0fe604efd021180dd8797a209daf620c22de49b313f0f53f2673fe347487086"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/analyze_run_costs.py",
+      "bytes": 6284,
+      "sha256": "366666d788e8144823dc6633d9762945ac0850d239135484e1609fa681ee31fc"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/audit_and_evaluate.py",
+      "bytes": 12380,
+      "sha256": "c1b4c5ca17f529ee2b8f4525897d083317a57cb4cb7462f76fff1a5169a4626b"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/audit_formal_runs.py",
+      "bytes": 4634,
+      "sha256": "b6092d68423c3eb11561006d8a8f4ee9fdbbd3e284cd839e6bd2ed4021a3e0f8"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/collect_final_service_logs.py",
+      "bytes": 683,
+      "sha256": "ba2c1c20c9c9d972926377a1dfe6d2d3eb2ee2898414e9cfe9c363904bed6274"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/collect_native_diagnostics.py",
+      "bytes": 3576,
+      "sha256": "62d9dc1f9d10ccce68100bf2755f35d36448e905b0992a8ab809e342fac89bec"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/common.py",
+      "bytes": 1901,
+      "sha256": "923d7d7ba4476c91a8e1af9fa3b596727b7b55de585bfdc4c00de89ee0883cc1"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/evaluate_viper.py",
+      "bytes": 8023,
+      "sha256": "1c6da13edac6920fad0e4e5a2402c448873e9d819b582a2536f8e74e657e4847"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/finalize_checkpoint.py",
+      "bytes": 36552,
+      "sha256": "f8525c45d5e8163c0fa2103147f805698e88332c25a84a32b32ab81eab847430"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/finalize_supporting_reports.py",
+      "bytes": 16519,
+      "sha256": "44817311d8d642c81a8d58cdbdee24fe8bc0146cc150d349deae1255877b3db2"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/finish_cpu_verification.py",
+      "bytes": 2399,
+      "sha256": "1ea132952bd1ff02d1fb6f9eb09335ec342bd3c1bed231082acd8439fd6d4401"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/freeze_viper_windows.py",
+      "bytes": 6817,
+      "sha256": "88ec6f7b73cbe42d0145d923dcf92dcc8c6e391904748ca42f7e06c86ba9c2db"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/plot_cpu_results.py",
+      "bytes": 7900,
+      "sha256": "3cc39a9b2273405448bec2e5bf5ce8f2470b3a28f5976461beb772eb82705cb4"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/plot_motion_sensitivity.py",
+      "bytes": 3516,
+      "sha256": "2b256df07b62a480523a2db04cf3f0ce8b465c7aacd096575095a0148ed7f27c"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/plot_viper_results.py",
+      "bytes": 8205,
+      "sha256": "2b9f81afae24bc518f4382351ff72c917eafaf30b7f83e5dfa52ab74fef8ef1b"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/prepare_execution_configs.py",
+      "bytes": 2641,
+      "sha256": "364d67507c9ae92de2bac2f7aa7a4ca956b7302cd7a181c57a4d6395f33825a0"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/prepare_full_delivery.py",
+      "bytes": 9995,
+      "sha256": "96096a797369eaaecfbffe50af4b8aad942a05d6129eabd6649e65f0c5c66c28"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/prepare_gpu_inputs.py",
+      "bytes": 1520,
+      "sha256": "71847051302cb69373372e9d6cdcfe91ad2ec7fadd1dc872252aef077f52a86a"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/prepare_native_candidate.py",
+      "bytes": 9897,
+      "sha256": "37bfd6d2105d71e22be014d8e8be2cdfe01d4c6360ceafe8ffd21c55f468980f"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/prepare_publication_client.py",
+      "bytes": 6846,
+      "sha256": "71c75b8b38941560e2d01ef6aece82f2d60abc973f8a5eb5e2c47e53c4f5d93f"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/publication_server_bridge.py",
+      "bytes": 7296,
+      "sha256": "5e13ecfc16a0be201d6fbb6aec27fcaba21b07ff7c5d0e0444fc693e50638595"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/reliability.py",
+      "bytes": 8394,
+      "sha256": "93a85b444e7b96b76bb23e3b4f8b44ad1238ef9d7022b424e4247aec1bf85349"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/remote_readonly_inventory.py",
+      "bytes": 1540,
+      "sha256": "bf6920bf8afb793b0855ae4cf3bcdc4c892f71ae8f08a90b0d2d4bc4537f628a"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/remote_transport.py",
+      "bytes": 2426,
+      "sha256": "90c84221b4c4793481cf816792a316de435c70f315227378b708c4e7b1f27803"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/replay_saved_arrays.py",
+      "bytes": 3704,
+      "sha256": "807496645726fe945d7995be0eb79d3f7d04e812fd90160f5d0d5657bac6fddf"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/sample_runtime_resources.py",
+      "bytes": 2316,
+      "sha256": "2a29411eb0bd50c0db28cdc72cf4a9829fffcc70868188a165a40ddfe0690391"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/stage_gpu_review_evidence.py",
+      "bytes": 6719,
+      "sha256": "b177fe2210c43d5a5d25bf5d2020cfb28fff8b93dab543380ab7afaef7119483"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/summarize_runtime_resources.py",
+      "bytes": 1913,
+      "sha256": "e1959ca0ddadd2e81b4f9ff7864b41e649b3e8a454f4b990cb09ac9b055e88d2"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/supervise_cpu_evidence.py",
+      "bytes": 1730,
+      "sha256": "94f855d591fb1364756fcc22fd3182d1b7eeea33ed0190a1cfc95858b433e154"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/supervise_gpu.py",
+      "bytes": 7910,
+      "sha256": "c59db4c149d6997a77514daa7901af6ed510859ca6bd79768c740273e304e8a1"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/sync_project_status.py",
+      "bytes": 3373,
+      "sha256": "856f8813b8f0c55286312b3e5e976d19964468ed60fde87e03aa6aebfa1ecf74"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/transfer_gpu_payload.py",
+      "bytes": 2151,
+      "sha256": "c357b474947ccd9e20c8104a11d57a637b3b10ad4a5215aea90bd566e38fc039"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/verify_final_protection.py",
+      "bytes": 4645,
+      "sha256": "e063f8a4ec09835db9d29e8606c36ca33e881d31d692fc4ac28a54110a66daec"
+    },
+    {
+      "path": "experiments/TASK011B/scripts/write_final_review.py",
+      "bytes": 34918,
+      "sha256": "4703efe8614381d02a785e78f7343b13f607dbf51b54e9b30fbecc75fc3d5170"
+    },
+    {
+      "path": "experiments/TASK011B/tests/test_integration_contract.py",
+      "bytes": 5358,
+      "sha256": "0a33599c92a623a06a6931b3526bc5c4784c76e6e58eb80e3c27a0dde8329b67"
+    },
+    {
+      "path": "experiments/TASK011B/tests/test_reliability.py",
+      "bytes": 10374,
+      "sha256": "60919703d49333b93c56c51e8c3eb703d40e4c423bc67de718dc9e7c4d39c300"
+    },
+    {
+      "path": "experiments/TASK011B/tests/test_trajectory_evaluation.py",
+      "bytes": 1495,
+      "sha256": "08581c3b7f098aa3a76977c941c243fbcc79506949c211bf55a2a9e5a037b40d"
+    }
+  ],
+  "original_baseline_files": [
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_balloon.yaml",
+      "bytes": 143,
+      "sha256": "6622ff137e3f17f7177e61ffba4b135c072e42b3fb8cec3cf4fb82f8fff9d29f"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_balloon2.yaml",
+      "bytes": 145,
+      "sha256": "dce92642c66e9307fa8ba921d756713868723326f58d9a260d12bf6faea582bd"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_crowd.yaml",
+      "bytes": 139,
+      "sha256": "d3dbe0b3d23a29ef9f94deca6d2789e57d9c716e7a9e4817d1637f0421d17534"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_crowd2.yaml",
+      "bytes": 141,
+      "sha256": "1b5654f5667e34af62f8501ac0d54d3f8133871ba62e67acfc31770bd358fb56"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_dynamic.yaml",
+      "bytes": 408,
+      "sha256": "b29ea7bce58b482f9b13d8bde1a7e3616b68f7209ac28260dd596d1c0d0d6d03"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_moving_nonobstructing_box.yaml",
+      "bytes": 181,
+      "sha256": "3972f1ec7e310f915c54b9433f8be4ededa71108cd1d6618ce739447b6f8ff35"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_moving_nonobstructing_box2.yaml",
+      "bytes": 181,
+      "sha256": "717beca99737bb703612dbbb5cec7ddb0a23510bc8ddd10bbbc394a1039e89f1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_person_tracking.yaml",
+      "bytes": 161,
+      "sha256": "0275afc037146ace9a5dc74df62ba7a2b951eb413922961c31afce187efeec07"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\Bonn\\bonn_person_tracking2.yaml",
+      "bytes": 161,
+      "sha256": "72053f96763ae19baec3fd05b5fcbfb0c6c1caaaf5c03c9fe385957429d12b49"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown1.yaml",
+      "bytes": 128,
+      "sha256": "bf45f950f7d01f37c6686eeaef65c905ca79e51a3bdbb00965179df6c04adbf6"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown2.yaml",
+      "bytes": 128,
+      "sha256": "437d5c11208dc9f8ca411d167d7f12ec70a753182346a4fe8d0a7c15d640dcde"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown3.yaml",
+      "bytes": 128,
+      "sha256": "a0caa4ef415433d4db30abc83b748355db2859360f4d333b34a5a2e2bbc7867a"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown4.yaml",
+      "bytes": 128,
+      "sha256": "8d60c1cc3a719cb6946ccceed4276ca2aa7b5638172d5ff44d9e6193048a0ecd"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown5.yaml",
+      "bytes": 128,
+      "sha256": "b8e1c16e79eca3a6e1d37e0ce7765867b4c9772eec974e11f98ded51607fa22d"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown6.yaml",
+      "bytes": 128,
+      "sha256": "8e703e885efdba58ff71fc5cc896bb0708d48ee533ace0f2ae5df0a524315de5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\downtown7.yaml",
+      "bytes": 128,
+      "sha256": "0d090ee2f0bc1985cc98db43fbcb4683e0e4bc6deb995e6da5c527d231e7c0e1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DROIDW\\droidw.yaml",
+      "bytes": 566,
+      "sha256": "1f9123202903ee7d73f35446cadf2edebff47bef1ee9c76630d5f3318970ac28"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\apple.yaml",
+      "bytes": 270,
+      "sha256": "e5f9f2805b534e6363c663150f454f25576d13d83b5f3b9b2c3cfd65966c1028"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\backpack.yaml",
+      "bytes": 276,
+      "sha256": "ce6077fef1cb91350e4b2f435af90208cc6bc865c317091dbe2bddaeaa7146da"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\block.yaml",
+      "bytes": 270,
+      "sha256": "56bafd009fff9e2366b89de70aa2b0739408de13a196acef3e2e31a37524fb5a"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\creeper.yaml",
+      "bytes": 274,
+      "sha256": "83f9b0b000c145a930b8b868f746f05846c9357cb52b144de2a82619ce8c1f2b"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\dycheck.yaml",
+      "bytes": 381,
+      "sha256": "aabaad61ea1fc5a3cb234cf0d9cf9225e95e54d3a306c1c7841ef120cd8cb356"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\handwavy.yaml",
+      "bytes": 276,
+      "sha256": "5f043b84fbdb87a42429f18f009b00f57f7722dc4b81dfd971e8c9aacba03631"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\haru-sit.yaml",
+      "bytes": 276,
+      "sha256": "b64d00f89a34437e819969c12b54a6a5173882ed3c2a63c8edd6b31aa89be5bb"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\mochi-high-five.yaml",
+      "bytes": 290,
+      "sha256": "414ab8d84c2297680f77764e5f02d824702bb63836c817bc73d35963140da0b5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\paper-windmill.yaml",
+      "bytes": 288,
+      "sha256": "efa4e353c4c3e256ee74dba0df1f0340064f465a016cd016b60ae523183b4931"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\pillow.yaml",
+      "bytes": 272,
+      "sha256": "76866b17ccbd858d8cf9c4a76724f48af85f5131425a7a4b7cdd9ab7b1f744e5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\spin.yaml",
+      "bytes": 268,
+      "sha256": "13658d97cfdf088c6e908076631e9a7c9da0fef4bcc7756c1ebe0fc69c2e3e30"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\sriracha-tree.yaml",
+      "bytes": 286,
+      "sha256": "2946928e43d9e64a552335c4a29c1ec535a4639a09b6d26b270c9db97dd0294b"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\DyCheck\\teddy.yaml",
+      "bytes": 270,
+      "sha256": "f638097fbf16cd69d5c06f81623df6fb7c2166bebbb2b196649f152f893dfe8a"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg2_desk_with_person.yaml",
+      "bytes": 533,
+      "sha256": "7b49033c92ff7b541db299aa0ddb3fbf96fb907de87e307e975764404c3c4475"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_sitting_halfsphere.yaml",
+      "bytes": 343,
+      "sha256": "fe1c667345a433e83b4f0a7eec4dc61fde05b8e68c31d964be6104a484483415"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_sitting_halfsphere_static.yaml",
+      "bytes": 335,
+      "sha256": "8a1ef61c15279c17922ea506d9f737e2ec906409f78c2db5a3a9d88ef1652eb6"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_sitting_rpy.yaml",
+      "bytes": 329,
+      "sha256": "828d8eb2b31ab8652b94805a24fb26d3daeba982ed8cd42818be627154bbec39"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_sitting_xyz.yaml",
+      "bytes": 329,
+      "sha256": "af4aee76d326f65d52d7b1a955e42f0739d15c5c57045cd8c2d4a06fea604080"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_walking_halfsphere.yaml",
+      "bytes": 343,
+      "sha256": "c452e73c39828bc2e1b495659286177d1a391b1d850a8d22b643460081223d81"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_walking_halfsphere_static.yaml",
+      "bytes": 335,
+      "sha256": "878b7c631dbdf6e620619d4bbaaf2eeb2ae85a8149d27d90b7c2bc669cdd139f"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_walking_rpy.yaml",
+      "bytes": 329,
+      "sha256": "0b05ed887e1f44065db5efad06694c0b5735eec11e147ce330ab5635b5e79ffb"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\freiburg3_walking_xyz.yaml",
+      "bytes": 329,
+      "sha256": "829ee5f2f16d14caa5495cf9536958dcc75d9a034b394c893639853cacc236fd"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\TUM_RGBD\\tum_dynamic.yaml",
+      "bytes": 692,
+      "sha256": "e477435e5578e8041b5fcc8444b8de9514b90e610df8a201806500c442920e42"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\elephant_herd.yaml",
+      "bytes": 321,
+      "sha256": "35542296567e4610ab8cb6a0e5a15d00a2cc9c7441fcb7160060b04598e77746"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\giraffe.yaml",
+      "bytes": 309,
+      "sha256": "540e58b0b5af5e9b1b56b3c7ab5f0f8fadc4872d15e57fa1ccf1710f28812018"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_01.yaml",
+      "bytes": 330,
+      "sha256": "d1ed8c5f761f9046a1f1316e38446af170807a707d392a4d184d6bfe7e4e2184"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_02.yaml",
+      "bytes": 330,
+      "sha256": "857d58189f864fda4437524981a4f78ecf54e79cd21d41708d2b03955454f4f2"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_03.yaml",
+      "bytes": 330,
+      "sha256": "c6ec9e0785f3104d866e5820bb85b84cd1482943150e9709a28449874af92ef6"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_04.yaml",
+      "bytes": 330,
+      "sha256": "c12c7029f2177bb8812efe9dffed18eb4c2aa5fd0ad30dc23cc8657cf6be172a"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_05.yaml",
+      "bytes": 330,
+      "sha256": "c90bf309be18f8ce13916c20fbe75fa863a8f031429b779bbef23e95cdc9b902"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\stmoritz_06.yaml",
+      "bytes": 330,
+      "sha256": "13f23129ba5e0af0f59e28b7c3526a56b9546daa3d3dc8191532fe8ce861da00"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\taylor_22.yaml",
+      "bytes": 303,
+      "sha256": "e8379d971d753c3fe8de227a37bf22bb43ae6fbe40eb7a3996879adb180215c7"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\tokyo_walking1.yaml",
+      "bytes": 298,
+      "sha256": "7d7d21c46c048f621b6a79709f97de209ad7d7b835f3ce0942f7626f464aede0"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\tokyo_walking2.yaml",
+      "bytes": 300,
+      "sha256": "b69b92644037ba0c8b0eb0ad62abe98784fe2d3a6808e25536fe0c0a3577e473"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\tokyo_walking3.yaml",
+      "bytes": 299,
+      "sha256": "2b8ebd0aeb39931a61088899bf6671dea378d3d682080e4ed79a314b1e1dd335"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\tomyum.yaml",
+      "bytes": 320,
+      "sha256": "bec315e35b68b9364a095643ffa498477cc79dfa6874eac4419ac9d5990eecea"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\tomyum2.yaml",
+      "bytes": 322,
+      "sha256": "ecc238444cb894da289fb1119ee93055cc42c958cba175720729ff6f1a8be664"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\Dynamic\\YouTube\\youtube.yaml",
+      "bytes": 628,
+      "sha256": "2311d5617916cfe32aa8f9280c240380ca8e86abbf3433ec23e34eca7602a46f"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\configs\\droid_w.yaml",
+      "bytes": 6747,
+      "sha256": "86a478559c8a963217e341300e8c568e573f401e5bb49490e8e8db3637c6c4a9"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\setup.py",
+      "bytes": 751,
+      "sha256": "c2311f96ea5524ac34de4298b72fb6f6131f334ffea836cd2d71f0a834c76a79"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\backend.py",
+      "bytes": 5394,
+      "sha256": "1fba5661f344890e1875634f7a166c9cdf6d44536ad7b82c98f20f68bac430cd"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\config.py",
+      "bytes": 2195,
+      "sha256": "08196e1ff535a0d821f4b5c05e907edecbf257947b609dd76894da45f5f1f76b"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\depth_video.py",
+      "bytes": 46178,
+      "sha256": "72012712bc58460d7b6d03dc751fa08f7fc007f1de27272855daf3f192f79cf0"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\factor_graph.py",
+      "bytes": 22615,
+      "sha256": "b04d147c74a4dfe305aacc3578222472fd2ec65a0af2e878127faeccb7aa6529"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\frontend.py",
+      "bytes": 10872,
+      "sha256": "236578247cb853596aebab8969d0cd9914361da37a1ff17f218bc2454254a17f"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\geom\\__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\geom\\ba.py",
+      "bytes": 10479,
+      "sha256": "150c9f80f191918529bae06875376ca5bbcee1a72c8ad2d921a2d1b004b3617b"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\geom\\chol.py",
+      "bytes": 2771,
+      "sha256": "a63c41fb9094235d7af26aea9884d6646814bd766d7c35e4531a959686376033"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\geom\\projective_ops.py",
+      "bytes": 4825,
+      "sha256": "3bae4b6084e4a1de2173f23a97124841e44abac3945953c43f67fcf464e92c1d"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\LICENSE",
+      "bytes": 1081,
+      "sha256": "c8f3e659e35177d31a2490f746fd47035baf08a24010ea4ef8de37ab80feca8c"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\__init__.py",
+      "bytes": 42,
+      "sha256": "505a414a4c9fec06168d99efde430e9ff3abfa8def8455552db5cc0add630e58"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\render_ogl.py",
+      "bytes": 4643,
+      "sha256": "5a34b1b14bd6c9a5a88b96f496059f0d99b833a6e96cee6094f41a37c611b2af"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\shaders\\gau_frag.glsl",
+      "bytes": 968,
+      "sha256": "24eb309bce06707863b7d20511d48a1cace720c5fe4a97e8366f3ffc3fbb31de"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\shaders\\gau_vert.glsl",
+      "bytes": 6615,
+      "sha256": "ae5a90ef400b28ae335b382236c9f8d38ba5b2d2f441139f421f8d515d8786d1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\util.py",
+      "bytes": 8969,
+      "sha256": "c3a562c8fda9fc8123e9c3baddb03db247bc1cf1dcc98f3dfb1767bfd15ba3bb"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gl_render\\util_gau.py",
+      "bytes": 533,
+      "sha256": "0ed1524f382bfb46f0246dc5bc02de90d9572a238f6247d837c955bcc32f42f1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\gui_utils.py",
+      "bytes": 6313,
+      "sha256": "3129b49c4fd360b1101023c6e430104fb83183dae108daf6beafc9615d5faf53"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\gui\\slam_gui.py",
+      "bytes": 30276,
+      "sha256": "9fa283a6643e68073bd9c54d082fc070755dfab4af090c398ebe20159f3f8dc8"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\lib\\altcorr_kernel.cu",
+      "bytes": 11995,
+      "sha256": "73adc36abe71318b5b0edc15ef557bfcb86cec3912f351d9fa6040612b4d08a1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\lib\\correlation_kernels.cu",
+      "bytes": 5740,
+      "sha256": "5bf15c4bc2672cea5ff6296d28c1902657151d6afbd7609cad08fed0e5e25690"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\lib\\droid.cpp",
+      "bytes": 7934,
+      "sha256": "22d908afe32ba38d8a0b8af3795aed500145352554d674658b59c52bd786de26"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\lib\\droid_kernels.cu",
+      "bytes": 65101,
+      "sha256": "75cc9981ebf136f9d233e2bac122fe8d9419c37485ac2ef2ec2039c57fe397ca"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\mapper.py",
+      "bytes": 66879,
+      "sha256": "1dca2c520b8ae3a58f51c1934824ae988aa7cfa8a831b67d4b60dcfe712bbba5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\__init__.py",
+      "bytes": 187,
+      "sha256": "d4d1a0e81e603bf54c769e07679e2d5c2c34660965017dbacd83913ac7ae48a0"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\clipping.py",
+      "bytes": 1180,
+      "sha256": "91cc66e951aa9cea18d46e153a9f0648eee0681b14eecc43163765bc39ce7c13"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\corr.py",
+      "bytes": 5539,
+      "sha256": "041cd8db32649888d4a4451de119b944abcbdd80612d0b4e3622485e7c432d74"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\droid_net.py",
+      "bytes": 5570,
+      "sha256": "8b1b4d3bbbbe4ec886d930198448e768b66d8996f912eafd00f33d6ef40e1210"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\extractor.py",
+      "bytes": 4659,
+      "sha256": "23be0cfc6ded99e13b51e10c78c4cc8275d309d440b5dfc2270145ecc5288e63"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\modules\\droid_net\\gru.py",
+      "bytes": 2036,
+      "sha256": "222d09aec03bf30573bdba23b9ef6a33e45b7e8d0d19ff511ddd406e166f26fe"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\motion_filter.py",
+      "bytes": 6343,
+      "sha256": "63270959395c3e85ebe12b8215344933cfa3082f28e62a5a5f0b7646256415bb"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\slam.py",
+      "bytes": 13983,
+      "sha256": "3c984a38d1ded66a3b93b29a71c4fac519dd6494235ab4394d746dd9b02663d8"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\tracker.py",
+      "bytes": 8303,
+      "sha256": "42f64a5a3b3fce89166f07c7bf61ae8d9a431271d3dbaad221173fe86662e2a9"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\trajectory_filler.py",
+      "bytes": 5651,
+      "sha256": "9a3e2b041bc423fdb8d8cf2e8416522a6206b466de555b224d8fdb8c32003438"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\Printer.py",
+      "bytes": 3301,
+      "sha256": "3a2b00d1dcf0fe61815673bf0e18f56d2b77b681cc28d941e1fc18e9dc197b3c"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\camera_utils.py",
+      "bytes": 6038,
+      "sha256": "d7310d2e3c2e9b7b44c14d992b8153e8efd34520e9681484e9949e4cbe2411d1"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\colmap_read_model.py",
+      "bytes": 12100,
+      "sha256": "d64e1a15e93c3cdf0e6c787921c3e1cb779bb0c0fccfb7b7b46161b6ef2b2bee"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\common.py",
+      "bytes": 2931,
+      "sha256": "69fc77625e648e8f6229788b1ad3a23d34fc735c9f89ea13ad256c30d11a7139"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\cuda_timer.py",
+      "bytes": 654,
+      "sha256": "f768ddd850c48c10be35d10fa5ca7022ae108f6d348ea5a11d7ab21a4d34a22e"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\datasets.py",
+      "bytes": 24073,
+      "sha256": "73374d37e283b6443ac5550c2235b680d6a71d4cfb3fc2e3b500a461d1e33f72"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\droid_visualization_rerun.py",
+      "bytes": 7232,
+      "sha256": "2fb5acc6b1f7c46db42f2bc111134ab126aec58ec3013526038aa9118d83a03f"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\dyn_uncertainty\\__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\dyn_uncertainty\\mapping_utils.py",
+      "bytes": 6096,
+      "sha256": "c17449ffc6ddf79d7b2e1a264fef1a0653426bcd6091d7be2f78cc9b7ec939e4"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\dyn_uncertainty\\median_filter.py",
+      "bytes": 2016,
+      "sha256": "2005e34c5c4ea62311aac87889149b9d8c930714fe40cb9951e0919376084709"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\eval_traj.py",
+      "bytes": 7569,
+      "sha256": "29536b509238d7a806c03decb421a2b29b40332953e8135d0a8f913fa3f0185e"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\eval_utils.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\mono_priors\\img_feature_extractors.py",
+      "bytes": 6713,
+      "sha256": "975293f18f1d45ddf854a38a1971cc068e2d7c60f46d7691247deac37664f383"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\mono_priors\\metric_depth_estimators.py",
+      "bytes": 5734,
+      "sha256": "de0d411d1422f8f2c0a4d1ba65ccafdcea9ff0026b07370ce3d2c67642259114"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\plot_utils.py",
+      "bytes": 1764,
+      "sha256": "522afdeef8432ded9b7dd255037623de73031b9b03aafe08bd070b2f8aea61d5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\pose_utils.py",
+      "bytes": 2278,
+      "sha256": "a555fc54bad65745b352fa22498b7c3c3a5599f866b14850e4f8cd9c21458bdc"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\slam_utils.py",
+      "bytes": 10370,
+      "sha256": "7ac9a7377260495bf47cedaea4203f45b74e0714c4fdcffb52e9a039697b91e6"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\sys_timer.py",
+      "bytes": 6140,
+      "sha256": "3fbedbd0b6cb376730bd1d0f51886decd66b11068e0db1b84bd7588f193fd5d5"
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W\\src\\utils\\visualization.py",
+      "bytes": 6052,
+      "sha256": "22e62c36ba4b1461917f4eef9139cd2300c6f8ba05a91c9f0ecfd19a4dc3c5d5"
+    }
+  ],
+  "remote_not_contacted": true,
+  "model_weights_not_opened": true,
+  "baseline_environment_not_modified": true
+}

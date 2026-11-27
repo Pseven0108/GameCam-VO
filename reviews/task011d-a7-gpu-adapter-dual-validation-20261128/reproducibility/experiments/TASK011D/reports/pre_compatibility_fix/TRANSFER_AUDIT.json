@@ -1,0 +1,131 @@
+{
+  "status": "PASS_EQUIVALENT_RUNTIME_COPY_AUDIT",
+  "cases": [
+    {
+      "buffer": 64,
+      "source_count": 1,
+      "maximum_mean_error": 8.425888320395813e-09,
+      "transfers": [
+        {
+          "op": "aten._to_copy.default",
+          "shape": [
+            2,
+            14
+          ],
+          "dtype": "torch.float64",
+          "bytes": 224,
+          "destination": "cpu"
+        }
+      ],
+      "explicit_D2H_bytes": 224,
+      "CUDA_scalar_reads": [],
+      "full_buffer_pixel_D2H": false,
+      "coverage": "Tensor copy-to-CPU operators and CUDA scalar reads in audited Python call; driver-internal traffic separate"
+    },
+    {
+      "buffer": 64,
+      "source_count": 7,
+      "maximum_mean_error": 1.9724081645744462e-08,
+      "transfers": [
+        {
+          "op": "aten._to_copy.default",
+          "shape": [
+            8,
+            14
+          ],
+          "dtype": "torch.float64",
+          "bytes": 896,
+          "destination": "cpu"
+        }
+      ],
+      "explicit_D2H_bytes": 896,
+      "CUDA_scalar_reads": [],
+      "full_buffer_pixel_D2H": false,
+      "coverage": "Tensor copy-to-CPU operators and CUDA scalar reads in audited Python call; driver-internal traffic separate"
+    },
+    {
+      "buffer": 500,
+      "source_count": 7,
+      "maximum_mean_error": 1.9724081645744462e-08,
+      "transfers": [
+        {
+          "op": "aten._to_copy.default",
+          "shape": [
+            8,
+            14
+          ],
+          "dtype": "torch.float64",
+          "bytes": 896,
+          "destination": "cpu"
+        }
+      ],
+      "explicit_D2H_bytes": 896,
+      "CUDA_scalar_reads": [],
+      "full_buffer_pixel_D2H": false,
+      "coverage": "Tensor copy-to-CPU operators and CUDA scalar reads in audited Python call; driver-internal traffic separate"
+    },
+    {
+      "buffer": 500,
+      "source_count": 32,
+      "maximum_mean_error": 4.496353744887216e-08,
+      "transfers": [
+        {
+          "op": "aten._to_copy.default",
+          "shape": [
+            33,
+            14
+          ],
+          "dtype": "torch.float64",
+          "bytes": 3696,
+          "destination": "cpu"
+        }
+      ],
+      "explicit_D2H_bytes": 3696,
+      "CUDA_scalar_reads": [],
+      "full_buffer_pixel_D2H": false,
+      "coverage": "Tensor copy-to-CPU operators and CUDA scalar reads in audited Python call; driver-internal traffic separate"
+    }
+  ],
+  "profiler": {
+    "status": "CAPTURED",
+    "trace": "ADAPTER_PROFILER_TRACE.json",
+    "DtoH_events": [
+      {
+        "name": "Memcpy DtoH (Device -> Pinned)",
+        "args": {
+          "External id": 13,
+          "device": 0,
+          "context": 1,
+          "stream": 7,
+          "correlation": 123,
+          "bytes": 8,
+          "memory bandwidth (GB/s)": 0.013157894736842105,
+          "graph id": 0,
+          "graph node id": 0,
+          "channel": 8,
+          "channel_type": 2
+        }
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "args": {
+          "External id": 392,
+          "device": 0,
+          "context": 1,
+          "stream": 7,
+          "correlation": 1856,
+          "bytes": 3696,
+          "memory bandwidth (GB/s)": 6.806629834254144,
+          "graph id": 0,
+          "graph node id": 0,
+          "channel": 8,
+          "channel_type": 2
+        }
+      }
+    ]
+  },
+  "all_pixel_calculation_stayed_on_device": true,
+  "models_loaded": 0,
+  "native_BA_calls": 0,
+  "driver_internal_transfers_not_counted_as_operator_byte_total": true
+}

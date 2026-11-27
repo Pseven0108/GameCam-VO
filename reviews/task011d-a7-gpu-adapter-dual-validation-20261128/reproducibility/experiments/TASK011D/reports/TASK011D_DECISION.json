@@ -1,0 +1,23 @@
+{
+  "status": "ENGINEERING_READY + DATA_ADMISSION_READY + EXPERIMENT_PROTOCOL_FROZEN + GPU_NOT_STARTED",
+  "GPU_NOT_STARTED_definition": "formal SLAM/Pilot only; local synthetic CUDA was executed",
+  "tests_passed": 169,
+  "tests_total": 169,
+  "windows": 19,
+  "RGB_decoded": 1216,
+  "route": "A",
+  "historical_exposure": true,
+  "blind_validation": false,
+  "synthetic_CUDA": true,
+  "formal_SLAM_runs": 0,
+  "Native_BA_runs": 0,
+  "model_forwards": 0,
+  "GPU_pilots": 0,
+  "planned_E2E_runs": 285,
+  "FSR_reference_runs_subset_of_E2E": 57,
+  "real_FSR_snapshots": 0,
+  "secondary_thresholds_approved": false,
+  "A5_A7_utility": "NOT_YET_TESTED",
+  "protocol_sha256": "94e831a9170128d2cf09c78429d05c88cd4449bec06f612e866b1bd89ad10ccf",
+  "next_action": "REVIEW_ONLY_NO_AUTO_EXECUTION"
+}

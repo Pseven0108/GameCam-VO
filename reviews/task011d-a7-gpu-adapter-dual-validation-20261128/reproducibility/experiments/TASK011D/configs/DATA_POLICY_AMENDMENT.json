@@ -1,0 +1,23 @@
+{
+  "route": "A",
+  "previous_source_exclusion": "ALL historical comparative sequences",
+  "amended_exclusion": "TASK011B 20 sources only; historical full-sequence baseline exposure explicitly allowed",
+  "validation_total": 47,
+  "TASK011B_excluded": 20,
+  "remaining": 27,
+  "technically_eligible": 26,
+  "selected": 19,
+  "val_014_GT_path": 1.041921179647342e-05,
+  "GT_path_threshold": 0.0001,
+  "weather_distribution": {
+    "Day": 4,
+    "Sunset": 4,
+    "Rain": 3,
+    "Snow": 4,
+    "Night": 4
+  },
+  "historical_exposure": true,
+  "blind_validation": false,
+  "selection_algorithm": "ascending source ID then fixed midpoint; no algorithm metrics",
+  "selection_manifest_sha256": "6cdf2597ef12e11b0224ea18fa09bc03bd6b116674e1bf674e28a04abbde2831"
+}

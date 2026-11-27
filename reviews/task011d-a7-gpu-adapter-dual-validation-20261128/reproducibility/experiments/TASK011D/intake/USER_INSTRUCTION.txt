@@ -1,0 +1,956 @@
+# **TASK011D：A7 GPU Adapter 修复与 A5/A7 双层验证**
+
+
+
+研究路线 A 已确定
+
+执行前先修复 GPU Adapter
+
+
+
+本阶段的目标不是立即启动大规模 GPU 实验，而是先完成三个工作：
+
+1. 修复 A7 的全 Buffer GPU→CPU 数据传输问题。
+2. 冻结19条 VIPER Validation 序列，允许历史 DROID-SLAM/DROID-W 暴露，但严格排除 TASK011B 已使用的20条序列。
+3. 建立 Fixed-State Replay 和 End-to-End 两套独立实验，分别验证空间分配机制和实际 SLAM 效果。
+
+**数据口径必须改变：** 本阶段的19条序列属于历史 Baseline 已暴露、但未参与 TASK011B A5/A7 对照的数据。不能称为完全独立的新数据集，也不能把历史 Baseline 成绩当作本次实验结果。
+
+建议任务编号使用 `TASK011D`，保留 TASK011C 的原始代码、报告和实验记录，不覆盖历史结果。
+
+这次我把任务拆成三个独立验收阶段，避免 Codex 一边修改代码、一边跑实验，最后无法判断结果究竟来自哪个改动。
+
+另外，我重新核对了原始准入 CSV，发现一个需要修正的数字：
+
+- 排除 TASK011B 的20条后，剩余27条。
+- 其中 `val_014` 的 GT path length 只有 `1.0419×10⁻⁵`，低于原定 `0.0001` 门槛。
+- 因此真正通过其他技术准入条件的是 **26条，而不是27条**。
+- 最终仍然可以按照已选方案，冻结19条：4/4/3/4/4。
+
+这19条全部有历史全序列 Baseline 比较记录，因此报告必须保留历史暴露标记。
+
+# TASK011D — A7 GPU Adapter 修复与双层实验验证任务书
+
+**项目：** GameCam-VO\
+**任务编号：** TASK011D\
+**上游固定版本：** `408de2c4a8f3a6f8baed9b2f91d409d57649df21`\
+**数据集：** VIPER Validation\
+**实验路线：** Route A\
+**执行角色：** Codex\
+**任务性质：** 工程修复、数据准入修订、实验框架建设\
+**当前授权：** 允许代码修改、CPU测试、合成CUDA测试和数据审计；不允许正式SLAM GPU实验。
+
+---
+
+# 0. 任务目标
+
+本任务解决 TASK011C 遗留的三个问题：
+
+1. A7 在每次 BA 调用时对整个 Buffer 进行 GPU→CPU 数据传输，必须消除。
+2. 根据用户批准的 Route A，重新冻结19条 VIPER Validation 窗口。
+3. 建立 Fixed-State Replay 与 End-to-End 两套独立实验体系，明确各自研究问题、输入、输出和统计边界。
+
+本任务最终应交付一个可复现、可审查、可独立启动的 TASK011D 实验分支。
+
+**本任务不以获得 A5 胜出结果为目标，不允许修改算法来追求预期结果。**
+
+# 1. 绝对保护规则
+
+以下规则优先级最高。
+
+## 1.1 源码保护
+
+- 不修改生产版 DROID-W。
+- 不修改原始 CUDA/C++ Native Extension。
+- 不修改原始模型权重。
+- 不修改 TASK011B 的历史实验代码、配置、结果和日志。
+- 不覆盖 TASK011C 的历史代码、测试、报告和 Release。
+- A0/A1/A4/A5 必须继续使用 TASK011B 已冻结实现。
+- A7 在 TASK011D 独立副本中修改，不回写 TASK011C。
+
+执行前，对上游依赖生成 SHA256 清单；执行后再次校验。
+
+任何历史文件发生非预期变化，立即停止。
+
+## 1.2 研究范围
+
+- 唯一实验数据集：VIPER。
+- 不引入其他数据集。
+- 不引入第三人称数据集。
+- 不引入新的深度模型。
+- 不增加 Geometry Need。
+- 不修改 U/UBA、Schur、retraction、BA 内部迭代次数。
+- 不改变 alpha=0.01。
+- 不改变已经冻结的 R2 配置。
+
+## 1.3 实验保护
+
+本阶段禁止：
+
+- 运行完整 DROID-W 模型。
+- 执行 Metric3D/DINO 模型推理。
+- 执行 Native BA 正式实验。
+- 启动 GPU Pilot。
+- 执行285次正式运行。
+
+仅允许合成 Tensor CUDA 测试，不得将其包装成 SLAM 算法实验。
+
+---
+
+# 2. 第一阶段：A7 GPU Adapter 修复
+
+## 2.1 当前问题
+
+文件：
+
+`reviews/task011c-maxfusion-spatial-utility-20261128/reproducibility/experiments/TASK011C/uniform_control.py`
+
+重点函数：
+
+- `torch_uniform_for_call()`
+- `install()`
+- `Proxy.ba()`
+
+目前存在以下问题：
+
+```
+ix = indices.detach().cpu().numpy()
+a = a5.detach().cpu().numpy()
+nv = native_valid.detach().cpu().numpy()
+d = mono.detach().cpu().numpy()
+```
+
+这里的 `a5`、`native_valid`、`mono` 都可能包含整个 Buffer。
+
+当前 Buffer=500，Native disparity 网格为45×80。
+
+每次 BA 调用都将整个 Buffer 的数据传输到 CPU，随后在 CPU 上执行审计。
+
+此外，当前 Proxy 还存在：
+
+- 为整个 Buffer 创建 A5 和 validity Tensor。
+- 遍历所有 live frames。
+- 对每个 BA 调用重新复制大量非源帧数据。
+- 使用逐源帧 `.item()`，可能引起重复 CUDA 同步。
+
+这些操作没有必要。
+
+## 2.2 新实现要求
+
+必须遵循：
+
+**只处理当前 BA 实际使用的源帧，不处理整个 Buffer。**
+
+保留原始数学定义：
+
+[\
+kx=\operatorname{unique}\
+\left(\
+\operatorname{arange}(t_0,t_1)\cup ii\
+\right)\
+]
+
+[\
+M_t(x)=\
+(native_valid_t(x))\
+\land\
+(mono_t(x)>0)\
+]
+
+[\
+\mu_t=\
+\operatorname{Mean}*{x\in M_t}(r*{5,t}(x))\
+]
+
+[\
+r\_{7,t}(x)=\
+\begin{cases}\
+\mu_t,&x\in M_t\\\
+0,&x\notin M_t\
+\end{cases}\
+]
+
+其中：
+
+- A5 原始可靠性计算不变。
+- 必须使用实际 BA 调用中的 `ii`、`t0`、`t1`。
+- 必须使用原始 `slice_h`、`slice_w`。
+- 必须在45×80 Native disparity 网格上计算。
+- 必须逐源帧独立计算均值。
+- 不得使用整张640×360图像的均值。
+- 不得把不同源帧混合求均值。
+- 不得修改原生有效 Mask。
+
+## 2.3 建议实现架构
+
+将当前全 Buffer 运算改成以下流程。
+
+**步骤 A：取得实际源帧索引**
+
+计算真实 `kx`。
+
+只传输必要的整数索引，不传输图像 Tensor。
+
+**步骤 B：取得源帧时间戳**
+
+只提取 `kx` 对应的时间戳。
+
+禁止：
+
+```
+video.timestamp[:live].detach().cpu().numpy()
+```
+
+改为只对实际源帧时间戳进行索引和必要的主机端映射。
+
+**步骤 C：GPU 端直接提取 A5 和 Native-valid**
+
+使用时间戳映射取得当前源帧：
+
+```
+a5_src = torch.stack([...], dim=0)
+valid_src = torch.stack([...], dim=0)
+mono_src = args[3].index_select(0, source_slots)
+```
+
+以上仅为接口示意，具体实现必须先核对实际 Tensor 形状和设备。
+
+`a5_src`、`valid_src`、`mono_src` 均只包含当前 BA 源帧。
+
+**步骤 D：全部核心计算留在 GPU**
+
+在 GPU 上完成：
+
+- Mask 构造。
+- 有限性检查。
+- A5 正值支持集检查。
+- 每源帧 FP32 均值计算。
+- A7 均匀系数构造。
+- 均值匹配检查。
+- 正值支持集一致性检查。
+
+尽量批量化计算。
+
+禁止逐像素 `.item()`。
+
+禁止为了日志而反复触发 CUDA 同步。
+
+**步骤 E：构造 Native BA 所需的完整 strength**
+
+注意：虽然计算只使用源帧，但 Candidate BA 可能仍要求传入与原始 disparity Buffer 相同形状的 Tensor。
+
+因此：
+
+1. 在 GPU 创建 `zeros_like(video.disps)`。
+2. 将计算好的源帧系数通过 `index_copy_` 等方式写入对应位置。
+3. 非源帧保持零。
+4. 维持原始 BA 参数形状。
+
+不得为了减少 Tensor 形状而擅自修改 Native BA 接口。
+
+**步骤 F：日志**
+
+日志只传输：
+
+- BA call ID。
+- 源帧索引。
+- 输入时间戳。
+- 每帧有效像素数。
+- A5 均值。
+- A7 均值。
+- 均值差。
+- A5空间标准差。
+- A7空间标准差。
+- 有效支持集是否一致。
+- CUDA 设备和计算精度。
+
+禁止传输整个 Buffer 的像素数据。
+
+允许一次性传输少量汇总统计结果。
+
+## 2.4 数学与数值准入
+
+保留 TASK011C 的所有原始约束：
+
+| 检查             | 要求       |
+| -------------- | -------- |
+| 数据类型           | FP32     |
+| 均值绝对误差         | ≤1e-6    |
+| A7有效区域         | 与A5一致    |
+| A7正值支持集        | 与A5一致    |
+| 非源帧系数          | 0        |
+| 空Mask          | 均值记录null |
+| 非有限输入          | STOP     |
+| A5在有效Mask内存在零值 | STOP     |
+
+特别注意：
+
+不能为了让 A7 通过而扩大有效区域。
+
+不能修改原始 Mask 来迁就均值计算。
+
+不能通过添加补偿系数、放宽容差等方式修复数值误差。
+
+## 2.5 GPU 测试
+
+增加独立 CUDA 测试，使用合成数据，不加载研究模型。
+
+至少测试：
+
+1. Buffer=500。
+2. Buffer=64。
+3. 源帧数量不同。
+4. 源帧索引非连续。
+5. 时间戳顺序变化。
+6. BA source union 正确性。
+7. 空 Mask。
+8. Native-valid 与 mono disparity 交集。
+9. FP32 均值匹配。
+10. 正值支持集一致。
+11. 输入 Tensor 不被修改。
+12. GPU→CPU 传输审计。
+
+**最重要的验收要求：**
+
+通过 PyTorch Profiler 或等效的运行时传输审计，证明：
+
+- 不存在整个 `[500,45,80]` A5 Tensor 的 D2H 传输。
+- 不存在整个 `[500,45,80]` Native-valid Tensor 的 D2H 传输。
+- 不存在整个 `[500,45,80]` mono disparity Tensor 的 D2H 传输。
+- 只允许必要的源帧索引和统计摘要传回 CPU。
+
+同时记录：
+
+- GPU adapter p50/p95 时间。
+- 峰值显存。
+- D2H 字节数。
+- 源帧数量。
+- Buffer 长度。
+
+不得凭空设定性能提升百分比。
+
+## 2.6 第一阶段交付
+
+必须生成：
+
+```
+TASK011D/
+├── uniform_control.py
+├── tests/
+│   ├── test_uniform_cpu.py
+│   ├── test_uniform_cuda.py
+│   ├── test_source_gather.py
+│   └── test_no_full_buffer_d2h.py
+├── configs/
+│   └── FROZEN_SOURCE_LOCK.json
+└── reports/
+    ├── CPU_TEST_REPORT.md
+    ├── CUDA_ADAPTER_REPORT.md
+    ├── TRANSFER_AUDIT.json
+    └── PERFORMANCE_PROFILE.json
+```
+
+验收条件：
+
+- 原 TASK011C 的122项测试全部通过。
+- 新增 CPU 测试全部通过。
+- CUDA 合成测试全部通过。
+- 均值误差不超过1e-6。
+- 全 Buffer D2H 问题彻底消除。
+- 不发生 Native 源码修改。
+
+---
+
+# 3. 第二阶段：Route A 数据准入修订
+
+## 3.1 数据规则
+
+保留：
+
+- VIPER Validation。
+- 64连续RGB帧。
+- stride=1。
+- 640×360输入。
+- Buffer=500。
+- 原始相机映射。
+- 原始GT。
+- K最大偏差小于0.001 px。
+- GT path length大于0.0001 native units。
+
+修改的只有一条：
+
+**不再排除早期 DROID-SLAM/DROID-W 全序列比较暴露的数据，但必须排除 TASK011B 已经使用的20条源序列。**
+
+不得隐瞒历史实验暴露。
+
+## 3.2 数据数量
+
+| 阶段             | 数量 |
+| -------------- | -- |
+| Validation 总序列 | 47 |
+| 排除 TASK011B    | 20 |
+| 剩余序列           | 27 |
+| 技术条件全部通过       | 26 |
+| 最终选定           | 19 |
+
+`val_014` 必须排除。
+
+原因：GT path length = 1.0419e-05，不满足0.0001门槛。
+
+## 3.3 冻结19条窗口
+
+选择规则：
+
+按天气分组，按序列编号升序排列，满足技术准入条件后，每组选择前4条；Rain只有3条，全部保留。
+
+不得根据 ATE、RPE、可靠性、模型预测结果选择窗口。
+
+| 天气     | Sequence | RGB帧范围    | Camera帧范围 |
+| ------ | -------- | --------- | --------- |
+| Day    | val_029  | 1057–1120 | 1056–1119 |
+| Day    | val_030  | 601–664   | 600–663   |
+| Day    | val_031  | 311–374   | 310–373   |
+| Day    | val_032  | 278–341   | 277–340   |
+| Sunset | val_012  | 737–800   | 736–799   |
+| Sunset | val_013  | 91–154    | 90–153    |
+| Sunset | val_015  | 336–399   | 335–398   |
+| Sunset | val_016  | 234–297   | 233–296   |
+| Rain   | val_038  | 448–511   | 447–510   |
+| Rain   | val_039  | 350–413   | 349–412   |
+| Rain   | val_040  | 870–933   | 869–932   |
+| Snow   | val_025  | 255–318   | 254–317   |
+| Snow   | val_026  | 277–340   | 276–339   |
+| Snow   | val_027  | 590–653   | 589–652   |
+| Snow   | val_028  | 256–319   | 255–318   |
+| Night  | val_034  | 358–421   | 357–420   |
+| Night  | val_035  | 464–527   | 463–526   |
+| Night  | val_036  | 752–815   | 751–814   |
+| Night  | val_045  | 1005–1068 | 1004–1067 |
+
+最终天气分布：
+
+- Day：4
+- Sunset：4
+- Rain：3
+- Snow：4
+- Night：4
+
+合计19条独立源序列。
+
+## 3.4 历史暴露标记
+
+这19条全部具有历史全序列 DROID-SLAM/DROID-W 比较记录。
+
+必须在机器可读清单中增加：
+
+```
+{
+  "historical_full_sequence_baseline_exposure": true,
+  "TASK011B_exposure": false,
+  "blind_validation": false,
+  "route": "A"
+}
+```
+
+具体字段可以调整，但语义必须保留。
+
+禁止将19条数据称为：
+
+- 全新数据。
+- 未见数据。
+- 独立盲测数据。
+- 完全无历史暴露的 Validation。
+
+本次只能表述为：
+
+**历史 Baseline 暴露条件下，TASK011D 新方法对照实验。**
+
+## 3.5 RGB 实际数据验证
+
+TASK011C 的 ZIP 中央目录检查并不等于 JPEG 已经成功解码。
+
+因此，本阶段必须针对19条窗口：
+
+- 检查全部1216张 RGB 图片。
+- 验证每张图片实际存在。
+- 验证 JPEG 可解码。
+- 验证帧编号连续。
+- 验证 Camera ID = RGB ID - 1。
+- 验证 K 矩阵映射。
+- 验证 GT 对应帧完整。
+- 验证输入预处理与原 R2 一致。
+
+只允许审计和数据准备，不允许运行模型。
+
+## 3.6 第二阶段交付
+
+```
+TASK011D/
+├── data/
+│   ├── DATA_POLICY_AMENDMENT.json
+│   ├── SELECTED_19_WINDOWS.csv
+│   ├── HISTORICAL_EXPOSURE.csv
+│   ├── RGB_DECODE_AUDIT.csv
+│   ├── CAMERA_GT_AUDIT.csv
+│   └── DATA_ADMISSION_DECISION.json
+└── reports/
+    └── DATA_ADMISSION_REPORT.md
+```
+
+只有全部19条通过实际数据验证，才能标记：
+
+`DATA_ADMISSION = PASS_WITH_HISTORICAL_EXPOSURE`
+
+---
+
+# 4. 第三阶段：Fixed-State Replay
+
+这是本任务最重要的研究设计部分。
+
+## 4.1 研究问题
+
+Fixed-State Replay 要回答：
+
+**在完全相同的 BA 输入状态下，A5 的空间差异化可靠性分配，是否比 A7 的均匀可靠性分配更有效？**
+
+它研究的是局部 BA 空间分配机制，而不是完整 SLAM 轨迹。
+
+## 4.2 固定参考状态
+
+使用同一序列、同一种子下的 A0 原始 DROID-W 轨迹作为参考状态来源。
+
+A0 是原始安装版，不进行 A5/A7 干预。
+
+在其运行过程中，记录所有符合以下条件的 BA 调用：
+
+- FRONTEND_MAIN_LOOP_LOCAL_BA。
+- 非 motion-only。
+- metric_depth_reg=true。
+- 属于 A7 原定干预范围。
+
+不记录：
+
+- Initialization。
+- Second Initialization。
+- Final Global BA。
+- Online Global BA。
+- Trajectory Filler。
+- Motion-only BA。
+
+使用实际调用记录，不根据结果挑选快照。
+
+## 4.3 Replay 规则
+
+对每一个固定 BA 快照：
+
+1. 保存原始30个 Native BA 输入参数。
+2. 保存必要的时间戳与源帧映射。
+3. 保存 A5 原始系数场。
+4. 保存 Native-valid 与 mono disparity Mask。
+5. 保存 BA 所需的其他状态。
+6. 为 A5 和 A7 分别创建独立 Tensor 副本。
+7. 恢复相同随机数状态。
+8. 使用同一 Candidate BA。
+9. 只改变 prior-strength 空间分布。
+
+A5：
+
+```
+原始 A5 空间可靠性分布
+```
+
+A7：
+
+```
+同一状态下 A5 的逐源帧均值
+```
+
+两者必须：
+
+- 使用完全相同的30个原始 BA 参数。
+- 使用相同的初始化状态。
+- 使用相同的 U/UBA。
+- 使用相同的权重。
+- 使用相同的迭代次数。
+- 使用相同的 Native Extension。
+- Geometry Need=false。
+
+A5 与 A7 必须从独立的状态副本开始。
+
+不能先执行 A5，再拿 A5 修改后的状态执行 A7。
+
+## 4.4 数值检查
+
+每个 Replay 调用都必须验证：
+
+[\
+|\operatorname{Mean}(A5)-\operatorname{Mean}(A7)|\leq10^{-6}\
+]
+
+同时验证：
+
+- 有效 Mask 相同。
+- 正值支持集相同。
+- A7 在有效区域内空间常数。
+- 非源帧不产生先验。
+- 原始 U/UBA 不发生变化。
+
+另外增加 A5-A5 重复 Replay 对照，评估 Native 数值波动。
+
+如果数值波动已经接近或超过 A5/A7 的差异，必须将机制结论标记为不确定。
+
+## 4.5 研究输出
+
+记录：
+
+- BA 输出 Pose 差异。
+- Disparity 更新差异。
+- Solver 已有的残差或能量诊断（如果可用）。
+- A5/A7 实际均值。
+- 空间标准差。
+- 每次 BA 的运行时间。
+- Native 数值波动。
+
+不允许为了获取额外指标而擅自修改 Native Solver。
+
+**Fixed-State Replay 不产生完整轨迹，不计算它自己的 Sim3 ATE/RPE，不得称为端到端 SLAM 性能结果。**
+
+同一序列内多个 BA 调用属于嵌套观测，不得当成独立样本扩大统计量。
+
+---
+
+# 5. 第四阶段：End-to-End 完整 SLAM 对照
+
+## 5.1 研究问题
+
+End-to-End 要回答：
+
+**在独立运行完整 DROID-W 时，A5 与 A7 哪一个最终具有更好的实际轨迹表现？**
+
+这是判断算法实际价值的主要实验。
+
+## 5.2 实验矩阵
+
+正式候选算法：
+
+| Arm | 定义                   | 作用             |
+| --- | -------------------- | -------------- |
+| A0  | Original Installed   | 原始基线           |
+| A1  | Original D1 Endpoint | 实现端点控制         |
+| A4  | Validity-aware Rank  | Rank Fusion 对照 |
+| A5  | Validity-aware Max   | 空间可靠性方案        |
+| A7  | Uniform from A5      | 均匀可靠性对照        |
+
+排除 A6，不增加 Geometry Need。
+
+Seeds：
+
+- 43
+- 44
+- 45
+
+实验规模：
+
+[\
+19\times5\times3=285\
+]
+
+| 项目     | 数量      |
+| ------ | ------- |
+| 独立源序列  | 19      |
+| 算法组    | 5       |
+| Seeds  | 3       |
+| 计划运行   | 285     |
+| 每次输入帧数 | 64      |
+| 分辨率    | 640×360 |
+| Buffer | 500     |
+
+## 5.3 独立运行规则
+
+每个 Arm：
+
+- 使用自己的初始化。
+- 使用自己的关键帧选择。
+- 使用自己的 BA 调用历史。
+- 使用自己的轨迹。
+- 不共享中间状态。
+- 不强制同步关键帧。
+- 不从另一个 Arm 的输出继续运行。
+
+同一 Sequence、同一 Seed 下，各 Arm 使用相同的原始输入和配置。
+
+但各自的内部轨迹独立演化。
+
+**尤其注意：**
+
+A7 只保证在自己当前 BA 状态下，与该状态的反事实 A5 均值匹配。
+
+不保证：
+
+A5 独立轨迹第 k 次 BA 的均值 = A7 独立轨迹第 k 次 BA 的均值。
+
+两条轨迹的关键帧、源帧集合和 Mask 可能已经不同。
+
+不得为了制造跨轨迹均值一致性而强制同步关键帧。
+
+## 5.4 主要指标
+
+主要比较：
+
+ATE\_{A7}/Path\_{A7}\
+]
+
+负数有利于 A5。
+
+统计流程：
+
+1. 以 Sequence 为独立统计单位。
+2. 同一 Sequence 内对共同可评分 Seeds 进行配对。
+3. 三个 Seed 是重复测量，不是三个独立数据源。
+4. Bootstrap 以 Sequence 为单位，有放回抽样10,000次。
+5. 保留三个 Seed 全部可评分的严格子集作为敏感性分析。
+6. Bootstrap 随机种子和置信区间水平必须在 GPU 实验前冻结。
+
+失败不能填零。
+
+分别报告：
+
+- Planned runs。
+- Completed runs。
+- Initialized runs。
+- ATE-scorable runs。
+
+同时报告每个 Arm 的完成率及天气分布。
+
+## 5.5 次要指标
+
+保留：
+
+- Sim3 RMSE。
+- SE3 ATE。
+- Translation RPE。
+- Rotation RPE。
+- Raw Path Ratio Error。
+- Runtime。
+- Peak VRAM。
+
+特别注意：
+
+Sim3 ATE 不能直接证明尺度恢复。
+
+Raw Path Ratio 必须独立报告。
+
+TASK011C 原协议已经指出，RPE、Raw Scale 和 Runtime 的不可接受退化边界尚未数值冻结。
+
+Codex 必须先整理历史 TASK011B 数据，形成次指标阈值建议，等待用户审批。
+
+不得根据 TASK011D 新实验结果反向修改阈值。
+
+---
+
+# 6. 两套实验的最终边界
+
+| 比较维度    | Fixed-State Replay | End-to-End |
+| ------- | ------------------ | ---------- |
+| 初始状态    | 完全相同               | 各自初始化      |
+| BA 输入   | 完全相同               | 独立演化       |
+| 关键帧     | 固定                 | 各自决定       |
+| A5/A7均值 | 同状态严格匹配            | 各自状态内匹配    |
+| Solver  | 相同                 | 相同         |
+| 轨迹      | 不生成完整轨迹            | 完整轨迹       |
+| ATE/RPE | 不作为轨迹结论            | 主要评价       |
+| 研究问题    | 空间分配机制             | 实际算法效果     |
+| 研究地位    | 机制证据               | 主要性能证据     |
+
+结果解释必须遵守：
+
+**情况一：**
+
+FSR 中 A5 优于 A7，E2E 中也优于 A7。
+
+说明局部空间分配优势与实际轨迹收益相互支持。
+
+**情况二：**
+
+FSR 中 A5 优于 A7，但 E2E 没有收益。
+
+说明局部 BA 机制可能有效，但不足以证明完整系统获益。
+
+**情况三：**
+
+FSR 中差异不明显，E2E 中 A5 优于 A7。
+
+说明可能存在状态演化、关键帧选择等间接效应，不能直接归因于单次 BA 空间分配。
+
+**情况四：**
+
+FSR 和 E2E 均无明显收益。
+
+不能据此直接宣称 A5/A7 等价。需要结合置信区间、数值波动和统计功效判断。
+
+---
+
+# 7. 统计决策与晋级条件
+
+保留 TASK011C 原有主要判定框架：
+
+A5 晋级必须满足：
+
+1. A5-A7 主要指标的置信区间上界小于0。
+2. A5 完成率相对 A7 的劣势不超过5个百分点。
+3. 次要指标没有超过预先批准的退化边界。
+4. 不存在严重的数值稳定性问题。
+5. FSR 和 E2E 的结论能够得到合理解释。
+
+如果主要置信区间跨越0：
+
+结论为 INCONCLUSIVE。
+
+不能直接宣布 A5 与 A7 等价。
+
+不能只挑选某一个天气或某一个 Seed 宣布胜出。
+
+Rain 只有3条，天气子组结果主要作为描述性证据，不作强推断。
+
+---
+
+# 8. Codex 执行阶段与停止条件
+
+## Stage 1：A7 Adapter 修复
+
+交付代码、CPU测试、合成CUDA测试和传输审计。
+
+通过后才进入下一阶段。
+
+## Stage 2：数据准入
+
+冻结19条窗口，完成1216张图片的实际解码和相机/GT验证。
+
+所有数据都必须能够追溯。
+
+## Stage 3：实验框架
+
+分别实现：
+
+- Fixed-State Snapshot Collector。
+- Fixed-State Replay Runner。
+- End-to-End Runner。
+- Result Aggregator。
+- Sequence-level Bootstrap。
+- Failure Accounting。
+
+在不运行正式 Native BA 的条件下完成接口和测试。
+
+## Stage 4：预注册审查
+
+Codex 必须输出：
+
+- 最终实验配置。
+- 19条窗口清单。
+- 三个 Seed。
+- 五个 Arm。
+- 运行顺序。
+- 指标定义。
+- 失败处理规则。
+- 数值容差。
+- 统计方法。
+- 次指标阈值建议。
+
+所有配置生成 SHA256。
+
+## Stage 5：停止并等待用户批准
+
+本任务完成后：
+
+**不得自动启动 GPU Pilot，也不得自动开始285次实验。**
+
+先提交完整审查包，由用户检查 A7 修复、数据准入、Fixed-State Replay 和 End-to-End 实验协议。
+
+获得下一阶段明确授权后，才允许正式 GPU 实验。
+
+---
+
+# 9. 最终交付结构
+
+```
+experiments/
+└── TASK011D/
+    ├── uniform_control.py
+    ├── audit_dataset.py
+    ├── collect_snapshots.py
+    ├── fixed_state_replay.py
+    ├── run_end_to_end.py
+    ├── analyze_results.py
+    ├── configs/
+    │   ├── DATA_POLICY_AMENDMENT.json
+    │   ├── SELECTED_19_WINDOWS.csv
+    │   ├── FROZEN_SOURCE_LOCK.json
+    │   ├── FROZEN_EXPERIMENT_PROTOCOL.json
+    │   ├── FIXED_STATE_PROTOCOL.json
+    │   └── END_TO_END_PROTOCOL.json
+    ├── tests/
+    ├── data/
+    ├── fixed_state/
+    ├── reports/
+    └── SHA256_MANIFEST.csv
+
+reviews/
+└── task011d-a7-gpu-adapter-dual-validation-20261128/
+    ├── FINAL_REVIEW.md
+    ├── IMPLEMENTATION_REVIEW.md
+    ├── CUDA_TRANSFER_AUDIT.md
+    ├── DATA_ADMISSION_REPORT.md
+    ├── FIXED_STATE_REPLAY_PROTOCOL.md
+    ├── END_TO_END_PROTOCOL.md
+    ├── STATISTICAL_ANALYSIS_PLAN.md
+    ├── DECISION_REQUIRED.md
+    └── SHA256_MANIFEST.csv
+```
+
+---
+
+# 10. 最终验收清单
+
+Codex 必须逐项回答：
+
+- 是否消除了 A7 全 Buffer GPU→CPU 传输？
+- 是否保留了 A7 原始数学定义？
+- 是否通过 CPU 与 CUDA 合成测试？
+- 是否保持1e-6均值容差？
+- 是否保持原始正值支持集？
+- 是否保持原生30个 BA 参数不变？
+- 是否没有修改 Native CUDA/C++？
+- 是否没有修改生产 Baseline？
+- 是否正确排除 TASK011B 的20条序列？
+- 是否正确排除 GT path 不合格的 val_014？
+- 是否冻结19条窗口？
+- 是否标记历史 Baseline 暴露？
+- 是否完成1216张 RGB 图片审计？
+- 是否建立 Fixed-State Replay？
+- 是否建立 End-to-End 独立运行框架？
+- 是否区分机制证据和完整轨迹证据？
+- 是否没有将 BA 调用数当成独立统计样本？
+- 是否没有自动启动正式 GPU 实验？
+
+任意关键项不通过，必须标记 BLOCKED，不得通过降低标准绕过。
+
+**最终状态要求：**
+
+`ENGINEERING_READY + DATA_ADMISSION_READY + EXPERIMENT_PROTOCOL_FROZEN + GPU_NOT_STARTED`
+
+只有完成这些工作，TASK011D 才算通过本阶段验收。
+
+
+
+## **我对这份任务书的额外要求**
+
+我建议你让 Codex 严格按照 Stage 1 → Stage 5 顺序执行，不要一次性把所有工作并行展开。
+
+尤其要注意两个研究结论的区别：
+
+- Fixed-State Replay 证明的是 A5 的空间分配机制是否具有局部 BA 优势。
+- End-to-End 证明的是这种优势是否真正转化为完整 DROID-W 的轨迹收益。
+
+**真正决定你的论文有没有价值的是第二个，第一项负责解释为什么。**
+
+当前 TASK011D 完成后，我们应该能够回答：A5 的空间可靠性分配究竟比单纯均匀衰减多带来了什么，而不是仅仅证明两个实现都能正常运行。

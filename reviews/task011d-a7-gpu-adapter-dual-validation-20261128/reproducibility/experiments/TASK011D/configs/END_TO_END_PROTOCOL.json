@@ -1,0 +1,48 @@
+{
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "arms": [
+    "A0",
+    "A1",
+    "A4",
+    "A5",
+    "A7"
+  ],
+  "windows": 19,
+  "frames": 64,
+  "stride": 1,
+  "buffer": 500,
+  "input_hw": [
+    360,
+    640
+  ],
+  "alpha": 0.01,
+  "mean_absolute_tolerance": 1e-06,
+  "original_R2_yaml_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "geometry_need": false,
+  "route": "A",
+  "historical_full_sequence_baseline_exposure": true,
+  "blind_validation": false,
+  "planned_runs": 285,
+  "independent_initialization": true,
+  "independent_keyframes_and_BA_history": true,
+  "shared_intermediate_states": false,
+  "cross_trajectory_callwise_means_equal": false,
+  "primary_metric": "100 * global Sim3 ATE_RMSE / offline GT path length",
+  "contrast": "A5 minus A7; negative favours A5",
+  "bootstrap_cluster": "SOURCE_SEQUENCE",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261128,
+  "confidence_level": 0.95,
+  "within_sequence": "mean paired differences on common scorable seeds",
+  "strict_sensitivity": "all three common seeds",
+  "failure_errors_imputed": false,
+  "completion_noninferiority_margin_percentage_points": 5,
+  "secondary_thresholds_approved": false,
+  "A0_capture_and_cache_validation_overhead_separately_logged": true,
+  "serial": true,
+  "no_automatic_retries": true
+}

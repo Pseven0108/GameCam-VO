@@ -1,0 +1,91 @@
+--- TASK011B frozen run_window.py
++++ TASK011D native_driver.py
+@@ -1,3 +1,17 @@
++import argparse as _approval_argparse,os as _approval_os
++from authorization import require_approved_runtime as _require_runtime
++_gate_parser=_approval_argparse.ArgumentParser(add_help=False)
++_gate_parser.add_argument('--approval',default=_approval_os.environ.get('TASK011D_RUNTIME_APPROVAL'))
++_gate_parser.add_argument('--job-key',default=_approval_os.environ.get('TASK011D_RUNTIME_JOB'))
++_gate_parser.add_argument('--window')
++_gate_parser.add_argument('--arm')
++_gate_parser.add_argument('--seed',type=int)
++_gate_args,_=_gate_parser.parse_known_args()
++_require_runtime(_gate_args.approval,'END_TO_END',_gate_args.job_key)
++from authorization import verify_requested_job as _verify_requested_job
++_verify_requested_job('END_TO_END',_gate_args.job_key,_gate_args.window,_gate_args.arm,_gate_args.seed)
++from native_binding import verify_upstream_source as _verify_upstream
++_verify_upstream()
+ """Native SLAM.spawn tracking, final BA and filler with task-local prior hook."""
+ import argparse,json,time,traceback,importlib.util,faulthandler
+ faulthandler.enable(all_threads=True)
+@@ -8,7 +22,7 @@
+ from src.frontend import Frontend
+ from src.utils.common import setup_seed
+ import src.motion_filter as motion
+-from controller import arm_config,coefficient_map,install,MAIN
++from uniform_control import arm_config,coefficient_map,install,MAIN
+ 
+ 
+ class ObservedSLAM(SLAM):
+@@ -40,7 +54,7 @@
+             raise RuntimeError('Common cache not admitted')
+         if meta.get('precision_protocol')!='NATIVE_MOTION_FILTER_AUTOCAST_V2' or not meta.get('autocast_enabled') or meta.get('autocast_dtype')!='torch.float16' or meta.get('input_preprocess_device')!='cpu':
+             raise RuntimeError('Prior cache does not preserve native MotionFilter precision')
+-        coefficients={}
++        coefficients={};native_valid={};shadow_a5={}
+         write(out/'CHILD_STAGE.json',dict(stage='LOAD_COMMON_PRIORS'))
+         for r in meta['records']:
+             path=cache/f'{r["timestamp"]:05d}.npz'
+@@ -48,6 +62,8 @@
+             with np.load(path,allow_pickle=False) as z:
+                 s,counts=coefficient_map(z['native_depth'],z['flip_depth'][:,::-1],z['native_confidence'],z['tta_valid'],arm_config(arm))
+                 coefficients[r['timestamp']]=s
++                native_valid[r['timestamp']]=np.isfinite(z['native_depth']) & (z['native_depth']>1e-6)
++                if arm=='A0':shadow_a5[r['timestamp']]=coefficient_map(z['native_depth'],z['flip_depth'][:,::-1],z['native_confidence'],z['tta_valid'],arm_config('A5'))[0]
+         original_predictor=motion.predict_metric_depth
+         def cached_depth(model,timestamp,image,cfg,device,**kwargs):
+             with np.load(cache/f'{int(timestamp):05d}.npz',allow_pickle=False) as z:
+@@ -72,14 +88,14 @@
+         # proven not to consume RNG; no per-arm initializer is skipped.
+         motion.predict_metric_depth=cached_depth
+         write(out/'CHILD_STAGE.json',dict(stage='LOAD_CANDIDATE_EXTENSION'))
+-        spec=importlib.util.spec_from_file_location('task011b_cadp_dr_c3414af6',str(TASK/'build_001/task011b_cadp_dr_c3414af6.so'))
++        spec=importlib.util.spec_from_file_location('task011b_cadp_dr_c3414af6',str(__import__('native_binding').verify_candidate_identity()))
+         candidate=importlib.util.module_from_spec(spec);spec.loader.exec_module(candidate)
+         write(out/'CHILD_STAGE.json',dict(stage='INSTALL_CONTROLLER'))
+-        regression=None
+-        if arm=='A0' and window==json.loads((TASK/'configs/GPU_RGB_INPUTS.json').read_text())['windows'][0]['window_id']:
+-            from validate_native import verify
+-            regression=lambda args,native,module:verify(args,native,module,TASK/'native_regression/real_first_local_001')
+-        install(self.video,candidate,arm_config(arm),coefficients,out/'native_ba_calls.jsonl',regression)
++        if arm=='A0':
++            from collect_snapshots import SnapshotCollector,install_native_collector
++            collector=SnapshotCollector(TASK/'fixed_state/snapshots'/str(self.task_seed)/window,inputs(window)['sequence'],self.task_seed)
++            install_native_collector(self.video,collector,shadow_a5,native_valid)
++        install(self.video,candidate,arm_config(arm),coefficients,out/'native_ba_calls.jsonl',None,native_valid_by_timestamp=native_valid)
+         original_call=Frontend.__call__;original_second=Frontend.initialize_second_stage
+         def frontend_call(frontend,*args,**kwargs):
+             frontend.video._task011b_phase=MAIN if frontend.is_initialized else 'INITIALIZATION'
+@@ -103,15 +119,18 @@
+ 
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('--window',required=True);p.add_argument('--arm',required=True);a=p.parse_args()
++    p=argparse.ArgumentParser();p.add_argument('--window',required=True);p.add_argument('--arm',required=True);p.add_argument('--seed',type=int,required=True);p.add_argument('--approval',required=True);p.add_argument('--job-key',required=True);a=p.parse_args()
++    from authorization import require_approved_runtime
++    require_approved_runtime(a.approval,'END_TO_END',a.job_key)
++    if a.seed not in (43,44,45):raise ValueError('Unregistered seed')
+     torch.multiprocessing.set_start_method('spawn',force=True)
+-    out=TASK/'runs'/a.window/a.arm;out.mkdir(parents=True,exist_ok=False)
++    out=TASK/'runs'/str(a.seed)/a.window/a.arm;out.mkdir(parents=True,exist_ok=False)
+     write(out/'ATTEMPT.json',dict(status='STARTED',window=a.window,arm=a.arm,frames=64))
+-    cfg=config(a.window,out);setup_seed(43);torch.set_num_threads(4)
++    cfg=config(a.window,out);setup_seed(a.seed);torch.set_num_threads(4)
+     import yaml
+     (out/'native_config.yaml').write_text(yaml.safe_dump(cfg))
+     stream=stream_class()(cfg,a.window)
+-    model=ObservedSLAM(cfg,stream);model.task_out=out;model.task_window=a.window;model.task_arm=a.arm
++    model=ObservedSLAM(cfg,stream);model.task_out=out;model.task_window=a.window;model.task_arm=a.arm;model.task_seed=a.seed
+     started=time.perf_counter()
+     processes=[];old_process=torch.multiprocessing.Process
+     def remember_process(*args,**kwargs):

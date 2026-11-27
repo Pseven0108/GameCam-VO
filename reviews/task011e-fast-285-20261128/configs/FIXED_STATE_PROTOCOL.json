@@ -1,0 +1,56 @@
+{
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "arms": [
+    "A0",
+    "A1",
+    "A4",
+    "A5",
+    "A7"
+  ],
+  "windows": 19,
+  "frames": 64,
+  "stride": 1,
+  "buffer": 500,
+  "input_hw": [
+    360,
+    640
+  ],
+  "alpha": 0.01,
+  "mean_absolute_tolerance": 1e-06,
+  "original_R2_yaml_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "geometry_need": false,
+  "route": "A",
+  "historical_full_sequence_baseline_exposure": true,
+  "blind_validation": false,
+  "reference_arm": "A0",
+  "reference_runs": 57,
+  "reference_runs_are_subset_of_285": true,
+  "all_eligible_local_BA_calls": true,
+  "phases": [
+    "FRONTEND_MAIN_LOOP_LOCAL_BA"
+  ],
+  "exclude_motion_only": true,
+  "require_metric_depth_reg": true,
+  "branches": [
+    "A5_first",
+    "A7",
+    "A5_repeat"
+  ],
+  "independent_30_argument_clones": true,
+  "preserve_alias_layout": true,
+  "restore_all_RNG_before_each_branch": true,
+  "native_U_updates_preserved": true,
+  "produce_full_trajectory": false,
+  "numerical_noise_near_contrast_warning_ratio": 0.5,
+  "noise_warning_not_a_significance_threshold": true,
+  "ATE_RPE": false,
+  "BA_calls_are_nested": true,
+  "local_smaller_update_is_not_accuracy": true,
+  "snapshot_allocation": "full native 30 arguments; unique-storage preflight before every write",
+  "snapshot_safety_free_bytes": 10737418240,
+  "real_snapshot_sizes_and_call_counts": "UNKNOWN_UNTIL_APPROVED_A0_CAPTURE"
+}

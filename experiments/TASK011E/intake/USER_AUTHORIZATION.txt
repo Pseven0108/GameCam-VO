@@ -1,0 +1,337 @@
+可以。我们调整策略：**不再把 TASK011E 做成一个庞大的独立验证项目，而是压缩成正式实验启动前的快速准入检查，尽快进入285次实验。**
+
+我同意加快进度，但不建议为了赶进度而取消模型权重校验、Native CUDA 验证和实验状态保护。这些检查可以并行、自动化，不需要再花很多时间人工反复审查。
+
+新的目标是：
+
+加速执行路线
+
+# **285 次**
+
+**VIPER × 5 Arms × 19 Sequences × 3 Seeds**
+
+目标是尽快获得 A0、A1、A4、A5、A7 的完整配对实验结果，而不是继续长期停留在工程验证阶段。
+
+我重新核对了 GitHub。还有一个重要事项：TASK011D Release 指向的正式基线是 `ae5d98cf`，仓库默认分支目前显示的是较旧状态。Codex 必须从 TASK011D Release 对应的 Commit 开始，不能直接从默认分支开发。
+
+执行基线：2026-11-28 · TASK011D
+
+# TASK011E-FAST：3090 快速准入与285次正式实验启动
+
+## 一、任务目标
+
+本任务不再开展大规模工程探索，目标是尽快启动并完成 TASK011D 已冻结的285次 End-to-End 实验。
+
+用户已明确授权：
+
+- VIPER 19个冻结窗口。
+- 5个实验组：A0、A1、A4、A5、A7。
+- 3个随机种子：43、44、45。
+- 19 × 5 × 3 = 285次正式 SLAM 实验。
+- 为正式实验生成19组共同 Metric3D 先验缓存。
+
+基线 Commit：
+
+`ae5d98cf339b4ea867193362f384fe5a17737f26`
+
+原始 Release：
+
+[https://github.com/Pseven0108/GameCam-VO/releases/tag/task011d-a7-gpu-adapter-dual-validation-20261128](https://github.com/Pseven0108/GameCam-VO/releases/tag/task011d-a7-gpu-adapter-dual-validation-20261128)
+
+**原则：只修复启动、调度、授权和记录问题，不重新设计算法，不调整任何实验组参数。**
+
+## 二、压缩 TASK011E 的工作量
+
+不再重复以下已经通过的工作：
+
+1. 19个窗口的数据准入。
+2. 1216张 RGB 图片完整解码审计。
+3. 原始预处理逐位一致性验证。
+4. TASK011D 已完成的169项测试。
+5. PyTorch 2.1 CPU API 兼容性验证。
+6. A7 全 Buffer D2H 修复。
+
+只做以下四项快速检查。
+
+### Gate 1：3090 实际运行环境
+
+在 Linux RTX3090 服务器执行：
+
+- 确认 RTX3090。
+- 确认 PyTorch 2.1.0+cu118。
+- 确认 CUDA 正常初始化。
+- 确认 Native Extension 身份及 SHA256。
+- 运行 Buffer=500、45×80 网格的合成 CUDA Adapter 测试。
+- 确认没有全 Buffer 像素级 D2H。
+- 确认 FP32 reduction 和1e-6容差。
+
+不需要额外开展完整 Native BA 实验。后续15次真实 E2E 试运行将验证完整 Native 链路。
+
+### Gate 2：模型权重身份
+
+建立 `MODEL_WEIGHT_IDENTITY.json`。
+
+记录实际使用的：
+
+- DROID-W `droid.pth`。
+- Metric3D ViT-Large 实际权重。
+- 实际加载的其他模型权重（如有）。
+
+记录路径、大小、SHA256、加载来源。
+
+不下载新权重，不替换模型，不修改原始 R2 配置。
+
+没有实际加载的 DINO 权重不要为了形式而加入必需清单。
+
+### Gate 3：快照存储保护
+
+A0 仍然保留原始 Snapshot Collector。
+
+要求：
+
+- 每次写入前检查真实剩余空间。
+- 保留至少10GiB安全空间。
+- 记录快照数量、单个快照大小、累计大小。
+- 记录 Observer 耗时。
+- 不删除历史结果。
+- 存储空间不足时立即停止并保留现场。
+
+不要求在285次实验前完成全部快照容量预测，使用现有逐次动态保护机制。
+
+A0 的 Observer 和缓存验证开销必须单独报告，不得简单扣除后声称获得了纯算法运行时间。
+
+### Gate 4：修复正式运行授权
+
+当前 TASK011D 的 `authorization.py` 将次指标阈值批准设成了正式执行的前置条件。
+
+需要调整。
+
+本次用户已经授权开展285次正式实验，但没有批准次指标候选阈值。
+
+因此：
+
+- 保留 `secondary_thresholds_approved=false`。
+- 不伪造次指标审批。
+- 允许 `PRIOR_CACHE` 和 `END_TO_END` 两种正式执行动作。
+- 继续要求用户授权记录、实验协议 SHA256、Implementation Lock、模型权重身份及 Job Key 全部匹配。
+- 不允许未经授权的其他任务进入正式 GPU 运行。
+
+次指标暂时只做描述性报告，不作为本轮启动阻断条件。
+
+## 三、正式实验启动
+
+### Phase A：生成共同先验缓存
+
+对19个冻结窗口逐个运行 `cache_priors.py`。
+
+每个窗口：
+
+- 64帧。
+- Native Metric3D Forward。
+- Flip Metric3D Forward。
+- 共128次模型 Forward。
+
+总计：
+
+19 × 64 × 2 = 2432次 Metric3D Forward。
+
+每个缓存必须满足：
+
+- 64帧全部完成。
+- 原生 MotionFilter autocast 精度一致。
+- CPU RGB 预处理一致。
+- CPU/CUDA RNG 不发生意外变化。
+- 每帧 SHA256 完整。
+- `CACHE_RECEIPT.json` 状态为 COMPLETE。
+
+19个缓存全部通过后，进入 E2E。
+
+不允许用低精度替代原有精度，也不允许跳过缓存验证。
+
+### Phase B：15次真实 E2E Canary
+
+使用原始 `EXECUTION_ORDER.csv` 的前15项。
+
+这15项是：
+
+- 前3个冻结窗口。
+- Seed 43。
+- 每个窗口完整执行A0、A1、A4、A5、A7。
+
+它们属于原定285次实验，不是额外增加的实验。
+
+检查：
+
+- 5个实验组均能正确启动。
+- Native BA 正常。
+- A7 Adapter 正常。
+- Metric3D 缓存一致性检查通过。
+- A0 快照采集正常。
+- 无 CUDA illegal access。
+- 无 OOM。
+- 无代码或文件身份错误。
+- 所有15项都有合法终态记录。
+
+注意：初始化失败属于算法实验结果，不能擅自删除或补跑。工程错误则停止整个批次。
+
+**Canary 只检查工程运行健康，不查看 A5/A7 性能差异后调整算法。**
+
+15项通过后，自动继续剩余270项，不等待额外人工审批。
+
+### Phase C：完整285次实验
+
+运行顺序必须严格使用：
+
+`configs/EXECUTION_ORDER.csv`
+
+禁止：
+
+- 修改窗口。
+- 修改随机种子。
+- 修改实验组顺序。
+- 修改A0/A1/A4/A5/A7算法参数。
+- 并发启动多个完整 SLAM 任务。
+- 自动重试失败任务。
+- 删除失败现场。
+- 用成功运行覆盖失败运行。
+
+RTX3090采用单任务串行调度，降低显存竞争和调度不确定性。
+
+新增断点检查机制：
+
+1. 每个 Job 创建唯一 ATTEMPT。
+2. 每个 Job 创建独立 TERMINAL。
+3. 每完成5项更新一次批次检查点。
+4. 只允许跳过已经完成且哈希验证通过的终态任务。
+5. 存在未完成 ATTEMPT 时停止，不得覆盖或自动重跑。
+6. ENGINEERING_FAILURE 立即停止批次。
+7. INITIALIZATION_FAILED 保留为有效算法失败结果，继续执行其余任务。
+
+目标是285项全部拥有可审计的终态记录，而不是强行让285项全部成功。
+
+## 四、正式统计方案
+
+保持 TASK011D 原始统计预注册，不允许根据实验结果修改。
+
+### 主指标
+
+`100 × Global Sim3 ATE RMSE / GT Path Length`
+
+主比较：
+
+`A5 - A7`
+
+负值有利于A5。
+
+### 统计方法
+
+- 独立统计单位：19个源序列。
+- Seed：43、44、45。
+- 每个序列内部先计算共同可评分 Seed 的配对均值。
+- 10,000次 Source-Sequence Cluster Bootstrap。
+- Bootstrap Seed：20261128。
+- 95% CI。
+- 三个 Seed 全部可评分的严格子集敏感性分析。
+
+失败不填零。
+
+计划数量、终态数量、初始化数量、完整轨迹数量、ATE可评分数量分别报告。
+
+285个终态未收齐之前，不发布确认性总体结论。
+
+### 次指标
+
+Raw Path Ratio Error、RPE、SE3、运行时间、显存占用等继续报告。
+
+未审批的次指标阈值不用于晋级判断。
+
+保留已冻结的5个百分点完成率非劣效边界。
+
+## 五、Fixed-State Replay 的安排
+
+暂时不让 FSR 阻塞285次 E2E。
+
+利用285次实验中A0自然产生的快照，保存所有合格 BA 调用。
+
+等 E2E 完成后，再单独执行 Fixed-State Replay。
+
+不重新生成A0轨迹，不重复消耗原始窗口，不修改已经完成的实验。
+
+FSR 仍然用于分析：
+
+- A5/A7 同状态更新差异。
+- A5/A5 数值波动。
+- U/UBA 更新影响。
+- A7空间分配机制。
+
+FSR 不替代 E2E 性能结论。
+
+## 六、最终交付
+
+TASK011E 必须输出：
+
+1. `MODEL_WEIGHT_IDENTITY.json`
+2. `GPU_PREFLIGHT_REPORT.json`
+3. `RUNTIME_AUTHORIZATION.json`
+4. `CACHE_MANIFEST.csv`
+5. `E2E_EXECUTION_LEDGER.csv`
+6. `BATCH_CHECKPOINT.json`
+7. `FAILURE_ACCOUNTING.json`
+8. `TRAJECTORY_METRICS.csv`
+9. `PRIMARY_PAIRED_BOOTSTRAP.json`
+10. `STRICT_THREE_SEEDS_SENSITIVITY.json`
+11. `PER_WEATHER_FAILURE_ACCOUNTING.json`
+12. `FINAL_REVIEW.md`
+
+同时保留所有原始日志、轨迹、A0快照和失败现场。
+
+## 七、最终执行指令
+
+本任务的优先级是：
+
+**P0：快速完成 Gate 1–4。**
+
+**P1：生成19组 Metric3D 先验缓存。**
+
+**P2：按冻结顺序完成15项 Canary。**
+
+**P3：Canary 工程检查通过后，自动执行剩余270项。**
+
+**P4：完成285项后统一评分、统计和发布。**
+
+禁止重新开启TASK011B/C/D已经完成的算法研究。
+
+禁止把次指标审批变成285次实验的启动阻断条件。
+
+禁止为追求速度牺牲实验可复现性。
+
+本次用户已经明确授权启动285次正式 E2E 实验。Codex 应直接执行本任务，不要再向用户重复询问是否开始。
+
+最终目标：尽快拿到完整、可复现、可审计的285次 VIPER 实验结果。
+
+## **我们接下来重点关注什么**
+
+## **实验进度路线**
+
+1. **快速环境检查**
+
+   RTX3090 / 权重 / Adapter
+2. **19组先验缓存**
+
+   2432次 Metric3D Forward
+3. **15次 Canary**
+
+   属于285次正式实验
+4. **剩余270次**
+
+   自动串行执行，失败留档
+5. **统计与论文结果**
+
+   A5 vs A7 主比较
+6. **Fixed-State Replay**
+
+   后置机制验证
+
+**有一个关键原则：这次不要再让 Codex 花大量时间写报告、反复审查已经通过的测试。优先把服务器真正跑起来。**
+
+我不能从当前聊天直接启动你的3090服务器进程，因此这份任务书交给 Codex 执行。等它给出 TASK011E 的首批日志或 Release，我可以直接帮你检查是否达到继续跑剩余270次的条件。

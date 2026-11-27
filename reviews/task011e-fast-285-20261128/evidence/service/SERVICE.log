@@ -1,0 +1,17 @@
+CACHE_START val_038_00448-00511
+CACHE_COMPLETE 1 val_038_00448-00511
+CACHE_START val_040_00870-00933
+CACHE_COMPLETE 2 val_040_00870-00933
+CACHE_START val_025_00255-00318
+CACHE_COMPLETE 3 val_025_00255-00318
+CACHE_START val_026_00277-00340
+CACHE_COMPLETE 4 val_026_00277-00340
+CACHE_START val_029_01057-01120
+CACHE_COMPLETE 5 val_029_01057-01120
+CACHE_START val_035_00464-00527
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011E/batch_service.py", line 65, in <module>
+    try:main(str(Path(a.approval).resolve()))
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011E/batch_service.py", line 51, in main
+    raise RuntimeError('Cache failed; entire batch stopped: '+window)
+RuntimeError: Cache failed; entire batch stopped: val_035_00464-00527

@@ -1,3 +1,7 @@
+# Current review
+
+- [TASK011E actual GPU cache execution — STOPPED_STORAGE, E2E0/285](reviews/task011e-fast-285-20261128/FINAL_REVIEW.md)
+
 # Current reviews
 
 - [TASK011D complete preparation review — 169 tests, 19 windows, formal SLAM=0](reviews/task011d-a7-gpu-adapter-dual-validation-20261128/FINAL_REVIEW.md)

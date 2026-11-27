@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "secondary false and cache action accepted",
+      "passed": true
+    },
+    {
+      "check": "secondary false E2E accepted",
+      "passed": true
+    },
+    {
+      "check": "no fake secondary approval",
+      "passed": true
+    },
+    {
+      "check": "protocol hash immutable",
+      "passed": true
+    },
+    {
+      "check": "weight identity bound",
+      "passed": true
+    },
+    {
+      "check": "user reference required",
+      "passed": true
+    },
+    {
+      "check": "user content bound",
+      "passed": true
+    },
+    {
+      "check": "FSR grant excluded",
+      "passed": true
+    },
+    {
+      "check": "FSR action rejected",
+      "passed": true
+    },
+    {
+      "check": "unknown job rejected",
+      "passed": true
+    },
+    {
+      "check": "unfinished attempt stops",
+      "passed": true
+    },
+    {
+      "check": "verified terminal safely skipped",
+      "passed": true
+    },
+    {
+      "check": "changed evidence cannot skip",
+      "passed": true
+    },
+    {
+      "check": "engineering failure cannot skip/retry",
+      "passed": true
+    }
+  ],
+  "original_169_tests_not_repeated": true,
+  "models_started": 0
+}

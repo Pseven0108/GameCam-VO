@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "D_release": "ae5d98cf339b4ea867193362f384fe5a17737f26",
+  "D_worktree_git_diff_exit": 0,
+  "baseline_or_weight_modifications": false,
+  "history_deleted": false,
+  "unchanged_frozen_runtime_files": [
+    {
+      "path": "uniform_control.py",
+      "sha256": "ff03b90683aa7e7ed2590cec1af860887adc09da0719a489aaab736f006d7cbf"
+    },
+    {
+      "path": "native_driver.py",
+      "sha256": "5990d9d4609a95dbddcb1e232845d2b643a82ca798bce926f0789c55e841bb6d"
+    },
+    {
+      "path": "runtime.py",
+      "sha256": "7c98a30c3cc5cf2865b6a5d783930ec254d92e85ae585a937a02fa7bf05cb62b"
+    },
+    {
+      "path": "transfer_audit.py",
+      "sha256": "62b6d221d9b170021d3ed4e30af4476aa28bf40a9fb2040cd4e58199fb74943d"
+    },
+    {
+      "path": "score_completed_runs.py",
+      "sha256": "85b41db294463f3975b8be450b1cdacbae383c5e3ec5fae0ff7317b46acb6f12"
+    },
+    {
+      "path": "analyze_results.py",
+      "sha256": "e6a5260e6e7d1223e17c72136350036e83f4ab6b0aa248652f797b32f8c1fab3"
+    },
+    {
+      "path": "fixed_state_replay.py",
+      "sha256": "09e6191e2ade2a109bf9f93f8592e7a5fae4a21ef025b1f126a42ce5fc6438f0"
+    }
+  ],
+  "original_extension_after": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+  "candidate_extension_after": "23da805f13e8aed23576564f1d453e452414f1cbc03855b0e5f597b49d2a91bd",
+  "private_cache_arrays_remain_on_server": true,
+  "cache_inventory_entries": 336
+}

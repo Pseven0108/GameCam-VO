@@ -1,0 +1,8 @@
+{
+  "status": "STOPPED",
+  "error": "Cache failed; entire batch stopped: val_035_00464-00527",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011E/batch_service.py\", line 65, in <module>\n    try:main(str(Path(a.approval).resolve()))\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011E/batch_service.py\", line 51, in main\n    raise RuntimeError('Cache failed; entire batch stopped: '+window)\nRuntimeError: Cache failed; entire batch stopped: val_035_00464-00527\n",
+  "automatic_retry": false,
+  "history_deleted": false,
+  "when_unix": 1795815299.3145676
+}

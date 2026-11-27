@@ -1,3 +1,12 @@
+<!-- VIPER_ONLY_CURRENT_SCOPE_20261127 -->
+## Current research scope — user instruction, 2026-11-27
+
+VIPER is the sole active experimental dataset. The user has abandoned the early third-person research direction and explicitly requested removal of its datasets and early experiments: WildWorld, OmniWorld-Game, DigiDogs and GameVerse. Do not resume, redownload or extend those retired branches automatically.
+
+Old chat messages, historical commits, reviews and prior memory references about a third-person/WildWorld/OmniWorld mainline are historical context, not the current research plan. Do not infer a new task or dataset from them. Use the user's latest VIPER task and its approved frozen protocol. Keep existing VIPER data/results, shared baseline code/weights and environments protected. Real reference assets are retained but are not an authorization for new non-VIPER experiments. No new GPU run is authorized by this cleanup.
+
+---
+
 # GameCam-VO 本地与远端实验规范
 
 ## 2026-11-27 存储迁移更新

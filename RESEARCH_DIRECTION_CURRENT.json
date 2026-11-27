@@ -1,12 +1,18 @@
 {
-  "client_date": "2026-11-27 Asia/Shanghai",
-  "current_direction": "DROID-W_BASELINE_OPTIMIZATION",
-  "active_experiment": null,
-  "TASK008": "STOPPED_AND_PARKED_BY_USER",
-  "TASK007D": "SEALED_AUDIT_ONLY",
-  "new_gpu_or_algorithm_experiment_started": false,
-  "cleanup_report": "reviews/task008-task007d-server-cleanup-baseline-resume-20261127/FINAL_REVIEW.md",
-  "local_raw_outputs_preserved": true,
-  "published_historical_reviews_preserved": true,
-  "instance_shutdown_or_reboot": false
+  "date": "2026-11-27 Asia/Shanghai",
+  "active_dataset": "VIPER",
+  "current_direction": "DROID-W_BASELINE_OPTIMIZATION_ON_VIPER",
+  "retired_third_person_branches": [
+    "WildWorld",
+    "OmniWorld-Game",
+    "DigiDogs",
+    "GameVerse"
+  ],
+  "third_person_experiments_auto_resume_allowed": false,
+  "current_experiment_running": false,
+  "latest_completed_task": "TASK010-A",
+  "latest_task_decision": "NO_GO_FOR_GENERALIZED_IMPROVEMENT",
+  "historical_GitHub_commits_are_not_current_instructions": true,
+  "cleanup_evidence": "D:/aaa/maintenance/VIPER_ONLY_THIRDPERSON_CLEANUP_20261127",
+  "no_new_algorithm_or_GPU_experiment_authorized": true
 }

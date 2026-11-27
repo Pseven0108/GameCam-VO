@@ -1,0 +1,351 @@
+这一步我们正式进入 **TASK011A：深度可信度证据复核与融合实验**。
+
+我建议让 Codex 不只是检查文件，而是实际完成已有实验复现、Native + Flip 融合实验、指标对比和研究报告。
+
+本次任务范围：
+
+- 复用 TASK006A-R2.1 已有缓存。
+- 复现 Native、Flip 原有指标。
+- 新增 Native + Flip 融合实验。
+- 检查 VIPER 上的可信度信号迁移表现。
+- 形成下一阶段 CADP-DR 的算法设计依据。
+- 不修改 DROID-W 生产源码，不重复完整模型推理。
+
+下面是可以直接交给 Codex 的执行方案。
+
+# TASK011A：Depth Reliability Evidence Reassessment & Fusion
+
+## 一、任务目标
+
+本任务属于 GameCam-VO 的 CADP + 深度可信度研究线。
+
+核心目标：
+
+在已有 TASK006A-R2.1 实验成果的基础上，重新核验 Metric3D Native Confidence 和 Flip TTA 的深度误差风险识别能力，并进一步验证两种信号融合后是否能够产生独立增益。
+
+本次重点回答三个问题：
+
+1. Native Confidence 和 Flip TTA 是否能够识别深度预测错误？
+2. 两种信号是否具有互补性，联合使用是否优于单独使用？
+3. 这些可信度信号能否迁移到 VIPER 游戏画面？
+
+最终为下一阶段 CADP-DR（Confidence-Aware Depth Prior with Depth Reliability）提供可靠的实验依据。
+
+## 二、已有实验成果：必须继承
+
+首先检查并复用以下历史任务：
+
+`reviews/task006a-r2-1-metric3d-gpu-pilot-20261126/`
+
+参考报告：
+
+`R2_1_FINAL_RESEARCH_REPORT.md`
+
+已有实验：
+
+- Metric3D GPU 推理共16张图像。
+- VIPER：10张。
+- MVS-Synth：6张。
+- 已提取 Native Confidence。
+- 已提取 Flip TTA 差异。
+- 已保存深度预测和相关评价数据。
+- MVS-Synth 小样本评价使用3张评价帧。
+- 按照原有协议，在0000序列拟合尺度，再固定尺度用于0001序列。
+
+历史指标：
+
+| 指标       | Native Confidence | Flip TTA |
+| -------- | ----------------- | -------- |
+| AUROC    | 0.8122            | 0.6752   |
+| AUSE     | 0.0708            | 0.0646   |
+| Spearman | 0.2094            | 0.2375   |
+
+其中：
+
+- AUROC：识别 AbsRel > 0.2 的高误差像素。
+- AUSE：风险排序质量，越低越好。
+- Spearman：与连续深度误差的相关性。
+
+注意：\
+Native 和 Flip 各自在部分指标上有优势，但目前没有完成联合增益验证。
+
+VIPER 方面，TASK007A 已经完成10帧、2,304,000个 Confidence 分数的分布审计，但没有通过准入的逐像素 Dense Depth GT。
+
+不能将 MVS-Synth 的误差评价直接写成 VIPER 的深度准确性结论。
+
+## 三、TASK011A-R0：历史实验资产复核与结果复现
+
+### 1. 检查历史缓存
+
+检查 TASK006A-R2.1 的：
+
+- 原始 RGB。
+- Metric3D Depth。
+- Native Confidence。
+- Flip TTA 输出。
+- 深度 GT。
+- 有效像素 Mask。
+- 尺度对齐参数。
+- 原始评价脚本。
+- 原始运行日志。
+
+建立资产清单，记录文件位置、帧 ID、分辨率、Tensor Shape、数据类型和有效像素数量。
+
+对重要缓存记录 SHA256。
+
+优先复用现有结果，不重新安装模型，不重新执行完整16张图像推理。
+
+如有少量必要缓存缺失，优先从现有输出恢复；确实无法恢复时，只补充最少量缺失数据。
+
+### 2. 复现历史指标
+
+使用原始评价协议重新计算：
+
+- Native Confidence AUROC。
+- Native Confidence AUSE。
+- Native Confidence Spearman。
+- Flip TTA AUROC。
+- Flip TTA AUSE。
+- Flip TTA Spearman。
+
+核验以下事项：
+
+1. Native Confidence 的风险方向。
+2. Flip TTA 的风险方向。
+3. AbsRel 的计算方式。
+4. 高误差事件阈值是否为0.2。
+5. 有效像素 Mask 是否一致。
+6. 尺度拟合是否严格遵循原有协议。
+
+不得擅自改变原始指标定义。
+
+同时输出逐帧指标和汇总指标，方便与历史报告对照。
+
+## 四、TASK011A-R1：Native + Flip 联合融合实验
+
+这是本次任务的核心新增实验。
+
+### 1. 建立四组对照
+
+| 编号   | 方法                        | 说明                    |
+| ---- | ------------------------- | --------------------- |
+| R1-A | Native Only               | 仅使用 Native Confidence |
+| R1-B | Flip Only                 | 仅使用 Flip TTA          |
+| R1-C | Native + Flip Rank Fusion | 两种信号等权秩融合             |
+| R1-D | Native + Flip Max Fusion  | 两种风险信号取最大值            |
+
+### 2. 信号预处理
+
+先统一两个信号的风险方向：
+
+- 深度越不可靠，风险分数越高。
+- 根据原始评价脚本确认 Native Confidence 的正负方向。
+- Flip TTA 差异按照实际误差风险方向处理。
+
+对于两种信号，分别计算逐帧经验百分位秩：
+
+`rank_native`
+
+`rank_flip`
+
+主实验采用等权秩融合：
+
+`risk_fusion = 0.5 * rank_native + 0.5 * rank_flip`
+
+R1-D 采用：
+
+`risk_max = max(rank_native, rank_flip)`
+
+这样能够避免 Native Confidence 和 Flip TTA 原始数值范围不同而影响简单加权。
+
+另外可以增加0.25、0.5、0.75的融合比例敏感性分析，但不得利用最终评价集挑选最优权重并将其包装成独立测试结果。
+
+### 3. 评价指标
+
+所有实验使用相同有效像素 Mask 和相同评价协议。
+
+第一类：风险排序能力
+
+- AUROC。
+- AUSE。
+- Spearman。
+- Average Precision。
+
+第二类：深度误差预测能力
+
+- 检查风险分数与实际 AbsRel 的关系。
+- 分析不同风险分位区间的实际深度误差。
+- 如使用误差回归映射，必须在校准序列拟合，在独立评价序列验证。
+- 评价 MAE、RMSE。
+
+第三类：概率校准能力
+
+在具备合适独立校准样本的情况下，将风险分数映射为高误差事件概率，评价：
+
+- Brier Score。
+- NLL。
+- ECE。
+
+注意：原始 Confidence 和融合风险分数都不能直接称为正确概率。
+
+### 4. 实验划分
+
+严格继承 TASK006A-R2.1 的原始数据划分与尺度对齐协议。
+
+不得随机拆分像素作为训练集和测试集。
+
+需要区分序列级校准数据和独立评价数据。
+
+如果当前样本量不足以支持复杂的学习式融合，就以预先确定的等权 Rank Fusion 为主实验，不训练额外神经网络。
+
+### 5. 结果可视化
+
+至少生成：
+
+1. Native Confidence 风险热力图。
+2. Flip TTA 风险热力图。
+3. Rank Fusion 风险热力图。
+4. Max Fusion 风险热力图。
+5. 深度真实误差热力图。
+6. 不同风险分位区间的 AbsRel 对照图。
+7. AUROC、AUSE、Spearman 对比图。
+
+所有图像使用相同坐标、分辨率和颜色范围，便于直观比较。
+
+## 五、TASK011A-R2：VIPER 信号迁移分析
+
+使用 TASK006A-R2.1 已有的10张 VIPER 图像和可用缓存。
+
+不要求重新执行完整 GPU 推理。
+
+分别分析：
+
+- 不同天气下 Native Confidence 的分布。
+- 不同天气下 Flip TTA 的分布。
+- 两种信号的相关性。
+- 两种信号一致和冲突的像素比例。
+- Rank Fusion 与单信号风险分布差异。
+- 高风险区域的空间集中程度。
+- 不同天气之间的信号分布变化。
+
+建议按以下环境分类：
+
+- Day。
+- Sunset。
+- Rain。
+- Snow。
+- Night。
+
+重点研究游戏画面中的光照、纹理和动态内容变化是否会影响深度可信度信号。
+
+VIPER 没有通过准入的 Dense Depth GT，因此本阶段主要是迁移行为和信号稳定性分析，不输出未经验证的深度误差预测准确率。
+
+## 六、TASK011A 最终交付物
+
+在仓库中建立独立实验目录：
+
+`reviews/task011a-depth-reliability-fusion-20261127/`
+
+建议包含：
+
+### 1. 研究报告
+
+- `TASK011A_FINAL_RESEARCH_REPORT.md`
+- `TASK011A_R0_REPRODUCTION_REPORT.md`
+- `TASK011A_R1_FUSION_REPORT.md`
+- `TASK011A_R2_VIPER_TRANSFER_REPORT.md`
+
+### 2. 实验代码
+
+- 历史缓存读取脚本。
+- 原始指标复现脚本。
+- Native + Flip 融合脚本。
+- 指标计算脚本。
+- 结果可视化脚本。
+
+### 3. 实验结果
+
+- `metrics_per_frame.csv`
+- `metrics_summary.csv`
+- `fusion_comparison.csv`
+- `viper_signal_statistics.csv`
+- 必要的中间结果和运行配置。
+
+### 4. 可视化材料
+
+保存所有对照图、热力图和统计图。
+
+### 5. 实验记录
+
+记录：
+
+- 使用的数据来源。
+- 缓存路径。
+- 评价协议。
+- 参数配置。
+- 运行环境。
+- 实验命令。
+- 结果文件位置。
+
+不要覆盖 TASK006A-R2.1 和 TASK007A 的历史结果，不要删除原始缓存。
+
+## 七、最终研究分析要求
+
+报告必须明确回答：
+
+1. 历史 Native 和 Flip 指标是否能够复现？
+2. Rank Fusion 是否优于 Native Only？
+3. Rank Fusion 是否优于 Flip Only？
+4. Max Fusion 是否有额外价值？
+5. 两个信号是否具有互补性？
+6. 两个信号是否能够预测连续深度误差？
+7. 是否能够建立经过独立验证的概率校准？
+8. VIPER 上两种信号是否表现稳定？
+9. 哪些结果可以支持下一阶段 CADP-DR？
+
+不要只报告最好看的结果。
+
+如果融合方法在某些指标上改善、其他指标上退化，需要完整报告。
+
+## 八、下一阶段接口设计建议
+
+本任务完成后，基于真实实验结果给出 CADP-DR 的算法设计建议。
+
+重点研究：
+
+- 几何不确定性如何控制深度先验需求。
+- 深度可靠性如何控制具体像素的先验影响。
+- Native Confidence 和 Flip TTA 是否需要联合使用。
+- 如何处理高几何不确定性与低深度可靠性同时出现的情况。
+- 如何保留 DROID-W 原生 U、UBA、CUDA BA 和 Schur 求解机制。
+
+本阶段只形成接口与数学方案，不接入生产 BA。
+
+## 九、执行原则
+
+1. 以 VIPER 为首要目标数据集。
+2. 继承现有 TASK006A-R2.1 和 TASK007A 成果。
+3. 优先使用现有缓存。
+4. 不重复完整模型推理。
+5. 不修改原始 DROID-W 生产源码。
+6. 不引入 BA-Track、π³MOS Dynamic Gate、GMOS-S 等其他模块。
+7. 不将相关性解释成因果关系。
+8. 不将风险排序解释成概率校准。
+9. 不编造数据，不隐藏负面结果。
+10. 保留全部历史实验和原始结果。
+
+本任务完成后，提交完整研究报告、实验代码、结果 CSV、可视化材料和下一阶段 CADP-DR 算法建议。
+
+**本次任务的核心不是重新研究 Metric3D，而是利用已有成果验证 Native Confidence 与 Flip TTA 是否具有互补性，并为 CADP 的下一次算法改进提供实验证据。**
+
+## **本次任务完成后，我们重点看什么？**
+
+我最关注 Codex 最终交付的三个结果：
+
+1. **融合是否真的有增益**：不能只看 AUROC，还要同时看 AUSE 和 Spearman。
+2. **融合是否有互补性**：确认 Native 和 Flip 是否分别捕捉了不同类型的深度错误。
+3. **是否有资格进入 CADP-DR**：确定下一步应该使用单一信号、双信号融合，还是重新设计可靠性估计。
+
+这次不碰生产 BA，先把深度可信度这条研究线的数据证据做扎实。
+
+后续拿到 Codex 的 Release 或 GitHub 提交，我会直接按照这份 TASK011A 方案进行实验审查。

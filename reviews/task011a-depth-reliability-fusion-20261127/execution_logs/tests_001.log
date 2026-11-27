@@ -1,0 +1,38 @@
+test_48_historical_values_reproduced (test_math_and_evidence.ActualEvidence.test_48_historical_values_reproduced) ... ok
+test_No_PyTorch_or_GPU (test_math_and_evidence.ActualEvidence.test_No_PyTorch_or_GPU) ... ok
+test_all_16_rank_map_shapes_and_probability_scope (test_math_and_evidence.ActualEvidence.test_all_16_rank_map_shapes_and_probability_scope) ... ok
+test_all_models_fit_calibration_sequence_only (test_math_and_evidence.ActualEvidence.test_all_models_fit_calibration_sequence_only) ... ok
+test_all_six_methods_and_views_present (test_math_and_evidence.ActualEvidence.test_all_six_methods_and_views_present) ... ok
+test_exact_old_scale_and_split (test_math_and_evidence.ActualEvidence.test_exact_old_scale_and_split) ... ok
+test_no_VIPER_accuracy_values (test_math_and_evidence.ActualEvidence.test_no_VIPER_accuracy_values) ... ok
+test_seven_zero_predictions_remain (test_math_and_evidence.ActualEvidence.test_seven_zero_predictions_remain) ... ok
+test_average_ties_and_range (test_math_and_evidence.RiskMathematics.test_average_ties_and_range) ... ok
+test_constant_rank_is_half (test_math_and_evidence.RiskMathematics.test_constant_rank_is_half) ... ok
+test_constant_risk_equals_random (test_math_and_evidence.RiskMathematics.test_constant_risk_equals_random) ... ok
+test_extreme_logits_finite (test_math_and_evidence.RiskMathematics.test_extreme_logits_finite) ... ok
+test_fusion_invariance_to_separate_positive_affine_transforms (test_math_and_evidence.RiskMathematics.test_fusion_invariance_to_separate_positive_affine_transforms) ... ok
+test_invalid_probability_rejected (test_math_and_evidence.RiskMathematics.test_invalid_probability_rejected) ... ok
+test_logistic_invalid_event_rejected (test_math_and_evidence.RiskMathematics.test_logistic_invalid_event_rejected) ... ok
+test_max_is_conservative_union (test_math_and_evidence.RiskMathematics.test_max_is_conservative_union) ... ok
+test_mismatched_grids_fail (test_math_and_evidence.RiskMathematics.test_mismatched_grids_fail) ... ok
+test_native_and_flip_directions (test_math_and_evidence.RiskMathematics.test_native_and_flip_directions) ... ok
+test_negative_regression_error_rejected (test_math_and_evidence.RiskMathematics.test_negative_regression_error_rejected) ... ok
+test_nonnegative_logistic_slope (test_math_and_evidence.RiskMathematics.test_nonnegative_logistic_slope) ... ok
+test_original_AUC_AP_against_independent_library (test_math_and_evidence.RiskMathematics.test_original_AUC_AP_against_independent_library) ... ok
+test_perfect_order_AUSE_zero (test_math_and_evidence.RiskMathematics.test_perfect_order_AUSE_zero) ... ok
+test_probability_known_constant (test_math_and_evidence.RiskMathematics.test_probability_known_constant) ... ok
+test_rank_entire_image_not_GT_selected (test_math_and_evidence.RiskMathematics.test_rank_entire_image_not_GT_selected) ... ok
+test_rank_monotone_invariance (test_math_and_evidence.RiskMathematics.test_rank_monotone_invariance) ... ok
+test_rank_rejects_empty (test_math_and_evidence.RiskMathematics.test_rank_rejects_empty) ... ok
+test_rank_rejects_nan (test_math_and_evidence.RiskMathematics.test_rank_rejects_nan) ... ok
+test_regression_is_monotone_and_clipped (test_math_and_evidence.RiskMathematics.test_regression_is_monotone_and_clipped) ... ok
+test_reverse_event_cannot_silently_flip_risk (test_math_and_evidence.RiskMathematics.test_reverse_event_cannot_silently_flip_risk) ... ok
+test_sequence_leakage_stops_logistic (test_math_and_evidence.RiskMathematics.test_sequence_leakage_stops_logistic) ... ok
+test_sequence_leakage_stops_regression (test_math_and_evidence.RiskMathematics.test_sequence_leakage_stops_regression) ... ok
+test_single_class_AUC_undefined (test_math_and_evidence.RiskMathematics.test_single_class_AUC_undefined) ... ok
+test_tie_permutation_does_not_improve_AUSE (test_math_and_evidence.RiskMathematics.test_tie_permutation_does_not_improve_AUSE) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.525s
+
+OK

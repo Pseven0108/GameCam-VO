@@ -1,0 +1,462 @@
+{
+  "status": "PASS",
+  "reason": "First pass rank function never used GT, but loader opened GT before calling it. Corrected the call order to literally compute full-image ranks before GT loading, as frozen protocol states. No metric, fusion weight, mask, fitting split or signal formula changed.",
+  "first_pass": "cpu_001",
+  "final_pass": "cpu_002",
+  "independent_experimental_repetitions": false,
+  "new_GPU_inference": 0,
+  "identical_result_tables": [
+    {
+      "file": "metrics_per_frame.csv",
+      "identical_bytes": true,
+      "sha256": "2c890dda1a3c5c285c9aa27cc4f6c0c6f7f28d304a042977a7664a9b49cd26d2"
+    },
+    {
+      "file": "metrics_summary.csv",
+      "identical_bytes": true,
+      "sha256": "c794a154b5344230af545332d79b5b4650240f1bab9a3286b10bfd761ae05cbf"
+    },
+    {
+      "file": "fusion_comparison.csv",
+      "identical_bytes": true,
+      "sha256": "e8ad4b0daf8ff2ff6ae2a9dd0989670e2bc7b87d466522d72c43182a2669a672"
+    },
+    {
+      "file": "risk_coverage.csv",
+      "identical_bytes": true,
+      "sha256": "62b551c7aa5ad12baab4fcd0b08a7a5815f13f99122147613b780fd2523cd3b6"
+    },
+    {
+      "file": "risk_error_bins.csv",
+      "identical_bytes": true,
+      "sha256": "d976ad5333fa4a0dbf219b813beb3cf4b92b62df631f95ec0ae61fca90b4e226"
+    },
+    {
+      "file": "probability_metrics.csv",
+      "identical_bytes": true,
+      "sha256": "c22bcfabef8efce9a9ca51e08789cd9b4f08f1ffda5acc91952e7b4134aeb1ee"
+    },
+    {
+      "file": "probability_reliability_bins.csv",
+      "identical_bytes": true,
+      "sha256": "d940c5b5feefa735ab0c691a2ac0abce5d0cdc3eb476a6cd6e9e9c44f55ce1af"
+    },
+    {
+      "file": "regression_metrics.csv",
+      "identical_bytes": true,
+      "sha256": "aadded1b855474f8891f4ee19a12748e2bab214703e76bc2ea4b3db3a1dc47d9"
+    },
+    {
+      "file": "signal_complementarity.csv",
+      "identical_bytes": true,
+      "sha256": "cd49c6bd02b9d95cdc96281f60c8a4124a02288cc74a11da590bcebf4e8d0ab4"
+    },
+    {
+      "file": "viper_signal_statistics.csv",
+      "identical_bytes": true,
+      "sha256": "b9203ff16db8f134e2c1796e77e7ca6ca0d6d7b1fe16cbd23e4cb3e47ea017d2"
+    },
+    {
+      "file": "viper_raw_signal_statistics.csv",
+      "identical_bytes": true,
+      "sha256": "f133d4194377c2888195b45dec74ecd52dbe11239a2d11a8c4ef70e5adaae865"
+    },
+    {
+      "file": "historical_reproduction.csv",
+      "identical_bytes": true,
+      "sha256": "edaaed6a3a1e8afc37637ea37f143e3f081f9dd682353b648dcbe9e1ed55c1a7"
+    },
+    {
+      "file": "depth_error_context.csv",
+      "identical_bytes": true,
+      "sha256": "9eb00b093978b7b42dc131b5de36d3d4918091039659871c99681dc7670329f0"
+    },
+    {
+      "file": "CALIBRATION_MODELS.json",
+      "identical_bytes": true,
+      "sha256": "cadf8461614a92f8b0cb008ab3861448f19fc14a018839300759da27718639ba"
+    }
+  ],
+  "bitwise_array_checks": [
+    {
+      "sample": "MVS_0000_0000",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0000",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0000",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0000",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0000",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0000",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "valid_GT",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "field": "AbsRel",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00001",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00001",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00001",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00001",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00239",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00239",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00239",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Day_val001_00239",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00001",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00001",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00001",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00001",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00244",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00244",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00244",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Night_val007_00244",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00001",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00001",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00001",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00001",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00356",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00356",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00356",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Rain_val018_00356",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00001",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00001",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00001",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00001",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00355",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00355",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00355",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Snow_val021_00355",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00001",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00001",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00001",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00001",
+      "field": "risk_max",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00354",
+      "field": "rank_native",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00354",
+      "field": "rank_flip",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00354",
+      "field": "risk_fusion",
+      "bitwise_identical": true
+    },
+    {
+      "sample": "VIPER_Sunset_val008_00354",
+      "field": "risk_max",
+      "bitwise_identical": true
+    }
+  ]
+}

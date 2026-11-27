@@ -1,0 +1,61 @@
+{
+  "status": "STOPPED_BEFORE_CALIBRATION",
+  "reason": "Zero predictions on valid positive GT found by strict contract",
+  "rows": [
+    {
+      "sample": "MVS_0000_0000",
+      "valid_GT_pixels": 454305,
+      "zero_prediction_on_valid_GT": 0,
+      "raw_depth_min": 1.0434057712554932,
+      "canonical_depth_min": 0.100006103515625,
+      "all_TTA_invalid": 1,
+      "confidence_median_at_zero": null
+    },
+    {
+      "sample": "MVS_0000_0049",
+      "valid_GT_pixels": 455490,
+      "zero_prediction_on_valid_GT": 0,
+      "raw_depth_min": 3.39361310005188,
+      "canonical_depth_min": 0.100006103515625,
+      "all_TTA_invalid": 0,
+      "confidence_median_at_zero": null
+    },
+    {
+      "sample": "MVS_0000_0099",
+      "valid_GT_pixels": 384568,
+      "zero_prediction_on_valid_GT": 0,
+      "raw_depth_min": 6.315296173095703,
+      "canonical_depth_min": 5.777984619140625,
+      "all_TTA_invalid": 0,
+      "confidence_median_at_zero": null
+    },
+    {
+      "sample": "MVS_0001_0000",
+      "valid_GT_pixels": 499837,
+      "zero_prediction_on_valid_GT": 0,
+      "raw_depth_min": 2.7273948192596436,
+      "canonical_depth_min": 0.100006103515625,
+      "all_TTA_invalid": 0,
+      "confidence_median_at_zero": null
+    },
+    {
+      "sample": "MVS_0001_0049",
+      "valid_GT_pixels": 441626,
+      "zero_prediction_on_valid_GT": 0,
+      "raw_depth_min": 1.8996691703796387,
+      "canonical_depth_min": 0.100006103515625,
+      "all_TTA_invalid": 0,
+      "confidence_median_at_zero": null
+    },
+    {
+      "sample": "MVS_0001_0099",
+      "valid_GT_pixels": 401627,
+      "zero_prediction_on_valid_GT": 7,
+      "raw_depth_min": -3.769418239593506,
+      "canonical_depth_min": 0.100006103515625,
+      "all_TTA_invalid": 26,
+      "confidence_median_at_zero": 0.9074969291687012
+    }
+  ],
+  "zero_pixels_not_dropped": true
+}

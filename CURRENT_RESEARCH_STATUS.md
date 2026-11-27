@@ -1,11 +1,9 @@
-<!-- VIPER_ONLY_CURRENT_SCOPE_20261127 -->
-# 当前实验主线：VIPER
+<!-- TASK011A-20261127 -->
+# TASK011A · 深度可信度复核与融合 · 2026-11-27
 
-2026-11-27，用户明确决定：停止早期第三人称方向，清理 WildWorld、OmniWorld-Game、DigiDogs、GameVerse 数据和早期实验。后续仅按 VIPER 的最新授权任务继续 DROID-W 优化，不从旧聊天、旧报告或历史提交自动恢复第三人称任务。
+当前唯一实验主线：VIPER。16张旧缓存、原指标复现、Native＋Flip固定融合和VIPER行为分析已完成；没有新GPU推理或BA接入。等权融合改善AUSE/Spearman，但对Native的AUROC/AP退化；尚无独立概率校准或VIPER深度准确率证书。
 
-TASK010-A 已完成，结论为 `NO_GO_FOR_GENERALIZED_IMPROVEMENT`；尚无被接受的通用改进方案。保持现有 VIPER Baseline 与冻结评价协议。本次是清理和方向更新，不启动新实验。
-
-详见 [当前范围](CURRENT_RESEARCH_SCOPE.json) 与 [清理记录](reviews/viper-only-thirdperson-cleanup-20261127/FINAL_REVIEW.md)。
+[最终报告](reviews/task011a-depth-reliability-fusion-20261127/FINAL_REVIEW.md) · [完整展开证据](reviews/task011a-depth-reliability-fusion-20261127/) · [完整ZIP](https://github.com/Pseven0108/GameCam-VO/releases/download/task011a-depth-reliability-fusion-20261127/GAMECAM_TASK011A_DEPTH_RELIABILITY_FUSION_REVIEW.zip)
 
 ---
 

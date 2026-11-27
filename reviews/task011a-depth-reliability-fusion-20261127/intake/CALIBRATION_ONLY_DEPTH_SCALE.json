@@ -1,0 +1,29 @@
+{
+  "scale_prediction_to_native_GT": 15.985507037495662,
+  "formula": "exp(median(log(GT)-log(pred)))",
+  "fitted_on_sequences": [
+    "0000"
+  ],
+  "test_sequences": [
+    "0001"
+  ],
+  "calibration_frames": [
+    "0000",
+    "0049",
+    "0099"
+  ],
+  "physical_meter_claim": false,
+  "metric_zero_shot_claim": false,
+  "GT_unit": "MVS_NATIVE_UNIT_AFTER_CALIBRATION_ONLY_GLOBAL_SCALE",
+  "conditional_accuracy_analysis": true,
+  "distance_terciles_native_units": [
+    189.125,
+    337.5
+  ],
+  "texture_quartiles": [
+    0.07396264620366139,
+    0.3907582143316115
+  ],
+  "unit_status": "Dataset creator has not established physical conversion in inspected sources",
+  "not_a_confidence_or_neural_network_fit": true
+}

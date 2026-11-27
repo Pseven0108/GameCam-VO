@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "synthetic_calls": 12,
+  "synthetic_source_rows": 119,
+  "maximum_FP32_mean_error": 7.958527237228452e-08,
+  "absolute_tolerance": 1e-06,
+  "input_arrays_unchanged": true,
+  "native_BA_grid_hw": [
+    45,
+    80
+  ],
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "CUDA_initialized": false,
+  "VIPER_algorithm_results": false,
+  "GPU_equivalence": "NOT_TESTED"
+}

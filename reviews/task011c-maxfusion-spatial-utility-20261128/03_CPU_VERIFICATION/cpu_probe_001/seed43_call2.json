@@ -1,0 +1,130 @@
+{
+  "status": "PASS_SAME_STATE_COEFFICIENT_CONTRACT",
+  "frames": [
+    {
+      "source_slot": 0,
+      "eligible_pixels": 1974,
+      "A5_mean": 0.5047745864555638,
+      "A7_mean": 0.5047745704650879,
+      "absolute_mean_difference": 1.599047594336156e-08,
+      "A5_spatial_sd": 0.2922069576661026,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 2,
+      "eligible_pixels": 1964,
+      "A5_mean": 0.49981463658750247,
+      "A7_mean": 0.49981462955474854,
+      "absolute_mean_difference": 7.0327539347658785e-09,
+      "A5_spatial_sd": 0.28646305261446575,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 3,
+      "eligible_pixels": 1982,
+      "A5_mean": 0.5076456008729825,
+      "A7_mean": 0.5076456069946289,
+      "absolute_mean_difference": 6.121646412005077e-09,
+      "A5_spatial_sd": 0.28608950562402014,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 4,
+      "eligible_pixels": 1908,
+      "A5_mean": 0.493808062558129,
+      "A7_mean": 0.4938080608844757,
+      "absolute_mean_difference": 1.6736532715277974e-09,
+      "A5_spatial_sd": 0.2886417122223845,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 5,
+      "eligible_pixels": 1971,
+      "A5_mean": 0.4993900657953253,
+      "A7_mean": 0.4993900656700134,
+      "absolute_mean_difference": 1.2531187199016358e-10,
+      "A5_spatial_sd": 0.2901186503499958,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 6,
+      "eligible_pixels": 1935,
+      "A5_mean": 0.5086741497609295,
+      "A7_mean": 0.508674144744873,
+      "absolute_mean_difference": 5.016056459083984e-09,
+      "A5_spatial_sd": 0.28931460470019843,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 7,
+      "eligible_pixels": 1928,
+      "A5_mean": 0.4880522625257321,
+      "A7_mean": 0.48805227875709534,
+      "absolute_mean_difference": 1.623136325346053e-08,
+      "A5_spatial_sd": 0.28754500704491454,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 9,
+      "eligible_pixels": 1944,
+      "A5_mean": 0.4814803497576854,
+      "A7_mean": 0.48148036003112793,
+      "absolute_mean_difference": 1.0273442541119948e-08,
+      "A5_spatial_sd": 0.29119524434775823,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 10,
+      "eligible_pixels": 1963,
+      "A5_mean": 0.501740825761447,
+      "A7_mean": 0.5017408132553101,
+      "absolute_mean_difference": 1.2506136903844833e-08,
+      "A5_spatial_sd": 0.28776939881925073,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    },
+    {
+      "source_slot": 11,
+      "eligible_pixels": 1983,
+      "A5_mean": 0.49172391815319555,
+      "A7_mean": 0.491723895072937,
+      "absolute_mean_difference": 2.3080258537699905e-08,
+      "A5_spatial_sd": 0.28735696705824,
+      "A7_spatial_sd": 0.0,
+      "empty_support": false,
+      "eligible_and_positive_support_equal": true
+    }
+  ],
+  "eligible_pixels": 19552,
+  "total_source_pixels": 36000,
+  "eligible_mean_difference": 3.3471191266883902e-09,
+  "dense_mean_difference": 1.8178575866834024e-09,
+  "effective_alpha_mean_difference": 1.8178575866834023e-11,
+  "absolute_tolerance": 1e-06,
+  "matched_against": "Counterfactual A5 on THIS exact BA input",
+  "cross_run_equal_means_not_asserted": true,
+  "compute_device": "cpu",
+  "reduction_dtype": "torch.float32",
+  "CUDA_equivalence": "UNVERIFIED",
+  "seconds": 0.004961800004821271,
+  "numpy_vs_torch_max_error": 2.9802322387695312e-08,
+  "source": "SYNTHETIC_NOT_VIPER",
+  "GT_or_models_used": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "BLOCKED_NO_UNSEEN_VALIDATION_SOURCE_SEQUENCES",
+  "validation_sequences": 47,
+  "historically_executed_sequences": 47,
+  "historical_model_terminal_records": 94,
+  "historical_statuses": {
+    "COMPLETE": 92,
+    "GPU_OOM": 1,
+    "BUFFER_CAPACITY": 1
+  },
+  "TASK011B_sequences": 20,
+  "eligible_sequences": 0,
+  "selected_windows": 0,
+  "selection_frozen": false,
+  "GPU_experiments_started": 0,
+  "mean_geometry_protocol_not_relaxed": true,
+  "further_manifest_census_files": 1450,
+  "all_weather_groups_sufficient": false,
+  "source_inventory_sha256": "ef1a48e97385161d433600323f8680cb54aab165bc2720fe55cd4b012178aac3",
+  "TASK011B_manifest_sha256": "aecf95c665691f8579bb95051e49d59561f889c8b671d9050177928a5fd20ac3",
+  "terminal_manifest_sha256": "d1697067dcbde2177ad607bfff94bb1301dbb65acd00eb51db317281cb3214a0",
+  "second_independent_blocker": "Even ignoring older experiments, Rain has only 3 sources after TASK011B; need 4",
+  "statistical_decision": "INCONCLUSIVE",
+  "requires_user_decision_before_any_sampling_protocol_change": true
+}

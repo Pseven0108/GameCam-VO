@@ -1,3 +1,14 @@
+<!-- TASK011C_CURRENT_START -->
+# Current: TASK011C data audit and A7 CPU verification
+
+**CPU PASS; DATA BLOCKED; INCONCLUSIVE. GPU=0.**
+
+[Complete current review](reviews/task011c-maxfusion-spatial-utility-20261128/FINAL_REVIEW.md). 122 CPU tests passed. All 47 Validation source
+sequences have historical comparative exposure; the requested new 20-sequence
+sample cannot be admitted. No formal GPU run, new model or baseline modification.
+Do not interpret historical TASK011B results below as TASK011C evidence.
+<!-- TASK011C_CURRENT_END -->
+
 # GameCam-VO — TASK011B completed
 
 2026-11-28 01:36 UTC+08:00. VIPER is the sole active dataset. Real R0/R1 validity/reliability audit,

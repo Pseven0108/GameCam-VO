@@ -1,0 +1,39 @@
+{
+  "backend": "Python/matplotlib inherited from TASK011A, exclusive",
+  "core_claim": "Validity gating removes undefined TTA from control, but bounded symmetric TTA and fallback have not shown universal ranking gains on the reused auxiliary sample.",
+  "archetypes": [
+    "quantitative grid",
+    "image plate + quant"
+  ],
+  "panels": {
+    "TTA_extremes": "Full historical ungated relative maximum versus strictly pair-valid relative, symmetric and log scores; these are different numerical domains, explicitly labelled.",
+    "ranking_metrics": "All five methods on the same full valid-GT error population, three frames in one previously observed sequence; no blind-test claim.",
+    "paired_common_domain": "Common valid-pair diagnostic plotted separately from full-GT rejection policy, never recast as the failed strict gate passing.",
+    "risk_coverage": "All five curves and common oracle; same frozen errors and all original zero predictions retained in the full-GT population.",
+    "validity_plates": "Original RGB, invalid-native/pair masks, bounded disagreement and continuous risks, undefined fields explicitly grey. No dense VIPER GT or accuracy labels.",
+    "window_admission": "Twenty frozen windows and camera-motion descriptors selected without algorithm outcomes, not inference results."
+  },
+  "statistics": "Frame macro mean with three individual frame points, one reused evaluation sequence; no pixel-IID error bars or independent-generalization CI.",
+  "formats": [
+    "PNG",
+    "SVG",
+    "PDF"
+  ],
+  "canvas": "white report figures, editable SVG/PDF text",
+  "integrity": "Map contrast/ranges shared across images, display clipping labelled, numerical arrays unmodified, no algorithm outcome used for selection.",
+  "R3_contract": {
+    "core_conclusion": "Compare actual paired VO utility, failure and cost on all20 fixed sequences without presuming an improved method.",
+    "archetypes": [
+      "quantitative grid",
+      "paired interval plot",
+      "trajectory comparison"
+    ],
+    "source": "evaluation CSVs plus original trajectory NPZ only",
+    "statistics": "One window per source sequence, seed43;3000 sequence-bootstrap mean intervals, exploratory; no pixel/BA event independent-n claim.",
+    "pairing": "A0 installed native and A1 candidateD1 separately; exact N and failures kept.",
+    "scale": "Raw path ratio and SE3 separate from one-global-Sim3 shape.",
+    "export": "PNG previews with editable SVG/PDF, report size; no final-journal-spec claim.",
+    "partial_render": "NA for unexecuted denominators; regenerate all figures after140 terminal outcomes.",
+    "image_integrity": "No trajectory interpolation or rescaling per segment; same GT-PCA basis and equal-axis aspect."
+  }
+}

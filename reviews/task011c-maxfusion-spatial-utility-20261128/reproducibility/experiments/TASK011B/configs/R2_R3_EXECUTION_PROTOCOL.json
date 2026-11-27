@@ -1,0 +1,174 @@
+{
+  "status": "APPROVED_BUT_GPU_DEVICE_UNAVAILABLE",
+  "baseline_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "project_start_main": "7a4d93a8ace18ca37f97949622953ade5b129d86",
+  "branch": "task011b/validity-aware-cadp-dr",
+  "GPU_requirement": "Allocated RTX3090 24GB; no automatic start/reboot/allocation change",
+  "windows": 20,
+  "groups": 7,
+  "planned_window_runs": 140,
+  "actual_window_runs": 0,
+  "frames_per_window": 64,
+  "resolution_hw": [
+    360,
+    640
+  ],
+  "stride": 1,
+  "buffer": 500,
+  "seed": 43,
+  "original_R2_config_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "original_tracking_config": {
+    "backend": {
+      "ba_freq": 20,
+      "final_ba": true,
+      "loop_nms": 10,
+      "loop_radius": 1,
+      "loop_thresh": 25.0,
+      "loop_window": 25,
+      "metric_depth_reg": true,
+      "nms": 5,
+      "normalize": false,
+      "radius": 1,
+      "thresh": 25.0
+    },
+    "beta": 0.75,
+    "buffer": 500,
+    "force_keyframe_every_n_frames": -1,
+    "frontend": {
+      "enable_loop": false,
+      "enable_online_ba": false,
+      "enable_opt_dyn_mask": true,
+      "keyframe_thresh": 3.0,
+      "max_factors": 75,
+      "nms": 1,
+      "radius": 2,
+      "thresh": 16.0,
+      "window": 25
+    },
+    "max_age": 50,
+    "mono_thres": 0.1,
+    "motion_filter": {
+      "thresh": 3.0
+    },
+    "multiview_filter": {
+      "thresh": 0.01,
+      "visible_num": 2
+    },
+    "nb_ref_frame_metric_depth_filtering": 6,
+    "pretrained": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth",
+    "uncertainty_params": {
+      "activate": true,
+      "enable_affine_transform": true,
+      "enable_bidirectional_uncer": false,
+      "feature_dim": 384,
+      "gamma_data": 0.1,
+      "gamma_depth": 0.01,
+      "gamma_prior": 0.05,
+      "gba_lr": 0.1,
+      "gba_weight_decay": 0.002,
+      "lr": 0.1,
+      "visualize": true,
+      "weight_decay": 0.002
+    },
+    "warmup": 12
+  },
+  "intervention_scope": "Frontend main-loop local BA only: predecision and retained updates",
+  "unchanged": [
+    "Initialization and second initialization",
+    "U and UBA",
+    "Schur solve and post-Schur damping",
+    "Native BA internal iterations",
+    "Final BA depth-off path and 7/12 steps",
+    "Trajectory filler",
+    "Original model weights",
+    "Raw RGB and Camera mapping",
+    "Native Metric3D restoration"
+  ],
+  "A0": "Installed original DROID-W: already includes Metric3D depth prior",
+  "A1": "Independent candidate s=1 native D=1 endpoint check; not a second distinct depth-enabled algorithm",
+  "A4_A6": "Same validity-aware rank reliability; A6 alone adds genuine prior-free geometry need",
+  "original_R2_metric_focal": "Native predictor uses cfg.cam.fx, not a substituted resized focal; preserve and log actual value",
+  "initialization_control_identical_across_arms": true,
+  "risk_is_correctness_probability": false,
+  "uniform_attenuation_arm_not_authorized": true,
+  "runtime_protocol_version": "DRAFT_GPU_NATIVE_REGRESSION_UNVERIFIED",
+  "arms": [
+    {
+      "arm": "A0",
+      "CADP_DR_ENABLE": false,
+      "DEPTH_RELIABILITY_METHOD": "OriginalInstalled",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A1",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "OriginalD1Endpoint",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A2",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "NativeOnly",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A3",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "ValidityAwareFlip",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A4",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "ValidityAwareRank",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A5",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "ValidityAwareMax",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": false,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    },
+    {
+      "arm": "A6",
+      "CADP_DR_ENABLE": true,
+      "DEPTH_RELIABILITY_METHOD": "ValidityAwareRank",
+      "TTA_VALIDITY_ENABLE": true,
+      "GEOMETRY_NEED_ENABLE": true,
+      "DEPTH_PRIOR_ALPHA": 0.01,
+      "RELIABILITY_FUSION_WEIGHT": 0.5,
+      "DEPTH_MIN_NATIVE_UNITS": 1e-06,
+      "DISAGREEMENT_EPSILON": 1e-06
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "STOPPED",
+  "error": "E2E stopped; no retry/skip",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/batch_service.py\", line 74, in <module>\n    try:main(str(Path(a.approval).resolve()))\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/batch_service.py\", line 69, in main\n    if code:raise RuntimeError('E2E stopped; no retry/skip')\nRuntimeError: E2E stopped; no retry/skip\n",
+  "automatic_retry": false,
+  "history_deleted": false,
+  "when_unix": 1795818202.7317865
+}

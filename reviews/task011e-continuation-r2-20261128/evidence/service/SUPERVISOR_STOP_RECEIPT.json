@@ -1,0 +1,30 @@
+{
+  "status": "SUPERVISOR_STOPPING_FAILED_OWNED_DRIVER",
+  "reason": "SPAWN_COMMON_MODULE_COLLISION_BEFORE_TRACKING",
+  "tracking_entered": false,
+  "native_BA_calls": 0,
+  "automatic_retry": false,
+  "targets": [
+    {
+      "pid": 19852,
+      "argv": [
+        "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/bin/python",
+        "-B",
+        "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/native_driver.py",
+        "--window",
+        "val_038_00448-00511",
+        "--arm",
+        "A4",
+        "--seed",
+        "43",
+        "--approval",
+        "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/RUNTIME_AUTHORIZATION.json",
+        "--job-key",
+        "s43_val_038_00448-00511_A4",
+        ""
+      ],
+      "stat": "19852 (python) S 19847 15365 15365 0 -1 4194560 862097 6540 549861 3 865 701 12 12 20 0 24 0 135015837 18711412736 759500 18446744073709551615 94081925578752 94081927677413 140726847929056 0 0 0 0 16781312 1258 0 0 0 17 6 0 0 0 0 0 94081928704816 94081928928320 94082660270080 140726847932821 140726847933195 140726847933195 140726847934387 0\n"
+    }
+  ],
+  "when_unix": 1795818201.7250805
+}

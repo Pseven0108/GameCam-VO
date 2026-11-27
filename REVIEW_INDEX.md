@@ -1,5 +1,9 @@
 # Current review
 
+- [TASK011E R2 cache complete; spawn engineering stop](reviews/task011e-continuation-r2-20261128/FINAL_REVIEW.md)
+
+# Current review
+
 - [TASK011E actual GPU cache execution — STOPPED_STORAGE, E2E0/285](reviews/task011e-fast-285-20261128/FINAL_REVIEW.md)
 
 # Current reviews

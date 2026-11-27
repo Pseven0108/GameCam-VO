@@ -1,0 +1,12 @@
+{
+  "user_instruction": "\u7ed3\u675f\u5b9e\u9a8c\u4e4b\u540e\uff0c\u5728\u7ec8\u7aef\u5173\u673a",
+  "instruction_date": "2026-11-28",
+  "documentation": "https://docs.gpuhome.cc/docs/instance/scheduled-shutdown.html",
+  "approved_command": [
+    "/usr/bin/shutdown"
+  ],
+  "target_host": "sc01-ssh.gpuhome.cc",
+  "target_port": 31454,
+  "execution_condition": "TASK011E terminal state; all research processes finished; original evidence preserved; review delivery verified",
+  "not_executed": true
+}

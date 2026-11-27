@@ -1,0 +1,38 @@
+{
+  "status": "ENGINEERING_FAILURE",
+  "initialized": null,
+  "exit_code": -15,
+  "sequence": "val_038",
+  "environment": "Rain",
+  "seed": 43,
+  "arm": "A4",
+  "job_key": "s43_val_038_00448-00511_A4",
+  "finished_unix": 1795818202.7161736,
+  "artifacts": [
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A4/ATTEMPT.json",
+      "bytes": 444,
+      "sha256": "4b6cf916e96209606b9f1b868831972d017b58b11b8d5db7ce5a4abb646e59fd"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A4/stderr.txt",
+      "bytes": 4377,
+      "sha256": "869cff1ecc550719e9face6ba32e54e0f55a480d7387ee130c6effc55aae3a05"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A4/stdout.txt",
+      "bytes": 20,
+      "sha256": "c22c5da66a82792b8b078f2cde502e028080ff041992092c207278a1c98c1002"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "5a207970f34727124c7d8c6edb055fb5d6537cbd799479be4bd0ca1ded5c6656"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native_config.yaml",
+      "bytes": 3408,
+      "sha256": "b904480e8abf3f5dd6278069cb555bd522603e5db9c061071268b534df48bdc4"
+    }
+  ]
+}

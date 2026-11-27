@@ -1,7 +1,7 @@
 {
-  "stage": "TASK011E_FAST_285",
+  "stage": "TASK011E_FAST_285_CONTINUATION_R2",
   "approved": true,
-  "user_authorization_reference": "User attachment a80c8548-a09b-45e2-a84f-4309b025da41 and explicit start instruction",
+  "user_authorization_reference": "Original TASK011E attachment plus explicit user: 清理完成之后继续实验",
   "user_authorization_sha256": "180384a063c564726f1b6552d2ee859dacb1c560197b95fdfc3effd79ed7bbcb",
   "secondary_thresholds_approved": false,
   "approved_secondary_thresholds": [],
@@ -10,7 +10,7 @@
     "PRIOR_CACHE",
     "END_TO_END"
   ],
-  "protocol_sha256": "64fa551b230387a2a3365553fc3f8586cd09ba945581d0c15b20e64047a1f764",
+  "protocol_sha256": "1dcbc47b88bb134c457e3c7c4005022f26726a2895ea8c5d56b8aecb4a08f88c",
   "model_weight_identity_sha256": "ed37dc43b2fc1229b898d3bf1e52f517058b0d7df21bccd484099bff32087eaf",
   "approved_job_keys": [
     "cache_val_038_00448-00511",
@@ -322,5 +322,10 @@
   "automatic_retry": false,
   "formal_runs": 285,
   "cache_forwards": 2432,
-  "FSR_authorized": false
+  "FSR_authorized": false,
+  "continuation_authorization_sha256": "0987715a06d1be20754a3464992a01fdea8b878aa33109fe37f1e77b242acdaa",
+  "cache_continuation_state_sha256": "9744c6270df672dd4e63f0ed254916fb10ceff61307a39b66bd3ec242ddd3a4f",
+  "expected_additional_common_cache_forwards": 1760,
+  "reused_cached_frames": 336,
+  "prior_unwritten_forwards_source_inferred": 2
 }

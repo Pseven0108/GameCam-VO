@@ -1,0 +1,659 @@
+{
+  "when_unix": 1795818255.1926131,
+  "disk_free_bytes": 17917095936,
+  "shm_total_bytes": 25769803776,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24125 MiB",
+  "gpu_compute_processes": "",
+  "original_extension_sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+  "candidate_extension_sha256": "23da805f13e8aed23576564f1d453e452414f1cbc03855b0e5f597b49d2a91bd",
+  "official_archive": {
+    "commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+    "sha256": "b5c9de72dd5a2cb7ad2c00274150cdf2b05bbabda7887b362a7abc234f11ee13"
+  },
+  "research_run_restarted": false,
+  "weights": [
+    {
+      "name": "droid.pth",
+      "bytes": 16061701,
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "expected_sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "match": true
+    },
+    {
+      "name": "metric_depth_vit_large_800k.pth",
+      "bytes": 1647972663,
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "expected_sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "match": true
+    },
+    {
+      "name": "dinov2_reg_small_finetuned.pth",
+      "bytes": 88283296,
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "expected_sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "match": true
+    },
+    {
+      "name": "fit3d_timm_initialization",
+      "bytes": 88245200,
+      "sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "expected_sha256": "dca70548ecd7b03ffba6172c4db403014511b5ee6073f9fca72ba9e6e602a25d",
+      "match": true
+    }
+  ],
+  "source_files": [
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon.yaml",
+      "sha256": "8622a7896a6fe7b4e51d0f04d272067d52679a63c38e97bb6fe9f131b9673389",
+      "expected_sha256": "8622a7896a6fe7b4e51d0f04d272067d52679a63c38e97bb6fe9f131b9673389",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon2.yaml",
+      "sha256": "93bf556c291dd6810a204398f8e290ba9502eb1098b7fc6f09033dcc4de951c9",
+      "expected_sha256": "93bf556c291dd6810a204398f8e290ba9502eb1098b7fc6f09033dcc4de951c9",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd.yaml",
+      "sha256": "1337422c8350668cbbfbe9934e1e6ef317cbcbd169899a3c2518e1614e539794",
+      "expected_sha256": "1337422c8350668cbbfbe9934e1e6ef317cbcbd169899a3c2518e1614e539794",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd2.yaml",
+      "sha256": "106cbec11ea7aaebe0352a915461ebc78d1d99840020028d52f410edb6110a7d",
+      "expected_sha256": "106cbec11ea7aaebe0352a915461ebc78d1d99840020028d52f410edb6110a7d",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_dynamic.yaml",
+      "sha256": "a54b6a1c95458901c772dfb0e736bfb3362a6efb9f40a283eb77795705e8ef5a",
+      "expected_sha256": "a54b6a1c95458901c772dfb0e736bfb3362a6efb9f40a283eb77795705e8ef5a",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box.yaml",
+      "sha256": "2f0a39d3862dc936b127d17d8412cf0700abc2fd490b3e9222f5141e385c40ed",
+      "expected_sha256": "2f0a39d3862dc936b127d17d8412cf0700abc2fd490b3e9222f5141e385c40ed",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box2.yaml",
+      "sha256": "cbb557953a0279ab6155c0ce69e403ef1454271ba92557c0e2af1a22be3967fd",
+      "expected_sha256": "cbb557953a0279ab6155c0ce69e403ef1454271ba92557c0e2af1a22be3967fd",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking.yaml",
+      "sha256": "a9b6aafdd9ba51ba926854b2d06dee0ebf73a37899b46841f9b045f3a32113c4",
+      "expected_sha256": "a9b6aafdd9ba51ba926854b2d06dee0ebf73a37899b46841f9b045f3a32113c4",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking2.yaml",
+      "sha256": "27d63a3055e28b39da3308ca459aad240b61dcd800d9ac1d194864fc8a20e6ee",
+      "expected_sha256": "27d63a3055e28b39da3308ca459aad240b61dcd800d9ac1d194864fc8a20e6ee",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown1.yaml",
+      "sha256": "6f82f4a1c311bef25d20fc53c739c5c51069918b3518bef76040def7bf306098",
+      "expected_sha256": "6f82f4a1c311bef25d20fc53c739c5c51069918b3518bef76040def7bf306098",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown2.yaml",
+      "sha256": "5e5094457f96e525a2374bb3d8e8c0764a2de1d137a607686c568a18f9563f10",
+      "expected_sha256": "5e5094457f96e525a2374bb3d8e8c0764a2de1d137a607686c568a18f9563f10",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown3.yaml",
+      "sha256": "4c35be4fe9bd33271498bbe5dc322e63714e03fd04821bd5b257d3332fae7bb7",
+      "expected_sha256": "4c35be4fe9bd33271498bbe5dc322e63714e03fd04821bd5b257d3332fae7bb7",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown4.yaml",
+      "sha256": "752e34a8bf83e51c2c98d1efb9b101bcc5f3b4c0819f3b7058efdf4f41fa32b2",
+      "expected_sha256": "752e34a8bf83e51c2c98d1efb9b101bcc5f3b4c0819f3b7058efdf4f41fa32b2",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown5.yaml",
+      "sha256": "77bf54a05f781f95c3eb27ed1736d6bbf58b4fafa90471ea78428167ab353479",
+      "expected_sha256": "77bf54a05f781f95c3eb27ed1736d6bbf58b4fafa90471ea78428167ab353479",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown6.yaml",
+      "sha256": "490a8394aac758dd655f9217d30fa72715973ffb97ac87cd758c769340258861",
+      "expected_sha256": "490a8394aac758dd655f9217d30fa72715973ffb97ac87cd758c769340258861",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown7.yaml",
+      "sha256": "48f7aff3c47f105f4515a3d5ad28158946401272995896ff0c2f6852722a383b",
+      "expected_sha256": "48f7aff3c47f105f4515a3d5ad28158946401272995896ff0c2f6852722a383b",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/droidw.yaml",
+      "sha256": "d382b598c8e66d958f127210b6f459053bfd252d86e64043927f4c1953644dcc",
+      "expected_sha256": "d382b598c8e66d958f127210b6f459053bfd252d86e64043927f4c1953644dcc",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/apple.yaml",
+      "sha256": "93740f9a5c7b884e97cc4741cc2399b83c9dc423ca451937693a53ae32e931cd",
+      "expected_sha256": "93740f9a5c7b884e97cc4741cc2399b83c9dc423ca451937693a53ae32e931cd",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/backpack.yaml",
+      "sha256": "9c7a998073fc7940e9ec4e5b4aa61751f28d93a5492a1e010dc7f3ddd9534993",
+      "expected_sha256": "9c7a998073fc7940e9ec4e5b4aa61751f28d93a5492a1e010dc7f3ddd9534993",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/block.yaml",
+      "sha256": "3e8b7c132bf27fec3d844096f28f004fa61893dd3198993424f049d1b372c4be",
+      "expected_sha256": "3e8b7c132bf27fec3d844096f28f004fa61893dd3198993424f049d1b372c4be",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/creeper.yaml",
+      "sha256": "ef0d1797f76b0eb8b78bf49598931d4840a20e847d38c734bcf88dc8948d110c",
+      "expected_sha256": "ef0d1797f76b0eb8b78bf49598931d4840a20e847d38c734bcf88dc8948d110c",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/dycheck.yaml",
+      "sha256": "78527e64f33d52f2617f46194dd2840b30af2c5176b79ba03e6bc2db131ec0c6",
+      "expected_sha256": "78527e64f33d52f2617f46194dd2840b30af2c5176b79ba03e6bc2db131ec0c6",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/handwavy.yaml",
+      "sha256": "b858da263eb0aeff143363e267fe1f78bc1f5c33b68ceaeff137f2b28aa98b38",
+      "expected_sha256": "b858da263eb0aeff143363e267fe1f78bc1f5c33b68ceaeff137f2b28aa98b38",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/haru-sit.yaml",
+      "sha256": "2f5d0ec6ea85c760d6fc76049fb5f26ef4ce02098b5a0c6c980ffe676ba61078",
+      "expected_sha256": "2f5d0ec6ea85c760d6fc76049fb5f26ef4ce02098b5a0c6c980ffe676ba61078",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/mochi-high-five.yaml",
+      "sha256": "c6dcc86170ab5657c5f043c34d9aa6dba3b2bcc2179964153983f53228db5df1",
+      "expected_sha256": "c6dcc86170ab5657c5f043c34d9aa6dba3b2bcc2179964153983f53228db5df1",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/paper-windmill.yaml",
+      "sha256": "dca08071720dbd0aad26c854ff2ec6729ac756fddd5068dcf2fb60cc4d8cf00d",
+      "expected_sha256": "dca08071720dbd0aad26c854ff2ec6729ac756fddd5068dcf2fb60cc4d8cf00d",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/pillow.yaml",
+      "sha256": "43fd2826169480cf0e085460c3895567ad4666989f7ceaf3d99fd97d195bfc66",
+      "expected_sha256": "43fd2826169480cf0e085460c3895567ad4666989f7ceaf3d99fd97d195bfc66",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/spin.yaml",
+      "sha256": "264cd4855d2a265bc1b2d67d647e5014263fa39c983ea47fa3670a89b1dbaa7d",
+      "expected_sha256": "264cd4855d2a265bc1b2d67d647e5014263fa39c983ea47fa3670a89b1dbaa7d",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/sriracha-tree.yaml",
+      "sha256": "9318aeccfe4a0d8736371e56b647d442db6356b9e3c47535d51aa47556c0f14d",
+      "expected_sha256": "9318aeccfe4a0d8736371e56b647d442db6356b9e3c47535d51aa47556c0f14d",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/teddy.yaml",
+      "sha256": "5884681db5f700f850bcfa0aa34075e0e5c17e30ef274bb295e1a6423546d108",
+      "expected_sha256": "5884681db5f700f850bcfa0aa34075e0e5c17e30ef274bb295e1a6423546d108",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg2_desk_with_person.yaml",
+      "sha256": "b041303a3b883960f17da8dede75e2959064e755dcc7ccf76515cb42e74646d5",
+      "expected_sha256": "b041303a3b883960f17da8dede75e2959064e755dcc7ccf76515cb42e74646d5",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere.yaml",
+      "sha256": "0c20ae2a77f0e44c80468249502382ef06a6d13689685aeb6406cab0edb271bb",
+      "expected_sha256": "0c20ae2a77f0e44c80468249502382ef06a6d13689685aeb6406cab0edb271bb",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere_static.yaml",
+      "sha256": "d62759a87080042e7038d45047f2b0ffdbfa066dafe67e4a75193006af920bc1",
+      "expected_sha256": "d62759a87080042e7038d45047f2b0ffdbfa066dafe67e4a75193006af920bc1",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_rpy.yaml",
+      "sha256": "0ecdd6ebb378c522a1651d7ee31693a316ddf94c176893f29c9c29a38e5eef8a",
+      "expected_sha256": "0ecdd6ebb378c522a1651d7ee31693a316ddf94c176893f29c9c29a38e5eef8a",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_xyz.yaml",
+      "sha256": "56f65b46cdd0d776a1d642d02ffbf7c17c847ed40325b2c57afe89c86ef206ff",
+      "expected_sha256": "56f65b46cdd0d776a1d642d02ffbf7c17c847ed40325b2c57afe89c86ef206ff",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere.yaml",
+      "sha256": "22150447b5d8d263397d7471170fd1e19b193f278de49ca23a8b405cf908b7bd",
+      "expected_sha256": "22150447b5d8d263397d7471170fd1e19b193f278de49ca23a8b405cf908b7bd",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere_static.yaml",
+      "sha256": "6c0147fd6066551b24ecbb38ef74ee23514de78fa78a56c1a9d600e2342354f8",
+      "expected_sha256": "6c0147fd6066551b24ecbb38ef74ee23514de78fa78a56c1a9d600e2342354f8",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_rpy.yaml",
+      "sha256": "3e7b803a361170210176e6b28185b9fbe3a05adf2eec0765b182bc2089707bc6",
+      "expected_sha256": "3e7b803a361170210176e6b28185b9fbe3a05adf2eec0765b182bc2089707bc6",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_xyz.yaml",
+      "sha256": "0f116e62f4ac580fc954440d12602493f5e5833c5096a59e00dc3a59f8c7cd18",
+      "expected_sha256": "0f116e62f4ac580fc954440d12602493f5e5833c5096a59e00dc3a59f8c7cd18",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/tum_dynamic.yaml",
+      "sha256": "44aca16c764c66fc4480a97b83b8fc8b2feb112a5eed85394850a59c41366e36",
+      "expected_sha256": "44aca16c764c66fc4480a97b83b8fc8b2feb112a5eed85394850a59c41366e36",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/elephant_herd.yaml",
+      "sha256": "0ab16ff1a218f08ce6b6418b85fddf7978c1448da38486a16d97e20326d61296",
+      "expected_sha256": "0ab16ff1a218f08ce6b6418b85fddf7978c1448da38486a16d97e20326d61296",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/giraffe.yaml",
+      "sha256": "91fdee27d37b3660554250669e2b4660024926b7be86faf81533111a6053386c",
+      "expected_sha256": "91fdee27d37b3660554250669e2b4660024926b7be86faf81533111a6053386c",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_01.yaml",
+      "sha256": "c0dad8ab41b1d3f51df730c094824a6f2de63989e9ec68b00cb69e74e8f7fd19",
+      "expected_sha256": "c0dad8ab41b1d3f51df730c094824a6f2de63989e9ec68b00cb69e74e8f7fd19",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_02.yaml",
+      "sha256": "a6f4a85bd2c7a2b3fcd8779ca0a133efb065609e14f4f3aa9ee355f4339e44ff",
+      "expected_sha256": "a6f4a85bd2c7a2b3fcd8779ca0a133efb065609e14f4f3aa9ee355f4339e44ff",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_03.yaml",
+      "sha256": "b92d22bc475fe2c2d52ee1dfe5fddd2dfc23783141d37ba9c2cc8679cccd3b67",
+      "expected_sha256": "b92d22bc475fe2c2d52ee1dfe5fddd2dfc23783141d37ba9c2cc8679cccd3b67",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_04.yaml",
+      "sha256": "f824559d6de7b0cc2d3941edc709db4929ba91d7b5a8a7e2ed99ee98ab47d96a",
+      "expected_sha256": "f824559d6de7b0cc2d3941edc709db4929ba91d7b5a8a7e2ed99ee98ab47d96a",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_05.yaml",
+      "sha256": "ffa1791382d4b47036e8adc61e1f5c01e3325bc6b7ba86262214a40973618d17",
+      "expected_sha256": "ffa1791382d4b47036e8adc61e1f5c01e3325bc6b7ba86262214a40973618d17",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_06.yaml",
+      "sha256": "2cbdd075677360080d9ae195a4e233a47225d7c2ba36e32857e9ef9231b01fa2",
+      "expected_sha256": "2cbdd075677360080d9ae195a4e233a47225d7c2ba36e32857e9ef9231b01fa2",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/taylor_22.yaml",
+      "sha256": "cc60feacbdc7970aeef5984bce54c3d21ef513c048f4f699088fd2f93efd79c8",
+      "expected_sha256": "cc60feacbdc7970aeef5984bce54c3d21ef513c048f4f699088fd2f93efd79c8",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking1.yaml",
+      "sha256": "e341bebda053e21cb38ae78a5b14c217f1ee4719edb2fce408cb3d1a60550f19",
+      "expected_sha256": "e341bebda053e21cb38ae78a5b14c217f1ee4719edb2fce408cb3d1a60550f19",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking2.yaml",
+      "sha256": "3633dd27f36e51a80b7c133074b4a358d9f69584f4efd87ac60825c75473c700",
+      "expected_sha256": "3633dd27f36e51a80b7c133074b4a358d9f69584f4efd87ac60825c75473c700",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking3.yaml",
+      "sha256": "3dbf79bc8bde63fbea7420277368c95b78097a2d353f8c45083b2c254c927fbf",
+      "expected_sha256": "3dbf79bc8bde63fbea7420277368c95b78097a2d353f8c45083b2c254c927fbf",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum.yaml",
+      "sha256": "d5c4d7ce8b22ff134e9524666a49d709577843ce7e18fa8b379ec488ae70be39",
+      "expected_sha256": "d5c4d7ce8b22ff134e9524666a49d709577843ce7e18fa8b379ec488ae70be39",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum2.yaml",
+      "sha256": "461a2649091dea02ec152fbaf47bacbf66295a6d3a7be4f73eb1a6252ff2312c",
+      "expected_sha256": "461a2649091dea02ec152fbaf47bacbf66295a6d3a7be4f73eb1a6252ff2312c",
+      "match": true
+    },
+    {
+      "path": "configs/Dynamic/YouTube/youtube.yaml",
+      "sha256": "191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88",
+      "expected_sha256": "191e3f727e5c3296f1ca6689539b61e14d49d7702312eaba32545016a3bc7d88",
+      "match": true
+    },
+    {
+      "path": "configs/droid_w.yaml",
+      "sha256": "4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d",
+      "expected_sha256": "4018bf870e2536de98c1f48635636e7eaa47a147ccde561d24c0d4a8eaebe01d",
+      "match": true
+    },
+    {
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "src/backend.py",
+      "sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "expected_sha256": "6f0542c9de0237a89757db1fa266e00c457879a08dffb86ca1823add4d9b6e8d",
+      "match": true
+    },
+    {
+      "path": "src/config.py",
+      "sha256": "0d0b18e572cc5b577d3ba41e1bee31c3c65da3fa7137df06504c477251d2086d",
+      "expected_sha256": "0d0b18e572cc5b577d3ba41e1bee31c3c65da3fa7137df06504c477251d2086d",
+      "match": true
+    },
+    {
+      "path": "src/depth_video.py",
+      "sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "expected_sha256": "187912900335dbbf79d3ddd3577309200e979e578c274ea82895ee81dd9f3869",
+      "match": true
+    },
+    {
+      "path": "src/factor_graph.py",
+      "sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "expected_sha256": "a94d9827cf5ca7b6e0df0a396f9602ceddb1cf2be8fe7570baad9aaa27cbc8ec",
+      "match": true
+    },
+    {
+      "path": "src/frontend.py",
+      "sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "expected_sha256": "0a63ca92883f9f83871d05b459c8f07f39d8df4cf2fa145debf0d0b8e9723be6",
+      "match": true
+    },
+    {
+      "path": "src/geom/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "src/geom/ba.py",
+      "sha256": "2d0804ba6c79eb8c89941ff1569ac611ff6ce97a37ff0aa646cd1b759f288376",
+      "expected_sha256": "2d0804ba6c79eb8c89941ff1569ac611ff6ce97a37ff0aa646cd1b759f288376",
+      "match": true
+    },
+    {
+      "path": "src/geom/chol.py",
+      "sha256": "a56c479198666eae61cd82380d1ec5a04637df254e8dc9c98d516578990eab86",
+      "expected_sha256": "a56c479198666eae61cd82380d1ec5a04637df254e8dc9c98d516578990eab86",
+      "match": true
+    },
+    {
+      "path": "src/geom/projective_ops.py",
+      "sha256": "591576b0ab77475d61c8e39975b38820c6ca3a0585dd581e29858703d3fd8b07",
+      "expected_sha256": "591576b0ab77475d61c8e39975b38820c6ca3a0585dd581e29858703d3fd8b07",
+      "match": true
+    },
+    {
+      "path": "src/gui/gl_render/__init__.py",
+      "sha256": "4b7fb7adf68ad14438dea52ba330df345e5e8ab8f5853b361bc38ad2df281c28",
+      "expected_sha256": "4b7fb7adf68ad14438dea52ba330df345e5e8ab8f5853b361bc38ad2df281c28",
+      "match": true
+    },
+    {
+      "path": "src/gui/gl_render/render_ogl.py",
+      "sha256": "057e8825956ffc24d0262cd199442a4a92576ab855ef1d2acc9e1e282511de7b",
+      "expected_sha256": "057e8825956ffc24d0262cd199442a4a92576ab855ef1d2acc9e1e282511de7b",
+      "match": true
+    },
+    {
+      "path": "src/gui/gl_render/util.py",
+      "sha256": "6d70f17046c7b01f45e7cd92564891ddcfd5a2b8ce9f6356ac56bf2abed3be55",
+      "expected_sha256": "6d70f17046c7b01f45e7cd92564891ddcfd5a2b8ce9f6356ac56bf2abed3be55",
+      "match": true
+    },
+    {
+      "path": "src/gui/gl_render/util_gau.py",
+      "sha256": "b69654cf773754d47dccebeff6800cb32335fb137830f65657648a8f3c8d044c",
+      "expected_sha256": "b69654cf773754d47dccebeff6800cb32335fb137830f65657648a8f3c8d044c",
+      "match": true
+    },
+    {
+      "path": "src/gui/gui_utils.py",
+      "sha256": "12e45dfb8a6c246f68589ffab2fa24a2dad91e8f64b5baa1dba7ab3afd199419",
+      "expected_sha256": "12e45dfb8a6c246f68589ffab2fa24a2dad91e8f64b5baa1dba7ab3afd199419",
+      "match": true
+    },
+    {
+      "path": "src/gui/slam_gui.py",
+      "sha256": "8d07634168c0e7bda618c64d4f115d687fa03f53b4ca315d3f1dde6eb506baea",
+      "expected_sha256": "8d07634168c0e7bda618c64d4f115d687fa03f53b4ca315d3f1dde6eb506baea",
+      "match": true
+    },
+    {
+      "path": "src/mapper.py",
+      "sha256": "0818a5e5b4f7392ff7f21a96087210a4e8f89484ad44ab391d7e763310060192",
+      "expected_sha256": "0818a5e5b4f7392ff7f21a96087210a4e8f89484ad44ab391d7e763310060192",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/__init__.py",
+      "sha256": "75352870a554717830f333c8c8c32f281beb1d2a2f5b912396221973a9f1986c",
+      "expected_sha256": "75352870a554717830f333c8c8c32f281beb1d2a2f5b912396221973a9f1986c",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/clipping.py",
+      "sha256": "420b7ec6177b323630a21268cf29786d3fd9c5821b0095e0a01dd5738a5fe65b",
+      "expected_sha256": "420b7ec6177b323630a21268cf29786d3fd9c5821b0095e0a01dd5738a5fe65b",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/corr.py",
+      "sha256": "a3123d1f8f08ae196092fa2ce3831110959d71cec549ae90eef2c9848b5674e0",
+      "expected_sha256": "a3123d1f8f08ae196092fa2ce3831110959d71cec549ae90eef2c9848b5674e0",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/droid_net.py",
+      "sha256": "3d960a8f656770865a93719fc7e02fd8efc34ba708f9e0395f31400d564a0012",
+      "expected_sha256": "3d960a8f656770865a93719fc7e02fd8efc34ba708f9e0395f31400d564a0012",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/extractor.py",
+      "sha256": "7a4209643412b035fd81e4472b8e1632fde00d94cd7ec93cc43abbb7e0a15170",
+      "expected_sha256": "7a4209643412b035fd81e4472b8e1632fde00d94cd7ec93cc43abbb7e0a15170",
+      "match": true
+    },
+    {
+      "path": "src/modules/droid_net/gru.py",
+      "sha256": "376165d58ab254c1b7169bf5783b24d9611e2973ec3ccc389d58cd10f9cd4505",
+      "expected_sha256": "376165d58ab254c1b7169bf5783b24d9611e2973ec3ccc389d58cd10f9cd4505",
+      "match": true
+    },
+    {
+      "path": "src/motion_filter.py",
+      "sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "expected_sha256": "ebf79291f273856081679f70becf1c5e45ad737c2ae1ec8e82bb21a0e090baff",
+      "match": true
+    },
+    {
+      "path": "src/slam.py",
+      "sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "expected_sha256": "0d7c95ff4bf5f5cf9016d02392d09cc95b1916210597f435b268ab5f7097ca7c",
+      "match": true
+    },
+    {
+      "path": "src/tracker.py",
+      "sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "expected_sha256": "0c2bf74aa9f86b983d245f7fad84aa63295a30efd2a450830c347a7e983a7698",
+      "match": true
+    },
+    {
+      "path": "src/trajectory_filler.py",
+      "sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "expected_sha256": "762d476b247fcc4dbd90d94c8037c076a4111aa54ec86dd08977c7741e8dd4f3",
+      "match": true
+    },
+    {
+      "path": "src/utils/Printer.py",
+      "sha256": "6ee8d870e607098d44a97e22cbb62a80b3005d7a47962e582bac999eef54bf6b",
+      "expected_sha256": "6ee8d870e607098d44a97e22cbb62a80b3005d7a47962e582bac999eef54bf6b",
+      "match": true
+    },
+    {
+      "path": "src/utils/camera_utils.py",
+      "sha256": "969837112ec288d683d6998a6e9383f6063e6b03a5b8ecb91e3bd30ce52acce6",
+      "expected_sha256": "969837112ec288d683d6998a6e9383f6063e6b03a5b8ecb91e3bd30ce52acce6",
+      "match": true
+    },
+    {
+      "path": "src/utils/colmap_read_model.py",
+      "sha256": "0cf3a39ea930b57b5d232185afb5786c1ff6637047a358e099862c143cccc535",
+      "expected_sha256": "0cf3a39ea930b57b5d232185afb5786c1ff6637047a358e099862c143cccc535",
+      "match": true
+    },
+    {
+      "path": "src/utils/common.py",
+      "sha256": "cb6d9f3942089e02cd89ca4bfca58cb804d52455853b13e87b27dbe1d742a905",
+      "expected_sha256": "cb6d9f3942089e02cd89ca4bfca58cb804d52455853b13e87b27dbe1d742a905",
+      "match": true
+    },
+    {
+      "path": "src/utils/cuda_timer.py",
+      "sha256": "60158a1c4602269d1725ab995b15ffa337df8d5eff18770846ced0d56f30436f",
+      "expected_sha256": "60158a1c4602269d1725ab995b15ffa337df8d5eff18770846ced0d56f30436f",
+      "match": true
+    },
+    {
+      "path": "src/utils/datasets.py",
+      "sha256": "aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287",
+      "expected_sha256": "aa8304045bc06a657750fce271deacd65a585d82caaf697f5687055de29bf287",
+      "match": true
+    },
+    {
+      "path": "src/utils/droid_visualization_rerun.py",
+      "sha256": "722d108c680dfade2b7f3854b19726446c3c31c4918c152e3edf3941af99c408",
+      "expected_sha256": "722d108c680dfade2b7f3854b19726446c3c31c4918c152e3edf3941af99c408",
+      "match": true
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/mapping_utils.py",
+      "sha256": "f386990a428c2149747ec4cc7d50d132c7309653a80de378ea229669278b826e",
+      "expected_sha256": "f386990a428c2149747ec4cc7d50d132c7309653a80de378ea229669278b826e",
+      "match": true
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/median_filter.py",
+      "sha256": "fa2f8fd57ab7fd30dd6787b9aa9f387d794702fbb19512031f767ba0e046168c",
+      "expected_sha256": "fa2f8fd57ab7fd30dd6787b9aa9f387d794702fbb19512031f767ba0e046168c",
+      "match": true
+    },
+    {
+      "path": "src/utils/eval_traj.py",
+      "sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "expected_sha256": "69d4626b28fb61b01e90b3b56dd157ca36b6c1c0d07638c64b5dc98271b2f346",
+      "match": true
+    },
+    {
+      "path": "src/utils/eval_utils.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "src/utils/mono_priors/img_feature_extractors.py",
+      "sha256": "f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346",
+      "expected_sha256": "f201b49f9a0c34460992778a83dbb64ec70d89e012896d585367af01f2568346",
+      "match": true
+    },
+    {
+      "path": "src/utils/mono_priors/metric_depth_estimators.py",
+      "sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "expected_sha256": "d6ac1b5eada25984981cc48e32dfbb38c6e59a4663ce5d554f4b227a4e40b487",
+      "match": true
+    },
+    {
+      "path": "src/utils/plot_utils.py",
+      "sha256": "484e1c9bff3952155d88f4ae7ca4bc441bed597a64d64d7cc78d6b3933230561",
+      "expected_sha256": "484e1c9bff3952155d88f4ae7ca4bc441bed597a64d64d7cc78d6b3933230561",
+      "match": true
+    },
+    {
+      "path": "src/utils/pose_utils.py",
+      "sha256": "761143bb7ec2b2480718c52e2aa78343db7799298781b79bfcc27cf8345e55fd",
+      "expected_sha256": "761143bb7ec2b2480718c52e2aa78343db7799298781b79bfcc27cf8345e55fd",
+      "match": true
+    },
+    {
+      "path": "src/utils/slam_utils.py",
+      "sha256": "5ea8c210687f3da69e4a6ec92aff01d747d14fcf8611f4c0a5547bee04e58cab",
+      "expected_sha256": "5ea8c210687f3da69e4a6ec92aff01d747d14fcf8611f4c0a5547bee04e58cab",
+      "match": true
+    },
+    {
+      "path": "src/utils/sys_timer.py",
+      "sha256": "d9f87d8a11174f2df18cf2145c9d36d852b1a42082dc7a913206a80ca8db23c3",
+      "expected_sha256": "d9f87d8a11174f2df18cf2145c9d36d852b1a42082dc7a913206a80ca8db23c3",
+      "match": true
+    },
+    {
+      "path": "src/utils/visualization.py",
+      "sha256": "e2d12c453ef55b8c1ef7470f3e935f3be21c5617d1365d9b0476595e634d2c07",
+      "expected_sha256": "e2d12c453ef55b8c1ef7470f3e935f3be21c5617d1365d9b0476595e634d2c07",
+      "match": true
+    }
+  ],
+  "source_and_weights_preserved": true
+}

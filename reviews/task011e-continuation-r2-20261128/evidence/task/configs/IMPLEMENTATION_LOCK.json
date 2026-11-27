@@ -1,0 +1,88 @@
+{
+  "parent_commit": "ae5d98cf339b4ea867193362f384fe5a17737f26",
+  "files": [
+    {
+      "path": "common.py",
+      "bytes": 2334,
+      "sha256": "19c8043e1abdc55772033bf446b99dd4d6c795ab16a2ba3aa4e54ffbde2124a1"
+    },
+    {
+      "path": "authorization.py",
+      "bytes": 3219,
+      "sha256": "48755a6f535540e61d661739e5b3d5d60de76207a49035e0e7b07858850a93d0"
+    },
+    {
+      "path": "batch_service.py",
+      "bytes": 5594,
+      "sha256": "edd279b5acefa7fbb12b92149d2a2cf8ef73e8764032e78b50c679a440a55205"
+    },
+    {
+      "path": "run_end_to_end.py",
+      "bytes": 7421,
+      "sha256": "f9c1fd7f32c23ba018e3bb99bfc9774f7fa0f0a9bfc43c54fa439831c8a7cb10"
+    },
+    {
+      "path": "cache_priors.py",
+      "bytes": 7297,
+      "sha256": "48912f90a57da306ec9e329c480790a2d608fca4fdcfa51c4bd7268ec0dab571"
+    },
+    {
+      "path": "collect_snapshots.py",
+      "bytes": 7117,
+      "sha256": "a8459e32df82830d80d3f4eded45f983f70b399a674b832fc94f830ba0d01972"
+    },
+    {
+      "path": "native_driver.py",
+      "bytes": 10944,
+      "sha256": "5990d9d4609a95dbddcb1e232845d2b643a82ca798bce926f0789c55e841bb6d"
+    },
+    {
+      "path": "uniform_control.py",
+      "bytes": 11766,
+      "sha256": "ff03b90683aa7e7ed2590cec1af860887adc09da0719a489aaab736f006d7cbf"
+    },
+    {
+      "path": "native_binding.py",
+      "bytes": 2158,
+      "sha256": "bb996d8a6f127a464d12ea0a8adabe034d031ce4bcc0155c9dc9571a7d40ebb7"
+    },
+    {
+      "path": "runtime.py",
+      "bytes": 1579,
+      "sha256": "7c98a30c3cc5cf2865b6a5d783930ec254d92e85ae585a937a02fa7bf05cb62b"
+    },
+    {
+      "path": "transfer_audit.py",
+      "bytes": 1583,
+      "sha256": "62b6d221d9b170021d3ed4e30af4476aa28bf40a9fb2040cd4e58199fb74943d"
+    },
+    {
+      "path": "score_completed_runs.py",
+      "bytes": 4600,
+      "sha256": "85b41db294463f3975b8be450b1cdacbae383c5e3ec5fae0ff7317b46acb6f12"
+    },
+    {
+      "path": "analyze_results.py",
+      "bytes": 6182,
+      "sha256": "e6a5260e6e7d1223e17c72136350036e83f4ab6b0aa248652f797b32f8c1fab3"
+    },
+    {
+      "path": "fixed_state_replay.py",
+      "bytes": 5173,
+      "sha256": "09e6191e2ade2a109bf9f93f8592e7a5fae4a21ef025b1f126a42ce5fc6438f0"
+    },
+    {
+      "path": "frozen_metrics/offline_eval.py",
+      "bytes": 10562,
+      "sha256": "85ad815f47bb637437ede7316235ea964c1efc947b78f12e2129435c6236e63f"
+    },
+    {
+      "path": "frozen_metrics/fullseq_common.py",
+      "bytes": 2971,
+      "sha256": "7a2e5fb39d89c30c1bdfc32834c631cafeccfe437b7f6ed23c89a770703d6f9a"
+    }
+  ],
+  "computational_controller_changed": false,
+  "only_launch_authorization_storage_recording_amendments": true,
+  "explicit_user_continuation": "2026-11-28 清理完成之后继续实验"
+}

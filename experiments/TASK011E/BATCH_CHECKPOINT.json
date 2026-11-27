@@ -1,17 +1,12 @@
 {
-  "status": "STOPPED_STORAGE",
-  "derived_final_rollup": true,
-  "original_remote_checkpoint": "evidence/task/BATCH_CHECKPOINT.json",
-  "planned_caches": 19,
-  "complete_caches": 5,
-  "partial_cache_frames": 16,
-  "preserved_cache_frames": 336,
-  "preserved_cache_bytes": 960031547,
-  "planned_E2E": 285,
-  "E2E_attempted": 0,
-  "E2E_terminal": 0,
-  "canary_attempted": 0,
-  "FSR_runs": 0,
-  "no_automatic_retry": true,
-  "raw_stop_time_unix": 1795815299.3145676
+  "status": "STOPPED",
+  "planned": 285,
+  "terminal": 1,
+  "checkpoint_after_order": 1,
+  "canary_terminal": 1,
+  "canary_engineering_only": true,
+  "secondary_thresholds_approved": false,
+  "updated_unix": 1795818202.7224789,
+  "automatic_retries": 0,
+  "FSR_runs": 0
 }

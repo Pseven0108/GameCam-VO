@@ -22,6 +22,7 @@ def validate_cache(window):
 
 def main(approval):
     jobs=validate_plan();windows=list(dict.fromkeys(j['window'] for j in jobs));complete=[]
+    continuation=json.loads((TASK/'configs/CACHE_CONTINUATION_STATE.json').read_text())
     env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',
         HF_HOME='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface',
         HUGGINGFACE_HUB_CACHE='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub',
@@ -37,14 +38,22 @@ def main(approval):
         if attempt.exists():
             if not terminal.exists() or json.loads(terminal.read_text())['status']!='COMPLETE':
                 raise RuntimeError('UNFINISHED/FAILED_CACHE_ATTEMPT: no automatic retry')
+        elif window in continuation['complete_receipt_sha256']:
+            m=validate_cache(window)
+            if m['receipt_sha256']!=continuation['complete_receipt_sha256'][window]:raise RuntimeError('Reused complete cache receipt drift')
+            dump(attempt,dict(status='REUSED_VERIFIED_COMPLETE_CACHE',window=window,source=continuation['source_root'],model_forwards_this_attempt=0))
+            dump(terminal,dict(**m,source_attempt_preserved=True,model_forwards_this_attempt=0))
+            print('CACHE_REUSED',window,flush=True)
         else:
             if shutil.disk_usage(TASK).free<10*1024**3:raise RuntimeError('STORAGE_BLOCKED')
-            if (TASK/'cache'/window).exists():raise RuntimeError('Unregistered existing cache')
+            resume=window==continuation['partial_window']
+            if (TASK/'cache'/window).exists() and not resume:raise RuntimeError('Unregistered existing cache')
             dump(attempt,dict(status='STARTED',window=window,started_unix=time.time(),automatic_retry=False))
             print('CACHE_START',window,flush=True)
             with (logs/(key+'_stdout.txt')).open('wb') as out,(logs/(key+'_stderr.txt')).open('wb') as err:
-                code=subprocess.run([sys.executable,'-B',str(TASK/'cache_priors.py'),'--window',window,
-                    '--approval',approval,'--job-key',key],stdout=out,stderr=err,env=env,
+                cmd=[sys.executable,'-B',str(TASK/'cache_priors.py'),'--window',window,'--approval',approval,'--job-key',key]
+                if resume:cmd+=['--resume-prefix']
+                code=subprocess.run(cmd,stdout=out,stderr=err,env=env,
                     cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W').returncode
             if code:
                 dump(terminal,dict(status='ENGINEERING_FAILURE',window=window,exit_code=code,automatic_retry=False))

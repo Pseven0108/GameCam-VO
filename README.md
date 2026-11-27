@@ -1,3 +1,12 @@
+# GameCam-VO — TASK011E R2 stopped at spawn import collision
+
+2026-11-28 Asia/Shanghai. VIPER only. **19/19 caches; E2E1 engineering failure /285;0 trajectories;284 not attempted.**
+Eight CPU import-isolation candidate tests pass; candidate unapplied and no GPU retry. No algorithm comparison.
+Full evidence and cleanup records: [current review](reviews/task011e-continuation-r2-20261128/FINAL_REVIEW.md).
+Shutdown requested after verified delivery. Source/weights/history preserved.
+
+---
+
 # GameCam-VO — TASK011E stopped at cache storage protection
 
 2026-11-28, Asia/Shanghai. VIPER only. RTX3090 fast admission passed; five complete64-frame common caches and16 partial frames preserved. **Formal E2E0/285; Canary0/15.** Disk reserve prevents the next cache write. No historical deletion or automatic retry. Expand storage and confirm continuation before resuming. Secondary thresholds remain unapproved and descriptive-only; FSR is deferred.

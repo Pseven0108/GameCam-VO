@@ -1,0 +1,156 @@
+{
+  "task": "TASK011E",
+  "status": "USER_APPROVED_CONTINUATION_R2",
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "arms": [
+    "A0",
+    "A1",
+    "A4",
+    "A5",
+    "A7"
+  ],
+  "windows": 19,
+  "frames": 64,
+  "stride": 1,
+  "buffer": 500,
+  "input_hw": [
+    360,
+    640
+  ],
+  "alpha": 0.01,
+  "mean_absolute_tolerance": 1e-06,
+  "original_R2_yaml_sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc",
+  "geometry_need": false,
+  "route": "A",
+  "historical_full_sequence_baseline_exposure": true,
+  "blind_validation": false,
+  "planned_E2E_runs": 285,
+  "formal_SLAM_runs_authorized_now": 285,
+  "bootstrap_seed": 20261128,
+  "execution_order_seed": 20261128,
+  "secondary_thresholds_approved": false,
+  "future_runtime_requires_explicit_user_authorization": true,
+  "files": [
+    {
+      "path": "configs/arms/A0.json",
+      "bytes": 304,
+      "sha256": "66f0e660d93514bef939392e9052be951545eaede8832fd0f225dc1bf4b14864"
+    },
+    {
+      "path": "configs/arms/A1.json",
+      "bytes": 304,
+      "sha256": "191b686836163940f7ca21e222176873737ccf3f160acfcb980747f7d9fd4ac3"
+    },
+    {
+      "path": "configs/arms/A4.json",
+      "bytes": 303,
+      "sha256": "52896d46a508734a66b09d823f6d9bbcc69bb4ac04ea7f5c13f84d72eb673ae3"
+    },
+    {
+      "path": "configs/arms/A5.json",
+      "bytes": 302,
+      "sha256": "c3462a6b0486a071b22500f9fcc1d68639870bd92f15735aaf1c5d1edba804e4"
+    },
+    {
+      "path": "configs/arms/A7.json",
+      "bytes": 313,
+      "sha256": "42da88b2e127a4fcbfb71e683ea7f31e621880d2445f0dfa434eed78d0da3ec9"
+    },
+    {
+      "path": "configs/DATA_POLICY_AMENDMENT.json",
+      "bytes": 780,
+      "sha256": "a84f17758ee38bbe875ef7e5a77a31019fc2d144a3dff7843515b329bd30db93"
+    },
+    {
+      "path": "configs/END_TO_END_PROTOCOL.json",
+      "bytes": 1372,
+      "sha256": "174c8e5012361658db56d2754820c4354e3f5e3c32b0cfe37c42b6f16b8fda5e"
+    },
+    {
+      "path": "configs/EXECUTION_ORDER.csv",
+      "bytes": 20299,
+      "sha256": "ab4d924237a004acdc0a8f5926ae8c1ed7553b4255d6e200b48824aabef7a0ca"
+    },
+    {
+      "path": "configs/FIXED_STATE_PROTOCOL.json",
+      "bytes": 1482,
+      "sha256": "d535ab00239116a0fa52513de884cf1fea15c70843a274ab28d8b407b5eaea77"
+    },
+    {
+      "path": "configs/FROZEN_METRICS_IDENTITY.json",
+      "bytes": 187,
+      "sha256": "328fb9b07e669f1cdd6147a8f5f1bd85102ab3e40defd59b3fdf348ec661db17"
+    },
+    {
+      "path": "configs/frozen_r2.yaml",
+      "bytes": 3371,
+      "sha256": "a213d74874ad953000dde6b7506694b369fad9b2eaccaff58f063accdfbb50fc"
+    },
+    {
+      "path": "configs/FROZEN_SOURCE_LOCK.json",
+      "bytes": 28490,
+      "sha256": "8c27b682868fba1c05664b3c7e438cfd270e4a753825350840d97ca7b527a00d"
+    },
+    {
+      "path": "configs/GPU_INPUTS.json",
+      "bytes": 318207,
+      "sha256": "329260a1f4be433b5eb215a012c956182f3a0014fec7494e21afb20233b4c989"
+    },
+    {
+      "path": "configs/GPU_RGB_INPUTS.json",
+      "bytes": 316160,
+      "sha256": "80fccde9566bd6c71e993a3ad7c326294577bddf7fa1b355e8591c6c3fc4d6a4"
+    },
+    {
+      "path": "configs/IMPLEMENTATION_LOCK.json",
+      "bytes": 2729,
+      "sha256": "ad300b3065dbbbd3a2d6d36610d46b74fe2004f2a5bb598e362dd151a4cdf708"
+    },
+    {
+      "path": "configs/NATIVE_DRIVER_PROVENANCE.json",
+      "bytes": 473,
+      "sha256": "7e67d2f123cc72b22fc923ba5cba3c3e430db2fc04f976d32fbea1427aa4ed33"
+    },
+    {
+      "path": "configs/NATIVE_EXTENSION_IDENTITY.json",
+      "bytes": 424,
+      "sha256": "3dfcb6f33d109f37a91a24c1b76bc5328610632ecd3155a1b1b7373e7af5ab7d"
+    },
+    {
+      "path": "configs/SELECTED_19_WINDOWS.csv",
+      "bytes": 1592,
+      "sha256": "6cdf2597ef12e11b0224ea18fa09bc03bd6b116674e1bf674e28a04abbde2831"
+    },
+    {
+      "path": "configs/UPSTREAM_PYTHON_IDENTITY.json",
+      "bytes": 17806,
+      "sha256": "3e39b79971c621bb29f55646f89b2fd9fd7c5d7d7d5e46717ec8aa214f203bb9"
+    },
+    {
+      "path": "configs/SOURCE_ARCHIVE_IDENTITY.json",
+      "bytes": 453,
+      "sha256": "7dfd42e1cc8eaf4c9e88754ec5e6af774e422a34413a8a56ce9dd10ed3460be8"
+    },
+    {
+      "path": "configs/CACHE_CONTINUATION_STATE.json",
+      "bytes": 3732,
+      "sha256": "9744c6270df672dd4e63f0ed254916fb10ceff61307a39b66bd3ec242ddd3a4f"
+    }
+  ],
+  "secondary_threshold_proposals_sha256": "b099b16c8625c609902eea80ca3c8469eac0692555925245e60ab089af25440b",
+  "formal_SLAM_GPU_not_started": true,
+  "synthetic_CUDA_executed": true,
+  "source_release_commit": "ae5d98cf339b4ea867193362f384fe5a17737f26",
+  "allowed_actions": [
+    "PRIOR_CACHE",
+    "END_TO_END"
+  ],
+  "FSR_deferred_not_authorized": true,
+  "original_scientific_protocol_unchanged": true,
+  "continuation_source_commit": "49e803dd87e38e7254b77a30c9a03d8a675f1dc6",
+  "scientific_protocol_unchanged": true
+}

@@ -19,14 +19,30 @@ from runtime import *
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--window',required=True);p.add_argument('--approval',required=True);p.add_argument('--job-key',required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--window',required=True);p.add_argument('--approval',required=True);p.add_argument('--job-key',required=True);p.add_argument('--resume-prefix',action='store_true');a=p.parse_args()
     from authorization import require_approved_runtime
     require_approved_runtime(a.approval,'PRIOR_CACHE',a.job_key)
     import torch
     import torch.nn.functional as F
     from src.utils.common import setup_seed
     from src.utils.mono_priors.metric_depth_estimators import get_metric_depth_estimator,predict_metric_depth
-    out=TASK/'cache'/a.window;out.mkdir(parents=True,exist_ok=False)
+    out=TASK/'cache'/a.window;records=[]
+    if a.resume_prefix:
+        continuation=json.loads((TASK/'configs/CACHE_CONTINUATION_STATE.json').read_text())
+        if a.window!=continuation['partial_window']:raise RuntimeError('Prefix resume only approved for the preserved partial window')
+        records=continuation['prefix_records']
+        if [r['timestamp'] for r in records]!=list(range(16)):raise RuntimeError('Preserved prefix must be exactly timestamps0-15')
+        if not out.is_dir() or sorted(p.name for p in out.iterdir())!=[f'{i:05d}.npz' for i in range(16)]:
+            raise RuntimeError('New continuation directory has unexpected files')
+        for r in records:
+            q=out/f"{r['timestamp']:05d}.npz"
+            if q.stat().st_size!=r['bytes'] or sha(q)!=r['sha256']:raise RuntimeError('Preserved prefix SHA mismatch')
+            with np.load(q,allow_pickle=False) as z:
+                if set(z.files)!={'native_depth','native_confidence','flip_depth','flip_confidence','tta_valid'}:raise RuntimeError('Prefix schema mismatch')
+                if any(z[k].shape!=(360,640) or not np.isfinite(z[k]).all() for k in z.files):raise RuntimeError('Invalid preserved prefix arrays')
+                if z['tta_valid'].dtype!=np.bool_:raise RuntimeError('Prefix validity dtype changed')
+    else:out.mkdir(parents=True,exist_ok=False)
+    reused=len(records)
     cfg=config(a.window,out);setup_seed(43);offline_hub()
     model=get_metric_depth_estimator(cfg).to('cuda').eval()
     stream=stream_class()(cfg,a.window);captured={};original=model.inference
@@ -34,11 +50,13 @@ def main():
         d,c,more=original(value);captured['confidence']=c.detach().clone();return d,c,more
     model.inference=tapped
     h,w=360,640;scale=min(616/h,1064/w);hh,ww=int(h*scale),int(w*scale);dh,dw=616-hh,1064-ww
-    records=[];started=time.perf_counter()
+    if any(r['rgb_id']!=stream.ids[r['timestamp']] for r in records):raise RuntimeError('Prefix RGB identity changed')
+    started=time.perf_counter()
     # MotionFilter.track supplies this context in the frozen native pipeline.
     # no_grad alone changes Metric3D's arithmetic and is not an equivalent cache.
     with torch.no_grad(),torch.amp.autocast('cuda',enabled=True):
         for i in range(len(stream)):
+            if i<reused:continue
             _,image,_,_=stream[i]
             # Native Tracker passes the CPU RGB tensor to predict_metric_depth;
             # resizing/normalization happen on CPU before its internal .to(cuda).
@@ -75,6 +93,10 @@ def main():
         native_restoration_unchanged=True,autocast_enabled=True,autocast_dtype=str(torch.get_autocast_gpu_dtype()),
         precision_protocol='NATIVE_MOTION_FILTER_AUTOCAST_V2',input_preprocess_device='cpu',
         source_predictor_sha256=sha(SOURCE/'src/utils/mono_priors/metric_depth_estimators.py')))
+    receipt=out/'CACHE_RECEIPT.json';value=json.loads(receipt.read_text())
+    value.update(reused_prefix_frames=reused,model_forwards_this_attempt=2*(64-reused),
+        continuation_of_preserved_R1_prefix=a.resume_prefix,original_failed_attempt_unchanged=True)
+    write(receipt,value)
 
 
 if __name__=='__main__':

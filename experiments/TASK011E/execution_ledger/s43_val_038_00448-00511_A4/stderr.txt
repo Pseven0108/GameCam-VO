@@ -1,0 +1,54 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/opt/conda/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/opt/conda/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/native_driver.py", line 10, in <module>
+    _require_runtime(_gate_args.approval,'END_TO_END',_gate_args.job_key)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/authorization.py", line 35, in require_approved_runtime
+    x.get('secondary_proposals_sha256')==sha(TASK/'reports/SECONDARY_THRESHOLD_PROPOSALS.csv'),
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/scripts/common.py", line 19, in sha
+    with Path(path).open('rb') as f:
+  File "/opt/conda/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/reports/SECONDARY_THRESHOLD_PROPOSALS.csv'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/opt/conda/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/opt/conda/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/opt/conda/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/native_driver.py", line 10, in <module>
+    _require_runtime(_gate_args.approval,'END_TO_END',_gate_args.job_key)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R2/repo/experiments/TASK011E/authorization.py", line 35, in require_approved_runtime
+    x.get('secondary_proposals_sha256')==sha(TASK/'reports/SECONDARY_THRESHOLD_PROPOSALS.csv'),
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/scripts/common.py", line 19, in sha
+    with Path(path).open('rb') as f:
+  File "/opt/conda/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/reports/SECONDARY_THRESHOLD_PROPOSALS.csv'
+/opt/conda/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 11 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

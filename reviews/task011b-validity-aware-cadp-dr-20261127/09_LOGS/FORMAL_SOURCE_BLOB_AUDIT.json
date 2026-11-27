@@ -1,0 +1,1471 @@
+{
+  "root": "/root/rivermind-data/GAMECAM_TASK011B_20261127_AMP_NATIVE_R2/source/DROID-W",
+  "tracked_blob_files": 208,
+  "matched": 30,
+  "files": [
+    {
+      "path": ".gitignore",
+      "status": "DIFFERENT",
+      "expected_blob": "1c8c3ff90031033435207cd615ee299c22a69eb4",
+      "actual_blob": "4a44d9c1031456025bbb89974f0c5c072c94da00",
+      "bytes": 158
+    },
+    {
+      "path": ".gitmodules",
+      "status": "DIFFERENT",
+      "expected_blob": "9f0c46e461c9d3b6b8d677c8feec1d303b24c9c4",
+      "actual_blob": "765ebdaa1a7c97bc78a13cf2de8ed8d82b3d13f3",
+      "bytes": 816
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "status": "DIFFERENT",
+      "expected_blob": "bc23aaed4bebbd0c9ca0b82a1059b9c8a15aa9c9",
+      "actual_blob": "08055edb4ad00f947077ebfe8bcab1e2e9a4e06c",
+      "bytes": 1160
+    },
+    {
+      "path": "LICENSE",
+      "status": "DIFFERENT",
+      "expected_blob": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "actual_blob": "9b5e4019df618fc47d429529c369f4903142669b",
+      "bytes": 11558
+    },
+    {
+      "path": "README.md",
+      "status": "DIFFERENT",
+      "expected_blob": "35828686b3ec726ccef4569b058abe48c6796a06",
+      "actual_blob": "69cd2159dced5080cc924df56c15edf94fcc78e7",
+      "bytes": 7453
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "652035845fa487e05ccc5c03fcb9c4d48dac2655",
+      "actual_blob": "a9a046794d6a1f49d9015b9226ca4e9010f0dd0f",
+      "bytes": 143
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_balloon2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "36f2a05bc7fabb51c1894636f21585765697fa7e",
+      "actual_blob": "eed675a780ad4ba4d90bacb34df6f9dcd4a91d89",
+      "bytes": 145
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "a1ae70f48ef340ab58638461dcd07df42861dae1",
+      "actual_blob": "5d43347b1a207bfde1cb3779badffb7657765367",
+      "bytes": 139
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_crowd2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "908f60957722053bd4bfab427143ceadd5ccaa4c",
+      "actual_blob": "8339eb5faa32f3c9c21ca531a4f244910c4162a9",
+      "bytes": 141
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_dynamic.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "e14057ab0a167175dc8986e700906609a7a3ce00",
+      "actual_blob": "9510327b0439255593ab6a8071377c626abfaada",
+      "bytes": 408
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "04719d402caff5d9a0292a29a28bab0ea6b9e2e4",
+      "actual_blob": "dce15824cd87e2ef6d9eb6822475266a35c94150",
+      "bytes": 181
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_moving_nonobstructing_box2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "747f3ff86cf9ead8cbd8a003ec44e7f2c0bc9ff0",
+      "actual_blob": "7ae5fdc1470edbcc7f6f1984a0521cf42a7027be",
+      "bytes": 181
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "3076a52f681a35d60b95889e8810889a360d4f84",
+      "actual_blob": "1f2cb4b8b27af53226eb1c4a203013c34992568f",
+      "bytes": 161
+    },
+    {
+      "path": "configs/Dynamic/Bonn/bonn_person_tracking2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "e6a56c8e2f35332b733fb1a325467325e722a355",
+      "actual_blob": "dfaac720b813ba2685d1e3165c1ccf661f7674af",
+      "bytes": 161
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown1.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "bee1b028e7ac421056264ce4fa23e895f830405d",
+      "actual_blob": "c500ea2379b02cca3248b3c1869ce3f51db96cf4",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "839d443a98c517a13022300a1a058a6b359dc08b",
+      "actual_blob": "a85c062a05ced3584e608faf6ecc4913883f15f7",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown3.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "06ee49aa3618247d9f02b9acdbe44cc48048b4d4",
+      "actual_blob": "c29eebe6be2b52b90fc23e2375b4119df7a15be7",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown4.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "5d0f6d9ab53de2e8cad7ea732657e7157dd7a32d",
+      "actual_blob": "1414af3ad016fd7f7674adef9eb33122b74f872b",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown5.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "19ee5157acd63ce89369931ea8b981b3674a4175",
+      "actual_blob": "1b7451d1bac6b5b7147f107f1aaa96663bc579c9",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown6.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "a523fdc88432208ca44adcf3b82052e61d13fd2c",
+      "actual_blob": "e0c977305c3951bf06b9fe8a7e8dc50ec8f4ce94",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/downtown7.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "785d590e4cffe337a717d1d15ff7f0bb9f470d3f",
+      "actual_blob": "711e3af2dfeb85c3182ec42a6efbe49233b1228d",
+      "bytes": 128
+    },
+    {
+      "path": "configs/Dynamic/DROIDW/droidw.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "8b17c849fa47b8252d323cc9ce62d7d0472bf997",
+      "actual_blob": "8e588315ed6ef3aa14146c94ad9fe8068c3d819b",
+      "bytes": 566
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/apple.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "d501c46b29c29fcdac272cdc74aabf1e1296d6ae",
+      "actual_blob": "4483e0e48d4cffe203825fb9d68f0d0d342f76a0",
+      "bytes": 270
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/backpack.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "bad897063e9cd244f165402aac2675fe0f29c7eb",
+      "actual_blob": "3b316cf79e07c3b9ea3a19ce675ded0e120c9777",
+      "bytes": 276
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/block.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "1c5628c9bc171966ac53bc8efa089f5f0b134313",
+      "actual_blob": "808dbb045e0ec4627f979200733d2f2244981efd",
+      "bytes": 270
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/creeper.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "51d221c1c18c92b1bf4af4ed80337e5968ed0e18",
+      "actual_blob": "44120dea3215d7faa1d5acec8822712ff8052ac0",
+      "bytes": 274
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/dycheck.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "7e3553d578a9a60a5e001cada2d7827c726a8c38",
+      "actual_blob": "ad9dd3859a0bf535424ce361f052f85b18d83275",
+      "bytes": 381
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/handwavy.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "4e1e02bf16d04f1e00e6792f5df0a341ed35cd39",
+      "actual_blob": "5b22771bb1bb50f8a793dbc4ec9f9aad66e60ffb",
+      "bytes": 276
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/haru-sit.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "ed8881cf2d50383a3df9b53f0aceccd184189f8e",
+      "actual_blob": "119758baae6c182451bf9640d152907412cf99ce",
+      "bytes": 276
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/mochi-high-five.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "ecd68d7909bbcfc14544184735deacca148a4a01",
+      "actual_blob": "4e5a1dab0150f668eded1f06c81c61586e00cdaa",
+      "bytes": 290
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/paper-windmill.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "2e8301277ccd1b3796fa3a6e4a86c0d496c4cfb6",
+      "actual_blob": "c50048247547d24bd43021803d50a9b3454152d9",
+      "bytes": 288
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/pillow.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "e1cad8bbae48eb68aa8fa20bf997de8bcec51563",
+      "actual_blob": "fc68d9d6f2e0c3fc47cd19d6dc1107f9c802cd13",
+      "bytes": 272
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/spin.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "7802fac514005c2f606e1749b6b9b8879708216d",
+      "actual_blob": "639e549749dc41e3a26b5c2f58d9c1470411ecc2",
+      "bytes": 268
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/sriracha-tree.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "27c9ea120d37364c3f5406266c918eea824cae7c",
+      "actual_blob": "e87d36ce7e3f4d57e2d0808b8c0c27a72839328e",
+      "bytes": 286
+    },
+    {
+      "path": "configs/Dynamic/DyCheck/teddy.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "d96e64eb9bd9e0349f0650d1e61dbcd4354cd575",
+      "actual_blob": "30d5c4359df4b8cb8ddeebe3b051264e60a80c93",
+      "bytes": 270
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg2_desk_with_person.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "ef6d9c4b70c604a10223cca0a71b518bb82eca32",
+      "actual_blob": "b587932b60f79d8f79b7eac28b21b1f7183edfc6",
+      "bytes": 533
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "4b9eafb87852119be19f0bcfc043bba927136219",
+      "actual_blob": "b740ce0ca12a8ce82c4b7ffcb98d7435f7a450e7",
+      "bytes": 343
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_halfsphere_static.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "987387fbf75d9e8b3369372a7040dba2c69fa564",
+      "actual_blob": "2298ed87a3b1f1f6e45fedbe5a8c37e89431b8ce",
+      "bytes": 335
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_rpy.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "86e439f0e5b22b50adb7c36e16eaf6bdd98c1098",
+      "actual_blob": "93994d4933af53cb28c61b24292278f934d10658",
+      "bytes": 329
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_sitting_xyz.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "b12934d4e454d047b4e521e00b67d911951417cd",
+      "actual_blob": "9f7b76526d72cffe774a1588b58c898bd5bf8283",
+      "bytes": 329
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "99b1139d97df1db8030161e86fcabfb11e04b990",
+      "actual_blob": "4e83a6fb316e763183159d4e44b96dd91c026c82",
+      "bytes": 343
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_halfsphere_static.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "9618c1f66428e3f716f105ba06c0e937d9bee668",
+      "actual_blob": "92044d46b3fe315ddc7a0c0a861f2e79db0a0457",
+      "bytes": 335
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_rpy.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "4fd6e81b031497e5dce55772126fcd8259c127ee",
+      "actual_blob": "8f0548de7605842c90e7de7fa257d472106519e7",
+      "bytes": 329
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/freiburg3_walking_xyz.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "44fc94ef80fdc15e8a895c426d88abc0fb8bc092",
+      "actual_blob": "1a458b027627a3cd1c602d15fab83992e434b3df",
+      "bytes": 329
+    },
+    {
+      "path": "configs/Dynamic/TUM_RGBD/tum_dynamic.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "164001e1d98139fa9c064ff4d0d0e9418da0b6ef",
+      "actual_blob": "cbd59ccc824b4b518e8c1f992e959b59ab687ab9",
+      "bytes": 692
+    },
+    {
+      "path": "configs/Dynamic/YouTube/elephant_herd.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "08460a36d52694ca19d73da6717932664a075f65",
+      "actual_blob": "f7c35460dd5566d240b8622fbc21452efa2c7010",
+      "bytes": 321
+    },
+    {
+      "path": "configs/Dynamic/YouTube/giraffe.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "ae4fe67b2c9a54ab20743a8544cc88b7804ac70d",
+      "actual_blob": "8abee2b3c15c79a4297807ed81434962a44f06f1",
+      "bytes": 309
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_01.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "083cca7f69dbaf4831e5295a2949df89658e2b8c",
+      "actual_blob": "3c89c463c9a4513ee29ca8cc24aa4d91a1874ee4",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_02.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "5b54c506efb268b1b58ae3decb47ee17334ef461",
+      "actual_blob": "513bd4817cb070afcbda68c0c8da34c71f05a31b",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_03.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "5c4a855bd707c0a9a3313db30ce65e837b7a0d0a",
+      "actual_blob": "c290c62877229a4349b7c1840524455ffb336553",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_04.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "2dbdec47f441e7f619399b785ca2628c84b16f41",
+      "actual_blob": "91e0e4b2b4571641d28905eaf9a8ec0301becb54",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_05.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "88c63f4e98b76da465a4b4a9f1b46db32d06d852",
+      "actual_blob": "cf599efc0b9fa17bf109d97d2e16cfd26785fa55",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/stmoritz_06.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "f02848c6d8adfb75b91900de20ea238d69719f10",
+      "actual_blob": "3df350fa32db727fdbee113f21195e6b943fe2af",
+      "bytes": 330
+    },
+    {
+      "path": "configs/Dynamic/YouTube/taylor_22.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "6c79a6d4653602875ba2e8911d62204587d2d532",
+      "actual_blob": "521d2bead836532ee7c43e0bf124cc4f3d5c5f26",
+      "bytes": 303
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking1.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "7dc02c681edbb426cd043db456970c14fc6edc3f",
+      "actual_blob": "db6ad894f27d9c165ae2e801e1e05433fb5a4bca",
+      "bytes": 298
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "4b1d7238ec3cdefa4b3cd7d34f54b75644d8cab6",
+      "actual_blob": "8ba854e77d78fb575ca2fec6e2518a925be24e04",
+      "bytes": 300
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tokyo_walking3.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "ea2d22e3dd267e5d852a725fd22e48470bdaf1a8",
+      "actual_blob": "d5134cfb07c372881d5416315c00ef45be473204",
+      "bytes": 299
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "3cd3caca1d83b15ad4e3ae763f31b3d3a58c7305",
+      "actual_blob": "88fc4f8ea11dc261d299156abda130ed660bce08",
+      "bytes": 320
+    },
+    {
+      "path": "configs/Dynamic/YouTube/tomyum2.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "eeb8562ed1a7e2a68ece074ff02d150d0e547583",
+      "actual_blob": "d32658bd1043a854e59cc1e45721a755eadd574d",
+      "bytes": 322
+    },
+    {
+      "path": "configs/Dynamic/YouTube/youtube.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "1b37621fd243af4fbf89cc4223cb7efc1dea11cc",
+      "actual_blob": "c798ac5a362b900fab2fb1b1e8fec8b302b9ebb2",
+      "bytes": 628
+    },
+    {
+      "path": "configs/droid_w.yaml",
+      "status": "DIFFERENT",
+      "expected_blob": "591e6d3680712bcf9c9e7e21245002e5c24c95be",
+      "actual_blob": "975a9b94b46cfa73d24d6ed9e5fbfa696cf0ff24",
+      "bytes": 6747
+    },
+    {
+      "path": "media/teaser.png",
+      "status": "MATCH",
+      "expected_blob": "fe42c3d1108c7d034256d993704a9b47324f6d22",
+      "actual_blob": "fe42c3d1108c7d034256d993704a9b47324f6d22",
+      "bytes": 1680604
+    },
+    {
+      "path": "misc/renderoption.json",
+      "status": "DIFFERENT",
+      "expected_blob": "80d35c4b1ab67bae5197159fa3f0e1f8a72a3be8",
+      "actual_blob": "76c004238a9a716f5cd0dc15ec3caa95066cb6fd",
+      "bytes": 1352
+    },
+    {
+      "path": "requirements.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "ce173b14cdee0109dd93fcf2d344fedd0f18ba7a",
+      "actual_blob": "6e0829526d22f90feb9f47b7b89743ffd9755069",
+      "bytes": 300
+    },
+    {
+      "path": "run.py",
+      "status": "DIFFERENT",
+      "expected_blob": "a26a28f03777bbac213d2ece076da8b1bb6eef04",
+      "actual_blob": "426cf796e1d6ee2642c98ddbf270dab1170a7193",
+      "bytes": 1908
+    },
+    {
+      "path": "scripts_downloading/download_bonn.sh",
+      "status": "DIFFERENT",
+      "expected_blob": "8369dcb7c9b64c1697f53cf29700171406c1ffb4",
+      "actual_blob": "165aef93c561c58b12ccf24a32bc882e491b3da2",
+      "bytes": 1169
+    },
+    {
+      "path": "scripts_downloading/download_droidw.sh",
+      "status": "DIFFERENT",
+      "expected_blob": "90d7855161281784cfbfe5a1c1dfebb68f5abae3",
+      "actual_blob": "731a2ba2cbf2180f6821bef0fe47fd83cfcf6000",
+      "bytes": 137
+    },
+    {
+      "path": "scripts_downloading/download_tum.sh",
+      "status": "DIFFERENT",
+      "expected_blob": "95ebba6c3514c18868f0ab0df2cdceeb4bc6d79e",
+      "actual_blob": "6a095e90f8bbd55234d4cbead66e482c0d298808",
+      "bytes": 1816
+    },
+    {
+      "path": "scripts_downloading/download_youtube.sh",
+      "status": "DIFFERENT",
+      "expected_blob": "63dbc81588f8cc08679799dd6169c106bd59e26d",
+      "actual_blob": "286db2538a230405cd957bb20ab00278c64f4c89",
+      "bytes": 137
+    },
+    {
+      "path": "scripts_eval/evaluate_droidw.py",
+      "status": "DIFFERENT",
+      "expected_blob": "38949e8e0d504f3f9e1b29208c7008c9144a0ea6",
+      "actual_blob": "0aa1f07698f68495e93a45b70d00febadd8be2a4",
+      "bytes": 6665
+    },
+    {
+      "path": "scripts_eval/summarize_rmse.py",
+      "status": "DIFFERENT",
+      "expected_blob": "ae4016aac9d3dd5e8cb2d32884f120877bff4297",
+      "actual_blob": "20ba25acbaa44db255d6b52515a6639cc78cab30",
+      "bytes": 10940
+    },
+    {
+      "path": "setup.py",
+      "status": "DIFFERENT",
+      "expected_blob": "8afd1be40987c61ea261b5eec806b0714f4091b1",
+      "actual_blob": "997c39a7047e2c4c7c101eb000b96f0b62bd4ec9",
+      "bytes": 1111
+    },
+    {
+      "path": "src/__init__.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "src/backend.py",
+      "status": "DIFFERENT",
+      "expected_blob": "2a565ea49f42cf765a6c8d615f892496ae223f50",
+      "actual_blob": "37f4eb83a860473a41642623143963cf7c2d6439",
+      "bytes": 5394
+    },
+    {
+      "path": "src/config.py",
+      "status": "DIFFERENT",
+      "expected_blob": "0408d53c67baace6322209957d1d0530778c7c18",
+      "actual_blob": "553d6d864613688363ad8d2bee23b59b308e55dc",
+      "bytes": 2195
+    },
+    {
+      "path": "src/depth_video.py",
+      "status": "DIFFERENT",
+      "expected_blob": "87f63043cd7c68a2d02278e6042336e0dc98a12e",
+      "actual_blob": "e4bd896bf911e98e12db3fa8c5f8a2fc973b2b78",
+      "bytes": 46178
+    },
+    {
+      "path": "src/factor_graph.py",
+      "status": "DIFFERENT",
+      "expected_blob": "0b208fa23c26fe267df2f6c85913fbd00268dae1",
+      "actual_blob": "dcda7672746c638e592739c9bb1809150d0c0e96",
+      "bytes": 22615
+    },
+    {
+      "path": "src/frontend.py",
+      "status": "DIFFERENT",
+      "expected_blob": "a12cfd36d4597846979fc5fd79e77bf0e795145b",
+      "actual_blob": "4cc898f93b0510e5d8f3f4f36174b7eae91b64bb",
+      "bytes": 10872
+    },
+    {
+      "path": "src/geom/__init__.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "src/geom/ba.py",
+      "status": "DIFFERENT",
+      "expected_blob": "34340fc5b483a84ebb6a073e6fa9868728d56376",
+      "actual_blob": "cf415fe1cd4e0f08e14f8c42adcdd647ec1c5a21",
+      "bytes": 10479
+    },
+    {
+      "path": "src/geom/chol.py",
+      "status": "DIFFERENT",
+      "expected_blob": "207694274b665668d61ae11c616f44d45c53ca6d",
+      "actual_blob": "4bef2e7ae3501a8022aec37d983394342a6cd7a2",
+      "bytes": 2771
+    },
+    {
+      "path": "src/geom/projective_ops.py",
+      "status": "DIFFERENT",
+      "expected_blob": "f2b036dd193710133153950d79d0c1adaa228ad2",
+      "actual_blob": "ab48817aa4d3059cdce6d6c30874033b5890139f",
+      "bytes": 4825
+    },
+    {
+      "path": "src/gui/gl_render/LICENSE",
+      "status": "DIFFERENT",
+      "expected_blob": "f111bb602b1eb6449008d75bdd8b673a1d429946",
+      "actual_blob": "57a3fbb7650b9cebf06be1a7386103d35bd5628d",
+      "bytes": 1081
+    },
+    {
+      "path": "src/gui/gl_render/__init__.py",
+      "status": "DIFFERENT",
+      "expected_blob": "1b173d1640349c7743796f52e14a7dd372f72b4d",
+      "actual_blob": "a267f969545e58c26f10ea2d23ecdaa364a4a657",
+      "bytes": 42
+    },
+    {
+      "path": "src/gui/gl_render/render_ogl.py",
+      "status": "DIFFERENT",
+      "expected_blob": "1a87bbac9b30f4f3ddf272f89d1ba79bec57dc3b",
+      "actual_blob": "d2fbb2d7d5833df32c877a66f3e91c514c9d5094",
+      "bytes": 4643
+    },
+    {
+      "path": "src/gui/gl_render/shaders/gau_frag.glsl",
+      "status": "DIFFERENT",
+      "expected_blob": "ece77c3938545a77f43fcc6c6009902bd1150fcc",
+      "actual_blob": "64f13536a2944fd927f830e4b16366eb5b8c9c08",
+      "bytes": 968
+    },
+    {
+      "path": "src/gui/gl_render/shaders/gau_vert.glsl",
+      "status": "DIFFERENT",
+      "expected_blob": "21913232f7f29cabd7b2f8f1409cefda4d09191d",
+      "actual_blob": "70a898749be0dc979c836f3f6e83d66669cb7995",
+      "bytes": 6615
+    },
+    {
+      "path": "src/gui/gl_render/util.py",
+      "status": "DIFFERENT",
+      "expected_blob": "47575672d495b843be9d6d93478a02fa40dc7753",
+      "actual_blob": "50802aff60c073d9f5b2667068e0c94d6089a532",
+      "bytes": 8969
+    },
+    {
+      "path": "src/gui/gl_render/util_gau.py",
+      "status": "DIFFERENT",
+      "expected_blob": "d47140086dd1f150badde3cc182a5644e6e4548a",
+      "actual_blob": "c449e53d755e28a4607352b449d568f4274d3cb7",
+      "bytes": 533
+    },
+    {
+      "path": "src/gui/gui_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "ad05b57190cdca8d20bb36bf5fbd53366eac388f",
+      "actual_blob": "80c428dff0c8fecc1a06be89295188116c8745a0",
+      "bytes": 6313
+    },
+    {
+      "path": "src/gui/slam_gui.py",
+      "status": "DIFFERENT",
+      "expected_blob": "24f642ae90a5992ba1a67000db8cebc19950a5a3",
+      "actual_blob": "ca6aed3fea3a6007bf8b1673fb6dd1558cafd1f8",
+      "bytes": 30276
+    },
+    {
+      "path": "src/lib/altcorr_kernel.cu",
+      "status": "DIFFERENT",
+      "expected_blob": "be2008f223c00dbb339f84db7d1a9f0789f63f5f",
+      "actual_blob": "cfaae1172f6a250deb837f16ad18ce5ea2b2e50e",
+      "bytes": 11988
+    },
+    {
+      "path": "src/lib/correlation_kernels.cu",
+      "status": "DIFFERENT",
+      "expected_blob": "b67d47e0ed11e66b23a2c23e2bc53952b7c94d1a",
+      "actual_blob": "be3810caecd82ee97548a1f9428fdae2b20e8a10",
+      "bytes": 5726
+    },
+    {
+      "path": "src/lib/droid.cpp",
+      "status": "DIFFERENT",
+      "expected_blob": "0c3d91040527b8cbafa2b811e1d18152010a26fa",
+      "actual_blob": "2898a00927c101c676786c6d423f0f66b2850ba3",
+      "bytes": 7934
+    },
+    {
+      "path": "src/lib/droid_kernels.cu",
+      "status": "DIFFERENT",
+      "expected_blob": "9c171af1bfafc278e9776f2f89667054a66dc2bf",
+      "actual_blob": "3be7da63468591dfbf5f009872d345fe4e2ee941",
+      "bytes": 65101
+    },
+    {
+      "path": "src/mapper.py",
+      "status": "DIFFERENT",
+      "expected_blob": "fe6d17e6dcf94a741e242ff48556eb6d1bce6df6",
+      "actual_blob": "f2f8cc73666baf1c70f6af30626b61e7af9c13c6",
+      "bytes": 66879
+    },
+    {
+      "path": "src/modules/droid_net/__init__.py",
+      "status": "DIFFERENT",
+      "expected_blob": "f44de2aa9fbda78a14d1e95f46edb248568ba5fa",
+      "actual_blob": "fc815df43f1cb218b609d246af6016298adc9a06",
+      "bytes": 187
+    },
+    {
+      "path": "src/modules/droid_net/clipping.py",
+      "status": "DIFFERENT",
+      "expected_blob": "c7e38d994c95b28fd79853e58a3c529517134cfd",
+      "actual_blob": "ffbdce034f3f3ee168b9963838377db1e581cf85",
+      "bytes": 1180
+    },
+    {
+      "path": "src/modules/droid_net/corr.py",
+      "status": "DIFFERENT",
+      "expected_blob": "2ef6466cc2c345aa544a91e67d3955f49f99b07a",
+      "actual_blob": "28839e47138e78b703bc6dfd13cbb2604506c120",
+      "bytes": 5539
+    },
+    {
+      "path": "src/modules/droid_net/droid_net.py",
+      "status": "DIFFERENT",
+      "expected_blob": "eeb6de0b241b1d2fb20949068c867616f7a3da3d",
+      "actual_blob": "ca2bcf800d478a4af423bd735b75d18c7dc278f0",
+      "bytes": 5570
+    },
+    {
+      "path": "src/modules/droid_net/extractor.py",
+      "status": "DIFFERENT",
+      "expected_blob": "babd1f7da6279e4728456624c6c677ff5f0c521f",
+      "actual_blob": "068f7fe618170e68104cf5e4019d8179f6cc4394",
+      "bytes": 4659
+    },
+    {
+      "path": "src/modules/droid_net/gru.py",
+      "status": "DIFFERENT",
+      "expected_blob": "9bab24ab863295a8fb9db17c6cfbab5ea0c9f1cc",
+      "actual_blob": "7a467e75103a07f802664ea1a9644e11e6b41908",
+      "bytes": 2036
+    },
+    {
+      "path": "src/motion_filter.py",
+      "status": "DIFFERENT",
+      "expected_blob": "c46b3b0b5ef403d2463d43df09d8cba737eff667",
+      "actual_blob": "291d1945d9b53887d95d5a64d4f511fc72ec14cf",
+      "bytes": 6343
+    },
+    {
+      "path": "src/slam.py",
+      "status": "DIFFERENT",
+      "expected_blob": "3f50eaea5b8080696c20634ab355c5ba502c012e",
+      "actual_blob": "50ec0613c2c261c54763c57d6936e94fc570029c",
+      "bytes": 13983
+    },
+    {
+      "path": "src/tracker.py",
+      "status": "DIFFERENT",
+      "expected_blob": "26ef06e8d8519f9f51f2e723471ac741ac242075",
+      "actual_blob": "eaded51e2f59c8e7194f62a5e4f5c2e7ffc75579",
+      "bytes": 8303
+    },
+    {
+      "path": "src/trajectory_filler.py",
+      "status": "DIFFERENT",
+      "expected_blob": "c7cd884166e48b55347c4efb0aa417ff16d35021",
+      "actual_blob": "2ff8a03b9a5092b4155a263f096848b8431c2f40",
+      "bytes": 5651
+    },
+    {
+      "path": "src/utils/Printer.py",
+      "status": "DIFFERENT",
+      "expected_blob": "d59744c8707fc0529cbf72c4927765627dfc5d19",
+      "actual_blob": "26dbef9d262e45c76027dc646275b8541d5fcba4",
+      "bytes": 3301
+    },
+    {
+      "path": "src/utils/camera_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "7c6dbf1d8628d544f9cbcc224bb4c2cbef4cc339",
+      "actual_blob": "1f2b327e5c4c80b744d6946a2ef95327e3c79c58",
+      "bytes": 6038
+    },
+    {
+      "path": "src/utils/colmap_read_model.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b0b91977e7ff075c9c417b7dadfa9dcb2710296f",
+      "actual_blob": "d93ef5f9f2bfbc373ae8a7993dcc0ab33a3cfc0f",
+      "bytes": 12100
+    },
+    {
+      "path": "src/utils/common.py",
+      "status": "DIFFERENT",
+      "expected_blob": "e241e323a73ec533a4144fd1316b6953852e2157",
+      "actual_blob": "6ec30f7ab56649f61c32690af2f1fd2e8fba7dfe",
+      "bytes": 2931
+    },
+    {
+      "path": "src/utils/cuda_timer.py",
+      "status": "DIFFERENT",
+      "expected_blob": "5159836cd1b3defacb158b8213a4c82633aaa3ac",
+      "actual_blob": "4403f7068ed0e6b4e74da5505de99f907672b48f",
+      "bytes": 654
+    },
+    {
+      "path": "src/utils/datasets.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b02f8968ae9aded9944c17f4481838bddfe46336",
+      "actual_blob": "c4c1422660a48a41172cf0f588a8fbedcd64e211",
+      "bytes": 24073
+    },
+    {
+      "path": "src/utils/droid_visualization_rerun.py",
+      "status": "DIFFERENT",
+      "expected_blob": "5ec22e6a05840333526ddfaa92a46df7a55669d3",
+      "actual_blob": "ed14835b46616d648173ebcbd30876da29a7fd2a",
+      "bytes": 7232
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/__init__.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/mapping_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "f43ef34191db53e1e253730eb265e019bbabb166",
+      "actual_blob": "d3738ae5de28128e9fde4b3c02a63b4a1c0abc82",
+      "bytes": 6096
+    },
+    {
+      "path": "src/utils/dyn_uncertainty/median_filter.py",
+      "status": "DIFFERENT",
+      "expected_blob": "fb973794751d9cb97902c9ec7e3b38cff831f044",
+      "actual_blob": "12e55324a649c22708cee582a204b91ca550dfab",
+      "bytes": 2016
+    },
+    {
+      "path": "src/utils/eval_traj.py",
+      "status": "DIFFERENT",
+      "expected_blob": "4d7b9b937af0cd588c6601995e1ea0ed29596fec",
+      "actual_blob": "93450e7368e6298afffe96a9d8e67bab654c5ed1",
+      "bytes": 7569
+    },
+    {
+      "path": "src/utils/eval_utils.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "src/utils/mono_priors/img_feature_extractors.py",
+      "status": "DIFFERENT",
+      "expected_blob": "9ce349057d1a2f052a92383a9c3bdbf2f82ae487",
+      "actual_blob": "8850aeb02bad72fddfe1709031500c1b1adefde3",
+      "bytes": 6713
+    },
+    {
+      "path": "src/utils/mono_priors/metric_depth_estimators.py",
+      "status": "DIFFERENT",
+      "expected_blob": "a4793f1ed64f8affdd8f2110fc6d233daa1f2ddc",
+      "actual_blob": "d4833a42d297ee7fe9e9ca491e9350d1d99d25b0",
+      "bytes": 5589
+    },
+    {
+      "path": "src/utils/plot_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "0455bcdd4e78c398bc195b77d2c9484bb068134a",
+      "actual_blob": "343368e7c4fa9c52e20d9399035ed3f4a9e79609",
+      "bytes": 1764
+    },
+    {
+      "path": "src/utils/pose_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "346746faa22f25b889506adaf847ea65e5110a91",
+      "actual_blob": "0c4103b9b94a89c75b69012a54ed9f441f2bff83",
+      "bytes": 2278
+    },
+    {
+      "path": "src/utils/slam_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "73d534c5a9a439c0496fc0351c4225ac1aabd306",
+      "actual_blob": "46679555f1beee2b8a30e7bcff76a38e2a24e951",
+      "bytes": 10370
+    },
+    {
+      "path": "src/utils/sys_timer.py",
+      "status": "DIFFERENT",
+      "expected_blob": "612223fdcada9a1db01f4f085e108958e21e42c1",
+      "actual_blob": "712507ed92bb1c87f9e3bd9ed916b86ea8f05f88",
+      "bytes": 6140
+    },
+    {
+      "path": "src/utils/visualization.py",
+      "status": "DIFFERENT",
+      "expected_blob": "a576bdd2b9577225f64b65481fd55e8b5efc22bc",
+      "actual_blob": "c5c0f2efed0a226b5d62ce24ff5152ddc7ad536c",
+      "bytes": 6052
+    },
+    {
+      "path": "thirdparty/__init__.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/DA-2K.md",
+      "status": "DIFFERENT",
+      "expected_blob": "70290bc96c0201aa68e4e69f1c78c928dd61e497",
+      "actual_blob": "acd3299bc8d008d48ed0d108a857789c9b494832",
+      "bytes": 1998
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/LICENSE",
+      "status": "DIFFERENT",
+      "expected_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "actual_blob": "29f81d812f3e768fa89638d1f72920dbfd1413a8",
+      "bytes": 11558
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/README.md",
+      "status": "DIFFERENT",
+      "expected_blob": "e1c80e894c4d163e38b9b0c4c03413d1313dc261",
+      "actual_blob": "5b67e09113b212fdaaf8d253ddb81a91f8ab74aa",
+      "bytes": 9734
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/app.py",
+      "status": "DIFFERENT",
+      "expected_blob": "41399be3b316f38af653692fc9895d32b06e09f1",
+      "actual_blob": "19d9018964dfef564726d7d140275a4e5b192e75",
+      "bytes": 3337
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/DA-2K.png",
+      "status": "MATCH",
+      "expected_blob": "cdd5384cfd922cc9880495f7db47f03d40d6be0f",
+      "actual_blob": "cdd5384cfd922cc9880495f7db47f03d40d6be0f",
+      "bytes": 1180754
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo01.jpg",
+      "status": "MATCH",
+      "expected_blob": "a09c257c8b3c0d7ebea88255420bb3dbd2910cfb",
+      "actual_blob": "a09c257c8b3c0d7ebea88255420bb3dbd2910cfb",
+      "bytes": 488150
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo02.jpg",
+      "status": "MATCH",
+      "expected_blob": "dad10f5bcc50100613a3bb9687226776efa4a4ce",
+      "actual_blob": "dad10f5bcc50100613a3bb9687226776efa4a4ce",
+      "bytes": 510806
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo03.jpg",
+      "status": "MATCH",
+      "expected_blob": "75108a5a26d27f07053cae47055af6a84f070416",
+      "actual_blob": "75108a5a26d27f07053cae47055af6a84f070416",
+      "bytes": 464937
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo04.jpg",
+      "status": "MATCH",
+      "expected_blob": "5fb82ebe0b39fb837dbcbc57bf8be23f21c701ae",
+      "actual_blob": "5fb82ebe0b39fb837dbcbc57bf8be23f21c701ae",
+      "bytes": 299824
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo05.jpg",
+      "status": "MATCH",
+      "expected_blob": "c9249ea7294634b82dc11f6661cf0239003bc1a3",
+      "actual_blob": "c9249ea7294634b82dc11f6661cf0239003bc1a3",
+      "bytes": 353184
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo06.jpg",
+      "status": "MATCH",
+      "expected_blob": "7f41c0817aa230dfb1e56c671085f3abae0eac91",
+      "actual_blob": "7f41c0817aa230dfb1e56c671085f3abae0eac91",
+      "bytes": 782780
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo07.jpg",
+      "status": "MATCH",
+      "expected_blob": "637d32325b25bf02d66dc00c3d9d8b040f61820d",
+      "actual_blob": "637d32325b25bf02d66dc00c3d9d8b040f61820d",
+      "bytes": 400463
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo08.jpg",
+      "status": "MATCH",
+      "expected_blob": "3e775aba407a2d853cb646bcee8daeedac0c2435",
+      "actual_blob": "3e775aba407a2d853cb646bcee8daeedac0c2435",
+      "bytes": 102825
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo09.jpg",
+      "status": "MATCH",
+      "expected_blob": "6a76c1b45480856a1d27779adc21fb3444b54a19",
+      "actual_blob": "6a76c1b45480856a1d27779adc21fb3444b54a19",
+      "bytes": 410224
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo10.jpg",
+      "status": "MATCH",
+      "expected_blob": "131f8fb0f4ffa08bdc5237a941c6d5165391db38",
+      "actual_blob": "131f8fb0f4ffa08bdc5237a941c6d5165391db38",
+      "bytes": 486825
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo11.jpg",
+      "status": "MATCH",
+      "expected_blob": "720e5fd67c922f8b60313e9dea984ab2d412033f",
+      "actual_blob": "720e5fd67c922f8b60313e9dea984ab2d412033f",
+      "bytes": 243712
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo12.jpg",
+      "status": "MATCH",
+      "expected_blob": "1fc2fb1095940d09701da9c692c848e6a8d6a091",
+      "actual_blob": "1fc2fb1095940d09701da9c692c848e6a8d6a091",
+      "bytes": 263007
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo13.jpg",
+      "status": "MATCH",
+      "expected_blob": "bed68777f4b216ccca2239609ce4faa90d46a5c8",
+      "actual_blob": "bed68777f4b216ccca2239609ce4faa90d46a5c8",
+      "bytes": 421112
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo14.jpg",
+      "status": "MATCH",
+      "expected_blob": "2c9cba8a8cfab3c61d02fc5cb1be96e338b4eb27",
+      "actual_blob": "2c9cba8a8cfab3c61d02fc5cb1be96e338b4eb27",
+      "bytes": 642925
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo15.jpg",
+      "status": "MATCH",
+      "expected_blob": "eca61c1452bd0fe54b2ba0cef0a872aed4b8c13d",
+      "actual_blob": "eca61c1452bd0fe54b2ba0cef0a872aed4b8c13d",
+      "bytes": 768703
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo16.jpg",
+      "status": "MATCH",
+      "expected_blob": "11d212b747e24437b9b060229bd7796accf1b39f",
+      "actual_blob": "11d212b747e24437b9b060229bd7796accf1b39f",
+      "bytes": 377831
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo17.jpg",
+      "status": "MATCH",
+      "expected_blob": "5dfa8e84d16436de1e141f69e7868850cf53592a",
+      "actual_blob": "5dfa8e84d16436de1e141f69e7868850cf53592a",
+      "bytes": 152591
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo18.jpg",
+      "status": "MATCH",
+      "expected_blob": "997e4e7fe8e3ea5ccd294dfa9db66792f1a5f254",
+      "actual_blob": "997e4e7fe8e3ea5ccd294dfa9db66792f1a5f254",
+      "bytes": 178905
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo19.jpg",
+      "status": "MATCH",
+      "expected_blob": "949791d08cd25ef6a200cf78febc297cffa7d249",
+      "actual_blob": "949791d08cd25ef6a200cf78febc297cffa7d249",
+      "bytes": 1004211
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/examples/demo20.jpg",
+      "status": "MATCH",
+      "expected_blob": "873d1f676c3bbe0b9bcbfa2f55bbd147db9cc971",
+      "actual_blob": "873d1f676c3bbe0b9bcbfa2f55bbd147db9cc971",
+      "bytes": 498212
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/assets/teaser.png",
+      "status": "MATCH",
+      "expected_blob": "11c2b4d408452727b295fb4b15aefdf234e2cdc0",
+      "actual_blob": "11c2b4d408452727b295fb4b15aefdf234e2cdc0",
+      "bytes": 12818034
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2.py",
+      "status": "DIFFERENT",
+      "expected_blob": "83d250818c721c6df3b30d3f4352945527701615",
+      "actual_blob": "5cbfc7d24d37796d5310fd966b582bb3773685dc",
+      "bytes": 15593
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/__init__.py",
+      "status": "DIFFERENT",
+      "expected_blob": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+      "actual_blob": "e59a83eb90512d763b03e4d38536b6ae07e87541",
+      "bytes": 393
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/attention.py",
+      "status": "DIFFERENT",
+      "expected_blob": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+      "actual_blob": "dea0c82d55f052bf4bcb5896ad8c37158ef523d5",
+      "bytes": 2425
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/block.py",
+      "status": "DIFFERENT",
+      "expected_blob": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+      "actual_blob": "f91f3f07bd15fba91c67068c8dce2bb22d505bf7",
+      "bytes": 9584
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/drop_path.py",
+      "status": "DIFFERENT",
+      "expected_blob": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+      "actual_blob": "10c3bea8e40eec258bbe59087770d230a6375481",
+      "bytes": 1195
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/layer_scale.py",
+      "status": "DIFFERENT",
+      "expected_blob": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+      "actual_blob": "76a4d0eedb1dc974a45e06fbe77ff3d909e36e55",
+      "bytes": 851
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/mlp.py",
+      "status": "DIFFERENT",
+      "expected_blob": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+      "actual_blob": "504987b635c9cd582a352fb2381228c9e6cd043c",
+      "bytes": 1313
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/patch_embed.py",
+      "status": "DIFFERENT",
+      "expected_blob": "574abe41175568d700a389b8b96d1ba554914779",
+      "actual_blob": "f880c042ee6a33ef520c6a8c8a686c1d065b8f49",
+      "bytes": 2921
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dinov2_layers/swiglu_ffn.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+      "actual_blob": "155a3dd9f6f1a7d0f7bdf9c8f1981e58acb3b19c",
+      "bytes": 1922
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/dpt.py",
+      "status": "DIFFERENT",
+      "expected_blob": "18d3e6f8b5c973aea5d4927ef783d43053ba6429",
+      "actual_blob": "acef20bfcf80318709dcf6c5e8c19b117394a06b",
+      "bytes": 7612
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/util/blocks.py",
+      "status": "DIFFERENT",
+      "expected_blob": "382ea183a40264056142afffc201c992a2b01d37",
+      "actual_blob": "9fb66c03702d653f411c59ab9966916c348c7c6e",
+      "bytes": 4135
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/depth_anything_v2/util/transform.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+      "actual_blob": "1cce234c86177e1ad5c84c81c7c1afb16877c9da",
+      "bytes": 6232
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/README.md",
+      "status": "DIFFERENT",
+      "expected_blob": "fc84a2f050a63219dd1193b12b0651bd0ab0ced5",
+      "actual_blob": "42bcd1aec24f3926863146a99e68f1e2c82085da",
+      "bytes": 4735
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/assets/compare_zoedepth.png",
+      "status": "MATCH",
+      "expected_blob": "f3ba0fa4cb320413f59cbb4244cb1081e85aa79c",
+      "actual_blob": "f3ba0fa4cb320413f59cbb4244cb1081e85aa79c",
+      "bytes": 9187108
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/hypersim.py",
+      "status": "DIFFERENT",
+      "expected_blob": "4d8dd3e0873ed736c1888fe1f639cc4439b5ab09",
+      "actual_blob": "b7daa865bd3ceac9e4fb4b7a3e2120daf1e297dd",
+      "bytes": 2792
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/kitti.py",
+      "status": "DIFFERENT",
+      "expected_blob": "4be6828ad52720c64e3296fa81bb262e95ec1bbe",
+      "actual_blob": "3e1bdcc8dc10d59ae3cf526b004faca52a1e3108",
+      "bytes": 1920
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/train.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "82a1fd92a73ae1b435d16873a3fd36a7f4eebd50",
+      "actual_blob": "e4e5c1d5015b5a375af94b15f967cdd326bc96c0",
+      "bytes": 13754433
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/hypersim/val.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "1013e1945057b3e5daa8647b23b965e6826fadc9",
+      "actual_blob": "7d58f9531b74db071c91aa0b69e0990465cee9c2",
+      "bytes": 1706166
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/kitti/val.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "726529b53f60b342ea1be94a85845a584db00ff7",
+      "actual_blob": "c7ea2cfeec7f4cce280f786d5bb8f9622d4a259c",
+      "bytes": 145726
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/splits/vkitti2/train.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "69dc40f8b58baa5aa537f97f5d12ef5eac70f8ee",
+      "actual_blob": "1420073f65bc566a6cf83342b501cd53f03adae0",
+      "bytes": 3614491
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/transform.py",
+      "status": "DIFFERENT",
+      "expected_blob": "41fd0dc9b270081b1c7bdfe3434777e4170ca4a3",
+      "actual_blob": "c8e4c18e0cb9887ab02d1a67bc38a71a9faaf328",
+      "bytes": 9839
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dataset/vkitti2.py",
+      "status": "DIFFERENT",
+      "expected_blob": "48cb03112b8861fe7862cce3b25158a0b0a5ff25",
+      "actual_blob": "2be840cc6e2ff9ec0a895c66ddeb80ef17e30296",
+      "bytes": 1860
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2.py",
+      "status": "DIFFERENT",
+      "expected_blob": "ec4499a18330523aa3564b16be70e813de000c94",
+      "actual_blob": "b336796480cd9c25afa869c79ee8f19af88b11c9",
+      "bytes": 15591
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/__init__.py",
+      "status": "DIFFERENT",
+      "expected_blob": "8120f4bc83066cb3f825ce32daa3b437f88486f1",
+      "actual_blob": "e59a83eb90512d763b03e4d38536b6ae07e87541",
+      "bytes": 393
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/attention.py",
+      "status": "DIFFERENT",
+      "expected_blob": "815a2bf53dbec496f6a184ed7d03bcecb7124262",
+      "actual_blob": "dea0c82d55f052bf4bcb5896ad8c37158ef523d5",
+      "bytes": 2425
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/block.py",
+      "status": "DIFFERENT",
+      "expected_blob": "25488f57cc0ad3c692f86b62555f6668e2a66db1",
+      "actual_blob": "f91f3f07bd15fba91c67068c8dce2bb22d505bf7",
+      "bytes": 9584
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/drop_path.py",
+      "status": "DIFFERENT",
+      "expected_blob": "af05625984dd14682cc96a63bf0c97bab1f123b1",
+      "actual_blob": "10c3bea8e40eec258bbe59087770d230a6375481",
+      "bytes": 1195
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/layer_scale.py",
+      "status": "DIFFERENT",
+      "expected_blob": "ca5daa52bd81d3581adeb2198ea5b7dba2a3aea1",
+      "actual_blob": "76a4d0eedb1dc974a45e06fbe77ff3d909e36e55",
+      "bytes": 851
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/mlp.py",
+      "status": "DIFFERENT",
+      "expected_blob": "5e4b315f972f9a9f54aef1e4ef4e81b52976f018",
+      "actual_blob": "504987b635c9cd582a352fb2381228c9e6cd043c",
+      "bytes": 1313
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/patch_embed.py",
+      "status": "DIFFERENT",
+      "expected_blob": "574abe41175568d700a389b8b96d1ba554914779",
+      "actual_blob": "f880c042ee6a33ef520c6a8c8a686c1d065b8f49",
+      "bytes": 2921
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dinov2_layers/swiglu_ffn.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b3324b266fb0a50ccf8c3a0ede2ae10ac4dfa03e",
+      "actual_blob": "155a3dd9f6f1a7d0f7bdf9c8f1981e58acb3b19c",
+      "bytes": 1922
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/dpt.py",
+      "status": "DIFFERENT",
+      "expected_blob": "65413046b5fb4f65b90978bcdc9cc94bf8cdcae9",
+      "actual_blob": "69e57cc78cbc3297938ac4a49f9cf6a3b04d8eff",
+      "bytes": 7639
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/blocks.py",
+      "status": "DIFFERENT",
+      "expected_blob": "382ea183a40264056142afffc201c992a2b01d37",
+      "actual_blob": "9fb66c03702d653f411c59ab9966916c348c7c6e",
+      "bytes": 4135
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_anything_v2/util/transform.py",
+      "status": "DIFFERENT",
+      "expected_blob": "b14aacd44ea086b01725a9ca68bb49eadcf37d73",
+      "actual_blob": "1cce234c86177e1ad5c84c81c7c1afb16877c9da",
+      "bytes": 6232
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/depth_to_pointcloud.py",
+      "status": "DIFFERENT",
+      "expected_blob": "770fe60698724327f1071c66d685b4a3d8ce7ca8",
+      "actual_blob": "d341bc2b545a63d57ab612be14675d373e90e098",
+      "bytes": 5145
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/dist_train.sh",
+      "status": "DIFFERENT",
+      "expected_blob": "afa750ad3c3e05fca741bcd66a5f6fea1dab46ac",
+      "actual_blob": "188606857ac223d9f5b76f07763067b014268113",
+      "bytes": 756
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/requirements.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "082330f721c6e704a360cd7706b968d5a93b312f",
+      "actual_blob": "6079c7177838b434aeddabbdd7198622c2c031d1",
+      "bytes": 55
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/run.py",
+      "status": "DIFFERENT",
+      "expected_blob": "63d46f54099d2039f80379fec694a717e2965bed",
+      "actual_blob": "dcf322d1817477b4b546921b9f53e491c6290b7d",
+      "bytes": 3598
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/train.py",
+      "status": "DIFFERENT",
+      "expected_blob": "9b304275c5bd22f63fa19e54c427b3da6a730ea9",
+      "actual_blob": "ef45f16c0f8d2ee131c2b734374bf29b75af8132",
+      "bytes": 9612
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/dist_helper.py",
+      "status": "DIFFERENT",
+      "expected_blob": "7b6eb432b4988638ac9549a82fbaebf968fe9c61",
+      "actual_blob": "49c65420b8d1496783c1c435bb4b6dba3416048f",
+      "bytes": 1384
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/loss.py",
+      "status": "DIFFERENT",
+      "expected_blob": "2ae5b304effd46661e93ea23127d1115c36b5265",
+      "actual_blob": "ab808798c0c607db4f64f248d8dbea7efcdee1f2",
+      "bytes": 488
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/metric.py",
+      "status": "DIFFERENT",
+      "expected_blob": "8638cf25875c753cb62c3977af1417c221237dce",
+      "actual_blob": "b4c05b29100728e93836e6d2712a9412eff94f4d",
+      "bytes": 1035
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/metric_depth/util/utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "e89b994538c5123075605fb6130022867f37c99b",
+      "actual_blob": "f97ab65ea06ba0062127a8400ab1dd0442259fcb",
+      "bytes": 673
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/requirements.txt",
+      "status": "DIFFERENT",
+      "expected_blob": "8698f1bc9fd4f6e98147c042d6c978e343b0f494",
+      "actual_blob": "111fdb4ec1b7158293e0cff5b04d8572d2b0098e",
+      "bytes": 83
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/run.py",
+      "status": "DIFFERENT",
+      "expected_blob": "14810ff39a17e60354e2199d62708b197e97d750",
+      "actual_blob": "52b53d6aa2b0d6311c1cc4783c3e23ab4c468014",
+      "bytes": 3115
+    },
+    {
+      "path": "thirdparty/depth_anything_v2/run_video.py",
+      "status": "DIFFERENT",
+      "expected_blob": "cc3c5b6a33585396d91aaaa4301110a6179f452d",
+      "actual_blob": "46cca8426681a7cfe0223b0e722f18a449a9702d",
+      "bytes": 3842
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/LICENSE.md",
+      "status": "DIFFERENT",
+      "expected_blob": "18445c6d34aedbf1ab9d282223f8f10ce38cd79a",
+      "actual_blob": "50c18de1ba7bc80d95e859331f6811c86bc193df",
+      "bytes": 4752
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/__init__.py",
+      "status": "MATCH",
+      "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/gaussian_renderer/__init__.py",
+      "status": "DIFFERENT",
+      "expected_blob": "3e73f1308d0f81dd62350b6199d3edc8b4450646",
+      "actual_blob": "37f32fba90748218408a3c9d3eac985127f844a5",
+      "bytes": 5189
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/scene/gaussian_model.py",
+      "status": "DIFFERENT",
+      "expected_blob": "33ceda1d82fe2bf5f381200b2345fff25db63a5d",
+      "actual_blob": "038d1c1b134229b05a1fee3f4a618b988eaecdf5",
+      "bytes": 30660
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/general_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "30a19cc614e396526e1375aaed47858eebe6440d",
+      "actual_blob": "e09db381cdcddcb12ae420d82624cd787c3cbfc0",
+      "bytes": 7053
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/graphics_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "0434e41559f697082a89b62070b01a7f2c4a1eb2",
+      "actual_blob": "c8ed9ca265b8c85d89c94092f1e814f50db4d490",
+      "bytes": 2603
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/image_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "77a4d8f481a202c35d06f5b5867cfbff40b505c3",
+      "actual_blob": "8a058f80938173d748774e5e76c4263bd4b8edbd",
+      "bytes": 572
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/loss_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "6308786cc0d37060e201d22f394010d7eb7b12c8",
+      "actual_blob": "d64c8febe7485204ba99b2633f448d0e26c80737",
+      "bytes": 3037
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/sh_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "fa0f104a9d6876e9cef04fbc5e0f19c8bb64cc67",
+      "actual_blob": "db74802b7cf4dbd1108f9938ff61c970ea492e95",
+      "bytes": 4622
+    },
+    {
+      "path": "thirdparty/gaussian_splatting/utils/system_utils.py",
+      "status": "DIFFERENT",
+      "expected_blob": "a89fac10a92f3150d7ff9a3abcbff62a463800a3",
+      "actual_blob": "97255f61af8d08bf7dd78e3249dd9b2267bc80de",
+      "bytes": 817
+    }
+  ],
+  "upstream_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "submodule_gitlinks": {
+    "thirdparty/diff-gaussian-rasterization-w-pose": "43e21bff91cd24986ee3dd52fe0bb06952e50ec7",
+    "thirdparty/lietorch": "0fa9ce8ffca86d985eca9e189a99690d6f3d4df6",
+    "thirdparty/simple-knn": "da5f991fb5b4146531b3912d8084162cf1485701"
+  },
+  "no_model_or_CUDA_execution": true,
+  "production_files_written": false
+}

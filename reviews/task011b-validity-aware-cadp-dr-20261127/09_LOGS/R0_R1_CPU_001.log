@@ -1,0 +1,29 @@
+AUDIT VIPER_Night_val007_00001
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\audit_and_evaluate.py", line 176, in <module>
+    main()
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\audit_and_evaluate.py", line 76, in main
+    numeric.append(dict(**meta,field=name,**stats(z[name])))
+                                            ^^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\audit_and_evaluate.py", line 30, in stats
+    result['q'+str(q)]=float(np.quantile(finite,q)) if finite.size else None
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 4537, in quantile
+    return _quantile_unchecked(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 4550, in _quantile_unchecked
+    return _ureduce(a,
+           ^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 3894, in _ureduce
+    r = func(a, **kwargs)
+        ^^^^^^^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 4727, in _quantile_ureduce_func
+    result = _quantile(arr,
+             ^^^^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 4859, in _quantile
+    result = _lerp(previous,
+             ^^^^^^^^^^^^^^^
+  File "D:\aaa\envs\gamecam-vo\Lib\site-packages\numpy\lib\_function_base_impl.py", line 4653, in _lerp
+    diff_b_a = subtract(b, a)
+               ^^^^^^^^^^^^^^
+TypeError: numpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.

@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "D": 0,
+      "field": "dx",
+      "original_repeat_max_abs": 5.960464477539063e-08,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 7.450580596923828e-08,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "dz",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 8.940696716308594e-08,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "poses",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.1920928955078125e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "disps",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 8.940696716308594e-08,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "U",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.7881393432617188e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "temp",
+      "original_repeat_max_abs": 2.384185791015625e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 2.384185791015625e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 0,
+      "field": "affine",
+      "original_repeat_max_abs": 3.725290298461914e-09,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 3.725290298461914e-09,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "dx",
+      "original_repeat_max_abs": 8.940696716308594e-08,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.862645149230957e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "dz",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.1920928955078125e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "poses",
+      "original_repeat_max_abs": 9.5367431640625e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 9.5367431640625e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "disps",
+      "original_repeat_max_abs": 1.1920928955078125e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.1920928955078125e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "U",
+      "original_repeat_max_abs": 1.7881393432617188e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 1.7881393432617188e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "temp",
+      "original_repeat_max_abs": 2.384185791015625e-07,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 3.5762786865234375e-07,
+      "candidate_all_pairs_pass": true
+    },
+    {
+      "D": 1,
+      "field": "affine",
+      "original_repeat_max_abs": 7.450580596923828e-09,
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "original_repeat_pass": true,
+      "candidate_cross_max_abs": 7.450580596923828e-09,
+      "candidate_all_pairs_pass": true
+    }
+  ],
+  "input_sha256": "f779e2da121afd0660b285076fe80249bdf3147c995c5ab11b735ab0f63a03ea",
+  "native_BA_calls": 8,
+  "candidate_geometry_calls": 1,
+  "geometry_pass": true,
+  "geometry_g_range": [
+    0.9417480826377869,
+    0.9875602722167969
+  ],
+  "two_iterations_preserved": true,
+  "U_native_update": true,
+  "native_input_mutated": false
+}

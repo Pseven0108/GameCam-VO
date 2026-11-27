@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETED_ACTUAL_140_FORMAL_OUTCOMES",
+  "initial_protocol_file": "R2_R3_EXECUTION_PROTOCOL.json",
+  "initial_protocol_status_is_historical": true,
+  "initial_actual_window_runs_is_historical": true,
+  "scientific_frozen_configuration_not_changed": true,
+  "formal_window_runs": 140,
+  "formal_precision": "NATIVE_MOTION_FILTER_AUTOCAST_V2",
+  "source_receipts": "04_R3_VIPER_EVALUATION/R3_EXECUTION_LEDGER.csv",
+  "actual_contract_audit": "04_R3_VIPER_EVALUATION/FORMAL_RUN_CONTRACT_AUDIT.json",
+  "formal_run_sources": {
+    "gpu/run_window.py": "5f4465def3b276bfb2756f4c862d4d5fb327d43ac72872ce9dd7321e36e80fd1",
+    "gpu/cache_priors.py": "5ba6327859ff54b75cc8fcf2fa51dad24409e091391b3f316cae022f94754346",
+    "gpu/runtime.py": "38c2de09350f6881306c8224d992c02d8d07531b45703da39ba90bf876e10fda",
+    "CADP_DR_EXPERIMENTAL_BRANCH/controller.py": "8ea96ee20a7e10a33fe05b452eedfdd58079a43b821c1d4d5bc05966af0a0304"
+  },
+  "live_first_frame_native_cache_checks": 20,
+  "original_protected_assets": "09_LOGS/FINAL_ORIGINAL_ASSET_PROTECTION.json",
+  "runtime_configuration_modified_during_batch": false
+}

@@ -1,0 +1,40 @@
+{
+  "upstream_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "project_main_commit": "7a4d93a8ace18ca37f97949622953ade5b129d86",
+  "exported_original_git_objects": true,
+  "upstream_worktree_changed": false,
+  "installed_extension_replaced": false,
+  "existing_kernel_bodies_changed": false,
+  "native_U_update_body_exact": true,
+  "native_Schur_solve_retraction_body_unchanged": true,
+  "endpoint_numeric_GPU_verification": "PASS_REAL_FIRST_LOCAL_NATIVE_AMP_V2_CONTEXT_ONLY",
+  "endpoint_numeric_evidence": "intake/NATIVE_REGRESSION_FORMAL_REAL_FIRST_LOCAL.json",
+  "endpoint_input_sha256": "f779e2da121afd0660b285076fe80249bdf3147c995c5ab11b735ab0f63a03ea",
+  "endpoint_tolerance": {"rtol": 0.0001, "atol": 0.00001},
+  "endpoint_certificate_not_global_native_determinism": true,
+  "geometry_formula": "Q0=1/(Cg+eta); H0=A-EQ0Et; Hd=H0+diag(ep+lm*diag(H0)); diagSigma=Q0+colnorm(L^-1 E Q0)^2",
+  "geometry_mapping": "u=median_positive_disparity(sqrt(diagSigma)/(abs(d)+1e-6));g=u/(1+u); no target fitting",
+  "inverse_normal_not_independently_calibrated_physical_covariance": true,
+  "sources": [
+    {
+      "file": "droid.cpp",
+      "upstream_sha256": "3dfd4059a243ee1f4cd90de06f70282eaede058c8d3647ddbff6ef0b8d9c9b87",
+      "candidate_sha256": "76cb2e99c04f900b55dbafdad1ed8e52b7a9449311398c307cc4dcccc302c2ef"
+    },
+    {
+      "file": "droid_kernels.cu",
+      "upstream_sha256": "4cbb9132ea7bd8daaa8a0e429762b9265ee31530c5a9d3fa6ca921cb1a34fdd7",
+      "candidate_sha256": "f8949b3f4920b3b2af7417f5dbc5247546fa861fd4ca80b4e21926296e0d2cbf"
+    },
+    {
+      "file": "correlation_kernels.cu",
+      "upstream_sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99",
+      "candidate_sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99"
+    },
+    {
+      "file": "altcorr_kernel.cu",
+      "upstream_sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f",
+      "candidate_sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f"
+    }
+  ]
+}

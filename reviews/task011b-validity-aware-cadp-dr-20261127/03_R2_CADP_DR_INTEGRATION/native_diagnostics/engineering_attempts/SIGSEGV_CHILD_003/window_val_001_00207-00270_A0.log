@@ -1,0 +1,19 @@
+INFO: 0 images got!
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+[33m[INFO] [0mLoad droid pretrained checkpoint from /root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/droid.pth![0m
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK011B_20261127_R1/gpu/run_window.py", line 105, in <module>
+    try:main()
+  File "/root/rivermind-data/GAMECAM_TASK011B_20261127_R1/gpu/run_window.py", line 94, in main
+    if not (out/'TRACKING_CHILD_COMPLETE.json').is_file():raise RuntimeError('Native tracking child failed; preserve attempt')
+RuntimeError: Native tracking child failed; preserve attempt
+Traceback (most recent call last):
+  File "/root/rivermind-data/GAMECAM_TASK011B_20261127_R1/gpu/run_window.py", line 105, in <module>
+    try:main()
+  File "/root/rivermind-data/GAMECAM_TASK011B_20261127_R1/gpu/run_window.py", line 94, in main
+    if not (out/'TRACKING_CHILD_COMPLETE.json').is_file():raise RuntimeError('Native tracking child failed; preserve attempt')
+RuntimeError: Native tracking child failed; preserve attempt
+[W CudaIPCTypes.cpp:15] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]

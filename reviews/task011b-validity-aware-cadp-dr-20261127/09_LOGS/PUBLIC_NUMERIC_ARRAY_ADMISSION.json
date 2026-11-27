@@ -1,0 +1,2130 @@
+{
+  "status": "PASS",
+  "npz_files_scanned": 1565,
+  "object_arrays": 0,
+  "raw_image_arrays_detected": 0,
+  "inspection": "NPY headers of every numeric member; numerical features/depth/U/poses allowed; no RGB arrays",
+  "schemas": [
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\formal_native_regression\\real_first_local_001\\D0_candidate_0.npz",
+      "count": 16,
+      "fields": {
+        "dx": {
+          "shape": [
+            9,
+            6
+          ],
+          "dtype": "float32"
+        },
+        "dz": {
+          "shape": [
+            12,
+            3600
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            13,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "disps": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "U": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "temp": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "affine": {
+          "shape": [
+            385
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\formal_native_regression\\real_first_local_001\\geometry_probe.npz",
+      "count": 2,
+      "fields": {
+        "geometry": {
+          "shape": [
+            2,
+            12,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "dx": {
+          "shape": [
+            9,
+            6
+          ],
+          "dtype": "float32"
+        },
+        "dz": {
+          "shape": [
+            12,
+            3600
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\formal_native_regression\\real_first_local_001\\input.npz",
+      "count": 2,
+      "fields": {
+        "arg0": {
+          "shape": [
+            13,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "arg1": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg2": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "arg3": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg4": {
+          "shape": [
+            66,
+            2,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg5": {
+          "shape": [
+            66,
+            2,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg6": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg7": {
+          "shape": [
+            13,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg8": {
+          "shape": [
+            13,
+            384,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg9": {
+          "shape": [
+            385
+          ],
+          "dtype": "float32"
+        },
+        "arg10": {
+          "shape": [
+            12,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg11": {
+          "shape": [
+            66
+          ],
+          "dtype": "int64"
+        },
+        "arg12": {
+          "shape": [
+            66
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\pilot_native_regression\\synthetic_001\\D0_candidate_0.npz",
+      "count": 8,
+      "fields": {
+        "dx": {
+          "shape": [
+            3,
+            6
+          ],
+          "dtype": "float32"
+        },
+        "dz": {
+          "shape": [
+            4,
+            3600
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            4,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "disps": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "U": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "temp": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "affine": {
+          "shape": [
+            385
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\pilot_native_regression\\synthetic_001\\geometry_probe.npz",
+      "count": 1,
+      "fields": {
+        "geometry": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "dx": {
+          "shape": [
+            3,
+            6
+          ],
+          "dtype": "float32"
+        },
+        "dz": {
+          "shape": [
+            4,
+            3600
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\pilot_native_regression\\synthetic_001\\input.npz",
+      "count": 1,
+      "fields": {
+        "arg0": {
+          "shape": [
+            4,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "arg1": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg2": {
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        "arg3": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg4": {
+          "shape": [
+            8,
+            2,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg5": {
+          "shape": [
+            8,
+            2,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg6": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg7": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg8": {
+          "shape": [
+            4,
+            384,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg9": {
+          "shape": [
+            385
+          ],
+          "dtype": "float32"
+        },
+        "arg10": {
+          "shape": [
+            4,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "arg11": {
+          "shape": [
+            8
+          ],
+          "dtype": "int64"
+        },
+        "arg12": {
+          "shape": [
+            8
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    {
+      "example": "experiments\\TASK011B\\diagnostics\\native_001\\precision_audit\\same_frame_outputs.npz",
+      "count": 1,
+      "fields": {
+        "fp32_repeat": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "fp32_repeat_confidence": {
+          "shape": [
+            1,
+            1,
+            616,
+            1064
+          ],
+          "dtype": "float32"
+        },
+        "native_amp_0": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "native_amp_0_confidence": {
+          "shape": [
+            1,
+            1,
+            616,
+            1064
+          ],
+          "dtype": "float32"
+        },
+        "native_amp_1": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "native_amp_1_confidence": {
+          "shape": [
+            1,
+            1,
+            616,
+            1064
+          ],
+          "dtype": "float32"
+        },
+        "cached_fp32": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\01_R0_TTA_VALIDITY\\cpu_003\\derived_maps\\MVS_0000_0000.npz",
+      "count": 6,
+      "fields": {
+        "native_valid": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "flip_valid": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "pair_valid": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "original_tta_valid": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "native_depth": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float32"
+        },
+        "flip_aligned_depth": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float32"
+        },
+        "native_confidence": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float32"
+        },
+        "tta_LegacyRelative": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "tta_SymmetricRelative": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "tta_LogDisagreement": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "tta_AbsoluteDifference": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_prior_allowed": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "NativeOnly_policy_diagnostic_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_reliability": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_native_fallback": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "FlipOnly_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_prior_allowed": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "FlipOnly_policy_diagnostic_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_reliability": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_native_fallback": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "RankFusion_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_prior_allowed": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "RankFusion_policy_diagnostic_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_reliability": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_native_fallback": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "MaxFusion_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_prior_allowed": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "MaxFusion_policy_diagnostic_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_reliability": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_native_fallback": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "ValidityAwareFusion_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_prior_allowed": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "ValidityAwareFusion_policy_diagnostic_risk": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_reliability": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_native_fallback": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "valid_GT": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "bool"
+        },
+        "AbsRel": {
+          "shape": [
+            540,
+            960
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\01_R0_TTA_VALIDITY\\cpu_003\\derived_maps\\VIPER_Day_val001_00001.npz",
+      "count": 10,
+      "fields": {
+        "native_valid": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "flip_valid": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "pair_valid": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "original_tta_valid": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "native_depth": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "flip_aligned_depth": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "native_confidence": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float32"
+        },
+        "tta_LegacyRelative": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "tta_SymmetricRelative": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "tta_LogDisagreement": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "tta_AbsoluteDifference": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_prior_allowed": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "NativeOnly_policy_diagnostic_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_reliability": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "NativeOnly_native_fallback": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "FlipOnly_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_prior_allowed": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "FlipOnly_policy_diagnostic_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_reliability": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "FlipOnly_native_fallback": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "RankFusion_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_prior_allowed": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "RankFusion_policy_diagnostic_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_reliability": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "RankFusion_native_fallback": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "MaxFusion_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_prior_allowed": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "MaxFusion_policy_diagnostic_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_reliability": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "MaxFusion_native_fallback": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "ValidityAwareFusion_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_prior_allowed": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        },
+        "ValidityAwareFusion_policy_diagnostic_risk": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_reliability": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "float64"
+        },
+        "ValidityAwareFusion_native_fallback": {
+          "shape": [
+            360,
+            640
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\priors\\cache_val_001_00207-00270\\00000.npz",
+      "count": 1280,
+      "fields": {
+        "native_depth": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "flip_depth_aligned": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "native_confidence": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "flip_confidence_aligned": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "tta_valid": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "bool"
+        },
+        "coefficient_A0": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A1": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A2": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A3": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A4": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A5": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "coefficient_A6": {
+          "shape": [
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_001_00207-00270_A0\\keyframe_state_ba_grid.npz",
+      "count": 7,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            61
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            61,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            61,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            61,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            61,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            61,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            61,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_001_00207-00270_A0\\trajectory.npz",
+      "count": 98,
+      "fields": {
+        "rgb_ids": {
+          "shape": [
+            64
+          ],
+          "dtype": "int64"
+        },
+        "c2w_xyzw": {
+          "shape": [
+            64,
+            7
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_002_00244-00307_A0\\keyframe_state_ba_grid.npz",
+      "count": 7,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            62
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            62,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            62,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            62,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            62,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            62,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            62,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_003_00135-00198_A0\\keyframe_state_ba_grid.npz",
+      "count": 7,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            47
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            47,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            47,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            47,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            47,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            47,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            47,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_004_00193-00256_A0\\keyframe_state_ba_grid.npz",
+      "count": 9,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            34
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            34,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            34,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            34,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            34,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            34,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            34,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_005_00809-00872_A0\\keyframe_state_ba_grid.npz",
+      "count": 21,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            14
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            14,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            14,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            14,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            14,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            14,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            14,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_005_00809-00872_A2\\keyframe_state_ba_grid.npz",
+      "count": 1,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            19
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            19,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            19,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            19,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            19,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            19,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            19,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_005_00809-00872_A3\\keyframe_state_ba_grid.npz",
+      "count": 4,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            18
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            18,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            18,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            18,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            18,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            18,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            18,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_006_00077-00140_A0\\keyframe_state_ba_grid.npz",
+      "count": 14,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            12
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            12,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            12,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            12,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            12,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            12,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            12,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_007_00212-00275_A2\\keyframe_state_ba_grid.npz",
+      "count": 1,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            41
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            41,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            41,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            41,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            41,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            41,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            41,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_007_00212-00275_A3\\keyframe_state_ba_grid.npz",
+      "count": 1,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            39
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            39,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            39,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            39,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            39,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            39,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            39,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_007_00212-00275_A4\\keyframe_state_ba_grid.npz",
+      "count": 1,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            42
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            42,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            42,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            42,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            42,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            42,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            42,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_007_00212-00275_A5\\keyframe_state_ba_grid.npz",
+      "count": 2,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            43
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            43,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            43,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            43,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            43,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            43,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            43,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_008_01384-01447_A0\\initialization_partial.npz",
+      "count": 28,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "poses_w2c": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_010_00662-00725_A0\\initialization_partial.npz",
+      "count": 7,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        "poses_w2c": {
+          "shape": [
+            7,
+            7
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_018_00324-00387_A0\\initialization_partial.npz",
+      "count": 7,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            9
+          ],
+          "dtype": "float32"
+        },
+        "poses_w2c": {
+          "shape": [
+            9,
+            7
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_019_00202-00265_A0\\keyframe_state_ba_grid.npz",
+      "count": 2,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            30
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            30,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            30,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            30,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            30,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            30,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_019_00202-00265_A2\\keyframe_state_ba_grid.npz",
+      "count": 5,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            29
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            29,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            29,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            29,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            29,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            29,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            29,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_020_00298-00361_A5\\keyframe_state_ba_grid.npz",
+      "count": 9,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            15
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            15,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            15,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            15,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            15,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            15,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            15,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_023_00416-00479_A0\\keyframe_state_ba_grid.npz",
+      "count": 2,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            33
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            33,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            33,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            33,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            33,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            33,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            33,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    {
+      "example": "reviews\\task011b-validity-aware-cadp-dr-20261127\\04_R3_VIPER_EVALUATION\\evidence\\windows\\window_val_023_00416-00479_A2\\keyframe_state_ba_grid.npz",
+      "count": 5,
+      "fields": {
+        "timestamps": {
+          "shape": [
+            32
+          ],
+          "dtype": "float32"
+        },
+        "poses": {
+          "shape": [
+            32,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "tum_poses": {
+          "shape": [
+            32,
+            7
+          ],
+          "dtype": "float32"
+        },
+        "droid_disps": {
+          "shape": [
+            32,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "intrinsics": {
+          "shape": [
+            32,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "uncertainties": {
+          "shape": [
+            32,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        },
+        "mono_disps_native_grid": {
+          "shape": [
+            32,
+            45,
+            80
+          ],
+          "dtype": "float32"
+        }
+      }
+    }
+  ]
+}

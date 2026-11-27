@@ -1,0 +1,73 @@
+{
+  "complete_original_archive_sha256": "43f9ecb4e090c2f3cb0d941e6820709e005cc8b4338825dfd81041186d85632c",
+  "copied_original_files": [
+    {
+      "path": "ALGORITHM_FAILURE.json",
+      "bytes": 89,
+      "sha256": "13c9e822df9190e3e3dbe03f012eb3e85f6338a4a0469080a90040974ee2ae90"
+    },
+    {
+      "path": "ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "4b5678af23ac8a082f12f8d0fd48569c719c6a5867d30a5dde736eea7bb38073"
+    },
+    {
+      "path": "CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "CHILD_EXCEPTION.json",
+      "bytes": 920,
+      "sha256": "b777b332504e49011dd712f8412f4771b1960fb036099ab677587cb7a66c2144"
+    },
+    {
+      "path": "CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "initialization_partial.npz",
+      "bytes": 414,
+      "sha256": "80527a2d3eb279ca925be9fe2263cd8d3c7c16ade5f7628f78c36f91fbf6fd0f"
+    },
+    {
+      "path": "native/events.out.tfevents.1795795626.jupyter-jbrlffe29wd3x49z.169009.0",
+      "bytes": 3584,
+      "sha256": "698257f058d17382d6780c49755b0dccfab23459ec4b9588616392e1dc1fb071"
+    },
+    {
+      "path": "native_config.yaml",
+      "bytes": 3360,
+      "sha256": "03212320dbbf198b3305edd770153be3a3e7759c85c0f30de18ab9f4c85b9c8d"
+    },
+    {
+      "path": "OUTPUT_SHA256.json",
+      "bytes": 1449,
+      "sha256": "d624a6277fc89bc8a2c9555770518ed0046a25c74d74ca48e23c4f5e80526212"
+    },
+    {
+      "path": "PROCESS_EXIT_CODES.json",
+      "bytes": 50,
+      "sha256": "23cf1a6a8aa1c53981843a7a44e1f3f7b559b5f39a2a4dc641e3b5820c08399e"
+    }
+  ],
+  "saved_video_sha256": null,
+  "published_numerical_state": null,
+  "numerical_state_sha256": null,
+  "sampling": {
+    "y_start": 3,
+    "y_step": 8,
+    "x_start": 3,
+    "x_step": 8,
+    "shape": [
+      45,
+      80
+    ]
+  },
+  "omitted_from_publication": [
+    "native/video.npz: embedded raw RGB, full-resolution duplicate disparity fields"
+  ],
+  "original_full_archive_retained_locally": true,
+  "final_frame_poses_and_native_disparity_and_U_unmodified": true
+}

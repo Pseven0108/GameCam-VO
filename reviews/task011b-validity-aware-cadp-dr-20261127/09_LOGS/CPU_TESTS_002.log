@@ -1,0 +1,45 @@
+test_absolute_native_units (test_reliability.DisagreementTest.test_absolute_native_units) ... ok
+test_identity_all_four_zero (test_reliability.DisagreementTest.test_identity_all_four_zero) ... ok
+test_invalid_epsilon (test_reliability.DisagreementTest.test_invalid_epsilon) ... ok
+test_legacy_extreme_remains_auditable (test_reliability.DisagreementTest.test_legacy_extreme_remains_auditable) ... ok
+test_log_exchange (test_reliability.DisagreementTest.test_log_exchange) ... ok
+test_log_not_same_as_symmetric (test_reliability.DisagreementTest.test_log_not_same_as_symmetric) ... ok
+test_symmetric_bounded (test_reliability.DisagreementTest.test_symmetric_bounded) ... ok
+test_symmetric_exchange (test_reliability.DisagreementTest.test_symmetric_exchange) ... ok
+test_empty_pair_still_native_fallback (test_reliability.FusionTest.test_empty_pair_still_native_fallback) ... ok
+test_fallback_equals_native_risk (test_reliability.FusionTest.test_fallback_equals_native_risk) ... ok
+test_fusion_weight_endpoints (test_reliability.FusionTest.test_fusion_weight_endpoints) ... ok
+test_invalid_native_all_methods_rejection (test_reliability.FusionTest.test_invalid_native_all_methods_rejection) ... ok
+test_invalid_native_all_methods_zero_prior (test_reliability.FusionTest.test_invalid_native_all_methods_zero_prior) ... ok
+test_max_fusion (test_reliability.FusionTest.test_max_fusion) ... ok
+test_no_gt_argument_in_scores (test_reliability.FusionTest.test_no_gt_argument_in_scores) ... ok
+test_pair_fusion_never_includes_missing_tta (test_reliability.FusionTest.test_pair_fusion_never_includes_missing_tta) ... ok
+test_rank_fusion_exact_equal_weight (test_reliability.FusionTest.test_rank_fusion_exact_equal_weight) ... ok
+test_reliability_range (test_reliability.FusionTest.test_reliability_range) ... ok
+test_ties_have_no_pixel_index_advantage (test_reliability.FusionTest.test_ties_have_no_pixel_index_advantage) ... ok
+test_D0_exact (test_reliability.PriorAndGeometryTest.test_D0_exact) ... ok
+test_D1_original_mask_and_gradient (test_reliability.PriorAndGeometryTest.test_D1_original_mask_and_gradient) ... ok
+test_fractional_is_convex_endpoint_blend (test_reliability.PriorAndGeometryTest.test_fractional_is_convex_endpoint_blend) ... ok
+test_full_joint_inverse_matches_block_diagonal (test_reliability.PriorAndGeometryTest.test_full_joint_inverse_matches_block_diagonal) ... ok
+test_geometry_chunk_invariance (test_reliability.PriorAndGeometryTest.test_geometry_chunk_invariance) ... ok
+test_geometry_has_no_depth_prior_argument (test_reliability.PriorAndGeometryTest.test_geometry_has_no_depth_prior_argument) ... ok
+test_geometry_need_monotone (test_reliability.PriorAndGeometryTest.test_geometry_need_monotone) ... ok
+test_gradient_energy_sign (test_reliability.PriorAndGeometryTest.test_gradient_energy_sign) ... ok
+test_invalid_coefficient_rejected (test_reliability.PriorAndGeometryTest.test_invalid_coefficient_rejected) ... ok
+test_nonpositive_geometry_curvature_rejected (test_reliability.PriorAndGeometryTest.test_nonpositive_geometry_curvature_rejected) ... ok
+test_boolean_mask_statistics (test_reliability.ValidityTest.test_boolean_mask_statistics) ... ok
+test_confidence_missing_rejects_native_prior (test_reliability.ValidityTest.test_confidence_missing_rejects_native_prior) ... ok
+test_grid_mismatch_rejected (test_reliability.ValidityTest.test_grid_mismatch_rejected) ... ok
+test_invalid_lower_bound_rejected (test_reliability.ValidityTest.test_invalid_lower_bound_rejected) ... ok
+test_invalid_pair_scores_are_undefined (test_reliability.ValidityTest.test_invalid_pair_scores_are_undefined) ... ok
+test_native_zero_near_zero_negative_nan_inf_rejected (test_reliability.ValidityTest.test_native_zero_near_zero_negative_nan_inf_rejected) ... ok
+test_no_invalid_zero_disagreement (test_reliability.ValidityTest.test_no_invalid_zero_disagreement) ... ok
+test_no_positive_pair_fabricated (test_reliability.ValidityTest.test_no_positive_pair_fabricated) ... ok
+test_original_false_preserved (test_reliability.ValidityTest.test_original_false_preserved) ... ok
+test_original_mask_type_rejected (test_reliability.ValidityTest.test_original_mask_type_rejected) ... ok
+test_pair_requires_both_depths (test_reliability.ValidityTest.test_pair_requires_both_depths) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.015s
+
+OK

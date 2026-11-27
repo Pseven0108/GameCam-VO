@@ -1,0 +1,17 @@
+{
+  "status": "POST_SELECTION_DESCRIPTIVE_SENSITIVITY_FROZEN",
+  "utc": "2026-11-27T15:03:01.461705+00:00",
+  "formal_terminal_at_freeze": 36,
+  "GT_path_threshold_native_units": 0.0001,
+  "rule": "Camera GT path<=1e-4 native units: near-zero translation; otherwise translating",
+  "reason": "Arithmetic-midpoint selection without GT motion includes stationary/pure-rotation windows; error/path at roundoff-scale denominator is not a reliable scale or shape performance claim",
+  "not_confirmatory_preregistered_endpoint": true,
+  "primary_metric_implementation_or_rows_changed": false,
+  "original_20_window_completion_denominator_retained": true,
+  "windows_replaced": 0,
+  "GPU_runs_added": 0,
+  "GT_used_for_controller_or_window_selection": false,
+  "physical_metre_threshold_claim": false,
+  "apply_identically_all_arms": true,
+  "raw_unfiltered_metrics_still_reported": true
+}

@@ -1,0 +1,5 @@
+{
+  "type": "RuntimeError",
+  "error": "TRACKING_NEVER_INITIALIZED: preserve native parameters and partial state",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK011B_20261127_AMP_NATIVE_R2/gpu/run_window.py\", line 24, in tracking\n    try:return self._tracking_impl(pipe)\n  File \"/root/rivermind-data/GAMECAM_TASK011B_20261127_AMP_NATIVE_R2/gpu/run_window.py\", line 94, in _tracking_impl\n    super().tracking(pipe)\n  File \"/root/rivermind-data/GAMECAM_TASK011B_20261127_AMP_NATIVE_R2/source/DROID-W/src/slam.py\", line 110, in tracking\n    self.terminate()\n  File \"/root/rivermind-data/GAMECAM_TASK011B_20261127_AMP_NATIVE_R2/gpu/run_window.py\", line 20, in terminate\n    raise RuntimeError('TRACKING_NEVER_INITIALIZED: preserve native parameters and partial state')\nRuntimeError: TRACKING_NEVER_INITIALIZED: preserve native parameters and partial state\n"
+}

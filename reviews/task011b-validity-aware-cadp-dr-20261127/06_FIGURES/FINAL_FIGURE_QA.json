@@ -1,0 +1,43 @@
+{
+  "status": "PASS_ACTUAL_FINAL_FIGURES",
+  "actual_final_batch_complete": true,
+  "inspection_method": "actual tool-visible rendered PNG inspection",
+  "inspected": [
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\method_distributions.png",
+      "sha256": "c9604a9c3f4843c422ea7aa587697b3f2527492915eaf9631658077f927d3867",
+      "observation": "ATE N=13 visible; raw-scale and rotation tradeoffs remain visible; no clipping."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\paired_differences.png",
+      "sha256": "64e02db9a3eee92c1f05e3ed4275bf9449b7331dc420e39760ddff76ff798521",
+      "observation": "A5 shape intervals below zero; A6 vs A0 spans zero; raw-scale intervals span zero; extra A6 tracking cost visible."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\trajectories\\val_001_00207-00270.png",
+      "sha256": "5f5f505371226eab189b159496bc243644b9e2a08d8b6e73f72ff196ac8d0afb",
+      "observation": "Day, raw-scale and single-global-Sim3 panels clearly separated; readable axes/legend."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\trajectories\\val_019_00202-00265.png",
+      "sha256": "8be5ab9056098bb514c21fea2495880a282ebd8d2a257df7a8fba1b538d16bb9",
+      "observation": "Rain, raw-scale contraction remains visible despite close globally scaled shape; no clipping."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\trajectories\\val_024_00410-00473.png",
+      "sha256": "af50ac1ed5ef48a66bc8312618249e64289ccd70e8973e06f4a2fc2bee3c428c",
+      "observation": "Snow, large contraction and erroneous aligned shapes retained for all methods, not hidden."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\trajectories\\val_008_01384-01447.png",
+      "sha256": "d3ae998b0c6fc77aeabb97cd3d8f59310e9971a8b3a046cf5c1293cef9f07340",
+      "observation": "All seven initialization failures explicitly marked; near-zero GT jitter labelled, no invented model trajectory."
+    },
+    {
+      "path": "D:\\aaa\\GameCam-VO-TASK011B\\experiments\\TASK011B\\figures\\vo\\trajectories\\val_022_00442-00505.png",
+      "sha256": "8dae1ba22151db16bbe1975b1ce6d8d123569683fb135742649540d6fcdf94e9",
+      "observation": "All seven complete but unscorable states labelled alignment undefined; tiny GT numerical jitter labelled."
+    }
+  ],
+  "limitations": "Representative visual QA, not a claim that every plot was individually inspected."
+}

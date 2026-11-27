@@ -1,0 +1,50 @@
+{
+  "hostname": "jupyter-jbrlffe29wd3x49z",
+  "nvidia_device_nodes": [],
+  "nvidia_proc_version": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.119.02  Release Build  (dvs-builder@U22-I3-B15-03-5)  Mon Dec  8 07:51:55 UTC 2025\nGCC version:  gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) \n",
+  "conda_environments": {
+    "/root/miniconda3/envs": [],
+    "/opt/conda/envs": [],
+    "/root/.conda/envs": []
+  },
+  "resources": {
+    "code": 0,
+    "stdout": "Filesystem                                                           1B-blocks        Used   Available Use% Mounted on\noverlay                                                            31526391808 25340829696  6168784896  81% /\ntmpfs                                                               2147483648           0  2147483648   0% /dev/shm\n/dev/mapper/lvmdata-pvc--e0f81ad8--4860--4434--ad62--8c447ade340d 105089261568 93126303744 11946180608  89% /root/rivermind-data\n",
+    "stderr": ""
+  },
+  "current_research_status": {
+    "client_date": "2026-11-27 Asia/Shanghai",
+    "current_direction": "DROID-W_BASELINE_OPTIMIZATION",
+    "active_experiment": null,
+    "TASK008": "STOPPED_AND_PARKED_BY_USER",
+    "TASK007D": "SEALED_AUDIT_ONLY",
+    "new_gpu_or_algorithm_experiment_started": false,
+    "cleanup_report": "reviews/task008-task007d-server-cleanup-baseline-resume-20261127/FINAL_REVIEW.md",
+    "local_raw_outputs_preserved": true,
+    "published_historical_reviews_preserved": true,
+    "instance_shutdown_or_reboot": false,
+    "review_commit": "dc5f1f23b0e927a92ce9a44b1fb2c1f9bb3c2896",
+    "review_url": "https://github.com/Pseven0108/GameCam-VO/blob/dc5f1f23b0e927a92ce9a44b1fb2c1f9bb3c2896/reviews/task008-task007d-server-cleanup-baseline-resume-20261127/FINAL_REVIEW.md"
+  },
+  "baseline_dirs": {
+    "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1": [
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/runtime_cache",
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/evidence",
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/results",
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/pipeline",
+      "/root/rivermind-data/DROIDW_VIPER_ZERO_SHOT_TRANSFER_R1/inputs"
+    ],
+    "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408": [
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/display",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/git_intake",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/logs",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/download_cache",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/evidence",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/results",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/pipeline",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source",
+      "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/exports"
+    ]
+  }
+}

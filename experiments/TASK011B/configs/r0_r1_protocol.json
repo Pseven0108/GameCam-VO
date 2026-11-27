@@ -1,0 +1,22 @@
+{
+  "task": "TASK011B",
+  "initial_project_main_commit": "7a4d93a8ace18ca37f97949622953ade5b129d86",
+  "predecessor_commit": "e2744c21d9d597fa253d552caec8c0b9540f5484",
+  "depth_min_native_units": 1e-6,
+  "disagreement_epsilon_native_units": 1e-6,
+  "primary_disagreement": "SymmetricRelative",
+  "primary_fusion_native_weight": 0.5,
+  "disagreement_sensitivities": ["LegacyRelative", "LogDisagreement", "AbsoluteDifference"],
+  "event_thresholds": [0.1, 0.2, 0.5],
+  "retained_coverages": [0.2, 0.4, 0.6, 0.8],
+  "primary_comparison": "FULL_GT_ZERO_EXTENDED_REJECTION_POLICY",
+  "secondary_comparison": "COMMON_VALID_PAIR_DIAGNOSTIC_NOT_GATE_PASS",
+  "invalid_native": "DEPTH_PRIOR_FORBIDDEN; undefined continuous risk, rejection risk1 only for policy diagnostic",
+  "invalid_tta_native_valid": "Native-only fallback for ValidityAwareFusion; no TTA value substituted",
+  "risk_is_correctness_probability": false,
+  "MVS_calibration_sequence": "0000",
+  "MVS_previously_observed_evaluation_sequence": "0001",
+  "fit_parameters_on_0001": false,
+  "VIPER_dense_GT_claim": false,
+  "production_baseline_modified": false
+}

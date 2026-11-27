@@ -1,0 +1,737 @@
+这次建议把 TASK011B 定位为一次真正的算法改进实验，而不是继续做单纯的可信度指标分析。
+
+我给你整理成可以直接交给 Codex 的完整任务书。按照之前的研究约定：**由 Codex 负责代码检查、实验实施、GPU运行、结果整理和 GitHub Release；你负责审查研究结果。**
+
+下一阶段正式任务
+
+# **TASK011B**
+
+**Validity-Aware Depth Reliability & CADP-DR Utility**
+
+数值有效性感知的深度可信度改进与 CADP-DR 下游效用验证
+
+主要数据集
+
+**VIPER（GTA-V）**
+
+主要算法
+
+**DROID-W**
+
+实验规模
+
+**20–40 个 64 帧窗口**
+
+GPU
+
+**现有 RTX 3090**
+
+实验性质
+
+**独立研究分支**
+
+# TASK011B：Validity-Aware Depth Reliability & CADP-DR Utility
+
+## 一、研究背景
+
+项目：GameCam-VO
+
+仓库：[https://github.com/Pseven0108/GameCam-VO](https://github.com/Pseven0108/GameCam-VO)
+
+前置任务：TASK011A — Depth Reliability Fusion
+
+前置实验固定版本：
+
+Commit:\
+`e2744c21d9d597fa253d552caec8c0b9540f5484`
+
+参考报告：\
+`reviews/task011a-depth-reliability-fusion-20261127/`
+
+参考文件：
+
+- CADP_DR_INTERFACE_DESIGN.md
+- TASK011A_DECISION.json
+- results/signal_complementarity.csv
+- results/viper_raw_signal_statistics.csv
+- results/fusion_comparison.csv
+- results/fusion_macro_differences.csv
+- results/risk_coverage.csv
+- results/risk_error_bins.csv
+- intake/DIAGNOSTIC_ZERO_EXTENSION_AMENDMENT.json
+
+必须先检查上述文件及其对应实现，继承已有实验结果，不要重新构造或覆盖历史实验。
+
+## 二、研究目标
+
+本任务继续围绕 DROID-W 算法改进展开。
+
+最终目标不是单纯得到一个更好的深度可信度指标，而是：
+
+**构建一个具有数值有效性感知能力的深度先验可靠性控制机制，并验证该机制能否实际改善 DROID-W 在 VIPER 游戏画面中的相机运动估计性能。**
+
+本任务分为四个阶段：
+
+- R0：TTA 数值有效性与异常处理。
+- R1：Validity-Aware Depth Reliability 改进。
+- R2：CADP-DR 独立实验分支接入。
+- R3：VIPER 下游视觉里程计验证。
+
+四个阶段连续实施，不能只完成指标分析就结束任务。
+
+---
+
+# 三、R0：TTA 数值有效性改进
+
+## 3.1 现有问题
+
+TASK011A 已经发现：
+
+Flip TTA 相对分歧：
+
+T = |D_native - D_flip| / (|D_native| + ε)
+
+当 Native 深度接近零时，分母过小，会产生极端数值。
+
+部分 VIPER 样本的分歧达到数千万级别。
+
+此外，已有缓存包含 `tta_valid`，但 TASK011A 的融合计算没有真正将它作为像素级有效性门控。
+
+因此需要重新设计 TTA 数值处理。
+
+## 3.2 检查现有缓存
+
+检查以下字段：
+
+- native_depth
+- flip_depth
+- native_confidence
+- flip_confidence
+- flip_relative_disagreement
+- flip_log_disagreement
+- tta_valid
+- native_bin_entropy
+- native_bin_variance
+- native_bin_max_probability
+- native_effective_bins
+
+明确：
+
+1. 每个字段的来源和实际含义。
+2. 深度输出的单位、范围和有效条件。
+3. Flip 前后的坐标对齐关系。
+4. tta_valid 的生成逻辑。
+5. 零值、负值、NaN、Inf 的具体分布。
+
+不得修改已有 NPZ 原始缓存。
+
+## 3.3 建立三个有效性标记
+
+分别定义：
+
+Native Validity：
+
+Native 深度是否有限且大于有效深度下限。
+
+Flip Validity：
+
+Flip 深度是否有限且大于有效深度下限。
+
+Pair Validity：
+
+Native 和 Flip 均有效，同时满足原始 `tta_valid` 条件。
+
+严格区分：
+
+- 正常深度。
+- 零深度。
+- 近零深度。
+- 负深度。
+- 非有限输出。
+- TTA 无效输出。
+
+无效像素不能被当作零分歧，也不能被赋予高可靠性。
+
+Native 有效而 TTA 无效时，采用 Native-only 回退。
+
+Native 本身无效时，不允许使用该像素的深度先验。
+
+## 3.4 比较三种分歧定义
+
+保留原始公式作为历史对照：
+
+Legacy Relative：
+
+T1 = |Dn - Df| / (|Dn| + ε)
+
+新增对称相对分歧：
+
+T2 = |Dn - Df| / (|Dn| + |Df| + ε)
+
+新增 Log Disagreement：
+
+T3 = |log(Dn + ε) - log(Df + ε)|
+
+所有分歧均在有效的 Pair Validity 像素上计算。
+
+另外保留 Absolute Difference：
+
+T4 = |Dn - Df|
+
+对比不同定义的：
+
+- 数值稳定性。
+- 极端值比例。
+- 分位数分布。
+- 不同天气环境下的表现。
+- 高误差像素识别能力。
+- Risk-Coverage 表现。
+
+注意：T2 是有界相对分歧，T3 是对数尺度分歧，两者不能直接混淆。
+
+输出：
+
+- TTA_VALIDITY_AUDIT.csv
+- TTA_DISAGREEMENT_COMPARISON.csv
+- TTA_NUMERICAL_STATISTICS.csv
+- TTA_VALIDITY_VISUALIZATION/
+- R0_REPORT.md
+
+---
+
+# 四、R1：Validity-Aware Depth Reliability
+
+## 4.1 设计目标
+
+将深度可信度分为两个独立来源：
+
+1. Native Confidence：模型自身对深度预测的置信信息。
+2. Flip Consistency：不同输入方向下深度预测的一致性。
+
+不将两者直接解释为正确概率。
+
+建立统一的风险分数：
+
+Risk ∈ [0,1]
+
+数值越高表示相对风险越高。
+
+可靠性分数：
+
+Reliability = 1 - Risk
+
+它只是用于排序和先验控制的相对评分，不是深度正确概率。
+
+## 4.2 实现五种对照方法
+
+A. Native Only
+
+使用原始 Native Confidence 构建风险排序。
+
+B. Flip Only
+
+只在有效 Pair Validity 像素上使用 Flip Disagreement。
+
+C. Rank Fusion
+
+分别对 Native 风险和 Flip 风险进行百分位排名：
+
+R_rank = 0.5 × R_native + 0.5 × R_flip
+
+TASK011A 已经使用 0.5 权重，本任务保留它作为主要融合基线。
+
+D. Max Fusion
+
+R_max = max(R_native, R_flip)
+
+用于比较保守风险识别策略。
+
+E. Validity-Aware Fusion
+
+在 TTA 有效像素上使用双通道融合。
+
+在 TTA 无效、但 Native 有效的像素上回退到 Native Only。
+
+Native 无效的像素不参与深度先验。
+
+对每一种方法记录实际有效像素数量，禁止将无效 TTA 像素偷偷纳入融合。
+
+## 4.3 评价指标
+
+继续使用：
+
+- AUROC。
+- AP。
+- AUSE。
+- AURG。
+- Spearman。
+- Pearson。
+- Risk-Coverage。
+- Error Quantile。
+- Error Bins。
+
+错误事件阈值：
+
+AbsRel > 0.1
+
+AbsRel > 0.2
+
+AbsRel > 0.5
+
+同时增加固定风险覆盖率评价：
+
+保留 20%、40%、60%、80% 的低风险像素，比较剩余像素的实际误差。
+
+分析不同方法在不同覆盖率下的误差变化。
+
+不将风险排序指标包装为概率校准结果。
+
+## 4.4 数据划分与评价纪律
+
+继续使用已有 MVS-Synth 缓存进行辅助分析。
+
+保留 TASK011A 严格 GT 准入失败的历史记录。
+
+不允许删除那7个零预测像素来制造更好的指标。
+
+原始严格评价和零扩展诊断必须分开报告。
+
+MVS-Synth 结果不能代替 VIPER 的下游轨迹验证。
+
+TASK011A 中已观察过的 0001 序列不得宣传为独立盲测集。
+
+输出：
+
+- RELIABILITY_METHOD_COMPARISON.csv
+- VALIDITY_AWARE_FUSION.csv
+- RISK_COVERAGE_COMPARISON.csv
+- ENVIRONMENT_COMPARISON.csv
+- RELIABILITY_VISUALIZATION/
+- R1_REPORT.md
+
+---
+
+# 五、R2：CADP-DR 独立实验分支接入
+
+## 5.1 核心架构
+
+继续使用 TASK011A 的 CADP-DR 接口设计。
+
+两个变量必须独立：
+
+Geometry Need：
+
+表示当前几何系统对深度先验的需求程度。
+
+Depth Reliability：
+
+表示当前深度先验的相对可信程度。
+
+核心控制关系：
+
+s(f,p) = g(f) × r(f,p)
+
+其中：
+
+- g(f)：帧级几何需求。
+- r(f,p)：像素级深度可靠性。
+- s(f,p)：最终先验控制系数。
+
+必须保证 Geometry Need 和 Depth Reliability 不相互替代。
+
+Geometry Need 不得直接使用 Native Confidence 代替。
+
+Depth Reliability 不得直接使用 DROID-W 原生 U 代替。
+
+## 5.2 实现要求
+
+首先检查：
+
+`CADP_DR_INTERFACE_DESIGN.md`
+
+然后检查 DROID-W 现有深度先验的真实计算路径。
+
+找到：
+
+- 深度先验生成位置。
+- 先验有效掩码。
+- 深度先验曲率和梯度贡献。
+- BA 优化中的相关参数。
+- 原生不确定性 U 和 UBA 的计算路径。
+- Schur Complement 和阻尼更新位置。
+
+将 s(f,p) 接入已有深度先验贡献位置。
+
+参考接口：
+
+C_s = C_g + m × s × α + (1 - m × s) × η
+
+b_s = b_g - m × s × α × (d - d_m)
+
+以上是接口设计表达，必须先映射到当前代码中的实际变量、量纲和更新方向，不能直接照抄公式而忽略原有 Hessian/Gradient 定义。
+
+保持：
+
+1. 原生 U 不变。
+2. 原生 UBA 不变。
+3. 原有 BA 求解顺序不变。
+4. 原有 Schur 求解不变。
+5. 原有阻尼机制不变。
+6. 原有初始化和优化迭代配置不变。
+
+只研究深度先验贡献的可靠性控制。
+
+## 5.3 实验配置
+
+建立独立实验配置文件，能够切换：
+
+- CADP_DR_ENABLE
+- DEPTH_RELIABILITY_METHOD
+- TTA_VALIDITY_ENABLE
+- GEOMETRY_NEED_ENABLE
+- DEPTH_PRIOR_ALPHA
+- RELIABILITY_FUSION_WEIGHT
+
+所有实验均保留可追溯配置。
+
+不修改生产默认配置。
+
+不覆盖原始 DROID-W 实现。
+
+## 5.4 七组实验
+
+A0：原始 DROID-W，不增加本任务 CADP-DR。
+
+A1：原始 DROID-W + 现有深度先验。
+
+A2：Native Only Reliability Control。
+
+A3：Validity-Aware Flip Reliability Control。
+
+A4：Rank Fusion Reliability Control。
+
+A5：Max Fusion Reliability Control。
+
+A6：Geometry Need × Depth Reliability，即完整 CADP-DR。
+
+所有组使用相同的初始化、输入帧、相机参数、优化配置和评价协议。
+
+禁止通过单独改变某一组的初始化或优化迭代次数制造性能优势。
+
+另外记录深度先验实际参与优化的像素数量、有效率和权重分布。
+
+## 5.5 重要约束
+
+不要冻结全部视差进行 Pose-only 实验。
+
+此前研究已经发现，全部冻结视差可能加剧平移压缩。
+
+如果需要 Pose-only 对照，只允许在明确筛选出的可靠像素上进行，并作为单独消融实验，不得代替主实验。
+
+输出：
+
+- CADP_DR_EXPERIMENTAL_BRANCH/
+- CADP_DR_CONFIGS/
+- CADP_DR_UNIT_TESTS/
+- CADP_DR_INTEGRATION_REPORT.md
+
+---
+
+# 六、R3：VIPER 下游视觉里程计验证
+
+这是本任务最重要的阶段。
+
+## 6.1 数据集
+
+主数据集：
+
+VIPER（GTA-V）。
+
+只使用当前 GameCam-VO 已有的 VIPER 数据。
+
+不重新引入第三人称数据集。
+
+不重新下载完整数据集，优先使用已有数据与缓存。
+
+选择20–40个具有代表性的64帧窗口。
+
+尽可能覆盖：
+
+- Day
+- Sunset
+- Rain
+- Snow
+- Night
+
+同时覆盖：
+
+- 正常运动。
+- 快速旋转。
+- 明显平移。
+- 光照变化。
+- 低纹理区域。
+- 动态物体较多区域。
+- 深度先验异常区域。
+
+记录所有窗口的来源、起止帧、环境、序列和选择原因。
+
+在正式比较前固定窗口清单。
+
+## 6.2 实验协议
+
+七组实验全部使用相同窗口。
+
+固定：
+
+- 相机内参。
+- 图像分辨率。
+- 初始化。
+- 帧间隔。
+- 迭代次数。
+- 优化配置。
+- 轨迹评价方式。
+
+使用现有 VIPER 轨迹 GT 和仓库中的评价工具。
+
+如果需要进行轨迹对齐，沿用已有评价协议，并明确记录 SE3/Sim3 对齐方式。
+
+Sim3 对齐结果不能单独用于证明尺度估计改善。
+
+同时报告原始尺度和尺度变化，特别关注平移压缩问题。
+
+## 6.3 评价指标
+
+主要指标：
+
+1. ATE。
+2. RPE Translation。
+3. RPE Rotation。
+4. Tracking Success Rate。
+5. Tracking Failure Rate。
+6. 轨迹平移尺度误差。
+7. 不同环境下的性能变化。
+
+工程指标：
+
+- 单帧运行时间。
+- 窗口总运行时间。
+- GPU 显存占用。
+- BA 收敛情况。
+- 有效跟踪帧数量。
+- 深度先验参与比例。
+
+重点观察：
+
+CADP-DR 是否改善原始 DROID-W 的相机运动估计。
+
+是否改善 Night 等困难环境。
+
+是否缓解平移压缩。
+
+是否造成旋转估计退化。
+
+是否出现跟踪稳定性下降。
+
+## 6.4 结果统计
+
+每个窗口都必须独立记录。
+
+同时提供：
+
+- 全部窗口均值。
+- 全部窗口中位数。
+- 各环境均值。
+- 各方法相对 A0 的变化。
+- 各方法相对 A1 的变化。
+- 逐窗口胜负统计。
+- 失败窗口分析。
+
+使用配对比较，必要时提供按序列分组的 Bootstrap 置信区间。
+
+不能只挑选表现好的窗口作为最终结论。
+
+输出：
+
+- VIPER_WINDOW_MANIFEST.csv
+- VIPER_TRAJECTORY_METRICS.csv
+- VIPER_ENVIRONMENT_METRICS.csv
+- VIPER_METHOD_COMPARISON.csv
+- VIPER_TRAJECTORY_VISUALIZATION/
+- VIPER_FAILURE_ANALYSIS.md
+
+---
+
+# 七、工程规范
+
+## 7.1 Git 分支
+
+从最新 main HEAD 创建独立研究分支：
+
+`task011b/validity-aware-cadp-dr`
+
+记录：
+
+- 初始 Commit。
+- 最终 Commit。
+- 修改文件清单。
+- 配置文件。
+- 实验环境。
+- Python 和 CUDA 版本。
+
+不得直接修改 main 分支生产默认配置。
+
+## 7.2 资源使用
+
+优先使用现有 RTX 3090 服务器。
+
+R0/R1 优先使用已有缓存完成。
+
+R2/R3 使用现有 VIPER 数据进行实际算法实验。
+
+避免无必要的模型重复推理和完整数据集下载。
+
+合理复用已验证的缓存。
+
+所有新生成结果存放在独立任务目录，不覆盖 TASK011A 和 TASK006A。
+
+## 7.3 自动化测试
+
+至少完成：
+
+- 深度有效性测试。
+- TTA 数值稳定性测试。
+- 零深度处理测试。
+- 无效 TTA 回退测试。
+- Native 无效像素处理测试。
+- Rank Fusion 测试。
+- Max Fusion 测试。
+- Reliability 范围测试。
+- CADP-DR 权重边界测试。
+- Hessian/Gradient 更新一致性测试。
+- 原始 DROID-W 回归测试。
+- 配置开关测试。
+
+确保关闭 CADP-DR 时能够复现原始 DROID-W 的行为。
+
+---
+
+# 八、最终交付
+
+在仓库建立：
+
+`reviews/task011b-validity-aware-cadp-dr-YYYYMMDD/`
+
+目录至少包含：
+
+01_R0_TTA_VALIDITY/
+
+02_R1_DEPTH_RELIABILITY/
+
+03_R2_CADP_DR_INTEGRATION/
+
+04_R3_VIPER_EVALUATION/
+
+05_METRICS/
+
+06_FIGURES/
+
+07_CONFIGS/
+
+08_TESTS/
+
+09_LOGS/
+
+10_FINAL_REPORT/
+
+最终报告：
+
+`FINAL_REVIEW.md`
+
+报告必须回答：
+
+1. TASK011A 的 Flip TTA 数值问题是否得到解决？
+2. Validity-Aware Fusion 是否优于原来的 Rank Fusion？
+3. 哪一种深度可靠性方法表现最好？
+4. CADP-DR 是否真正改善 DROID-W？
+5. 是否改善 VIPER 的 ATE 和 RPE？
+6. 是否改善 Night、Rain、Snow 等困难环境？
+7. 是否缓解平移压缩？
+8. 是否引入新的旋转误差或跟踪失败？
+9. 运行时间和显存增加多少？
+10. 下一阶段最值得继续研究的算法是什么？
+
+最终形成：
+
+`GAMECAM_TASK011B_VALIDITY_AWARE_CADP_DR_REVIEW.zip`
+
+同时：
+
+- 生成 SHA256 文件清单。
+- 保存实验配置和运行日志。
+- 保存完整指标 CSV。
+- 保存主要可视化。
+- 保存最终 Commit。
+- 创建 GitHub Release。
+- 在 GitHub 中提供可直接下载的 ZIP。
+
+Release Tag：
+
+`task011b-validity-aware-cadp-dr-YYYYMMDD`
+
+---
+
+# 九、最终研究判断目标
+
+本任务不是预设 CADP-DR 一定成功。
+
+最终需要通过实验判断：
+
+A. 仅仅修正 TTA 数值问题，是否就能改善可靠性排序？
+
+B. Native 和 Flip 是否确实具有互补价值？
+
+C. Reliability 是否能够有效控制深度先验？
+
+D. Geometry Need 与 Depth Reliability 是否具有协同作用？
+
+E. 这种控制是否真正改善 DROID-W 在 VIPER 上的相机运动估计？
+
+特别关注最后一个问题。
+
+如果 A6 优于 A0 和 A1，并且在多个环境、多个窗口中保持一致收益，那么 CADP-DR 就具备进一步发展为 GameCam-VO 核心改进模块的价值。
+
+如果 A6 不如 A4 或 A3，也必须保留结果，选择真正有效的简单方法，而不是强行保留复杂架构。
+
+**最终目标：形成一个有实际实验数据支撑、可复现、能够改善 DROID-W 游戏画面视觉里程计性能的深度先验可靠性控制模块。**
+
+请直接实施完整任务，不要只生成设计文档或模拟结果。合理安排各阶段，完成实际实验、指标计算、可视化、代码测试和 GitHub Release。
+
+除非遇到实际环境或数据访问问题，否则不要因为单个辅助指标不理想而终止整个研究任务。所有负面结果也应保留并分析。
+
+## **这次任务完成后，我们要得到什么？**
+
+我希望 TASK011B 最终能够给出下面这条完整证据链：
+
+**TASK011A**
+
+Native + Flip 可信度互补性初步证据
+
+**TASK011B R0–R1**
+
+数值有效性感知 + 改良可靠性评分
+
+**TASK011B R2**
+
+CADP-DR 深度先验控制模块
+
+**TASK011B R3**
+
+VIPER 真实轨迹评价与 DROID-W 性能对比
+
+**最终研究成果**
+
+能够用实验数据证明是否真正改善 DROID-W 的算法模块
+
+**我的一个特别建议：** 这次不要过度追求复杂融合。假如 Validity-Aware Native + Flip 就能取得稳定收益，没有必要为了创新性强行堆叠更多模块。我们要的是能够写进论文、经得住对照实验的实际改进。
+
+完成后把 GitHub Release 链接发给我，我会继续按照论文审稿标准检查代码、实验数据、对照组和最终结论。

@@ -1,0 +1,35 @@
+{
+  "gpu": {
+    "code": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, GPU-187f6a5d-7259-095d-ca3d-0fdec9afcdd5, 580.119.02, 24576 MiB, 24125 MiB\n",
+    "stderr": ""
+  },
+  "processes": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "storage": {
+    "code": 0,
+    "stdout": "Filesystem                                                           1B-blocks        Used   Available Use% Mounted on\n/dev/mapper/lvmdata-pvc--e0f81ad8--4860--4434--ad62--8c447ade340d 105089261568 93126303744 11946180608  89% /root/rivermind-data\ntmpfs                                                              25769803776           0 25769803776   0% /dev/shm\noverlay                                                            31526391808 25340837888  6168776704  81% /\n",
+    "stderr": ""
+  },
+  "cuda_available": true,
+  "device_count": 1,
+  "torch": "2.1.0+cu118",
+  "cuda": "11.8",
+  "source_head": {
+    "code": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any parent up to mount point /root)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n"
+  },
+  "source_status": {
+    "code": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any parent up to mount point /root)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n"
+  },
+  "native_extension": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/droid_backends.cpython-310-x86_64-linux-gnu.so",
+  "native_extension_sha256": "6dcf8de36cadc2174023b649b026f04e61b1231420d98763cc5aa3b294a91c3e",
+  "torch_hub": "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub",
+  "cuda_home": "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118"
+}

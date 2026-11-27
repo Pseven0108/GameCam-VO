@@ -1,0 +1,88 @@
+{
+  "complete_original_archive_sha256": "a578d48b5cd8c88dd652cb586110fbfac10b7ba0ce29e3b2d348a754e395d321",
+  "copied_original_files": [
+    {
+      "path": "ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "a9c9d3e94a0bf995f0df499e2c7c7c94ec99f98ba995080c9b859adb99d884b4"
+    },
+    {
+      "path": "CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "COMPLETE.json",
+      "bytes": 217,
+      "sha256": "a8cc75145e1f695cea9f3af3c67a3455595802f8ca84acca8cfbfb2657764246"
+    },
+    {
+      "path": "native/events.out.tfevents.1795799913.jupyter-jbrlffe29wd3x49z.252139.0",
+      "bytes": 3584,
+      "sha256": "8689d41e25b95db8de0b24175c8586d92ceb5061469e7f077dc7e5c12a0db5ba"
+    },
+    {
+      "path": "native/timer_summary.csv",
+      "bytes": 255,
+      "sha256": "fa960757464c6ae6d1dd4a067bb44aceb67879ed239e1c93c5bfd9edb7152491"
+    },
+    {
+      "path": "native/traj/est_poses_full.txt",
+      "bytes": 4399,
+      "sha256": "cb3c3b7be8c0da0a2a8bd3b9048bbead931c001bb5bc898fd389682307adcdd6"
+    },
+    {
+      "path": "native_ba_calls.jsonl",
+      "bytes": 114161,
+      "sha256": "e94949aa645ca785cb1b98fd25b703e5ce4630d5262671c95807c7c22ff26c31"
+    },
+    {
+      "path": "native_config.yaml",
+      "bytes": 3360,
+      "sha256": "7b0d1a36fa80f2146d73f1d8df48f689a38a916c2b2968e0e26c53691bb22830"
+    },
+    {
+      "path": "OUTPUT_SHA256.json",
+      "bytes": 2074,
+      "sha256": "b4a2776fe908c272356a373648974eb90a50090e481a3eded8a3a98a820ca5a9"
+    },
+    {
+      "path": "PROCESS_EXIT_CODES.json",
+      "bytes": 50,
+      "sha256": "840a0c1e195c0d90d841bb538c2e1f373129adf0c679c33f33f3e5e6b47998b3"
+    },
+    {
+      "path": "TRACKING_CHILD_COMPLETE.json",
+      "bytes": 219,
+      "sha256": "0632dae9cf69e2965420906d087d5f5d88d343987b7779cb0e64bf345da43621"
+    },
+    {
+      "path": "trajectory.npz",
+      "bytes": 3878,
+      "sha256": "fe3d8a8d1ccf11a6e38911840ba6b1acd80f602d979954ba610c541c23a66661"
+    }
+  ],
+  "saved_video_sha256": "9bbee541775751d26ee1cf46eeb363181b7913f75818595b2dc60691062490df",
+  "published_numerical_state": "keyframe_state_ba_grid.npz",
+  "numerical_state_sha256": "d339471c67f753ec00fb4c481ec1c09e4bebc2b3adaeb064027abb86a23657b6",
+  "sampling": {
+    "y_start": 3,
+    "y_step": 8,
+    "x_start": 3,
+    "x_step": 8,
+    "shape": [
+      45,
+      80
+    ]
+  },
+  "omitted_from_publication": [
+    "native/video.npz: embedded raw RGB, full-resolution duplicate disparity fields"
+  ],
+  "original_full_archive_retained_locally": true,
+  "final_frame_poses_and_native_disparity_and_U_unmodified": true
+}

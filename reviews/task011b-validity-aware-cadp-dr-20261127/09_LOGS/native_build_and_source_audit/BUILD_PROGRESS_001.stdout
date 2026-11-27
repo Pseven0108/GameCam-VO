@@ -1,0 +1,21 @@
+UAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(87): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(88): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(89): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(90): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(91): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(92): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(93): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(94): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen/Eigen/src/Core/util/DisableStupidWarnings.h(95): warning #20236-D: pragma "diag_suppress" is deprecated, use "nv_diag_suppress" instead
+
+[3/5] /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/bin/nvcc  -DTORCH_EXTENSION_NAME=task011b_cadp_dr_c3414af6 -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/thirdparty/lietorch/eigen -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/TH -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/include/THC -isystem /opt/gamecam-viper-fullseq-3090-20261120-061408/envs/cuda118/include -isystem /opt/conda/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -O3 -std=c++17 -c /root/rivermind-data/GAMECAM_TASK011B_20261127_R1/CADP_DR_EXPERIMENTAL_BRANCH/native/correlation_kernels.cu -o correlation_kernels.cuda.o 
+
+BUILD_RECEIPT False

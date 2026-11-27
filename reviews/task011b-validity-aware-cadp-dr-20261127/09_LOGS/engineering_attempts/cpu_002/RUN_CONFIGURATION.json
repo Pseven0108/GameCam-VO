@@ -1,0 +1,52 @@
+{
+  "protocol": {
+    "task": "TASK011B",
+    "initial_project_main_commit": "7a4d93a8ace18ca37f97949622953ade5b129d86",
+    "predecessor_commit": "e2744c21d9d597fa253d552caec8c0b9540f5484",
+    "depth_min_native_units": 1e-06,
+    "disagreement_epsilon_native_units": 1e-06,
+    "primary_disagreement": "SymmetricRelative",
+    "primary_fusion_native_weight": 0.5,
+    "disagreement_sensitivities": [
+      "LegacyRelative",
+      "LogDisagreement",
+      "AbsoluteDifference"
+    ],
+    "event_thresholds": [
+      0.1,
+      0.2,
+      0.5
+    ],
+    "retained_coverages": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "primary_comparison": "FULL_GT_ZERO_EXTENDED_REJECTION_POLICY",
+    "secondary_comparison": "COMMON_VALID_PAIR_DIAGNOSTIC_NOT_GATE_PASS",
+    "invalid_native": "DEPTH_PRIOR_FORBIDDEN; undefined continuous risk, rejection risk1 only for policy diagnostic",
+    "invalid_tta_native_valid": "Native-only fallback for ValidityAwareFusion; no TTA value substituted",
+    "risk_is_correctness_probability": false,
+    "MVS_calibration_sequence": "0000",
+    "MVS_previously_observed_evaluation_sequence": "0001",
+    "fit_parameters_on_0001": false,
+    "VIPER_dense_GT_claim": false,
+    "production_baseline_modified": false
+  },
+  "python": "3.11.18 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 18:13:29) [MSC v.1942 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.9.1"
+  },
+  "host": "XCKJ-20251027TY",
+  "core_source_sha256": {
+    "audit_and_evaluate.py": "3211a9ed6dd3871c45b0167fbe809e898b8a8225b7051c20527cd80bc2cc45c8",
+    "reliability.py": "ae8446165f19a00b713c3056b887747087709126ecdc6a4a301fd901831e6f66",
+    "common.py": "923d7d7ba4476c91a8e1af9fa3b596727b7b55de585bfdc4c00de89ee0883cc1"
+  },
+  "no_new_inference": true,
+  "primary_depth_predictions_unchanged": true,
+  "sources": "TASK011A cpu_002 frozen arrays plus complete original R2.1 NPZ fields"
+}

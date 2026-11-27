@@ -1,0 +1,78 @@
+{
+  "complete_original_archive_sha256": "50c04b76e6136f0d88ae25694618c9472aa6cc37f3e9ab1218a6110f156c11d9",
+  "copied_original_files": [
+    {
+      "path": "ALGORITHM_FAILURE.json",
+      "bytes": 89,
+      "sha256": "13c9e822df9190e3e3dbe03f012eb3e85f6338a4a0469080a90040974ee2ae90"
+    },
+    {
+      "path": "ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "15bee41ecf78fa9e86275d965e1da332515fa057ecc378e3737e15b0889ebabe"
+    },
+    {
+      "path": "CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "CHILD_EXCEPTION.json",
+      "bytes": 920,
+      "sha256": "b777b332504e49011dd712f8412f4771b1960fb036099ab677587cb7a66c2144"
+    },
+    {
+      "path": "CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "initialization_partial.npz",
+      "bytes": 414,
+      "sha256": "80527a2d3eb279ca925be9fe2263cd8d3c7c16ade5f7628f78c36f91fbf6fd0f"
+    },
+    {
+      "path": "native/events.out.tfevents.1795795671.jupyter-jbrlffe29wd3x49z.170565.0",
+      "bytes": 3584,
+      "sha256": "a7ded7d00c7130e5e87dc90f5a25d64301154f86ce439c29fb7c2f668d09fa66"
+    },
+    {
+      "path": "NATIVE_CACHE_EQUIVALENCE.json",
+      "bytes": 325,
+      "sha256": "dfce62f738dbeb4672d3e81903bde002fc568a5d2402ff5d8c6e712f63098113"
+    },
+    {
+      "path": "native_config.yaml",
+      "bytes": 3360,
+      "sha256": "d108518b18976b181634cda61ae8c4266b0a05c2514ece6de5b77c2b13793b70"
+    },
+    {
+      "path": "OUTPUT_SHA256.json",
+      "bytes": 1612,
+      "sha256": "0a80b7e6eae7793d04f1a5868e8cd4a0c86d40a7363e84582233e58d9da74350"
+    },
+    {
+      "path": "PROCESS_EXIT_CODES.json",
+      "bytes": 50,
+      "sha256": "e2238ba9d15e78d4cfcb87e0e59b150705964f015011303316998a5bf25faf6d"
+    }
+  ],
+  "saved_video_sha256": null,
+  "published_numerical_state": null,
+  "numerical_state_sha256": null,
+  "sampling": {
+    "y_start": 3,
+    "y_step": 8,
+    "x_start": 3,
+    "x_step": 8,
+    "shape": [
+      45,
+      80
+    ]
+  },
+  "omitted_from_publication": [
+    "native/video.npz: embedded raw RGB, full-resolution duplicate disparity fields"
+  ],
+  "original_full_archive_retained_locally": true,
+  "final_frame_poses_and_native_disparity_and_U_unmodified": true
+}

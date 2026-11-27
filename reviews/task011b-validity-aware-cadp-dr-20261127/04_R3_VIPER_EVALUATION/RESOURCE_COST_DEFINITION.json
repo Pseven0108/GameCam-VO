@@ -1,0 +1,18 @@
+{
+  "window_count": 20,
+  "run_count": 140,
+  "total_shared_cache_prediction_seconds": 853.8872369858436,
+  "total_cache_service_seconds": 1197.130089379847,
+  "total_window_service_seconds": 8934.72834594408,
+  "original_archive_bytes": 9715260282,
+  "runtime_comparison_is_cache_assisted": true,
+  "cold_end_to_end_deployment_measured": false,
+  "model_construction_retained": true,
+  "A0_extra_live_cache_checks": true,
+  "first_A0_extra_8_native_regression_BA_and_1_geometry_probe": true,
+  "service_seconds_scope": "Entire window Python process including imports/model construction/spawn/reliability maps/tracking/finalBA/filler; excludes common prior-cache generation and result archival/transfer.",
+  "model_run_seconds_scope": "After SLAM constructor, before model.run; includes spawn and child reliability-map preparation, tracking/finalBA/filler; excludes parent SLAM construction and shared cache.",
+  "tracking_child_seconds_scope": "Timer starts only after cached coefficient maps/candidate import/controller setup; includes native tracking/finalBA/filler, not all controller-preparation cost.",
+  "transfer_and_archive_overhead_not_measured_as_GPU_inference": true,
+  "device_memory_samples_include_preexisting_driver_reported_allocation": true
+}

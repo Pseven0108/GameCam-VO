@@ -1,0 +1,14 @@
+GPU_START cache_val_001_00207-00270
+GPU_END cache_val_001_00207-00270 COMPLETE 59.17
+GPU_START window_val_001_00207-00270_A0
+Traceback (most recent call last):
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\supervise_gpu.py", line 104, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\supervise_gpu.py", line 95, in main
+    receipt=service('window',wid,arm);collect('window',wid,arm)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\aaa\GameCam-VO-TASK011B\experiments\TASK011B\scripts\supervise_gpu.py", line 39, in service
+    if p.returncode:raise RuntimeError('GPU job failed; no automatic retry: '+label+' '+p.stdout.decode(errors='replace')[-600:])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: GPU job failed; no automatic retry: window_val_001_00207-00270_A0 

@@ -1,0 +1,76 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+INFO: 0 images got!
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+{
+  "status": "COMPLETE",
+  "window": "val_002_00244-00307",
+  "rgb_id": 244,
+  "calls": [
+    {
+      "name": "fp32_repeat",
+      "autocast_enabled": false,
+      "output_dtype": "torch.float32",
+      "seconds": 0.8301569980103523,
+      "rng_unchanged": true
+    },
+    {
+      "name": "native_amp_0",
+      "autocast_enabled": true,
+      "output_dtype": "torch.float32",
+      "seconds": 0.42332893912680447,
+      "rng_unchanged": true
+    },
+    {
+      "name": "native_amp_1",
+      "autocast_enabled": true,
+      "output_dtype": "torch.float32",
+      "seconds": 0.16688911919482052,
+      "rng_unchanged": true
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "cached_fp32",
+      "right": "fp32_repeat",
+      "bitwise_equal": true,
+      "max_absolute_error": 0.0,
+      "median_absolute_error": 0.0,
+      "mean_absolute_error": 0.0,
+      "different_pixels": 0,
+      "pixels": 230400,
+      "relative_mean": 0.0,
+      "all_finite": true
+    },
+    {
+      "left": "cached_fp32",
+      "right": "native_amp_0",
+      "bitwise_equal": false,
+      "max_absolute_error": 12.22808837890625,
+      "median_absolute_error": 0.001041412353515625,
+      "mean_absolute_error": 0.00816723870313985,
+      "different_pixels": 206138,
+      "pixels": 230400,
+      "relative_mean": 0.00014474016282465076,
+      "all_finite": true
+    },
+    {
+      "left": "native_amp_0",
+      "right": "native_amp_1",
+      "bitwise_equal": true,
+      "max_absolute_error": 0.0,
+      "median_absolute_error": 0.0,
+      "mean_absolute_error": 0.0,
+      "different_pixels": 0,
+      "pixels": 230400,
+      "relative_mean": 0.0,
+      "all_finite": true
+    }
+  ],
+  "native_context": "MotionFilter.track @torch.amp.autocast('cuda',enabled=True)",
+  "native_autocast_dtype": "torch.float16",
+  "motion_filter_sha256": "63270959395c3e85ebe12b8215344933cfa3082f28e62a5a5f0b7646256415bb",
+  "predictor_sha256": "b27ca7fd9e5c7cbd212ea6b80115a32f7d4f7443a2de7ed9b3581c8b8470fd4b",
+  "archive_sha256": "653424d84236a833012522efe08acc9606574f2a4c6168abca7fa27febd937df"
+}

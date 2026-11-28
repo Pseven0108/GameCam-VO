@@ -1,0 +1,51 @@
+{
+  "status": "FROZEN_BEFORE_TRAJECTORY_OUTCOMES",
+  "objective": "Local exploratory transfer of DROID-Splat fixed-pose scale alignment into an isolated DROID-W candidate",
+  "remote_operations": "FORBIDDEN: no SSH, remote process, resource or file changes",
+  "upstream_droid_w": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "upstream_droid_splat": "f0cb0316e1ee7f88f8a63c37a6fe19dd623e6eb2",
+  "window": "VIPER Train Day004 RGB1658-1721 / Camera1657-1720",
+  "arms": [
+    "BASE",
+    "A5",
+    "SCALE",
+    "SCALE_A5"
+  ],
+  "frames": 64,
+  "seed": 43,
+  "stride": 1,
+  "image_size": [
+    360,
+    640
+  ],
+  "buffer": 96,
+  "buffer_explanation": "Common local capacity; at most64 retained frames plus16 filler slots, no eviction allowed. Does not alter remote500-slot protocol.",
+  "scope": "Frontend main-loop local BA, excluding initialization, final BA and filler",
+  "scale_model": "scale-only weighted least-squares in disparity; shift=0",
+  "fit_once_per_input_frame": true,
+  "fit_map": "estimated current geometry; cameras fixed; newest candidate excluded",
+  "eligibility": "at least2-view depth consistency using native depth_filter threshold0.05; depth-positive; disparity>.01*mean and>1e-3; correspondence weight>.1; >=300pixels",
+  "scale_invalid": "nonfinite or<.05: identity fallback; never clip to a favourable outcome",
+  "A5": "Existing TASK011B coefficient_map ValidityAwareMax; only depth regularization strength is changed, not UBA weights",
+  "native_gamma_depth": 0.01,
+  "local_compatibility": [
+    "WSL Torch2.7.1/cu128",
+    "Metric3D optional xFormers replaced by equivalent PyTorch SDPA",
+    "common precomputed native priors/features",
+    "single-process native Tracker loop",
+    "no live viewer"
+  ],
+  "metrics": [
+    "one global Sim3 ATE RMSE",
+    "SE3 ATE RMSE",
+    "single-global-scale translation RPE offsets1and15",
+    "rotation RPE",
+    "raw path ratio",
+    "keyframes",
+    "VRAM",
+    "runtime"
+  ],
+  "interpretation": "One Train development window and one seed establish only bounded exploratory evidence. No per-segment scale fit, no GT in inference, no metric-scale recovery claim. Report all successful and failed arms.",
+  "input_protocol_version": 2,
+  "amendment": "INPUT_AMENDMENT_V2.md"
+}

@@ -1,0 +1,38 @@
+{
+  "source_commit": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "source_repository": "D:\\aaa\\GameCam-VO-TASK009\\external\\DROID-W",
+  "exported_git_objects": true,
+  "droid_splat_commit": "f0cb0316e1ee7f88f8a63c37a6fe19dd623e6eb2",
+  "shared_baseline_and_remote_unchanged": true,
+  "native_sources": [
+    {
+      "file": "droid.cpp",
+      "original_sha256": "22d908afe32ba38d8a0b8af3795aed500145352554d674658b59c52bd786de26",
+      "candidate_sha256": "76cb2e99c04f900b55dbafdad1ed8e52b7a9449311398c307cc4dcccc302c2ef"
+    },
+    {
+      "file": "droid_kernels.cu",
+      "original_sha256": "75cc9981ebf136f9d233e2bac122fe8d9419c37485ac2ef2ec2039c57fe397ca",
+      "candidate_sha256": "f8949b3f4920b3b2af7417f5dbc5247546fa861fd4ca80b4e21926296e0d2cbf"
+    },
+    {
+      "file": "correlation_kernels.cu",
+      "original_sha256": "2179a913c3c55ed6d55c25e8ca8fb3b67fbc0a49421e7ab2f56859c37040df72",
+      "candidate_sha256": "0fe2e30a33eb35c273114bd1cdb7f89b6abcaf3a2aa6efc0045bf51386675e99"
+    },
+    {
+      "file": "altcorr_kernel.cu",
+      "original_sha256": "fb770310a59a706479d99e4f9b37a895dcc9e0d299fd108ed27781b7c265db7f",
+      "candidate_sha256": "5fd3d0d7c6dc414be0d3c7196f051978bd2457029215fc4a53c22bf71a99e88f"
+    }
+  ],
+  "frames": 64,
+  "window": "train_004_01658-01721",
+  "K_640x360": [
+    386.01123802290925,
+    386.011247646167,
+    319.5,
+    179.5
+  ],
+  "dependency_readonly_root": "D:\\aaa\\GameCam-VO\\baselines\\droid_w\\upstream"
+}

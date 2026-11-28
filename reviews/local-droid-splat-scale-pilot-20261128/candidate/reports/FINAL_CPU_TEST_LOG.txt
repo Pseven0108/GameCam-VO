@@ -1,0 +1,41 @@
+test_degenerate_stops (test_evaluation.Tests) ... ok
+test_gap_not_filled (test_evaluation.Tests) ... ok
+test_identity (test_evaluation.Tests) ... ok
+test_invalid_rotation_stops (test_evaluation.Tests) ... ok
+test_known_sim3 (test_evaluation.Tests) ... ok
+test_pair_offsets (test_evaluation.Tests) ... ok
+test_bad_values_excluded (test_scale_alignment.Tests) ... ok
+test_degenerate_affine (test_scale_alignment.Tests) ... ok
+test_identity (test_scale_alignment.Tests) ... ok
+test_independent_weighted_reference (test_scale_alignment.Tests) ... ok
+test_insufficient (test_scale_alignment.Tests) ... ok
+test_invalid_fallback (test_scale_alignment.Tests) ... ok
+test_known_affine (test_scale_alignment.Tests) ... ok
+test_known_scale (test_scale_alignment.Tests) ... ok
+test_no_input_mutation (test_scale_alignment.Tests) ... ok
+test_outlier_mask (test_scale_alignment.Tests) ... ok
+test_preserve_zero (test_scale_alignment.Tests) ... ok
+test_shape (test_scale_alignment.Tests) ... ok
+test_a5_uses_independent_strength_without_changing_weights (test_scale_controller.Tests) ... ok
+test_active_frame_bound_and_no_pose_mutation (test_scale_controller.Tests) ... ok
+test_double_install_stops (test_scale_controller.Tests) ... ok
+test_final_and_filler_are_native (test_scale_controller.Tests) ... ok
+test_fractional_timestamp_stops (test_scale_controller.Tests) ... ok
+test_global_support_not_per_frame_threshold (test_scale_controller.Tests) ... ok
+test_incorrect_stage_stops (test_scale_controller.Tests) ... ok
+test_initialization_is_native (test_scale_controller.Tests) ... ok
+test_insufficient_global_support_falls_back (test_scale_controller.Tests) ... ok
+test_metric_prior_disabled_is_native (test_scale_controller.Tests) ... ok
+test_missing_a5_cache_stops (test_scale_controller.Tests) ... ok
+test_missing_stage_stops (test_scale_controller.Tests) ... ok
+test_motion_only_is_native (test_scale_controller.Tests) ... ok
+test_no_graph_support_is_identity_fallback (test_scale_controller.Tests) ... ok
+test_official_xy_confidence_norm (test_scale_controller.Tests) ... ok
+test_out_of_range_coefficient_stops (test_scale_controller.Tests) ... ok
+test_repeated_call_does_not_accumulate_scale (test_scale_controller.Tests) ... ok
+test_scale_excludes_newest_and_preserves_raw_prior (test_scale_controller.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.368s
+
+OK

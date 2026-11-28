@@ -1,0 +1,2285 @@
+{
+  "status": "COMPLETE",
+  "frames": 64,
+  "records": [
+    {
+      "index": 0,
+      "rgb_id": 309,
+      "sha256": "94c48e19ec830a31b4a081ea09ae10e7960c645f1a254d2c020dde7438bdf59e",
+      "reused": true
+    },
+    {
+      "index": 1,
+      "rgb_id": 310,
+      "sha256": "c14a3b11ff67c63d0ff6650b6d205d0b522dfdca5e7e7fc752973c85fd413b18",
+      "seconds": 1.9109446920000437,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 2,
+      "rgb_id": 311,
+      "sha256": "fb9e5d6fef081960440027cba1cb22aac1aee9dd398e7e5788ed649c8a9800cd",
+      "seconds": 0.9962772889999769,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 3,
+      "rgb_id": 312,
+      "sha256": "f53090a3cc5cef4175a77b13baff812a55a23fa712b401eefac14835c30f2982",
+      "seconds": 0.8969509739999921,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 4,
+      "rgb_id": 313,
+      "sha256": "7a160d10fa3fe329e5b84bd1a2f1ec6b5c92ef146be7f9dd286234759a4ced6b",
+      "seconds": 1.0149825740001006,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 5,
+      "rgb_id": 314,
+      "sha256": "728443d5b6890780149fc9eebe9b6cf52046663d0d01e78b0e2c306a92e1e136",
+      "seconds": 0.9200798580000082,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 6,
+      "rgb_id": 315,
+      "sha256": "50968af296b98e93c6922fc4aa3be2753e11658a20ca1b3ab89d7a15c2c193b0",
+      "seconds": 0.9558221600000252,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 7,
+      "rgb_id": 316,
+      "sha256": "5b02be07f4c4287e26d6d35b7e60650a9818d7f62aeccaecbec440bddf0a16f7",
+      "seconds": 0.8930582069999673,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 8,
+      "rgb_id": 317,
+      "sha256": "e9db16ac82cd1b38880387dade0afe6a54f5281baedcb34f48eb75e8c9fecb8f",
+      "seconds": 0.8652187379999532,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 9,
+      "rgb_id": 318,
+      "sha256": "948c7b2c1760fe590f773a1cf8a16b0bdececd16fc4885a8a5386427cb81c868",
+      "seconds": 0.8732376589999831,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 10,
+      "rgb_id": 319,
+      "sha256": "e991a9daec430208dc0fcab0b3ea97e0a4e11980c2377025a7cc30532381f2f3",
+      "seconds": 0.9026297450000129,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 11,
+      "rgb_id": 320,
+      "sha256": "1a1e9ebb41b112a57b1ebc3136095a883f0d99bd6663ac49fe9a56ff720ddc8c",
+      "seconds": 0.8618225339999981,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 12,
+      "rgb_id": 321,
+      "sha256": "a2318010d0fdba19a5230eb96259d047322f038ba366454e05f8cbcd85690e30",
+      "seconds": 0.8572098930000038,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 13,
+      "rgb_id": 322,
+      "sha256": "b5cbbb49bbabf27d54b0b198da9cf2fe7388ce90e041bf7f7c57ba4fdcfdb2b3",
+      "seconds": 0.8604071900000463,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 14,
+      "rgb_id": 323,
+      "sha256": "296537171f392a378a5da54016aee121b08259e52dd8c51e4bb6a9c27c310ee4",
+      "seconds": 0.8612879129999556,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 15,
+      "rgb_id": 324,
+      "sha256": "fae218afc274bd2b36a9e7938bd25e85d875889064aae8e20c700756f61c2a8e",
+      "seconds": 0.914723108999965,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 16,
+      "rgb_id": 325,
+      "sha256": "0cd8049fbe4ba461a1206d31023cfb1fcf349ee704a18e3f06b6e4a983f4d2bc",
+      "seconds": 0.9382825540000113,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 17,
+      "rgb_id": 326,
+      "sha256": "d3aa2255a21bfa792619f1864cab21840416e13189977332fc42c82f8ce4c346",
+      "seconds": 0.9462448419999419,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 18,
+      "rgb_id": 327,
+      "sha256": "7f45eb8ddb5e5176b36802c263866822b306f988b5988ad807d79086c3e2518e",
+      "seconds": 0.9107042499999807,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 19,
+      "rgb_id": 328,
+      "sha256": "0b6672d5a8fc05ddba2047a7afe112214ebf4becf9f6e496ba12bbb82a221cf1",
+      "seconds": 0.9238992950000693,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 20,
+      "rgb_id": 329,
+      "sha256": "c86050f726b39ee84090ee2cad7c8c3c4b2449eadf55d87f95a252bd0b329d02",
+      "seconds": 0.8871478539999771,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 21,
+      "rgb_id": 330,
+      "sha256": "cacbb148ab4bdbcbcc47705b04cb2eae42e47f6770d5cbb30dab4800ce58fdbc",
+      "seconds": 0.9472507039999982,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 22,
+      "rgb_id": 331,
+      "sha256": "7e390bab3851f71800362a0a98f921b5617b715001b931af6475effe969357bd",
+      "seconds": 1.086465680999936,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 23,
+      "rgb_id": 332,
+      "sha256": "9c67df30c24b650a55b015fb438dadf8136acf784fb389b9f5486a9f41e91491",
+      "seconds": 1.0161488659999804,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 24,
+      "rgb_id": 333,
+      "sha256": "0f2ed0541c3f95e092ba5cb83ba7dfa592578b1c3235ee3f4432ce7edf823868",
+      "seconds": 0.9157041749999735,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 25,
+      "rgb_id": 334,
+      "sha256": "54bde342789e90d64d77b286c15a5f2f1680c2f97740b93efb94505c8e5be4ae",
+      "seconds": 0.8877212950000057,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 26,
+      "rgb_id": 335,
+      "sha256": "2a4ac162190a8fc396bc3b79e568c4906c469499195ad519e1d4f49c95395d0a",
+      "seconds": 0.8971789419999823,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 27,
+      "rgb_id": 336,
+      "sha256": "d07bc4125ff9974d7edf44058b8854b928aa52d0b992e715fa2b120341129a0a",
+      "seconds": 0.9008676339999511,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 28,
+      "rgb_id": 337,
+      "sha256": "699a307d1dc09a4d487238bc42043d33bdf4404ec593c346489323bc594f2b4d",
+      "seconds": 0.9018793469999764,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 29,
+      "rgb_id": 338,
+      "sha256": "5993c9035250849d239e3e5b56aa0e4116d17ac81086dc693f123704b7f969ec",
+      "seconds": 0.9243470189999243,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 30,
+      "rgb_id": 339,
+      "sha256": "f1ff42fcd3962dacc0b6699b4adaa5a16236109f4e5cfe7305ff3010d59ee4e6",
+      "seconds": 0.8822069170000759,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 31,
+      "rgb_id": 340,
+      "sha256": "6b89b0d4878def11390f0d08e29d3e3ebfcd388ba131754fbcfb0c21f85cb1a3",
+      "seconds": 0.9222063299999945,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 32,
+      "rgb_id": 341,
+      "sha256": "529059da4e6e8ac6839a67346c30f4f7cab63e3c0d10c10476946f6eea3aebff",
+      "seconds": 0.9299352699999872,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 33,
+      "rgb_id": 342,
+      "sha256": "4a6735f31de1889125543aca72e3e81631eeff68e11a17e7c8839e7788e0304e",
+      "seconds": 0.9500603510000474,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 34,
+      "rgb_id": 343,
+      "sha256": "f51b1c5cbb9041e716eac1a227e6a48d389a26a127ed27fa9532a8f7b5f451b5",
+      "seconds": 0.9713949990000401,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 35,
+      "rgb_id": 344,
+      "sha256": "78a3b5e486a483e4f707e80f925ce61179e13c95125f5ce3ca19a50402d2d9c5",
+      "seconds": 0.9635812840000426,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 36,
+      "rgb_id": 345,
+      "sha256": "683e1555bf27cf37f8a2e5fc15727a923e6fb7c4da18cb23f4145ec8124cffa5",
+      "seconds": 0.963010459999964,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 37,
+      "rgb_id": 346,
+      "sha256": "5dcd47ec11fcf3b78a3be351694b858368249de2cf36453a7e0b3c9e188cb2b8",
+      "seconds": 0.9116097720000198,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 38,
+      "rgb_id": 347,
+      "sha256": "93de9163e3a1561018ad863d5ddf5b9be550b3a25c12b2fd81acbe119d166008",
+      "seconds": 0.9208265139999412,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 39,
+      "rgb_id": 348,
+      "sha256": "b4aca8abe95fcd31c3261f658f9ce351bc5371708af0aec2d233ccadccb864ca",
+      "seconds": 0.9037230060000638,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 40,
+      "rgb_id": 349,
+      "sha256": "0db504c8b25dbab5251ea8fc08ba16dfb831301dab8d73daf886fe0805ece961",
+      "seconds": 0.8884449870000708,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 41,
+      "rgb_id": 350,
+      "sha256": "b3d7dac0021e78f6fc717193ebb4e2dee7d54186c2ef77cf7c2c96c765774867",
+      "seconds": 0.9274734709999848,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 42,
+      "rgb_id": 351,
+      "sha256": "5b9bae5036e019591c4c04bb64f3c0f64e73fb9b32a61c4ae8d1e0db3433a8ea",
+      "seconds": 0.9259628859999793,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 43,
+      "rgb_id": 352,
+      "sha256": "b3bc547352129a80b9315ec067a2d780ca1f8ed3e0fac52138427b2750774246",
+      "seconds": 0.9043354230000205,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 44,
+      "rgb_id": 353,
+      "sha256": "f5b7dfa37eb962bb2b99d0c31bf58577dd60bd7d04bbe445538f4593c7252a12",
+      "seconds": 0.882555281000009,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 45,
+      "rgb_id": 354,
+      "sha256": "f35bd05e9f1fda4ea544744a9bd9433906f8f76d364970a6dd41baf2739cc643",
+      "seconds": 0.9388111460000346,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 46,
+      "rgb_id": 355,
+      "sha256": "a53118fec222c4b94e9c8306fdbb7e549601af003c768bc878dba3d9793d6342",
+      "seconds": 0.9027063940000062,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 47,
+      "rgb_id": 356,
+      "sha256": "4fd37578463e2f7da82c4fdced1c61def2ab1db94ae173bcae8d2f652f3355a1",
+      "seconds": 0.8852741980000474,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 48,
+      "rgb_id": 357,
+      "sha256": "3db88090fd833577bd76f740b0fda801f142d3b1f7784880313967a3146c7bb4",
+      "seconds": 0.8679971250001017,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 49,
+      "rgb_id": 358,
+      "sha256": "aa498d9ae90ef278b056ac8bdbf774342458ca00266c346a992c506295b8a9fc",
+      "seconds": 0.8669087810000065,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 50,
+      "rgb_id": 359,
+      "sha256": "c7e5af01d991f82e2cfb1a5ed41995ff0d09a7127e6870b11ded8623d0383b39",
+      "seconds": 0.8822473630000331,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 51,
+      "rgb_id": 360,
+      "sha256": "c565cee466a50706e1b6a4e962e5751ddeb28d2e80ee6e5453a2fce80681e014",
+      "seconds": 0.9250325780000139,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 52,
+      "rgb_id": 361,
+      "sha256": "a48266f85f5eb1c19379f72cf7a4bf919c50237a4645d4bd3c8831a0e84e2dc8",
+      "seconds": 0.8888587090000328,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 53,
+      "rgb_id": 362,
+      "sha256": "ea4dcd639edb689980b354db234fe5a352bca8bfa01b38f4d8b73fe3415af087",
+      "seconds": 0.9384568479999871,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 54,
+      "rgb_id": 363,
+      "sha256": "b100fef449ce98c2cb90bef11e0c2a27511b194dbcaad1b4046bd901c6d5b48a",
+      "seconds": 0.8393437119999589,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 55,
+      "rgb_id": 364,
+      "sha256": "6ce880bb3e768eba17d67de0c5373938ce57f4be4ccf4e18b63cf9b0f4eca5cd",
+      "seconds": 0.8594024599999557,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 56,
+      "rgb_id": 365,
+      "sha256": "e25995315605252f80f6215547f940f1c551f3eacdb94cd47154fa35b63d4351",
+      "seconds": 0.8680801709999741,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 57,
+      "rgb_id": 366,
+      "sha256": "5582d1009c797bb8142338b9939998218685a22f927c205a36e6ed8f16c011c5",
+      "seconds": 0.8497306670000171,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 58,
+      "rgb_id": 367,
+      "sha256": "68f43bb98d1394318be5981f2abde4d71bf1644c0b84293675ccace7842fef6e",
+      "seconds": 0.8686578000000509,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 59,
+      "rgb_id": 368,
+      "sha256": "0e3e40170cf485816f13d213068ce1616ff50bf126042fee884b523de5761f40",
+      "seconds": 0.8708129980000194,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 60,
+      "rgb_id": 369,
+      "sha256": "f578ee400467e20c0ddd54d23ead7b5f3723a71d24d8139dba687b49d10edb1a",
+      "seconds": 0.8765387670000564,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 61,
+      "rgb_id": 370,
+      "sha256": "b70b5af24c80abfa1c69b37a26f26bfa6dc57de101c3c84f0b6063b05ec1344e",
+      "seconds": 0.8705730090000543,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 62,
+      "rgb_id": 371,
+      "sha256": "7d45e614bd60f2a3a34370465850615d86b7e7c91b7543a3819c2cf990da7f2f",
+      "seconds": 0.8600989860000254,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    },
+    {
+      "index": 63,
+      "rgb_id": 372,
+      "sha256": "82c3609a9774d3b47c4e84d09bb8f3a0851e75529dc645ac01ba17ae6d79a4c7",
+      "seconds": 0.8770153440000286,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    }
+  ],
+  "seconds": 61.96011251499999,
+  "autocast": "native float16",
+  "input_resize_device": "cpu",
+  "peak_allocated": 3134774272,
+  "peak_reserved": 3409969152
+}

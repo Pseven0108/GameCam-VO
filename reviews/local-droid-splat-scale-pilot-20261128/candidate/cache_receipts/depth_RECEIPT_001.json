@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETE",
+  "frames": 1,
+  "records": [
+    {
+      "index": 0,
+      "rgb_id": 309,
+      "sha256": "94c48e19ec830a31b4a081ea09ae10e7960c645f1a254d2c020dde7438bdf59e",
+      "seconds": 1.5989083890000302,
+      "dtype": {
+        "native_depth": "float32",
+        "native_confidence": "float32",
+        "flip_depth": "float32",
+        "flip_confidence": "float32",
+        "tta_valid": "bool"
+      },
+      "shape": {
+        "native_depth": [
+          360,
+          640
+        ],
+        "native_confidence": [
+          360,
+          640
+        ],
+        "flip_depth": [
+          360,
+          640
+        ],
+        "flip_confidence": [
+          360,
+          640
+        ],
+        "tta_valid": [
+          360,
+          640
+        ]
+      },
+      "RNG_unchanged": true
+    }
+  ],
+  "seconds": 1.6484657209999796,
+  "autocast": "native float16",
+  "input_resize_device": "cpu",
+  "peak_allocated": 3134774272,
+  "peak_reserved": 3409969152
+}

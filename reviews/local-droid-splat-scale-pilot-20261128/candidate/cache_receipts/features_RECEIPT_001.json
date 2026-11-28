@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "frames": 1,
+  "records": [
+    {
+      "index": 0,
+      "rgb_id": 309,
+      "sha256": "b80cd5a360a2c90f2ea180e7548c7e814de905662d1fb779d2e936fb5ce54a79",
+      "seconds": 0.8510170600000038,
+      "dtype": {
+        "feature": "float32"
+      },
+      "shape": {
+        "feature": [
+          25,
+          45,
+          384
+        ]
+      },
+      "RNG_unchanged": true
+    }
+  ],
+  "seconds": 0.9161999709999691,
+  "autocast": "native float16",
+  "input_resize_device": "cpu",
+  "peak_allocated": 162751488,
+  "peak_reserved": 174063616
+}

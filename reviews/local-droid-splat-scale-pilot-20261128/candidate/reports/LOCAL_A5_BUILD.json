@@ -1,0 +1,14 @@
+{
+  "status": "BUILT_NOT_YET_NUMERICALLY_VERIFIED",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 5060",
+  "module": "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/toolchain/build/a5_sm120_001/local_a5_splat_c3414af6.so",
+  "sha256": "3d5759d818a95cfa55e08d8ed84bf8904c1e6f8201a7add25ab42ba8cef79926",
+  "installed_backend_replaced": false,
+  "API_only_scalar_type_compatibility": [
+    "correlation_kernels.cu",
+    "altcorr_kernel.cu"
+  ],
+  "kernel_arithmetic_changed": false
+}

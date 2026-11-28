@@ -1,0 +1,214 @@
+{
+  "atol": 1e-05,
+  "rtol": 0.0001,
+  "scope": "one_real_frontend_state",
+  "input_sha256": {
+    "0": "d08c6ed947cdc6eb8aaf4d87122ac976d49de278e3de11f99d6f762ee0724a50",
+    "1": "a92c8f8d625588060d4e2a6d13b8c5bd42f0fd6f8f0c1a9b6ba1641ccbc8b410",
+    "2": "dd9107934c04e51dad492f648a529a3fcfe9479adacf75e9e2a69fcb585b3e62",
+    "3": "abe1e28772162647a9cb001e62f09c1f5d96688389baf3f5db49d193d827d64a",
+    "4": "f56f0b331ffcfc02c567b57cc4529bb4f17373bf8ba030ea2354fd309ce680cd",
+    "5": "61a6c525368e323260d342639bae0d9105a2420d69601def9ee47407e2f1713f",
+    "6": "d6dd0285f8583554444b2a4480e552cfac83c545937c7edc98afa54efa63a97d",
+    "7": "f53f50782e0eeefb164e6d97217da3dbc3688dfdf24f9bc99fd8ec009fc9a8a7",
+    "8": "dda27bf77a1ee132783bbb699b5f1c0b02b6c81e488774adaf77403584628bf4",
+    "9": "c041887a6d39c8a2c38644c55eb8bcbaa92605935d36c5d761390fa5141fc2b6",
+    "10": "1f12c74d70956d8a530849dc26e60ceb4227b80b98919ccc1bf6f74f97f80b84",
+    "11": "fe75c56e534f38d246a5cf9cb0183d74ed96ea673be3895d0aa751e2458fd466",
+    "12": "592223380d75cd562ac2c909b06293c591fe41fccae45aa4646c865ac434a911"
+  },
+  "comparisons": [
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "poses",
+      "bitwise_equal": false,
+      "max_abs": 4.76837158203125e-07,
+      "rmse": 1.8394541832891404e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "disparities",
+      "bitwise_equal": false,
+      "max_abs": 2.682209014892578e-07,
+      "rmse": 1.0744353459240527e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "uncertainties",
+      "bitwise_equal": false,
+      "max_abs": 2.384185791015625e-07,
+      "rmse": 1.1957951899660406e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "temp_y_cdot",
+      "bitwise_equal": false,
+      "max_abs": 3.5762786865234375e-07,
+      "rmse": 1.4569177525524686e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "affine_weights",
+      "bitwise_equal": false,
+      "max_abs": 7.450580596923828e-09,
+      "rmse": 6.200988661074565e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "dx",
+      "bitwise_equal": false,
+      "max_abs": 2.2351741790771484e-08,
+      "rmse": 7.355381587892995e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "native_2",
+      "field": "dz",
+      "bitwise_equal": false,
+      "max_abs": 2.682209014892578e-07,
+      "rmse": 2.9613460246821425e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "poses",
+      "bitwise_equal": false,
+      "max_abs": 4.76837158203125e-07,
+      "rmse": 1.8403400661887954e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "disparities",
+      "bitwise_equal": false,
+      "max_abs": 4.470348358154297e-08,
+      "rmse": 6.476365356335248e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "uncertainties",
+      "bitwise_equal": false,
+      "max_abs": 2.384185791015625e-07,
+      "rmse": 8.127623881873276e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "temp_y_cdot",
+      "bitwise_equal": false,
+      "max_abs": 2.384185791015625e-07,
+      "rmse": 9.16773669857753e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "affine_weights",
+      "bitwise_equal": false,
+      "max_abs": 3.725290298461914e-09,
+      "rmse": 3.1629924653547736e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "dx",
+      "bitwise_equal": false,
+      "max_abs": 2.9802322387695312e-08,
+      "rmse": 9.677061725922544e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_disabled",
+      "field": "dz",
+      "bitwise_equal": false,
+      "max_abs": 4.472531145438552e-08,
+      "rmse": 1.3203812472288373e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "poses",
+      "bitwise_equal": false,
+      "max_abs": 1.4901161193847656e-08,
+      "rmse": 5.840827023908789e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "disparities",
+      "bitwise_equal": false,
+      "max_abs": 1.7881393432617188e-07,
+      "rmse": 9.66658394293268e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "uncertainties",
+      "bitwise_equal": false,
+      "max_abs": 2.384185791015625e-07,
+      "rmse": 9.077338824156878e-09,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "temp_y_cdot",
+      "bitwise_equal": false,
+      "max_abs": 2.980232238769531e-07,
+      "rmse": 1.0175843759380129e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "affine_weights",
+      "bitwise_equal": false,
+      "max_abs": 3.725290298461914e-09,
+      "rmse": 3.751381689893075e-10,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "dx",
+      "bitwise_equal": false,
+      "max_abs": 4.470348358154297e-08,
+      "rmse": 1.304706741363267e-08,
+      "within_tolerance": true
+    },
+    {
+      "left": "native_1",
+      "right": "candidate_ones",
+      "field": "dz",
+      "bitwise_equal": false,
+      "max_abs": 1.7136335372924805e-07,
+      "rmse": 2.4735007251331203e-09,
+      "within_tolerance": true
+    }
+  ],
+  "all_comparisons_pass": true,
+  "live_inputs_unchanged": true,
+  "interpretation": "Local same-state check only; Native U atomic reductions are not guaranteed bitwise deterministic."
+}

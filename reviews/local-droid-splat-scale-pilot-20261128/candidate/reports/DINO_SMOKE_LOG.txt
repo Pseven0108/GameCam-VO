@@ -1,0 +1,110 @@
+INFO: 0 images got!
+Traceback (most recent call last):
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connection.py", line 878, in connect
+    wrapped_socket, is_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connection.py", line 1080, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 437, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 481, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/ssl.py", line 1117, in _create
+    self.do_handshake()
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/ssl.py", line 1388, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:1000: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/util/retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 472, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/urllib3/connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1746, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1666, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 364, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 387, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: a3a28405-a158-45f4-a6fe-b15636a2e5ef)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/candidate/scripts/cache_local.py", line 68, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/candidate/scripts/cache_local.py", line 26, in main
+    model=get_feature_extractor(cfg)
+  File "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/upstream/DROID-W/src/utils/mono_priors/img_feature_extractors.py", line 76, in get_feature_extractor
+    return Fit3DModels(extractor_model, device)
+  File "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/upstream/DROID-W/src/utils/mono_priors/img_feature_extractors.py", line 19, in __init__
+    self.model = torch.hub.load("ywyue/FiT3D", extractor_model).to(device).eval()
+  File "/mnt/d/aaa/GameCam-VO-DROID-SPLAT-CANDIDATE/candidate/scripts/runtime_local.py", line 52, in local
+    kwargs['source']='local';return original(str(paths[repo]),model,*args,**kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/torch/hub.py", line 647, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/torch/hub.py", line 680, in _load_local
+    model = entry(*args, **kwargs)
+  File "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D/hubconf.py", line 53, in dinov2_reg_small_fine
+    model = load_model(name=dinov2_reg_small_name, url=_DINOv2_REG_SMALL_URL)
+  File "/mnt/d/aaa/GameCam-VO/baselines/droid_w/prior_sources/FiT3D/hubconf.py", line 22, in load_model
+    model = timm.create_model(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/_factory.py", line 114, in create_model
+    model = create_fn(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 2438, in vit_small_patch14_reg4_dinov2
+    model = _create_vision_transformer(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/vision_transformer.py", line 1727, in _create_vision_transformer
+    return build_model_with_cfg(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/_builder.py", line 397, in build_model_with_cfg
+    load_pretrained(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/_builder.py", line 190, in load_pretrained
+    state_dict = load_state_dict_from_hf(pretrained_loc)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/timm/models/_hub.py", line 188, in load_state_dict_from_hf
+    cached_file = hf_hub_download(hf_model_id, filename=filename, revision=hf_revision)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1232, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1339, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1857, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.

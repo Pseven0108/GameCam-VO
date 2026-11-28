@@ -1,0 +1,32 @@
+{
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "cuda_available": true,
+  "backend": "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/site-packages/droid_backends.cpython-310-x86_64-linux-gnu.so",
+  "backend_sha256": "de87a5bc8167634b0aa0986fac02782ebcaa5a9a0793ed388562168bfddfe1fc",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "free_total": [
+    7361003520,
+    8546353152
+  ],
+  "nvcc": "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/bin/nvcc",
+  "nvcc_exists": true,
+  "disk": {
+    "total": 677746774016,
+    "used": 390673649664,
+    "free": 287073124352
+  },
+  "modules": {
+    "src.depth_video": "PASS",
+    "src.frontend": "PASS",
+    "src.tracker": "PASS",
+    "src.slam": "PASS",
+    "src.utils.mono_priors.metric_depth_estimators": "PASS",
+    "src.utils.mono_priors.img_feature_extractors": "PASS"
+  }
+}

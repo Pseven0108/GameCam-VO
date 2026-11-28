@@ -1,3 +1,7 @@
+# Latest review
+
+- [TASK011E R3 startup fixed; three trajectories; A0 storage stop](reviews/task011e-startup-fixed-r3-20261128/FINAL_REVIEW.md)
+
 # Current review
 
 - [TASK011E R2 cache complete; spawn engineering stop](reviews/task011e-continuation-r2-20261128/FINAL_REVIEW.md)

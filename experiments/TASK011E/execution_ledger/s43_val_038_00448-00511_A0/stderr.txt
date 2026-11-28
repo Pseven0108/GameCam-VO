@@ -1,0 +1,45 @@
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+  0%|          | 0/64 [00:00<?, ?it/s]/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+[34m[TRACKER] [0m:   0%|          | 0/64 [00:01<?, ?it/s][34m[TRACKER] [0m:   2%|▏         | 1/64 [00:01<01:04,  1.02s/it][34m[TRACKER] [0m:   2%|▏         | 1/64 [00:01<01:08,  1.09s/it][34m[TRACKER] [0m:   3%|▎         | 2/64 [00:01<00:33,  1.84it/s][34m[TRACKER] [0m:   3%|▎         | 2/64 [00:01<00:35,  1.76it/s][34m[TRACKER] [0m:   5%|▍         | 3/64 [00:01<00:23,  2.64it/s][34m[TRACKER] [0m:   5%|▍         | 3/64 [00:01<00:23,  2.56it/s][34m[TRACKER] [0m:   6%|▋         | 4/64 [00:01<00:17,  3.41it/s][34m[TRACKER] [0m:   6%|▋         | 4/64 [00:01<00:18,  3.26it/s][34m[TRACKER] [0m:   8%|▊         | 5/64 [00:01<00:14,  4.07it/s][34m[TRACKER] [0m:   8%|▊         | 5/64 [00:01<00:14,  3.98it/s][34m[TRACKER] [0m:   9%|▉         | 6/64 [00:01<00:12,  4.77it/s][34m[TRACKER] [0m:   9%|▉         | 6/64 [00:01<00:12,  4.56it/s][34m[TRACKER] [0m:  11%|█         | 7/64 [00:01<00:10,  5.32it/s][34m[TRACKER] [0m:  11%|█         | 7/64 [00:01<00:11,  5.18it/s][34m[TRACKER] [0m:  12%|█▎        | 8/64 [00:01<00:09,  5.91it/s][34m[TRACKER] [0m:  12%|█▎        | 8/64 [00:01<00:09,  5.68it/s][34m[TRACKER] [0m:  14%|█▍        | 9/64 [00:01<00:08,  6.39it/s][34m[TRACKER] [0m:  14%|█▍        | 9/64 [00:01<00:08,  6.25it/s][34m[TRACKER] [0m:  16%|█▌        | 10/64 [00:01<00:07,  6.95it/s][34m[TRACKER] [0m:  16%|█▌        | 10/64 [00:01<00:08,  6.67it/s][34m[TRACKER] [0m:  17%|█▋        | 11/64 [00:01<00:07,  7.33it/s][34m[TRACKER] [0m:  17%|█▋        | 11/64 [00:01<00:07,  7.19it/s][34m[TRACKER] [0m:  19%|█▉        | 12/64 [00:01<00:06,  7.84it/s][34m[TRACKER] [0m:  19%|█▉        | 12/64 [00:01<00:06,  7.56it/s][34m[TRACKER] [0m:  20%|██        | 13/64 [00:01<00:06,  8.18it/s][34m[TRACKER] [0m:  20%|██        | 13/64 [00:01<00:06,  8.03it/s][34m[TRACKER] [0m:  22%|██▏       | 14/64 [00:01<00:05,  8.65it/s][34m[TRACKER] [0m:  22%|██▏       | 14/64 [00:01<00:05,  8.36it/s][34m[TRACKER] [0m:  23%|██▎       | 15/64 [00:01<00:05,  8.96it/s][34m[TRACKER] [0m:  23%|██▎       | 15/64 [00:01<00:05,  8.77it/s][34m[TRACKER] [0m:  25%|██▌       | 16/64 [00:01<00:05,  9.35it/s][34m[TRACKER] [0m:  25%|██▌       | 16/64 [00:01<00:05,  9.05it/s][34m[TRACKER] [0m:  27%|██▋       | 17/64 [00:01<00:04,  9.61it/s][34m[TRACKER] [0m:  27%|██▋       | 17/64 [00:01<00:04,  9.45it/s][34m[TRACKER] [0m:  28%|██▊       | 18/64 [00:01<00:04, 10.01it/s][34m[TRACKER] [0m:  28%|██▊       | 18/64 [00:01<00:04,  9.80it/s][34m[TRACKER] [0m:  30%|██▉       | 19/64 [00:01<00:04, 10.35it/s][34m[TRACKER] [0m:  30%|██▉       | 19/64 [00:01<00:04, 10.05it/s][34m[TRACKER] [0m:  31%|███▏      | 20/64 [00:01<00:04, 10.58it/s][34m[TRACKER] [0m:  31%|███▏      | 20/64 [00:01<00:04, 10.37it/s][34m[TRACKER] [0m:  33%|███▎      | 21/64 [00:01<00:03, 10.89it/s][34m[TRACKER] [0m:  33%|███▎      | 21/64 [00:01<00:04, 10.63it/s][34m[TRACKER] [0m:  34%|███▍      | 22/64 [00:01<00:03, 11.14it/s][34m[TRACKER] [0m:  34%|███▍      | 22/64 [00:02<00:03, 10.90it/s][34m[TRACKER] [0m:  36%|███▌      | 23/64 [00:02<00:03, 11.40it/s][34m[TRACKER] [0m:  36%|███▌      | 23/64 [00:03<00:06,  6.83it/s][34m[TRACKER] [0m:  38%|███▊      | 24/64 [00:03<00:05,  7.13it/s][34m[TRACKER] [0m:  38%|███▊      | 24/64 [00:03<00:05,  7.06it/s][34m[TRACKER] [0m:  39%|███▉      | 25/64 [00:03<00:05,  7.35it/s]Process Process-2:
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py", line 38, in tracking
+    try:return self._tracking_impl(pipe)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py", line 110, in _tracking_impl
+    super().tracking(pipe)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/slam.py", line 106, in tracking
+    self.tracker.run(self.stream)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/tracker.py", line 69, in run
+    self.frontend(force_to_add_keyframe, self.event_writer)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py", line 102, in frontend_call
+    return original_call(frontend,*args,**kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py", line 224, in __call__
+    self.__update(force_to_add_keyframe, event_writer)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py", line 71, in __update
+    self.graph.update(None, None, use_inactive=True,
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/factor_graph.py", line 274, in update
+    self.video.ba(target, weight, damping, ii, jj, t0, t1,
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/controller.py", line 187, in wrapped
+    try:return original(*args,**kwargs)
+  File "/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/depth_video.py", line 363, in ba
+    droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.mono_disps,
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/controller.py", line 134, in ba
+    result=native_ba(*args)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/collect_snapshots.py", line 120, in ba
+    collector.capture(phase,args,True,a5,a7,vf,proof)
+  File "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/collect_snapshots.py", line 85, in capture
+    if free<self.minimum_free+budget['conservative_serialization_bytes']:raise RuntimeError('SNAPSHOT_STORAGE_BLOCKED')
+RuntimeError: SNAPSHOT_STORAGE_BLOCKED
+/opt/conda/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 12 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

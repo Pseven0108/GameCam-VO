@@ -1,0 +1,93 @@
+{
+  "status": "ENGINEERING_FAILURE",
+  "initialized": null,
+  "exit_code": 70,
+  "sequence": "val_038",
+  "environment": "Rain",
+  "seed": 43,
+  "arm": "A0",
+  "job_key": "s43_val_038_00448-00511_A0",
+  "finished_unix": 1795836776.088162,
+  "artifacts": [
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A0/ATTEMPT.json",
+      "bytes": 445,
+      "sha256": "585af8c409a4f6a580830f794dca80e30f2c2e4467e55ec7a6f8ea1e74734c01"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A0/PROCESS_GROUP_RECEIPT.json",
+      "bytes": 225,
+      "sha256": "ae69b3eec813da8d60c5d232a93b3daf669d23fb9f81ddd976da3764d1626933"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A0/stderr.txt",
+      "bytes": 8780,
+      "sha256": "8c25e44b01f931acedeee3e6b5bdb95de9cd81336b02e9e5325746ad56368ddd"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A0/stdout.txt",
+      "bytes": 213,
+      "sha256": "3b2cbe5505c34a3856842bb2b342ae06a0b52660b85a369e3c86f9cdbbf838ff"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "2c03558a044731da4613e91c41f09472bf814cda8f0c93092f8c5c716bb830b7"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/CHILD_EXCEPTION.json",
+      "bytes": 3085,
+      "sha256": "246ccbd94aef3670336fab7f84f7abd876a0a8f62252c23561f19d112a0d2195"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/CHILD_PROCESS_FAILURE.json",
+      "bytes": 225,
+      "sha256": "6ecda91e466eed15ac9e8fdbf668eceab5e3ce8f45dea62c0635ae31293b74f3"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/NATIVE_CACHE_EQUIVALENCE.json",
+      "bytes": 325,
+      "sha256": "fe0d5acc76ee9ad1461a0dee9a8dcd4e7b958a12aa56e784f6aae7702a94a735"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/native/events.out.tfevents.1795836733.jupyter-jbrlffe29wd3x49z.2348.0",
+      "bytes": 3632,
+      "sha256": "ed3264a6d99fdee21d76af470aa9e453ad251b5915692ac242d7bad81d4dd841"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/native_ba_calls.jsonl",
+      "bytes": 21035,
+      "sha256": "78a47da88b0e0544bab8124d30ece79d1f34190b3e922d99f4e11a4a7f5234c1"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A0/native_config.yaml",
+      "bytes": 3408,
+      "sha256": "14ff86250b895a2352adf2fecf0841e1257b49c3a9b47381d8b8c6115c1e6e10"
+    },
+    {
+      "path": "fixed_state/snapshots/43/val_038_00448-00511/SNAPSHOT_INDEX.jsonl",
+      "bytes": 16312,
+      "sha256": "306fc06926e80a96e5144562b9c844446438d8b46e9411bdb2bc2363fcc8e10d"
+    },
+    {
+      "path": "fixed_state/snapshots/43/val_038_00448-00511/local_ba_000000.pt",
+      "bytes": 2812382226,
+      "sha256": "be47d8e122557b4b79231471f1f3846fa7daf89ef85c30adb2dc25bb7378a871"
+    },
+    {
+      "path": "fixed_state/snapshots/43/val_038_00448-00511/local_ba_000001.pt",
+      "bytes": 2812382226,
+      "sha256": "7727ed5ee5dfe696ac4d50c559d27294baa7d6e82cafe29c2b741ff08ad2681f"
+    }
+  ]
+}

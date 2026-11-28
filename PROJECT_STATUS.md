@@ -1,3 +1,12 @@
+# Current: TASK011E R3 — startup fixed; A0 snapshot storage stop
+
+2026-11-28. VIPER only. **3 complete64-frame trajectories (A4/A7/A5),1 A0 engineering failure,281 not attempted /285.**
+11/11 Linux CPU regressions pass; original spawn failure fixed on real3090. No confirmatory A5/A7 conclusion.
+All19 caches reused; source/weights/extensions preserved. Two raw snapshots5.239GiB, lossless archive153.63MiB; compression not deployed.
+[Full current review](reviews/task011e-startup-fixed-r3-20261128/FINAL_REVIEW.md). User-requested shutdown follows verified delivery.
+
+---
+
 # GameCam-VO — TASK011E R2 stopped at spawn import collision
 
 2026-11-28 Asia/Shanghai. VIPER only. **19/19 caches; E2E1 engineering failure /285;0 trajectories;284 not attempted.**

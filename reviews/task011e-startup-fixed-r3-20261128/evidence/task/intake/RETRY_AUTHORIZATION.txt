@@ -1,0 +1,3 @@
+2026-11-28 Asia/Shanghai
+User: 修复，然后自己重跑实验
+Scope: repair the TASK011E spawn import collision and owned-child failure handling; explicitly retry the first engineering-failed job in a new isolated attempt; continue the existing frozen 285-job serial order. Preserve sealed R1/R2, weights, source, parameters, cache and all failures. No automatic retry of a new engineering failure.

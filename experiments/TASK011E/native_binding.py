@@ -1,7 +1,7 @@
 """Hash-verified existing TASK011B extension, never rebuilt or overwritten."""
 import importlib.util,json,os,subprocess
 from pathlib import Path
-from common import TASK,sha
+from task011e_io import TASK,sha
 
 def verify_upstream_source():
     root=Path('/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W')

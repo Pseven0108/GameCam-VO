@@ -1,7 +1,7 @@
 """Explicit TASK011E runtime grant; secondary proposals remain UNAPPROVED."""
 import csv,json
 from pathlib import Path
-from common import TASK,sha
+from task011e_io import TASK,sha
 
 ALLOWED=('PRIOR_CACHE','END_TO_END')
 
@@ -29,7 +29,7 @@ def require_approved_runtime(path,action,job_key):
     p=Path(path)
     if not p.is_file():raise PermissionError('Explicit user authorization file required')
     x=json.loads(p.read_text())
-    required=(x.get('stage')=='TASK011E_FAST_285_CONTINUATION_R2',x.get('approved') is True,
+    required=(x.get('stage')=='TASK011E_FAST_285_CONTINUATION_R3',x.get('approved') is True,
         x.get('secondary_thresholds_approved') is False,
         not x.get('approved_secondary_thresholds'),
         x.get('secondary_proposals_sha256')==sha(TASK/'reports/SECONDARY_THRESHOLD_PROPOSALS.csv'),
@@ -37,6 +37,7 @@ def require_approved_runtime(path,action,job_key):
         x.get('user_authorization_sha256')==sha(TASK/'intake/USER_AUTHORIZATION.txt'),
         x.get('continuation_authorization_sha256')==sha(TASK/'intake/CONTINUATION_AUTHORIZATION.txt'),
         x.get('cache_continuation_state_sha256')==sha(TASK/'configs/CACHE_CONTINUATION_STATE.json'),
+        x.get('retry_authorization_sha256')==sha(TASK/'intake/RETRY_AUTHORIZATION.txt'),
         x.get('protocol_sha256')==sha(TASK/'configs/FROZEN_EXPERIMENT_PROTOCOL.json'),
         set(x.get('allowed_actions',[]))==set(ALLOWED),action in ALLOWED,
         job_key in x.get('approved_job_keys',[]),

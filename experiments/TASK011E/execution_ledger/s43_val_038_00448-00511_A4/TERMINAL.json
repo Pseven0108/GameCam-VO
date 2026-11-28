@@ -1,28 +1,32 @@
 {
-  "status": "ENGINEERING_FAILURE",
-  "initialized": null,
-  "exit_code": -15,
+  "status": "COMPLETE",
+  "initialized": true,
   "sequence": "val_038",
   "environment": "Rain",
   "seed": 43,
   "arm": "A4",
   "job_key": "s43_val_038_00448-00511_A4",
-  "finished_unix": 1795818202.7161736,
+  "finished_unix": 1795836585.5421748,
   "artifacts": [
     {
       "path": "execution_ledger/s43_val_038_00448-00511_A4/ATTEMPT.json",
-      "bytes": 444,
-      "sha256": "4b6cf916e96209606b9f1b868831972d017b58b11b8d5db7ce5a4abb646e59fd"
+      "bytes": 445,
+      "sha256": "f1b4eb24a8d072f50c878a55ed26cae07adba63886f2d2e1ce0c3d6236077c8e"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A4/PROCESS_GROUP_RECEIPT.json",
+      "bytes": 223,
+      "sha256": "2ca4eada40e147230f4b2175df85a31e702df30a9b0b2d90d036cf10d3f88e71"
     },
     {
       "path": "execution_ledger/s43_val_038_00448-00511_A4/stderr.txt",
-      "bytes": 4377,
-      "sha256": "869cff1ecc550719e9face6ba32e54e0f55a480d7387ee130c6effc55aae3a05"
+      "bytes": 12444,
+      "sha256": "0e9541e5cfeafd785097ea7fc2e564e23cb9e4cda994f2f4b081191b1c75bdfe"
     },
     {
       "path": "execution_ledger/s43_val_038_00448-00511_A4/stdout.txt",
-      "bytes": 20,
-      "sha256": "c22c5da66a82792b8b078f2cde502e028080ff041992092c207278a1c98c1002"
+      "bytes": 788,
+      "sha256": "cb29cb09c8b0292892d8c9cf0cbe44c27d540bdfb5b467f18a1edf1ce7b6776f"
     },
     {
       "path": "runs/43/val_038_00448-00511/A4/ATTEMPT.json",
@@ -30,9 +34,64 @@
       "sha256": "5a207970f34727124c7d8c6edb055fb5d6537cbd799479be4bd0ca1ded5c6656"
     },
     {
+      "path": "runs/43/val_038_00448-00511/A4/CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/COMPLETE.json",
+      "bytes": 216,
+      "sha256": "1bd3967ebf3167aa06ac9375c3becd4ba0f03503a3fe461242d10f4d36849590"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/PROCESS_EXIT_CODES.json",
+      "bytes": 47,
+      "sha256": "eeecc729253245526a36ecc233c6c812136f571a80e2ad078a681a209315a53c"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/TRACKING_CHILD_COMPLETE.json",
+      "bytes": 220,
+      "sha256": "97b1d028f443c67306ee4acb9b8a26f6d102692b18bc98e54beb13a1821cf3a8"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native/events.out.tfevents.1795836555.jupyter-jbrlffe29wd3x49z.937.0",
+      "bytes": 3632,
+      "sha256": "cf27d4029313626fba9b26b3a83ed0d953f585ce6f2accec07e110d5b4a93355"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native/timer_summary.csv",
+      "bytes": 254,
+      "sha256": "7df21d39e8629e8f4130f2eb7a0d423b66c5269f65c2b16256a08f5477a2e94a"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native/traj/est_poses_full.txt",
+      "bytes": 4517,
+      "sha256": "777bacce27275d6fc41a07980564c49f06fb5d6ac276c119c1e8fcf986288be0"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native/video.npz",
+      "bytes": 120561998,
+      "sha256": "9e7d01cda231d318e58aaea52ab7d84f247f70436383e15acbe2a9540ebb4fcc"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/native_ba_calls.jsonl",
+      "bytes": 156335,
+      "sha256": "9f1f27ef7e0c9ca53026d52d67d017ea6f8e82ebf62096ddc9557058a10d380e"
+    },
+    {
       "path": "runs/43/val_038_00448-00511/A4/native_config.yaml",
       "bytes": 3408,
-      "sha256": "b904480e8abf3f5dd6278069cb555bd522603e5db9c061071268b534df48bdc4"
+      "sha256": "aa68943258cdcacde63e6f62084f883040c5a0687c7d9190ef2c44aed7850028"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A4/trajectory.npz",
+      "bytes": 3877,
+      "sha256": "e821738f331c3bd2583314ec76880cc3c1f4a15da30f5ae43edb130f557b4bfe"
     }
   ]
 }

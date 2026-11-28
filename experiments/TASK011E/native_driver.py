@@ -136,8 +136,11 @@ def main():
     def remember_process(*args,**kwargs):
         proc=old_process(*args,**kwargs);processes.append(proc);return proc
     torch.multiprocessing.Process=remember_process
+    from spawn_supervisor import start_child_watchdog
+    child_watch_stop,child_watch_thread=start_child_watchdog(processes,out)
     try:model.run()
     finally:
+        child_watch_stop.set();child_watch_thread.join(timeout=2)
         torch.multiprocessing.Process=old_process
         write(out/'PROCESS_EXIT_CODES.json',[dict(pid=p.pid,exit_code=p.exitcode) for p in processes])
     if not (out/'TRACKING_CHILD_COMPLETE.json').is_file():raise RuntimeError('Native tracking child failed; preserve attempt')

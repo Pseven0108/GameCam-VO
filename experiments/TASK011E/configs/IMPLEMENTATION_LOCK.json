@@ -8,18 +8,18 @@
     },
     {
       "path": "authorization.py",
-      "bytes": 3219,
-      "sha256": "48755a6f535540e61d661739e5b3d5d60de76207a49035e0e7b07858850a93d0"
+      "bytes": 3366,
+      "sha256": "ae888094f1aac5e99553daf532ae202cb8fd5b467bedc5ccbbdf0da54a987642"
     },
     {
       "path": "batch_service.py",
-      "bytes": 5594,
-      "sha256": "edd279b5acefa7fbb12b92149d2a2cf8ef73e8764032e78b50c679a440a55205"
+      "bytes": 2242,
+      "sha256": "ea46eb98966f0b3fdb2c36db39e201f4b22c9d984a25223d4f2bb942fdbc2817"
     },
     {
       "path": "run_end_to_end.py",
-      "bytes": 7421,
-      "sha256": "f9c1fd7f32c23ba018e3bb99bfc9774f7fa0f0a9bfc43c54fa439831c8a7cb10"
+      "bytes": 7615,
+      "sha256": "a36c388e5779760354fee1268a747c5290c413a6cd86a7a89513811c7b15e096"
     },
     {
       "path": "cache_priors.py",
@@ -33,8 +33,8 @@
     },
     {
       "path": "native_driver.py",
-      "bytes": 10944,
-      "sha256": "5990d9d4609a95dbddcb1e232845d2b643a82ca798bce926f0789c55e841bb6d"
+      "bytes": 11143,
+      "sha256": "231ff122d36e53273e4839a569dabefe913d2bef4f11402e97d8a08b8001383e"
     },
     {
       "path": "uniform_control.py",
@@ -43,8 +43,8 @@
     },
     {
       "path": "native_binding.py",
-      "bytes": 2158,
-      "sha256": "bb996d8a6f127a464d12ea0a8adabe034d031ce4bcc0155c9dc9571a7d40ebb7"
+      "bytes": 2198,
+      "sha256": "4e8c6cd45c2d2c42dc5f5ec11e1e41474da4b5059d573b826a63bd69e14b2b7b"
     },
     {
       "path": "runtime.py",
@@ -80,9 +80,32 @@
       "path": "frozen_metrics/fullseq_common.py",
       "bytes": 2971,
       "sha256": "7a2e5fb39d89c30c1bdfc32834c631cafeccfe437b7f6ed23c89a770703d6f9a"
+    },
+    {
+      "path": "cache_validation.py",
+      "bytes": 1097,
+      "sha256": "4206a7af9894e0bdbf2054f4646237db049ad39761eb98757c799669adf21e34"
+    },
+    {
+      "path": "process_launcher.py",
+      "bytes": 1357,
+      "sha256": "e79612b48b4180ecbf6cd1abddef5918d1460a7b8b4b7baef6d7f8eee9e59766"
+    },
+    {
+      "path": "spawn_supervisor.py",
+      "bytes": 1684,
+      "sha256": "60e35715592205690c9d462651d71ce4b8d776753bc78167267d7ce03ffad0fd"
+    },
+    {
+      "path": "task011e_io.py",
+      "bytes": 335,
+      "sha256": "244dd3c5ff2b915a90b57720100ae28a48cffaa9d3d7e966f67f7c1fdab6b198"
     }
   ],
   "computational_controller_changed": false,
   "only_launch_authorization_storage_recording_amendments": true,
-  "explicit_user_continuation": "2026-11-28 清理完成之后继续实验"
+  "explicit_user_continuation": "2026-11-28 清理完成之后继续实验",
+  "retry_stage": "R3",
+  "changes_are_startup_supervision_only": true,
+  "original_BA_changed": false
 }

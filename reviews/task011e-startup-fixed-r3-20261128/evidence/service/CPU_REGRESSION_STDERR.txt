@@ -1,0 +1,16 @@
+test_R2_approval_rejected_before_model_access (__main__.ReleaseRegression) ... ok
+test_frozen_order_and_controller_unchanged (__main__.ReleaseRegression) ... ok
+test_missing_approval_rejected (__main__.ReleaseRegression) ... ok
+test_private_group_cleanup_does_not_signal_unrelated_process (__main__.ReleaseRegression) ... ok
+test_real_spawn_failure_ends_waiting_parent (__main__.ReleaseRegression) ... ok
+test_real_spawn_foreign_common_isolation (__main__.ReleaseRegression) ... ok
+test_sha_preserves_raw_bytes (__main__.ReleaseRegression) ... ok
+test_unique_helper_identity (__main__.ReleaseRegression) ... ok
+test_watchdog_detects_nonzero_and_signal (__main__.ReleaseRegression) ... ok
+test_watchdog_ignores_not_started_success_and_running (__main__.ReleaseRegression) ... ok
+test_watchdog_records_failure_before_exit (__main__.ReleaseRegression) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.382s
+
+OK

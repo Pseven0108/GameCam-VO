@@ -69,8 +69,10 @@ def execute_job(job,approval,driver=None):
                  '--arm',job['arm'],'--seed',str(job['seed']),'--approval',str(Path(approval).resolve()),'--job-key',job['job_key']]
         env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',TASK011D_RUNTIME_APPROVAL=str(Path(approval).resolve()),TASK011D_RUNTIME_JOB=job['job_key'])
         with (out/'stdout.txt').open('wb') as stdout,(out/'stderr.txt').open('wb') as stderr:
-            code=subprocess.run(command,stdout=stdout,stderr=stderr,env=env,
-                cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W').returncode
+            from process_launcher import run_native
+            code=run_native(command,stdout,stderr,env,
+                cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W',
+                audit=out/'PROCESS_GROUP_RECEIPT.json')
         run=TASK/'runs'/str(job['seed'])/job['window']/job['arm']
         if code==0 and (run/'COMPLETE.json').is_file():result=dict(status='COMPLETE',initialized=True)
         elif (run/'ALGORITHM_FAILURE.json').is_file():result=dict(status='INITIALIZATION_FAILED',initialized=False)

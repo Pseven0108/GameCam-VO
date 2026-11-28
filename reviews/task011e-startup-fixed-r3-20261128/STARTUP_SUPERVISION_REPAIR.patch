@@ -1,0 +1,283 @@
+--- sealed_R2/authorization.py
++++ isolated_R3/authorization.py
+@@ -1,7 +1,7 @@
+ """Explicit TASK011E runtime grant; secondary proposals remain UNAPPROVED."""
+ import csv,json
+ from pathlib import Path
+-from common import TASK,sha
++from task011e_io import TASK,sha
+ 
+ ALLOWED=('PRIOR_CACHE','END_TO_END')
+ 
+@@ -29,7 +29,7 @@
+     p=Path(path)
+     if not p.is_file():raise PermissionError('Explicit user authorization file required')
+     x=json.loads(p.read_text())
+-    required=(x.get('stage')=='TASK011E_FAST_285_CONTINUATION_R2',x.get('approved') is True,
++    required=(x.get('stage')=='TASK011E_FAST_285_CONTINUATION_R3',x.get('approved') is True,
+         x.get('secondary_thresholds_approved') is False,
+         not x.get('approved_secondary_thresholds'),
+         x.get('secondary_proposals_sha256')==sha(TASK/'reports/SECONDARY_THRESHOLD_PROPOSALS.csv'),
+@@ -37,6 +37,7 @@
+         x.get('user_authorization_sha256')==sha(TASK/'intake/USER_AUTHORIZATION.txt'),
+         x.get('continuation_authorization_sha256')==sha(TASK/'intake/CONTINUATION_AUTHORIZATION.txt'),
+         x.get('cache_continuation_state_sha256')==sha(TASK/'configs/CACHE_CONTINUATION_STATE.json'),
++        x.get('retry_authorization_sha256')==sha(TASK/'intake/RETRY_AUTHORIZATION.txt'),
+         x.get('protocol_sha256')==sha(TASK/'configs/FROZEN_EXPERIMENT_PROTOCOL.json'),
+         set(x.get('allowed_actions',[]))==set(ALLOWED),action in ALLOWED,
+         job_key in x.get('approved_job_keys',[]),
+--- sealed_R2/batch_service.py
++++ isolated_R3/batch_service.py
+@@ -1,78 +1,33 @@
+-"""Serial cache -> frozen 15-job canary -> remaining 270. No automatic retries."""
+-import argparse,json,os,subprocess,sys,time,traceback,shutil
++"""Validate 19 sealed common caches, then run the frozen E2E order."""
++import argparse,json,os,subprocess,sys,time,traceback
+ from pathlib import Path
+-from common import TASK,dump,sha,csvwrite
+-from authorization import require_approved_runtime
++from common import TASK,dump,csvwrite
+ from run_end_to_end import validate_plan
+-
+-def validate_cache(window):
+-    root=TASK/'cache'/window;p=root/'CACHE_RECEIPT.json'
+-    if not p.is_file():raise RuntimeError('UNFINISHED_CACHE_ATTEMPT: '+window)
+-    m=json.loads(p.read_text())
+-    if not(m['status']=='COMPLETE' and m['frames']==64 and m['model_forwards']==128 and m['native_forward_RNG_unchanged']
+-           and m['precision_protocol']=='NATIVE_MOTION_FILTER_AUTOCAST_V2' and m['autocast_enabled']
+-           and m['autocast_dtype']=='torch.float16' and m['input_preprocess_device']=='cpu'):
+-        raise RuntimeError('Cache precision/RNG contract mismatch')
+-    if [r['timestamp'] for r in m['records']]!=list(range(64)):raise RuntimeError('Cache incomplete')
+-    for r in m['records']:
+-        q=root/f"{r['timestamp']:05d}.npz"
+-        if q.stat().st_size!=r['bytes'] or sha(q)!=r['sha256']:raise RuntimeError('Cache SHA mismatch')
+-    return dict(window=window,status='COMPLETE',frames=64,model_forwards=128,
+-                bytes=sum(r['bytes'] for r in m['records']),receipt_sha256=sha(p),seconds=m['seconds'])
++from cache_validation import validate_cache
+ 
+ def main(approval):
+-    jobs=validate_plan();windows=list(dict.fromkeys(j['window'] for j in jobs));complete=[]
+-    continuation=json.loads((TASK/'configs/CACHE_CONTINUATION_STATE.json').read_text())
+     env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',
+         HF_HOME='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface',
+         HUGGINGFACE_HUB_CACHE='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/huggingface/hub',
+         TORCH_HOME='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/data/torch_hub',
+         OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4',MPLBACKEND='Agg',
+         MPLCONFIGDIR=str(TASK/'tmp/matplotlib'),TMPDIR=str(TASK/'tmp'))
+-    (TASK/'tmp').mkdir(exist_ok=True)
+-    os.environ.update(env)
+-    logs=TASK/'cache_execution';logs.mkdir(exist_ok=True)
+-    for window in windows:
+-        key='cache_'+window;require_approved_runtime(approval,'PRIOR_CACHE',key)
+-        attempt=logs/(key+'_ATTEMPT.json');terminal=logs/(key+'_TERMINAL.json')
+-        if attempt.exists():
+-            if not terminal.exists() or json.loads(terminal.read_text())['status']!='COMPLETE':
+-                raise RuntimeError('UNFINISHED/FAILED_CACHE_ATTEMPT: no automatic retry')
+-        elif window in continuation['complete_receipt_sha256']:
+-            m=validate_cache(window)
+-            if m['receipt_sha256']!=continuation['complete_receipt_sha256'][window]:raise RuntimeError('Reused complete cache receipt drift')
+-            dump(attempt,dict(status='REUSED_VERIFIED_COMPLETE_CACHE',window=window,source=continuation['source_root'],model_forwards_this_attempt=0))
+-            dump(terminal,dict(**m,source_attempt_preserved=True,model_forwards_this_attempt=0))
+-            print('CACHE_REUSED',window,flush=True)
+-        else:
+-            if shutil.disk_usage(TASK).free<10*1024**3:raise RuntimeError('STORAGE_BLOCKED')
+-            resume=window==continuation['partial_window']
+-            if (TASK/'cache'/window).exists() and not resume:raise RuntimeError('Unregistered existing cache')
+-            dump(attempt,dict(status='STARTED',window=window,started_unix=time.time(),automatic_retry=False))
+-            print('CACHE_START',window,flush=True)
+-            with (logs/(key+'_stdout.txt')).open('wb') as out,(logs/(key+'_stderr.txt')).open('wb') as err:
+-                cmd=[sys.executable,'-B',str(TASK/'cache_priors.py'),'--window',window,'--approval',approval,'--job-key',key]
+-                if resume:cmd+=['--resume-prefix']
+-                code=subprocess.run(cmd,stdout=out,stderr=err,env=env,
+-                    cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W').returncode
+-            if code:
+-                dump(terminal,dict(status='ENGINEERING_FAILURE',window=window,exit_code=code,automatic_retry=False))
+-                raise RuntimeError('Cache failed; entire batch stopped: '+window)
+-            m=validate_cache(window);dump(terminal,dict(**m,finished_unix=time.time()))
+-        complete.append(validate_cache(window));csvwrite(TASK/'CACHE_MANIFEST.csv',complete)
+-        dump(TASK/'BATCH_CHECKPOINT.json',dict(status='GENERATING_CACHES',complete_caches=len(complete),
+-            planned_caches=19,planned_E2E=285,terminal=0,updated_unix=time.time()))
+-        print('CACHE_COMPLETE',len(complete),window,flush=True)
++    (TASK/'tmp').mkdir(exist_ok=True);os.environ.update(env)
++    complete=[]
++    for window in dict.fromkeys(j['window'] for j in validate_plan()):
++        complete.append(validate_cache(window));print('CACHE_REUSED',window,flush=True)
+     assert len(complete)==19
+-    code=subprocess.run([sys.executable,'-B',str(TASK/'run_end_to_end.py'),'--execute','--approval',approval],
+-        cwd=TASK,env=env).returncode
+-    if code:raise RuntimeError('E2E stopped; no retry/skip')
++    csvwrite(TASK/'CACHE_MANIFEST.csv',complete)
++    dump(TASK/'CACHE_REUSE_RECEIPT.json',dict(status='ALL_19_REVERIFIED',frames=1216,
++        model_forwards_this_attempt=0,source_attempt='GAMECAM_TASK011E_FAST_20261128_R2'))
++    result=subprocess.run([sys.executable,'-B',str(TASK/'run_end_to_end.py'),'--execute','--approval',approval],cwd=TASK,env=env)
++    if result.returncode:raise RuntimeError('E2E stopped; preserve failure, no automatic retry or skip')
+     dump(TASK/'BATCH_TERMINAL.json',dict(status='ALL_285_TERMINAL',caches=19,E2E=285,FSR=0,finished_unix=time.time()))
+ 
+ if __name__=='__main__':
+-    p=argparse.ArgumentParser();p.add_argument('--approval',required=True);a=p.parse_args()
+-    try:main(str(Path(a.approval).resolve()))
++    parser=argparse.ArgumentParser();parser.add_argument('--approval',required=True);args=parser.parse_args()
++    try:main(str(Path(args.approval).resolve()))
+     except BaseException as error:
+         dump(TASK/'BATCH_STOPPED.json',dict(status='STOPPED',error=str(error),traceback=traceback.format_exc(),
+-            automatic_retry=False,history_deleted=False,when_unix=time.time()))
++             automatic_retry=False,history_deleted=False,when_unix=time.time()))
+         traceback.print_exc();sys.exit(1)
+--- sealed_R2/cache_validation.py
++++ isolated_R3/cache_validation.py
+@@ -0,0 +1,17 @@
++import json
++from common import TASK,sha
++
++def validate_cache(window):
++    root=TASK/'cache'/window;p=root/'CACHE_RECEIPT.json'
++    if not p.is_file():raise RuntimeError('UNFINISHED_CACHE_ATTEMPT: '+window)
++    m=json.loads(p.read_text())
++    if not(m['status']=='COMPLETE' and m['frames']==64 and m['model_forwards']==128 and m['native_forward_RNG_unchanged']
++           and m['precision_protocol']=='NATIVE_MOTION_FILTER_AUTOCAST_V2' and m['autocast_enabled']
++           and m['autocast_dtype']=='torch.float16' and m['input_preprocess_device']=='cpu'):
++        raise RuntimeError('Cache precision/RNG contract mismatch')
++    if [r['timestamp'] for r in m['records']]!=list(range(64)):raise RuntimeError('Cache incomplete')
++    for r in m['records']:
++        q=root/f"{r['timestamp']:05d}.npz"
++        if q.stat().st_size!=r['bytes'] or sha(q)!=r['sha256']:raise RuntimeError('Cache SHA mismatch')
++    return dict(window=window,status='COMPLETE',frames=64,model_forwards=128,
++                bytes=sum(r['bytes'] for r in m['records']),receipt_sha256=sha(p),seconds=m['seconds'])
+--- sealed_R2/native_binding.py
++++ isolated_R3/native_binding.py
+@@ -1,7 +1,7 @@
+ """Hash-verified existing TASK011B extension, never rebuilt or overwritten."""
+ import importlib.util,json,os,subprocess
+ from pathlib import Path
+-from common import TASK,sha
++from task011e_io import TASK,sha
+ 
+ def verify_upstream_source():
+     root=Path('/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W')
+--- sealed_R2/native_driver.py
++++ isolated_R3/native_driver.py
+@@ -136,8 +136,11 @@
+     def remember_process(*args,**kwargs):
+         proc=old_process(*args,**kwargs);processes.append(proc);return proc
+     torch.multiprocessing.Process=remember_process
++    from spawn_supervisor import start_child_watchdog
++    child_watch_stop,child_watch_thread=start_child_watchdog(processes,out)
+     try:model.run()
+     finally:
++        child_watch_stop.set();child_watch_thread.join(timeout=2)
+         torch.multiprocessing.Process=old_process
+         write(out/'PROCESS_EXIT_CODES.json',[dict(pid=p.pid,exit_code=p.exitcode) for p in processes])
+     if not (out/'TRACKING_CHILD_COMPLETE.json').is_file():raise RuntimeError('Native tracking child failed; preserve attempt')
+--- sealed_R2/process_launcher.py
++++ isolated_R3/process_launcher.py
+@@ -0,0 +1,34 @@
++"""Run exactly one native driver in a private, owned Linux process group."""
++import json
++import os
++import signal
++import subprocess
++import sys
++import time
++from pathlib import Path
++
++
++def run_native(command, stdout, stderr, env, cwd, audit):
++    if sys.platform != 'linux':
++        raise RuntimeError('Formal native launch requires Linux')
++    child = subprocess.Popen(command, stdout=stdout, stderr=stderr, env=env,
++                             cwd=cwd, start_new_session=True)
++    group = child.pid
++    if os.getpgid(child.pid) != group:
++        raise RuntimeError('Native driver process-group ownership not established')
++    record = dict(driver_pid=child.pid, private_process_group=group,
++                  started_unix=time.time(), automatic_retry=False)
++    try:
++        record['exit_code'] = child.wait()
++        return record['exit_code']
++    finally:
++        # Only descendants remaining in the newly created driver session are
++        # signalled. Never inspect or terminate unrelated GPU/SSH services.
++        try:
++            os.killpg(group, signal.SIGTERM)
++            record['remaining_owned_group_signalled'] = True
++        except ProcessLookupError:
++            record['remaining_owned_group_signalled'] = False
++        record['finished_unix'] = time.time()
++        Path(audit).write_text(json.dumps(record, indent=2)+'\n', encoding='utf-8')
++
+--- sealed_R2/run_end_to_end.py
++++ isolated_R3/run_end_to_end.py
+@@ -69,8 +69,10 @@
+                  '--arm',job['arm'],'--seed',str(job['seed']),'--approval',str(Path(approval).resolve()),'--job-key',job['job_key']]
+         env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',TASK011D_RUNTIME_APPROVAL=str(Path(approval).resolve()),TASK011D_RUNTIME_JOB=job['job_key'])
+         with (out/'stdout.txt').open('wb') as stdout,(out/'stderr.txt').open('wb') as stderr:
+-            code=subprocess.run(command,stdout=stdout,stderr=stderr,env=env,
+-                cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W').returncode
++            from process_launcher import run_native
++            code=run_native(command,stdout,stderr,env,
++                cwd='/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W',
++                audit=out/'PROCESS_GROUP_RECEIPT.json')
+         run=TASK/'runs'/str(job['seed'])/job['window']/job['arm']
+         if code==0 and (run/'COMPLETE.json').is_file():result=dict(status='COMPLETE',initialized=True)
+         elif (run/'ALGORITHM_FAILURE.json').is_file():result=dict(status='INITIALIZATION_FAILED',initialized=False)
+--- sealed_R2/spawn_supervisor.py
++++ isolated_R3/spawn_supervisor.py
+@@ -0,0 +1,46 @@
++"""Fail closed when a registered native child exits unsuccessfully.
++
++This module imports no model, torch, or CUDA code and never changes numerical
++inputs. The caller registers only its own multiprocessing Process objects.
++"""
++import json
++import os
++import threading
++import time
++from pathlib import Path
++
++
++def failed_children(processes):
++    result = []
++    for process in tuple(processes):
++        if process.pid is not None and process.exitcode not in (None, 0):
++            result.append(dict(pid=process.pid, exit_code=process.exitcode))
++    return result
++
++
++def watch_children(processes, output, stop, fatal=os._exit, interval=0.2):
++    while not stop.wait(interval):
++        failed = failed_children(processes)
++        if not failed:
++            continue
++        path = Path(output) / 'CHILD_PROCESS_FAILURE.json'
++        value = dict(status='ENGINEERING_CHILD_FAILURE', children=failed,
++                     observed_unix=time.time(), observer_only=True,
++                     numerical_configuration_changed=False)
++        temporary = path.with_suffix('.json.partial')
++        temporary.write_text(json.dumps(value, indent=2)+'\n', encoding='utf-8')
++        temporary.replace(path)
++        # A dead spawn child can leave native shared counters waiting forever.
++        # The independent launcher reaps this driver's private process group.
++        fatal(70)
++        return
++
++
++def start_child_watchdog(processes, output):
++    stop = threading.Event()
++    thread = threading.Thread(target=watch_children,
++                              args=(processes, output, stop),
++                              daemon=True, name='task011e-child-health')
++    thread.start()
++    return stop, thread
++
+--- sealed_R2/task011e_io.py
++++ isolated_R3/task011e_io.py
+@@ -0,0 +1,9 @@
++"""Stage-local IO identity, independent of generic common module imports."""
++import hashlib
++from pathlib import Path
++TASK=Path(__file__).resolve().parent
++def sha(path):
++    h=hashlib.sha256()
++    with Path(path).open('rb') as f:
++        for block in iter(lambda:f.read(4*1024**2),b''):h.update(block)
++    return h.hexdigest()

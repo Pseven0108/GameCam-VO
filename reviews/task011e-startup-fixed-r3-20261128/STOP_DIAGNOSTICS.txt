@@ -1,0 +1,25 @@
+CHILD_EXCEPTION.json {
+  "type": "RuntimeError",
+  "error": "SNAPSHOT_STORAGE_BLOCKED",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py\", line 38, in tracking\n    try:return self._tracking_impl(pipe)\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py\", line 110, in _tracking_impl\n    super().tracking(pipe)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/slam.py\", line 106, in tracking\n    self.tracker.run(self.stream)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/tracker.py\", line 69, in run\n    self.frontend(force_to_add_keyframe, self.event_writer)\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/native_driver.py\", line 102, in frontend_call\n    return original_call(frontend,*args,**kwargs)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py\", line 224, in __call__\n    self.__update(force_to_add_keyframe, event_writer)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/frontend.py\", line 71, in __update\n    self.graph.update(None, None, use_inactive=True,\n  File \"/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/amp/autocast_mode.py\", line 16, in decorate_autocast\n    return func(*args, **kwargs)\n  File \"/opt/gamecam-viper-fullseq-3090-20261120-061408/envs/wild/lib/python3.10/site-packages/torch/utils/_contextlib.py\", line 115, in decorate_context\n    return func(*args, **kwargs)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/factor_graph.py\", line 274, in update\n    self.video.ba(target, weight, damping, ii, jj, t0, t1,\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/controller.py\", line 187, in wrapped\n    try:return original(*args,**kwargs)\n  File \"/root/rivermind-data/VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408/source/DROID-W/src/depth_video.py\", line 363, in ba\n    droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.mono_disps,\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R1/repo/experiments/TASK011B/CADP_DR_EXPERIMENTAL_BRANCH/controller.py\", line 134, in ba\n    result=native_ba(*args)\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/collect_snapshots.py\", line 120, in ba\n    collector.capture(phase,args,True,a5,a7,vf,proof)\n  File \"/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/collect_snapshots.py\", line 85, in capture\n    if free<self.minimum_free+budget['conservative_serialization_bytes']:raise RuntimeError('SNAPSHOT_STORAGE_BLOCKED')\nRuntimeError: SNAPSHOT_STORAGE_BLOCKED\n"
+}
+
+CHILD_PROCESS_FAILURE.json {
+  "status": "ENGINEERING_CHILD_FAILURE",
+  "children": [
+    {
+      "pid": 2348,
+      "exit_code": 1
+    }
+  ],
+  "observed_unix": 1795836775.1227536,
+  "observer_only": true,
+  "numerical_configuration_changed": false
+}
+
+{"index": "/root/rivermind-data/GAMECAM_TASK011E_FAST_20261128_R3/repo/experiments/TASK011E/fixed_state/snapshots/43/val_038_00448-00511/SNAPSHOT_INDEX.jsonl", "records": [{"path": "local_ba_000000.pt", "bytes": 2812382226, "sha256": "be47d8e122557b4b79231471f1f3846fa7daf89ef85c30adb2dc25bb7378a871", "budget": {"unique_tensor_storage_bytes": 2812363684, "conservative_serialization_bytes": 2952981868, "safety_free_bytes": 10737418240}, "observer_wall_seconds": 14.578418137971312}, {"path": "local_ba_000001.pt", "bytes": 2812382226, "sha256": "7727ed5ee5dfe696ac4d50c559d27294baa7d6e82cafe29c2b741ff08ad2681f", "budget": {"unique_tensor_storage_bytes": 2812363684, "conservative_serialization_bytes": 2952981868, "safety_free_bytes": 10737418240}, "observer_wall_seconds": 14.124517787946388}]}
+TERMINALS
+{"status": "ENGINEERING_FAILURE", "initialized": null, "exit_code": 70, "sequence": "val_038", "environment": "Rain", "seed": 43, "arm": "A0", "job_key": "s43_val_038_00448-00511_A0", "finished_unix": 1795836776.088162}
+{"status": "COMPLETE", "initialized": true, "sequence": "val_038", "environment": "Rain", "seed": 43, "arm": "A4", "job_key": "s43_val_038_00448-00511_A4", "finished_unix": 1795836585.5421748}
+{"status": "COMPLETE", "initialized": true, "sequence": "val_038", "environment": "Rain", "seed": 43, "arm": "A5", "job_key": "s43_val_038_00448-00511_A5", "finished_unix": 1795836703.357807}
+{"status": "COMPLETE", "initialized": true, "sequence": "val_038", "environment": "Rain", "seed": 43, "arm": "A7", "job_key": "s43_val_038_00448-00511_A7", "finished_unix": 1795836646.1967905}

@@ -1,7 +1,7 @@
 {
-  "stage": "TASK011E_FAST_285_CONTINUATION_R2",
+  "stage": "TASK011E_FAST_285_CONTINUATION_R3",
   "approved": true,
-  "user_authorization_reference": "Original TASK011E attachment plus explicit user: 清理完成之后继续实验",
+  "user_authorization_reference": "Original frozen TASK011E + explicit user 2026-11-28: 修复，然后自己重跑实验",
   "user_authorization_sha256": "180384a063c564726f1b6552d2ee859dacb1c560197b95fdfc3effd79ed7bbcb",
   "secondary_thresholds_approved": false,
   "approved_secondary_thresholds": [],
@@ -10,7 +10,7 @@
     "PRIOR_CACHE",
     "END_TO_END"
   ],
-  "protocol_sha256": "1dcbc47b88bb134c457e3c7c4005022f26726a2895ea8c5d56b8aecb4a08f88c",
+  "protocol_sha256": "c68b88762f2515c4f6a7f84c8eec3dd07f30169f03f82fcf275c12e29f16e0e3",
   "model_weight_identity_sha256": "ed37dc43b2fc1229b898d3bf1e52f517058b0d7df21bccd484099bff32087eaf",
   "approved_job_keys": [
     "cache_val_038_00448-00511",
@@ -327,5 +327,8 @@
   "cache_continuation_state_sha256": "9744c6270df672dd4e63f0ed254916fb10ceff61307a39b66bd3ec242ddd3a4f",
   "expected_additional_common_cache_forwards": 1760,
   "reused_cached_frames": 336,
-  "prior_unwritten_forwards_source_inferred": 2
+  "prior_unwritten_forwards_source_inferred": 2,
+  "retry_authorization_sha256": "d6c0b3ef2332035fcc20abae61da18130347b7c0b1d06f3db14b02e6f683553d",
+  "explicit_retry_of_sealed_engineering_failure": true,
+  "sealed_previous_attempt": "GAMECAM_TASK011E_FAST_20261128_R2"
 }

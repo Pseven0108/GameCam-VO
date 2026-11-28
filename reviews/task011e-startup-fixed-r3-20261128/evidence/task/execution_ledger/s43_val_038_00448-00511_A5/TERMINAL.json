@@ -1,0 +1,97 @@
+{
+  "status": "COMPLETE",
+  "initialized": true,
+  "sequence": "val_038",
+  "environment": "Rain",
+  "seed": 43,
+  "arm": "A5",
+  "job_key": "s43_val_038_00448-00511_A5",
+  "finished_unix": 1795836703.357807,
+  "artifacts": [
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A5/ATTEMPT.json",
+      "bytes": 445,
+      "sha256": "12b535999e8dafef9786aece24896866b5485fbc4283849587b86fb55976cb86"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A5/PROCESS_GROUP_RECEIPT.json",
+      "bytes": 224,
+      "sha256": "b0000542576fdfc8f5903e7e41458ee1352d40f0b0044cb413af8b39dc109ff9"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A5/stderr.txt",
+      "bytes": 12442,
+      "sha256": "0653e2bcc270a5c090603a8cf27b91cf7701196be3293e4b55985a2ad8e8caff"
+    },
+    {
+      "path": "execution_ledger/s43_val_038_00448-00511_A5/stdout.txt",
+      "bytes": 789,
+      "sha256": "56ce7a49fdc6dcd592e3aba380ac8f07c0415bf0f79f07c647056b2debe9b26a"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/ATTEMPT.json",
+      "bytes": 92,
+      "sha256": "185af19abc540e8e17c3e9ac1f72c04b7230e24b7a2970d549887486a015f455"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/CHILD_ENTERED.json",
+      "bytes": 38,
+      "sha256": "4ffa0ae4d6a0a216caab53677179584bb5db4276653e8c01b46206a8dff7c7c9"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/CHILD_STAGE.json",
+      "bytes": 38,
+      "sha256": "5e26746645a4a56d03e52a71f287f8bf438443e0c7bac1fa8539ea9e4aa39527"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/COMPLETE.json",
+      "bytes": 216,
+      "sha256": "30f9567235c384ee5c50990dc18c38e6c297138b73d9c5923fe903902315afd2"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/PROCESS_EXIT_CODES.json",
+      "bytes": 48,
+      "sha256": "68f81b70a95701b3d2cdbebb2f36e353f79eeee81eb5f79db304bf9ee3df2293"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/TRACKING_CHILD_COMPLETE.json",
+      "bytes": 219,
+      "sha256": "8611d681ac57d5216352900f1a5a5fb95087da03c521e1edb50b10015c3b5c6b"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native/events.out.tfevents.1795836675.jupyter-jbrlffe29wd3x49z.1898.0",
+      "bytes": 3632,
+      "sha256": "c9a9ecb098df6d34167924b6d8f4980638d51547d11c425ca593ef1925b52d5c"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native/timer_summary.csv",
+      "bytes": 255,
+      "sha256": "a964ae98620623cc832a7a38d83ed4209156cec188990290f921e78febb8d772"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native/traj/est_poses_full.txt",
+      "bytes": 4516,
+      "sha256": "4c20e0b329f1158164ea156bae98d41fca9fc5f552fabbc0d6ab49d6359228af"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native/video.npz",
+      "bytes": 120561998,
+      "sha256": "fc4b3e62bb24a4eba50b6d860841b81ce486ef3bdda9017954859761933b0644"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native_ba_calls.jsonl",
+      "bytes": 156474,
+      "sha256": "7d7ec1a24652aa9627ac45b9069fe065a001cc431456cadd8c15727abc2218f9"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/native_config.yaml",
+      "bytes": 3408,
+      "sha256": "ec392ed59f8756d360b50b3b7d1f43c91a5693efbd763f10d56dd1d9c6e767a7"
+    },
+    {
+      "path": "runs/43/val_038_00448-00511/A5/trajectory.npz",
+      "bytes": 3886,
+      "sha256": "451d8bc32d99c4f933aa0c28d01c5d3e02e3e56a7f577d0e925ced836681ea63"
+    }
+  ]
+}

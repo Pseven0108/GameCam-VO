@@ -1,0 +1,47 @@
+{
+  "order": [
+    "BASE",
+    "A5",
+    "ROBUST",
+    "ROBUST_A5"
+  ],
+  "seed": 43,
+  "attempts": [
+    {
+      "arm": "BASE",
+      "attempt": "001",
+      "started_utc": "2026-11-28T12:06:05.654798+00:00",
+      "status": "COMPLETE",
+      "exit_code": 0,
+      "finished_utc": "2026-11-28T12:07:32.736123+00:00"
+    },
+    {
+      "arm": "A5",
+      "attempt": "001",
+      "started_utc": "2026-11-28T12:07:32.737123+00:00",
+      "status": "COMPLETE",
+      "exit_code": 0,
+      "finished_utc": "2026-11-28T12:08:49.982376+00:00"
+    },
+    {
+      "arm": "ROBUST",
+      "attempt": "001",
+      "started_utc": "2026-11-28T12:08:49.982895+00:00",
+      "status": "COMPLETE",
+      "exit_code": 0,
+      "finished_utc": "2026-11-28T12:10:04.448629+00:00"
+    },
+    {
+      "arm": "ROBUST_A5",
+      "attempt": "001",
+      "started_utc": "2026-11-28T12:10:04.449629+00:00",
+      "status": "COMPLETE",
+      "exit_code": 0,
+      "finished_utc": "2026-11-28T12:11:18.816627+00:00"
+    }
+  ],
+  "remote_connections": 0,
+  "automatic_retries": false,
+  "protocol_sha256": "254a4fb06e92118b96736bf8ad4b80e832f897facddced67657e7ff1efbe7355",
+  "status": "ALL_FOUR_COMPLETED"
+}

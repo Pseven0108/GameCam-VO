@@ -1,0 +1,72 @@
+{
+  "a5_endpoint_comparisons": [
+    {
+      "field": "poses",
+      "max_abs": 2.384185791015625e-07,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "disparities",
+      "max_abs": 1.043081283569336e-07,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "uncertainties",
+      "max_abs": 2.384185791015625e-07,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "temp_y_cdot",
+      "max_abs": 2.384185791015625e-07,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "affine_weights",
+      "max_abs": 3.725290298461914e-09,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "dx",
+      "max_abs": 6.705522537231445e-08,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    },
+    {
+      "field": "dz",
+      "max_abs": 1.043081283569336e-07,
+      "bitwise_equal": false,
+      "within_tolerance": true
+    }
+  ],
+  "synthetic_CPU_float64_GPU_float32": [
+    {
+      "field": "C",
+      "max_abs": 2.9067275697514106e-08,
+      "within_tolerance": true
+    },
+    {
+      "field": "b",
+      "max_abs": 2.981233915289039e-08,
+      "within_tolerance": true
+    },
+    {
+      "field": "q",
+      "max_abs": 2.160151107988284e-08,
+      "within_tolerance": true
+    },
+    {
+      "field": "objective",
+      "max_abs": 1.2586654418375587e-10,
+      "within_tolerance": true
+    }
+  ],
+  "live_inputs_preserved": true,
+  "rng_preserved": true,
+  "passed": true,
+  "scope": "one real BA state; endpoint checks are not universal deterministic-equivalence certificates"
+}

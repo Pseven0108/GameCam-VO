@@ -1,0 +1,62 @@
+{
+  "task": "MP-SfM Cauchy transfer into isolated DROID-W",
+  "source_mpsfm": "fa49640862391437865b2fd89ca3db3e6948b63b",
+  "source_droid_w": "c3414af6047d06bafc1a6645d09f23247f3b2cdc",
+  "input_window": "VIPER Train Day004 RGB1658-1721",
+  "camera_mapping": "RGB-1",
+  "frames": 64,
+  "seed": 43,
+  "stride": 1,
+  "image_size": [
+    360,
+    640
+  ],
+  "local_buffer": 96,
+  "arms": [
+    "BASE",
+    "A5",
+    "ROBUST",
+    "ROBUST_A5"
+  ],
+  "gamma_depth": 0.01,
+  "robust_family": "Cauchy IRLS on native linear disparity residual",
+  "robust_relative_scale": 0.1,
+  "scale_origin": "2 * official m3dv2-large relative uncertainty floor 0.05; first-order depth-to-disparity relative propagation",
+  "scale_epsilon_disparity": 1e-06,
+  "objective": "0.5*m*a*alpha*tau^2*log1p((d-dm)^2/tau^2)",
+  "local_damping": "(1-m*a)*eta independent of residual-dependent q",
+  "equation_C": "Cg+m*a*alpha*q+(1-m*a)*eta",
+  "equation_b": "bg-m*a*alpha*q*(d-dm)",
+  "q": "1/(1+((d-dm)/tau)^2)",
+  "tau": "max(0.1*abs(dm),1e-6)",
+  "scope": "Frontend Main-loop Local BA only; recalculate q inside EACH native inner iteration",
+  "preserved": [
+    "raw Metric3D targets",
+    "native initialization",
+    "U/UBA",
+    "Final BA",
+    "Trajectory Filler",
+    "frozen checkpoints",
+    "existing source and installed extensions"
+  ],
+  "not_transferred": [
+    "MP-SfM log-depth residual",
+    "calibrated pixel variances",
+    "MAD scale adaptation",
+    "SfM registration",
+    "cross-view occlusion checks",
+    "scale/shift correction"
+  ],
+  "comparison": "new four complete trajectories, one seed; no parameter search or performance-selected reruns",
+  "primary_metric": "whole-window global Sim3 ATE RMSE; compare ROBUST vs BASE and ROBUST_A5 vs A5",
+  "secondary": [
+    "SE3 ATE",
+    "RPE offset1/15 using ONE complete-window global Sim3 scale",
+    "keyframe identity",
+    "negative disparity and clamp counters",
+    "runtime and memory"
+  ],
+  "scope_limit": "development-window evidence only, not cross-scene/generalization evidence",
+  "remote_connections": 0,
+  "reuse": "read-only existing local RGB, cached Metric3D native/flip/confidence and FiT3D; no new model forwards needed"
+}

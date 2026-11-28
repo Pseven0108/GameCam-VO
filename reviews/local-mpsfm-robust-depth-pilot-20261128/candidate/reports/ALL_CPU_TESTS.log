@@ -1,0 +1,42 @@
+test_filler_untouched (test_controller_contract.StageTests.test_filler_untouched) ... ok
+test_final_ba_untouched (test_controller_contract.StageTests.test_final_ba_untouched) ... ok
+test_initialization_second_untouched (test_controller_contract.StageTests.test_initialization_second_untouched) ... ok
+test_initialization_untouched (test_controller_contract.StageTests.test_initialization_untouched) ... ok
+test_main_enabled (test_controller_contract.StageTests.test_main_enabled) ... ok
+test_missing_stage_stops (test_controller_contract.StageTests.test_missing_stage_stops) ... ok
+test_no_depth_prior_disabled (test_controller_contract.StageTests.test_no_depth_prior_disabled) ... ok
+test_no_motion_only (test_controller_contract.StageTests.test_no_motion_only) ... ok
+test_wrong_stage_stops (test_controller_contract.StageTests.test_wrong_stage_stops) ... ok
+test_degenerate_stops (test_evaluation.Tests.test_degenerate_stops) ... ok
+test_gap_not_filled (test_evaluation.Tests.test_gap_not_filled) ... ok
+test_identity (test_evaluation.Tests.test_identity) ... ok
+test_invalid_rotation_stops (test_evaluation.Tests.test_invalid_rotation_stops) ... ok
+test_known_sim3 (test_evaluation.Tests.test_known_sim3) ... ok
+test_pair_offsets (test_evaluation.Tests.test_pair_offsets) ... ok
+test_gradient_finite_difference (test_robust_math.MathTests.test_gradient_finite_difference) ... ok
+test_invalid_coeff (test_robust_math.MathTests.test_invalid_coeff) ... ok
+test_invalid_scale (test_robust_math.MathTests.test_invalid_scale) ... ok
+test_majorizer_global_bound (test_robust_math.MathTests.test_majorizer_global_bound) ... ok
+test_majorizer_tangent (test_robust_math.MathTests.test_majorizer_tangent) ... ok
+test_missing_prior_retains_eta (test_robust_math.MathTests.test_missing_prior_retains_eta) ... ok
+test_naive_product_changes_damping (test_robust_math.MathTests.test_naive_product_changes_damping) ... ok
+test_native_baseline_limit (test_robust_math.MathTests.test_native_baseline_limit) ... ok
+test_negative_disparity_diagnosed_not_silently_clamped (test_robust_math.MathTests.test_negative_disparity_diagnosed_not_silently_clamped) ... ok
+test_no_eta_leakage_under_robustification (test_robust_math.MathTests.test_no_eta_leakage_under_robustification) ... ok
+test_no_new_parameter_search (test_robust_math.MathTests.test_no_new_parameter_search) ... ok
+test_outlier_influence_bounded (test_robust_math.MathTests.test_outlier_influence_bounded) ... ok
+test_prior_alone_does_not_bound_update (test_robust_math.MathTests.test_prior_alone_does_not_bound_update) ... ok
+test_q_range (test_robust_math.MathTests.test_q_range) ... ok
+test_reweighting_changes_each_iteration (test_robust_math.MathTests.test_reweighting_changes_each_iteration) ... ok
+test_scale_is_fixed_official_source (test_robust_math.MathTests.test_scale_is_fixed_official_source) ... ok
+test_schur_joint_system (test_robust_math.MathTests.test_schur_joint_system) ... ok
+test_symmetry (test_robust_math.MathTests.test_symmetry) ... ok
+test_tiny_prior_finite (test_robust_math.MathTests.test_tiny_prior_finite) ... ok
+test_units_scale (test_robust_math.MathTests.test_units_scale) ... ok
+test_zero_residual_native_curvature (test_robust_math.MathTests.test_zero_residual_native_curvature) ... ok
+test_zero_strength_d0 (test_robust_math.MathTests.test_zero_strength_d0) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.024s
+
+OK

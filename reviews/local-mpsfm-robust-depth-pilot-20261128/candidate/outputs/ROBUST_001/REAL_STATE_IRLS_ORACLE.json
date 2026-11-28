@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "field": "q",
+      "max_abs": 9.984841353727347e-08,
+      "within_tolerance": true
+    },
+    {
+      "field": "C",
+      "max_abs": 3.812032517203079e-06,
+      "within_tolerance": true
+    },
+    {
+      "field": "b",
+      "max_abs": 2.9007892088372955e-08,
+      "within_tolerance": true
+    }
+  ],
+  "iterations": 2,
+  "full_element_count": 72000,
+  "detail_fields": [
+    "d",
+    "dm",
+    "eta",
+    "a",
+    "q",
+    "C",
+    "b",
+    "Cg",
+    "bg"
+  ],
+  "input_rgb_id": 1670,
+  "damping_independent_of_q": true,
+  "oracle": "independent CPU float64 evaluation of every saved element"
+}

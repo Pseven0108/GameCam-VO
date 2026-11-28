@@ -1,0 +1,33 @@
+{
+  "only_independent_candidate_changed": true,
+  "original_kernel_bodies_unchanged": true,
+  "robust_reweighting_location": "inside native itr loop, after geometry and before Schur",
+  "damping": "(1-m*a)*eta; never includes q",
+  "returned_trace_fields": [
+    "kx",
+    "valid_count",
+    "mean_q",
+    "min_q",
+    "fraction_q_lt_0.1",
+    "fraction_q_lt_0.5",
+    "prior_rhs_l2",
+    "mean_prior_curvature",
+    "mean_eta_damping",
+    "robust_prior_objective"
+  ],
+  "detail_fields": [
+    "d",
+    "dm",
+    "eta",
+    "a",
+    "q",
+    "C",
+    "b",
+    "Cg",
+    "bg"
+  ],
+  "source_sha256": {
+    "droid.cpp": "682563a6f7578e3c3e60dbfdf71fe93d88ff6ff08fe0f03d24548a4937e540d7",
+    "droid_kernels.cu": "f532693d407c3b2cd2135333e3a7ab864d79d4954148b534c8def19ea7fd1d83"
+  }
+}

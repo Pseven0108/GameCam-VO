@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/mnt/d/aaa/GameCam-VO-MPSFM-ROBUST-CANDIDATE/candidate/scripts/local_preflight.py", line 11, in <module>
+    nvidia_smi=subprocess.check_output(['nvidia-smi','--query-gpu=name,driver_version,memory.total,memory.free,utilization.gpu','--format=csv'],text=True),
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/lsuser/.local/share/gamecam-vo/envs/droid-w/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'nvidia-smi'

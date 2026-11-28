@@ -1,0 +1,14 @@
+{
+  "status": "BUILT_NOT_YET_NUMERICALLY_VERIFIED",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 5060",
+  "module": "/mnt/d/aaa/GameCam-VO-MPSFM-ROBUST-CANDIDATE/toolchain/build/robust_sm120_001/local_mpsfm_robust_c3414af6.so",
+  "sha256": "8f03ee8ba97b0697404a64b1ca09e43439007d9471332ded2aff79e9585de3bc",
+  "installed_backend_replaced": false,
+  "API_only_scalar_type_compatibility": [
+    "correlation_kernels.cu",
+    "altcorr_kernel.cu"
+  ],
+  "kernel_arithmetic_changed": false
+}

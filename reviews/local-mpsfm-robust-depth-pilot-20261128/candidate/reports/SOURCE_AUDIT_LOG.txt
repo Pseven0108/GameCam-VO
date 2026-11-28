@@ -1,0 +1,27 @@
+{
+  "files": 208,
+  "all_match": true,
+  "weights": 3,
+  "native_sources": [
+    {
+      "file": "droid.cpp",
+      "local_43c1425b_source_equals_c3414af6": true,
+      "equals_after_dispatch_API_normalization": true
+    },
+    {
+      "file": "droid_kernels.cu",
+      "local_43c1425b_source_equals_c3414af6": true,
+      "equals_after_dispatch_API_normalization": true
+    },
+    {
+      "file": "correlation_kernels.cu",
+      "local_43c1425b_source_equals_c3414af6": false,
+      "equals_after_dispatch_API_normalization": true
+    },
+    {
+      "file": "altcorr_kernel.cu",
+      "local_43c1425b_source_equals_c3414af6": false,
+      "equals_after_dispatch_API_normalization": true
+    }
+  ]
+}

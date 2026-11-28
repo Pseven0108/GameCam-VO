@@ -1,0 +1,23 @@
+{
+  "kernel_count": 16,
+  "all_original_cuda_kernel_bodies_equal": true,
+  "kernel_names": [
+    "EEt6x6_kernel",
+    "Ev6x1_kernel",
+    "EvT6x1_kernel",
+    "accum_kernel",
+    "depth_filter_kernel",
+    "dino_feats_projective_transform_kernel",
+    "disp_retr_kernel",
+    "frame_distance_kernel",
+    "iproj_kernel",
+    "linear_transform_kernel",
+    "pose_retr_kernel",
+    "prior_regularization_kernel",
+    "projective_transform_kernel",
+    "projmap_kernel",
+    "uncertainty_retr_kernel",
+    "uncertainty_update_kernel"
+  ],
+  "candidate_change": "BA host assembly adds Cauchy prior C/b inside iteration; original geometry/U kernels unchanged"
+}

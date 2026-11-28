@@ -1,0 +1,225 @@
+{
+  "shared_checkpoints": [
+    {
+      "file": "weights/droid.pth",
+      "sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "before_sha256": "46476ef64cde45a97504910d6f3de2eef7b398ec1c6e4e668815c29076024526",
+      "size": 16061701
+    },
+    {
+      "file": "torch_home/hub/checkpoints/metric_depth_vit_large_800k.pth",
+      "sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "before_sha256": "15328ffc42b528b95f188687418f6f03b3f123eb34ccdbd686c112abbea6d972",
+      "size": 1647972663
+    },
+    {
+      "file": "torch_home/hub/checkpoints/dinov2_reg_small_finetuned.pth",
+      "sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "before_sha256": "09db495b0788df23591de1bc9ccb721b182dfb511136398a2caed3896a39c8e4",
+      "size": 88283296
+    }
+  ],
+  "all_shared_checkpoint_hashes_unchanged": true,
+  "frozen_export_files_verified": 208,
+  "all_native_configs_equal_except_output": true,
+  "scorer_source": "D:\\aaa\\GameCam-VO\\experiments\\VIPER_FULLSEQ_FRESH_OFFICIAL_DUAL_3090_20261120_061408\\pipeline\\offline_eval.py",
+  "scorer_sha256": "85ad815f47bb637437ede7316235ea964c1efc947b78f12e2129435c6236e63f",
+  "metric_checks": [
+    {
+      "arm": "BASE",
+      "metric": "ate_sim3_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "global_sim3_scale",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe1_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe1_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe1_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe15_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe15_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "BASE",
+      "metric": "rpe15_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "ate_sim3_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "global_sim3_scale",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe1_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe1_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe1_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe15_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe15_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "A5",
+      "metric": "rpe15_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "ate_sim3_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "global_sim3_scale",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe1_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe1_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe1_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe15_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe15_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST",
+      "metric": "rpe15_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "ate_sim3_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "global_sim3_scale",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe1_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe1_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe1_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe15_pairs",
+      "abs_delta": 0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe15_translation_rmse",
+      "abs_delta": 0.0,
+      "passed": true
+    },
+    {
+      "arm": "ROBUST_A5",
+      "metric": "rpe15_rotation_rmse_deg",
+      "abs_delta": 0.0,
+      "passed": true
+    }
+  ],
+  "original_installed_extension_preserved": true,
+  "remote_connections": 0,
+  "remote_processes_changed": 0,
+  "local_models_remaining": "none launched by this task"
+}
